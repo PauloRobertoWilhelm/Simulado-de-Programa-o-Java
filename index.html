@@ -65,22 +65,197 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
-body { font-family: var(--font-body); background: var(--bg); background-image: var(--bg-grad); background-attachment: fixed; color: var(--text); line-height: 1.55; min-height: 100vh; padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); display: flex; justify-content: center; }
-.app { width: 100%; max-width: 680px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  background-image: var(--bg-grad);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20% -10% auto auto;
+  width: 42rem;
+  height: 42rem;
+  background: radial-gradient(circle, rgba(124, 108, 255, 0.42), rgba(124, 108, 255, 0.14) 28%, rgba(124, 108, 255, 0) 58%);
+  filter: blur(26px);
+  animation: bgGlow 12s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto auto -18% -10%;
+  width: 38rem;
+  height: 38rem;
+  background: radial-gradient(circle, rgba(69, 214, 194, 0.28), rgba(69, 214, 194, 0.14) 30%, rgba(69, 214, 194, 0) 58%);
+  filter: blur(26px);
+  animation: bgGlowAlt 14s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes bgGlow {
+  0% { transform: translate3d(-8px, 0, 0) scale(0.96); opacity: 0.9; }
+  100% { transform: translate3d(24px, 18px, 0) scale(1.08); opacity: 1; }
+}
+@keyframes bgGlowAlt {
+  0% { transform: translate3d(12px, -10px, 0) scale(1); opacity: 0.8; }
+  100% { transform: translate3d(-18px, 18px, 0) scale(1.12); opacity: 1; }
+}
+.app { width: 100%; max-width: 680px; position: relative; z-index: 1; }
 .hidden { display: none !important; }
 
-.btn { font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: none; border-radius: var(--r-md); cursor: pointer; padding: 16px 22px; width: 100%; color: #fff; background: linear-gradient(135deg, var(--primary), #6354e6); transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease; box-shadow: 0 10px 26px rgba(124, 108, 255, 0.32); }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(124, 108, 255, 0.42); }
-.btn:active { transform: translateY(0); }
+.btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  padding: 16px 22px;
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #6354e6);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, opacity 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 26px rgba(124, 108, 255, 0.32), 0 0 22px rgba(124, 108, 255, 0.24);
+  animation: buttonIn 0.45s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+.btn:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 16px 34px rgba(124, 108, 255, 0.42), 0 0 32px rgba(124, 108, 255, 0.3);
+  filter: brightness(1.06);
+}
+.btn:active { transform: translateY(0) scale(1); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-ghost { background: rgba(255, 255, 255, 0.02); color: var(--text); border: 1px solid var(--border); box-shadow: none; margin-top: 0; }
 .btn-ghost:hover { background: rgba(124, 108, 255, 0.09); color: var(--text); transform: translateY(-2px); border-color: rgba(124, 108, 255, 0.6); }
 #btn-back, #btn-home { background: rgba(124, 108, 255, 0.06); border-color: rgba(124, 108, 255, 0.4); }
 #btn-quit { background: rgba(251, 111, 132, 0.08); border-color: rgba(251, 111, 132, 0.45); color: #ffdfe6; }
 #btn-quit:hover { background: rgba(251, 111, 132, 0.14); border-color: rgba(251, 111, 132, 0.8); }
+@keyframes buttonIn {
+  0% { opacity: 0; transform: translateY(10px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
 
 .screen { animation: fade 0.4s ease; }
-@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.result-shell {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(15, 18, 27, 0.8), rgba(10, 12, 18, 0.9));
+  border: 1px solid rgba(155, 142, 255, 0.14);
+  border-radius: 26px;
+  padding: 16px 14px 12px;
+  box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: resultReveal 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.result-shell::before,
+.result-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+.result-shell::before {
+  inset: -18% 12% auto auto;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(124, 108, 255, 0.1), rgba(124, 108, 255, 0));
+}
+
+.result-shell::after {
+  inset: auto auto -18% -8%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(69, 214, 194, 0.08), rgba(69, 214, 194, 0));
+}
+
+@keyframes resultReveal {
+  0% { opacity: 0; transform: translateY(32px) scale(0.965) rotateX(10deg); }
+  40% { opacity: 0.6; transform: translateY(10px) scale(0.99) rotateX(3deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
+}
+
+.result-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.result-stat {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 10px 8px 11px;
+  text-align: center;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, opacity 0.24s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  animation: statReveal 0.9s cubic-bezier(0.18, 0.8, 0.2, 1) both;
+}
+
+.result-stat:nth-child(2) { animation-delay: 0.08s; }
+.result-stat:nth-child(3) { animation-delay: 0.16s; }
+
+@keyframes statReveal {
+  0% { opacity: 0; transform: translateY(18px) scale(0.96); }
+  60% { opacity: 0.8; transform: translateY(-2px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.result-stat:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 108, 255, 0.28);
+  box-shadow: 0 10px 22px rgba(124, 108, 255, 0.08);
+}
+
+.result-stat .label {
+  display: block;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+  transition: color 0.2s ease;
+}
+
+.result-stat:hover .label { color: #dfe4ff; }
+
+.result-stat .value {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text);
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
 
 .intro { text-align: center; padding: 46px 8px 8px; }
 .badge-top { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; color: var(--teal); border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; margin-bottom: 24px; }
@@ -142,16 +317,310 @@ pre.code { font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.6; 
 .feedback .why code { font-family: var(--font-mono); font-size: 0.82em; background: #0B0E16; border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: #9FE7C8; }
 
 .result-head { text-align: center; padding: 34px 8px 8px; }
-.score-ring { width: 170px; height: 170px; margin: 0 auto 22px; border-radius: 50%; display: grid; place-items: center; position: relative; background: var(--surface-2); }
-.score-ring::before { content: ""; position: absolute; inset: 12px; border-radius: 50%; background: var(--bg); }
-.score-ring .inner { position: relative; text-align: center; }
+.score-ring {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(124, 108, 255, 0.16), rgba(69, 214, 194, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 28px rgba(124, 108, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  animation: ringPop 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.score-ring::before { content: ""; position: absolute; inset: 10px; border-radius: 50%; background: linear-gradient(180deg, rgba(14, 17, 24, 0.96), rgba(18, 23, 35, 0.93)); border: 1px solid rgba(255,255,255,0.03); }
+.score-ring .inner { position: relative; text-align: center; z-index: 1; }
+.score-ring .score-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(124, 108, 255, 0.1);
+  border: 1px solid rgba(124, 108, 255, 0.22);
+  color: #d9d3ff;
+  font-size: 0.74rem;
+  box-shadow: 0 0 14px rgba(124, 108, 255, 0.12);
+  animation: scoreIconPulse 2s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes scoreIconPulse {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-3px) scale(1.08); opacity: 1; }
+}
+.score-ring .pct {
+  text-shadow: 0 0 18px rgba(124, 108, 255, 0.45);
+}
+@keyframes ringPop {
+  0% { transform: scale(0.7); opacity: 0.2; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 .score-ring .pct { font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; line-height: 1; }
 .score-ring .lbl { font-size: 0.8rem; color: var(--muted); font-family: var(--font-mono); margin-top: 2px; }
-.verdict { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 6px; }
+.verdict {
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  margin: 0 auto 16px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: linear-gradient(180deg, rgba(124, 108, 255, 0.08), rgba(124, 108, 255, 0.04));
+  color: var(--text);
+  box-shadow: none;
+  animation: badgeFloat 2.6s ease-in-out infinite;
+}
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+.badge-status.pass {
+  background: linear-gradient(180deg, rgba(54, 211, 153, 0.18), rgba(54, 211, 153, 0.08));
+  border-color: rgba(54, 211, 153, 0.42);
+  color: #c8f9e6;
+  box-shadow: 0 12px 28px rgba(54, 211, 153, 0.14), inset 0 0 18px rgba(54, 211, 153, 0.12);
+}
+.badge-status.fail {
+  background: linear-gradient(180deg, rgba(251, 111, 132, 0.18), rgba(251, 111, 132, 0.08));
+  border-color: rgba(251, 111, 132, 0.42);
+  color: #ffd5de;
+  box-shadow: 0 12px 28px rgba(251, 111, 132, 0.14), inset 0 0 18px rgba(251, 111, 132, 0.12);
+}
 .nota-line { font-family: var(--font-mono); color: var(--muted); font-size: 0.9rem; margin-bottom: 26px; }
 .nota-line b { color: var(--text); font-size: 1.05rem; }
+.performance-message {
+  margin: 0 auto 12px;
+  max-width: 480px;
+  padding: 9px 11px;
+  border-radius: 11px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.05);
+  color: #dee5ff;
+  font-size: 0.85rem;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.performance-message.pass { background: linear-gradient(180deg, rgba(54, 211, 153, 0.06), rgba(54, 211, 153, 0.02)); border-color: rgba(54, 211, 153, 0.12); color: #eafef5; }
+.performance-message.average { background: linear-gradient(180deg, rgba(124, 108, 255, 0.06), rgba(124, 108, 255, 0.02)); border-color: rgba(124, 108, 255, 0.12); color: #f0ebff; }
+.performance-message.fail { background: linear-gradient(180deg, rgba(251, 111, 132, 0.06), rgba(251, 111, 132, 0.02)); border-color: rgba(251, 111, 132, 0.12); color: #fff0f3; }
+.performance-message strong { color: #ffffff; }
 
-.chart-container { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-md); padding: 16px; margin-bottom: 20px; width: 100%; height: 220px; }
+.chart-container {
+  position: relative;
+  background: linear-gradient(180deg, rgba(17, 22, 32, 0.9), rgba(12, 16, 24, 0.96));
+  border: 1px solid rgba(155, 142, 255, 0.14);
+  border-radius: 18px;
+  padding: 12px 10px 8px;
+  margin: 8px 0 16px;
+  width: 100%;
+  height: 210px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 10px 22px rgba(2, 5, 12, 0.2);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.chart-container::before,
+.chart-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.chart-container::before {
+  inset: -18% -12% auto auto;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(124, 108, 255, 0.1), rgba(124, 108, 255, 0) 62%);
+}
+
+.chart-container::after {
+  inset: auto auto -14% -8%;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, rgba(69, 214, 194, 0.08), rgba(69, 214, 194, 0) 60%);
+}
+
+.chart-container canvas {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 10px rgba(124, 108, 255, 0.08));
+}
+
+.chart-container:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 12px 24px rgba(2, 5, 12, 0.24);
+  border-color: rgba(155, 142, 255, 0.18);
+}
+
+.progress-panel {
+  margin: 12px 0 10px;
+  background: linear-gradient(180deg, rgba(19, 25, 38, 0.88), rgba(12, 16, 25, 0.96));
+  border: 1px solid rgba(124, 108, 255, 0.15);
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  box-shadow: 0 10px 24px rgba(10, 15, 22, 0.18);
+}
+
+.progress-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.progress-level {
+  color: var(--teal);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.progress-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metric-pill {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 66px;
+}
+
+.metric-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.metric-pill strong {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: var(--text);
+}
+
+.review-panel {
+  margin-top: 8px;
+  border: 1px solid rgba(124, 108, 255, 0.2);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(16, 20, 31, 0.92), rgba(11, 14, 22, 0.96));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #edf2ff;
+}
+
+.mini-btn {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.review-list {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.review-card.bad {
+  border-color: rgba(251, 111, 132, 0.22);
+  background: rgba(251, 111, 132, 0.04);
+}
+
+.review-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  margin-bottom: 8px;
+  background: rgba(251, 111, 132, 0.12);
+  color: #ffd5de;
+  border: 1px solid rgba(251, 111, 132, 0.2);
+}
+
+.review-question {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.review-answer {
+  color: #dfe7ff;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.review-answer strong {
+  color: var(--text);
+}
+
+.review-empty {
+  padding: 16px 12px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
 </style>
 </head>
 <body>
@@ -216,20 +685,72 @@ pre.code { font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.6; 
 
   <!-- TELA DE RESULTADO -->
   <section id="screen-result" class="screen hidden">
-    <div class="result-head">
-      <div class="score-ring">
-        <div class="inner"><div class="pct" id="res-pct">0%</div><div class="lbl" id="res-frac">0/0</div></div>
+    <div class="result-shell">
+      <div class="result-head">
+        <div class="score-ring">
+          <span class="score-icon" aria-hidden="true">✦</span>
+          <div class="inner"><div class="pct" id="res-pct">0%</div><div class="lbl" id="res-frac">0/0</div></div>
+        </div>
+        <div class="badge-status" id="badge-status">Resultado</div>
+        <div class="verdict" id="res-verdict">Fim do Simulado</div>
+        <p class="nota-line">Equivalente a uma nota <b id="res-nota">0,0</b> / 10</p>
+        <div class="performance-message" id="performance-message"></div>
       </div>
-      <div class="verdict" id="res-verdict">Fim do Simulado</div>
-      <p class="nota-line">Equivalente a uma nota <b id="res-nota">0,0</b> / 10</p>
+
+      <div class="result-summary">
+        <div class="result-stat">
+          <span class="label">Acertos</span>
+          <span class="value" id="res-acertos">0</span>
+        </div>
+        <div class="result-stat">
+          <span class="label">Erros</span>
+          <span class="value" id="res-erros">0</span>
+        </div>
+        <div class="result-stat">
+          <span class="label">Tempo</span>
+          <span class="value" id="res-tempo">00:00</span>
+        </div>
+      </div>
     </div>
     
     <div class="chart-container">
       <canvas id="chart-history"></canvas>
     </div>
 
+    <div class="progress-panel" id="progress-panel">
+      <div class="progress-title-row">
+        <span>Progresso</span>
+        <span id="progress-level" class="progress-level">Iniciante</span>
+      </div>
+      <div class="progress-metrics">
+        <div class="metric-pill">
+          <span class="metric-label">Provas</span>
+          <strong id="stat-sessions">0</strong>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Melhor</span>
+          <strong id="stat-best">0%</strong>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Acertos</span>
+          <strong id="stat-total-correct">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <div id="review-panel" class="review-panel hidden">
+      <div class="review-header">
+        <span>Revisão de erros</span>
+        <button type="button" class="mini-btn" id="btn-close-review">Fechar</button>
+      </div>
+      <div id="review-list" class="review-list"></div>
+    </div>
+
     <div style="margin-top:8px;display:flex;flex-direction:column;gap:10px">
-      <button class="btn" id="btn-retry">Nova rodada</button>
+      <button class="btn" id="btn-share">📤 Compartilhar resultado</button>
+      <button class="btn btn-ghost" id="btn-review">📚 Revisar erros</button>
+      <button class="btn btn-ghost" id="btn-repeat">↻ Repetir mesma prova</button>
+      <button class="btn btn-ghost" id="btn-retry">🔄 Nova rodada</button>
       <button class="btn btn-ghost" id="btn-home">🏠 Voltar ao menu</button>
     </div>
   </section>
@@ -284,6 +805,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let timerInterval;
   let timeLeft = 0;
   let chartInstance = null;
+  let lastQuizConfig = { topic: "all", length: 20 };
+  let lastQuizQuestions = [];
+  let questionResults = [];
+  const STORAGE_KEY_PROGRESS = 'uniparJavaProgress';
   
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   
@@ -348,34 +873,130 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  btnStart.addEventListener("click", () => {
+  function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
     let filtered = bank;
-    
-    if (selectedTopic !== "all") {
-      filtered = bank.filter(q => q.topic === selectedTopic);
+
+    if (topic !== "all") {
+      filtered = bank.filter(q => q.topic === topic);
     }
-    
+
     filtered = filtered.sort(() => Math.random() - 0.5);
-    
-    if (selectedLen > 0 && selectedLen < filtered.length) {
-      filtered = filtered.slice(0, selectedLen);
+
+    if (len > 0 && len < filtered.length) {
+      filtered = filtered.slice(0, len);
     }
-    
-    if(filtered.length === 0) {
+
+    return filtered;
+  }
+
+  function loadProgressState() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS)) || { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
+    } catch (error) {
+      return { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
+    }
+  }
+
+  function saveProgressState(state) {
+    localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(state));
+  }
+
+  function updateProgressPanel() {
+    const state = loadProgressState();
+    const best = Number(state.bestScore || 0);
+    const level = best >= 85 ? 'Avançado' : best >= 70 ? 'Bom' : best >= 40 ? 'Em progresso' : 'Iniciante';
+
+    document.getElementById('stat-sessions').textContent = state.sessions || 0;
+    document.getElementById('stat-best').textContent = `${best}%`;
+    document.getElementById('stat-total-correct').textContent = state.totalCorrect || 0;
+    document.getElementById('progress-level').textContent = level;
+  }
+
+  function recordProgressSnapshot(pct, totalQuestions, finalScore, topic) {
+    const state = loadProgressState();
+    state.sessions = (state.sessions || 0) + 1;
+    state.bestScore = Math.max(state.bestScore || 0, pct);
+    state.totalCorrect = (state.totalCorrect || 0) + finalScore;
+    state.recent = (state.recent || []).concat([{ date: new Date().toISOString(), pct, topic, totalQuestions }]);
+    if (state.recent.length > 8) state.recent = state.recent.slice(-8);
+    saveProgressState(state);
+    updateProgressPanel();
+  }
+
+  function getWrongQuestionsFromCurrentRound() {
+    if (!currentQuestions.length) return [];
+
+    return currentQuestions.reduce((acc, question, index) => {
+      const result = questionResults[index];
+      if (!result || result.isCorrect) return acc;
+      acc.push({
+        ...question,
+        selectedIndex: result.selectedIndex,
+        correct: question.correct
+      });
+      return acc;
+    }, []);
+  }
+
+  function renderReviewPanel(wrongItems) {
+    const reviewList = document.getElementById('review-list');
+    const reviewPanel = document.getElementById('review-panel');
+    if (!reviewList || !reviewPanel) return;
+
+    if (!wrongItems || wrongItems.length === 0) {
+      reviewList.innerHTML = '<div class="review-empty">Você não teve erros nesta rodada. A revisão está limpa e pronta para o próximo teste.</div>';
+      reviewPanel.classList.remove('hidden');
+      return;
+    }
+
+    reviewList.innerHTML = wrongItems.map((item, index) => `
+      <div class="review-card bad">
+        <div class="review-badge">Erro ${index + 1}</div>
+        <div class="review-question">${item.statement}</div>
+        <div class="review-answer"><strong>Resposta certa:</strong> ${item.options[item.correct]}</div>
+        <div class="review-answer"><strong>Você marcou:</strong> ${item.options[item.selectedIndex] || 'Sem resposta'}</div>
+      </div>
+    `).join('');
+
+    reviewPanel.classList.remove('hidden');
+  }
+
+  function closeReviewPanel() {
+    const panel = document.getElementById('review-panel');
+    if (panel) panel.classList.add('hidden');
+  }
+
+  function startQuizWithQuestions(questions) {
+    if (!questions || questions.length === 0) {
       alert("Nenhuma questão encontrada para este filtro.");
       return;
     }
-    
-    currentQuestions = filtered;
+
+    currentQuestions = questions.slice();
     currentIndex = 0;
     score = 0;
-    
+    questionResults = Array(currentQuestions.length).fill(null);
+    closeReviewPanel();
+
     timeLeft = currentQuestions.length * 60;
     startTimer();
-    
+
     screenIntro.classList.add("hidden");
     screenQuiz.classList.remove("hidden");
     renderQuestion();
+  }
+
+  btnStart.addEventListener("click", () => {
+    const filtered = buildFilteredQuestions(selectedTopic, selectedLen);
+
+    if (filtered.length === 0) {
+      alert("Nenhuma questão encontrada para este filtro.");
+      return;
+    }
+
+    lastQuizConfig = { topic: selectedTopic, length: selectedLen };
+    lastQuizQuestions = filtered.slice();
+    startQuizWithQuestions(filtered);
   });
 
   function startTimer() {
@@ -418,14 +1039,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let html = `<div class="q-statement">${q.statement}</div>`;
     if (q.code) html += `<pre class="code">${q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
     
-    let optionsMapped = q.options.map((texto, index) => ({ textoOriginal: texto, isCerta: (index === q.correct) }));
+    let optionsMapped = q.options.map((texto, index) => ({
+      textoOriginal: texto,
+      originalIndex: index,
+      isCerta: (index === q.correct)
+    }));
     optionsMapped = optionsMapped.sort(() => Math.random() - 0.5);
     
     html += `<div class="options" id="opts-container">`;
     optionsMapped.forEach((optData, i) => {
       const letter = String.fromCharCode(65 + i);
       html += `
-        <div class="option" data-correct="${optData.isCerta}">
+        <div class="option" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}">
             <div class="key">${letter}</div>
             <div class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
         </div>`;
@@ -439,7 +1064,13 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedOption = true;
         document.getElementById("opts-container").classList.add("locked");
 
-        const isCorrect = this.getAttribute("data-correct") === "true";
+        const selectedIndex = Number(this.dataset.optionIndex);
+        const isCorrect = selectedIndex === q.correct;
+        questionResults[currentIndex] = {
+          isCorrect,
+          selectedIndex,
+          correctIndex: q.correct
+        };
         
         playSound(isCorrect ? 'correct' : 'wrong');
         
@@ -481,16 +1112,20 @@ document.addEventListener("DOMContentLoaded", () => {
     currentQuestions = [];
     currentIndex = 0;
     score = 0;
+    questionResults = [];
     selectedOption = null;
     timeLeft = 0;
+    closeReviewPanel();
     updateTimerUI();
   }
 
   btnBack.addEventListener("click", () => {
+    if (!confirm("Voltar ao início vai encerrar a prova atual. Deseja continuar?")) return;
     goToIntro();
   });
 
   document.getElementById("btn-quit").addEventListener("click", () => {
+    if (!confirm("Tem certeza que deseja abandonar a prova?")) return;
     goToIntro();
   });
 
@@ -498,17 +1133,90 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(timerInterval);
     screenQuiz.classList.add("hidden");
     screenResult.classList.remove("hidden");
+
+    const resultShell = document.querySelector('.result-shell');
+    const resultHead = document.querySelector('.result-head');
+    const chartWrap = document.querySelector('.chart-container');
+    const stats = document.querySelectorAll('.result-stat');
+    if (resultShell) resultShell.style.opacity = '0.68';
+    if (resultHead) resultHead.style.opacity = '0.15';
+    if (chartWrap) chartWrap.style.opacity = '0.15';
+    stats.forEach((stat, index) => {
+      stat.style.opacity = '0';
+      stat.style.transform = 'translateY(14px) scale(0.98)';
+      stat.style.transition = `opacity 0.7s ease ${index * 0.11}s, transform 0.7s ease ${index * 0.11}s`;
+    });
+
+    setTimeout(() => {
+      if (resultShell) resultShell.style.transition = 'opacity 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease';
+      if (resultHead) resultHead.style.transition = 'opacity 0.75s ease';
+      if (chartWrap) chartWrap.style.transition = 'opacity 0.75s ease';
+      if (resultShell) resultShell.style.opacity = '1';
+      if (resultHead) resultHead.style.opacity = '1';
+      if (chartWrap) chartWrap.style.opacity = '1';
+      if (resultHead) resultHead.style.animation = 'resultReveal 1.25s cubic-bezier(0.2, 0.9, 0.2, 1)';
+      if (chartWrap) chartWrap.style.animation = 'fade 1.1s ease';
+      stats.forEach((stat, index) => {
+        stat.style.opacity = '1';
+        stat.style.transform = 'translateY(0) scale(1)';
+        stat.style.transition = `opacity 0.7s ease ${index * 0.11 + 0.2}s, transform 0.7s ease ${index * 0.11 + 0.2}s`;
+      });
+    }, 180);
     
     const pct = Math.round((score / currentQuestions.length) * 100);
+    const totalQuestions = currentQuestions.length;
+    const errors = totalQuestions - score;
+    const minutes = Math.floor((timeLeft / 60)).toString().padStart(2, '0');
+    const seconds = (timeLeft % 60).toString().padStart(2, '0');
+
     document.getElementById("res-pct").textContent = `${pct}%`;
-    document.getElementById("res-frac").textContent = `${score}/${currentQuestions.length}`;
+    document.getElementById("res-frac").textContent = `${score}/${totalQuestions}`;
     document.getElementById("res-nota").textContent = (pct / 10).toFixed(1).replace(".", ",");
+    document.getElementById("res-acertos").textContent = score;
+    document.getElementById("res-erros").textContent = errors;
+    document.getElementById("res-tempo").textContent = `${minutes}:${seconds}`;
+
+    const badgeStatus = document.getElementById('badge-status');
+    const performanceMessage = document.getElementById('performance-message');
+    const verdict = document.getElementById('res-verdict');
+
+    if (pct >= 70) {
+      badgeStatus.textContent = 'Aprovado';
+      badgeStatus.classList.add('pass');
+      badgeStatus.classList.remove('fail');
+      verdict.textContent = 'Excelente desempenho!';
+      performanceMessage.innerHTML = `Você ficou em <strong>${pct}%</strong> e mostrou grande domínio da matéria.`;
+      performanceMessage.className = 'performance-message pass';
+      resultShell.style.boxShadow = '0 25px 60px rgba(54, 211, 153, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
+      resultShell.style.borderColor = 'rgba(54, 211, 153, 0.28)';
+    } else if (pct >= 40) {
+      badgeStatus.textContent = 'Em andamento';
+      badgeStatus.classList.remove('pass');
+      badgeStatus.classList.remove('fail');
+      verdict.textContent = 'Bom esforço!';
+      performanceMessage.innerHTML = `Seu desempenho foi <strong>${pct}%</strong>. Ainda há espaço para evoluir com mais revisão.`;
+      performanceMessage.className = 'performance-message average';
+      resultShell.style.boxShadow = '0 25px 60px rgba(124, 108, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
+      resultShell.style.borderColor = 'rgba(124, 108, 255, 0.32)';
+    } else {
+      badgeStatus.textContent = 'Precisa estudar';
+      badgeStatus.classList.add('fail');
+      badgeStatus.classList.remove('pass');
+      verdict.textContent = 'Vamos revisar mais?';
+      performanceMessage.innerHTML = `Você alcançou <strong>${pct}%</strong>. A prática continua sendo a melhor forma de fixar a lógica.`;
+      performanceMessage.className = 'performance-message fail';
+      resultShell.style.boxShadow = '0 25px 60px rgba(251, 111, 132, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
+      resultShell.style.borderColor = 'rgba(251, 111, 132, 0.28)';
+    }
     
     let history = JSON.parse(localStorage.getItem('uniparJavaScores')) || [];
     history.push(pct);
     if(history.length > 10) history.shift();
     localStorage.setItem('uniparJavaScores', JSON.stringify(history));
-    
+
+    recordProgressSnapshot(pct, totalQuestions, score, selectedTopic);
+    renderReviewPanel(getWrongQuestionsFromCurrentRound());
+    updateProgressPanel();
     renderChart(history);
   }
 
@@ -520,6 +1228,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const labels = historyData.map((_, i) => `T${i + 1}`);
+    const lastValue = historyData[historyData.length - 1] ?? 0;
+    const isStrong = lastValue >= 70;
+    const isMedium = lastValue >= 40;
+
+    const palette = isStrong
+      ? {
+          border: '#5EE7B0',
+          fill: 'rgba(94, 231, 176, 0.18)',
+          point: '#D6FFF1',
+          glow: 'rgba(94, 231, 176, 0.26)'
+        }
+      : isMedium
+        ? {
+            border: '#9A8BFF',
+            fill: 'rgba(154, 139, 255, 0.15)',
+            point: '#E0D9FF',
+            glow: 'rgba(154, 139, 255, 0.22)'
+          }
+        : {
+            border: '#FF8AA3',
+            fill: 'rgba(255, 138, 163, 0.14)',
+            point: '#FFD8E4',
+            glow: 'rgba(255, 138, 163, 0.2)'
+          };
     
     chartInstance = new Chart(ctx, {
       type: 'line',
@@ -528,36 +1260,126 @@ document.addEventListener("DOMContentLoaded", () => {
         datasets: [{
           label: 'Evolução da Nota (%)',
           data: historyData,
-          borderColor: '#45D6C2',
-          backgroundColor: 'rgba(69, 214, 194, 0.2)',
-          borderWidth: 2,
-          pointBackgroundColor: '#7C6CFF',
-          pointRadius: 4,
+          borderColor: palette.border,
+          backgroundColor: palette.fill,
+          borderWidth: 2.5,
+          pointBackgroundColor: palette.point,
+          pointBorderColor: '#101722',
+          pointBorderWidth: 1.8,
+          pointRadius: 3.5,
+          pointHoverRadius: 5,
           fill: true,
-          tension: 0.3
+          tension: 0.38,
+          borderJoinStyle: 'round',
+          cubicInterpolationMode: 'monotone',
+          shadowColor: palette.glow,
+          shadowBlur: 16
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        animation: { duration: 850, easing: 'easeOutCubic' },
         scales: {
-          y: { 
-            beginAtZero: true, 
+          y: {
+            beginAtZero: true,
             max: 100,
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: { color: '#969DB4' }
+            grid: { color: 'rgba(255, 255, 255, 0.06)', drawBorder: false },
+            ticks: { color: '#D0D7F1', padding: 8 },
+            border: { display: false }
           },
           x: {
-            grid: { display: false },
-            ticks: { color: '#969DB4' }
+            grid: { display: false, drawBorder: false },
+            ticks: { color: '#D0D7F1', padding: 6 },
+            border: { display: false }
           }
         },
         plugins: {
-          legend: { labels: { color: '#E9ECF5' } }
+          legend: {
+            display: true,
+            labels: { color: '#E9ECF5', boxWidth: 12, usePointStyle: true, pointStyle: 'circle' }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(12, 16, 25, 0.96)',
+            titleColor: '#fff',
+            bodyColor: '#fff',
+            borderColor: palette.border,
+            borderWidth: 1,
+            displayColors: true,
+            padding: 10,
+            titleFont: { family: 'Plus Jakarta Sans' },
+            bodyFont: { family: 'Plus Jakarta Sans' }
+          }
         }
       }
     });
   }
+
+  function shareResult() {
+    const totalQuestions = currentQuestions.length || 0;
+    const pct = totalQuestions ? Math.round((score / totalQuestions) * 100) : 0;
+    const nota = (pct / 10).toFixed(1).replace(".", ",");
+    const mensagem = `Meu resultado no Simulado de Programação Java: ${score}/${totalQuestions} acertos (${pct}%), nota ${nota}/10.`;
+
+    if (navigator.share) {
+      navigator.share({
+        title: 'Simulado de Programação Java',
+        text: mensagem,
+        url: window.location.href
+      }).catch(() => {
+        fallbackShareCopy(mensagem);
+      });
+      return;
+    }
+
+    fallbackShareCopy(mensagem);
+  }
+
+  function fallbackShareCopy(mensagem) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(mensagem)
+        .then(() => alert('Resultado copiado para a área de transferência!'))
+        .catch(() => alert('Seu resultado foi: ' + mensagem));
+      return;
+    }
+
+    const temp = document.createElement('textarea');
+    temp.value = mensagem;
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    document.body.removeChild(temp);
+    alert('Resultado copiado para a área de transferência!');
+  }
+
+  document.getElementById("btn-review").addEventListener("click", () => {
+    renderReviewPanel(getWrongQuestionsFromCurrentRound());
+  });
+
+  document.getElementById("btn-close-review").addEventListener("click", closeReviewPanel);
+
+  document.getElementById("btn-share").addEventListener("click", shareResult);
+
+  document.getElementById("btn-repeat").addEventListener("click", () => {
+    if (!lastQuizQuestions.length) {
+      alert('Ainda não há uma prova anterior para repetir.');
+      return;
+    }
+
+    selectedTopic = lastQuizConfig.topic;
+    selectedLen = lastQuizConfig.length;
+    document.querySelectorAll(".tpick").forEach((item) => {
+      item.classList.toggle("on", item.dataset.topic === selectedTopic);
+    });
+    document.querySelectorAll(".len").forEach((item) => {
+      item.classList.toggle("on", parseInt(item.dataset.len) === selectedLen);
+    });
+
+    screenResult.classList.add("hidden");
+    closeReviewPanel();
+    startQuizWithQuestions(lastQuizQuestions.slice());
+  });
 
   document.getElementById("btn-retry").addEventListener("click", () => {
     screenResult.classList.add("hidden");
@@ -566,14 +1388,18 @@ document.addEventListener("DOMContentLoaded", () => {
     currentQuestions = [];
     currentIndex = 0;
     score = 0;
+    questionResults = [];
     selectedOption = null;
     timeLeft = 0;
+    closeReviewPanel();
     updateTimerUI();
   });
 
   btnHome.addEventListener("click", () => {
     goToIntro();
   });
+
+  updateProgressPanel();
 });
 </script>
 </body>

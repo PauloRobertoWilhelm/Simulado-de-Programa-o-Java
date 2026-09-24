@@ -32,596 +32,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-:root {
-  --bg: #0E1118;
-  --bg-grad: radial-gradient(1200px 700px at 50% -10%, #1A2138 0%, #0E1118 60%);
-  --surface: #161C2B;
-  --surface-2: #1E2640;
-  --border: #2A3349;
-  --border-soft: #222B40;
-  --text: #E9ECF5;
-  --muted: #969DB4;
-  --muted-2: #6E7691;
-  --primary: #7C6CFF;
-  --primary-2: #9C8DFF;
-  --teal: #45D6C2;
-  --amber: #F5B043;
-  --blue: #5B9CFF;
-  --success: #36D399;
-  --success-bg: rgba(54, 211, 153, 0.12);
-  --error: #FB6F84;
-  --error-bg: rgba(251, 111, 132, 0.12);
-  --r-sm: 10px;
-  --r-md: 16px;
-  --r-lg: 22px;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-  --ring: 0 0 0 3px rgba(124, 108, 255, 0.35);
-  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
-  --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  font-family: var(--font-body);
-  background: var(--bg);
-  background-image: var(--bg-grad);
-  background-attachment: fixed;
-  color: var(--text);
-  line-height: 1.55;
-  min-height: 100vh;
-  padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
-  display: flex;
-  justify-content: center;
-  position: relative;
-  overflow-x: hidden;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: -20% -10% auto auto;
-  width: 42rem;
-  height: 42rem;
-  background: radial-gradient(circle, rgba(124, 108, 255, 0.42), rgba(124, 108, 255, 0.14) 28%, rgba(124, 108, 255, 0) 58%);
-  filter: blur(26px);
-  animation: bgGlow 12s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: 0;
-}
-body::after {
-  content: "";
-  position: fixed;
-  inset: auto auto -18% -10%;
-  width: 38rem;
-  height: 38rem;
-  background: radial-gradient(circle, rgba(69, 214, 194, 0.28), rgba(69, 214, 194, 0.14) 30%, rgba(69, 214, 194, 0) 58%);
-  filter: blur(26px);
-  animation: bgGlowAlt 14s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: 0;
-}
-@keyframes bgGlow {
-  0% { transform: translate3d(-8px, 0, 0) scale(0.96); opacity: 0.9; }
-  100% { transform: translate3d(24px, 18px, 0) scale(1.08); opacity: 1; }
-}
-@keyframes bgGlowAlt {
-  0% { transform: translate3d(12px, -10px, 0) scale(1); opacity: 0.8; }
-  100% { transform: translate3d(-18px, 18px, 0) scale(1.12); opacity: 1; }
-}
-.app { width: 100%; max-width: 680px; position: relative; z-index: 1; }
-.hidden { display: none !important; }
-
-.btn {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  border-radius: var(--r-md);
-  cursor: pointer;
-  padding: 16px 22px;
-  width: 100%;
-  color: #fff;
-  background: linear-gradient(135deg, var(--primary), #6354e6);
-  transition: transform 0.2s ease, box-shadow 0.25s ease, opacity 0.2s ease, filter 0.2s ease;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 26px rgba(124, 108, 255, 0.32), 0 0 22px rgba(124, 108, 255, 0.24);
-  animation: buttonIn 0.45s cubic-bezier(0.2, 0.9, 0.2, 1) both;
-}
-.btn:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 16px 34px rgba(124, 108, 255, 0.42), 0 0 32px rgba(124, 108, 255, 0.3);
-  filter: brightness(1.06);
-}
-.btn:active { transform: translateY(0) scale(1); }
-.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
-.btn-ghost { background: rgba(255, 255, 255, 0.02); color: var(--text); border: 1px solid var(--border); box-shadow: none; margin-top: 0; }
-.btn-ghost:hover { background: rgba(124, 108, 255, 0.09); color: var(--text); transform: translateY(-2px); border-color: rgba(124, 108, 255, 0.6); }
-#btn-back, #btn-home { background: rgba(124, 108, 255, 0.06); border-color: rgba(124, 108, 255, 0.4); }
-#btn-quit { background: rgba(251, 111, 132, 0.08); border-color: rgba(251, 111, 132, 0.45); color: #ffdfe6; }
-#btn-quit:hover { background: rgba(251, 111, 132, 0.14); border-color: rgba(251, 111, 132, 0.8); }
-@keyframes buttonIn {
-  0% { opacity: 0; transform: translateY(10px) scale(0.98); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.screen { animation: fade 0.4s ease; }
-.result-shell {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(15, 18, 27, 0.8), rgba(10, 12, 18, 0.9));
-  border: 1px solid rgba(155, 142, 255, 0.14);
-  border-radius: 26px;
-  padding: 16px 14px 12px;
-  box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  animation: resultReveal 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
-}
-
-.result-shell::before,
-.result-shell::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(8px);
-}
-
-.result-shell::before {
-  inset: -18% 12% auto auto;
-  width: 140px;
-  height: 140px;
-  background: radial-gradient(circle, rgba(124, 108, 255, 0.1), rgba(124, 108, 255, 0));
-}
-
-.result-shell::after {
-  inset: auto auto -18% -8%;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, rgba(69, 214, 194, 0.08), rgba(69, 214, 194, 0));
-}
-
-@keyframes resultReveal {
-  0% { opacity: 0; transform: translateY(32px) scale(0.965) rotateX(10deg); }
-  40% { opacity: 0.6; transform: translateY(10px) scale(0.99) rotateX(3deg); }
-  100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
-}
-
-.result-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.result-stat {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 10px 8px 11px;
-  text-align: center;
-  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, opacity 0.24s ease;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  animation: statReveal 0.9s cubic-bezier(0.18, 0.8, 0.2, 1) both;
-}
-
-.result-stat:nth-child(2) { animation-delay: 0.08s; }
-.result-stat:nth-child(3) { animation-delay: 0.16s; }
-
-@keyframes statReveal {
-  0% { opacity: 0; transform: translateY(18px) scale(0.96); }
-  60% { opacity: 0.8; transform: translateY(-2px) scale(1.01); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.result-stat:hover {
-  transform: translateY(-2px);
-  border-color: rgba(124, 108, 255, 0.28);
-  box-shadow: 0 10px 22px rgba(124, 108, 255, 0.08);
-}
-
-.result-stat .label {
-  display: block;
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 7px;
-  transition: color 0.2s ease;
-}
-
-.result-stat:hover .label { color: #dfe4ff; }
-
-.result-stat .value {
-  font-family: var(--font-display);
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: var(--text);
-}
-@keyframes fade {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
-}
-
-@keyframes floatSoft {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-3px); }
-}
-
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.intro { text-align: center; padding: 46px 8px 8px; }
-.badge-top { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; color: var(--teal); border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; margin-bottom: 24px; }
-.badge-top .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 0 rgba(69, 214, 194, 0.5); animation: pulse 2s infinite; }
-@keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(69, 214, 194, 0); } 100% { box-shadow: 0 0 0 0 rgba(69, 214, 194, 0); } }
-.intro h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 7vw, 2.9rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 14px; }
-.intro h1 .grad { background: linear-gradient(120deg, var(--primary-2), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.intro .sub { color: var(--muted); font-size: 1.05rem; max-width: 460px; margin: 0 auto 28px; }
-
-.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 26px; }
-.chip { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-sm); padding: 12px 14px; display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); }
-.chip b { color: var(--text); font-family: var(--font-display); }
-
-.picker { text-align: left; background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-md); padding: 18px 20px; margin-bottom: 18px; }
-.picker h3 { font-family: var(--font-display); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; font-weight: 600; }
-.topic-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-.tpick { flex: 1 1 auto; min-width: calc(33% - 8px); text-align: center; padding: 13px 10px; border-radius: var(--r-sm); border: 1.5px solid var(--border); background: var(--surface-2); color: var(--text); font-weight: 600; font-size: 0.92rem; cursor: pointer; transition: all 0.15s ease; user-select: none; }
-.tpick:hover { transform: translateY(-1px); border-color: var(--primary); }
-.tpick.on { border-color: var(--primary); background: rgba(124, 108, 255, 0.16); box-shadow: 0 0 0 2px rgba(124, 108, 255, 0.18); }
-
-.len-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
-.len { padding: 14px 6px; border-radius: var(--r-sm); cursor: pointer; background: var(--bg); border: 1.5px solid var(--border); text-align: center; transition: all 0.15s ease; }
-.len:hover { border-color: var(--primary); }
-.len.on { border-color: var(--primary); background: rgba(124, 108, 255, 0.12); }
-.len .n { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--text); display: block; line-height: 1.1; }
-.len .l { font-size: 0.72rem; color: var(--muted); font-family: var(--font-mono); }
-
-.topbar { position: sticky; top: 0; z-index: 5; padding: 6px 0 16px; background: linear-gradient(var(--bg) 70%, transparent); }
-.progress-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.85rem; }
-.progress-meta .count { font-family: var(--font-mono); color: var(--muted); }
-.progress-meta .count b { color: var(--text); }
-.timer { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-weight: 700; color: var(--amber); background: rgba(245, 176, 67, 0.12); padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(245, 176, 67, 0.3); }
-.timer.danger { color: var(--error); background: var(--error-bg); border-color: var(--error); }
-.bar { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
-.bar > i { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--teal)); transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
-
-.q-card { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-lg); padding: 24px 22px; box-shadow: var(--shadow); animation: slideIn 0.32s ease; }
-@keyframes slideIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
-.q-statement { font-size: 1.12rem; font-weight: 500; line-height: 1.5; margin-bottom: 6px; }
-pre.code { font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.6; background: #0B0E16; border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: var(--r-sm); padding: 14px 16px; margin: 16px 0 4px; white-space: pre; overflow-x: auto; color: #CBD2E8; }
-.options { display: grid; gap: 11px; margin-top: 18px; }
-.option { display: flex; align-items: flex-start; gap: 13px; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r-md); padding: 15px 16px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; font-size: 0.97rem; text-align: left; width: 100%; color: var(--text); }
-.option:hover { border-color: var(--primary); background: var(--surface-2); }
-.option .key { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 500; background: var(--surface-2); border: 1px solid var(--border); color: var(--muted); }
-.option.correct { border-color: var(--success); background: var(--success-bg); }
-.option.correct .key { background: var(--success); border-color: var(--success); color: #06281c; }
-.option.wrong { border-color: var(--error); background: var(--error-bg); }
-.option.wrong .key { background: var(--error); border-color: var(--error); color: #2a0b11; }
-.options.locked .option { pointer-events: none; }
-.nav { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
-
-.feedback { margin-top: 16px; border-radius: var(--r-md); padding: 14px 16px; font-size: 0.93rem; border: 1px solid var(--border-soft); animation: fade 0.3s ease; }
-.feedback.ok { background: var(--success-bg); border-color: rgba(54, 211, 153, 0.3); }
-.feedback.no { background: var(--error-bg); border-color: rgba(251, 111, 132, 0.3); }
-.feedback .fh { font-family: var(--font-display); font-weight: 600; margin-bottom: 7px; }
-.feedback.ok .fh { color: var(--success); }
-.feedback.no .fh { color: var(--error); }
-.feedback .why { color: #C7CEE6; }
-.feedback .why code { font-family: var(--font-mono); font-size: 0.82em; background: #0B0E16; border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: #9FE7C8; }
-
-.result-head { text-align: center; padding: 34px 8px 8px; }
-.score-ring {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  position: relative;
-  background: linear-gradient(135deg, rgba(124, 108, 255, 0.16), rgba(69, 214, 194, 0.12));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 12px 28px rgba(124, 108, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  animation: ringPop 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.score-ring::before { content: ""; position: absolute; inset: 10px; border-radius: 50%; background: linear-gradient(180deg, rgba(14, 17, 24, 0.96), rgba(18, 23, 35, 0.93)); border: 1px solid rgba(255,255,255,0.03); }
-.score-ring .inner { position: relative; text-align: center; z-index: 1; }
-.score-ring .score-icon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(124, 108, 255, 0.1);
-  border: 1px solid rgba(124, 108, 255, 0.22);
-  color: #d9d3ff;
-  font-size: 0.74rem;
-  box-shadow: 0 0 14px rgba(124, 108, 255, 0.12);
-  animation: scoreIconPulse 2s ease-in-out infinite;
-  z-index: 2;
-}
-@keyframes scoreIconPulse {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
-  50% { transform: translateY(-3px) scale(1.08); opacity: 1; }
-}
-.score-ring .pct {
-  text-shadow: 0 0 18px rgba(124, 108, 255, 0.45);
-}
-@keyframes ringPop {
-  0% { transform: scale(0.7); opacity: 0.2; }
-  60% { transform: scale(1.08); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
-}
-.score-ring .pct { font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; line-height: 1; }
-.score-ring .lbl { font-size: 0.8rem; color: var(--muted); font-family: var(--font-mono); margin-top: 2px; }
-.verdict {
-  font-family: var(--font-display);
-  font-size: 1.38rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-  letter-spacing: 0.01em;
-  text-shadow: none;
-}
-.badge-status {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 11px;
-  border-radius: 999px;
-  margin: 0 auto 16px;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.05);
-  background: linear-gradient(180deg, rgba(124, 108, 255, 0.08), rgba(124, 108, 255, 0.04));
-  color: var(--text);
-  box-shadow: none;
-  animation: badgeFloat 2.6s ease-in-out infinite;
-}
-@keyframes badgeFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1px); }
-}
-.badge-status.pass {
-  background: linear-gradient(180deg, rgba(54, 211, 153, 0.18), rgba(54, 211, 153, 0.08));
-  border-color: rgba(54, 211, 153, 0.42);
-  color: #c8f9e6;
-  box-shadow: 0 12px 28px rgba(54, 211, 153, 0.14), inset 0 0 18px rgba(54, 211, 153, 0.12);
-}
-.badge-status.fail {
-  background: linear-gradient(180deg, rgba(251, 111, 132, 0.18), rgba(251, 111, 132, 0.08));
-  border-color: rgba(251, 111, 132, 0.42);
-  color: #ffd5de;
-  box-shadow: 0 12px 28px rgba(251, 111, 132, 0.14), inset 0 0 18px rgba(251, 111, 132, 0.12);
-}
-.nota-line { font-family: var(--font-mono); color: var(--muted); font-size: 0.9rem; margin-bottom: 26px; }
-.nota-line b { color: var(--text); font-size: 1.05rem; }
-.performance-message {
-  margin: 0 auto 12px;
-  max-width: 480px;
-  padding: 9px 11px;
-  border-radius: 11px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-  border: 1px solid rgba(255,255,255,0.05);
-  color: #dee5ff;
-  font-size: 0.85rem;
-  text-align: center;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
-}
-.performance-message.pass { background: linear-gradient(180deg, rgba(54, 211, 153, 0.06), rgba(54, 211, 153, 0.02)); border-color: rgba(54, 211, 153, 0.12); color: #eafef5; }
-.performance-message.average { background: linear-gradient(180deg, rgba(124, 108, 255, 0.06), rgba(124, 108, 255, 0.02)); border-color: rgba(124, 108, 255, 0.12); color: #f0ebff; }
-.performance-message.fail { background: linear-gradient(180deg, rgba(251, 111, 132, 0.06), rgba(251, 111, 132, 0.02)); border-color: rgba(251, 111, 132, 0.12); color: #fff0f3; }
-.performance-message strong { color: #ffffff; }
-
-.chart-container {
-  position: relative;
-  background: linear-gradient(180deg, rgba(17, 22, 32, 0.9), rgba(12, 16, 24, 0.96));
-  border: 1px solid rgba(155, 142, 255, 0.14);
-  border-radius: 18px;
-  padding: 12px 10px 8px;
-  margin: 8px 0 16px;
-  width: 100%;
-  height: 210px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 10px 22px rgba(2, 5, 12, 0.2);
-  overflow: hidden;
-  transform: translateY(0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.chart-container::before,
-.chart-container::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.chart-container::before {
-  inset: -18% -12% auto auto;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(124, 108, 255, 0.1), rgba(124, 108, 255, 0) 62%);
-}
-
-.chart-container::after {
-  inset: auto auto -14% -8%;
-  width: 130px;
-  height: 130px;
-  background: radial-gradient(circle, rgba(69, 214, 194, 0.08), rgba(69, 214, 194, 0) 60%);
-}
-
-.chart-container canvas {
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 0 10px rgba(124, 108, 255, 0.08));
-}
-
-.chart-container:hover {
-  transform: translateY(-1px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 12px 24px rgba(2, 5, 12, 0.24);
-  border-color: rgba(155, 142, 255, 0.18);
-}
-
-.progress-panel {
-  margin: 12px 0 10px;
-  background: linear-gradient(180deg, rgba(19, 25, 38, 0.88), rgba(12, 16, 25, 0.96));
-  border: 1px solid rgba(124, 108, 255, 0.15);
-  border-radius: 18px;
-  padding: 12px 12px 10px;
-  box-shadow: 0 10px 24px rgba(10, 15, 22, 0.18);
-}
-
-.progress-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  color: var(--muted);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.progress-level {
-  color: var(--teal);
-  font-family: var(--font-mono);
-  letter-spacing: 0.08em;
-}
-
-.progress-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.metric-pill {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 12px;
-  padding: 10px 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  min-height: 66px;
-}
-
-.metric-label {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-}
-
-.metric-pill strong {
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  color: var(--text);
-}
-
-.review-panel {
-  margin-top: 8px;
-  border: 1px solid rgba(124, 108, 255, 0.2);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(16, 20, 31, 0.92), rgba(11, 14, 22, 0.96));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
-  overflow: hidden;
-}
-
-.review-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  font-family: var(--font-display);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #edf2ff;
-}
-
-.mini-btn {
-  appearance: none;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(255,255,255,0.02);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 7px 10px;
-  font-size: 0.72rem;
-  cursor: pointer;
-}
-
-.review-list {
-  display: grid;
-  gap: 10px;
-  padding: 12px;
-}
-
-.review-card {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.review-card.bad {
-  border-color: rgba(251, 111, 132, 0.22);
-  background: rgba(251, 111, 132, 0.04);
-}
-
-.review-badge {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 8px;
-  margin-bottom: 8px;
-  background: rgba(251, 111, 132, 0.12);
-  color: #ffd5de;
-  border: 1px solid rgba(251, 111, 132, 0.2);
-}
-
-.review-question {
-  font-size: 0.92rem;
-  line-height: 1.45;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.review-answer {
-  color: #dfe7ff;
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.review-answer strong {
-  color: var(--text);
-}
-
-.review-empty {
-  padding: 16px 12px;
-  color: var(--muted);
-  text-align: center;
-  font-size: 0.9rem;
-}
-</style>
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 <div class="app">
@@ -639,14 +50,44 @@ pre.code { font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.6; 
         <div class="chip"><span class="ic">🔊</span><span>Sons <b>Interativos</b></span></div>
       </div>
 
+      <!--
+        BLOCO: seletor de assunto do simulado
+        Função: permite que o aluno escolha qual matéria vai praticar antes de iniciar a prova.
+        Como funciona:
+        - .picker é o painel que agrupa a escolha de tema.
+        - h3 é o texto que orienta o aluno.
+        - #topic-grid é o contêiner que organiza todos os filtros em linha.
+        - .tpick são os botões de tema, cada um representa um assunto específico.
+        - data-topic guarda o nome do tema em formato de texto, usado depois pelo JavaScript para filtrar questões.
+        - class="on" marca o botão que está selecionado naquele momento.
+        - o botão "Tudo misturado" usa data-topic="all" para indicar que o sistema deve misturar todas as matérias.
+        - o botão de lógica foi incluído para ampliar as opções de estudo com o tema de estruturas lógicas.
+        - o atributo style="color:var(--primary-2)" apenas destaca visualmente esse botão sem alterar a lógica.
+      -->
       <div class="picker">
+        <!-- h3 = título do bloco, ou seja, o texto que informa ao aluno o que ele deve fazer. -->
         <h3>Qual matéria você quer treinar?</h3>
+
+        <!-- topic-grid = container dos temas. Ele organiza os botões de assunto em uma grade/flex. -->
         <div class="topic-grid" id="topic-grid">
+          <!-- .tpick on = botão ativo, com a classe "on" para indicar que está selecionado no momento. -->
           <div class="tpick on" data-topic="all">🎯 Tudo misturado</div>
+
+          <!-- data-topic="operadores" = identifica o assunto Operadores e será usado pela lógica JavaScript para filtrar perguntas dessa área. -->
           <div class="tpick" data-topic="operadores">➕ Operadores</div>
+
+          <!-- data-topic="selecao" = identifica o assunto de estruturas de decisão (If / Switch). -->
           <div class="tpick" data-topic="selecao">🔀 If / Switch</div>
+
+          <!-- data-topic="repeticao" = identifica o assunto de laços de repetição (while). -->
           <div class="tpick" data-topic="repeticao">🔁 Laço While</div>
-          <!-- O botão de Lógica foi adicionado aqui embaixo -->
+
+          <!--
+            data-topic="logica" = identifica o tema de Lógica Básica.
+            Esse botão foi adicionado para dar mais variedade ao simulado.
+            style="color:var(--primary-2)" apenas muda a cor do texto para dar destaque visual,
+            mas a parte importante é o atributo data-topic, que precisa ter um valor para o JavaScript descobrir o tema escolhido.
+          -->
           <div class="tpick" style="color:var(--primary-2)" data-topic="logica">🧠 Lógica Básica</div>
         </div>
       </div>
@@ -873,6 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // shuffleArray() cria uma cópia do vetor e embaralha a ordem dos itens.
+  // Essa função é usada para evitar que as perguntas e as opções sempre apareçam
+  // na mesma sequência, deixando o simulado mais dinâmico e menos previsível.
   function shuffleArray(items) {
     const copy = [...items];
     for (let i = copy.length - 1; i > 0; i--) {
@@ -882,18 +326,39 @@ document.addEventListener("DOMContentLoaded", () => {
     return copy;
   }
 
-  function withRandomizedOptions(question) {
-    const entries = shuffleArray(question.options.map((text, index) => ({ text, index })));
-    const randomizedOptions = entries.map(item => item.text);
-    const newCorrect = entries.findIndex(item => item.index === question.correct);
+  // withBalancedAnswerSlot() é uma função estratégica para evitar que a resposta correta
+  // sempre esteja na mesma posição das alternativas. Isso reduz o padrão repetitivo e
+  // torna a prova mais justa e menos previsível para o aluno.
+  //
+  // A lógica funciona assim:
+  // 1) salva o texto correto;
+  // 2) embaralha as outras opções;
+  // 3) coloca a resposta correta em um índice escolhido;
+  // 4) completa os espaços vazios com as alternativas restantes.
+  function withBalancedAnswerSlot(question, targetIndex) {
+    const correctText = question.options[question.correct];
+    const otherTexts = shuffleArray(question.options.filter((_, idx) => idx !== question.correct));
+    const mixed = Array(question.options.length).fill(null);
+    mixed[targetIndex] = correctText;
+
+    let cursor = 0;
+    for (let i = 0; i < mixed.length; i++) {
+      if (mixed[i] === null) {
+        mixed[i] = otherTexts[cursor];
+        cursor++;
+      }
+    }
 
     return {
       ...question,
-      options: randomizedOptions,
-      correct: newCorrect
+      options: mixed,
+      correct: targetIndex
     };
   }
 
+  // buildFilteredQuestions() monta o conjunto de questões que serão usadas na rodada.
+  // Ele filtra por tema, embaralha o banco e distribui as alternativas em posições
+  // variadas para evitar respostas repetitivas na mesma coluna ou mesma posição.
   function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
     let filtered = bank;
 
@@ -907,18 +372,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const base = shuffleArray(filtered);
     const deck = [];
+    const answerSlots = [0, 2, 1, 3];
 
     while (deck.length < len) {
-      const round = shuffleArray(base).map(withRandomizedOptions);
-      deck.push(...round);
-      if (base.length >= len) {
-        break;
-      }
+      const baseQuestion = base[deck.length % base.length];
+      const targetIndex = answerSlots[deck.length % answerSlots.length];
+      deck.push(withBalancedAnswerSlot(baseQuestion, targetIndex));
     }
 
     return deck.slice(0, len);
   }
 
+  // loadProgressState() lê o histórico do navegador.
+  // Ele usa localStorage para persistir os dados do aluno mesmo que a página seja recarregada.
+  // Se o armazenamento estiver vazio ou corrompido, a função devolve um objeto padrão seguro.
   function loadProgressState() {
     try {
       return JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS)) || { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
@@ -927,10 +394,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // saveProgressState() salva o estado do progresso no navegador.
+  // Isso permite que o app mantenha o histórico de provas, melhor nota e acertos acumulados.
   function saveProgressState(state) {
     localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(state));
   }
 
+  // updateProgressPanel() atualiza os cards visuais do painel de progresso.
+  // Ele mostra quantas provas foram feitas, qual foi a melhor porcentagem e quantos acertos totais.
   function updateProgressPanel() {
     const state = loadProgressState();
     const best = Number(state.bestScore || 0);
@@ -942,6 +413,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('progress-level').textContent = level;
   }
 
+  // recordProgressSnapshot() registra a prova finalizada em um histórico persistente.
+  // Ele guarda a melhor nota, o número de sessões e a soma de acertos, criando um painel de evolução.
   function recordProgressSnapshot(pct, totalQuestions, finalScore, topic) {
     const state = loadProgressState();
     state.sessions = (state.sessions || 0) + 1;
@@ -953,6 +426,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateProgressPanel();
   }
 
+  // getWrongQuestionsFromCurrentRound() separa apenas as questões erradas da rodada atual.
+  // Esse filtro serve para montar o painel de revisão, mostrando o que o aluno errou e a resposta correta.
   function getWrongQuestionsFromCurrentRound() {
     if (!currentQuestions.length) return [];
 
@@ -968,6 +443,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, []);
   }
 
+  // renderReviewPanel() cria o painel visual com os erros da rodada.
+  // Ele gera um cartão para cada questão errada com a alternativa correta e a escolhida pelo aluno.
   function renderReviewPanel(wrongItems) {
     const reviewList = document.getElementById('review-list');
     const reviewPanel = document.getElementById('review-panel');
@@ -991,11 +468,14 @@ document.addEventListener("DOMContentLoaded", () => {
     reviewPanel.classList.remove('hidden');
   }
 
+  // closeReviewPanel() fecha o painel de revisão sem apagar os dados do histórico da rodada.
   function closeReviewPanel() {
     const panel = document.getElementById('review-panel');
     if (panel) panel.classList.add('hidden');
   }
 
+  // startQuizWithQuestions() inicia a rodada com o conjunto de questões já montado.
+  // Ele limpa os dados antigos, zera pontuação, prepara o cronômetro e renderiza a primeira pergunta.
   function startQuizWithQuestions(questions) {
     if (!questions || questions.length === 0) {
       alert("Nenhuma questão encontrada para este filtro.");
@@ -1029,87 +509,102 @@ document.addEventListener("DOMContentLoaded", () => {
     startQuizWithQuestions(filtered);
   });
 
+  // startTimer() é o motor do cronômetro do simulado.
+  // Ele reduz o tempo a cada segundo, atualiza o visor visual e dispara a correção
+  // no momento em que o tempo acaba. A função também muda a aparência do relógio para
+  // sinalizar alerta quando restam poucos segundos.
   function startTimer() {
-    timerDisplay.classList.remove("danger");
-    updateTimerUI();
-    clearInterval(timerInterval);
+    timerDisplay.classList.remove("danger"); // remove o estilo de alerta para voltar ao padrão normal
+    updateTimerUI(); // atualiza o visor imediatamente para evitar atraso na primeira execução
+    clearInterval(timerInterval); // garante que não exista um timer antigo ainda rodando em paralelo
+
     timerInterval = setInterval(() => {
-      timeLeft--;
-      updateTimerUI();
+      timeLeft--; // reduz 1 segundo do tempo restante
+      updateTimerUI(); // renderiza o novo valor no visor para o usuário ver o tempo atualizado
+
       if (timeLeft <= 10) {
-        timerDisplay.classList.add("danger");
+        timerDisplay.classList.add("danger"); // quando faltam poucos segundos, muda a cor para sinalizar urgência
       }
+
       if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        alert("O tempo esgotou! Entregando a prova automaticamente.");
-        showResult();
+        clearInterval(timerInterval); // interrompe o relógio para não continuar contando negativo
+        alert("O tempo esgotou! Entregando a prova automaticamente."); // informa o usuário que a prova foi encerrada
+        showResult(); // chama a tela final com os dados mesmo sem resposta de todas as questões
       }
-    }, 1000);
+    }, 1000); // executa a cada 1000 milissegundos, ou seja, cada segundo
   }
 
+  // updateTimerUI() transforma o tempo restante em formato legível.
+  // O objetivo é converter segundos em minutos e segundos, displayando algo como 02:45.
   function updateTimerUI() {
-    let m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-    let s = (timeLeft % 60).toString().padStart(2, '0');
-    timerDisplay.textContent = `⏳ ${m}:${s}`;
+    let m = Math.floor(timeLeft / 60).toString().padStart(2, '0'); // converte os segundos em minutos e sempre mantém 2 dígitos
+    let s = (timeLeft % 60).toString().padStart(2, '0'); // pega o resto dos segundos e mantém o formato 00 até 59
+    timerDisplay.textContent = `⏳ ${m}:${s}`; // escreve o texto visível na tela do usuário, como 00:45
   }
 
   // renderQuestion() é o responsável por desenhar uma pergunta na tela.
   // Ele cria a estrutura HTML da questão, monta as alternativas e registra o
   // evento de clique para cada opção. Essa função é chamada repetidamente
   // enquanto o usuário avança no simulado.
+  //
+  // O que acontece aqui:
+  // - identifica a questão atual pelo índice;
+  // - atualiza o contador de questão atual/total;
+  // - monta o texto e o código da questão;
+  // - transforma cada alternativa em botão interativo;
+  // - quando o usuário clica, valida a resposta e mostra feedback.
   function renderQuestion() {
-    selectedOption = null;
-    btnNext.disabled = true;
-    const q = currentQuestions[currentIndex];
-    
-    document.getElementById("q-now").textContent = currentIndex + 1;
-    document.getElementById("q-total").textContent = currentQuestions.length;
-    barFill.style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`;
+    selectedOption = null; // zera a escolha atual para permitir que o aluno escolha novamente na próxima pergunta
+    btnNext.disabled = true; // bloqueia o botão de avançar até a resposta ser marcada
+    const q = currentQuestions[currentIndex]; // pega a questão ativa pelo índice atual da rodada
 
-    let html = `<div class="q-statement">${q.statement}</div>`;
-    if (q.code) html += `<pre class="code">${q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
-    
+    document.getElementById("q-now").textContent = currentIndex + 1; // mostra em qual número da prova a pessoa está
+    document.getElementById("q-total").textContent = currentQuestions.length; // mostra a quantidade total de questões da rodada
+    barFill.style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`; // calcula porcentagem de progresso e cresce a barra visualmente
+
+    let html = `<div class="q-statement">${q.statement}</div>`; // monta o enunciado da pergunta em HTML
+    if (q.code) html += `<pre class="code">${q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`; // se houver código, ele é exibido em bloco monoespaçado e com caracteres escapados
+
     let optionsMapped = q.options.map((texto, index) => ({
-      textoOriginal: texto,
-      originalIndex: index,
-      isCerta: (index === q.correct)
+      textoOriginal: texto, // guarda o texto da alternativa exatamente como veio do JSON
+      originalIndex: index, // guarda o índice original da alternativa para comparar com a resposta correta
+      isCerta: (index === q.correct) // indica se essa opção é a correta para destacar depois
     }));
-    optionsMapped = shuffleArray(optionsMapped);
-    
-    html += `<div class="options" id="opts-container">`;
+
+    html += `<div class="options" id="opts-container">`; // abre o container das opções para receber os botões
     optionsMapped.forEach((optData, i) => {
-      const letter = String.fromCharCode(65 + i);
+      const letter = String.fromCharCode(65 + i); // converte 0,1,2,3 em A, B, C, D para identificar cada alternativa
       html += `
         <div class="option" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}">
             <div class="key">${letter}</div>
             <div class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
         </div>`;
     });
-    html += `</div><div id="feedback-area"></div>`;
-    qCard.innerHTML = html;
+    html += `</div><div id="feedback-area"></div>`; // fecha o bloco de opções e prepara o espaço do feedback
+    qCard.innerHTML = html; // insere todo o HTML da questão dentro do cartão da pergunta
 
     document.querySelectorAll(".option").forEach(optEl => {
       optEl.addEventListener("click", function() {
-        if (selectedOption !== null) return;
-        selectedOption = true;
-        document.getElementById("opts-container").classList.add("locked");
+        if (selectedOption !== null) return; // impede múltiplas escolhas na mesma pergunta
+        selectedOption = true; // marca que a opção já foi escolhida
+        document.getElementById("opts-container").classList.add("locked"); // bloqueia cliques posteriores para evitar re-resposta
 
-        const selectedIndex = Number(this.dataset.optionIndex);
-        const isCorrect = selectedIndex === q.correct;
+        const selectedIndex = Number(this.dataset.optionIndex); // pega o índice da alternativa clicada
+        const isCorrect = selectedIndex === q.correct; // compara com a resposta correta da questão
         questionResults[currentIndex] = {
           isCorrect,
           selectedIndex,
           correctIndex: q.correct
         };
-        
-        playSound(isCorrect ? 'correct' : 'wrong');
-        
+
+        playSound(isCorrect ? 'correct' : 'wrong'); // toca efeito sonoro conforme resposta correta ou errada
+
         if (isCorrect) {
-          this.classList.add("correct");
-          score++;
+          this.classList.add("correct"); // aplica destaque verde à resposta correta escolhida
+          score++; // soma 1 ponto no resultado da rodada
         } else {
-          this.classList.add("wrong");
-          document.querySelector('.option[data-correct="true"]').classList.add("correct");
+          this.classList.add("wrong"); // aplica destaque vermelho na resposta errada
+          document.querySelector('.option[data-correct="true"]').classList.add("correct"); // destaca a alternativa correta para o aluno aprender
         }
 
         document.getElementById("feedback-area").innerHTML = `
@@ -1118,7 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="why">${q.explain}</div>
           </div>
         `;
-        btnNext.disabled = false;
+        btnNext.disabled = false; // habilita avanço para a próxima questão
       });
     });
   }
@@ -1159,6 +654,8 @@ document.addEventListener("DOMContentLoaded", () => {
     goToIntro();
   });
 
+  // showResult() é o ponto final da prova.
+  // Ele calcula a nota, mostra o diagnóstico da performance, salva o histórico e atualiza o gráfico.
   function showResult() {
     clearInterval(timerInterval);
     screenQuiz.classList.add("hidden");
@@ -1250,6 +747,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderChart(history);
   }
 
+  // renderChart() desenha o gráfico de histórico usando Chart.js.
+  // Ele recebe um array com as notas recentes e cria um gráfico de linha para mostrar a evolução do aluno.
   function renderChart(historyData) {
     const ctx = document.getElementById('chart-history').getContext('2d');
     
@@ -1346,6 +845,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // shareResult() prepara uma mensagem para compartilhar o resultado do usuário.
+  // Se o navegador suportar a API de compartilhamento, usa ela; caso contrário, copia para a área de transferência.
   function shareResult() {
     const totalQuestions = currentQuestions.length || 0;
     const pct = totalQuestions ? Math.round((score / totalQuestions) * 100) : 0;
@@ -1366,6 +867,8 @@ document.addEventListener("DOMContentLoaded", () => {
     fallbackShareCopy(mensagem);
   }
 
+  // fallbackShareCopy() é o mecanismo de backup quando o navegador não oferece a função nativa de compartilhamento.
+  // Ele tenta copiar a mensagem para a área de transferência para manter a mesma experiência.
   function fallbackShareCopy(mensagem) {
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(mensagem)

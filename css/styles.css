@@ -5,29 +5,29 @@
   toda a aplicação se adapta sem precisar mexer em cada seletor manualmente.
 */
 :root {
-  --bg: #0E1118;
-  --bg-grad: radial-gradient(1200px 700px at 50% -10%, #1A2138 0%, #0E1118 60%);
-  --surface: #161C2B;
-  --surface-2: #1E2640;
-  --border: #2A3349;
-  --border-soft: #222B40;
-  --text: #E9ECF5;
-  --muted: #969DB4;
-  --muted-2: #6E7691;
-  --primary: #7C6CFF;
-  --primary-2: #9C8DFF;
-  --teal: #45D6C2;
-  --amber: #F5B043;
-  --blue: #5B9CFF;
-  --success: #36D399;
-  --success-bg: rgba(54, 211, 153, 0.12);
-  --error: #FB6F84;
-  --error-bg: rgba(251, 111, 132, 0.12);
+  --bg: #070B10;
+  --bg-grad: radial-gradient(1200px 700px at 50% -10%, #101A27 0%, #070B10 60%);
+  --surface: #111821;
+  --surface-2: #182330;
+  --border: #253547;
+  --border-soft: #1D2A38;
+  --text: #EAF3FF;
+  --muted: #9AA9BE;
+  --muted-2: #6D7E94;
+  --primary: #2D9CFF;
+  --primary-2: #72D9FF;
+  --teal: #54E3C3;
+  --amber: #F0B15B;
+  --blue: #59A9FF;
+  --success: #34D399;
+  --success-bg: rgba(52, 211, 153, 0.12);
+  --error: #FF717D;
+  --error-bg: rgba(255, 113, 125, 0.12);
   --r-sm: 10px;
   --r-md: 16px;
   --r-lg: 22px;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-  --ring: 0 0 0 3px rgba(124, 108, 255, 0.35);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  --ring: 0 0 0 3px rgba(45, 156, 255, 0.35);
   --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
   --font-body: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
   --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
@@ -58,18 +58,19 @@ html { -webkit-text-size-adjust: 100%; }
   }
 */
 body {
-  font-family: var(--font-body); /* define a fonte principal usada em todo o site */
-  background: var(--bg); /* pinta o fundo principal com a cor escura base do tema */
-  background-image: var(--bg-grad); /* aplica o degradê escuro atrás da interface para dar profundidade visual */
-  background-attachment: fixed; /* trava o fundo enquanto a tela rola, mantendo o efeito visual estável */
-  color: var(--text); /* define a cor principal do texto para deixar o conteúdo legível */
-  line-height: 1.55; /* aumenta o espaçamento entre linhas para melhorar a leitura e evitar texto apertado */
-  min-height: 100vh; /* garante que o body tenha pelo menos a altura inteira da viewport */
-  padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); /* cria espaço seguro nas bordas, principalmente em celulares com notch */
-  display: flex; /* ativa o modelo flexbox para manipular a posição do conteúdo facilmente */
-  justify-content: center; /* centraliza o container principal horizontalmente na tela */
-  position: relative; /* torna o body um ponto de referência para elementos posicionados com absolute/relative */
-  overflow-x: hidden; /* evita que elementos largos saiam da tela horizontalmente e criem scroll indesejado */
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  background-image: var(--bg-grad);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
 }
 /*
   ===== LUZES DE FUNDO E AMBIENTE =====
@@ -89,7 +90,7 @@ body::before {
   inset: -20% -10% auto auto;
   width: 42rem;
   height: 42rem;
-  background: radial-gradient(circle, rgba(124, 108, 255, 0.42), rgba(124, 108, 255, 0.14) 28%, rgba(124, 108, 255, 0) 58%);
+  background: radial-gradient(circle, rgba(45, 156, 255, 0.38), rgba(45, 156, 255, 0.12) 28%, rgba(45, 156, 255, 0) 58%);
   filter: blur(26px);
   animation: bgGlow 12s ease-in-out infinite alternate;
   pointer-events: none;
@@ -101,7 +102,7 @@ body::after {
   inset: auto auto -18% -10%;
   width: 38rem;
   height: 38rem;
-  background: radial-gradient(circle, rgba(69, 214, 194, 0.28), rgba(69, 214, 194, 0.14) 30%, rgba(69, 214, 194, 0) 58%);
+  background: radial-gradient(circle, rgba(84, 227, 195, 0.22), rgba(84, 227, 195, 0.10) 30%, rgba(84, 227, 195, 0) 58%);
   filter: blur(26px);
   animation: bgGlowAlt 14s ease-in-out infinite alternate;
   pointer-events: none;
@@ -150,28 +151,28 @@ body::after {
   padding: 16px 22px;
   width: 100%;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #6354e6);
+  background: linear-gradient(135deg, var(--primary), #1A7DE3);
   transition: transform 0.2s ease, box-shadow 0.25s ease, opacity 0.2s ease, filter 0.2s ease;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 26px rgba(124, 108, 255, 0.32), 0 0 22px rgba(124, 108, 255, 0.24);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 26px rgba(45, 156, 255, 0.3), 0 0 22px rgba(45, 156, 255, 0.18);
   animation: buttonIn 0.45s cubic-bezier(0.2, 0.9, 0.2, 1) both;
 }
 .btn:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 16px 34px rgba(124, 108, 255, 0.42), 0 0 32px rgba(124, 108, 255, 0.3);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 16px 34px rgba(45, 156, 255, 0.36), 0 0 32px rgba(45, 156, 255, 0.22);
   filter: brightness(1.06);
 }
 .btn:active { transform: translateY(0) scale(1); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-ghost { background: rgba(255, 255, 255, 0.02); color: var(--text); border: 1px solid var(--border); box-shadow: none; margin-top: 0; }
-.btn-ghost:hover { background: rgba(124, 108, 255, 0.09); color: var(--text); transform: translateY(-2px); border-color: rgba(124, 108, 255, 0.6); }
+.btn-ghost:hover { background: rgba(45, 156, 255, 0.08); color: var(--text); transform: translateY(-2px); border-color: rgba(45, 156, 255, 0.5); }
 /*
   #btn-back, #btn-home e #btn-quit
   - mudam o visual dos botões de navegação e saída do simulado;
-  - o fundo roxo mantém a identidade visual do app, enquanto o vermelho indica ação de sair.
+  - o fundo azul mantém a identidade visual do app sem apelar para tons roxos, enquanto o vermelho continua indicando ação de saída.
 */
-#btn-back, #btn-home { background: rgba(124, 108, 255, 0.06); border-color: rgba(124, 108, 255, 0.4); }
-#btn-quit { background: rgba(251, 111, 132, 0.08); border-color: rgba(251, 111, 132, 0.45); color: #ffdfe6; }
-#btn-quit:hover { background: rgba(251, 111, 132, 0.14); border-color: rgba(251, 111, 132, 0.8); }
+#btn-back, #btn-home { background: rgba(45, 156, 255, 0.06); border-color: rgba(45, 156, 255, 0.38); }
+#btn-quit { background: rgba(255, 113, 125, 0.08); border-color: rgba(255, 113, 125, 0.45); color: #ffdfe6; }
+#btn-quit:hover { background: rgba(255, 113, 125, 0.14); border-color: rgba(255, 113, 125, 0.8); }
 /*
   @keyframes buttonIn
   - controla a entrada do botão na tela;
@@ -205,10 +206,10 @@ body::after {
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(15, 18, 27, 0.8), rgba(10, 12, 18, 0.9));
-  border: 1px solid rgba(155, 142, 255, 0.14);
+  border: 1px solid rgba(82, 176, 255, 0.14);
   border-radius: 26px;
   padding: 16px 14px 12px;
-  box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 0 1px rgba(45, 156, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   animation: resultReveal 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
@@ -313,8 +314,8 @@ body::after {
 
 .result-stat:hover {
   transform: translateY(-2px);
-  border-color: rgba(124, 108, 255, 0.28);
-  box-shadow: 0 10px 22px rgba(124, 108, 255, 0.08);
+  border-color: rgba(45, 156, 255, 0.28);
+  box-shadow: 0 10px 22px rgba(45, 156, 255, 0.08);
 }
 
 .result-stat .label {
@@ -507,8 +508,8 @@ body::after {
 */
 .tpick.on {
   border-color: var(--primary);
-  background: rgba(124, 108, 255, 0.16);
-  box-shadow: 0 0 0 2px rgba(124, 108, 255, 0.18);
+  background: rgba(45, 156, 255, 0.16);
+  box-shadow: 0 0 0 2px rgba(45, 156, 255, 0.18);
 }
 
 /*
@@ -561,7 +562,7 @@ body::after {
 */
 .len.on {
   border-color: var(--primary);
-  background: rgba(124, 108, 255, 0.12);
+  background: rgba(45, 156, 255, 0.12);
 }
 
 /*

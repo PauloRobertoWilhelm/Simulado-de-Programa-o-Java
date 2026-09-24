@@ -119,6 +119,7 @@
     <div id="q-card" class="q-card"></div>
     <div class="nav">
       <button class="btn" id="btn-next" disabled>Próxima</button>
+      <button class="btn btn-ghost" id="btn-skip">⏭ Pular questão</button>
       <button class="btn btn-ghost" id="btn-back">← Voltar ao início</button>
       <button class="btn btn-ghost" id="btn-quit">⏏ Abandonar prova</button>
     </div>
@@ -176,6 +177,13 @@
           <span class="metric-label">Acertos</span>
           <strong id="stat-total-correct">0</strong>
         </div>
+      </div>
+      <div class="theme-progress" aria-live="polite">
+        <div class="theme-progress-head">
+          <span>Por tema</span>
+          <strong id="current-theme-label">Tudo misturado</strong>
+        </div>
+        <div id="theme-progress" class="theme-progress-list"></div>
       </div>
     </div>
 
@@ -245,6 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedOption = null;
   let timerInterval;
   let timeLeft = 0;
+  let elapsedSeconds = 0;
+  let timeLimitSeconds = 0;
   let chartInstance = null;
   let lastQuizConfig = { topic: "all", length: 20 };
   let lastQuizQuestions = [];
@@ -475,6 +485,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // startQuizWithQuestions() inicia a rodada com o conjunto de questões já montado.
   // Ele limpa os dados antigos, zera pontuação, prepara o cronômetro e renderiza a primeira pergunta.
+  function formatTime(totalSeconds) {
+    const safeTotal = Math.max(0, Number(totalSeconds) || 0);
+    const minutes = Math.floor(safeTotal / 60).toString().padStart(2, '0');
+    const seconds = (safeTotal % 60).toString().padStart(2, '0');
+    return `${minutes}:${seconds}`;
+  }
+
   function startQuizWithQuestions(questions) {
     if (!questions || questions.length === 0) {
       alert("Nenhuma questão encontrada para este filtro.");
@@ -487,7 +504,9 @@ document.addEventListener("DOMContentLoaded", () => {
     questionResults = Array(currentQuestions.length).fill(null);
     closeReviewPanel();
 
-    timeLeft = currentQuestions.length * 60;
+    timeLimitSeconds = currentQuestions.length * 60;
+    timeLeft = timeLimitSeconds;
+    elapsedSeconds = 0;
     startTimer();
 
     screenIntro.classList.add("hidden");
@@ -513,32 +532,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // no momento em que o tempo acaba. A função também muda a aparência do relógio para
   // sinalizar alerta quando restam poucos segundos.
   function startTimer() {
-    timerDisplay.classList.remove("danger"); // remove o estilo de alerta para voltar ao padrão normal
-    updateTimerUI(); // atualiza o visor imediatamente para evitar atraso na primeira execução
-    clearInterval(timerInterval); // garante que não exista um timer antigo ainda rodando em paralelo
+    timerDisplay.classList.remove("danger");
+    updateTimerUI();
+    clearInterval(timerInterval);
 
     timerInterval = setInterval(() => {
-      timeLeft--; // reduz 1 segundo do tempo restante
-      updateTimerUI(); // renderiza o novo valor no visor para o usuário ver o tempo atualizado
+      if (timeLeft > 0) {
+        timeLeft--;
+        elapsedSeconds++;
+      }
+
+      updateTimerUI();
 
       if (timeLeft <= 10) {
-        timerDisplay.classList.add("danger"); // quando faltam poucos segundos, muda a cor para sinalizar urgência
+        timerDisplay.classList.add("danger");
       }
 
       if (timeLeft <= 0) {
-        clearInterval(timerInterval); // interrompe o relógio para não continuar contando negativo
-        alert("O tempo esgotou! Entregando a prova automaticamente."); // informa o usuário que a prova foi encerrada
-        showResult(); // chama a tela final com os dados mesmo sem resposta de todas as questões
+        clearInterval(timerInterval);
+        alert("O tempo esgotou! Entregando a prova automaticamente.");
+        showResult();
       }
-    }, 1000); // executa a cada 1000 milissegundos, ou seja, cada segundo
+    }, 1000);
   }
 
   // updateTimerUI() transforma o tempo restante em formato legível.
   // O objetivo é converter segundos em minutos e segundos, displayando algo como 02:45.
   function updateTimerUI() {
-    let m = Math.floor(timeLeft / 60).toString().padStart(2, '0'); // converte os segundos em minutos e sempre mantém 2 dígitos
-    let s = (timeLeft % 60).toString().padStart(2, '0'); // pega o resto dos segundos e mantém o formato 00 até 59
-    timerDisplay.textContent = `⏳ ${m}:${s}`; // escreve o texto visível na tela do usuário, como 00:45
+    timerDisplay.textContent = `⏳ ${formatTime(timeLeft)}`;
   }
 
   // renderQuestion() é o responsável por desenhar uma pergunta na tela.
@@ -574,10 +595,10 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsMapped.forEach((optData, i) => {
       const letter = String.fromCharCode(65 + i); // converte 0,1,2,3 em A, B, C, D para identificar cada alternativa
       html += `
-        <div class="option" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}">
-            <div class="key">${letter}</div>
-            <div class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
-        </div>`;
+        <button type="button" class="option" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}" aria-pressed="false">
+            <span class="key">${letter}</span>
+            <span class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span>
+        </button>`;
     });
     html += `</div><div id="feedback-area"></div>`; // fecha o bloco de opções e prepara o espaço do feedback
     qCard.innerHTML = html; // insere todo o HTML da questão dentro do cartão da pergunta
@@ -598,6 +619,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         playSound(isCorrect ? 'correct' : 'wrong'); // toca efeito sonoro conforme resposta correta ou errada
 
+        document.querySelectorAll('.option').forEach(item => item.setAttribute('aria-pressed', 'false'));
+        this.setAttribute('aria-pressed', 'true');
+
         if (isCorrect) {
           this.classList.add("correct"); // aplica destaque verde à resposta correta escolhida
           score++; // soma 1 ponto no resultado da rodada
@@ -616,6 +640,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  document.getElementById("btn-skip").addEventListener("click", () => {
+    if (selectedOption !== null) return;
+    if (!questionResults[currentIndex]) {
+      questionResults[currentIndex] = {
+        isCorrect: false,
+        selectedIndex: null,
+        correctIndex: currentQuestions[currentIndex].correct
+      };
+    }
+
+    document.getElementById("feedback-area").innerHTML = `
+      <div class="feedback no">
+        <div class="fh">Questão pulada</div>
+        <div class="why">Você não respondeu esta questão. Continue para a próxima e tente acertar as restantes.</div>
+      </div>
+    `;
+    selectedOption = true;
+    document.getElementById("opts-container").classList.add("locked");
+    btnNext.disabled = false;
+  });
 
   btnNext.addEventListener("click", () => {
     currentIndex++;
@@ -689,18 +734,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, 180);
     
-    const pct = Math.round((score / currentQuestions.length) * 100);
     const totalQuestions = currentQuestions.length;
+    const pct = totalQuestions ? Math.round((score / totalQuestions) * 100) : 0;
     const errors = totalQuestions - score;
-    const minutes = Math.floor((timeLeft / 60)).toString().padStart(2, '0');
-    const seconds = (timeLeft % 60).toString().padStart(2, '0');
+    const elapsedTime = Math.max(0, (timeLimitSeconds || totalQuestions * 60) - timeLeft);
 
     document.getElementById("res-pct").textContent = `${pct}%`;
     document.getElementById("res-frac").textContent = `${score}/${totalQuestions}`;
     document.getElementById("res-nota").textContent = (pct / 10).toFixed(1).replace(".", ",");
     document.getElementById("res-acertos").textContent = score;
     document.getElementById("res-erros").textContent = errors;
-    document.getElementById("res-tempo").textContent = `${minutes}:${seconds}`;
+    document.getElementById("res-tempo").textContent = formatTime(elapsedTime);
 
     const badgeStatus = document.getElementById('badge-status');
     const performanceMessage = document.getElementById('performance-message');
@@ -923,6 +967,8 @@ document.addEventListener("DOMContentLoaded", () => {
     questionResults = [];
     selectedOption = null;
     timeLeft = 0;
+    elapsedSeconds = 0;
+    timeLimitSeconds = 0;
     closeReviewPanel();
     updateTimerUI();
   });

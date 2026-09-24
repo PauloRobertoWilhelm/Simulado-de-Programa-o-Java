@@ -59,16 +59,14 @@ html { -webkit-text-size-adjust: 100%; }
 */
 body {
   font-family: var(--font-body);
-  background-color: var(--bg);
-  background-image: var(--bg-grad);
+  background: #090d12;
+  background-image: radial-gradient(1200px 700px at 50% -15%, rgba(18, 27, 38, 0.92) 0%, rgba(9, 13, 18, 0.98) 58%, rgba(9, 13, 18, 1) 100%);
   background-attachment: fixed;
   color: var(--text);
   line-height: 1.55;
   min-height: 100vh;
   padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
   position: relative;
   overflow-x: hidden;
 }
@@ -132,7 +130,12 @@ body::after {
   - position: relative cria referência para elementos posicionados dentro dela;
   - z-index: 1 faz com que o conteúdo fique acima dos efeitos de fundo.
 */
-.app { width: 100%; max-width: 680px; position: relative; z-index: 1; }
+.app {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 .hidden { display: none !important; }
 
 /*

@@ -42,7 +42,7 @@
     <div class="intro">
       <span class="badge-top"><span class="pulse"></span>UNIPAR · Java · 1º período</span>
       <h1>Simulado de<br><span class="grad">Programação Java</span></h1>
-      <p class="sub">Banco com <b id="bank-total">...</b> questões preparadas.</p>
+      <p class="sub">Escolha o tema e comece a rodada.</p>
 
       <div class="chips">
         <div class="chip"><span class="ic">⏱️</span><span>Com <b>Cronômetro</b></span></div>
@@ -96,10 +96,10 @@
         <h3>Quantas questões nesta rodada?</h3>
         <div class="len-grid" id="len-grid">
           <div class="len" data-len="10"><span class="n">10</span><span class="l">rápida</span></div>
-          <div class="len on" data-len="20"><span class="n">20</span><span class="l">média</span></div>
+          <div class="len" data-len="20"><span class="n">20</span><span class="l">média</span></div>
           <div class="len" data-len="50"><span class="n">50</span><span class="l">longa</span></div>
           <!-- O botão de 100 questões foi adicionado aqui -->
-          <div class="len" data-len="100"><span class="n">100</span><span class="l">prova final</span></div>
+          <div class="len on" data-len="100"><span class="n">100</span><span class="l">prova final</span></div>
         </div>
       </div>
 
@@ -286,7 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
       bank = data;
-      document.getElementById("bank-total").textContent = bank.length;
       btnStart.textContent = "Iniciar prova →";
       btnStart.disabled = false;
     })
@@ -304,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  let selectedLen = 20;
+  let selectedLen = 100;
   document.querySelectorAll(".len").forEach(btn => {
     btn.addEventListener("click", (e) => {
       document.querySelectorAll(".len").forEach(b => b.classList.remove("on"));

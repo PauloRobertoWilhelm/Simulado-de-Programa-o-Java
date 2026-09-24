@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simulado · Programação Java</title>
+
+<!-- Arquivo Manifest para o App Instalável -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0E1118">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Importando a biblioteca de Gráficos (Chart.js) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+/* VARIÁVEIS DE CORES (TOKENS) */
+:root {
+  --bg: #0E1118;
+  --bg-grad: radial-gradient(1200px 700px at 50% -10%, #1A2138 0%, #0E1118 60%);
+  --surface: #161C2B;
+  --surface-2: #1E2640;
+  --border: #2A3349;
+  --border-soft: #222B40;
+  --text: #E9ECF5;
+  --muted: #969DB4;
+  --muted-2: #6E7691;
+  --primary: #7C6CFF;
+  --primary-2: #9C8DFF;
+  --teal: #45D6C2;
+  --amber: #F5B043;
+  --blue: #5B9CFF;
+  --success: #36D399;
+  --success-bg: rgba(54, 211, 153, 0.12);
+  --error: #FB6F84;
+  --error-bg: rgba(251, 111, 132, 0.12);
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --ring: 0 0 0 3px rgba(124, 108, 255, 0.35);
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); background: var(--bg); background-image: var(--bg-grad); background-attachment: fixed; color: var(--text); line-height: 1.55; min-height: 100vh; padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); display: flex; justify-content: center; }
+.app { width: 100%; max-width: 680px; }
+.hidden { display: none !important; }
+
+.btn { font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: none; border-radius: var(--r-md); cursor: pointer; padding: 16px 22px; width: 100%; color: #fff; background: linear-gradient(135deg, var(--primary), #6354e6); transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease; box-shadow: 0 10px 26px rgba(124, 108, 255, 0.32); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(124, 108, 255, 0.42); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); box-shadow: none; margin-top: 11px; }
+.btn-ghost:hover { background: var(--surface); color: var(--text); transform: translateY(-2px); }
+
+.screen { animation: fade 0.4s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* TELA INICIAL */
+.intro { text-align: center; padding: 46px 8px 8px; }
+.badge-top { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; color: var(--teal); border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; margin-bottom: 24px; }
+.badge-top .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 0 rgba(69, 214, 194, 0.5); animation: pulse 2s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(69, 214, 194, 0); } 100% { box-shadow: 0 0 0 0 rgba(69, 214, 194, 0); } }
+.intro h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 7vw, 2.9rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 14px; }
+.intro h1 .grad { background: linear-gradient(120deg, var(--primary-2), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.intro .sub { color: var(--muted); font-size: 1.05rem; max-width: 460px; margin: 0 auto 28px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 26px; }
+.chip { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-sm); padding: 12px 14px; display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); }
+.chip b { color: var(--text); font-family: var(--font-display); }
+
+.picker { text-align: left; background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-md); padding: 18px 20px; margin-bottom: 18px; }
+.picker h3 { font-family: var(--font-display); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 14px; font-weight: 600; }
+.topic-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.tpick { flex: 1 1 auto; min-width: calc(50% - 4px); text-align: center; padding: 13px 10px; border-radius: var(--r-sm); border: 1.5px solid var(--border); background: var(--surface-2); color: var(--text); font-weight: 600; font-size: 0.92rem; cursor: pointer; transition: all 0.15s ease; user-select: none; }
+.tpick:hover { transform: translateY(-1px); border-color: var(--primary); }
+.tpick.on { border-color: var(--primary); background: rgba(124, 108, 255, 0.16); box-shadow: 0 0 0 2px rgba(124, 108, 255, 0.18); }
+
+.len-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+.len { padding: 14px 6px; border-radius: var(--r-sm); cursor: pointer; background: var(--bg); border: 1.5px solid var(--border); text-align: center; transition: all 0.15s ease; }
+.len:hover { border-color: var(--primary); }
+.len.on { border-color: var(--primary); background: rgba(124, 108, 255, 0.12); }
+.len .n { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--text); display: block; line-height: 1.1; }
+.len .l { font-size: 0.72rem; color: var(--muted); font-family: var(--font-mono); }
+
+/* QUIZ */
+.topbar { position: sticky; top: 0; z-index: 5; padding: 6px 0 16px; background: linear-gradient(var(--bg) 70%, transparent); }
+.progress-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.85rem; }
+.progress-meta .count { font-family: var(--font-mono); color: var(--muted); }
+.progress-meta .count b { color: var(--text); }
+.timer { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-weight: 700; color: var(--amber); background: rgba(245, 176, 67, 0.12); padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(245, 176, 67, 0.3); }
+.timer.danger { color: var(--error); background: var(--error-bg); border-color: var(--error); }
+.bar { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--teal)); transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.q-card { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-lg); padding: 24px 22px; box-shadow: var(--shadow); animation: slideIn 0.32s ease; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+.q-statement { font-size: 1.12rem; font-weight: 500; line-height: 1.5; margin-bottom: 6px; }
+pre.code { font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.6; background: #0B0E16; border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: var(--r-sm); padding: 14px 16px; margin: 16px 0 4px; white-space: pre; overflow-x: auto; color: #CBD2E8; }
+.options { display: grid; gap: 11px; margin-top: 18px; }
+.option { display: flex; align-items: flex-start; gap: 13px; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r-md); padding: 15px 16px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; font-size: 0.97rem; text-align: left; width: 100%; color: var(--text); }
+.option:hover { border-color: var(--primary); background: var(--surface-2); }
+.option .key { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 500; background: var(--surface-2); border: 1px solid var(--border); color: var(--muted); }
+.option.correct { border-color: var(--success); background: var(--success-bg); }
+.option.correct .key { background: var(--success); border-color: var(--success); color: #06281c; }
+.option.wrong { border-color: var(--error); background: var(--error-bg); }
+.option.wrong .key { background: var(--error); border-color: var(--error); color: #2a0b11; }
+.options.locked .option { pointer-events: none; }
+.nav { margin-top: 20px; }
+
+.feedback { margin-top: 16px; border-radius: var(--r-md); padding: 14px 16px; font-size: 0.93rem; border: 1px solid var(--border-soft); animation: fade 0.3s ease; }
+.feedback.ok { background: var(--success-bg); border-color: rgba(54, 211, 153, 0.3); }
+.feedback.no { background: var(--error-bg); border-color: rgba(251, 111, 132, 0.3); }
+.feedback .fh { font-family: var(--font-display); font-weight: 600; margin-bottom: 7px; }
+.feedback.ok .fh { color: var(--success); }
+.feedback.no .fh { color: var(--error); }
+.feedback .why { color: #C7CEE6; }
+.feedback .why code { font-family: var(--font-mono); font-size: 0.82em; background: #0B0E16; border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: #9FE7C8; }
+
+/* RESULTADOS E GRÁFICO */
+.result-head { text-align: center; padding: 34px 8px 8px; }
+.score-ring { width: 170px; height: 170px; margin: 0 auto 22px; border-radius: 50%; display: grid; place-items: center; position: relative; background: var(--surface-2); }
+.score-ring::before { content: ""; position: absolute; inset: 12px; border-radius: 50%; background: var(--bg); }
+.score-ring .inner { position: relative; text-align: center; }
+.score-ring .pct { font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; line-height: 1; }
+.score-ring .lbl { font-size: 0.8rem; color: var(--muted); font-family: var(--font-mono); margin-top: 2px; }
+.verdict { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 6px; }
+.nota-line { font-family: var(--font-mono); color: var(--muted); font-size: 0.9rem; margin-bottom: 26px; }
+.nota-line b { color: var(--text); font-size: 1.05rem; }
+
+.chart-container { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-md); padding: 16px; margin-bottom: 20px; width: 100%; height: 220px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- TELA INICIAL -->
+  <section id="screen-intro" class="screen">
+    <div class="intro">
+      <span class="badge-top"><span class="pulse"></span>UNIPAR · Java · 1º período</span>
+      <h1>Simulado de<br><span class="grad">Programação Java</span></h1>
+      <p class="sub">Banco com <b id="bank-total">...</b> questões preparadas.</p>
+
+      <div class="chips">
+        <div class="chip"><span class="ic">⏱️</span><span>Com <b>Cronômetro</b></span></div>
+        <div class="chip"><span class="ic">📊</span><span>Dashboard de <b>Notas</b></span></div>
+        <div class="chip"><span class="ic">🔊</span><span>Sons <b>Interativos</b></span></div>
+      </div>
+
+      <div class="picker">
+        <h3>Qual matéria você quer treinar?</h3>
+        <div class="topic-grid" id="topic-grid">
+          <div class="tpick on" data-topic="all">🎯 Tudo misturado</div>
+          <div class="tpick" data-topic="operadores">➕ Operadores</div>
+          <div class="tpick" data-topic="selecao">🔀 If / Switch</div>
+          <div class="tpick" data-topic="repeticao">🔁 Laço While</div>
+          <div class="tpick" style="color:var(--primary-2)" data-topic="codigo">💻 Só Códigos</div>
+        </div>
+      </div>
+
+      <div class="picker">
+        <h3>Quantas questões nesta rodada?</h3>
+        <div class="len-grid" id="len-grid">
+          <div class="len" data-len="5"><span class="n">5</span><span class="l">rápida</span></div>
+          <div class="len on" data-len="10"><span class="n">10</span><span class="l">média</span></div>
+          <div class="len" data-len="15"><span class="n">15</span><span class="l">longa</span></div>
+          <div class="len" data-len="0"><span class="n">Tudo</span><span class="l">completa</span></div>
+        </div>
+      </div>
+
+      <button class="btn" id="btn-start" disabled>Carregando Questões...</button>
+    </div>
+  </section>
+
+  <!-- TELA DO QUIZ -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="topbar">
+      <div class="progress-meta">
+        <span class="count">Questão <b id="q-now">1</b> de <span id="q-total">10</span></span>
+        <span class="timer" id="timer-display">⏳ 00:00</span>
+      </div>
+      <div class="bar"><i id="bar-fill"></i></div>
+    </div>
+    <div id="q-card" class="q-card"></div>
+    <div class="nav">
+      <button class="btn" id="btn-next" disabled>Próxima</button>
+      <button class="btn btn-ghost" id="btn-quit">⏏ Abandonar prova</button>
+    </div>
+  </section>
+
+  <!-- TELA DE RESULTADO -->
+  <section id="screen-result" class="screen hidden">
+    <div class="result-head">
+      <div class="score-ring">
+        <div class="inner"><div class="pct" id="res-pct">0%</div><div class="lbl" id="res-frac">0/0</div></div>
+      </div>
+      <div class="verdict" id="res-verdict">Fim do Simulado</div>
+      <p class="nota-line">Equivalente a uma nota <b id="res-nota">0,0</b> / 10</p>
+    </div>
+    
+    <!-- Gráfico do Chart.js -->
+    <div class="chart-container">
+      <canvas id="chart-history"></canvas>
+    </div>
+
+    <div style="margin-top:8px;display:flex;flex-direction:column;gap:10px">
+      <button class="btn" id="btn-retry">Nova rodada</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+// Registrar o Service Worker (PWA Offline)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('PWA Service Worker registrado com sucesso!', reg);
+    }).catch(err => {
+      console.log('Erro ao registrar Service Worker', err);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let bank = [];
+  
+  // Elementos HTML
+  const btnStart = document.getElementById("btn-start");
+  const screenIntro = document.getElementById("screen-intro");
+  const screenQuiz = document.getElementById("screen-quiz");
+  const screenResult = document.getElementById("screen-result");
+  const qCard = document.getElementById("q-card");
+  const btnNext = document.getElementById("btn-next");
+  const barFill = document.getElementById("bar-fill");
+  const timerDisplay = document.getElementById("timer-display");
+  
+  // Variáveis globais do simulado
+  let currentQuestions = [];
+  let currentIndex = 0;
+  let score = 0;
+  let selectedOption = null;
+  let timerInterval;
+  let timeLeft = 0;
+  let chartInstance = null;
+  
+  // Criação do Gerador de Efeitos Sonoros Nativo (Web Audio API)
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  
+  function playSound(type) {
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    if (type === 'correct') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); 
+      osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.1); 
+      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.4);
+    } else {
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.2);
+      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    }
+  }
+
+  // Fetch (Consumo do arquivo JSON externo)
+  fetch('questoes.json')
+    .then(response => response.json())
+    .then(data => {
+      bank = data;
+      document.getElementById("bank-total").textContent = bank.length;
+      btnStart.textContent = "Iniciar prova →";
+      btnStart.disabled = false;
+    })
+    .catch(error => {
+      console.error("Erro ao carregar o banco de questões:", error);
+      btnStart.textContent = "Erro ao carregar";
+    });
+
+  // Lógica de seleção do tópico e tamanho
+  let selectedTopic = "all";
+  document.querySelectorAll(".tpick").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      document.querySelectorAll(".tpick").forEach(b => b.classList.remove("on"));
+      e.target.classList.add("on");
+      selectedTopic = e.target.dataset.topic;
+    });
+  });
+
+  let selectedLen = 10;
+  document.querySelectorAll(".len").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      document.querySelectorAll(".len").forEach(b => b.classList.remove("on"));
+      const t = e.target.closest(".len");
+      t.classList.add("on");
+      selectedLen = parseInt(t.dataset.len);
+    });
+  });
+
+  // INÍCIO DA PROVA
+  btnStart.addEventListener("click", () => {
+    let filtered = bank;
+    
+    if (selectedTopic === "codigo") {
+      filtered = bank.filter(q => q.code && q.code.trim() !== "");
+    } else if (selectedTopic !== "all") {
+      filtered = bank.filter(q => q.topic === selectedTopic);
+    }
+    
+    // Embaralha as questões
+    filtered = filtered.sort(() => Math.random() - 0.5);
+    
+    if (selectedLen > 0 && selectedLen < filtered.length) {
+      filtered = filtered.slice(0, selectedLen);
+    }
+    
+    if(filtered.length === 0) {
+      alert("Nenhuma questão encontrada para este filtro.");
+      return;
+    }
+    
+    currentQuestions = filtered;
+    currentIndex = 0;
+    score = 0;
+    
+    // Timer - Configura 1 minuto por questão
+    timeLeft = currentQuestions.length * 60;
+    startTimer();
+    
+    screenIntro.classList.add("hidden");
+    screenQuiz.classList.remove("hidden");
+    renderQuestion();
+  });
+
+  function startTimer() {
+    timerDisplay.classList.remove("danger");
+    updateTimerUI();
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      updateTimerUI();
+      if (timeLeft <= 10) {
+        timerDisplay.classList.add("danger");
+      }
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert("O tempo esgotou! Entregando a prova automaticamente.");
+        showResult();
+      }
+    }, 1000);
+  }
+
+  function updateTimerUI() {
+    let m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    let s = (timeLeft % 60).toString().padStart(2, '0');
+    timerDisplay.textContent = `⏳ ${m}:${s}`;
+  }
+
+  function renderQuestion() {
+    selectedOption = null;
+    btnNext.disabled = true;
+    const q = currentQuestions[currentIndex];
+    
+    document.getElementById("q-now").textContent = currentIndex + 1;
+    document.getElementById("q-total").textContent = currentQuestions.length;
+    barFill.style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`;
+
+    let html = `<div class="q-statement">${q.statement}</div>`;
+    if (q.code) html += `<pre class="code">${q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
+    
+    // Embaralha alternativas
+    let optionsMapped = q.options.map((texto, index) => ({ textoOriginal: texto, isCerta: (index === q.correct) }));
+    optionsMapped = optionsMapped.sort(() => Math.random() - 0.5);
+    
+    html += `<div class="options" id="opts-container">`;
+    optionsMapped.forEach((optData, i) => {
+      const letter = String.fromCharCode(65 + i);
+      html += `
+        <div class="option" data-correct="${optData.isCerta}">
+            <div class="key">${letter}</div>
+            <div class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+        </div>`;
+    });
+    html += `</div><div id="feedback-area"></div>`;
+    qCard.innerHTML = html;
+
+    // Ação do clique na alternativa
+    document.querySelectorAll(".option").forEach(optEl => {
+      optEl.addEventListener("click", function() {
+        if (selectedOption !== null) return;
+        selectedOption = true;
+        document.getElementById("opts-container").classList.add("locked");
+
+        const isCorrect = this.getAttribute("data-correct") === "true";
+        
+        playSound(isCorrect ? 'correct' : 'wrong');
+        
+        if (isCorrect) {
+          this.classList.add("correct");
+          score++;
+        } else {
+          this.classList.add("wrong");
+          document.querySelector('.option[data-correct="true"]').classList.add("correct");
+        }
+
+        document.getElementById("feedback-area").innerHTML = `
+          <div class="feedback ${isCorrect ? 'ok' : 'no'}">
+            <div class="fh">${isCorrect ? 'Você acertou!' : 'Você errou!'}</div>
+            <div class="why">${q.explain}</div>
+          </div>
+        `;
+        btnNext.disabled = false;
+      });
+    });
+  }
+
+  btnNext.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex >= currentQuestions.length) {
+      showResult();
+    } else {
+      renderQuestion();
+    }
+  });
+
+  document.getElementById("btn-quit").addEventListener("click", () => {
+    clearInterval(timerInterval);
+    screenQuiz.classList.add("hidden");
+    screenIntro.classList.remove("hidden");
+  });
+
+  // FINALIZAR E MOSTRAR RESULTADOS
+  function showResult() {
+    clearInterval(timerInterval);
+    screenQuiz.classList.add("hidden");
+    screenResult.classList.remove("hidden");
+    
+    const pct = Math.round((score / currentQuestions.length) * 100);
+    document.getElementById("res-pct").textContent = `${pct}%`;
+    document.getElementById("res-frac").textContent = `${score}/${currentQuestions.length}`;
+    document.getElementById("res-nota").textContent = (pct / 10).toFixed(1).replace(".", ",");
+    
+    // Salvando e gerando Dashboard Chart.js
+    let history = JSON.parse(localStorage.getItem('uniparJavaScores')) || [];
+    history.push(pct);
+    if(history.length > 10) history.shift();
+    localStorage.setItem('uniparJavaScores', JSON.stringify(history));
+    
+    renderChart(history);
+  }
+
+  function renderChart(historyData) {
+    const ctx = document.getElementById('chart-history').getContext('2d');
+    
+    if(chartInstance) {
+        chartInstance.destroy();
+    }
+    
+    const labels = historyData.map((_, i) => `T${i + 1}`);
+    
+    chartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Evolução da Nota (%)',
+          data: historyData,
+          borderColor: '#45D6C2',
+          backgroundColor: 'rgba(69, 214, 194, 0.2)',
+          borderWidth: 2,
+          pointBackgroundColor: '#7C6CFF',
+          pointRadius: 4,
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { 
+            beginAtZero: true, 
+            max: 100,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#969DB4' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#969DB4' }
+          }
+        },
+        plugins: {
+          legend: { labels: { color: '#E9ECF5' } }
+        }
+      }
+    });
+  }
+
+  document.getElementById("btn-retry").addEventListener("click", () => {
+    screenResult.classList.add("hidden");
+    screenIntro.classList.remove("hidden");
+  });
+});
+</script>
+</body>
+</html>

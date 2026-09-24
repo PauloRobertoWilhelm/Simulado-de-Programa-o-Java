@@ -1,0 +1,157 @@
+[
+  {
+    "topic": "repeticao",
+    "statement": "Lendo o código Java abaixo, qual será o resultado exato exibido na tela?",
+    "code": "int i = 1;\nwhile (i <= 5) {\n  System.out.print(i + \" \");\n  i++;\n}",
+    "options": [
+      "1 2 3 4 5",
+      "1 2 3 4",
+      "2 3 4 5 6",
+      "0 1 2 3 4 5"
+    ],
+    "correct": 0,
+    "explain": "<b>Para que serve este código?</b> O <code>while</code> é uma estrutura de repetição usada para criar um contador (como contar de 1 a 10). Neste código, a variável <code>i</code> começa valendo 1. O computador lê assim: 'Enquanto o i for menor ou igual a 5, imprima o valor dele na tela e depois some mais 1 (<code>i++</code>)'. Ele vai rodar 5 vezes, imprimindo <b>1 2 3 4 5</b> e vai parar."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Analisando a estrutura if-else abaixo, qual frase o computador vai imprimir?",
+    "code": "int idade = 16;\nif (idade >= 18) {\n  System.out.println(\"Maior de idade\");\n} else {\n  System.out.println(\"Menor de idade\");\n}",
+    "options": [
+      "Maior de idade",
+      "Menor de idade",
+      "Nenhuma das opções",
+      "O código apresenta um erro"
+    ],
+    "correct": 1,
+    "explain": "<b>Para que serve este código?</b> O <code>if / else</code> serve para o computador tomar uma decisão. O código testa a condição <code>idade >= 18</code>. Como a idade informada é 16, a pergunta '16 é maior ou igual a 18?' tem como resposta FALSA. Quando a resposta é falsa, o computador ignora o bloco do <code>if</code> e pula direto para o bloco do <code>else</code> (o 'senão'), imprimindo <b>Menor de idade</b>."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Qual será a saída do código abaixo ao utilizar o Switch Case?",
+    "code": "int op = 2;\nswitch (op) {\n  case 1:\n    System.out.println(\"Soma\");\n    break;\n  case 2:\n    System.out.println(\"Subtração\");\n    break;\n  default:\n    System.out.println(\"Inválido\");\n    break;\n}",
+    "options": [
+      "Soma",
+      "Inválido",
+      "Subtração",
+      "Soma e Subtração"
+    ],
+    "correct": 2,
+    "explain": "<b>Para que serve este código?</b> O <code>switch case</code> serve para criar menus de escolha. Em vez de escrever vários 'ifs', você diz para o computador: 'Olhe a variável op. Caso ela seja 1, faça isso. Caso seja 2, faça aquilo'. Como <code>op = 2</code>, o computador vai direto no <code>case 2</code>, imprime <b>Subtração</b>, e o comando <code>break</code> diz para ele encerrar a leitura ali mesmo."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Observe o uso da atribuição composta abaixo. Qual será o valor final da variável 'x' impresso na tela?",
+    "code": "int x = 10;\nx += 5;\nSystem.out.println(x);",
+    "options": [
+      "5",
+      "15",
+      "105",
+      "50"
+    ],
+    "correct": 1,
+    "explain": "<b>Para que serve este código?</b> O <code>+=</code> é um atalho de digitação para os programadores. Escrever <code>x += 5</code> é a mesmíssima coisa que escrever <code>x = x + 5</code>. O código pega o valor antigo do x (que era 10), soma 5 e guarda o novo valor (15) dentro do x novamente. Por isso a saída será <b>15</b>."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Este código possui uma expressão matemática. Qual será o número armazenado na variável 'resultado'?",
+    "code": "int a = 5;\nint b = 4;\nint resultado = a + b * 2;",
+    "options": [
+      "18",
+      "20",
+      "13",
+      "9"
+    ],
+    "correct": 2,
+    "explain": "<b>Para que serve este código?</b> Este código ensina ao computador a regra matemática da precedência. Na programação, assim como na escola, a multiplicação (<code>*</code>) e a divisão (<code>/</code>) <b>sempre</b> são resolvidas antes da adição (<code>+</code>). Primeiro o computador faz <code>b * 2</code> (4 * 2 = 8). Depois ele soma com o a (5 + 8 = <b>13</b>)."
+  },
+  {
+    "topic": "repeticao",
+    "statement": "Lendo o código Java abaixo com bastante atenção na condição, o que o programa vai imprimir?",
+    "code": "int i = 10;\nwhile (i < 5) {\n  System.out.println(i);\n  i++;\n}",
+    "options": [
+      "Vai imprimir 10",
+      "Nenhuma saída (não vai imprimir nada)",
+      "Vai gerar um erro no Java",
+      "Vai entrar em um loop infinito"
+    ],
+    "correct": 1,
+    "explain": "<b>Para que serve este código?</b> Este código mostra uma proteção do laço <code>while</code>. O comando while só entra no bloco se a condição for verdadeira <b>antes</b> da primeira volta. A pergunta é: '10 é menor que 5?'. A resposta é Falsa. Como já é falso desde o início, o computador ignora tudo que está dentro das chaves <code>{}</code> e <b>não imprime absolutamente nada</b>."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Este código é muito usado para descobrir se um número é Par ou Ímpar. Qual será a saída para a variável 'n' valendo 15?",
+    "code": "int n = 15;\nif (n % 2 == 0) {\n  System.out.println(\"Par\");\n} else {\n  System.out.println(\"Ímpar\");\n}",
+    "options": [
+      "Par",
+      "Ímpar",
+      "Zero",
+      "Erro"
+    ],
+    "correct": 1,
+    "explain": "<b>Para que serve este código?</b> O operador <code>%</code> (módulo) serve para pegar o RESTO de uma divisão inteira. Quando você divide 15 por 2, o resultado é 7 e <b>sobra 1</b>. O código pergunta: 'O resto (1) é igual a zero?'. Falso. Se não é igual a zero, o número não é par. O código pula para o <code>else</code> e imprime <b>Ímpar</b>."
+  },
+  {
+    "topic": "repeticao",
+    "statement": "Abaixo temos um contador regressivo. Qual será a sequência numérica impressa na tela?",
+    "code": "int cont = 3;\nwhile (cont >= 0) {\n  System.out.print(cont + \" \");\n  cont--;\n}",
+    "options": [
+      "3 2 1",
+      "0 1 2 3",
+      "3 2 1 0",
+      "4 3 2 1 0"
+    ],
+    "correct": 2,
+    "explain": "<b>Para que serve este código?</b> Aqui usamos o <code>while</code> com o comando <code>cont--</code> para criar uma contagem regressiva (como o cronômetro de uma bomba). Ele começa no 3 e diminui 1 a cada volta. Ele vai rodar enquanto a variável for <b>maior OU igual a zero</b>. Portanto, ele imprime o 3, o 2, o 1 e também o 0, parando logo em seguida. A saída é <b>3 2 1 0</b>."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Neste código, usamos o operador lógico E (&&). O que vai acontecer ao rodar o programa?",
+    "code": "int a = 5;\nint b = 10;\nif (a > 3 && b < 20) {\n  System.out.println(\"Autorizado\");\n} else {\n  System.out.println(\"Negado\");\n}",
+    "options": [
+      "Autorizado",
+      "Negado",
+      "O programa não fará nada"
+    ],
+    "correct": 0,
+    "explain": "<b>Para que serve este código?</b> O operador <code>&&</code> (AND / E Lógico) serve para forçar o computador a exigir que <b>DUAS condições</b> sejam verdadeiras ao mesmo tempo. Testando: '5 é maior que 3?' Sim. E '10 é menor que 20?' Sim. Como os dois lados são verdadeiros, o código entra no <code>if</code> e imprime <b>Autorizado</b>."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Este trecho calcula a área de um triângulo. Qual será o valor guardado na variável 'area' e impresso na tela?",
+    "code": "double base = 5;\ndouble altura = 4;\ndouble area = (base * altura) / 2;\nSystem.out.println(area);",
+    "options": [
+      "20.0",
+      "10.0",
+      "9.0",
+      "4.5"
+    ],
+    "correct": 1,
+    "explain": "<b>Para que serve este código?</b> Este código aplica uma fórmula matemática na programação. Repare no uso dos <code>()</code> parênteses. Eles servem para dizer ao computador o que deve ser resolvido primeiro. Primeiro ele faz <code>(5 * 4) = 20</code>. Só depois ele pega esse 20 e divide por 2, resultando na área de <b>10.0</b>."
+  },
+  {
+    "topic": "selecao",
+    "statement": "O que acontece se uma variável em um switch case não combinar com nenhum dos casos (cases) listados no código?",
+    "code": "int tipoProduto = 5;\nswitch (tipoProduto) {\n  case 1:\n    System.out.println(\"Bebidas\");\n    break;\n  case 2:\n    System.out.println(\"Alimentos\");\n    break;\n  default:\n    System.out.println(\"Outros\");\n    break;\n}",
+    "options": [
+      "O código irá travar e exibir um erro na tela",
+      "Bebidas e Alimentos serão impressos",
+      "O computador irá pular direto para o bloco default e imprimir 'Outros'",
+      "O programa não imprimirá nada"
+    ],
+    "correct": 2,
+    "explain": "<b>Para que serve este código?</b> O comando <code>default</code> é a rede de segurança do <code>switch case</code>. Ele serve para tratar dados imprevistos ou opções inválidas. Como a variável é 5 e só temos os casos 1 e 2 configurados, o sistema entende que não achou o caso exato e pula automaticamente para o <code>default</code>, exibindo <b>Outros</b>."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Como o computador interpreta a instrução de atribuição composta de subtração abaixo?",
+    "code": "int saldo = 1000;\nsaldo -= 200;\nSystem.out.println(saldo);",
+    "options": [
+      "saldo é igual a 1000 menos 200. Saída: 800",
+      "saldo passa a ser exatamente o número negativo -200",
+      "O código dará erro de sintaxe",
+      "saldo é igual a 200 menos 1000. Saída: -800"
+    ],
+    "correct": 0,
+    "explain": "<b>Para que serve este código?</b> O operador <code>-=</code> serve para subtrair e atualizar valores de forma rápida, muito usado para descontar dinheiro de saldo de banco em aplicativos ou tirar vida de personagem em jogos. Ele pega o saldo atual (1000), tira 200 e guarda o novo valor. A saída impressa será <b>800</b>."
+  }
+]

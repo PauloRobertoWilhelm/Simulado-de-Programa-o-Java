@@ -40,23 +40,10 @@
   evitando que o layout "quebre" em elementos compostos.
 */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; }
-/*
-  body {
-    font-family: var(--font-body); /* define a fonte principal usada em todo o site */
-    background: var(--bg); /* pinta o fundo principal com a cor escura base do tema */
-    background-image: var(--bg-grad); /* aplica o degradê escuro atrás da interface para dar profundidade visual */
-    background-attachment: fixed; /* trava o fundo enquanto a tela rola, mantendo o efeito visual estável */
-    color: var(--text); /* define a cor principal do texto para deixar o conteúdo legível */
-    line-height: 1.55; /* aumenta o espaçamento entre linhas para melhorar a leitura e evitar texto apertado */
-    min-height: 100vh; /* garante que o body tenha pelo menos a altura inteira da viewport */
-    padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); /* cria espaço seguro nas bordas, principalmente em celulares com notch */
-    display: flex; /* ativa o modelo flexbox para manipular a posição do conteúdo facilmente */
-    justify-content: center; /* centraliza o container principal horizontalmente na tela */
-    position: relative; /* torna o body um ponto de referência para elementos posicionados com absolute/relative */
-    overflow-x: hidden; /* evita que elementos largos saiam da tela horizontalmente e criem scroll indesejado */
-  }
-*/
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: #090C12;
+}
 body {
   font-family: var(--font-body);
   background: var(--bg);

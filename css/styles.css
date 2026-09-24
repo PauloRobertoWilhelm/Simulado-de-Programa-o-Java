@@ -121,16 +121,18 @@ body::after {
   - z-index: 1 faz com que o conteúdo fique acima dos efeitos de fundo.
 */
 .app {
-  width: min(100%, 760px);
+  width: min(100%, 860px);
   margin: 0 auto;
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
+  perspective: 1400px;
 }
 .screen {
   width: 100%;
   animation: fade 0.45s ease;
+  transform-style: preserve-3d;
 }
 
 .hidden { display: none !important; }
@@ -152,30 +154,31 @@ body::after {
   min-height: 54px;
   width: 100%;
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 45%, #4f9cff 100%);
   transition: transform 0.18s ease, box-shadow 0.25s ease, opacity 0.2s ease, filter 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 12px 28px rgba(139, 92, 246, 0.36), 0 0 26px rgba(139, 92, 246, 0.18);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 28px rgba(99, 102, 241, 0.38), 0 0 26px rgba(79, 156, 255, 0.22);
   animation: buttonIn 0.45s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  transform-style: preserve-3d;
 }
 .btn:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 18px 38px rgba(139, 92, 246, 0.44), 0 0 34px rgba(139, 92, 246, 0.24);
+  transform: translateY(-2px) scale(1.01) rotateX(4deg);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 18px 38px rgba(99, 102, 241, 0.45), 0 0 34px rgba(79, 156, 255, 0.22);
   filter: brightness(1.08);
 }
 .btn:active { transform: translateY(0) scale(1); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-ghost {
-  background: rgba(139, 92, 246, 0.05);
+  background: rgba(15, 23, 42, 0.72);
   color: #F5F3FF;
-  border: 1px solid rgba(139, 92, 246, 0.26);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 8px 18px rgba(15, 23, 42, 0.18);
   margin-top: 0;
 }
 .btn-ghost:hover {
-  background: rgba(139, 92, 246, 0.11);
+  background: rgba(59, 130, 246, 0.12);
   color: #FFFFFF;
   transform: translateY(-2px);
-  border-color: rgba(139, 92, 246, 0.7);
+  border-color: rgba(96, 165, 250, 0.8);
 }
 /*
   #btn-back, #btn-home e #btn-quit
@@ -183,18 +186,24 @@ body::after {
   - o fundo azul mantém a identidade visual do app sem apelar para tons roxos, enquanto o vermelho continua indicando ação de saída.
 */
 #btn-back, #btn-home {
-  background: rgba(139, 92, 246, 0.09);
-  border-color: rgba(139, 92, 246, 0.38);
-  color: #F4F0FF;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(99, 102, 241, 0.12));
+  border-color: rgba(96, 165, 250, 0.6);
+  color: #EAF3FF;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 10px 22px rgba(59, 130, 246, 0.12);
+}
+#btn-back:hover, #btn-home:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(99, 102, 241, 0.18));
+  border-color: rgba(147, 197, 253, 0.95);
 }
 #btn-quit {
-  background: rgba(251, 113, 133, 0.09);
-  border-color: rgba(251, 113, 133, 0.42);
-  color: #FFF3F5;
+  background: linear-gradient(135deg, rgba(251, 113, 133, 0.18), rgba(190, 24, 93, 0.12));
+  border-color: rgba(251, 113, 133, 0.58);
+  color: #FFF1F3;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 10px 22px rgba(251, 113, 133, 0.12);
 }
 #btn-quit:hover {
-  background: rgba(251, 113, 133, 0.14);
-  border-color: rgba(251, 113, 133, 0.8);
+  background: linear-gradient(135deg, rgba(251, 113, 133, 0.26), rgba(190, 24, 93, 0.18));
+  border-color: rgba(253, 164, 175, 0.96);
 }
 /*
   @keyframes buttonIn
@@ -236,6 +245,7 @@ body::after {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   animation: resultReveal 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
+  transform: perspective(1600px) rotateX(2deg);
 }
 
 .result-shell::before,
@@ -411,7 +421,25 @@ body::after {
   - display: flex e flex-wrap permitem que eles fiquem em múltiplas linhas sem quebrar o layout.
 */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 26px; }
-.chip { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--r-sm); padding: 12px 14px; display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); }
+.chip {
+  background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(12,16,24,0.9));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-sm);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transform: translateZ(0);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.chip:hover {
+  transform: translateY(-2px) rotateX(5deg);
+  border-color: rgba(139, 92, 246, 0.42);
+  box-shadow: 0 12px 22px rgba(17, 24, 39, 0.25);
+}
 .chip b { color: var(--text); font-family: var(--font-display); }
 
 /*
@@ -438,10 +466,17 @@ body::after {
   text-align: left;
   background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(12, 17, 26, 0.98));
   border: 1px solid rgba(139, 92, 246, 0.18);
-  border-radius: var(--r-md);
+  border-radius: 20px;
   padding: 18px 20px;
   margin-bottom: 18px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.02);
+  transform: perspective(1200px) rotateX(1.5deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.picker:hover {
+  transform: perspective(1200px) rotateX(0deg) translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.32);
+  box-shadow: 0 22px 38px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /*
@@ -502,13 +537,14 @@ body::after {
   padding: 13px 10px;
   border-radius: var(--r-sm);
   border: 1.5px solid var(--border);
-  background: rgba(255,255,255,0.02);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
   color: var(--text);
   font-weight: 600;
   font-size: 0.92rem;
   cursor: pointer;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, filter 0.18s ease;
   user-select: none;
+  transform: perspective(900px) rotateX(0deg);
 }
 
 /*
@@ -518,9 +554,11 @@ body::after {
   - border-color: var(--primary); muda a borda para a cor roxa principal do tema para chamar atenção.
 */
 .tpick:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) rotateX(5deg);
   border-color: var(--primary);
   box-shadow: 0 8px 18px rgba(139, 92, 246, 0.12);
+  background: rgba(139, 92, 246, 0.07);
+  filter: brightness(1.05);
 }
 
 /*
@@ -533,8 +571,9 @@ body::after {
 */
 .tpick.on {
   border-color: var(--primary);
-  background: rgba(45, 156, 255, 0.16);
-  box-shadow: 0 0 0 2px rgba(45, 156, 255, 0.18);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.16), rgba(82, 214, 194, 0.12));
+  box-shadow: 0 0 0 2px rgba(45, 156, 255, 0.18), 0 12px 20px rgba(45, 156, 255, 0.08);
+  transform: perspective(900px) rotateX(2deg);
 }
 
 /*
@@ -565,10 +604,11 @@ body::after {
   padding: 14px 6px;
   border-radius: var(--r-sm);
   cursor: pointer;
-  background: rgba(9, 12, 18, 0.86);
+  background: linear-gradient(180deg, rgba(9, 12, 18, 0.9), rgba(17, 22, 31, 0.82));
   border: 1.5px solid var(--border);
   text-align: center;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  transform: perspective(900px) rotateX(0deg);
 }
 
 
@@ -578,6 +618,8 @@ body::after {
 */
 .len:hover {
   border-color: var(--primary);
+  transform: translateY(-1px) rotateX(4deg);
+  box-shadow: 0 10px 18px rgba(139, 92, 246, 0.08);
 }
 
 /*
@@ -588,7 +630,8 @@ body::after {
 */
 .len.on {
   border-color: var(--primary);
-  background: rgba(45, 156, 255, 0.12);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.16), rgba(82, 214, 194, 0.12));
+  box-shadow: 0 0 0 2px rgba(123, 92, 255, 0.12);
 }
 
 /*
@@ -775,10 +818,16 @@ body::after {
 .q-card {
   background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(11, 15, 22, 0.98));
   border: 1px solid rgba(139, 92, 246, 0.18);
-  border-radius: var(--r-lg);
+  border-radius: 26px;
   padding: 24px 22px;
-  box-shadow: 0 18px 34px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.02);
+  box-shadow: 0 24px 40px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.03);
   animation: slideIn 0.32s ease;
+  transform: perspective(1500px) rotateX(2deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.q-card:hover {
+  transform: perspective(1500px) rotateX(0deg) translateY(-2px);
+  box-shadow: 0 28px 48px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 /*
@@ -877,16 +926,17 @@ pre.code {
   display: flex;
   align-items: flex-start;
   gap: 13px;
-  background: var(--bg);
+  background: linear-gradient(180deg, rgba(10, 14, 20, 0.96), rgba(16, 22, 31, 0.9));
   border: 1.5px solid var(--border);
   border-radius: var(--r-md);
   padding: 15px 16px;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   font-size: 0.97rem;
   text-align: left;
   width: 100%;
   color: var(--text);
+  transform: perspective(1000px) rotateX(0deg);
 }
 
 /*
@@ -896,7 +946,14 @@ pre.code {
 */
 .option:hover {
   border-color: var(--primary);
-  background: var(--surface-2);
+  background: linear-gradient(180deg, rgba(23, 31, 46, 0.98), rgba(17, 24, 36, 0.96));
+  transform: translateY(-1px) rotateX(4deg);
+  box-shadow: 0 10px 18px rgba(10, 17, 32, 0.28);
+}
+.option:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
 }
 
 /*
@@ -1008,6 +1065,7 @@ pre.code {
   padding: 14px 16px;
   font-size: 0.93rem;
   border: 1px solid var(--border-soft);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 12px 20px rgba(0,0,0,0.12);
   animation: fade 0.3s ease;
 }
 
@@ -1289,7 +1347,7 @@ pre.code {
   -webkit-backdrop-filter: blur(8px); /* Mantém o mesmo efeito em navegadores WebKit, como Chrome e Safari. */
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), 0 10px 22px rgba(2, 5, 12, 0.2); /* Cria sombra interna e externa para dar profundidade. */
   overflow: hidden; /* Esconde qualquer excesso visual para manter o layout limpo e sem vazamentos. */
-  transform: translateY(0); /* Zera a posição inicial sem efeito, mantendo o bloco estável. */
+  transform: perspective(1200px) rotateX(2deg); /* Zera a posição inicial sem efeito, mantendo o bloco estável. */
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Suaviza alterações ao passar o mouse ou quando o estado muda. */
 }
 

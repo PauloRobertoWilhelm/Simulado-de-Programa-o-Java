@@ -260,68 +260,172 @@
     "explain": "<b>Lógica:</b> O contador começa em 3 e sobe 1 por vez. O laço roda enquanto for < 10. Logo, ele executa exatamente 7 repetições."
   },
   {
-    "topic": "repeticao",
-    "statement": "Analisando a lógica do laço de repetição WHILE, quantas vezes a palavra 'Oi' será impressa?",
-    "code": "int count = 4;\nwhile (count <= 17) {\n  System.out.println(\"Oi\");\n  count++;\n}",
+    "topic": "operadores",
+    "statement": "Qual será o valor final da variável `x` após a sequência de atribuições compostas abaixo?",
+    "code": "int x = 8;\nx += 5;\nx *= 2;\nx -= 4;\nSystem.out.println(x);",
     "options": [
-      "14 vezes",
-      "Infinitas vezes",
-      "13 vezes",
-      "15 vezes"
+      "18",
+      "22",
+      "26",
+      "14"
     ],
     "correct": 0,
-    "explain": "<b>Lógica:</b> O contador começa em 4 e sobe 1 por vez. O laço roda enquanto for <= 17. Logo, ele executa exatamente 14 repetições."
-  },
-  {
-    "topic": "selecao",
-    "statement": "Qual palavra será impressa na tela de acordo com a lógica IF/ELSE?",
-    "code": "int x = 17;\nint y = 7;\nif (x <= y) {\n  System.out.println(\"Alfa\");\n} else {\n  System.out.println(\"Beta\");\n}",
-    "options": [
-      "Alfa",
-      "AlfaBeta",
-      "Nenhuma saída",
-      "Beta"
-    ],
-    "correct": 3,
-    "explain": "<b>Lógica:</b> A pergunta é: 17 é <= 7? A resposta é Falso. Logo, o programa entra no bloco ELSE e imprime Beta."
-  },
-  {
-    "topic": "logica",
-    "statement": "Entendendo a lógica de concatenação, qual será o texto final exibido no console?",
-    "code": "String nome = \"João\";\nint idade = 48;\nSystem.out.println(\"Aluno: \" + nome + \" - Idade: \" + idade);",
-    "options": [
-      "Erro de lógica: não pode somar String e inteiro.",
-      "Aluno: João - Idade: 48",
-      "Aluno: João + Idade: 48",
-      "Aluno: nome - Idade: idade"
-    ],
-    "correct": 1,
-    "explain": "<b>Lógica:</b> No Java, o operador `+` entre textos (Strings) e variáveis serve para CONCATENAR, ou seja, costurar as informações. Ele pega os textos fixos e junta com o valor das variáveis, formando a frase final corretamente."
+    "explain": "<b>Lógica:</b> A atribuição composta `+=` soma 5, `*=` multiplica por 2 e `-=` subtrai 4. A sequência fica: 8 -> 13 -> 26 -> 22. Como a conta foi 8 + 5 = 13; 13 * 2 = 26; 26 - 4 = 22. O valor final é 22."
   },
   {
     "topic": "operadores",
-    "statement": "Qual o resultado da expressão matemática no código abaixo considerando a precedência dos operadores?",
-    "code": "int resultado = 9 + 6 * 6;\nSystem.out.println(resultado);",
+    "statement": "Considere o código abaixo. Qual é o resto da divisão de `valor` por 4?",
+    "code": "int valor = 19;\nint resto = valor % 4;\nSystem.out.println(resto);",
     "options": [
-      "43",
-      "45",
-      "49",
-      "Erro de compilação"
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explain": "<b>Lógica:</b> O operador `%` retorna o resto da divisão inteira. 19 dividido por 4 resulta em 4 e sobra 3, porque 4 x 4 = 16 e 19 - 16 = 3."
+  },
+  {
+    "topic": "operadores",
+    "statement": "Qual será o resultado da expressão abaixo?",
+    "code": "int a = 6;\nint b = 2;\nint c = 3;\nint resultado = a + b * c;\nSystem.out.println(resultado);",
+    "options": [
+      "12",
+      "18",
+      "20",
+      "14"
     ],
     "correct": 1,
-    "explain": "<b>Lógica:</b> Multiplicação e divisão têm precedência. Primeiro resolvemos `6 * 6`, e depois `9 +` o resultado. O valor final é 45."
+    "explain": "<b>Lógica:</b> A multiplicação tem precedência sobre a soma. Primeiro calculamos `2 * 3 = 6`, depois `6 + 6 = 12`. O valor final é 12."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Analise o código abaixo. Qual valor será impresso?",
+    "code": "int nota = 8;\nif (nota >= 7) {\n  System.out.println(\"Aprovado\");\n} else {\n  System.out.println(\"Reprovado\");\n}",
+    "options": [
+      "Aprovado",
+      "Reprovado",
+      "Erro",
+      "Nada"
+    ],
+    "correct": 0,
+    "explain": "<b>Lógica:</b> A condição `nota >= 7` é verdadeira quando a nota é maior ou igual a 7. Como 8 atende à condição, o programa imprime `Aprovado`."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Qual será a saída do switch abaixo?",
+    "code": "int dia = 2;\nswitch (dia) {\n  case 1: System.out.println(\"Segunda\"); break;\n  case 2: System.out.println(\"Terça\"); break;\n  case 3: System.out.println(\"Quarta\"); break;\n  default: System.out.println(\"Dia inválido\");\n}",
+    "options": [
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Dia inválido"
+    ],
+    "correct": 1,
+    "explain": "<b>Lógica:</b> O `switch` compara o valor da variável com cada `case`. Como `dia` vale 2, o código entra no bloco do `case 2` e imprime `Terça`."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Qual será a saída do trecho abaixo?",
+    "code": "int idade = 20;\nif (idade >= 18 && idade <= 65) {\n  System.out.println(\"Adulto\");\n} else {\n  System.out.println(\"Fora da faixa\");\n}",
+    "options": [
+      "Adulto",
+      "Fora da faixa",
+      "Erro",
+      "Adulto e Fora da faixa"
+    ],
+    "correct": 0,
+    "explain": "<b>Lógica:</b> O operador `&&` exige que as duas condições sejam verdadeiras. 20 está entre 18 e 65, então a condição toda é verdadeira e a saída é `Adulto`."
+  },
+  {
+    "topic": "selecao",
+    "statement": "Qual será a saída do código abaixo?",
+    "code": "int valor = 7;\nif (valor > 10 || valor % 2 == 1) {\n  System.out.println(\"Par ou ímpar especial\");\n} else {\n  System.out.println(\"Não atende\");\n}",
+    "options": [
+      "Par ou ímpar especial",
+      "Não atende",
+      "Erro",
+      "Nada"
+    ],
+    "correct": 0,
+    "explain": "<b>Lógica:</b> A condição usa `||` (ou). Se qualquer uma das condições for verdadeira, o bloco entra. Como 7 é ímpar, `valor % 2 == 1` é verdadeiro, então a mensagem sai."
   },
   {
     "topic": "repeticao",
-    "statement": "Analisando a lógica do laço de repetição WHILE, quantas vezes a palavra 'Oi' será impressa?",
-    "code": "int count = 1;\nwhile (count < 10) {\n  System.out.println(\"Oi\");\n  count++;\n}",
+    "statement": "Quantas vezes a frase `Java` será impressa no programa abaixo?",
+    "code": "int contador = 1;\nwhile (contador <= 5) {\n  System.out.println(\"Java\");\n  contador++;\n}",
     "options": [
-      "10 vezes",
-      "Infinitas vezes",
-      "8 vezes",
-      "9 vezes"
+      "4 vezes",
+      "5 vezes",
+      "6 vezes",
+      "Infinitas vezes"
     ],
-    "correct": 3,
-    "explain": "<b>Lógica:</b> O contador começa em 1 e sobe 1 por vez. O laço roda enquanto for < 10. Logo, ele executa exatamente 9 repetições."
+    "correct": 1,
+    "explain": "<b>Lógica:</b> O contador começa em 1 e vai até 5. Como a condição é `<= 5`, o laço executa exatamente 5 vezes antes de parar."
+  },
+  {
+    "topic": "repeticao",
+    "statement": "Qual será o valor final de `soma` no laço abaixo?",
+    "code": "int soma = 0;\nint i = 1;\nwhile (i <= 4) {\n  soma += i;\n  i++;\n}\nSystem.out.println(soma);",
+    "options": [
+      "6",
+      "10",
+      "9",
+      "15"
+    ],
+    "correct": 1,
+    "explain": "<b>Lógica:</b> A soma acontece em cada iteração: 1 + 2 + 3 + 4 = 10. O valor final da variável `soma` é 10."
+  },
+  {
+    "topic": "repeticao",
+    "statement": "Assumindo que o laço continua enquanto `contador < 10`, quantas vezes ele executa se o contador começa em 3 e aumenta 2 a cada volta?",
+    "code": "int contador = 3;\nwhile (contador < 10) {\n  System.out.println(contador);\n  contador += 2;\n}",
+    "options": [
+      "3 vezes",
+      "4 vezes",
+      "5 vezes",
+      "6 vezes"
+    ],
+    "correct": 1,
+    "explain": "<b>Lógica:</b> Os valores do contador serão 3, 5, 7 e 9. Quando ele chegar a 11, a condição deixa de ser verdadeira. Portanto, o laço executa 4 vezes."
+  },
+  {
+    "topic": "logica",
+    "statement": "Qual tipo de dado é mais adequado para armazenar a idade de uma pessoa?",
+    "code": "int idade = 21;",
+    "options": [
+      "double",
+      "int",
+      "String",
+      "boolean"
+    ],
+    "correct": 1,
+    "explain": "<b>Lógica:</b> A idade costuma ser um número inteiro, sem casas decimais. Por isso, o tipo mais adequado é `int`, que representa números inteiros em Java."
+  },
+  {
+    "topic": "logica",
+    "statement": "Qual o objetivo do comando abaixo?",
+    "code": "System.out.println(\"Digite sua idade:\");",
+    "options": [
+      "Exibir mensagem na tela para o usuário",
+      "Ler um número do teclado",
+      "Guardar a idade em memória",
+      "Comparar duas idades"
+    ],
+    "correct": 0,
+    "explain": "<b>Lógica:</b> O `System.out.println` é usado para mostrar dados na tela, como mensagens e resultados. Ele imprime texto no console para orientar ou informar o usuário."
+  },
+  {
+    "topic": "logica",
+    "statement": "A expressão `resultado = numero1 + numero2;` representa qual operação?",
+    "code": "int resultado = numero1 + numero2;",
+    "options": [
+      "Concatenação",
+      "Atribuição de texto",
+      "Soma de valores numéricos",
+      "Comparação"
+    ],
+    "correct": 2,
+    "explain": "<b>Lógica:</b> Quando os valores envolvidos são numéricos, o operador `+` realiza a soma matemática. Em Java, isso é uma operação aritmética e não concatenação."
   }
 ]

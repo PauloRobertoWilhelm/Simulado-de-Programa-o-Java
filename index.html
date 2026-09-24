@@ -873,6 +873,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function shuffleArray(items) {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function withRandomizedOptions(question) {
+    const entries = shuffleArray(question.options.map((text, index) => ({ text, index })));
+    const randomizedOptions = entries.map(item => item.text);
+    const newCorrect = entries.findIndex(item => item.index === question.correct);
+
+    return {
+      ...question,
+      options: randomizedOptions,
+      correct: newCorrect
+    };
+  }
+
   function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
     let filtered = bank;
 
@@ -880,13 +901,22 @@ document.addEventListener("DOMContentLoaded", () => {
       filtered = bank.filter(q => q.topic === topic);
     }
 
-    filtered = filtered.sort(() => Math.random() - 0.5);
-
-    if (len > 0 && len < filtered.length) {
-      filtered = filtered.slice(0, len);
+    if (!filtered.length) {
+      return [];
     }
 
-    return filtered;
+    const base = shuffleArray(filtered);
+    const deck = [];
+
+    while (deck.length < len) {
+      const round = shuffleArray(base).map(withRandomizedOptions);
+      deck.push(...round);
+      if (base.length >= len) {
+        break;
+      }
+    }
+
+    return deck.slice(0, len);
   }
 
   function loadProgressState() {
@@ -1044,7 +1074,7 @@ document.addEventListener("DOMContentLoaded", () => {
       originalIndex: index,
       isCerta: (index === q.correct)
     }));
-    optionsMapped = optionsMapped.sort(() => Math.random() - 0.5);
+    optionsMapped = shuffleArray(optionsMapped);
     
     html += `<div class="options" id="opts-container">`;
     optionsMapped.forEach((optData, i) => {

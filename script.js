@@ -1,9 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  let bank = [];
+document.addEventListener("DOMContentLoaded
+  function playSound(type) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
 
-  const btnStart = document.getElementById("btn-start");
-  const screenIntro = document.getElementById("screen-intro");
-  const screenQuiz = document.getElementById("screen-quiz");
+    if (type === 'correct') {
+      osc.type = 'sine';yId("screen-quiz");
   const screenResult = document.getElementById("screen-result");
   const qCard = document.getElementById("q-card");
   const btnNext = document.getElementById("btn-next");
@@ -21,6 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
   let elapsedSeconds = 0;
   let timeLimitSeconds = 0;
   let chartInstance = null;
+      osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.1);
+      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.4);
+    } else {
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.2);
+      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+", () => {
+  let bank = [];
+
+  const btnStart = document.getElementById("btn-start");
+  const screenIntro = document.getElementById("screen-intro");
+  const screenQuiz = document.getElementB
   let lastQuizConfig = { topic: "all", length: 20 };
   let lastQuizQuestions = [];
   let questionResults = [];
@@ -34,28 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     repeticao: 'Laço While',
     logica: 'Lógica Básica'
   };
-
-  function playSound(type) {
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    const osc = audioCtx.createOscillator();
-    const gainNode = audioCtx.createGain();
-    osc.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
-
-    if (type === 'correct') {
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.1);
-      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.4);
-    } else {
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.2);
-      gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
       osc.start();
       osc.stop(audioCtx.currentTime + 0.3);
     }
@@ -104,17 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function withBalancedAnswerSlot(question, targetIndex) {
     const correctText = question.options[question.correct];
-    const otherTexts = shuffleArray(question.options.filter((_, idx) => idx !== question.correct));
-    const mixed = Array(question.options.length).fill(null);
-    mixed[targetIndex] = correctText;
-
-    let cursor = 0;
-    for (let i = 0; i < mixed.length; i++) {
-      if (mixed[i] === null) {
-        mixed[i] = otherTexts[cursor];
-        cursor++;
-      }
-    }
+    const otherTexts = shuffleArray(question.op
 
     return {
       ...question,
@@ -125,12 +115,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
     let filtered = bank;
+tions.filter((_, idx) => idx !== question.correct));
+    const mixed = Array(question.options.length).fill(null);
+    mixed[targetIndex] = correctText;
 
-    if (topic !== 'all') {
+    let cursor = 0;
+    for (let i = 0; i < mixed.length; i++) {
+      if (mixed[i] === null) {
+        mixed[i] = otherTexts[cursor];
+        cursor++;
+      }
+    }mkdir -p .claude/skills
+    if (topic !== 
       filtered = bank.filter((question) => question.topic === topic);
     }
 
-    if (!filtered.length) return [];
+    if (!filtered.le'all') {ngth) return [];
 
     const base = shuffleArray(filtered);
     const deck = [];
@@ -535,11 +535,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       badgeStatus.textContent = 'Precisa estudar';
       badgeStatus.classList.add('fail');
-      badgeStatus.classList.remove('pass');
-      verdict.textContent = 'Vamos revisar mais?';
-      performanceMessage.innerHTML = `Você alcançou <strong>${pct}%</strong>. A prática continua sendo a melhor forma de fixar a lógica.`;
-      performanceMessage.className = 'performance-message fail';
-      resultShell.style.boxShadow = '0 25px 60px rgba(251, 111, 132, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
+      badgeStatus.e.boxShadow = '0 25px 60px rgba(251, 111, 132, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
       resultShell.style.borderColor = 'rgba(251, 111, 132, 0.28)';
     }
 
@@ -573,7 +569,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       : isMedium
         ? {
-            border: '#9A8BFF',
+            border: '#0e006b',
             fill: 'rgba(154, 139, 255, 0.15)',
             point: '#E0D9FF',
             glow: 'rgba(154, 139, 255, 0.22)'
@@ -734,3 +730,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateProgressPanel();
 });
+classList.remove('pass');
+      verdict.textContent = 'Vamos revisar mais?';
+      performanceMessage.innerHTML = `Você alcançou <strong>${pct}%</strong>. A prática continua sendo a melhor forma de fixar a lógica.`;
+      performanceMessage.className = 'performance-message fail';
+      resultShell.styl

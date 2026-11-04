@@ -1,0 +1,270 @@
+{
+  "questoes": [
+    {
+      "topic": "modelos",
+      "statement": "Sobre o modelo de referência OSI, qual afirmação está correta?",
+      "options": [
+        "A Camada de Enlace faz a entrega fim a fim entre redes diferentes.",
+        "O modelo tem quatro camadas, da Física até a Aplicação.",
+        "O modelo tem sete camadas, da Física até a Aplicação.",
+        "A Camada Física criptografa os dados."
+      ],
+      "correct": 2,
+      "explain": "<b>OSI:</b> são sete camadas. A entrega fim a fim é da camada de Transporte, não do Enlace. Esse item derrubou a questão na prova."
+    },
+    {
+      "topic": "modelos",
+      "statement": "Qual camada do modelo OSI traduz, comprime e criptografa os dados para a aplicação?",
+      "options": ["Sessão", "Apresentação", "Transporte", "Enlace"],
+      "correct": 1,
+      "explain": "<b>Apresentação:</b> cuida do formato dos dados: tradução, compressão e criptografia."
+    },
+    {
+      "topic": "modelos",
+      "statement": "Um switch consulta endereços MAC para encaminhar quadros, e um roteador consulta endereços IP para encaminhar pacotes. Quais camadas OSI correspondem a essas operações, nessa ordem?",
+      "options": ["Sessão e Rede", "Física e Transporte", "Rede e Enlace", "Enlace e Rede"],
+      "correct": 3,
+      "explain": "<b>Associação:</b> MAC e quadro são da camada de Enlace. IP e pacote são da camada de Rede."
+    },
+    {
+      "topic": "modelos",
+      "statement": "As funções de aplicação, apresentação e sessão do modelo OSI ficam em qual camada do modelo TCP/IP?",
+      "options": ["Aplicação", "Transporte", "Internet", "Enlace"],
+      "correct": 0,
+      "explain": "<b>TCP/IP:</b> tem quatro camadas e reúne as três camadas superiores do OSI na Aplicação."
+    },
+    {
+      "topic": "modelos",
+      "statement": "Computadores da rede local se comunicam, mas não alcançam uma rede remota. O técnico acha um erro na escolha do próximo salto do roteador. A qual camada OSI o problema pertence?",
+      "options": ["Física", "Transporte", "Rede", "Aplicação"],
+      "correct": 2,
+      "explain": "<b>Rede:</b> é a camada que encaminha pacotes IP e define o caminho entre redes."
+    },
+    {
+      "topic": "modelos",
+      "statement": "Qual camada do modelo OSI é responsável pela entrega fim a fim entre dispositivos em redes diferentes?",
+      "options": ["Enlace", "Transporte", "Física", "Sessão"],
+      "correct": 1,
+      "explain": "<b>Transporte:</b> garante a comunicação de ponta a ponta. O Enlace só atua dentro da rede local."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "O que é o modelo Cliente/Servidor?",
+      "options": [
+        "Uma estrutura onde um servidor centralizado fornece recursos ou serviços para vários clientes, que enviam solicitações e recebem respostas.",
+        "Uma rede onde cada computador compartilha arquivos sem servidor.",
+        "Um sistema com todos os dados em um único computador sem rede.",
+        "Uma conexão entre computadores sem necessidade de servidores."
+      ],
+      "correct": 0,
+      "explain": "<b>Cliente/Servidor:</b> o cliente pede, o servidor responde. Tudo passa por um ponto central."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "Uma equipe compartilha arquivos diretamente entre os computadores, sem servidor central. Cada computador pode pedir e oferecer arquivos. Qual é o modelo?",
+      "options": ["Cliente/servidor, porque há solicitação de arquivos.", "Cliente/servidor, porque um computador define a conexão.", "Ponto a ponto, porque cada computador pode solicitar e fornecer recursos.", "Ponto a ponto, porque os arquivos passam pelo provedor."],
+      "correct": 2,
+      "explain": "<b>Ponto a ponto:</b> todos podem ser cliente e servidor ao mesmo tempo."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "Uma empresa tem um escritório em Cascavel e outro em Lisboa, e liga as duas redes internas. Como classificar a rede interna de cada escritório e a rede que liga os dois, nessa ordem?",
+      "options": ["MAN e LAN", "PAN e MAN", "LAN e MAN", "LAN e WAN"],
+      "correct": 3,
+      "explain": "<b>Abrangência:</b> cada escritório é uma rede local, a LAN. Ligar dois países exige uma rede de longa distância, a WAN."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "O que é uma rede de computadores?",
+      "options": [
+        "Um único computador ligado a vários monitores.",
+        "Um sistema que conecta computadores e dispositivos para compartilhar informações e recursos.",
+        "Um dispositivo que fornece energia para o escritório.",
+        "Um software que controla o acesso à internet de um usuário."
+      ],
+      "correct": 1,
+      "explain": "<b>Rede:</b> o objetivo é conectar e compartilhar impressoras, arquivos e internet."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "Um fone Bluetooth ligado ao celular forma que tipo de rede?",
+      "options": ["PAN", "LAN", "MAN", "WAN"],
+      "correct": 0,
+      "explain": "<b>PAN:</b> rede pessoal, de curtíssimo alcance. Em ordem de tamanho: PAN, LAN, MAN e WAN."
+    },
+    {
+      "topic": "arquitetura",
+      "statement": "Cada computador tem um cabo próprio até um único switch central. Quando um cabo rompeu, só uma estação caiu. Quando o switch falhou, todas caíram. Qual é a topologia e sua vulnerabilidade?",
+      "options": ["Barramento, com dependência de um cabo compartilhado.", "Anel, com dependência dos vizinhos.", "Estrela, com dependência do equipamento central.", "Malha completa, com dependência de uma única conexão."],
+      "correct": 2,
+      "explain": "<b>Estrela:</b> a falha de um cabo afeta uma estação, mas a falha do equipamento central derruba todas."
+    },
+    {
+      "topic": "enlace",
+      "statement": "No Wi-Fi, a própria transmissão dificulta detectar colisões durante o envio. Qual abordagem corresponde ao CSMA/CA?",
+      "options": [
+        "Transmitir sem consultar o meio.",
+        "Reservar uma frequência exclusiva para cada estação.",
+        "Permitir transmissões só após autorização de um hub.",
+        "Consultar o meio e usar espera aleatória para reduzir a chance de colisões."
+      ],
+      "correct": 3,
+      "explain": "<b>CSMA/CA:</b> o CA vem de evitar colisões (Collision Avoidance). Escuta antes e aguarda um tempo aleatório."
+    },
+    {
+      "topic": "enlace",
+      "statement": "Em uma Ethernet half-duplex com hub, dois computadores transmitem ao mesmo tempo e causam uma colisão. Segundo o CSMA/CD, o que devem fazer?",
+      "options": [
+        "Interromper o envio e tentar novamente após uma espera aleatória.",
+        "Continuar a transmissão até o fim.",
+        "Aguardar intervalos fixos e iguais.",
+        "Retransmitir imediatamente."
+      ],
+      "correct": 0,
+      "explain": "<b>CSMA/CD:</b> a espera precisa ser aleatória. Com intervalos iguais, os dois colidiriam de novo."
+    },
+    {
+      "topic": "enlace",
+      "statement": "Um protocolo usa um byte especial como marcador de quadro, e esse mesmo valor aparece nos dados de uma imagem. O que a técnica de byte stuffing faz?",
+      "options": [
+        "Exclui dos dados o byte igual ao marcador.",
+        "Insere um byte de escape antes do marcador presente nos dados.",
+        "Insere um bit 0 após cinco bits 1 consecutivos.",
+        "Encerra o quadro quando o marcador aparece."
+      ],
+      "correct": 1,
+      "explain": "<b>Byte stuffing:</b> o byte de escape avisa que o valor seguinte é dado, e não fim de quadro. Inserir um bit 0 é o bit stuffing."
+    },
+    {
+      "topic": "meios",
+      "statement": "O sinal perde intensidade em um enlace longo. O técnico precisa regenerar o sinal, sem consultar endereços MAC ou IP. Qual equipamento faz essa função na camada física?",
+      "options": ["Roteador", "Switch", "Patch panel", "Repetidor"],
+      "correct": 3,
+      "explain": "<b>Repetidor:</b> só regenera o sinal. Quem olha MAC é o switch, e quem olha IP é o roteador."
+    },
+    {
+      "topic": "meios",
+      "statement": "Um cabeamento passa por uma área com motores grandes e forte interferência eletromagnética. Qual meio atende a esse requisito?",
+      "options": ["Par trançado UTP", "Fibra óptica, porque transporta os dados por pulsos de luz.", "Cabo coaxial, porque transforma sinais em luz.", "Par trançado STP, porque elimina qualquer interferência."],
+      "correct": 1,
+      "explain": "<b>Fibra óptica:</b> usa luz, então não sofre com interferência eletromagnética."
+    },
+    {
+      "topic": "meios",
+      "statement": "Qual equipamento encaminha quadros dentro da rede local usando o endereço MAC?",
+      "options": ["Switch", "Roteador", "Repetidor", "Modem"],
+      "correct": 0,
+      "explain": "<b>Switch:</b> trabalha na camada de Enlace, encaminhando quadros pelo endereço MAC."
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "O escritório parou",
+      "resumo": "O telefone do suporte não para de tocar. Você precisa descobrir o que aconteceu com a rede.",
+      "cenas": [
+        {
+          "texto": "Cada computador do escritório tem um cabo até um único switch. Na semana passada, um cabo rompeu e só uma estação ficou sem rede. Hoje o switch queimou e ninguém trabalha.",
+          "pergunta": "Que topologia é essa?",
+          "opcoes": [
+            { "texto": "Estrela", "certa": true, "retorno": "Isso. Tudo depende do equipamento central, e essa é a vulnerabilidade da estrela." },
+            { "texto": "Barramento", "retorno": "No barramento, todos dividem o mesmo cabo. Aqui cada um tem o seu." },
+            { "texto": "Malha completa", "retorno": "A malha tem conexões redundantes, e neste escritório não há nenhuma." }
+          ]
+        },
+        {
+          "texto": "O switch novo chegou, mas o cabo até o galpão passa ao lado de motores grandes, com muita interferência eletromagnética.",
+          "pergunta": "Qual meio você escolhe?",
+          "opcoes": [
+            { "texto": "Fibra óptica", "certa": true, "retorno": "Certo. Pulsos de luz não sofrem interferência eletromagnética." },
+            { "texto": "Par trançado UTP", "retorno": "O UTP não tem blindagem, é o pior para esse ambiente." },
+            { "texto": "Par trançado STP", "retorno": "A blindagem ajuda, mas não elimina toda a interferência." }
+          ]
+        },
+        {
+          "texto": "Em outro trecho muito longo, o sinal chega fraco. Você só precisa regenerá-lo, sem olhar MAC ou IP.",
+          "pergunta": "Qual equipamento resolve?",
+          "opcoes": [
+            { "texto": "Repetidor", "certa": true, "retorno": "Isso. O repetidor atua na camada física." },
+            { "texto": "Roteador", "retorno": "O roteador escolhe caminhos entre redes, usando IP." },
+            { "texto": "Patch panel", "retorno": "O patch panel só organiza as terminações dos cabos." }
+          ]
+        }
+      ],
+      "fim": "Você identificou a topologia, escolheu o meio e regenerou o sinal. Cada decisão tinha uma camada física por trás."
+    },
+    {
+      "titulo": "De Cascavel a Lisboa",
+      "resumo": "Acompanhe um arquivo saindo de um escritório e chegando a outro país.",
+      "cenas": [
+        {
+          "texto": "A empresa tem um escritório em Cascavel e outro em Lisboa. Cada um tem sua rede interna e uma conexão contratada liga os dois.",
+          "pergunta": "Como classificar essas redes?",
+          "opcoes": [
+            { "texto": "LAN em cada escritório e WAN entre eles.", "certa": true, "retorno": "Certo. Local dentro do prédio, longa distância entre países." },
+            { "texto": "MAN em cada escritório e LAN entre eles.", "retorno": "Invertido. A LAN é a menor das duas." },
+            { "texto": "PAN em cada escritório e MAN entre eles.", "retorno": "PAN é pessoal, e a MAN cobre uma cidade, não dois países." }
+          ]
+        },
+        {
+          "texto": "O arquivo sai do computador. Dentro de Cascavel, o switch usa o MAC. Para sair da rede, o roteador usa o IP.",
+          "pergunta": "Em quais camadas OSI isso acontece, nessa ordem?",
+          "opcoes": [
+            { "texto": "Enlace e Rede", "certa": true, "retorno": "Isso. MAC é Enlace, IP é Rede." },
+            { "texto": "Rede e Enlace", "retorno": "A ordem está trocada. Essa inversão aparece na prova." },
+            { "texto": "Sessão e Rede", "retorno": "Sessão não trata de endereços MAC." }
+          ]
+        },
+        {
+          "texto": "Em Lisboa, todos os funcionários abrem o relatório a partir de um único servidor da empresa, que responde a cada pedido.",
+          "pergunta": "Qual modelo é esse?",
+          "opcoes": [
+            { "texto": "Cliente/Servidor", "certa": true, "retorno": "Certo. Um servidor central atende vários clientes." },
+            { "texto": "Ponto a ponto", "retorno": "No ponto a ponto, não há servidor central." },
+            { "texto": "Barramento", "retorno": "Barramento é uma topologia física, não um modelo de comunicação." }
+          ]
+        }
+      ],
+      "fim": "O arquivo atravessou duas LANs e uma WAN, passando por Enlace e Rede, até chegar a um servidor."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "ordenar",
+      "nome": "Monte a pilha OSI",
+      "instrucao": "Toque nas sete camadas de cima para baixo, começando pela Aplicação.",
+      "sequencia": ["Aplicação", "Apresentação", "Sessão", "Transporte", "Rede", "Enlace", "Física"],
+      "explicacao": "Da camada mais próxima do usuário até o cabo e o sinal."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Em qual camada OSI?",
+      "instrucao": "Escolha a camada de cada função.",
+      "categorias": ["Física", "Enlace", "Rede", "Transporte", "Apresentação"],
+      "itens": [
+        { "texto": "O roteador escolhe o próximo salto.", "categoria": "Rede", "porque": "Roteamento e IP são da camada de Rede." },
+        { "texto": "O switch consulta o endereço MAC.", "categoria": "Enlace", "porque": "MAC e quadros são do Enlace." },
+        { "texto": "O repetidor regenera o sinal.", "categoria": "Física", "porque": "Sinal é camada Física." },
+        { "texto": "Os dados são criptografados.", "categoria": "Apresentação", "porque": "Traduzir, comprimir e criptografar são da Apresentação." },
+        { "texto": "A entrega de ponta a ponta entre dispositivos.", "categoria": "Transporte", "porque": "Fim a fim é Transporte." },
+        { "texto": "Pulsos de luz passam pela fibra.", "categoria": "Física", "porque": "O meio de transmissão é a camada Física." },
+        { "texto": "O protocolo marca o início e o fim do quadro.", "categoria": "Enlace", "porque": "Enquadramento é da camada de Enlace." },
+        { "texto": "Um pacote recebe o endereço IP de destino.", "categoria": "Rede", "porque": "Endereço IP é da camada de Rede." }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Qual é o tamanho da rede?",
+      "instrucao": "Classifique cada rede pela abrangência.",
+      "categorias": ["PAN", "LAN", "MAN", "WAN"],
+      "itens": [
+        { "texto": "Fone Bluetooth ligado ao celular.", "categoria": "PAN", "porque": "Alcance pessoal." },
+        { "texto": "Relógio inteligente ligado ao celular.", "categoria": "PAN", "porque": "Alcance pessoal." },
+        { "texto": "Computadores de um laboratório.", "categoria": "LAN", "porque": "Um único local." },
+        { "texto": "A rede interna de um escritório.", "categoria": "LAN", "porque": "Um único prédio." },
+        { "texto": "Prédios de uma prefeitura espalhados pela cidade.", "categoria": "MAN", "porque": "Abrange uma cidade." },
+        { "texto": "Conexão entre Cascavel e Lisboa.", "categoria": "WAN", "porque": "Longa distância, entre países." },
+        { "texto": "A própria internet.", "categoria": "WAN", "porque": "É a maior WAN que existe." }
+      ]
+    }
+  ]
+}

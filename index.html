@@ -1,20 +1,21 @@
 <!--
   Arquivo: index.html
   Papel no sistema: esta é a tela principal do projeto.
-  Ele combina HTML, CSS e JavaScript para criar um simulado interativo de
-  Programação Java com filtros, cronômetro, perguntas, feedback imediato
-  e histórico de desempenho.
+  Cada matéria é uma aba separada, com perguntas, histórias e jogos próprios.
 
   Fluxo geral da aplicação:
   1) Carrega a página e os estilos.
-  2) Busca o arquivo questoes.json para montar o banco de questões.
-  3) O usuário escolhe tema e quantidade de questões.
-  4) O JavaScript monta a tela de prova e controla o tempo.
-  5) Cada resposta gera feedback e soma pontos.
-  6) Ao final, mostra o percentual, a nota e um gráfico de evolução.
+  2) Busca materias/index.json, a lista de matérias, e monta as abas.
+  3) Ao abrir uma aba, busca o arquivo da matéria, como materias/redes.json.
+  4) O usuário escolhe Perguntas, Histórias ou Jogos.
+  5) Nas perguntas, o JavaScript monta a prova e controla o tempo.
+  6) Ao final, mostra a nota e o gráfico de evolução daquela matéria.
 
-  Observação importante: este arquivo não foi modificado em sua lógica, apenas
-  teve explicações adicionadas para facilitar o aprendizado do código.
+  Onde ficam as coisas:
+  - materias/       conteúdo de cada matéria;
+  - js/historias.js tela de histórias;
+  - js/jogos.js     tela de jogos;
+  - css/materias.css visual das abas, histórias e jogos.
 -->
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Simulado · Programação Java</title>
+<title>Simulados UNIPAR</title>
 
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0E1118">
@@ -33,77 +34,64 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/materias.css" />
 </head>
 <body>
 <div class="app">
 
+  <!-- ABAS DE MATÉRIA: os botões são criados pelo JavaScript a partir de materias/index.json. -->
+  <nav class="subject-tabs" id="subject-tabs" role="tablist" aria-label="Matérias"></nav>
+
   <!-- TELA INICIAL -->
   <section id="screen-intro" class="screen">
     <div class="intro">
-      <span class="badge-top"><span class="pulse"></span>UNIPAR · Java · 1º período</span>
-      <h1>Simulado de<br><span class="grad">Programação Java</span></h1>
-      <p class="sub">Escolha o tema e comece a rodada.</p>
+      <span class="badge-top"><span class="pulse"></span><span id="subject-badge">UNIPAR</span></span>
+      <h1>Simulado de<br><span class="grad" id="subject-title">cada matéria</span></h1>
 
-      <div class="chips">
-        <div class="chip"><span class="ic">⏱️</span><span>Com <b>Cronômetro</b></span></div>
-        <div class="chip"><span class="ic">📊</span><span>Dashboard de <b>Notas</b></span></div>
-        <div class="chip"><span class="ic">🔊</span><span>Sons <b>Interativos</b></span></div>
+      <!-- Cada matéria tem três partes. Os números são preenchidos pelo JavaScript. -->
+      <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="O que estudar">
+        <button type="button" class="mode-tab" role="tab" data-mode="perguntas" aria-selected="true">Perguntas <span class="mode-count" id="count-perguntas"></span></button>
+        <button type="button" class="mode-tab" role="tab" data-mode="historias" aria-selected="false">Histórias <span class="mode-count" id="count-historias"></span></button>
+        <button type="button" class="mode-tab" role="tab" data-mode="jogos" aria-selected="false">Jogos <span class="mode-count" id="count-jogos"></span></button>
       </div>
 
-      <!--
-        BLOCO: seletor de assunto do simulado
-        Função: permite que o aluno escolha qual matéria vai praticar antes de iniciar a prova.
-        Como funciona:
-        - .picker é o painel que agrupa a escolha de tema.
-        - h3 é o texto que orienta o aluno.
-        - #topic-grid é o contêiner que organiza todos os filtros em linha.
-        - .tpick são os botões de tema, cada um representa um assunto específico.
-        - data-topic guarda o nome do tema em formato de texto, usado depois pelo JavaScript para filtrar questões.
-        - class="on" marca o botão que está selecionado naquele momento.
-        - o botão "Tudo misturado" usa data-topic="all" para indicar que o sistema deve misturar todas as matérias.
-        - o botão de lógica foi incluído para ampliar as opções de estudo com o tema de estruturas lógicas.
-        - o atributo style="color:var(--primary-2)" apenas destaca visualmente esse botão sem alterar a lógica.
-      -->
-      <div class="picker">
-        <!-- h3 = título do bloco, ou seja, o texto que informa ao aluno o que ele deve fazer. -->
-        <h3>Qual matéria você quer treinar?</h3>
+      <!-- PARTE 1: PERGUNTAS -->
+      <div id="panel-perguntas">
+        <p class="sub">Escolha o tema e comece a rodada.</p>
 
-        <!-- topic-grid = container dos temas. Ele organiza os botões de assunto em uma grade/flex. -->
-        <div class="topic-grid" id="topic-grid">
-          <!-- .tpick on = botão ativo, com a classe "on" para indicar que está selecionado no momento. -->
-          <div class="tpick on" data-topic="all">🎯 Tudo misturado</div>
-
-          <!-- data-topic="operadores" = identifica o assunto Operadores e será usado pela lógica JavaScript para filtrar perguntas dessa área. -->
-          <div class="tpick" data-topic="operadores">➕ Operadores</div>
-
-          <!-- data-topic="selecao" = identifica o assunto de estruturas de decisão (If / Switch). -->
-          <div class="tpick" data-topic="selecao">🔀 If / Switch</div>
-
-          <!-- data-topic="repeticao" = identifica o assunto de laços de repetição (while). -->
-          <div class="tpick" data-topic="repeticao">🔁 Laço While</div>
-
-          <!--
-            data-topic="logica" = identifica o tema de Lógica Básica.
-            Esse botão foi adicionado para dar mais variedade ao simulado.
-            style="color:var(--primary-2)" apenas muda a cor do texto para dar destaque visual,
-            mas a parte importante é o atributo data-topic, que precisa ter um valor para o JavaScript descobrir o tema escolhido.
-          -->
-          <div class="tpick" style="color:var(--primary-2)" data-topic="logica">🧠 Lógica Básica</div>
+        <div class="chips">
+          <div class="chip"><span class="ic">⏱️</span><span>Com <b>Cronômetro</b></span></div>
+          <div class="chip"><span class="ic">📊</span><span>Dashboard de <b>Notas</b></span></div>
+          <div class="chip"><span class="ic">🔊</span><span>Sons <b>Interativos</b></span></div>
         </div>
-      </div>
 
-      <div class="picker">
-        <h3>Quantas questões nesta rodada?</h3>
-        <div class="len-grid" id="len-grid">
-          <div class="len" data-len="10"><span class="n">10</span><span class="l">rápida</span></div>
-          <div class="len" data-len="20"><span class="n">20</span><span class="l">média</span></div>
-          <div class="len" data-len="50"><span class="n">50</span><span class="l">longa</span></div>
-          <!-- O botão de 100 questões foi adicionado aqui -->
-          <div class="len on" data-len="100"><span class="n">100</span><span class="l">prova final</span></div>
+        <!--
+          BLOCO: seletor de tema
+          - #topic-grid recebe um botão .tpick para cada tema da matéria aberta;
+          - data-topic guarda o tema, usado pelo JavaScript para filtrar as questões;
+          - class="on" marca o botão selecionado;
+          - "Tudo misturado" usa data-topic="all" para juntar todos os temas da matéria.
+        -->
+        <div class="picker">
+          <h3>Qual tema você quer treinar?</h3>
+          <div class="topic-grid" id="topic-grid"></div>
         </div>
+
+        <!-- As opções mudam conforme a quantidade de questões do tema escolhido. -->
+        <div class="picker">
+          <h3>Quantas questões nesta rodada?</h3>
+          <div class="len-grid" id="len-grid"></div>
+        </div>
+
+        <button class="btn" id="btn-start" disabled>Carregando questões...</button>
       </div>
 
-      <button class="btn" id="btn-start" disabled>Carregando Questões...</button>
+      <!-- Mensagem para matérias sem perguntas. -->
+      <p class="activity-empty hidden" id="perguntas-vazio">Esta matéria ainda não tem perguntas.</p>
+
+      <!-- PARTES 2 E 3: preenchidas por js/historias.js e js/jogos.js -->
+      <div id="panel-historias" class="hidden"></div>
+      <div id="panel-jogos" class="hidden"></div>
     </div>
   </section>
 
@@ -206,19 +194,20 @@
 
 </div>
 
+<script src="js/historias.js"></script>
+<script src="js/jogos.js"></script>
 <script>
 // ------------------------------------------------------------
 // BLOCO DE LÓGICA PRINCIPAL DO SIMULADO
 // ------------------------------------------------------------
 // Este trecho é o coração da aplicação, porque ele controla:
 // - registros de arquivos e cache;
+// - abas de matéria;
 // - seleção de tema e número de questões;
 // - cronômetro;
 // - renderização das perguntas;
 // - validação da resposta;
-// - cálculo final de nota e histórico local.
-//
-// A lógica não foi alterada, apenas documentada para facilitar a leitura.
+// - cálculo final de nota e histórico de cada matéria.
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -233,7 +222,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Como esse dado chega de forma assíncrona, ele precisa estar em uma
   // variável externa para ser usado depois durante a criação dos filtros.
   let bank = [];
-  
+
+  // materias é a lista de abas e materiaAtual é a aba aberta agora.
+  let materias = [];
+  let materiaAtual = null;
+
   // Constantes que apontam para os elementos da interface.
   // Elas servem para evitar repetição de document.getElementById() em vários pontos.
   const btnStart = document.getElementById("btn-start");
@@ -246,7 +239,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnHome = document.getElementById("btn-home");
   const barFill = document.getElementById("bar-fill");
   const timerDisplay = document.getElementById("timer-display");
-  
+  const subjectTabs = document.getElementById("subject-tabs");
+  const topicGrid = document.getElementById("topic-grid");
+  const lenGrid = document.getElementById("len-grid");
+
   let currentQuestions = [];
   let currentIndex = 0;
   let score = 0;
@@ -259,8 +255,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastQuizConfig = { topic: "all", length: 20 };
   let lastQuizQuestions = [];
   let questionResults = [];
-  const STORAGE_KEY_PROGRESS = 'uniparJavaProgress';
-  
+
+  // Cada matéria guarda suas notas separadas. Programação mantém os nomes
+  // antigos para não perder o histórico que já estava salvo no navegador.
+  function chaveProgresso() {
+    return materiaAtual.id === 'programacao' ? 'uniparJavaProgress' : `unipar_${materiaAtual.id}_progresso`;
+  }
+
+  function chaveNotas() {
+    return materiaAtual.id === 'programacao' ? 'uniparJavaScores' : `unipar_${materiaAtual.id}_notas`;
+  }
+
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   
   function playSound(type) {
@@ -289,39 +294,194 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Requisição assíncrona para carregar o banco de questões.
-  // O fetch() busca o JSON em segundo plano e, quando responde, o código
-  // transforma o texto em objeto JavaScript para usar nas perguntas.
-  fetch('questoes.json')
-    .then(response => response.json())
-    .then(data => {
-      bank = data;
-      btnStart.textContent = "Iniciar prova →";
-      btnStart.disabled = false;
-    })
-    .catch(error => {
-      console.error("Erro ao carregar o banco de questões:", error);
-      btnStart.textContent = "Erro ao carregar";
-    });
+  // window.tocarSom deixa os sons disponíveis para js/historias.js e js/jogos.js.
+  window.tocarSom = playSound;
 
   let selectedTopic = "all";
-  document.querySelectorAll(".tpick").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      document.querySelectorAll(".tpick").forEach(b => b.classList.remove("on"));
-      e.target.classList.add("on");
-      selectedTopic = e.target.dataset.topic;
+  let selectedLen = 0;
+
+  // Carrega a lista de matérias e abre a aba indicada no endereço (#redes, por exemplo).
+  // O fetch() busca o JSON em segundo plano e, quando responde, o código
+  // transforma o texto em objeto JavaScript.
+  fetch('materias/index.json')
+    .then(response => response.json())
+    .then(lista => {
+      materias = lista;
+      montarAbas();
+      const idDoEndereco = location.hash.slice(1);
+      const inicial = materias.find(m => m.id === idDoEndereco) || materias[0];
+      return abrirMateria(inicial);
+    })
+    .catch(mostrarErroDeCarga);
+
+  function mostrarErroDeCarga(error) {
+    console.error("Erro ao carregar a matéria:", error);
+    btnStart.disabled = true;
+    btnStart.textContent = "Não carregou. Abra pelo Live Server.";
+  }
+
+  // montarAbas() cria um botão para cada matéria da lista.
+  function montarAbas() {
+    materias.forEach(materia => {
+      const aba = document.createElement("button");
+      aba.type = "button";
+      aba.className = "subject-tab";
+      aba.setAttribute("role", "tab");
+      aba.dataset.materia = materia.id;
+      aba.textContent = materia.aba;
+      aba.addEventListener("click", () => abrirMateria(materia));
+      subjectTabs.append(aba);
     });
+  }
+
+  // As setas do teclado trocam de aba, como em qualquer lista de abas.
+  subjectTabs.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const abas = [...subjectTabs.children];
+    const passo = e.key === "ArrowRight" ? 1 : -1;
+    const proxima = abas[(abas.indexOf(document.activeElement) + passo + abas.length) % abas.length];
+    proxima.focus();
+    proxima.click();
   });
 
-  let selectedLen = 100;
-  document.querySelectorAll(".len").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      document.querySelectorAll(".len").forEach(b => b.classList.remove("on"));
-      const t = e.target.closest(".len");
-      t.classList.add("on");
-      selectedLen = parseInt(t.dataset.len);
+  // abrirMateria() é chamada ao tocar em uma aba: troca as cores, o título e
+  // carrega as perguntas, histórias e jogos daquela matéria.
+  async function abrirMateria(materia) {
+    materiaAtual = materia;
+    history.replaceState(null, "", `#${materia.id}`);
+    document.title = `Simulado de ${materia.titulo}`;
+
+    [...subjectTabs.children].forEach(aba => {
+      const ativa = aba.dataset.materia === materia.id;
+      aba.setAttribute("aria-selected", ativa);
+      aba.tabIndex = ativa ? 0 : -1;
+      if (ativa) aba.scrollIntoView({ block: "nearest", inline: "center" });
     });
+
+    const raiz = document.documentElement.style;
+    raiz.setProperty("--primary", materia.cores[0]);
+    raiz.setProperty("--primary-2", materia.cores[0]);
+    raiz.setProperty("--teal", materia.cores[1]);
+
+    document.getElementById("subject-title").textContent = materia.titulo;
+    document.getElementById("subject-badge").textContent = materia.professor || "UNIPAR";
+
+    btnStart.disabled = true;
+    btnStart.textContent = "Carregando questões...";
+
+    try {
+      const resposta = await fetch(`materias/${materia.id}.json`);
+      const conteudo = await resposta.json();
+
+      // Se a pessoa trocou de aba enquanto carregava, esta resposta já não vale.
+      if (materiaAtual !== materia) return;
+
+      bank = conteudo.questoes;
+      document.getElementById("count-perguntas").textContent = conteudo.questoes.length;
+      document.getElementById("count-historias").textContent = conteudo.historias.length;
+      document.getElementById("count-jogos").textContent = conteudo.jogos.length;
+
+      window.Historias.montar(document.getElementById("panel-historias"), conteudo.historias);
+      window.Jogos.montar(document.getElementById("panel-jogos"), conteudo.jogos);
+
+      montarTemas();
+      updateProgressPanel();
+      trocarModo("perguntas");
+
+      btnStart.textContent = "Iniciar prova →";
+      btnStart.disabled = false;
+    } catch (error) {
+      mostrarErroDeCarga(error);
+    }
+  }
+
+  // trocarModo() mostra Perguntas, Histórias ou Jogos.
+  function trocarModo(modo) {
+    document.querySelectorAll(".mode-tab").forEach(botao => {
+      botao.setAttribute("aria-selected", botao.dataset.mode === modo);
+    });
+
+    const semPerguntas = modo === "perguntas" && bank.length === 0;
+    document.getElementById("panel-perguntas").classList.toggle("hidden", modo !== "perguntas" || semPerguntas);
+    document.getElementById("perguntas-vazio").classList.toggle("hidden", !semPerguntas);
+    document.getElementById("panel-historias").classList.toggle("hidden", modo !== "historias");
+    document.getElementById("panel-jogos").classList.toggle("hidden", modo !== "jogos");
+  }
+
+  document.querySelectorAll(".mode-tab").forEach(botao => {
+    botao.addEventListener("click", () => trocarModo(botao.dataset.mode));
   });
+
+  // montarTemas() cria os botões de tema da matéria aberta.
+  function montarTemas() {
+    selectedTopic = "all";
+    const temas = [{ id: "all", rotulo: "🎯 Tudo misturado" }, ...materiaAtual.temas];
+
+    topicGrid.replaceChildren(...temas.map(tema => {
+      const botao = document.createElement("button");
+      botao.type = "button";
+      botao.className = `tpick${tema.id === "all" ? " on" : ""}`;
+      botao.dataset.topic = tema.id;
+      botao.textContent = tema.rotulo;
+      return botao;
+    }));
+
+    montarQuantidades();
+  }
+
+  // quantidadeDoTema() conta quantas questões existem no tema escolhido.
+  function quantidadeDoTema() {
+    return selectedTopic === "all" ? bank.length : bank.filter(q => q.topic === selectedTopic).length;
+  }
+
+  // montarQuantidades() só oferece rodadas que o banco consegue preencher, sem
+  // repetir questões. A última opção é sempre "todas".
+  function montarQuantidades() {
+    const total = quantidadeDoTema();
+    const opcoes = [5, 10, 20].filter(n => n < total).concat(total);
+    selectedLen = total;
+
+    lenGrid.replaceChildren(...opcoes.map(n => {
+      const botao = document.createElement("button");
+      botao.type = "button";
+      botao.className = `len${n === total ? " on" : ""}`;
+      botao.dataset.len = n;
+
+      const numero = document.createElement("span");
+      numero.className = "n";
+      numero.textContent = n;
+
+      const rotulo = document.createElement("span");
+      rotulo.className = "l";
+      rotulo.textContent = n === total ? "todas" : n === 5 ? "rápida" : n === 10 ? "curta" : "média";
+
+      botao.append(numero, rotulo);
+      return botao;
+    }));
+  }
+
+  // Um único ouvinte cuida de todos os botões, mesmo os criados depois.
+  topicGrid.addEventListener("click", (e) => {
+    const botao = e.target.closest(".tpick");
+    if (!botao) return;
+    document.querySelectorAll(".tpick").forEach(b => b.classList.remove("on"));
+    botao.classList.add("on");
+    selectedTopic = botao.dataset.topic;
+    montarQuantidades();
+  });
+
+  lenGrid.addEventListener("click", (e) => {
+    const botao = e.target.closest(".len");
+    if (!botao) return;
+    document.querySelectorAll(".len").forEach(b => b.classList.remove("on"));
+    botao.classList.add("on");
+    selectedLen = parseInt(botao.dataset.len);
+  });
+
+  // mostrarAbas() esconde as abas durante a prova, para ninguém trocar de matéria sem querer.
+  function mostrarAbas(visivel) {
+    subjectTabs.classList.toggle("hidden", !visivel);
+  }
 
   // shuffleArray() cria uma cópia do vetor e embaralha a ordem dos itens.
   // Essa função é usada para evitar que as perguntas e as opções sempre apareçam
@@ -382,14 +542,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const base = shuffleArray(filtered);
     const deck = [];
     const answerSlots = [0, 2, 1, 3];
+    const total = Math.min(len, base.length); // nunca repete questão na mesma rodada
 
-    while (deck.length < len) {
-      const baseQuestion = base[deck.length % base.length];
-      const targetIndex = answerSlots[deck.length % answerSlots.length];
+    while (deck.length < total) {
+      const baseQuestion = base[deck.length];
+      const targetIndex = answerSlots[deck.length % answerSlots.length] % baseQuestion.options.length;
       deck.push(withBalancedAnswerSlot(baseQuestion, targetIndex));
     }
 
-    return deck.slice(0, len);
+    return deck;
   }
 
   // loadProgressState() lê o histórico do navegador.
@@ -397,7 +558,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Se o armazenamento estiver vazio ou corrompido, a função devolve um objeto padrão seguro.
   function loadProgressState() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS)) || { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
+      return JSON.parse(localStorage.getItem(chaveProgresso())) || { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
     } catch (error) {
       return { sessions: 0, bestScore: 0, totalCorrect: 0, recent: [] };
     }
@@ -406,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // saveProgressState() salva o estado do progresso no navegador.
   // Isso permite que o app mantenha o histórico de provas, melhor nota e acertos acumulados.
   function saveProgressState(state) {
-    localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(state));
+    localStorage.setItem(chaveProgresso(), JSON.stringify(state));
   }
 
   // updateProgressPanel() atualiza os cards visuais do painel de progresso.
@@ -511,6 +672,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     screenIntro.classList.add("hidden");
     screenQuiz.classList.remove("hidden");
+    mostrarAbas(false);
     renderQuestion();
   }
 
@@ -676,6 +838,7 @@ document.addEventListener("DOMContentLoaded", () => {
     screenQuiz.classList.add("hidden");
     screenResult.classList.add("hidden");
     screenIntro.classList.remove("hidden");
+    mostrarAbas(true);
     qCard.innerHTML = "";
     btnNext.disabled = true;
     currentQuestions = [];
@@ -779,15 +942,18 @@ document.addEventListener("DOMContentLoaded", () => {
       resultShell.style.borderColor = 'rgba(251, 111, 132, 0.28)';
     }
     
-    let history = JSON.parse(localStorage.getItem('uniparJavaScores')) || [];
-    history.push(pct);
-    if(history.length > 10) history.shift();
-    localStorage.setItem('uniparJavaScores', JSON.stringify(history));
+    let notas = JSON.parse(localStorage.getItem(chaveNotas())) || [];
+    notas.push(pct);
+    if(notas.length > 10) notas.shift();
+    localStorage.setItem(chaveNotas(), JSON.stringify(notas));
+
+    const temaAtual = materiaAtual.temas.find(tema => tema.id === selectedTopic);
+    document.getElementById("current-theme-label").textContent = temaAtual ? temaAtual.rotulo : "Tudo misturado";
 
     recordProgressSnapshot(pct, totalQuestions, score, selectedTopic);
     renderReviewPanel(getWrongQuestionsFromCurrentRound());
     updateProgressPanel();
-    renderChart(history);
+    renderChart(notas);
   }
 
   // renderChart() desenha o gráfico de histórico usando Chart.js.
@@ -894,11 +1060,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalQuestions = currentQuestions.length || 0;
     const pct = totalQuestions ? Math.round((score / totalQuestions) * 100) : 0;
     const nota = (pct / 10).toFixed(1).replace(".", ",");
-    const mensagem = `Meu resultado no Simulado de Programação Java: ${score}/${totalQuestions} acertos (${pct}%), nota ${nota}/10.`;
+    const mensagem = `Meu resultado no Simulado de ${materiaAtual.titulo}: ${score}/${totalQuestions} acertos (${pct}%), nota ${nota}/10.`;
 
     if (navigator.share) {
       navigator.share({
-        title: 'Simulado de Programação Java',
+        title: `Simulado de ${materiaAtual.titulo}`,
         text: mensagem,
         url: window.location.href
       }).catch(() => {
@@ -960,6 +1126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-retry").addEventListener("click", () => {
     screenResult.classList.add("hidden");
     screenIntro.classList.remove("hidden");
+    mostrarAbas(true);
     qCard.innerHTML = "";
     currentQuestions = [];
     currentIndex = 0;
@@ -976,8 +1143,6 @@ document.addEventListener("DOMContentLoaded", () => {
   btnHome.addEventListener("click", () => {
     goToIntro();
   });
-
-  updateProgressPanel();
 });
 </script>
 </body>

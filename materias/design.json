@@ -1,0 +1,260 @@
+{
+  "questoes": [
+    {
+      "topic": "ihc",
+      "statement": "Uma plataforma de cursos usa o rótulo “Processar Artefato” no botão de envio. O sistema é rápido e funciona com leitores de tela, mas os alunos não sabem se aquele botão envia a tarefa. A falha afeta diretamente:",
+      "options": ["A robustez da infraestrutura.", "A comunicabilidade da interface.", "A eficiência do servidor.", "A acessibilidade técnica."],
+      "correct": 1,
+      "explain": "<b>Comunicabilidade:</b> vem da Engenharia Semiótica. O problema é a mensagem que a interface passa, e não a tecnologia."
+    },
+    {
+      "topic": "ihc",
+      "statement": "Segundo Barbosa e Silva (2010), a Qualidade em IHC é multidimensional. Quais propriedades ela inclui?",
+      "options": [
+        "Usabilidade, Experiência do Usuário, Acessibilidade e Comunicabilidade.",
+        "Velocidade, Portabilidade, Escalabilidade e Custo.",
+        "Cor, Tipografia, Layout e Animação.",
+        "Segurança, Backup, Rede e Servidor."
+      ],
+      "correct": 0,
+      "explain": "<b>Qualidade em IHC:</b> reúne usabilidade, experiência do usuário (UX), acessibilidade e comunicabilidade."
+    },
+    {
+      "topic": "ihc",
+      "statement": "Qual é a contribuição das Ciências Cognitivas e da Psicologia para o projeto de interfaces?",
+      "options": [
+        "Definem as regras sintáticas das linguagens de front-end.",
+        "Determinam a infraestrutura de redes em nuvem.",
+        "Estabelecem métricas financeiras de retorno do produto.",
+        "Oferecem modelos para compreender a memória, a percepção visual, a atenção e a carga mental do usuário."
+      ],
+      "correct": 3,
+      "explain": "<b>Multidisciplinaridade:</b> IHC une humanos, design e tecnologia. A Psicologia explica como a pessoa percebe e lembra."
+    },
+    {
+      "topic": "heuristicas",
+      "statement": "Em um aplicativo bancário, depois de confirmar o PIX, a tela mostra “Processando sua transação...” e em seguida “Pagamento realizado com sucesso”. Qual heurística de Nielsen é aplicada?",
+      "options": ["Flexibilidade e Eficiência de Uso", "Estética e Design Minimalista", "Visibilidade do Status do Sistema", "Ajuda e Documentação"],
+      "correct": 2,
+      "explain": "<b>Visibilidade do status:</b> o sistema sempre conta ao usuário o que está acontecendo."
+    },
+    {
+      "topic": "heuristicas",
+      "statement": "O campo “Data de Nascimento” exige barras, mas não mostra máscara. Se o usuário digita só números, a página recarrega e apaga todos os campos. Qual heurística foi violada?",
+      "options": ["Prevenção de Erros", "Ajuda e Documentação", "Visibilidade do Status do Sistema", "Estética e Design Minimalista"],
+      "correct": 0,
+      "explain": "<b>Prevenção de erros:</b> uma máscara impediria o erro antes que ele acontecesse."
+    },
+    {
+      "topic": "heuristicas",
+      "statement": "O botão de fechar uma janela é um ícone de interrogação no canto inferior esquerdo. Qual heurística foi violada?",
+      "options": ["Prevenção de Erros", "Consistência e Padrões", "Flexibilidade e Eficiência de Uso", "Reconhecimento em vez de Memorização"],
+      "correct": 1,
+      "explain": "<b>Consistência e padrões:</b> fechar costuma ser um X no canto superior. Fugir do padrão confunde."
+    },
+    {
+      "topic": "heuristicas",
+      "statement": "Qual é o enunciado da Primeira Lei da Usabilidade de Steve Krug?",
+      "options": [
+        "“Três cliques no máximo.”",
+        "“Leia todo o manual!”",
+        "“Aumente o número de opções.”",
+        "“Não me faça pensar!”"
+      ],
+      "correct": 3,
+      "explain": "<b>Krug:</b> as páginas devem ser autoexplicativas, sem esforço cognitivo desnecessário."
+    },
+    {
+      "topic": "heuristicas",
+      "statement": "Um e-mail enviado por engano pode ser recuperado por um botão “Desfazer”. Qual heurística de Nielsen esse botão atende?",
+      "options": ["Controle e Liberdade do Usuário", "Estética e Design Minimalista", "Visibilidade do Status do Sistema", "Ajuda e Documentação"],
+      "correct": 0,
+      "explain": "<b>Controle e liberdade:</b> o usuário precisa de uma saída clara quando faz algo sem querer."
+    },
+    {
+      "topic": "norman",
+      "statement": "Um indicador que só mostra informação recebeu sombra igual à de um botão físico. Os usuários tocam nele sem parar. Segundo Don Norman, isso é:",
+      "options": ["Um golfo de avaliação", "Uma restrição", "Uma falsa affordance percebida", "Um modelo de cor"],
+      "correct": 2,
+      "explain": "<b>Affordance:</b> a aparência sugere uma ação. Se a ação não existe, a affordance é falsa."
+    },
+    {
+      "topic": "norman",
+      "statement": "O usuário toca, o sistema demora 8 segundos e nada aparece. Ele não sabe se a ação surtiu efeito. Isso é um:",
+      "options": ["Golfo de Avaliação", "Golfo de Execução", "Erro de contraste", "Modelo mental correto"],
+      "correct": 0,
+      "explain": "<b>Golfo de Avaliação:</b> é a distância entre o que o sistema fez e o que a pessoa consegue interpretar dele."
+    },
+    {
+      "topic": "norman",
+      "statement": "Os toques repetidos travam o sistema porque nada impede ações redundantes durante o processamento. Segundo a prova, isso é uma falha de:",
+      "options": ["Golfo de Avaliação, por falta de cor", "Golfo de Execução, por falta de restrições", "Comunicabilidade do rótulo", "Teoria das cores"],
+      "correct": 1,
+      "explain": "<b>Golfo de Execução:</b> a interface não guiou nem limitou a ação. Restrições (constraints) evitam as repetições."
+    },
+    {
+      "topic": "norman",
+      "statement": "Por que priorizar o reconhecimento em vez da memorização em uma interface?",
+      "options": [
+        "Porque a memória de curto prazo é ilimitada.",
+        "Porque usuários preferem decorar comandos.",
+        "Porque pistas visuais e restrições da interface descarregam a memória de trabalho.",
+        "Porque telas cheias de texto são mais rápidas."
+      ],
+      "correct": 2,
+      "explain": "<b>Conhecimento no mundo:</b> a mente tem memória de curto prazo limitada. O que está na tela não precisa ser lembrado."
+    },
+    {
+      "topic": "visual",
+      "statement": "Sobre modelos de cores no design digital e no Figma, qual afirmação está correta?",
+      "options": [
+        "O RGB é subtrativo e a soma das cores resulta em preto.",
+        "O CMYK é o padrão ideal para monitores.",
+        "O Pantone é o padrão dos navegadores para CSS.",
+        "O HSL reflete a percepção humana e facilita ajustar paletas e brilho."
+      ],
+      "correct": 3,
+      "explain": "<b>HSL:</b> matiz, saturação e luminosidade. É mais intuitivo de ajustar do que o código hexadecimal."
+    },
+    {
+      "topic": "visual",
+      "statement": "Em telas, a cor é gerada pela emissão de luz. Qual modelo de cor representa isso?",
+      "options": ["RGB, um modelo aditivo", "CMYK, um modelo subtrativo", "Pantone, um catálogo de tintas", "Preto e branco, um modelo binário"],
+      "correct": 0,
+      "explain": "<b>RGB:</b> soma luz vermelha, verde e azul. O CMYK é para impressão, em que a cor vem da reflexão nos pigmentos."
+    },
+    {
+      "topic": "visual",
+      "statement": "Qual é a principal vantagem dos protótipos de baixa fidelidade (Low-Fi) nas primeiras validações?",
+      "options": [
+        "Testam a performance do banco de dados.",
+        "Permitem explorar e descartar conceitos rapidamente, com baixo custo e sem apego ao código.",
+        "Têm a mesma aparência do produto final.",
+        "Eliminam os testes com usuários reais."
+      ],
+      "correct": 1,
+      "explain": "<b>Low-Fi:</b> um esboço em papel é barato. Por isso dá para jogar fora e testar outra ideia sem dó."
+    },
+    {
+      "topic": "visual",
+      "statement": "Qual é a principal vantagem de usar Variáveis de Cor ou Texto em um Style Guide no Figma?",
+      "options": [
+        "Substituem os wireframes.",
+        "Impedem o acesso ao CSS dos componentes.",
+        "Aumentam o tamanho do arquivo.",
+        "Garantem que uma alteração no valor de um token seja propagada para todo o projeto."
+      ],
+      "correct": 3,
+      "explain": "<b>Tokens:</b> você muda a cor primária em um lugar e o projeto inteiro acompanha."
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "O botão Processar Artefato",
+      "resumo": "Um sistema rápido e estável, e mesmo assim os alunos estão perdidos.",
+      "cenas": [
+        {
+          "texto": "A plataforma de cursos registra o arquivo em 1 segundo e funciona com leitores de tela. Mesmo assim, o suporte recebe e-mails: “esse botão Processar Artefato serve para enviar minha tarefa?”",
+          "pergunta": "Qual dimensão da qualidade falhou?",
+          "opcoes": [
+            { "texto": "Comunicabilidade", "certa": true, "retorno": "Isso. O sistema funciona, mas a mensagem da interface não chega ao aluno." },
+            { "texto": "Desempenho do servidor", "retorno": "O envio leva 1 segundo. O problema não é velocidade." },
+            { "texto": "Acessibilidade técnica", "retorno": "Os leitores de tela funcionam. O que confunde é o texto." }
+          ]
+        },
+        {
+          "texto": "Você decide trocar o texto do botão.",
+          "pergunta": "Qual rótulo resolve o problema?",
+          "opcoes": [
+            { "texto": "Enviar tarefa", "certa": true, "retorno": "Certo. Fala a língua do aluno e combina com o mundo real." },
+            { "texto": "Executar rotina", "retorno": "Continua sendo linguagem de sistema, e não de aluno." },
+            { "texto": "Submeter artefato", "retorno": "Trocou a palavra, mas manteve o jargão." }
+          ]
+        },
+        {
+          "texto": "O aluno clica em Enviar tarefa, a tela fica parada por 5 segundos e ele clica de novo.",
+          "pergunta": "O que você adiciona?",
+          "opcoes": [
+            { "texto": "A mensagem “Enviando sua tarefa...” com uma barra de progresso.", "certa": true, "retorno": "Isso é visibilidade do status do sistema, a primeira heurística de Nielsen." },
+            { "texto": "Um manual em PDF sobre o envio.", "retorno": "“Leia todo o manual” é o oposto do “Não me faça pensar”." },
+            { "texto": "Mais cores no botão.", "retorno": "Cor não conta ao usuário o que está acontecendo." }
+          ]
+        }
+      ],
+      "fim": "Um sistema que funciona ainda pode falhar com as pessoas. Você corrigiu a mensagem e o retorno, sem mexer no servidor."
+    },
+    {
+      "titulo": "O indicador que parecia botão",
+      "resumo": "Agricultores testam um app de irrigação e o sistema começa a travar.",
+      "cenas": [
+        {
+          "texto": "No teste do app de irrigação, os agricultores tocam sem parar em um indicador que só mostra informação. Ele tem o mesmo sombreamento de um botão físico.",
+          "pergunta": "O que o sombreamento criou?",
+          "opcoes": [
+            { "texto": "Uma falsa affordance percebida.", "certa": true, "retorno": "Certo. A aparência prometeu uma ação que não existe." },
+            { "texto": "Uma boa consistência visual.", "retorno": "Parecer botão sem ser botão quebra a expectativa do usuário." },
+            { "texto": "Um modelo mental correto.", "retorno": "O modelo mental dos usuários ficou errado por causa da aparência." }
+          ]
+        },
+        {
+          "texto": "Nos botões de verdade, o sistema leva 8 segundos para atualizar e não mostra nada. Ninguém sabe se o toque funcionou.",
+          "pergunta": "Qual conceito de Norman explica isso?",
+          "opcoes": [
+            { "texto": "Golfo de Avaliação", "certa": true, "retorno": "Isso. A pessoa não consegue interpretar o estado do sistema." },
+            { "texto": "Golfo de Execução", "retorno": "O usuário sabe como agir. Falta ele conseguir ver o resultado." },
+            { "texto": "Teoria das cores", "retorno": "A questão aqui é o retorno do sistema, não a cor." }
+          ]
+        },
+        {
+          "texto": "Sem resposta, as pessoas tocam várias vezes. Os comandos duplicam e o app trava.",
+          "pergunta": "Qual solução usa restrições (constraints)?",
+          "opcoes": [
+            { "texto": "Bloquear novos toques enquanto o sistema processa.", "certa": true, "retorno": "Certo. A restrição impede a ação repetida." },
+            { "texto": "Pedir que os agricultores tenham paciência.", "retorno": "O design é que precisa evitar o erro, não o usuário." },
+            { "texto": "Aumentar o botão.", "retorno": "Um botão maior continua aceitando toques repetidos." }
+          ]
+        }
+      ],
+      "fim": "Mesma tela, três conceitos de Norman: affordance, golfo de avaliação e restrições. Foi essa a situação da prova."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "classificar",
+      "nome": "Qual heurística de Nielsen?",
+      "instrucao": "Leia a situação e escolha a heurística.",
+      "categorias": ["Visibilidade do status", "Prevenção de erros", "Consistência e padrões", "Controle e liberdade"],
+      "itens": [
+        { "texto": "Barra de progresso durante o upload.", "categoria": "Visibilidade do status", "porque": "Mostra o que está acontecendo." },
+        { "texto": "Mensagem “Pagamento realizado com sucesso”.", "categoria": "Visibilidade do status", "porque": "Informa o resultado da ação." },
+        { "texto": "Máscara no campo de data de nascimento.", "categoria": "Prevenção de erros", "porque": "Evita o erro antes que ele aconteça." },
+        { "texto": "Pedir confirmação antes de excluir a conta.", "categoria": "Prevenção de erros", "porque": "Evita uma ação perigosa por engano." },
+        { "texto": "O botão Salvar fica sempre no mesmo lugar.", "categoria": "Consistência e padrões", "porque": "Repetir o padrão evita que a pessoa precise reaprender." },
+        { "texto": "Fechar a janela é um X no canto superior.", "categoria": "Consistência e padrões", "porque": "Segue o padrão que as pessoas já conhecem." },
+        { "texto": "Botão Desfazer depois de apagar um e-mail.", "categoria": "Controle e liberdade", "porque": "Dá uma saída para o erro." },
+        { "texto": "Botão Cancelar durante um download.", "categoria": "Controle e liberdade", "porque": "O usuário manda no que está acontecendo." }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Qual modelo de cor?",
+      "instrucao": "Escolha o modelo que combina com cada situação.",
+      "categorias": ["RGB", "CMYK", "HSL"],
+      "itens": [
+        { "texto": "Tela de um smartphone.", "categoria": "RGB", "porque": "Tela emite luz, e RGB é aditivo." },
+        { "texto": "Monitor do computador.", "categoria": "RGB", "porque": "Monitor também emite luz." },
+        { "texto": "Folder impresso.", "categoria": "CMYK", "porque": "Impressão usa pigmentos." },
+        { "texto": "Cor vinda da reflexão da luz em tinta.", "categoria": "CMYK", "porque": "É o modelo subtrativo." },
+        { "texto": "Ajustar o brilho de uma paleta no Figma.", "categoria": "HSL", "porque": "A luminosidade é um dos valores do HSL." },
+        { "texto": "Trocar a matiz e manter a saturação.", "categoria": "HSL", "porque": "Matiz e saturação são os outros valores do HSL." }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "Do papel ao digital",
+      "instrucao": "Toque nas etapas na ordem em que um projeto evolui.",
+      "sequencia": ["Esboço em papel (Low-Fi)", "Wireframe digital", "Protótipo Mid-Fi", "Teste com usuários", "Interface final"],
+      "explicacao": "Quanto mais cedo, mais barato mudar. Por isso o protótipo começa simples e só depois ganha detalhe."
+    }
+  ]
+}

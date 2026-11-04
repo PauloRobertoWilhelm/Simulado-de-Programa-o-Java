@@ -1,0 +1,303 @@
+{
+  "questoes": [
+    {
+      "topic": "tipos",
+      "statement": "Uma empresa de e-commerce quer automatizar um teste que simula a interação completa de um usuário, do login até a finalização do pedido, usando a interface gráfica. Qual tipo de teste atende?",
+      "options": ["Teste de Performance", "Teste End-to-End", "Teste unitário", "Teste de regressão"],
+      "correct": 1,
+      "explain": "<b>End-to-End:</b> percorre o fluxo inteiro, de ponta a ponta, como um usuário real."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Ao criar um pedido, o estoque precisa ser atualizado no banco de dados. Qual tipo de teste valida a comunicação entre o módulo de pedidos e o de estoque?",
+      "options": ["Teste de desempenho", "Teste de segurança", "Teste de integração", "Teste de regressão"],
+      "correct": 2,
+      "explain": "<b>Integração:</b> verifica se módulos diferentes funcionam juntos."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Um desenvolvedor precisa validar um método que calcula a comissão de vendas com regras complexas, antes de integrá-lo a outros módulos. Qual teste é o mais adequado?",
+      "options": ["Teste de unidade", "Smoke teste", "Teste End-to-End", "Teste de integração"],
+      "correct": 0,
+      "explain": "<b>Unidade:</b> testa uma parte pequena da lógica de forma isolada."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Antes de iniciar testes detalhados em um app de músicas, qual teste verifica rapidamente se login, busca e criação de playlists estão funcionando?",
+      "options": ["Teste de unidade", "Teste de integração", "Teste de regressão", "Teste de fumaça"],
+      "correct": 3,
+      "explain": "<b>Fumaça (smoke):</b> checagem rápida do essencial. Se falhar, nem vale começar o resto."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Após corrigir um bug na venda, o QA percebeu que o lançamento de sangria parou de funcionar na nova versão. Que tipo de teste foi realizado?",
+      "options": ["Teste de performance", "Teste de regressão", "Smoke teste", "Teste unitário"],
+      "correct": 1,
+      "explain": "<b>Regressão:</b> confere se o que já funcionava continua funcionando depois de uma mudança."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O primeiro tipo valida se o sistema faz o que deveria fazer. O segundo mede performance, segurança e experiência. Estamos falando de testes:",
+      "options": ["Funcional e Não Funcional", "Unitário e End-to-End", "Smoke e Integração", "Stress e Carga"],
+      "correct": 0,
+      "explain": "<b>Funcional x não funcional:</b> o primeiro olha o que o sistema faz, o segundo olha quão bem ele se comporta."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Qual alternativa descreve melhor os testes de caixa preta e caixa branca?",
+      "options": [
+        "Caixa preta é manual, caixa branca é automatizada.",
+        "Caixa preta é feita por desenvolvedores, caixa branca por usuários finais.",
+        "Caixa preta foca entradas e saídas sem considerar a estrutura interna. Caixa branca analisa o código e seus fluxos.",
+        "Caixa preta só existe em produção, caixa branca só em homologação."
+      ],
+      "correct": 2,
+      "explain": "<b>Caixa preta:</b> você não vê o interior. <b>Caixa branca:</b> você testa a lógica interna."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Qual é a melhor definição para a técnica de teste caixa preta “Tabela de Decisão”?",
+      "options": [
+        "Verifica se os elementos gráficos estão alinhados.",
+        "Prioriza testes exploratórios de forma intuitiva.",
+        "Substitui totalmente os testes manuais.",
+        "Organiza condições e ações em uma tabela, para identificar combinações de entradas e garantir que todas as regras de negócio sejam testadas."
+      ],
+      "correct": 3,
+      "explain": "<b>Tabela de Decisão:</b> cada coluna é uma combinação de condições com o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Um QA testa um formulário novo sem documentação detalhada, interagindo livremente e usando a intuição para descobrir comportamentos inesperados. Que tipo de teste é esse?",
+      "options": ["Teste exploratório", "Teste baseado em checklist", "Teste de carga", "Teste de regressão"],
+      "correct": 0,
+      "explain": "<b>Exploratório:</b> é baseado em experiência. Aprender e testar acontecem ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Um cupom de desconto aceita valores entre R$ 10,00 e R$ 200,00. Usando Partição de Equivalência e Valor Limite, qual conjunto é o mais adequado?",
+      "options": [
+        "R$ 0,00; R$ 10,00; R$ 100,00; R$ 200,00; R$ 300,00",
+        "R$ 10,00; R$ 50,00; R$ 200,00; R$ 350,00; R$ 500,00",
+        "R$ 9,99; R$ 10,00; R$ 10,01; R$ 15,00; R$ 199,99; R$ 200,00; R$ 200,01",
+        "R$ 5,00; R$ 6,00; R$ 7,00; R$ 50,00; R$ 250,00"
+      ],
+      "correct": 2,
+      "explain": "<b>Valor limite:</b> os defeitos se escondem nas fronteiras. Por isso teste um pouco abaixo, exatamente em cima e um pouco acima de cada limite."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Um QA experiente tenta enviar um arquivo de 0 bytes, um com extensão inválida e outro com nome muito longo, baseado em onde erros costumam ocorrer. Qual técnica é essa?",
+      "options": ["Partição de equivalência", "Suposição de erro", "Tabela de decisão", "Teste de integração"],
+      "correct": 1,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde o sistema costuma quebrar."
+    },
+    {
+      "topic": "praticas",
+      "statement": "O que é Shift Left Testing no contexto de Quality Assurance?",
+      "options": [
+        "Adiar os testes para o final da Sprint.",
+        "Priorizar testes de performance e segurança.",
+        "Inserir a cultura de automação no time.",
+        "Integrar testes desde as primeiras fases do desenvolvimento, antecipando atividades que seriam feitas só no final."
+      ],
+      "correct": 3,
+      "explain": "<b>Shift Left:</b> “mover para a esquerda” da linha do tempo, ou seja, testar mais cedo."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual é a diferença entre Pair Programming e Pair Testing?",
+      "options": [
+        "Pair Programming: dois desenvolvedores no mesmo código e computador. Pair Testing: dois profissionais colaborando para planejar, executar e analisar testes.",
+        "São sinônimos.",
+        "Pair Testing é a cultura de automação em um time.",
+        "Só servem para equipes pequenas."
+      ],
+      "correct": 0,
+      "explain": "<b>Em dupla:</b> as duas práticas compartilham conhecimento. Uma foca o código, a outra foca os testes."
+    },
+    {
+      "topic": "praticas",
+      "statement": "É correto afirmar que Gherkin é uma linguagem:",
+      "options": [
+        "de programação para alto desempenho.",
+        "de automação usada no Test Driven Development.",
+        "natural estruturada, usada para escrever cenários de teste de forma compreensível por todos os envolvidos no projeto.",
+        "usada para validar a prototipação do comportamento do usuário."
+      ],
+      "correct": 2,
+      "explain": "<b>Gherkin:</b> escreve cenários em linguagem próxima da natural, como “Dado, Quando, Então”."
+    },
+    {
+      "topic": "praticas",
+      "statement": "O que faz parte do trabalho de um QA em um time de desenvolvimento?",
+      "options": ["Fazer vendas e negociar contratos.", "Planejar, executar e analisar testes, aumentando a eficiência do time.", "Atuar apenas no momento da entrega.", "Garantir que não existam defeitos."],
+      "correct": 1,
+      "explain": "<b>QA:</b> participa do desenvolvimento inteiro. Testar reduz riscos, mas nunca garante ausência total de defeitos."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual é a principal vantagem dos testes automatizados?",
+      "options": [
+        "Executam testes repetidamente de forma rápida e consistente, garantindo que alterações não quebrem o que já existe.",
+        "Eliminam a necessidade de planejar casos de teste.",
+        "Só servem quando o sistema está 100% pronto.",
+        "Não trazem resultados em sistemas grandes."
+      ],
+      "correct": 0,
+      "explain": "<b>Automação:</b> repete o trabalho sem cansar, mas alguém ainda precisa planejar os casos."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Conforme o IEEE 730-2014, qualidade é o grau em que um software atende os requisitos, desde que esses requisitos atendam às necessidades das partes interessadas. Então é correto afirmar:",
+      "options": [
+        "Qualidade independe dos requisitos.",
+        "A qualidade é subjetiva e não pode ser padronizada.",
+        "Qualidade é medida apenas pela ausência de defeitos.",
+        "Os requisitos devem atender às necessidades dos stakeholders."
+      ],
+      "correct": 3,
+      "explain": "<b>Qualidade:</b> não basta cumprir o requisito. O requisito precisa ser o que as pessoas realmente precisam."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "O analista pediu que uma tela ficasse “exatamente igual” a outra. O desenvolvedor entendeu que eram só as bordas e entregou. O analista esperava toda a estrutura de colunas. Qual fator melhor explica a causa raiz?",
+      "options": ["Pressão do tempo", "Tecnologias desconhecidas", "Falha de comunicação", "Prazo mal estimado"],
+      "correct": 2,
+      "explain": "<b>Comunicação:</b> cada um entendeu “exatamente igual” de um jeito. Nenhum deles confirmou o que o outro quis dizer."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Qual destas afirmações sobre falhas em produção é verdadeira?",
+      "options": [
+        "Empresas afetadas por falhas críticas costumam aumentar a satisfação dos clientes.",
+        "Falhas em produção podem gerar perda de confiança e de reputação da empresa.",
+        "Um dos principais efeitos é reduzir a complexidade do código-fonte.",
+        "Em geral, empresas ganham competitividade com falhas recorrentes."
+      ],
+      "correct": 1,
+      "explain": "<b>Impactos:</b> perda de confiança e reputação, equipes sobrecarregadas e desmotivadas, além de ações judiciais e prejuízos financeiros."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Qual destas afirmações sobre testes de software é verdadeira?",
+      "options": [
+        "Testes exaustivos são sempre possíveis e recomendados.",
+        "O QA só participa depois do desenvolvimento.",
+        "Testes antecipados podem economizar tempo e dinheiro.",
+        "É possível garantir ausência total de defeitos em produção."
+      ],
+      "correct": 2,
+      "explain": "<b>Princípios:</b> teste exaustivo é impossível, e o objetivo é reduzir riscos. Quanto mais cedo o teste, mais barato é corrigir."
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "O cupom de 10 a 200",
+      "resumo": "A loja lança um cupom hoje à noite, e você tem pouco tempo para testar.",
+      "cenas": [
+        {
+          "texto": "O e-commerce vai aceitar cupons entre R$ 10,00 e R$ 200,00. Qualquer valor fora dessa faixa deve ser rejeitado. Testar todos os valores possíveis é impossível.",
+          "pergunta": "Qual técnica você usa?",
+          "opcoes": [
+            { "texto": "Partição de Equivalência e Valor Limite", "certa": true, "retorno": "Certo. Você agrupa os valores e foca as fronteiras." },
+            { "texto": "Teste de carga", "retorno": "Carga mede quantos acessos o sistema aguenta, e não regras de valor." },
+            { "texto": "Testar valores ao acaso", "retorno": "Assim você pode deixar passar justamente o valor da fronteira." }
+          ]
+        },
+        {
+          "texto": "Você começa pela fronteira de baixo da faixa.",
+          "pergunta": "Quais valores testam esse limite?",
+          "opcoes": [
+            { "texto": "R$ 9,99, R$ 10,00 e R$ 10,01", "certa": true, "retorno": "Isso. Um pouco abaixo, exatamente em cima e um pouco acima." },
+            { "texto": "R$ 0,00, R$ 1,00 e R$ 10,00", "retorno": "Longe demais do limite. O erro costuma estar colado na fronteira." },
+            { "texto": "R$ 10,00, R$ 50,00 e R$ 100,00", "retorno": "Faltou o valor logo abaixo do limite, que deve ser rejeitado." }
+          ]
+        },
+        {
+          "texto": "No limite superior, o sistema aceitou R$ 200,01.",
+          "pergunta": "O que isso significa?",
+          "opcoes": [
+            { "texto": "É um defeito: valores fora da faixa devem ser rejeitados.", "certa": true, "retorno": "Certo. A regra é clara, então você registra o defeito." },
+            { "texto": "Está certo, é só um centavo.", "retorno": "A regra não tem tolerância, e é justamente esse centavo que o teste procura." },
+            { "texto": "O teste está errado, porque ninguém digita R$ 200,01.", "retorno": "Se o sistema permite, alguém vai digitar." }
+          ]
+        }
+      ],
+      "fim": "Com poucos valores bem escolhidos, você achou um defeito. Essa questão valia 3 pontos na prova."
+    },
+    {
+      "titulo": "A sangria que sumiu",
+      "resumo": "Uma correção simples no caixa causa um problema em outro lugar.",
+      "cenas": [
+        {
+          "texto": "A equipe corrigiu um bug na finalização da venda. Ao testar a nova versão, você percebe que o lançamento de sangria parou de funcionar.",
+          "pergunta": "Que tipo de teste revelou isso?",
+          "opcoes": [
+            { "texto": "Teste de regressão", "certa": true, "retorno": "Isso. Uma mudança quebrou algo que já funcionava." },
+            { "texto": "Smoke teste", "retorno": "Smoke é a checagem rápida do essencial. Aqui você conferiu o que uma mudança afetou." },
+            { "texto": "Teste de performance", "retorno": "O problema não é velocidade, é função quebrada." }
+          ]
+        },
+        {
+          "texto": "Chega uma nova versão corrigida. Antes de testes detalhados, você quer saber se login, venda e fechamento de caixa estão no ar.",
+          "pergunta": "Qual teste vem primeiro?",
+          "opcoes": [
+            { "texto": "Teste de fumaça", "certa": true, "retorno": "Certo. Verificação rápida antes de investir tempo." },
+            { "texto": "Teste de unidade", "retorno": "Unidade testa uma parte pequena do código, e não o sistema todo." },
+            { "texto": "Teste exploratório", "retorno": "Vem depois. Primeiro confirme que o básico funciona." }
+          ]
+        },
+        {
+          "texto": "Na reunião, descobrem a origem: o analista pediu uma tela “exatamente igual” e o desenvolvedor entendeu que eram só as bordas.",
+          "pergunta": "Qual é a causa raiz?",
+          "opcoes": [
+            { "texto": "Falha de comunicação", "certa": true, "retorno": "Isso. Cada um entendeu uma coisa, e ninguém confirmou." },
+            { "texto": "Tecnologia desconhecida", "retorno": "Ninguém teve dificuldade com a tecnologia." },
+            { "texto": "Prazo mal estimado", "retorno": "O enunciado não fala de falta de tempo." }
+          ]
+        }
+      ],
+      "fim": "Regressão, smoke e causa raiz: três questões da prova na mesma história."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "classificar",
+      "nome": "Qual tipo de teste?",
+      "instrucao": "Foi aqui que a prova tirou mais pontos. Leia a situação e escolha.",
+      "categorias": ["Unidade", "Integração", "End-to-End", "Regressão", "Smoke"],
+      "itens": [
+        { "texto": "Validar o método que calcula a comissão.", "categoria": "Unidade", "porque": "Uma parte pequena, isolada." },
+        { "texto": "Validar um método com regras de desconto, antes de integrar.", "categoria": "Unidade", "porque": "Testa a lógica antes de juntar com outros módulos." },
+        { "texto": "Pedido atualiza o estoque no banco de dados.", "categoria": "Integração", "porque": "Dois módulos se comunicando." },
+        { "texto": "Simular do login até finalizar a compra, pela interface.", "categoria": "End-to-End", "porque": "Fluxo completo do usuário." },
+        { "texto": "Depois de um conserto, outra função parou.", "categoria": "Regressão", "porque": "Uma mudança quebrou o que funcionava." },
+        { "texto": "Rodar de novo os testes antigos em uma versão nova.", "categoria": "Regressão", "porque": "Confere se nada antigo quebrou." },
+        { "texto": "Checar rápido se login e busca estão funcionando.", "categoria": "Smoke", "porque": "Verificação rápida do essencial." },
+        { "texto": "Conferir se a versão nova abre, antes dos testes detalhados.", "categoria": "Smoke", "porque": "Se não abrir, nem vale continuar." }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Caixa preta ou caixa branca?",
+      "instrucao": "Decida se o teste olha para dentro do código.",
+      "categorias": ["Caixa preta", "Caixa branca"],
+      "itens": [
+        { "texto": "Testar o cupom com R$ 9,99 e R$ 10,00.", "categoria": "Caixa preta", "porque": "Só olha entrada e saída." },
+        { "texto": "Montar uma tabela de decisão com as regras de negócio.", "categoria": "Caixa preta", "porque": "As regras vêm do requisito, e não do código." },
+        { "texto": "Usar partição de equivalência.", "categoria": "Caixa preta", "porque": "Agrupa entradas sem olhar o código." },
+        { "texto": "Verificar se todos os caminhos de um if foram executados.", "categoria": "Caixa branca", "porque": "Analisa os fluxos do código." },
+        { "texto": "Analisar a lógica interna de um método.", "categoria": "Caixa branca", "porque": "Depende de ver o código." },
+        { "texto": "Conferir cada laço e cada condição do programa.", "categoria": "Caixa branca", "porque": "Olha a estrutura interna." }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "O trabalho do QA",
+      "instrucao": "Toque nas atividades na ordem em que elas acontecem.",
+      "sequencia": ["Planejar os testes", "Escrever os casos de teste", "Executar os testes", "Registrar os defeitos", "Testar de novo após a correção"],
+      "explicacao": "Primeiro você planeja, depois executa e analisa. E, depois da correção, testa de novo."
+    }
+  ]
+}

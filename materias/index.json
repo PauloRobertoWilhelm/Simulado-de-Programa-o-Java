@@ -1,0 +1,75 @@
+[
+  {
+    "id": "programacao",
+    "aba": "Programação",
+    "titulo": "Programação de Computadores",
+    "professor": "Prof. Lucas B. Cari",
+    "cores": ["#8f7bff", "#57f4ff"],
+    "temas": [
+      { "id": "operadores", "rotulo": "➕ Operadores" },
+      { "id": "selecao", "rotulo": "🔀 If / Switch" },
+      { "id": "repeticao", "rotulo": "🔁 Laço While" },
+      { "id": "logica", "rotulo": "🧠 Lógica Básica" }
+    ]
+  },
+  {
+    "id": "requisitos",
+    "aba": "Requisitos",
+    "titulo": "Engenharia de Requisitos",
+    "professor": "Prof. Paulo Proença",
+    "cores": ["#ffce5c", "#ff8a5c"],
+    "temas": [
+      { "id": "processo", "rotulo": "🗂️ Processo" },
+      { "id": "tipos", "rotulo": "⚖️ Funcionais e não funcionais" },
+      { "id": "metodologias", "rotulo": "🌀 Metodologias" },
+      { "id": "uml", "rotulo": "📐 UML e histórias de usuário" }
+    ]
+  },
+  {
+    "id": "design",
+    "aba": "Design",
+    "titulo": "Design Front-End",
+    "professor": "Prof. Sandro Ramos",
+    "cores": ["#ff4fd8", "#ffb35c"],
+    "temas": [
+      { "id": "ihc", "rotulo": "🧠 IHC e qualidade" },
+      { "id": "heuristicas", "rotulo": "🔎 Nielsen e Krug" },
+      { "id": "norman", "rotulo": "🚪 Norman e cognição" },
+      { "id": "visual", "rotulo": "🎨 Cores, protótipos e guias" }
+    ]
+  },
+  {
+    "id": "redes",
+    "aba": "Redes",
+    "titulo": "Redes de Computadores",
+    "professor": "Prof. Patrick José Cardoso",
+    "cores": ["#6aa9ff", "#57f4ff"],
+    "temas": [
+      { "id": "modelos", "rotulo": "🧱 OSI e TCP/IP" },
+      { "id": "arquitetura", "rotulo": "🏢 Arquitetura e tipos de rede" },
+      { "id": "enlace", "rotulo": "📡 Enlace e acesso ao meio" },
+      { "id": "meios", "rotulo": "🔌 Meios e equipamentos" }
+    ]
+  },
+  {
+    "id": "testing",
+    "aba": "Testes e QA",
+    "titulo": "Testing, Compliance e QA",
+    "professor": "Prof. Luiz",
+    "cores": ["#4ef0b0", "#6aa9ff"],
+    "temas": [
+      { "id": "tipos", "rotulo": "🧪 Tipos de teste" },
+      { "id": "tecnicas", "rotulo": "📦 Caixa preta e técnicas" },
+      { "id": "praticas", "rotulo": "🤝 Práticas de QA" },
+      { "id": "qualidade", "rotulo": "🏅 Qualidade e impacto" }
+    ]
+  },
+  {
+    "id": "engenharia-software",
+    "aba": "Eng. de Software",
+    "titulo": "Engenharia de Software",
+    "professor": null,
+    "cores": ["#b9c6f0", "#8da4d7"],
+    "temas": []
+  }
+]

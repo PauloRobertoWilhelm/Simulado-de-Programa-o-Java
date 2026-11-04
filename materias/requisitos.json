@@ -1,0 +1,306 @@
+{
+  "questoes": [
+    {
+      "topic": "processo",
+      "statement": "Qual destas opções NÃO é uma etapa do processo de Engenharia de Requisitos?",
+      "options": ["Levantamento", "Negociação", "Manutenção", "Validação"],
+      "correct": 2,
+      "explain": "<b>Processo:</b> as etapas são levantamento, análise, negociação, documentação, validação e gerenciamento. Manutenção pertence ao ciclo de vida do sistema. Definição, revisão e sustentação também não entram na lista da prova."
+    },
+    {
+      "topic": "processo",
+      "statement": "Clientes pedem coisas que entram em conflito entre si. Em qual etapa isso é resolvido?",
+      "options": ["Negociação", "Documentação", "Levantamento", "Gerenciamento"],
+      "correct": 0,
+      "explain": "<b>Negociação:</b> é o momento de resolver conflitos e definir prioridades entre as partes interessadas."
+    },
+    {
+      "topic": "processo",
+      "statement": "O que a etapa de validação verifica?",
+      "options": [
+        "Se o código compila sem erros.",
+        "Se os requisitos representam o que as partes interessadas realmente precisam.",
+        "Se o servidor aguenta muitos acessos.",
+        "Se a equipe entregou dentro do prazo."
+      ],
+      "correct": 1,
+      "explain": "<b>Validação:</b> confere se os requisitos escritos estão certos antes de construir o sistema, porque corrigir depois custa mais."
+    },
+    {
+      "topic": "processo",
+      "statement": "Qual destes é um benefício da Engenharia de Requisitos para o sucesso de um projeto?",
+      "options": ["Feedback contínuo", "Entrega parcial funcional", "Redução de falhas", "Código mais curto"],
+      "correct": 2,
+      "explain": "<b>Benefícios:</b> o gabarito da prova marca redução de falhas, redução de custos e alinhamento com as necessidades. Feedback contínuo e entrega parcial funcional foram marcados como falsos."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O que são requisitos funcionais?",
+      "options": [
+        "Requisitos que determinam o orçamento e o cronograma do projeto.",
+        "Requisitos que especificam características de desempenho e usabilidade.",
+        "Requisitos que tratam de segurança e restrições de hardware.",
+        "Requisitos que descrevem como o sistema deve executar determinadas funções ou comportamentos específicos."
+      ],
+      "correct": 3,
+      "explain": "<b>Funcional:</b> fala do que o sistema faz. Desempenho e usabilidade são características de requisitos não funcionais."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O que são requisitos não funcionais?",
+      "options": [
+        "Requisitos que definem como o sistema deve se comportar em termos de desempenho, segurança, usabilidade e confiabilidade.",
+        "Requisitos que descrevem as funções específicas que o sistema deve realizar.",
+        "Requisitos que tratam apenas da estética da interface.",
+        "Requisitos que especificam as interações entre módulos do sistema."
+      ],
+      "correct": 0,
+      "explain": "<b>Não funcional:</b> fala de como o sistema deve ser: rápido, seguro, confiável e fácil de usar."
+    },
+    {
+      "topic": "tipos",
+      "statement": "“A busca de entregas deve responder em até 2 segundos.” Que tipo de requisito é esse?",
+      "options": ["Funcional", "Não funcional", "Regra de negócio apenas", "Não é um requisito"],
+      "correct": 1,
+      "explain": "<b>Não funcional:</b> não descreve uma função nova, e sim uma qualidade da função de busca, o desempenho."
+    },
+    {
+      "topic": "tipos",
+      "statement": "“O atendente deve cadastrar remessas.” Que tipo de requisito é esse?",
+      "options": ["Não funcional", "De hardware", "Funcional", "De arquitetura"],
+      "correct": 2,
+      "explain": "<b>Funcional:</b> descreve um serviço que o sistema oferece a quem usa."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Qual característica pertence aos requisitos não funcionais?",
+      "options": [
+        "Relacionados às interações usuário x sistema.",
+        "São a base para os testes de aceitação.",
+        "Foco no comportamento do sistema.",
+        "Muitas vezes guiam as decisões de arquitetura do sistema."
+      ],
+      "correct": 3,
+      "explain": "<b>Prova:</b> qualidades, restrições e decisões de arquitetura são não funcionais. Interações, serviços, funcionalidades, testes de aceitação e comportamento são funcionais."
+    },
+    {
+      "topic": "metodologias",
+      "statement": "Como Scrum, Kanban e Extreme Programming (XP) são classificados?",
+      "options": ["Metodologia ágil", "Metodologia tradicional", "Metodologia híbrida", "Metodologia sequencial"],
+      "correct": 0,
+      "explain": "<b>Ágil:</b> Scrum, Kanban e XP. Essa classificação errada custou pontos na prova, vale decorar."
+    },
+    {
+      "topic": "metodologias",
+      "statement": "Segundo o gabarito da prova, como o modelo Espiral é classificado?",
+      "options": ["Tradicional", "Ágil", "Híbrida", "Não é uma metodologia"],
+      "correct": 2,
+      "explain": "<b>Híbrida:</b> a prova coloca o Espiral como híbrido."
+    },
+    {
+      "topic": "metodologias",
+      "statement": "Segundo o gabarito da prova, Cascata, Incremental e Iterativo são metodologias:",
+      "options": ["Ágeis", "Tradicionais", "Híbridas", "Experimentais"],
+      "correct": 1,
+      "explain": "<b>Tradicional:</b> a prova agrupa Cascata, Incremental e Iterativo como tradicionais."
+    },
+    {
+      "topic": "metodologias",
+      "statement": "Qual destas opções NÃO é uma metodologia de desenvolvimento de software?",
+      "options": ["Prototipação", "Sequencial Linear", "Espiral", "Fuzzy"],
+      "correct": 3,
+      "explain": "<b>Prova:</b> são metodologias Espiral, Prototipação, Cascata, Sequencial Linear e Incremental. Fuzzy, Componentizado e Empilhado foram marcadas como falsas no gabarito do professor."
+    },
+    {
+      "topic": "metodologias",
+      "statement": "Qual destas opções NÃO é uma etapa do Ciclo de Vida do Desenvolvimento de Sistemas?",
+      "options": ["Gerenciamento", "Planejamento", "Implementação", "Manutenção"],
+      "correct": 0,
+      "explain": "<b>Ciclo de vida:</b> planejamento, análise, design, implementação e manutenção. Gerenciamento é etapa do processo de requisitos, não do ciclo de vida."
+    },
+    {
+      "topic": "uml",
+      "statement": "No diagrama de caso de uso, o que o relacionamento «include» indica?",
+      "options": [
+        "Um comportamento opcional, que só acontece em certas condições.",
+        "Um comportamento que sempre é executado como parte do caso de uso base.",
+        "Que um ator herda o papel de outro ator.",
+        "Que dois atores usam a mesma tela."
+      ],
+      "correct": 1,
+      "explain": "<b>Include:</b> acontece sempre. Exemplo: reservar uma área comum sempre consulta a disponibilidade."
+    },
+    {
+      "topic": "uml",
+      "statement": "No diagrama de caso de uso, o que o relacionamento «extend» indica?",
+      "options": [
+        "Um comportamento obrigatório do caso de uso base.",
+        "A ligação entre um ator e um caso de uso.",
+        "Um comportamento opcional, que só acontece em certas condições.",
+        "O limite do sistema."
+      ],
+      "correct": 2,
+      "explain": "<b>Extend:</b> acontece às vezes. Exemplo: uma reserva confirmada pode ser cancelada, gerando um reembolso."
+    },
+    {
+      "topic": "uml",
+      "statement": "Em um caso de uso, o que é um ator?",
+      "options": [
+        "Uma tabela do banco de dados.",
+        "Um botão da interface.",
+        "Um módulo interno do sistema.",
+        "Um papel externo que interage com o sistema, que pode ser uma pessoa ou outro sistema."
+      ],
+      "correct": 3,
+      "explain": "<b>Ator:</b> fica fora do limite do sistema. Na transportadora, o motorista e o serviço externo de mapas são atores."
+    },
+    {
+      "topic": "uml",
+      "statement": "O que o relacionamento de generalização mostra em um caso de uso?",
+      "options": [
+        "Que um elemento mais específico herda de um elemento mais geral.",
+        "Que um caso de uso sempre chama outro.",
+        "Que um caso de uso é opcional.",
+        "Que o sistema depende da internet."
+      ],
+      "correct": 0,
+      "explain": "<b>Generalização:</b> funciona como herança. Exemplo: “Pagar com cartão” é um tipo de “Realizar pagamento”."
+    },
+    {
+      "topic": "uml",
+      "statement": "Qual é o formato mais usado para escrever uma história de usuário?",
+      "options": [
+        "O sistema deve fazer [função] em [tempo].",
+        "Como [perfil], quero [ação] para [benefício].",
+        "Se [condição], então [resultado], senão [erro].",
+        "Dado [estado], quando [evento], então [efeito]."
+      ],
+      "correct": 1,
+      "explain": "<b>História de usuário:</b> mostra quem quer, o que quer e por quê. O formato “Dado, quando, então” é usado em cenários de teste."
+    },
+    {
+      "topic": "uml",
+      "statement": "Para que servem os critérios de aceitação de uma história de usuário?",
+      "options": [
+        "Para definir quanto o projeto vai custar.",
+        "Para listar quem vai programar a história.",
+        "Para indicar, de forma verificável, quando a história está pronta.",
+        "Para escolher a linguagem de programação."
+      ],
+      "correct": 2,
+      "explain": "<b>Critérios de aceitação:</b> precisam dar para testar. “Fácil de usar” não serve, “cancela até 1 hora antes da aula” serve."
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "A academia que queria tudo",
+      "resumo": "Uma academia contrata sua equipe. Você precisa descobrir o que construir antes de programar.",
+      "cenas": [
+        {
+          "texto": "A dona da academia quer que alunos reservem vagas, instrutores registrem treinos e atendentes cuidem das matrículas. Ela pede para a equipe começar a programar hoje mesmo.",
+          "pergunta": "Qual é o primeiro passo?",
+          "opcoes": [
+            { "texto": "Conversar com alunos, instrutores e atendentes para levantar as necessidades.", "certa": true, "retorno": "Isso. O levantamento vem primeiro: sem ouvir quem usa, o sistema nasce desalinhado." },
+            { "texto": "Escolher a linguagem e abrir o editor.", "retorno": "Ainda não. Programar antes de entender o problema aumenta falhas e custo." },
+            { "texto": "Desenhar as telas finais.", "retorno": "Cedo demais. Primeiro descubra o que cada perfil precisa fazer." }
+          ]
+        },
+        {
+          "texto": "Os instrutores querem que o aluno só reserve com 24 horas de antecedência. A recepção quer reservas até 1 hora antes da aula. Os dois pedidos não cabem juntos.",
+          "pergunta": "Em qual etapa isso se resolve?",
+          "opcoes": [
+            { "texto": "Negociação", "certa": true, "retorno": "Certo. Conflito entre partes interessadas se resolve na negociação." },
+            { "texto": "Documentação", "retorno": "Documentar registra a decisão, mas alguém precisa decidir antes." },
+            { "texto": "Validação", "retorno": "A validação confere os requisitos prontos. Aqui eles ainda estão em conflito." }
+          ]
+        },
+        {
+          "texto": "Você escreve: “Como aluno, quero cancelar minha reserva para liberar a vaga.” Agora faltam os critérios de aceitação.",
+          "pergunta": "Qual é um bom critério?",
+          "opcoes": [
+            { "texto": "O cancelamento é aceito até 1 hora antes da aula e a vaga volta a ficar disponível.", "certa": true, "retorno": "Bom critério: dá para testar e dizer se passou ou não." },
+            { "texto": "A tela deve ser bonita e fácil.", "retorno": "“Bonita” não dá para testar. O critério precisa ser verificável." },
+            { "texto": "O sistema deve usar banco de dados relacional.", "retorno": "Isso é decisão técnica. Não diz quando a história está pronta." }
+          ]
+        }
+      ],
+      "fim": "Você levantou, negociou e escreveu uma história com critério de aceitação. É o processo da prova aplicado a um caso real."
+    },
+    {
+      "titulo": "A transportadora no quadro branco",
+      "resumo": "Sua equipe desenha o diagrama de caso de uso de uma transportadora.",
+      "cenas": [
+        {
+          "texto": "A equipe lista os atores no quadro. Alguém escreve “Banco de dados” no meio da lista.",
+          "pergunta": "Quem deve ficar como ator?",
+          "opcoes": [
+            { "texto": "Motorista, atendente e o serviço externo de mapas.", "certa": true, "retorno": "Certo. Ator fica fora do sistema e interage com ele. Pode ser pessoa ou outro sistema." },
+            { "texto": "O banco de dados interno.", "retorno": "O banco fica dentro do sistema, então não é ator." },
+            { "texto": "O botão de salvar.", "retorno": "Botão é parte da interface, não um papel externo." }
+          ]
+        },
+        {
+          "texto": "Toda vez que o financeiro emite uma cobrança, o sistema calcula o valor do frete. Sem exceção.",
+          "pergunta": "Qual relacionamento liga “Emitir cobrança” a “Calcular frete”?",
+          "opcoes": [
+            { "texto": "«include»", "certa": true, "retorno": "Isso. Se acontece sempre, é include." },
+            { "texto": "«extend»", "retorno": "Extend é para o que só acontece às vezes. Aqui acontece sempre." },
+            { "texto": "Generalização", "retorno": "Generalização é herança. Calcular frete não é um tipo de cobrança." }
+          ]
+        },
+        {
+          "texto": "Ao atualizar uma entrega, o motorista só registra uma ocorrência quando algo dá errado.",
+          "pergunta": "Qual relacionamento liga “Atualizar entrega” a “Registrar ocorrência”?",
+          "opcoes": [
+            { "texto": "«extend»", "certa": true, "retorno": "Certo. Só acontece em certas condições, então é extend." },
+            { "texto": "«include»", "retorno": "Include seria obrigatório em toda entrega, e a ocorrência é exceção." },
+            { "texto": "Associação entre dois atores", "retorno": "A ligação é entre dois casos de uso, não entre atores." }
+          ]
+        }
+      ],
+      "fim": "Regra para guardar: acontece sempre é include, acontece às vezes é extend, e quem fica fora do sistema é ator."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "classificar",
+      "nome": "Funcional ou não funcional?",
+      "instrucao": "Classifique cada frase. Essa questão valia 8 pontos na prova.",
+      "categorias": ["Funcional", "Não funcional"],
+      "itens": [
+        { "texto": "Definem as qualidades que o sistema deve obedecer.", "categoria": "Não funcional", "porque": "Qualidade é não funcional." },
+        { "texto": "Muitas vezes guiam as decisões de arquitetura do sistema.", "categoria": "Não funcional", "porque": "Decisão de arquitetura vem de requisitos não funcionais." },
+        { "texto": "Definem as restrições que o sistema deve obedecer.", "categoria": "Não funcional", "porque": "Restrição é não funcional." },
+        { "texto": "Relacionados às interações usuário x sistema.", "categoria": "Funcional", "porque": "Interação é o que o sistema faz com o usuário." },
+        { "texto": "Definem serviços que o sistema deve proporcionar.", "categoria": "Funcional", "porque": "Serviço é função do sistema." },
+        { "texto": "São a base para o desenvolvimento de testes de aceitação.", "categoria": "Funcional", "porque": "O gabarito liga testes de aceitação aos funcionais." },
+        { "texto": "Foco no comportamento do sistema.", "categoria": "Funcional", "porque": "Comportamento é o que o sistema faz." },
+        { "texto": "O motorista atualiza o status da entrega.", "categoria": "Funcional", "porque": "É uma ação que o sistema oferece." },
+        { "texto": "A tela de reservas carrega em até 2 segundos.", "categoria": "Não funcional", "porque": "Desempenho é não funcional." },
+        { "texto": "Os dados dos clientes ficam criptografados.", "categoria": "Não funcional", "porque": "Segurança é não funcional." }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Qual é a metodologia?",
+      "instrucao": "Use a classificação do gabarito da prova.",
+      "categorias": ["Tradicional", "Ágil", "Híbrida"],
+      "itens": [
+        { "texto": "Cascata", "categoria": "Tradicional", "porque": "A prova marca Cascata como tradicional." },
+        { "texto": "Incremental", "categoria": "Tradicional", "porque": "A prova marca Incremental como tradicional." },
+        { "texto": "Iterativo", "categoria": "Tradicional", "porque": "A prova marca Iterativo como tradicional." },
+        { "texto": "Scrum", "categoria": "Ágil", "porque": "Scrum é ágil." },
+        { "texto": "Kanban", "categoria": "Ágil", "porque": "Kanban é ágil." },
+        { "texto": "Extreme Programming (XP)", "categoria": "Ágil", "porque": "XP é ágil." },
+        { "texto": "Espiral", "categoria": "Híbrida", "porque": "A prova marca Espiral como híbrida." }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "Monte o processo de requisitos",
+      "instrucao": "Toque nas etapas na ordem mais comum do processo.",
+      "sequencia": ["Levantamento", "Análise", "Negociação", "Documentação", "Validação", "Gerenciamento"],
+      "explicacao": "Primeiro você descobre e entende, depois resolve conflitos, escreve, confere e mantém os requisitos sob controle."
+    }
+  ]
+}

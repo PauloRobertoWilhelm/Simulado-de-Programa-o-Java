@@ -1,71 +1,86 @@
 /*
   Arquivo: sw.js
   Papel no sistema: este arquivo é o Service Worker do navegador.
-  Ele funciona como um cache de arquivos do projeto para permitir que o app
-  continue funcionando mesmo sem internet.
-
-  O que ele faz na prática:
-  - salva recursos essenciais do simulado localmente;
-  - deixa a página carregando mais rápido em visitas futuras;
-  - permite uso offline do app instalado;
-  - reduz falhas quando a conexão estiver lenta ou instável.
+  Ele guarda uma cópia dos arquivos do projeto para o app continuar
+  funcionando sem internet.
 
   Estrutura lógica do arquivo:
   1) CACHE_NAME define o nome do cache atual;
   2) urlsToCache lista os arquivos que serão armazenados;
-  3) install prepara o cache antes do app entrar em uso;
-  4) fetch intercepta requisições e usa o cache primeiro.
+  3) install salva os arquivos e assume o lugar da versão antiga;
+  4) activate apaga os caches de versões antigas;
+  5) fetch busca primeiro na rede e usa o cache só quando não há internet.
 
-  Como o Service Worker é usado aqui:
-  - o navegador registra esse script em index.html;
-  - depois da instalação, ele fica monitorando as requisições;
-  - em vez de pedir tudo da rede, ele tenta responder pelo cache.
-
-  Isso é uma explicação didática dentro do próprio código, sem alterar o
-  comportamento real do projeto.
+  Por que a rede vem primeiro: quando o cache vinha primeiro, o navegador
+  continuava mostrando arquivos antigos e as mudanças no código não apareciam.
 */
 
-// CACHE_NAME representa a identificação do armazenamento local do navegador.
-// Quando a aplicação sofre mudanças importantes, esse valor pode ser trocado
-// para forçar a criação de um novo cache e evitar arquivos antigos.
-const CACHE_NAME = 'simulado-java-v1';
+// CACHE_NAME identifica o armazenamento local do navegador.
+// Trocar esse valor cria um cache novo, e o evento activate apaga os antigos.
+const CACHE_NAME = 'simulados-unipar-v2';
 
-// urlsToCache guarda os arquivos essenciais que precisam ficar salvos no cache.
-// Aqui são armazenados a página principal, o banco de questões e o manifesto do app.
+// urlsToCache guarda os arquivos necessários para abrir o app sem internet.
+// Se um arquivo da lista não existir, a instalação falha. Ao criar uma matéria
+// nova, inclua o arquivo dela aqui.
 const urlsToCache = [
   './index.html',
-  './questoes.json',
-  './manifest.json'
+  './manifest.json',
+  './css/styles.css',
+  './css/materias.css',
+  './js/historias.js',
+  './js/jogos.js',
+  './materias/index.json',
+  './materias/programacao.json',
+  './materias/requisitos.json',
+  './materias/design.json',
+  './materias/redes.json',
+  './materias/testing.json',
+  './materias/engenharia-software.json'
 ];
 
-// O evento 'install' acontece quando o navegador registra o service worker.
-// Nesse momento, o código prepara o ambiente para o uso offline.
+// O evento 'install' acontece quando o navegador encontra uma versão nova deste arquivo.
 self.addEventListener('install', event => {
-  // event.waitUntil() faz o navegador aguardar a conclusão da operação antes de
-  // considerar a instalação como finalizada.
   event.waitUntil(
-    // caches.open() abre/cria o cache com o nome definido acima.
     caches.open(CACHE_NAME)
-      // .then() executa algo depois que o cache estiver disponível.
-      .then(cache => {
-        // cache.addAll() salva todos os arquivos da lista em memória local.
-        // Se algum arquivo falhar, a instalação do service worker pode falhar.
-        return cache.addAll(urlsToCache);
-      })
+      .then(cache => cache.addAll(urlsToCache))
+      // skipWaiting() faz a versão nova assumir sem esperar o app ser fechado.
+      .then(() => self.skipWaiting())
   );
 });
 
-// O evento 'fetch' dispara toda vez que a página tenta acessar algum recurso.
-// Ele permite interceptar essa requisição e decidir se responde com cache ou rede.
+// O evento 'activate' acontece quando esta versão assume o controle.
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(nomes => Promise.all(
+        nomes
+          .filter(nome => nome !== CACHE_NAME)
+          .map(nome => caches.delete(nome))
+      ))
+      // clients.claim() passa a controlar as páginas que já estão abertas.
+      .then(() => self.clients.claim())
+  );
+});
+
+// O evento 'fetch' dispara toda vez que a página pede um arquivo.
 self.addEventListener('fetch', event => {
-  // event.respondWith() substitui a resposta padrão do navegador pela resposta
-  // definida dentro desta função.
+  const url = new URL(event.request.url);
+
+  // Só cuidamos de leituras dos nossos próprios arquivos. Fontes e Chart.js
+  // vêm de outros sites e seguem o caminho normal do navegador.
+  if (event.request.method !== 'GET' || url.origin !== self.location.origin) return;
+
   event.respondWith(
-    // caches.match(event.request) procura se a URL pedida já existe no cache.
-    caches.match(event.request)
-      // Se existir, retorna esse valor. Se não existir, faz a chamada real na rede.
-      .then(response => {
-        return response || fetch(event.request);
+    fetch(event.request)
+      .then(resposta => {
+        // Com internet: atualiza a cópia guardada e entrega o arquivo novo.
+        if (resposta.ok) {
+          const copia = resposta.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copia));
+        }
+        return resposta;
       })
+      // Sem internet: entrega a cópia guardada.
+      .catch(() => caches.match(event.request))
   );
 });

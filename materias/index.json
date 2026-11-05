@@ -5,11 +5,26 @@
     "titulo": "Programação de Computadores",
     "professor": "Prof. Lucas B. Cari",
     "cores": ["#8f7bff", "#57f4ff"],
+    "prova1": "30 de 70 pontos",
+    "foco": {
+      "confianca": "Alta",
+      "base": "Aulas 8 a 12, que vieram depois da matéria da 1ª prova.",
+      "assuntos": [
+        "Laços while, do-while e for: ler o código e dizer a saída",
+        "Strings: equals, length, charAt, substring, replace, trim",
+        "Arrays: declaração, índice começando em 0, percorrer com for",
+        "Os erros que mais tiraram pontos: resto da divisão, aspas e variável, if/else"
+      ]
+    },
     "temas": [
       { "id": "operadores", "rotulo": "➕ Operadores" },
       { "id": "selecao", "rotulo": "🔀 If / Switch" },
       { "id": "repeticao", "rotulo": "🔁 Laço While" },
-      { "id": "logica", "rotulo": "🧠 Lógica Básica" }
+      { "id": "logica", "rotulo": "🧠 Lógica Básica" },
+      { "id": "for", "rotulo": "🔂 Laço For" },
+      { "id": "dowhile", "rotulo": "🔄 Do-while" },
+      { "id": "strings", "rotulo": "🔤 Strings" },
+      { "id": "arrays", "rotulo": "🧮 Arrays" }
     ]
   },
   {
@@ -18,11 +33,23 @@
     "titulo": "Engenharia de Requisitos",
     "professor": "Prof. Paulo Proença",
     "cores": ["#ffce5c", "#ff8a5c"],
+    "prova1": "35 de 60 pontos",
+    "foco": {
+      "confianca": "Média",
+      "base": "Atividades de outubro: casos de uso e histórias de usuário. O plano de ensino não veio junto.",
+      "assuntos": [
+        "Diagrama de caso de uso: ator, limite do sistema, include, extend, generalização",
+        "História de usuário e critérios de aceitação",
+        "Técnicas de elicitação e rastreabilidade",
+        "Classificação de metodologias, que tirou 6 pontos na 1ª prova"
+      ]
+    },
     "temas": [
       { "id": "processo", "rotulo": "🗂️ Processo" },
       { "id": "tipos", "rotulo": "⚖️ Funcionais e não funcionais" },
       { "id": "metodologias", "rotulo": "🌀 Metodologias" },
-      { "id": "uml", "rotulo": "📐 UML e histórias de usuário" }
+      { "id": "uml", "rotulo": "📐 UML e histórias de usuário" },
+      { "id": "elicitacao", "rotulo": "🎤 Elicitação e rastreabilidade" }
     ]
   },
   {
@@ -31,11 +58,23 @@
     "titulo": "Design Front-End",
     "professor": "Prof. Sandro Ramos",
     "cores": ["#ff4fd8", "#ffb35c"],
+    "prova1": "Todas as questões certas",
+    "foco": {
+      "confianca": "Média",
+      "base": "Atividades de Figma e Style Guide. A parte de avaliação e acessibilidade é suposição, vinda do que costuma seguir esse conteúdo.",
+      "assuntos": [
+        "Style Guide: cores, tipografia e componentes",
+        "Avaliação heurística, percurso cognitivo e teste com usuários",
+        "Acessibilidade: princípios da WCAG e contraste",
+        "Wireframes e protótipos no Figma"
+      ]
+    },
     "temas": [
       { "id": "ihc", "rotulo": "🧠 IHC e qualidade" },
       { "id": "heuristicas", "rotulo": "🔎 Nielsen e Krug" },
       { "id": "norman", "rotulo": "🚪 Norman e cognição" },
-      { "id": "visual", "rotulo": "🎨 Cores, protótipos e guias" }
+      { "id": "visual", "rotulo": "🎨 Cores, protótipos e guias" },
+      { "id": "avaliacao", "rotulo": "♿ Avaliação e acessibilidade" }
     ]
   },
   {
@@ -44,11 +83,24 @@
     "titulo": "Redes de Computadores",
     "professor": "Prof. Patrick José Cardoso",
     "cores": ["#6aa9ff", "#57f4ff"],
+    "prova1": "30 de 70 pontos",
+    "foco": {
+      "confianca": "Alta",
+      "base": "Slides das aulas 06 e 07 do professor. A Aula 07 diz que a prova do 2º bimestre inclui a camada de transporte.",
+      "assuntos": [
+        "Camada de rede: ARP, TTL, IPv4, IPv6, NAT, DHCP",
+        "Sub-redes: calcular rede, broadcast e hosts",
+        "Camada de transporte: portas, TCP, UDP e handshake",
+        "Roteamento ou aplicação, se der tempo: a ementa cita os dois e a próxima aula ainda não foi confirmada"
+      ]
+    },
     "temas": [
       { "id": "modelos", "rotulo": "🧱 OSI e TCP/IP" },
       { "id": "arquitetura", "rotulo": "🏢 Arquitetura e tipos de rede" },
       { "id": "enlace", "rotulo": "📡 Enlace e acesso ao meio" },
-      { "id": "meios", "rotulo": "🔌 Meios e equipamentos" }
+      { "id": "meios", "rotulo": "🔌 Meios e equipamentos" },
+      { "id": "rede", "rotulo": "🌐 IP, NAT e sub-redes" },
+      { "id": "transporte", "rotulo": "🚚 TCP, UDP e portas" }
     ]
   },
   {
@@ -57,19 +109,24 @@
     "titulo": "Testing, Compliance e QA",
     "professor": "Prof. Luiz",
     "cores": ["#4ef0b0", "#6aa9ff"],
+    "prova1": "24 de 50 pontos",
+    "foco": {
+      "confianca": "Baixa",
+      "base": "Nenhum material do 2º bimestre desta matéria chegou. Usei o nome da matéria e o programa da certificação ISTQB CTFL.",
+      "assuntos": [
+        "Tipos de teste: unidade, integração, regressão, smoke, End-to-End",
+        "Princípios do teste e níveis de teste",
+        "Técnicas: valor limite, tabela de decisão, transição de estados",
+        "Compliance: LGPD e normas de qualidade, como a ISO/IEC 25010"
+      ]
+    },
     "temas": [
       { "id": "tipos", "rotulo": "🧪 Tipos de teste" },
       { "id": "tecnicas", "rotulo": "📦 Caixa preta e técnicas" },
       { "id": "praticas", "rotulo": "🤝 Práticas de QA" },
-      { "id": "qualidade", "rotulo": "🏅 Qualidade e impacto" }
+      { "id": "qualidade", "rotulo": "🏅 Qualidade e impacto" },
+      { "id": "principios", "rotulo": "📜 Princípios e níveis" },
+      { "id": "compliance", "rotulo": "⚖️ Compliance" }
     ]
-  },
-  {
-    "id": "engenharia-software",
-    "aba": "Eng. de Software",
-    "titulo": "Engenharia de Software",
-    "professor": null,
-    "cores": ["#b9c6f0", "#8da4d7"],
-    "temas": []
   }
 ]

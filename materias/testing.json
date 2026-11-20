@@ -239,6 +239,1050 @@
       ],
       "correct": 2,
       "explain": "<b>Princípios:</b> teste exaustivo é impossível, e o objetivo é reduzir riscos. Quanto mais cedo o teste, mais barato é corrigir."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Um site de ingressos quer saber se aguenta 10 mil compras ao mesmo tempo no dia da venda. Que teste fazer?",
+      "options": [
+        "Teste de unidade",
+        "Teste de carga",
+        "Teste de usabilidade",
+        "Teste de fumaça"
+      ],
+      "correct": 1,
+      "explain": "<b>Carga = volume esperado:</b> simula muitos usuários ao mesmo tempo para ver se o sistema aguenta o movimento previsto."
+    },
+    {
+      "topic": "tipos",
+      "statement": "A equipe aumenta os acessos até o sistema cair, para descobrir o limite e ver como ele se recupera. Que teste é esse?",
+      "options": [
+        "Teste de carga",
+        "Teste de estresse",
+        "Teste de regressão",
+        "Teste de aceite"
+      ],
+      "correct": 1,
+      "explain": "<b>Estresse = passar do limite:</b> a carga testa o esperado; o estresse empurra além, até quebrar, para conhecer o limite e a recuperação."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O dev corrigiu o bug #87. O QA executa de novo o MESMO teste que tinha falhado. Que teste é esse?",
+      "options": [
+        "Teste de regressão completo",
+        "Teste de confirmação (reteste)",
+        "Teste de fumaça da versão",
+        "Teste exploratório livre"
+      ],
+      "correct": 1,
+      "explain": "<b>Reteste:</b> confere se AQUELE defeito foi mesmo corrigido, repetindo o teste que tinha falhado."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Qual é a diferença entre reteste e teste de regressão?",
+      "options": [
+        "Reteste roda o sistema todo; regressão só o trecho corrigido",
+        "Reteste confere a correção; regressão procura efeitos colaterais",
+        "São iguais: os dois rodam todos os testes de novo",
+        "Reteste é automático; regressão é sempre manual"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois objetivos:</b> o reteste olha o bug corrigido. A regressão olha o resto, para ver se a correção quebrou algo que funcionava."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O QA tenta abrir a página de outro usuário trocando o número na URL. Que tipo de teste é esse?",
+      "options": [
+        "Teste de carga",
+        "Teste de segurança",
+        "Teste de usabilidade",
+        "Teste de unidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Segurança:</b> procura falhas que deixam alguém ver ou mexer no que não devia. Trocar o id na URL é um teste clássico de controle de acesso."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Cinco clientes tentam fazer um pedido no app enquanto a equipe observa onde eles se perdem. Que teste é esse?",
+      "options": [
+        "Teste de estresse",
+        "Teste de usabilidade",
+        "Teste de integração",
+        "Teste de segurança"
+      ],
+      "correct": 1,
+      "explain": "<b>Usabilidade:</b> mede se pessoas reais conseguem usar o sistema com facilidade. É um teste não funcional."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O cliente executa os cenários do contrato para decidir se recebe o sistema. Que teste é esse?",
+      "options": [
+        "Teste de unidade do dev",
+        "Teste de aceite do usuário",
+        "Teste de integração da API",
+        "Teste de carga do servidor"
+      ],
+      "correct": 1,
+      "explain": "<b>Aceite (UAT):</b> é o cliente ou usuário dizendo “aceito” ou “não aceito”, com base no que foi combinado."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Qual é a diferença entre teste alfa e teste beta?",
+      "options": [
+        "Alfa é automático; beta é sempre feito à mão pela equipe",
+        "Alfa é na casa do fornecedor; beta, no ambiente do usuário",
+        "Alfa testa o banco de dados; beta testa só a tela do app",
+        "Alfa é depois do lançamento; beta é antes de programar"
+      ],
+      "correct": 1,
+      "explain": "<b>Onde acontece:</b> no alfa, usuários testam no ambiente de quem desenvolveu. No beta, usuários testam no ambiente deles, antes do lançamento oficial."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Na pirâmide de testes, qual tipo deve existir em MAIOR quantidade?",
+      "options": [
+        "Testes de ponta a ponta, no topo",
+        "Testes de unidade, na base",
+        "Testes manuais exploratórios",
+        "Testes de interface gráfica"
+      ],
+      "correct": 1,
+      "explain": "<b>Base larga:</b> testes de unidade são rápidos e baratos, então são muitos. Quanto mais para o topo, mais lentos e caros, e por isso menos."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Por que a pirâmide pede POUCOS testes de ponta a ponta?",
+      "options": [
+        "Não encontram defeito nenhum no sistema",
+        "São lentos, caros e quebram com facilidade",
+        "São proibidos pelas normas de qualidade",
+        "Só funcionam em sistemas sem banco de dados"
+      ],
+      "correct": 1,
+      "explain": "<b>Custo alto:</b> o E2E passa pelo sistema inteiro, demora e qualquer mudança na tela pode quebrá-lo. É útil, mas em pouca quantidade."
+    },
+    {
+      "topic": "tipos",
+      "statement": "Revisar o documento de requisitos e o código SEM executar o programa é qual tipo de teste?",
+      "options": [
+        "Teste dinâmico",
+        "Teste estático",
+        "Teste de carga",
+        "Teste de aceite"
+      ],
+      "correct": 1,
+      "explain": "<b>Estático = sem rodar:</b> revisões, inspeções e análise de código acham defeitos cedo. O dinâmico executa o programa."
+    },
+    {
+      "topic": "tipos",
+      "statement": "O QA usa o Postman para mandar requisições e conferir as respostas JSON do back-end, sem abrir a tela. O que ele está testando?",
+      "options": [
+        "O layout da tela",
+        "A API do sistema",
+        "A rede Wi-Fi",
+        "O banco de dados"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de API:</b> confere se o back-end responde certo (status, dados, erros) sem depender da interface."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Um campo aceita idades de 18 a 60. Quantas partições de equivalência existem?",
+      "options": [
+        "2: as idades válidas e todas as negativas",
+        "3: menor que 18, de 18 a 60, maior que 60",
+        "4: uma para cada década entre 18 e 60",
+        "43: uma para cada idade de 18 até 60"
+      ],
+      "correct": 1,
+      "explain": "<b>Grupos que se comportam igual:</b> abaixo de 18 (inválida), de 18 a 60 (válida) e acima de 60 (inválida). Basta um valor de cada grupo."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Para o mesmo campo (18 a 60), quais valores a análise de valor limite testa?",
+      "options": [
+        "18, 30, 45 e 60",
+        "17, 18, 60 e 61",
+        "0, 18, 60 e 100",
+        "19, 20, 58 e 59"
+      ],
+      "correct": 1,
+      "explain": "<b>Nas bordas:</b> os erros moram nas fronteiras (um &gt; no lugar de &gt;=). Testa-se cada limite e o vizinho de fora: 17 e 18; 60 e 61."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Uma regra tem 3 condições, cada uma sim ou não. Quantas combinações (regras) a tabela de decisão completa tem?",
+      "options": [
+        "6",
+        "8",
+        "3",
+        "9"
+      ],
+      "correct": 1,
+      "explain": "<b>2 elevado ao número de condições:</b> 2 × 2 × 2 = 8 combinações possíveis."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "O cartão é bloqueado após 3 senhas erradas seguidas. Qual técnica modela melhor isso?",
+      "options": [
+        "Partição de equivalência",
+        "Transição de estados",
+        "Análise de valor limite",
+        "Teste de fumaça"
+      ],
+      "correct": 1,
+      "explain": "<b>O sistema “lembra”:</b> o resultado depende do que aconteceu antes (1ª, 2ª, 3ª tentativa). Estados e transições mostram isso."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "No diagrama de transição de estados, o que provoca a mudança de um estado para outro?",
+      "options": [
+        "Uma partição de valores válidos",
+        "Um evento, como “senha errada”",
+        "Um limite inferior do campo",
+        "Uma linha da tabela de decisão"
+      ],
+      "correct": 1,
+      "explain": "<b>Evento:</b> algo acontece (senha errada, pagamento aprovado) e o sistema passa de um estado (ativo) para outro (bloqueado)."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "O que mede a cobertura de decisão (de ramos) num teste caixa branca?",
+      "options": [
+        "Quantas telas do sistema foram abertas no teste",
+        "Quantos caminhos do if foram testados, true e false",
+        "Quantos usuários aprovaram a versão testada",
+        "Quantos requisitos o cliente escreveu no total"
+      ],
+      "correct": 1,
+      "explain": "<b>Os dois lados:</b> cada if tem o caminho verdadeiro e o falso. A cobertura de decisão mede quantos desses caminhos os testes passaram."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Se os testes têm 100% de cobertura de decisão, o que se pode dizer da cobertura de instruções?",
+      "options": [
+        "Fica em 50%",
+        "Também é 100%",
+        "Pode ser zero",
+        "Não dá para saber"
+      ],
+      "correct": 1,
+      "explain": "<b>Decisão inclui instrução:</b> passando por todos os caminhos de todos os ifs, todas as linhas foram executadas. O contrário não vale."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "O frete é grátis para compras ACIMA de R$ 100,00. Qual par de valores testa exatamente o limite?",
+      "options": [
+        "R$ 50,00 e R$ 150,00",
+        "R$ 100,00 e R$ 100,01",
+        "R$ 0,00 e R$ 100,00",
+        "R$ 99,00 e R$ 101,00"
+      ],
+      "correct": 1,
+      "explain": "<b>“Acima” é a pegadinha:</b> R$ 100,00 ainda paga frete; R$ 100,01 já é grátis. Esses dois valores pegam um &gt;= escrito no lugar de &gt;."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "O QA segue uma lista com itens como “campos obrigatórios marcados?” e “mensagens de erro claras?”. Que técnica é essa?",
+      "options": [
+        "Teste exploratório livre",
+        "Teste baseado em checklist",
+        "Tabela de decisão",
+        "Teste de estresse"
+      ],
+      "correct": 1,
+      "explain": "<b>Checklist:</b> técnica baseada em experiência, em que uma lista de verificação guia o teste e garante que nada importante é esquecido."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Quem normalmente faz testes caixa branca, que olham o código por dentro?",
+      "options": [
+        "Só o cliente final, que nunca viu o código",
+        "Quem conhece o código, como o desenvolvedor",
+        "Qualquer usuário, sem precisar do código",
+        "Só o gerente comercial do projeto"
+      ],
+      "correct": 1,
+      "explain": "<b>Precisa ver por dentro:</b> caixa branca exige conhecer a estrutura do código, por isso costuma ser feita por desenvolvedores ou QAs técnicos."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Regra: cliente VIP E compra acima de R$ 200 ganha 10% de desconto; senão, 0%. Cliente VIP com compra de R$ 150: qual é o resultado?",
+      "options": [
+        "10%, porque basta o cliente ser VIP",
+        "0%, porque falta uma das condições",
+        "5%, metade do desconto prometido",
+        "Erro: a tabela não cobre esse caso"
+      ],
+      "correct": 1,
+      "explain": "<b>“E” exige as duas:</b> VIP sim, mas a compra não passa de R$ 200. Na tabela de decisão, essa combinação leva a 0%."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "Um campo de quantidade aceita de 1 a 10 itens. Qual valor pertence a uma partição INVÁLIDA?",
+      "options": [
+        "1",
+        "0",
+        "5",
+        "10"
+      ],
+      "correct": 1,
+      "explain": "<b>Fora da faixa:</b> 1, 5 e 10 estão entre 1 e 10 (válidos). O 0 fica abaixo do mínimo: partição inválida."
+    },
+    {
+      "topic": "tecnicas",
+      "statement": "No teste exploratório, o que é a “carta” (charter) da sessão?",
+      "options": [
+        "O contrato assinado com o cliente final",
+        "O objetivo e o foco da sessão de teste",
+        "A lista completa de casos de teste prontos",
+        "O relatório de bugs entregue no fim"
+      ],
+      "correct": 1,
+      "explain": "<b>Missão da sessão:</b> por exemplo, “explorar o carrinho com cupons por 60 minutos”. Dá foco sem engessar o teste."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual é o ciclo do TDD?",
+      "options": [
+        "Codar, testar e entregar",
+        "Vermelho, verde e refatorar",
+        "Verde, vermelho e publicar",
+        "Planejar, codar e documentar"
+      ],
+      "correct": 1,
+      "explain": "<b>Vermelho, verde, refatorar:</b> escreve um teste que falha (vermelho), faz o mínimo para passar (verde) e depois melhora o código sem quebrar o teste."
+    },
+    {
+      "topic": "praticas",
+      "statement": "No TDD, o que se escreve primeiro?",
+      "options": [
+        "O código completo",
+        "Um teste que falha",
+        "A documentação",
+        "O teste de carga"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste antes do código:</b> o teste falhando mostra o que falta fazer. O código só é escrito para fazê-lo passar."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Em Gherkin (BDD), qual é a sequência de um cenário?",
+      "options": [
+        "Se, Senão, Fim",
+        "Dado, Quando, Então",
+        "Início, Meio, Fim",
+        "Quando, Então, Dado"
+      ],
+      "correct": 1,
+      "explain": "<b>Dado (contexto), Quando (ação), Então (resultado).</b> Em inglês: Given, When, Then."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Em “Dado que estou logado, Quando adiciono um produto, Então o carrinho mostra 1 item”, o que o “Então” descreve?",
+      "options": [
+        "O estado inicial",
+        "O resultado esperado",
+        "A ação do usuário",
+        "O nome do teste"
+      ],
+      "correct": 1,
+      "explain": "<b>Então = o que deve acontecer:</b> é o resultado que o teste confere. O “Dado” é o começo e o “Quando” é a ação."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual é o principal objetivo do BDD?",
+      "options": [
+        "Substituir todos os testes de unidade por testes manuais",
+        "Descrever o comportamento numa linguagem que todos entendem",
+        "Escrever o código antes de conversar com o cliente final",
+        "Medir a velocidade do servidor em cada funcionalidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Todos falam a mesma língua:</b> negócio, dev e QA escrevem juntos exemplos de comportamento, que viram testes automáticos."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Na integração contínua (CI), o que acontece a cada commit no repositório?",
+      "options": [
+        "O sistema vai direto para os clientes finais",
+        "Os testes automatizados rodam sozinhos",
+        "O QA testa tudo manualmente na hora",
+        "O código é apagado se tiver algum aviso"
+      ],
+      "correct": 1,
+      "explain": "<b>Alarme cedo:</b> a cada mudança, o servidor de CI compila e roda os testes. Se algo quebrou, a equipe sabe em minutos."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual informação é essencial num bom relatório de defeito (bug report)?",
+      "options": [
+        "O nome do desenvolvedor que errou o código",
+        "Passos para reproduzir, esperado e obtido",
+        "Uma opinião sobre a cor do botão afetado",
+        "A data de nascimento do usuário do teste"
+      ],
+      "correct": 1,
+      "explain": "<b>Reproduzir é tudo:</b> título claro, passos, resultado esperado, resultado obtido, ambiente e evidências (print, log). Sem culpar ninguém."
+    },
+    {
+      "topic": "praticas",
+      "statement": "O logo da empresa está com a cor errada na página inicial. Não quebra nada, mas o diretor quer a correção hoje. Como classificar?",
+      "options": [
+        "Severidade alta e prioridade baixa",
+        "Severidade baixa e prioridade alta",
+        "Severidade alta e prioridade alta",
+        "Severidade baixa e prioridade baixa"
+      ],
+      "correct": 1,
+      "explain": "<b>Severidade x prioridade:</b> severidade é o impacto técnico (baixo: nada quebrou). Prioridade é a urgência para o negócio (alta: o diretor quer hoje)."
+    },
+    {
+      "topic": "praticas",
+      "statement": "O dev marcou o bug como “corrigido”. Qual é o próximo passo no ciclo de vida do defeito?",
+      "options": [
+        "O bug é apagado sem nenhum reteste",
+        "O QA retesta para confirmar e fechar",
+        "O cliente final decide se fecha o bug",
+        "O bug volta para o estado “novo”"
+      ],
+      "correct": 1,
+      "explain": "<b>Corrigido não é fechado:</b> o QA retesta. Se passou, fecha; se não, reabre e o bug volta para o dev."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual ferramenta é usada para automatizar testes de interface no navegador?",
+      "options": [
+        "JMeter ou Gatling",
+        "Selenium ou Cypress",
+        "Postman ou Insomnia",
+        "Git ou GitHub"
+      ],
+      "correct": 1,
+      "explain": "<b>Robô no navegador:</b> Selenium e Cypress clicam e digitam como um usuário. JMeter é para carga; Postman é para API."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Por que a revisão de código (code review) é considerada uma prática de qualidade?",
+      "options": [
+        "Ela substitui todos os testes do sistema",
+        "Outra pessoa acha defeitos antes de rodar",
+        "Ela deixa o programa mais rápido de rodar",
+        "Ela serve só para corrigir a indentação"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste estático em dupla:</b> outro par de olhos acha erros, riscos e confusões antes mesmo de o código ser executado."
+    },
+    {
+      "topic": "praticas",
+      "statement": "Qual ferramenta é usada para testes de unidade em Java?",
+      "options": [
+        "JMeter",
+        "JUnit",
+        "Figma",
+        "Postman"
+      ],
+      "correct": 1,
+      "explain": "<b>JUnit:</b> o framework clássico de testes de unidade em Java, com anotações como @Test e verificações como assertEquals."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Qual é a diferença entre garantia da qualidade (QA) e controle da qualidade (QC)?",
+      "options": [
+        "QA confere o produto; QC cuida do processo",
+        "QA cuida do processo; QC confere o produto",
+        "São a mesma atividade com dois nomes",
+        "QA é feito pelo cliente; QC pelo gerente"
+      ],
+      "correct": 1,
+      "explain": "<b>Prevenir x detectar:</b> QA melhora o processo para os defeitos nem nascerem. QC inspeciona e testa o produto para achar os que nasceram."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Um dev digita > no lugar de >=. O código fica errado e, ao rodar, o cliente de 18 anos é barrado. Qual é a ordem dos conceitos?",
+      "options": [
+        "Falha, defeito e engano",
+        "Engano, defeito e falha",
+        "Defeito, falha e engano",
+        "Defeito, engano e falha"
+      ],
+      "correct": 1,
+      "explain": "<b>Cadeia:</b> a pessoa comete um engano (erro humano), que deixa um defeito no código, que causa uma falha quando o programa roda."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "O que é uma falha (failure)?",
+      "options": [
+        "O erro humano de quem escreveu o código",
+        "O comportamento errado visto ao executar",
+        "A linha errada escondida dentro do código",
+        "O documento que descreve os requisitos"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha é o que se vê:</b> o sistema fazendo algo errado durante a execução. A linha errada é o defeito; o deslize da pessoa é o engano."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Por que corrigir um defeito em produção custa muito mais do que corrigi-lo nos requisitos?",
+      "options": [
+        "Em produção, os programadores cobram em dólar",
+        "Ele já se espalhou por código, testes e clientes",
+        "Os defeitos de produção são sempre mais simples",
+        "Em produção não existe ferramenta de teste"
+      ],
+      "correct": 1,
+      "explain": "<b>Bola de neve:</b> um erro no requisito vira código, testes, manuais e clientes afetados. Quanto mais tarde, mais coisa para refazer."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Qual destas é uma característica de qualidade da ISO/IEC 25010?",
+      "options": [
+        "Lucratividade",
+        "Manutenibilidade",
+        "Popularidade",
+        "Originalidade"
+      ],
+      "correct": 1,
+      "explain": "<b>As 8 da ISO/IEC 25010 (versão 2011):</b> adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "O app do banco fica fora do ar toda sexta à noite. Qual característica da ISO/IEC 25010 está fraca?",
+      "options": [
+        "Portabilidade",
+        "Confiabilidade",
+        "Usabilidade",
+        "Compatibilidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Confiabilidade:</b> o sistema precisa funcionar quando é preciso, sem cair. Ficar fora do ar com frequência é falta de confiabilidade."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "O sistema roda no Windows, mas não consegue ser instalado no Linux da empresa. Qual característica falha?",
+      "options": [
+        "Confiabilidade",
+        "Portabilidade",
+        "Segurança",
+        "Usabilidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Portabilidade:</b> é a facilidade de levar o sistema para outro ambiente (sistema operacional, hardware, nuvem) e instalá-lo lá."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "A busca demora 40 segundos e usa toda a memória do servidor. Qual característica falha?",
+      "options": [
+        "Adequação funcional do sistema",
+        "Eficiência de desempenho",
+        "Compatibilidade de sistemas",
+        "Portabilidade entre sistemas"
+      ],
+      "correct": 1,
+      "explain": "<b>Eficiência de desempenho:</b> tempo de resposta e uso de recursos (memória, CPU). A busca até funciona, mas gasta demais."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "O sistema calcula o imposto com a fórmula errada. Qual característica da ISO/IEC 25010 é afetada?",
+      "options": [
+        "Eficiência de desempenho",
+        "Adequação funcional",
+        "Portabilidade",
+        "Usabilidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Adequação funcional:</b> o sistema faz o que deveria, do jeito certo? Uma conta errada falha nisso."
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Qual frase diferencia verificação de validação?",
+      "options": [
+        "Verificar: fazer a coisa certa; validar: fazer certo",
+        "Verificar: fazer certo; validar: fazer a coisa certa",
+        "Verificar é do cliente; validar é do desenvolvedor",
+        "São sinônimos usados pela norma ISO"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas perguntas:</b> verificação = construímos o produto corretamente (segue a especificação)? Validação = construímos o produto certo (atende o usuário)?"
+    },
+    {
+      "topic": "qualidade",
+      "statement": "Depois de três bugs parecidos, a equipe pergunta “por que isso acontece?” várias vezes até achar a origem. Isso é:",
+      "options": [
+        "Teste de regressão",
+        "Análise de causa raiz",
+        "Teste de estresse",
+        "Revisão de layout"
+      ],
+      "correct": 1,
+      "explain": "<b>Causa raiz:</b> corrigir só o sintoma faz o bug voltar. Perguntar “por quê?” várias vezes (os 5 porquês) leva à origem."
+    },
+    {
+      "topic": "principios",
+      "statement": "“Testes mostram a presença de defeitos, não a ausência” significa que:",
+      "options": [
+        "Se os testes passam, o sistema não tem nenhum bug",
+        "Testar reduz o risco, mas não prova que não há bugs",
+        "Testes só servem para mostrar que tudo funciona",
+        "Um teste que não acha bug foi um teste inútil"
+      ],
+      "correct": 1,
+      "explain": "<b>1º princípio:</b> o teste pode provar que um defeito existe, mas nunca que não existe nenhum. Ele diminui o risco."
+    },
+    {
+      "topic": "principios",
+      "statement": "Um formulário tem 10 campos com centenas de valores possíveis cada. Por que não testar todas as combinações?",
+      "options": [
+        "Porque testar formulários é proibido pela LGPD",
+        "Teste exaustivo é impossível; prioriza-se por risco",
+        "Porque basta testar um campo para saber dos outros",
+        "Porque combinações nunca causam nenhum defeito"
+      ],
+      "correct": 1,
+      "explain": "<b>2º princípio:</b> as combinações seriam bilhões. Usa-se técnicas (partições, limites) e prioridade por risco para escolher o que testar."
+    },
+    {
+      "topic": "principios",
+      "statement": "Qual princípio diz que testar cedo, desde os requisitos, economiza tempo e dinheiro?",
+      "options": [
+        "Paradoxo do pesticida",
+        "Testes antecipados",
+        "Agrupamento de defeitos",
+        "Dependência do contexto"
+      ],
+      "correct": 1,
+      "explain": "<b>3º princípio:</b> achar o erro no requisito custa pouco; achar em produção custa muito. É a ideia do shift left."
+    },
+    {
+      "topic": "principios",
+      "statement": "A equipe nota que 80% dos bugs estão no módulo de pagamentos. Qual princípio é esse?",
+      "options": [
+        "Paradoxo do pesticida",
+        "Agrupamento de defeitos",
+        "Testes antecipados",
+        "Ausência de erros"
+      ],
+      "correct": 1,
+      "explain": "<b>4º princípio:</b> os defeitos se concentram em poucos módulos (a ideia do 80/20). Onde já apareceram bugs, procure mais."
+    },
+    {
+      "topic": "principios",
+      "statement": "A mesma bateria de testes roda há meses e parou de encontrar bugs novos. Qual princípio explica isso?",
+      "options": [
+        "Agrupamento de defeitos",
+        "Paradoxo do pesticida",
+        "Teste exaustivo",
+        "Teste antecipado"
+      ],
+      "correct": 1,
+      "explain": "<b>5º princípio:</b> como a praga que fica resistente ao veneno, o sistema fica “resistente” aos mesmos testes. Eles só acham o que já achavam."
+    },
+    {
+      "topic": "principios",
+      "statement": "Como combater o paradoxo do pesticida?",
+      "options": [
+        "Rodar sempre os mesmos testes, duas vezes por dia",
+        "Revisar e criar testes novos de tempos em tempos",
+        "Apagar todos os testes que nunca falharam",
+        "Testar só no fim, quando tudo estiver pronto"
+      ],
+      "correct": 1,
+      "explain": "<b>Renovar o veneno:</b> revisar os testes, criar novos casos e variar os dados para continuar achando defeitos."
+    },
+    {
+      "topic": "principios",
+      "statement": "Testar um app de jogos e o software de um marca-passo do mesmo jeito é um erro. Qual princípio é esse?",
+      "options": [
+        "O teste exaustivo é possível",
+        "O teste depende do contexto",
+        "Defeitos se agrupam",
+        "O pesticida perde efeito"
+      ],
+      "correct": 1,
+      "explain": "<b>6º princípio:</b> o rigor, as técnicas e a documentação mudam conforme o risco. Uma vida em jogo pede muito mais teste."
+    },
+    {
+      "topic": "principios",
+      "statement": "O sistema passou em todos os testes, mas os clientes não conseguem fazer o que precisam. Qual princípio é esse?",
+      "options": [
+        "Agrupamento de defeitos no código",
+        "Falácia da ausência de erros",
+        "Paradoxo do pesticida nos testes",
+        "Testes antecipados nos requisitos"
+      ],
+      "correct": 1,
+      "explain": "<b>7º princípio:</b> não ter bugs não basta. Um sistema sem defeitos, mas que não atende à necessidade do usuário, é inútil."
+    },
+    {
+      "topic": "principios",
+      "statement": "Quantos são os princípios gerais de teste do ISTQB?",
+      "options": [
+        "Cinco",
+        "Sete",
+        "Dez",
+        "Três"
+      ],
+      "correct": 1,
+      "explain": "<b>Sete princípios:</b> presença de defeitos, exaustivo impossível, testes antecipados, agrupamento, pesticida, contexto e falácia da ausência de erros."
+    },
+    {
+      "topic": "principios",
+      "statement": "Qual é a ordem comum dos níveis de teste?",
+      "options": [
+        "Aceite, sistema, integração e componente",
+        "Componente, integração, sistema e aceite",
+        "Sistema, componente, aceite e integração",
+        "Integração, aceite, componente e sistema"
+      ],
+      "correct": 1,
+      "explain": "<b>Do pequeno ao grande:</b> testa a peça (componente), depois as peças juntas (integração), depois o sistema todo e, por fim, o aceite do cliente."
+    },
+    {
+      "topic": "principios",
+      "statement": "O QA testa o produto inteiro, já integrado, contra os requisitos, num ambiente parecido com o real. Qual nível é esse?",
+      "options": [
+        "Teste de componente",
+        "Teste de sistema",
+        "Teste de aceite",
+        "Teste de unidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de sistema:</b> olha o produto completo, de ponta a ponta, pela visão dos requisitos. Ainda é a equipe testando, antes do cliente."
+    },
+    {
+      "topic": "principios",
+      "statement": "O app da loja precisa conversar com o sistema dos Correios para calcular o frete. Testar essa conversa é:",
+      "options": [
+        "Teste de componente isolado",
+        "Teste de integração de sistemas",
+        "Teste de usabilidade da tela",
+        "Teste estático do requisito"
+      ],
+      "correct": 1,
+      "explain": "<b>Integração de sistemas:</b> testa a troca entre o seu sistema e sistemas de fora (APIs, serviços de terceiros)."
+    },
+    {
+      "topic": "principios",
+      "statement": "Antes de operar, o sistema de um hospital precisa provar que segue as normas da vigilância sanitária. Que teste de aceite é esse?",
+      "options": [
+        "Aceite alfa",
+        "Aceite regulatório",
+        "Teste de fumaça",
+        "Teste unitário"
+      ],
+      "correct": 1,
+      "explain": "<b>Aceite regulatório:</b> confere se o sistema cumpre leis e normas do governo ou do setor. É parte do compliance."
+    },
+    {
+      "topic": "principios",
+      "statement": "Qual é a diferença entre testar e depurar (debugging)?",
+      "options": [
+        "Testar corrige o código; depurar só acha a falha",
+        "Testar acha a falha; depurar acha e corrige a causa",
+        "São a mesma coisa feita por pessoas diferentes",
+        "Depurar é feito só pelo cliente, em produção"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas etapas:</b> o teste mostra que algo está errado. A depuração investiga o código, encontra o defeito e o corrige."
+    },
+    {
+      "topic": "principios",
+      "statement": "Por que é bom que o teste seja feito por alguém diferente de quem programou?",
+      "options": [
+        "Porque o programador é proibido de testar o código",
+        "Quem não escreveu o código vê erros que o autor não vê",
+        "Porque assim o projeto custa mais e fica mais seguro",
+        "Porque o autor do código sempre esconde os bugs"
+      ],
+      "correct": 1,
+      "explain": "<b>Independência:</b> o autor tende a testar do jeito que pensou ao programar. Outra pessoa traz outras suposições e acha outros erros."
+    },
+    {
+      "topic": "principios",
+      "statement": "Qual é um objetivo legítimo do teste, segundo o ISTQB?",
+      "options": [
+        "Provar que o software não tem defeitos",
+        "Reduzir o risco de falhas em produção",
+        "Achar culpados pelos bugs da equipe",
+        "Substituir a revisão dos requisitos"
+      ],
+      "correct": 1,
+      "explain": "<b>Reduzir risco e dar informação:</b> o teste acha defeitos, gera confiança e ajuda a decidir se dá para lançar. Provar “zero defeitos” é impossível."
+    },
+    {
+      "topic": "principios",
+      "statement": "No teste, o que é o “oráculo”?",
+      "options": [
+        "A ferramenta que gera os dados de teste",
+        "A fonte que diz qual é o resultado esperado",
+        "O servidor onde os testes são executados",
+        "O desenvolvedor que corrige os defeitos"
+      ],
+      "correct": 1,
+      "explain": "<b>Quem diz o certo:</b> o oráculo pode ser o requisito, uma planilha, a versão antiga ou um especialista. Sem ele, não dá para dizer se o resultado está certo."
+    },
+    {
+      "topic": "principios",
+      "statement": "O que um caso de teste bem escrito precisa ter?",
+      "options": [
+        "O código-fonte da função e o nome do programador",
+        "Pré-condições, passos, dados e resultado esperado",
+        "A opinião do QA sobre a qualidade da interface",
+        "Só o título, para dar liberdade a quem executa"
+      ],
+      "correct": 1,
+      "explain": "<b>Receita completa:</b> como deixar o sistema antes (pré-condições), o que fazer (passos), com quais dados e o que deve acontecer (resultado esperado)."
+    },
+    {
+      "topic": "compliance",
+      "statement": "O que é compliance em TI?",
+      "options": [
+        "Entregar o sistema mais rápido que o concorrente",
+        "Estar em conformidade com leis, normas e regras",
+        "Usar sempre a tecnologia mais nova do mercado",
+        "Reduzir o número de pessoas da equipe de testes"
+      ],
+      "correct": 1,
+      "explain": "<b>Estar de acordo:</b> compliance é cumprir leis (como a LGPD), normas (como as ISO) e regras internas, e conseguir provar isso."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual lei brasileira trata da proteção de dados pessoais?",
+      "options": [
+        "Marco Civil, Lei 12.965/2014",
+        "LGPD, Lei 13.709/2018",
+        "LBI, Lei 13.146/2015",
+        "CDC, Lei 8.078/1990"
+      ],
+      "correct": 1,
+      "explain": "<b>LGPD:</b> a Lei Geral de Proteção de Dados, de 2018, regula como empresas e governo coletam, usam, guardam e apagam dados pessoais."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Pela LGPD, o que é dado pessoal?",
+      "options": [
+        "Só documentos oficiais, como o CPF e o RG da pessoa",
+        "Informação que identifica ou pode identificar alguém",
+        "Qualquer dado guardado em papel, nunca o digital",
+        "Apenas os dados bancários e o salário da pessoa"
+      ],
+      "correct": 1,
+      "explain": "<b>Identifica alguém:</b> nome, CPF, e-mail, telefone, endereço, IP, localização... Tudo o que aponta para uma pessoa, direta ou indiretamente."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual destes é dado pessoal SENSÍVEL pela LGPD?",
+      "options": [
+        "Endereço de e-mail pessoal",
+        "Informação sobre a saúde",
+        "Número de telefone celular",
+        "Nome completo do cliente"
+      ],
+      "correct": 1,
+      "explain": "<b>Sensível = pode discriminar:</b> saúde, origem racial, religião, opinião política, vida sexual, dados genéticos e biométricos, filiação sindical. Pedem proteção maior."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Na LGPD, quem é o titular?",
+      "options": [
+        "A empresa que decide sobre os dados",
+        "A pessoa a quem os dados se referem",
+        "O órgão que fiscaliza a lei no país",
+        "O programador que guarda os dados"
+      ],
+      "correct": 1,
+      "explain": "<b>O dono dos dados:</b> o titular é a pessoa. A empresa que decide é o controlador; quem trata em nome dela é o operador."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Uma loja contrata um provedor de nuvem para guardar os dados dos clientes, seguindo as ordens da loja. Quem é o operador?",
+      "options": [
+        "A loja que contratou",
+        "A empresa de nuvem",
+        "O cliente da loja",
+        "A ANPD, que fiscaliza"
+      ],
+      "correct": 1,
+      "explain": "<b>Operador executa:</b> a loja decide o que fazer com os dados (controladora). A nuvem trata os dados em nome dela (operadora)."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual órgão fiscaliza o cumprimento da LGPD?",
+      "options": [
+        "ANATEL",
+        "ANPD",
+        "PROCON",
+        "ANVISA"
+      ],
+      "correct": 1,
+      "explain": "<b>ANPD:</b> Autoridade Nacional de Proteção de Dados. Orienta, fiscaliza e aplica as sanções da LGPD."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Quem é o encarregado (DPO) na LGPD?",
+      "options": [
+        "O dono da empresa, que pode vender os dados",
+        "O canal entre a empresa, os titulares e a ANPD",
+        "O técnico que instala os servidores da empresa",
+        "O cliente que pede para apagar seus dados"
+      ],
+      "correct": 1,
+      "explain": "<b>Ponte de comunicação:</b> o encarregado recebe as reclamações dos titulares, fala com a ANPD e orienta a empresa sobre proteção de dados."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Uma base legal da LGPD exige a manifestação livre, informada e inequívoca do titular. Qual é ela?",
+      "options": [
+        "Legítimo interesse",
+        "Consentimento",
+        "Obrigação legal",
+        "Proteção do crédito"
+      ],
+      "correct": 1,
+      "explain": "<b>Consentimento:</b> a pessoa concorda claramente, sabendo para quê. Não vale caixinha já marcada nem texto escondido."
+    },
+    {
+      "topic": "compliance",
+      "statement": "O cadastro de uma newsletter pede CPF, renda e religião. Qual princípio da LGPD é violado?",
+      "options": [
+        "Transparência: avisar que os dados existem",
+        "Necessidade: só o mínimo para a finalidade",
+        "Livre acesso: o titular pode ver os dados",
+        "Qualidade: os dados precisam estar certos"
+      ],
+      "correct": 1,
+      "explain": "<b>Minimização:</b> para mandar uma newsletter basta o e-mail. Pedir mais do que o necessário viola o princípio da necessidade."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual é um direito do titular pela LGPD?",
+      "options": [
+        "Exigir o código-fonte do sistema da empresa",
+        "Pedir a correção ou a eliminação dos dados",
+        "Receber parte do lucro obtido com os dados",
+        "Escolher o banco de dados usado pela empresa"
+      ],
+      "correct": 1,
+      "explain": "<b>Direitos do titular:</b> confirmar e acessar os dados, corrigir, pedir anonimização ou eliminação, portabilidade e revogar o consentimento."
+    },
+    {
+      "topic": "compliance",
+      "statement": "O QA quer usar no ambiente de testes uma cópia do banco de produção, com dados reais dos clientes. O mais adequado é:",
+      "options": [
+        "Usar os dados reais, pois é só teste",
+        "Anonimizar ou mascarar os dados antes",
+        "Pedir ao QA para não olhar os nomes",
+        "Publicar os dados para os testadores"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste também é tratamento:</b> dado real em teste é risco de vazamento. O certo é anonimizar, mascarar ou gerar dados fictícios."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual é a diferença entre anonimização e pseudonimização?",
+      "options": [
+        "Anonimizado pode voltar a identificar; pseudonimizado nunca volta",
+        "Anonimizado não volta a identificar; pseudonimizado pode voltar",
+        "São iguais: os dois apagam todos os dados da pessoa",
+        "Pseudonimizar é criptografar; anonimizar é só fazer backup"
+      ],
+      "correct": 1,
+      "explain": "<b>Tem volta ou não:</b> o dado anonimizado não identifica mais ninguém (e sai da LGPD). O pseudonimizado troca o nome por um código, mas com a chave dá para voltar."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Um vazamento expôs senhas de clientes. Pela LGPD, a empresa deve:",
+      "options": [
+        "Apagar os registros e não contar a ninguém",
+        "Comunicar a ANPD e os titulares afetados",
+        "Avisar só os acionistas da empresa",
+        "Esperar o cliente reclamar no PROCON"
+      ],
+      "correct": 1,
+      "explain": "<b>Incidente se comunica:</b> incidentes de segurança com risco aos titulares devem ser informados à ANPD e às pessoas afetadas, em prazo razoável."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual é a multa máxima da LGPD por infração?",
+      "options": [
+        "10% do faturamento, sem nenhum limite",
+        "2% do faturamento, até R$ 50 milhões",
+        "R$ 500 reais por cliente prejudicado",
+        "Não existe multa, só advertência"
+      ],
+      "correct": 1,
+      "explain": "<b>Multa simples:</b> até 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração. Também existem advertência e bloqueio dos dados."
+    },
+    {
+      "topic": "compliance",
+      "statement": "O que significa privacy by design (privacidade desde a concepção)?",
+      "options": [
+        "Adicionar a privacidade só depois que o sistema lançar",
+        "Pensar na proteção de dados desde o início do projeto",
+        "Deixar o usuário configurar a privacidade sozinho",
+        "Esconder o design do sistema dos concorrentes"
+      ],
+      "correct": 1,
+      "explain": "<b>Desde o primeiro rascunho:</b> coletar o mínimo, proteger por padrão e pensar nos riscos já nos requisitos, e não remendar depois."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Qual norma trata do sistema de gestão da segurança da informação?",
+      "options": [
+        "ISO 9001",
+        "ISO/IEC 27001",
+        "ISO/IEC 25010",
+        "IEEE 730"
+      ],
+      "correct": 1,
+      "explain": "<b>ISO/IEC 27001:</b> define como montar e manter um sistema de gestão de segurança da informação (SGSI), e permite certificação."
+    },
+    {
+      "topic": "compliance",
+      "statement": "E a ISO 9001 trata de quê?",
+      "options": [
+        "Segurança da informação nos servidores",
+        "Gestão da qualidade da organização",
+        "Acessibilidade de sites e aplicativos",
+        "Proteção de dados pessoais no Brasil"
+      ],
+      "correct": 1,
+      "explain": "<b>ISO 9001:</b> é a norma de sistema de gestão da qualidade. Foca em processos, cliente e melhoria contínua, em qualquer tipo de empresa."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Uma loja online guarda números de cartão de crédito. Qual padrão de segurança ela precisa seguir?",
+      "options": [
+        "WCAG 2.1",
+        "PCI DSS",
+        "ISO 9001",
+        "HTTP/2"
+      ],
+      "correct": 1,
+      "explain": "<b>PCI DSS:</b> é o padrão de segurança das bandeiras de cartão para quem processa, guarda ou transmite dados de cartão."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Por que sistemas regulados guardam registros (logs) de quem acessou e alterou cada dado?",
+      "options": [
+        "Para deixar o sistema mais rápido nas consultas",
+        "Para ter trilha de auditoria e provar conformidade",
+        "Para que o usuário possa apagar o próprio histórico",
+        "Para substituir o backup diário do banco de dados"
+      ],
+      "correct": 1,
+      "explain": "<b>Trilha de auditoria:</b> mostra quem fez o quê e quando. Na auditoria, é a prova de que as regras foram seguidas."
+    },
+    {
+      "topic": "compliance",
+      "statement": "Numa auditoria, o QA precisa provar que uma exigência da lei foi testada. O que ajuda?",
+      "options": [
+        "A palavra do desenvolvedor de que foi testado",
+        "Rastreabilidade: requisito, teste e evidência",
+        "Um print qualquer de outra versão do sistema",
+        "Apagar os casos de teste que falharam antes"
+      ],
+      "correct": 1,
+      "explain": "<b>Ligar as pontas:</b> a rastreabilidade liga cada requisito aos testes e às evidências (resultados, prints, logs). Auditor não aceita “confia em mim”."
     }
   ],
   "historias": [

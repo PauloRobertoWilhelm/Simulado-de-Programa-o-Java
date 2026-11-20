@@ -24,32 +24,63 @@
 }
 
 /* ===== ABAS DE MATÉRIA ===== */
+/*
+  As abas usam o nome completo da matéria, igual ao Classroom. Antes elas ficavam
+  numa linha só com rolagem lateral, e as últimas sumiam da tela. Agora todas
+  aparecem sempre: no celular quebram em linhas; no computador ficam lado a lado.
+*/
 .subject-tabs {
+  /* Caixa flexível: coloca as abas lado a lado. */
   display: flex;
-  gap: 4px;
+  /* Quando não cabe, a aba desce para a linha de baixo, em vez de sumir. */
+  flex-wrap: wrap;
+  /* Espaço entre as abas. */
+  gap: 6px;
+  /* Ocupa toda a largura do app. */
   width: 100%;
-  overflow-x: auto;
-  scrollbar-width: none;
+  /* Linha na cor da matéria embaixo das abas. */
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--primary-2);
+  /* A cor da linha muda suave ao trocar de matéria. */
   transition: border-color 0.25s ease;
 }
-.subject-tabs::-webkit-scrollbar { display: none; }
 
 .subject-tab {
-  flex: 1 0 auto;
+  /* Cresce para dividir o espaço da linha entre as abas. */
+  flex: 1 1 auto;
+  /* Altura mínima boa para o dedo. */
   min-height: 46px;
-  padding: 11px 16px;
+  /* Espaço interno do botão. */
+  padding: 10px 14px;
+  /* Borda suave em volta. */
   border: 1px solid var(--border-soft);
-  border-bottom: none;
-  border-radius: 12px 12px 0 0;
+  /* Cantos arredondados de todos os lados, já que as abas podem ficar em várias linhas. */
+  border-radius: 12px;
+  /* Fundo escuro das abas não selecionadas. */
   background: rgba(15, 23, 42, 0.62);
+  /* Texto apagado nas abas não selecionadas. */
   color: var(--muted);
+  /* Fonte dos títulos. */
   font-family: var(--font-display);
   font-size: 0.92rem;
   font-weight: 600;
-  white-space: nowrap;
+  /* Nome centralizado e com quebra de linha permitida nos nomes longos. */
+  text-align: center;
+  line-height: 1.25;
+  /* Mãozinha ao passar o mouse. */
   cursor: pointer;
+  /* Troca suave de cor ao passar o mouse ou selecionar. */
   transition: background 0.18s ease, color 0.18s ease;
+}
+
+/* No computador, as cinco abas ficam numa linha só, com a mesma largura. */
+@media (min-width: 700px) {
+  .subject-tabs {
+    /* Grade: uma coluna para cada aba, todas iguais. */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
 .subject-tab:hover { color: var(--text); background: rgba(30, 41, 59, 0.8); }
 .subject-tab[aria-selected="true"] {
@@ -428,8 +459,9 @@ button.len:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .subject-tabs { margin: 0 -12px; width: calc(100% + 24px); padding: 0 12px; }
-  .subject-tab { padding: 10px 13px; font-size: 0.88rem; }
+  /* No celular, letra um pouco menor e menos espaço interno para caber mais por linha. */
+  /* Duas abas por linha: cada uma ocupa metade, menos a metade do espaço entre elas. */
+  .subject-tab { flex: 1 1 calc(50% - 3px); padding: 9px 10px; font-size: 0.86rem; }
   .mode-tab { padding: 10px 4px; font-size: 0.86rem; white-space: nowrap; }
   .len-grid { grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); }
   .activity-panel { padding: 18px 14px; }

@@ -6,11 +6,11 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
-| Programação | 33 | ainda não | não | não | 2 | 3 |
-| Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 3 | 7 |
-| Design | 16 | ainda não | não | não | 2 | 3 |
-| Redes | 181 | 163 | 14 capítulos | 25 termos e 20 práticas | 3 | 7 |
-| Testes e QA | 20 | ainda não | não | não | 2 | 3 |
+| Programação de Computadores | 33 | ainda não | não | não | 2 | 3 |
+| Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 3 | 7 |
+| Design Front End | 16 | ainda não | não | não | 2 | 3 |
+| Fundamentos de Redes | 181 | 163 | 14 capítulos | 25 termos e 20 práticas | 3 | 7 |
+| Testing, Compliance e QA | 20 | ainda não | não | não | 2 | 3 |
 
 ## Como cada matéria funciona
 

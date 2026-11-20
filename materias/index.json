@@ -1,7 +1,50 @@
 [
   {
+    "id": "design",
+    "aba": "Design Front End",
+    "titulo": "Design Front-End",
+    "professor": "Prof. Sandro Ramos",
+    "cores": [
+      "#ff4fd8",
+      "#ffb35c"
+    ],
+    "prova1": "Todas as questões certas",
+    "foco": {
+      "confianca": "Média",
+      "base": "Atividades de Figma e Style Guide. A parte de avaliação e acessibilidade é suposição, vinda do que costuma seguir esse conteúdo.",
+      "assuntos": [
+        "Style Guide: cores, tipografia e componentes",
+        "Avaliação heurística, percurso cognitivo e teste com usuários",
+        "Acessibilidade: princípios da WCAG e contraste",
+        "Wireframes e protótipos no Figma"
+      ]
+    },
+    "temas": [
+      {
+        "id": "ihc",
+        "rotulo": "🧠 IHC e qualidade"
+      },
+      {
+        "id": "heuristicas",
+        "rotulo": "🔎 Nielsen e Krug"
+      },
+      {
+        "id": "norman",
+        "rotulo": "🚪 Norman e cognição"
+      },
+      {
+        "id": "visual",
+        "rotulo": "🎨 Cores, protótipos e guias"
+      },
+      {
+        "id": "avaliacao",
+        "rotulo": "♿ Avaliação e acessibilidade"
+      }
+    ]
+  },
+  {
     "id": "programacao",
-    "aba": "Programação",
+    "aba": "Programação de Computadores",
     "titulo": "Programação de Computadores",
     "professor": "Prof. Lucas B. Cari",
     "cores": [
@@ -56,7 +99,7 @@
   },
   {
     "id": "requisitos",
-    "aba": "Requisitos",
+    "aba": "Engenharia de Requisitos",
     "titulo": "Engenharia de Requisitos",
     "professor": "Prof. Paulo Proença",
     "cores": [
@@ -109,52 +152,9 @@
     "temaPadrao": "bim2"
   },
   {
-    "id": "design",
-    "aba": "Design",
-    "titulo": "Design Front-End",
-    "professor": "Prof. Sandro Ramos",
-    "cores": [
-      "#ff4fd8",
-      "#ffb35c"
-    ],
-    "prova1": "Todas as questões certas",
-    "foco": {
-      "confianca": "Média",
-      "base": "Atividades de Figma e Style Guide. A parte de avaliação e acessibilidade é suposição, vinda do que costuma seguir esse conteúdo.",
-      "assuntos": [
-        "Style Guide: cores, tipografia e componentes",
-        "Avaliação heurística, percurso cognitivo e teste com usuários",
-        "Acessibilidade: princípios da WCAG e contraste",
-        "Wireframes e protótipos no Figma"
-      ]
-    },
-    "temas": [
-      {
-        "id": "ihc",
-        "rotulo": "🧠 IHC e qualidade"
-      },
-      {
-        "id": "heuristicas",
-        "rotulo": "🔎 Nielsen e Krug"
-      },
-      {
-        "id": "norman",
-        "rotulo": "🚪 Norman e cognição"
-      },
-      {
-        "id": "visual",
-        "rotulo": "🎨 Cores, protótipos e guias"
-      },
-      {
-        "id": "avaliacao",
-        "rotulo": "♿ Avaliação e acessibilidade"
-      }
-    ]
-  },
-  {
     "id": "redes",
-    "aba": "Redes",
-    "titulo": "Redes de Computadores",
+    "aba": "Fundamentos de Redes",
+    "titulo": "Fundamentos de Redes de Computadores",
     "professor": "Prof. Patrick José Cardoso",
     "cores": [
       "#6aa9ff",
@@ -217,8 +217,8 @@
   },
   {
     "id": "testing",
-    "aba": "Testes e QA",
-    "titulo": "Testing, Compliance e QA",
+    "aba": "Testing, Compliance e QA",
+    "titulo": "Testing, Compliance e Quality Assurance",
     "professor": "Prof. Luiz",
     "cores": [
       "#4ef0b0",

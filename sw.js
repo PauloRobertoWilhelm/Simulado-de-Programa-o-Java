@@ -17,7 +17,7 @@
 
 // CACHE_NAME identifica o armazenamento local do navegador.
 // Trocar esse valor cria um cache novo, e o evento activate apaga os antigos.
-const CACHE_NAME = 'simulados-unipar-v4';
+const CACHE_NAME = 'simulados-unipar-v5';
 
 // urlsToCache guarda os arquivos necessários para abrir o app sem internet.
 // Se um arquivo da lista não existir, a instalação falha. Ao criar uma matéria
@@ -45,7 +45,8 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      // cache: 'reload' baixa cada arquivo do servidor, ignorando cópias antigas do navegador.
+      .then(cache => cache.addAll(urlsToCache.map(endereco => new Request(endereco, { cache: 'reload' }))))
       // skipWaiting() faz a versão nova assumir sem esperar o app ser fechado.
       .then(() => self.skipWaiting())
   );
@@ -74,7 +75,9 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET' || url.origin !== self.location.origin) return;
 
   event.respondWith(
-    fetch(event.request)
+    // cache: 'no-cache' confere com o servidor toda vez (o GitHub manda guardar por 10 minutos).
+    // Usa o endereço em texto porque pedidos de página inteira (navegação) não aceitam opções extras.
+    fetch(url.href, { cache: 'no-cache', credentials: 'same-origin' })
       .then(resposta => {
         // Com internet: atualiza a cópia guardada e entrega o arquivo novo.
         if (resposta.ok) {

@@ -238,10 +238,24 @@
 // - cálculo final de nota e histórico de cada matéria.
 
 if ('serviceWorker' in navigator) {
+  // Guarda se a página já era controlada por uma versão anterior do app.
+  // Na primeira visita não há versão anterior, e não é preciso recarregar.
+  const tinhaVersaoAnterior = Boolean(navigator.serviceWorker.controller);
+  // Evita recarregar duas vezes seguidas.
+  let jaRecarregou = false;
+  // Quando uma versão nova do app assume, recarrega a página uma vez para mostrar as mudanças.
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!tinhaVersaoAnterior || jaRecarregou) return;
+    jaRecarregou = true;
+    window.location.reload();
+  });
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(err => {
-      console.log('Erro ao registrar Service Worker', err);
-    });
+    navigator.serviceWorker.register('sw.js')
+      // update() procura na hora se existe sw.js novo no servidor.
+      .then(registro => registro.update())
+      .catch(err => {
+        console.log('Erro ao registrar Service Worker', err);
+      });
   });
 }
 

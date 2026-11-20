@@ -17,7 +17,7 @@
 
 // CACHE_NAME identifica o armazenamento local do navegador.
 // Trocar esse valor cria um cache novo, e o evento activate apaga os antigos.
-const CACHE_NAME = 'simulados-unipar-v6';
+const CACHE_NAME = 'simulados-unipar-v7';
 
 // urlsToCache guarda os arquivos necessários para abrir o app sem internet.
 // Se um arquivo da lista não existir, a instalação falha. Ao criar uma matéria
@@ -57,13 +57,27 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
-      .then(nomes => Promise.all(
-        nomes
-          .filter(nome => nome !== CACHE_NAME)
-          .map(nome => caches.delete(nome))
-      ))
+      .then(nomes => {
+        // Caches de versões antigas do app (se houver, isto é uma ATUALIZAÇÃO, não a primeira visita).
+        const antigos = nomes.filter(nome => nome !== CACHE_NAME);
+        // Apaga os antigos e devolve se havia algum.
+        return Promise.all(antigos.map(nome => caches.delete(nome))).then(() => antigos.length > 0);
+      })
       // clients.claim() passa a controlar as páginas que já estão abertas.
-      .then(() => self.clients.claim())
+      .then(eraAtualizacao => self.clients.claim().then(() => eraAtualizacao))
+      .then(eraAtualizacao => {
+        // Primeira visita: nada a recarregar.
+        if (!eraAtualizacao) return;
+        // Atualização: recarrega as abas abertas, para trocar o visual e o conteúdo antigos pelos novos.
+        // O setTimeout deixa a ativação TERMINAR antes: se a recarga fosse esperada aqui dentro,
+        // ela pediria os arquivos a este mesmo service worker, que ainda não terminou de ativar,
+        // e os dois ficariam esperando um pelo outro para sempre.
+        // Isso acontece uma vez só por versão, porque o activate só roda quando chega um sw.js novo.
+        setTimeout(() => {
+          self.clients.matchAll({ type: 'window' })
+            .then(abas => abas.forEach(aba => aba.navigate(aba.url).catch(() => null)));
+        }, 0);
+      })
   );
 });
 

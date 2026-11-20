@@ -241,16 +241,16 @@
           "pergunta": "O que você adiciona?",
           "opcoes": [
             {
-              "texto": "A mensagem “Enviando sua tarefa...” com uma barra de progresso.",
+              "texto": "Aviso “Enviando sua tarefa...” e barra de progresso.",
               "certa": true,
               "retorno": "Isso é visibilidade do status do sistema, a primeira heurística de Nielsen."
             },
             {
-              "texto": "Um manual em PDF sobre o envio.",
+              "texto": "Um manual em PDF explicando como funciona o envio.",
               "retorno": "“Leia todo o manual” é o oposto do “Não me faça pensar”."
             },
             {
-              "texto": "Mais cores no botão.",
+              "texto": "Mais cores e um ícone maior no botão de enviar.",
               "retorno": "Cor não conta ao usuário o que está acontecendo."
             }
           ]
@@ -310,11 +310,11 @@
               "retorno": "Certo. A restrição impede a ação repetida."
             },
             {
-              "texto": "Pedir que os agricultores tenham paciência.",
+              "texto": "Pedir que os agricultores tenham paciência e esperem.",
               "retorno": "O design é que precisa evitar o erro, não o usuário."
             },
             {
-              "texto": "Aumentar o botão.",
+              "texto": "Aumentar o botão para ficar mais fácil de tocar.",
               "retorno": "Um botão maior continua aceitando toques repetidos."
             }
           ]

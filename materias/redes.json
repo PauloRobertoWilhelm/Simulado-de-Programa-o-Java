@@ -1312,7 +1312,7 @@
       "topic": "transporte",
       "statement": "No netstat, o que significa uma linha com estado LISTENING?",
       "options": [
-        "Uma conexão aberta trocando dados agora",
+        "Uma conexão aberta trocando dados neste momento",
         "Um serviço aguardando conexões naquela porta",
         "Uma conexão que acabou de ser encerrada",
         "Um pacote esperando o TTL para sair"
@@ -2104,7 +2104,7 @@
       "topic": "integradora",
       "statement": "Qual etapa vem logo depois de o notebook receber o IP pelo DHCP?",
       "options": [
-        "O handshake TCP na porta 443",
+        "O handshake TCP com o servidor na porta 443",
         "A consulta DNS do nome do site",
         "O túnel TLS com o servidor",
         "O GET pedindo a página inicial"
@@ -2311,16 +2311,16 @@
           "pergunta": "O que acontece primeiro?",
           "opcoes": [
             {
-              "texto": "O DHCP empresta IP, máscara, gateway e DNS",
+              "texto": "O DHCP entrega IP, máscara, gateway e DNS",
               "certa": true,
               "retorno": "Isso. Sem IP não dá para fazer mais nada, então o DORA vem primeiro."
             },
             {
-              "texto": "O DNS traduz o nome do portal",
+              "texto": "O DNS traduz o nome do portal para o IP",
               "retorno": "Ainda não. Para perguntar ao DNS, o notebook precisa de IP e saber quem é o servidor DNS, e quem informa isso é o DHCP."
             },
             {
-              "texto": "O handshake TCP na porta 443",
+              "texto": "O handshake TCP com o servidor na porta 443",
               "retorno": "Cedo demais: ele ainda nem sabe o IP do portal."
             }
           ]
@@ -2384,6 +2384,1012 @@
         }
       ],
       "fim": "DHCP, DNS, TCP 443, TLS, GET e NAT: a questão integradora inteira, numa história."
+    },
+    {
+      "titulo": "O ping que morreu no caminho",
+      "resumo": "A Lu manda um ping de casa para um servidor em outra cidade. Siga o pacote salto por salto. Assunto: IP x MAC, ARP, gateway e TTL.",
+      "cenas": [
+        {
+          "texto": "O notebook da Lu (192.168.0.20) vai mandar um ping para um servidor em outra cidade. Antes de sair qualquer coisa, ele percebe que o destino NÃO está na rede de casa.",
+          "pergunta": "Para qual MAC o notebook manda o primeiro quadro?",
+          "opcoes": [
+            {
+              "texto": "Para o MAC do roteador de casa, o gateway",
+              "certa": true,
+              "retorno": "Isso! Destino em outra rede: o quadro vai até o gateway, a “porta de saída” da casa. É como entregar a carta ao carteiro da rua, e não direto ao destinatário lá longe."
+            },
+            {
+              "texto": "Para o MAC do servidor da outra cidade",
+              "retorno": "O MAC só vale dentro da mesma rede, como um apelido que só a sua rua conhece. O notebook nem tem como saber o MAC de um servidor tão longe."
+            },
+            {
+              "texto": "Para o MAC de broadcast, que chega a todos",
+              "retorno": "Broadcast é usado para perguntar (o ARP faz isso), não para mandar o ping. O ping vai para um MAC só: o do gateway."
+            }
+          ]
+        },
+        {
+          "texto": "O notebook sabe o IP do gateway (192.168.0.1), mas não sabe o MAC dele.",
+          "pergunta": "Como ele descobre esse MAC?",
+          "opcoes": [
+            {
+              "texto": "Perguntando em broadcast com o ARP",
+              "certa": true,
+              "retorno": "Certo. O ARP grita para a rede inteira: “quem é 192.168.0.1?”. Só o dono responde, com o MAC dele."
+            },
+            {
+              "texto": "Perguntando ao servidor DNS da casa",
+              "retorno": "O DNS troca NOME por IP. Aqui você já tem o IP e quer o MAC. Isso é trabalho do ARP."
+            },
+            {
+              "texto": "Pedindo um endereço novo ao DHCP",
+              "retorno": "O DHCP empresta IP para quem chega na rede. O notebook já tem IP; ele quer o MAC do gateway."
+            }
+          ]
+        },
+        {
+          "texto": "Já fora de casa, o pacote passa por 9 roteadores da internet até chegar. Em cada um, o quadro é desmontado e montado de novo.",
+          "pergunta": "O que muda a cada salto e o que fica igual?",
+          "opcoes": [
+            {
+              "texto": "Muda o MAC; os IPs de origem e destino ficam",
+              "certa": true,
+              "retorno": "Isso. O IP é o endereço da casa, vale do começo ao fim. O MAC é o carteiro de cada rua: troca a cada salto."
+            },
+            {
+              "texto": "Muda o IP; o MAC fica igual do começo ao fim",
+              "retorno": "É o contrário. Se o IP mudasse, ninguém saberia para onde levar o pacote. Quem troca a cada salto é o MAC."
+            },
+            {
+              "texto": "Os dois mudam em cada roteador do caminho",
+              "retorno": "Só o MAC muda. O IP de destino precisa ficar igual, senão o pacote se perde. (O NAT de casa muda o IP de origem uma vez, mas isso é outra história.)"
+            }
+          ]
+        },
+        {
+          "texto": "O ping saiu com TTL 64. Um roteador do caminho está com a rota errada e o pacote começa a rodar em círculo entre dois roteadores.",
+          "pergunta": "O que impede que ele rode para sempre?",
+          "opcoes": [
+            {
+              "texto": "Cada roteador tira 1 do TTL e, no zero, descarta",
+              "certa": true,
+              "retorno": "Certo. O TTL é a “vida” do pacote: cada roteador tira uma. Quando chega a zero, o pacote morre ali."
+            },
+            {
+              "texto": "O roteador guarda a lista dos pacotes já vistos",
+              "retorno": "Roteador não guarda histórico de pacotes; ele só olha o destino e passa adiante. Quem resolve o loop é o TTL."
+            },
+            {
+              "texto": "O destino percebe a demora e cancela o envio",
+              "retorno": "O destino nem recebeu nada ainda. Quem para o pacote é o próprio TTL, que vai zerando."
+            }
+          ]
+        },
+        {
+          "texto": "O TTL zerou no 64º roteador. Esse roteador avisa a Lu do que aconteceu.",
+          "pergunta": "Que mensagem volta para o notebook?",
+          "opcoes": [
+            {
+              "texto": "ICMP Time Exceeded, tempo excedido",
+              "certa": true,
+              "retorno": "Isso. É o recado “seu pacote morreu aqui”. O traceroute usa esse truque: manda TTL 1, depois 2, 3... e cada roteador que responde Time Exceeded aparece na lista."
+            },
+            {
+              "texto": "ICMP Echo Reply, a resposta do ping",
+              "retorno": "Echo Reply é a resposta de quem RECEBEU o ping. Aqui o pacote nem chegou, então o aviso é outro."
+            },
+            {
+              "texto": "Um RST do TCP, fechando a conexão",
+              "retorno": "Ping usa ICMP, não TCP. Não existe conexão TCP para fechar aqui."
+            }
+          ]
+        },
+        {
+          "texto": "Rota consertada! A resposta do ping chega ao notebook com TTL = 115. Os sistemas começam com 64, 128 ou 255.",
+          "pergunta": "Quantos roteadores, mais provavelmente, ela atravessou?",
+          "opcoes": [
+            {
+              "texto": "13, porque começou em 128",
+              "certa": true,
+              "retorno": "Isso. Pegue o valor inicial mais próximo ACIMA de 115, que é 128. Depois: 128 − 115 = 13 saltos."
+            },
+            {
+              "texto": "140, porque começou em 255",
+              "retorno": "Seriam 140 roteadores, coisa que não existe na prática. O truque é usar o valor inicial mais próximo acima: 128."
+            },
+            {
+              "texto": "115, o próprio valor do TTL",
+              "retorno": "O TTL que chega é o que SOBROU da vida. Os saltos são o que foi gasto: 128 − 115 = 13."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: destino em outra rede = quadro vai ao MAC do gateway. O ARP descobre o MAC em broadcast. O IP fica igual do começo ao fim; o MAC muda a cada salto. Cada roteador tira 1 do TTL; zerou, o pacote é descartado e volta um ICMP Time Exceeded. Saltos = valor inicial mais próximo acima (64, 128 ou 255) − TTL que chegou."
+    },
+    {
+      "titulo": "Uma casa, um IP só",
+      "resumo": "Na casa do Paulo, celular, notebook e TV dividem uma única internet. Descubra como todos navegam ao mesmo tempo. Assunto: IP privado, IP público e NAT.",
+      "cenas": [
+        {
+          "texto": "Celular, notebook e TV do Paulo têm os IPs 192.168.1.10, .11 e .12. A operadora deu para a casa inteira um IP só: 177.40.8.9.",
+          "pergunta": "Qual desses endereços pode andar pela internet?",
+          "opcoes": [
+            {
+              "texto": "Só o 177.40.8.9, que é público",
+              "certa": true,
+              "retorno": "Isso. 192.168.x.x é faixa privada: só vale dentro de casa, como o ramal de um prédio. O público é o “número da central”."
+            },
+            {
+              "texto": "Todos, porque cada um tem o seu",
+              "retorno": "Ter IP não basta. Os 192.168 são privados e os roteadores da internet nem aceitam encaminhá-los."
+            },
+            {
+              "texto": "Só o 192.168.1.10, que veio primeiro",
+              "retorno": "A ordem não importa. Toda a faixa 192.168 é privada e fica dentro de casa."
+            }
+          ]
+        },
+        {
+          "texto": "O Paulo descobre que o celular da vizinha também tem o IP 192.168.1.10.",
+          "pergunta": "Isso dá conflito?",
+          "opcoes": [
+            {
+              "texto": "Não: IP privado se repete em casas diferentes",
+              "certa": true,
+              "retorno": "Certo. É como o ramal 10 de dois prédios: cada prédio tem a sua central, então não há confusão."
+            },
+            {
+              "texto": "Sim: os dois celulares vão disputar o mesmo IP",
+              "retorno": "Só haveria disputa se estivessem na MESMA rede. Cada casa é uma rede separada, atrás do seu próprio roteador."
+            },
+            {
+              "texto": "Sim, a menos que a operadora troque um deles",
+              "retorno": "A operadora nem enxerga os IPs privados de dentro das casas. Eles podem se repetir à vontade."
+            }
+          ]
+        },
+        {
+          "texto": "O técnico anotou três IPs num papel e pergunta se você sabe as faixas privadas.",
+          "pergunta": "Qual deles é privado?",
+          "opcoes": [
+            {
+              "texto": "172.20.5.9",
+              "certa": true,
+              "retorno": "Isso. A faixa privada do 172 vai de 172.16 até 172.31, e o 20 está no meio."
+            },
+            {
+              "texto": "172.40.5.9",
+              "retorno": "Pegadinha: 172.40 passa do 31, então está FORA da faixa privada. É público."
+            },
+            {
+              "texto": "192.169.5.9",
+              "retorno": "Pegadinha: a faixa privada é 192.168. O 192.169 já é público."
+            }
+          ]
+        },
+        {
+          "texto": "O notebook (192.168.1.11, porta de origem 50000) abre um site. O pacote passa pelo roteador da casa a caminho da internet.",
+          "pergunta": "O que o roteador faz na ida?",
+          "opcoes": [
+            {
+              "texto": "Troca o IP de origem pelo público 177.40.8.9",
+              "certa": true,
+              "retorno": "Isso é o NAT. O pacote sai com o IP público da casa, o único que a internet aceita."
+            },
+            {
+              "texto": "Troca o IP de destino pelo IP do notebook",
+              "retorno": "O destino é o site, e ele não muda. O que o NAT troca na ida é a ORIGEM."
+            },
+            {
+              "texto": "Deixa o IP privado passar sem mexer em nada",
+              "retorno": "Com o IP privado, a resposta nunca acharia o caminho de volta. Por isso o NAT troca a origem."
+            }
+          ]
+        },
+        {
+          "texto": "A resposta do site volta para 177.40.8.9. Só que na casa há três aparelhos navegando ao mesmo tempo.",
+          "pergunta": "Como o roteador sabe que a resposta é do notebook?",
+          "opcoes": [
+            {
+              "texto": "Pela tabela NAT, que guarda IP e porta",
+              "certa": true,
+              "retorno": "Certo. Na ida, o roteador anotou: “porta 50000 = notebook 192.168.1.11”. Na volta, ele consulta a anotação e entrega."
+            },
+            {
+              "texto": "Pelo MAC do notebook, que vem no pacote",
+              "retorno": "O MAC do notebook não viaja pela internet; ele muda a cada salto. Quem guarda o caminho de volta é a tabela NAT."
+            },
+            {
+              "texto": "Ele manda a resposta para todos da casa",
+              "retorno": "Isso seria uma bagunça e um risco. A tabela NAT diz exatamente para quem entregar."
+            }
+          ]
+        },
+        {
+          "texto": "O site guarda um registro de quem o visitou.",
+          "pergunta": "Que IP aparece nesse registro?",
+          "opcoes": [
+            {
+              "texto": "O público, 177.40.8.9",
+              "certa": true,
+              "retorno": "Isso. Por causa do NAT, o site só enxerga o IP público da casa, nunca o privado do notebook."
+            },
+            {
+              "texto": "O privado, 192.168.1.11",
+              "retorno": "O privado ficou dentro de casa. O NAT trocou a origem antes de o pacote sair."
+            },
+            {
+              "texto": "O do gateway, 192.168.1.1",
+              "retorno": "Esse também é privado: é o lado de DENTRO do roteador. O site vê o lado de fora, o público."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: faixas privadas = 10.x.x.x, 172.16 a 172.31, 192.168.x.x. Privado não anda na internet e pode se repetir em redes diferentes. O NAT troca o IP de origem privado pelo público na ida e usa a tabela NAT (IP + porta) para devolver a resposta. O servidor só vê o IP público."
+    },
+    {
+      "titulo": "A pizza fatiada do laboratório",
+      "resumo": "O professor quer dividir a rede do laboratório entre as salas. Você corta a “pizza” em fatias iguais. Assunto: máscara, CIDR e sub-redes.",
+      "cenas": [
+        {
+          "texto": "A faculdade deu ao laboratório a rede 10.8.4.0/24. O professor quer 4 sub-redes iguais, uma para cada sala.",
+          "pergunta": "Quantos bits você empresta e qual prefixo fica?",
+          "opcoes": [
+            {
+              "texto": "2 bits, ficando /26",
+              "certa": true,
+              "retorno": "Isso. Cada bit emprestado dobra as fatias: 2² = 4. E /24 + 2 = /26."
+            },
+            {
+              "texto": "4 bits, ficando /28",
+              "retorno": "4 bits dão 2⁴ = 16 fatias, e o professor pediu 4. Bastam 2 bits."
+            },
+            {
+              "texto": "1 bit, ficando /25",
+              "retorno": "1 bit dá só 2 fatias. Para 4, são 2 bits."
+            }
+          ]
+        },
+        {
+          "texto": "Agora você precisa escrever a máscara do /26 na configuração das máquinas.",
+          "pergunta": "Qual é a máscara em decimal?",
+          "opcoes": [
+            {
+              "texto": "255.255.255.192",
+              "certa": true,
+              "retorno": "Certo. No último número, os 2 primeiros bits são 1: 128 + 64 = 192."
+            },
+            {
+              "texto": "255.255.255.224",
+              "retorno": "224 tem 3 bits ligados (128 + 64 + 32). Isso é /27."
+            },
+            {
+              "texto": "255.255.255.128",
+              "retorno": "128 tem 1 bit ligado. Isso é /25, que dá só 2 fatias."
+            }
+          ]
+        },
+        {
+          "texto": "Para saber onde começa cada sala, você calcula o salto: 256 − 192.",
+          "pergunta": "De quanto em quanto começam as sub-redes?",
+          "opcoes": [
+            {
+              "texto": "De 64 em 64: .0, .64, .128, .192",
+              "certa": true,
+              "retorno": "Isso. 256 − 192 = 64. Cada fatia da pizza tem 64 endereços."
+            },
+            {
+              "texto": "De 32 em 32: .0, .32, .64, .96",
+              "retorno": "Salto 32 é do /27 (256 − 224). Aqui a máscara termina em 192."
+            },
+            {
+              "texto": "De 62 em 62: .0, .62, .124, .186",
+              "retorno": "62 é a quantidade de hosts úteis, não o tamanho do bloco. O bloco tem 64."
+            }
+          ]
+        },
+        {
+          "texto": "O PC do professor, na sala 3, tem o IP 10.8.4.150/26.",
+          "pergunta": "Em que sub-rede ele está e qual é o broadcast?",
+          "opcoes": [
+            {
+              "texto": "Rede 10.8.4.128, broadcast 10.8.4.191",
+              "certa": true,
+              "retorno": "Certo. Os blocos são 0, 64, 128 e 192. O 150 cai no bloco que começa em 128 e termina em 191 (o próximo começa em 192)."
+            },
+            {
+              "texto": "Rede 10.8.4.150, broadcast 10.8.4.255",
+              "retorno": "O 150 é o próprio PC, não o começo do bloco. A rede é o INÍCIO do bloco: 128."
+            },
+            {
+              "texto": "Rede 10.8.4.192, broadcast 10.8.4.255",
+              "retorno": "Esse é o 4º bloco. O 150 ainda está no 3º, que vai de 128 a 191."
+            }
+          ]
+        },
+        {
+          "texto": "O professor quer saber quantos computadores cabem em cada sala.",
+          "pergunta": "Quantos hosts utilizáveis tem um /26?",
+          "opcoes": [
+            {
+              "texto": "62, porque 2⁶ − 2",
+              "certa": true,
+              "retorno": "Isso. Sobram 32 − 26 = 6 bits: 2⁶ = 64. Tira 2 (a rede e o broadcast) = 62."
+            },
+            {
+              "texto": "64, porque 2⁶",
+              "retorno": "Quase! Esqueceu de tirar 2: o primeiro endereço é a rede e o último é o broadcast."
+            },
+            {
+              "texto": "63, porque 2⁶ − 1",
+              "retorno": "São DOIS endereços reservados: a rede e o broadcast. 64 − 2 = 62."
+            }
+          ]
+        },
+        {
+          "texto": "Mudança de planos: a sala 4 vai receber 100 computadores.",
+          "pergunta": "O /26 serve para ela?",
+          "opcoes": [
+            {
+              "texto": "Não; precisa de /25, com 126 hosts",
+              "certa": true,
+              "retorno": "Certo. /25 deixa 7 bits: 2⁷ − 2 = 126, e 100 cabem. Prefixo menor = fatia maior."
+            },
+            {
+              "texto": "Sim; o /26 tem 64 endereços, dá um jeito",
+              "retorno": "64 endereços (62 úteis) não comportam 100 máquinas. Não existe “dar um jeito” com endereço."
+            },
+            {
+              "texto": "Não; precisa de /27, que é maior",
+              "retorno": "Pegadinha: /27 é MENOR (30 hosts). Quanto maior o número do prefixo, menor a fatia."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: sub-redes = 2^(bits emprestados). Salto = 256 − último número da máscara. Rede = começo do bloco; broadcast = fim do bloco; hosts úteis = 2ʰ − 2 (h = bits que sobram). Prefixo maior (/27) = fatia menor; prefixo menor (/25) = fatia maior."
+    },
+    {
+      "titulo": "O emprestador de IP e o endereço gigante",
+      "resumo": "A Ana liga o notebook novo na biblioteca e depois vai ao laboratório que já usa IPv6. Assunto: DHCP (DORA) e IPv6.",
+      "cenas": [
+        {
+          "texto": "A Ana conecta o notebook novo no Wi-Fi da biblioteca. Ele ainda não tem IP nenhum e nem sabe quem é o servidor DHCP.",
+          "pergunta": "Qual é a primeira mensagem que ele manda?",
+          "opcoes": [
+            {
+              "texto": "DHCP Discover, em broadcast",
+              "certa": true,
+              "retorno": "Isso. Sem saber quem é o servidor, ele grita para todos: “tem algum DHCP aí?”. É o D do DORA."
+            },
+            {
+              "texto": "DHCP Request, direto ao servidor",
+              "retorno": "O Request vem depois, quando ele já recebeu uma oferta. Primeiro ele precisa descobrir quem é o servidor."
+            },
+            {
+              "texto": "Uma consulta DNS pelo roteador",
+              "retorno": "Sem IP, ele não consegue nem conversar com o DNS. Primeiro vem o DHCP."
+            }
+          ]
+        },
+        {
+          "texto": "O servidor DHCP da biblioteca escutou o pedido.",
+          "pergunta": "Qual é a ordem completa da conversa?",
+          "opcoes": [
+            {
+              "texto": "Discover, Offer, Request, Ack",
+              "certa": true,
+              "retorno": "Certo, é o DORA: descobre, recebe oferta, pede aquela oferta, recebe a confirmação."
+            },
+            {
+              "texto": "Request, Offer, Discover, Ack",
+              "retorno": "Não dá para pedir (Request) antes de descobrir quem oferece. A ordem é D-O-R-A."
+            },
+            {
+              "texto": "Discover, Request, Offer, Ack",
+              "retorno": "Ele só pode pedir (Request) uma oferta que já recebeu. Offer vem antes do Request."
+            }
+          ]
+        },
+        {
+          "texto": "O Ack chegou. O notebook agora está configurado.",
+          "pergunta": "Além do IP, o que o DHCP entrega?",
+          "opcoes": [
+            {
+              "texto": "Máscara, gateway e servidor DNS",
+              "certa": true,
+              "retorno": "Isso. Com isso o notebook sabe qual é a rede dele, por onde sair e a quem perguntar nomes."
+            },
+            {
+              "texto": "Um MAC novo, a senha e uma porta",
+              "retorno": "O MAC vem gravado na placa, e a senha do Wi-Fi a Ana digitou antes. O DHCP entrega máscara, gateway e DNS."
+            },
+            {
+              "texto": "O nome do site, o cookie e o certificado",
+              "retorno": "Isso é coisa da web (HTTP/HTTPS). O DHCP só configura a rede: IP, máscara, gateway e DNS."
+            }
+          ]
+        },
+        {
+          "texto": "A Ana estranha: “por que o DHCP não usa TCP, que é mais confiável?”",
+          "pergunta": "Qual é o motivo?",
+          "opcoes": [
+            {
+              "texto": "Sem IP ainda, não dá para fazer handshake",
+              "certa": true,
+              "retorno": "Isso. O TCP precisa de conexão com IPs dos dois lados. Quem ainda não tem IP só consegue gritar em broadcast, com UDP."
+            },
+            {
+              "texto": "Porque o UDP garante que nada se perde",
+              "retorno": "É o contrário: o UDP NÃO garante entrega. O DHCP usa UDP porque ainda não tem IP para abrir conexão."
+            },
+            {
+              "texto": "Porque o TCP só funciona com IPv6",
+              "retorno": "O TCP funciona em IPv4 e IPv6. O motivo é não ter IP para fazer o handshake."
+            }
+          ]
+        },
+        {
+          "texto": "No laboratório a rede já usa IPv6. O servidor tem o endereço 2001:0db8:00a0:0000:0000:0000:0000:0042.",
+          "pergunta": "Qual é a forma curta correta?",
+          "opcoes": [
+            {
+              "texto": "2001:db8:a0::42",
+              "certa": true,
+              "retorno": "Certo. Zeros à ESQUERDA saem (00a0 vira a0, 0042 vira 42) e os grupos zerados viram “::” uma vez só."
+            },
+            {
+              "texto": "2001:db8:a::42",
+              "retorno": "Pegadinha: só os zeros da ESQUERDA saem. 00a0 vira a0, e não a."
+            },
+            {
+              "texto": "2001:db8:a0::0::42",
+              "retorno": "O “::” só pode aparecer UMA vez, senão ninguém sabe quantos zeros há em cada pedaço."
+            }
+          ]
+        },
+        {
+          "texto": "O professor pergunta o tamanho do IPv6 e o prefixo de uma rede local comum.",
+          "pergunta": "O que você responde?",
+          "opcoes": [
+            {
+              "texto": "128 bits, com prefixo /64",
+              "certa": true,
+              "retorno": "Isso. 128 bits (o IPv4 tem 32), e a rede local costuma usar /64: metade para a rede e metade para o aparelho."
+            },
+            {
+              "texto": "64 bits, com prefixo /128",
+              "retorno": "Trocou os números. O endereço tem 128 bits e a rede local costuma ser /64."
+            },
+            {
+              "texto": "32 bits, com prefixo /24",
+              "retorno": "Isso é a cara do IPv4. O IPv6 tem 128 bits."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: DHCP = DORA (Discover, Offer, Request, Ack). Entrega IP, máscara, gateway e DNS. Usa UDP porque o computador ainda não tem IP para o handshake. IPv6: 128 bits, tira os zeros à esquerda, “::” só uma vez, rede local /64."
+    },
+    {
+      "titulo": "A live do campeonato",
+      "resumo": "O Léo transmite ao vivo o campeonato da faculdade. Escolha o transporte certo e entenda as portas. Assunto: UDP, TCP, portas e sockets.",
+      "cenas": [
+        {
+          "texto": "A final está rolando. Um pedacinho de vídeo de 2 segundos atrás chega atrasado ao celular de quem assiste.",
+          "pergunta": "O que é melhor fazer com ele?",
+          "opcoes": [
+            {
+              "texto": "Descartar e seguir: atrasado já não serve",
+              "certa": true,
+              "retorno": "Isso. Em tempo real, um pedaço velho é inútil, como notícia de ontem. Melhor pular e continuar ao vivo."
+            },
+            {
+              "texto": "Parar a live e esperar o pedaço chegar",
+              "retorno": "Aí a live travaria toda hora. Em tempo real, o atrasado é descartado."
+            },
+            {
+              "texto": "Pedir de novo até chegar sem nenhum erro",
+              "retorno": "Pedir de novo faz sentido para arquivo, não para algo ao vivo. Quando chegasse, o lance já teria passado."
+            }
+          ]
+        },
+        {
+          "texto": "O Léo precisa escolher o protocolo de transporte da transmissão.",
+          "pergunta": "Qual combina com a live?",
+          "opcoes": [
+            {
+              "texto": "UDP, sem conexão e sem confirmação",
+              "certa": true,
+              "retorno": "Certo. O UDP é o narrador de rádio: fala e segue, sem esperar ninguém confirmar."
+            },
+            {
+              "texto": "TCP, que confirma cada pedaço enviado",
+              "retorno": "O TCP reenviaria pedaços atrasados, e a live travaria. Para tempo real, UDP."
+            },
+            {
+              "texto": "HTTP, que também é de transporte",
+              "retorno": "HTTP é da camada de APLICAÇÃO. Na camada de transporte, as opções são TCP e UDP."
+            }
+          ]
+        },
+        {
+          "texto": "Um colega abre o pacote no Wireshark e vê que o cabeçalho UDP é bem pequeno.",
+          "pergunta": "Quanto ele tem?",
+          "opcoes": [
+            {
+              "texto": "8 bytes, com 4 campos",
+              "certa": true,
+              "retorno": "Isso: porta de origem, porta de destino, tamanho e checksum. Só isso, por isso é leve."
+            },
+            {
+              "texto": "20 bytes, com 10 campos",
+              "retorno": "20 bytes é o tamanho mínimo do cabeçalho TCP, que tem bem mais controle."
+            },
+            {
+              "texto": "2 bytes, só com a porta",
+              "retorno": "Pequeno, mas não tanto: são 8 bytes, com as duas portas, o tamanho e o checksum."
+            }
+          ]
+        },
+        {
+          "texto": "No PC do Léo há um servidor web na porta 443 e o app da live usa a porta 51000 como origem.",
+          "pergunta": "Em que faixa da IANA fica a porta 51000?",
+          "opcoes": [
+            {
+              "texto": "Efêmera: 49152 a 65535",
+              "certa": true,
+              "retorno": "Certo. Portas altas são sorteadas pelo sistema para o lado do cliente e duram só aquela conversa."
+            },
+            {
+              "texto": "Registrada: 1024 a 49151",
+              "retorno": "51000 já passou de 49151. É a faixa dinâmica, das portas efêmeras."
+            },
+            {
+              "texto": "Bem conhecida: 0 a 1023",
+              "retorno": "Bem conhecidas são as dos serviços clássicos, como 80 e 443. 51000 é efêmera."
+            }
+          ]
+        },
+        {
+          "texto": "Três amigos assistem à live no mesmo PC, em três abas do navegador, todas no mesmo servidor.",
+          "pergunta": "Como o PC separa as três conversas?",
+          "opcoes": [
+            {
+              "texto": "Cada aba usa uma porta de origem diferente",
+              "certa": true,
+              "retorno": "Isso. O IP é o prédio e a porta é o apartamento. Cada aba ganha uma porta efêmera própria."
+            },
+            {
+              "texto": "Cada aba recebe um endereço IP diferente",
+              "retorno": "O PC tem um IP só. Quem separa as conversas é a porta de origem."
+            },
+            {
+              "texto": "Cada aba usa um endereço MAC diferente",
+              "retorno": "A placa de rede tem um MAC só. A separação é pela porta."
+            }
+          ]
+        },
+        {
+          "texto": "O professor pergunta o que identifica, sem confusão, uma conexão TCP na internet.",
+          "pergunta": "O que você responde?",
+          "opcoes": [
+            {
+              "texto": "IP e porta de origem, IP e porta de destino",
+              "certa": true,
+              "retorno": "Certo. Socket = IP + porta. Uma conexão liga dois sockets, então são 4 valores."
+            },
+            {
+              "texto": "Só o IP de destino e a porta do servidor",
+              "retorno": "Assim, as três abas do Léo seriam a mesma conversa. Falta o lado de origem: IP e porta."
+            },
+            {
+              "texto": "O MAC de origem e o MAC do destino final",
+              "retorno": "O MAC muda a cada salto e não identifica conexão. São IPs e portas dos dois lados."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: tempo real (live, chamada, jogo) usa UDP, porque dado atrasado é inútil. Cabeçalho UDP: 8 bytes, 4 campos. Faixas: 0 a 1023 bem conhecidas, 1024 a 49151 registradas, 49152 a 65535 efêmeras. Socket = IP + porta; conexão TCP = 4 valores. A porta de origem separa as conversas do mesmo programa."
+    },
+    {
+      "titulo": "O trabalho que quase não subiu",
+      "resumo": "A Carla envia o trabalho final para o servidor da faculdade, e a rede não ajuda. Assunto: TCP, handshake, seq, ack, retransmissão, janela e encerramento.",
+      "cenas": [
+        {
+          "texto": "Antes de mandar o arquivo, o TCP precisa abrir a conexão com o servidor.",
+          "pergunta": "Qual é a sequência do aperto de mão?",
+          "opcoes": [
+            {
+              "texto": "SYN, SYN+ACK, ACK",
+              "certa": true,
+              "retorno": "Isso. “Posso falar?” (SYN), “Pode, e eu também quero” (SYN+ACK), “Combinado” (ACK)."
+            },
+            {
+              "texto": "SYN, ACK, SYN+ACK",
+              "retorno": "O servidor responde o SYN com SYN+ACK de uma vez. O ACK sozinho é o último passo."
+            },
+            {
+              "texto": "ACK, SYN, FIN",
+              "retorno": "FIN é para ENCERRAR. Abrir é SYN, SYN+ACK, ACK."
+            }
+          ]
+        },
+        {
+          "texto": "O notebook da Carla mandou o SYN com seq = 700.",
+          "pergunta": "Que ack o servidor coloca no SYN+ACK?",
+          "opcoes": [
+            {
+              "texto": "701",
+              "certa": true,
+              "retorno": "Certo. O ACK diz o PRÓXIMO byte esperado, e o SYN conta como 1: 700 + 1 = 701."
+            },
+            {
+              "texto": "700",
+              "retorno": "O ack não repete o que chegou; ele aponta o próximo. 700 + 1 = 701."
+            },
+            {
+              "texto": "702",
+              "retorno": "O SYN vale só 1. 700 + 1 = 701."
+            }
+          ]
+        },
+        {
+          "texto": "Conexão aberta. A Carla manda 500 bytes, começando no seq 701.",
+          "pergunta": "Que ack o servidor devolve?",
+          "opcoes": [
+            {
+              "texto": "1201, o próximo byte esperado",
+              "certa": true,
+              "retorno": "Isso. Os bytes vão do 701 ao 1200. O próximo esperado é 701 + 500 = 1201."
+            },
+            {
+              "texto": "1200, o último byte recebido",
+              "retorno": "1200 é o último que CHEGOU. O ack aponta o próximo: 1201."
+            },
+            {
+              "texto": "702, um a mais que o seq",
+              "retorno": "Somar 1 só vale para o SYN. Depois de dados, soma a quantidade de bytes: 701 + 500 = 1201."
+            }
+          ]
+        },
+        {
+          "texto": "Um segmento se perde no caminho. O servidor continua recebendo os seguintes e manda o MESMO ack três vezes seguidas.",
+          "pergunta": "O que o notebook da Carla faz?",
+          "opcoes": [
+            {
+              "texto": "Reenvia na hora o pedaço perdido",
+              "certa": true,
+              "retorno": "Isso é a retransmissão rápida. Três ACKs duplicados são como o professor repetindo “cadê a página 3?”."
+            },
+            {
+              "texto": "Espera o fim do arquivo e reenvia tudo",
+              "retorno": "Reenviar tudo seria desperdício. O TCP reenvia só o pedaço que faltou, e já."
+            },
+            {
+              "texto": "Fecha a conexão com RST e começa de novo",
+              "retorno": "Perder um pedaço é normal; o TCP resolve reenviando. RST é para cortar algo que deu muito errado."
+            }
+          ]
+        },
+        {
+          "texto": "O servidor está com a memória de recebimento quase cheia e anuncia uma janela pequena.",
+          "pergunta": "Que mecanismo é esse e quem ele protege?",
+          "opcoes": [
+            {
+              "texto": "Controle de fluxo, protegendo o receptor",
+              "certa": true,
+              "retorno": "Certo. É o servidor dizendo “vai devagar, meu prato está cheio”. A janela protege quem recebe."
+            },
+            {
+              "texto": "Controle de congestionamento, protegendo o receptor",
+              "retorno": "Congestionamento protege a REDE. Quem protege o receptor é o controle de fluxo, com a janela."
+            },
+            {
+              "texto": "Controle de fluxo, protegendo a rede inteira",
+              "retorno": "O nome está certo, mas o protegido não: o fluxo protege o RECEPTOR. A rede é protegida pelo congestionamento."
+            }
+          ]
+        },
+        {
+          "texto": "Mais tarde, a rede da faculdade lota e os pacotes começam a sumir nos roteadores.",
+          "pergunta": "Que mecanismo reduz o ritmo para não piorar?",
+          "opcoes": [
+            {
+              "texto": "Controle de congestionamento",
+              "certa": true,
+              "retorno": "Isso. É como diminuir a velocidade quando a estrada engarrafa. Protege a rede inteira."
+            },
+            {
+              "texto": "Controle de fluxo pela janela",
+              "retorno": "A janela trata do receptor cheio. Rede lotada é caso de controle de congestionamento."
+            },
+            {
+              "texto": "O TTL, tirando 1 por roteador",
+              "retorno": "O TTL só evita que um pacote rode para sempre. Quem desacelera o envio é o controle de congestionamento."
+            }
+          ]
+        },
+        {
+          "texto": "Ufa! O arquivo inteiro chegou. Hora de terminar a conversa.",
+          "pergunta": "Como o TCP encerra de forma educada?",
+          "opcoes": [
+            {
+              "texto": "Com FIN dos dois lados, confirmados",
+              "certa": true,
+              "retorno": "Certo. Cada lado manda FIN quando acaba e o outro confirma com ACK. É o “tchau, tchau”."
+            },
+            {
+              "texto": "Com RST, que corta a conexão na hora",
+              "retorno": "RST é desligar na cara. Funciona, mas não é o encerramento educado."
+            },
+            {
+              "texto": "Com um SYN novo, que zera a conexão",
+              "retorno": "SYN abre conexão, não fecha. Quem fecha é o FIN."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: abrir = SYN, SYN+ACK, ACK. Ack = próximo byte esperado (SYN conta 1; depois de dados, seq + bytes). Três ACKs duplicados = retransmissão rápida. Controle de fluxo (janela) protege o receptor; controle de congestionamento protege a rede. FIN encerra com educação; RST corta na hora."
+    },
+    {
+      "titulo": "O site da lanchonete",
+      "resumo": "A Dona Rosa abriu a lanchonete e o sobrinho fez o site. Ajude a resolver cada problema. Assunto: URL, HTTP, códigos de status, cookie, HTTPS e DNS.",
+      "cenas": [
+        {
+          "texto": "O link do cardápio é https://www.lanchedarosa.com.br:443/cardapio?dia=sexta#bebidas",
+          "pergunta": "Qual parte NÃO vai para o servidor?",
+          "opcoes": [
+            {
+              "texto": "O #bebidas, o fragmento",
+              "certa": true,
+              "retorno": "Isso. O fragmento fica no navegador: ele só serve para rolar a página até a parte das bebidas."
+            },
+            {
+              "texto": "O ?dia=sexta, a consulta",
+              "retorno": "A consulta vai sim: é ela que diz ao servidor qual cardápio mostrar."
+            },
+            {
+              "texto": "O /cardapio, o caminho",
+              "retorno": "O caminho vai sim: é ele que diz qual página o servidor deve entregar."
+            }
+          ]
+        },
+        {
+          "texto": "Um cliente digita um endereço antigo, /cardapio-velho, que não existe mais.",
+          "pergunta": "Que código volta e de quem é o erro?",
+          "opcoes": [
+            {
+              "texto": "404, erro do lado do cliente",
+              "certa": true,
+              "retorno": "Certo. 4xx = o pedido do cliente está errado. 404 = “não achei essa página”."
+            },
+            {
+              "texto": "500, erro do lado do servidor",
+              "retorno": "5xx é quando o SERVIDOR quebra. Aqui o servidor está bem; o pedido é que aponta para algo inexistente."
+            },
+            {
+              "texto": "301, a página foi para outro lugar",
+              "retorno": "301 é redirecionamento: só aconteceria se o sobrinho tivesse configurado a mudança de endereço."
+            }
+          ]
+        },
+        {
+          "texto": "Numa sexta lotada, o banco de dados do site cai e nenhuma página abre.",
+          "pergunta": "Que família de código aparece?",
+          "opcoes": [
+            {
+              "texto": "5xx, erro do servidor",
+              "certa": true,
+              "retorno": "Isso. O cliente pediu certo; quem falhou foi o servidor."
+            },
+            {
+              "texto": "4xx, erro do cliente",
+              "retorno": "O cliente não fez nada errado. Quando o problema é do servidor, é 5xx."
+            },
+            {
+              "texto": "2xx, deu tudo certo",
+              "retorno": "2xx é sucesso. Com o banco fora do ar, não deu certo."
+            }
+          ]
+        },
+        {
+          "texto": "O cliente põe um X-Burger no carrinho, vai para outra página e o carrinho continua lá.",
+          "pergunta": "Como o site lembra dele, se o HTTP não tem memória?",
+          "opcoes": [
+            {
+              "texto": "Com um cookie que guarda a sessão",
+              "certa": true,
+              "retorno": "Certo. O HTTP é sem estado, como alguém que esquece tudo. O cookie é a pulseirinha que o navegador mostra a cada pedido."
+            },
+            {
+              "texto": "Com o IP do cliente, que nunca muda",
+              "retorno": "IP muda e é dividido (pense no NAT da casa inteira). Quem mantém a sessão é o cookie."
+            },
+            {
+              "texto": "Com o TTL, que marca cada visita",
+              "retorno": "TTL é a vida do pacote na rede; não tem nada a ver com carrinho. Quem lembra é o cookie."
+            }
+          ]
+        },
+        {
+          "texto": "Na hora de pagar, aparece o cadeado do HTTPS.",
+          "pergunta": "O que o HTTPS (com TLS) garante?",
+          "opcoes": [
+            {
+              "texto": "Sigilo, integridade e autenticidade",
+              "certa": true,
+              "retorno": "Isso. Ninguém lê no caminho, ninguém altera sem ser notado e o site é mesmo quem diz ser."
+            },
+            {
+              "texto": "Velocidade, cache e menos anúncios",
+              "retorno": "O cadeado não acelera nem bloqueia anúncio. Ele protege: sigilo, integridade e autenticidade."
+            },
+            {
+              "texto": "Que o site nunca vai sair do ar",
+              "retorno": "HTTPS não impede o servidor de cair. Ele protege a conversa."
+            }
+          ]
+        },
+        {
+          "texto": "O sobrinho configura o domínio e precisa apontar o nome para o IPv4 do servidor.",
+          "pergunta": "Qual registro DNS ele usa?",
+          "opcoes": [
+            {
+              "texto": "Registro A",
+              "certa": true,
+              "retorno": "Certo. A = endereço IPv4. Para IPv6 seria AAAA (quatro vezes maior)."
+            },
+            {
+              "texto": "Registro MX",
+              "retorno": "MX diz qual servidor recebe os E-MAILS do domínio."
+            },
+            {
+              "texto": "Registro AAAA",
+              "retorno": "AAAA é para IPv6. Para IPv4, é o registro A."
+            }
+          ]
+        },
+        {
+          "texto": "Um computador sem nada guardado no cache procura www.lanchedarosa.com.br.",
+          "pergunta": "Em que ordem os servidores DNS são consultados?",
+          "opcoes": [
+            {
+              "texto": "Raiz, depois .br, depois o autoritativo",
+              "certa": true,
+              "retorno": "Isso. A raiz indica quem cuida do .br; o .br indica o autoritativo; o autoritativo dá o IP."
+            },
+            {
+              "texto": "Autoritativo, depois .br, depois a raiz",
+              "retorno": "Ordem invertida. Sem cache, ninguém sabe quem é o autoritativo; começa-se pela raiz."
+            },
+            {
+              "texto": ".br, depois a raiz, depois o autoritativo",
+              "retorno": "Quem diz onde está o servidor do .br é a raiz. Então a raiz vem primeiro."
+            }
+          ]
+        },
+        {
+          "texto": "A Dona Rosa quer que lanche.com.br seja apelido do site e que os e-mails da lanchonete cheguem no servidor certo.",
+          "pergunta": "Quais registros usar?",
+          "opcoes": [
+            {
+              "texto": "CNAME para o apelido e MX para o e-mail",
+              "certa": true,
+              "retorno": "Certo. CNAME = apelido de outro nome. MX = servidor de e-mail do domínio."
+            },
+            {
+              "texto": "MX para o apelido e CNAME para o e-mail",
+              "retorno": "Trocou os dois. Apelido é CNAME; e-mail é MX."
+            },
+            {
+              "texto": "NS para o apelido e AAAA para o e-mail",
+              "retorno": "NS indica o servidor autoritativo e AAAA é IPv6. Apelido é CNAME e e-mail é MX."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: o fragmento (#) não vai ao servidor. 2xx sucesso, 3xx redirecionamento, 4xx erro do cliente, 5xx erro do servidor. HTTP é sem estado; o cookie mantém a sessão. HTTPS = sigilo, integridade e autenticidade. DNS: raiz, TLD, autoritativo. Registros: A (IPv4), AAAA (IPv6), CNAME (apelido), MX (e-mail), NS (autoritativo)."
+    },
+    {
+      "titulo": "Correio, arquivos e terminal",
+      "resumo": "Um dia na secretaria da faculdade: e-mails, envio de arquivos e acesso ao servidor de longe. Assunto: SMTP, IMAP, POP3, FTP, SFTP, Telnet e SSH.",
+      "cenas": [
+        {
+          "texto": "O Rafa escreve um e-mail no Outlook e clica em Enviar.",
+          "pergunta": "Que protocolo leva a mensagem do Outlook até o servidor dele?",
+          "opcoes": [
+            {
+              "texto": "SMTP, na porta 587",
+              "certa": true,
+              "retorno": "Isso. SMTP é o carteiro que ENVIA. Do programa do usuário até o servidor, a porta é 587."
+            },
+            {
+              "texto": "IMAP, na porta 143",
+              "retorno": "IMAP serve para LER e sincronizar. Para enviar, é SMTP."
+            },
+            {
+              "texto": "POP3, na porta 110",
+              "retorno": "POP3 serve para BAIXAR mensagens. Para enviar, é SMTP."
+            }
+          ]
+        },
+        {
+          "texto": "O servidor do Rafa agora repassa o e-mail para o servidor do destinatário, em outra empresa.",
+          "pergunta": "Qual protocolo e porta entre servidores?",
+          "opcoes": [
+            {
+              "texto": "SMTP, na porta 25",
+              "certa": true,
+              "retorno": "Certo. Entre servidores continua sendo SMTP, na porta 25."
+            },
+            {
+              "texto": "SMTP, na porta 587",
+              "retorno": "587 é do cliente para o servidor. Entre servidores, a porta é 25."
+            },
+            {
+              "texto": "IMAP, na porta 993",
+              "retorno": "IMAP é para ler. Servidor entregando a outro servidor usa SMTP."
+            }
+          ]
+        },
+        {
+          "texto": "A Bia lê os e-mails no celular e no notebook. Ela quer ver as mesmas pastas e as mesmas mensagens lidas nos dois.",
+          "pergunta": "Qual protocolo de leitura ela deve usar?",
+          "opcoes": [
+            {
+              "texto": "IMAP, que sincroniza com o servidor",
+              "certa": true,
+              "retorno": "Isso. Com IMAP, tudo fica no servidor e os aparelhos só mostram o mesmo estado."
+            },
+            {
+              "texto": "POP3, que baixa e tira do servidor",
+              "retorno": "Com POP3, o e-mail baixado num aparelho some do outro. Para sincronizar, IMAP."
+            },
+            {
+              "texto": "SMTP, que também serve para ler",
+              "retorno": "SMTP só envia. Ler é com IMAP ou POP3."
+            }
+          ]
+        },
+        {
+          "texto": "O professor envia as provas para o servidor da faculdade. Antigamente usava FTP.",
+          "pergunta": "Por que trocar o FTP pelo SFTP?",
+          "opcoes": [
+            {
+              "texto": "O FTP manda até a senha sem criptografia",
+              "certa": true,
+              "retorno": "Certo. No FTP, qualquer um no caminho pode ler usuário, senha e arquivos. O SFTP vai protegido pelo SSH."
+            },
+            {
+              "texto": "O SFTP é mais rápido por usar o UDP",
+              "retorno": "O SFTP roda sobre SSH, que usa TCP. A vantagem é a segurança, não a velocidade."
+            },
+            {
+              "texto": "O FTP só envia arquivos de texto puro",
+              "retorno": "O FTP envia qualquer arquivo. O problema dele é mandar tudo sem criptografia."
+            }
+          ]
+        },
+        {
+          "texto": "Para mexer no servidor de longe, o técnico ainda usa Telnet, na porta 23.",
+          "pergunta": "O que usar no lugar, e em qual porta?",
+          "opcoes": [
+            {
+              "texto": "SSH, na porta 22",
+              "certa": true,
+              "retorno": "Isso. O SSH faz o mesmo que o Telnet, mas com tudo criptografado."
+            },
+            {
+              "texto": "FTP, na porta 21",
+              "retorno": "FTP transfere arquivos e também não tem criptografia. Para terminal remoto seguro, SSH."
+            },
+            {
+              "texto": "HTTP, na porta 80",
+              "retorno": "HTTP é para páginas web, não para comandar o servidor. O substituto do Telnet é o SSH."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: SMTP envia (587 do cliente para o servidor; 25 entre servidores). IMAP sincroniza; POP3 baixa. FTP e Telnet mandam tudo sem criptografia: troque por SFTP e SSH (porta 22). Telnet é a porta 23."
     }
   ],
   "jogos": [

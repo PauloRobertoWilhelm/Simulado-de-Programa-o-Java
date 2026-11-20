@@ -102,7 +102,7 @@
       "options": [
         "Teste exploratório",
         "Teste baseado em checklist",
-        "Teste de carga",
+        "Teste de carga com muitos usuários juntos",
         "Teste de regressão"
       ],
       "correct": 0,
@@ -251,16 +251,16 @@
           "pergunta": "Qual técnica você usa?",
           "opcoes": [
             {
-              "texto": "Partição de Equivalência e Valor Limite",
+              "texto": "Partição de equivalência e valor limite",
               "certa": true,
               "retorno": "Certo. Você agrupa os valores e foca as fronteiras."
             },
             {
-              "texto": "Teste de carga",
+              "texto": "Teste de carga com muitos usuários juntos",
               "retorno": "Carga mede quantos acessos o sistema aguenta, e não regras de valor."
             },
             {
-              "texto": "Testar valores ao acaso",
+              "texto": "Testar valores sorteados ao acaso",
               "retorno": "Assim você pode deixar passar justamente o valor da fronteira."
             }
           ]

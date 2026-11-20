@@ -569,7 +569,7 @@
       "statement": "O que a linha contínua entre um ator e um caso de uso indica?",
       "options": [
         "Que o caso de uso é opcional para o ator",
-        "Que aquele ator participa daquele caso de uso",
+        "Que o ator participa daquele caso de uso",
         "Que o ator herda tudo do caso de uso",
         "Que o caso de uso roda antes do login"
       ],
@@ -1468,7 +1468,7 @@
       "topic": "validacao",
       "statement": "Segundo a aula, para que são usadas as listas de verificação?",
       "options": [
-        "Escrever o código seguindo um padrão",
+        "Escrever o código seguindo um padrão único",
         "Revisar se os requisitos estão completos",
         "Desenhar as telas antes de programar",
         "Dividir o sistema em níveis menores"
@@ -1499,16 +1499,16 @@
           "pergunta": "Qual é o primeiro passo?",
           "opcoes": [
             {
-              "texto": "Conversar com alunos, instrutores e atendentes para levantar as necessidades.",
+              "texto": "Conversar com alunos, instrutores e atendentes.",
               "certa": true,
               "retorno": "Isso. O levantamento vem primeiro: sem ouvir quem usa, o sistema nasce desalinhado."
             },
             {
-              "texto": "Escolher a linguagem e abrir o editor.",
+              "texto": "Escolher a linguagem e já abrir o editor.",
               "retorno": "Ainda não. Programar antes de entender o problema aumenta falhas e custo."
             },
             {
-              "texto": "Desenhar as telas finais.",
+              "texto": "Desenhar as telas finais e mostrar ao dono.",
               "retorno": "Cedo demais. Primeiro descubra o que cada perfil precisa fazer."
             }
           ]
@@ -1537,16 +1537,16 @@
           "pergunta": "Qual é um bom critério?",
           "opcoes": [
             {
-              "texto": "O cancelamento é aceito até 1 hora antes da aula e a vaga volta a ficar disponível.",
+              "texto": "Cancelar até 1 hora antes da aula libera a vaga.",
               "certa": true,
               "retorno": "Bom critério: dá para testar e dizer se passou ou não."
             },
             {
-              "texto": "A tela deve ser bonita e fácil.",
+              "texto": "A tela de cancelamento deve ser bonita e fácil.",
               "retorno": "“Bonita” não dá para testar. O critério precisa ser verificável."
             },
             {
-              "texto": "O sistema deve usar banco de dados relacional.",
+              "texto": "O sistema deve usar um banco de dados relacional.",
               "retorno": "Isso é decisão técnica. Não diz quando a história está pronta."
             }
           ]
@@ -1563,16 +1563,16 @@
           "pergunta": "Quem deve ficar como ator?",
           "opcoes": [
             {
-              "texto": "Motorista, atendente e o serviço externo de mapas.",
+              "texto": "Motorista, atendente e o serviço de mapas.",
               "certa": true,
               "retorno": "Certo. Ator fica fora do sistema e interage com ele. Pode ser pessoa ou outro sistema."
             },
             {
-              "texto": "O banco de dados interno.",
+              "texto": "O banco de dados interno e a tela de login.",
               "retorno": "O banco fica dentro do sistema, então não é ator."
             },
             {
-              "texto": "O botão de salvar.",
+              "texto": "O botão de salvar e o formulário de entrega.",
               "retorno": "Botão é parte da interface, não um papel externo."
             }
           ]
@@ -1646,12 +1646,12 @@
           "pergunta": "Como ficam esses relacionamentos?",
           "opcoes": [
             {
-              "texto": "Conferir horário é «include»; o lembrete por SMS é «extend»",
+              "texto": "Conferir horário é «include»; o SMS é «extend»",
               "certa": true,
               "retorno": "Isso: sempre é include, às vezes é extend."
             },
             {
-              "texto": "Os dois são «include»",
+              "texto": "Os dois são «include», porque sempre acontecem",
               "retorno": "O lembrete é opcional, então não pode ser include."
             },
             {
@@ -1665,16 +1665,16 @@
           "pergunta": "O que melhora essa história?",
           "opcoes": [
             {
-              "texto": "Acrescentar o “para que” e critérios de aceite testáveis",
+              "texto": "Acrescentar o “para que” e critérios de aceite",
               "certa": true,
               "retorno": "Certo. Falta o benefício, por exemplo “para não precisar ligar”, e os critérios, como “mostra só horários livres”."
             },
             {
-              "texto": "Trocar “paciente” por “sistema”",
+              "texto": "Trocar “paciente” por “sistema” no começo da frase",
               "retorno": "A história é do ponto de vista do usuário, não do sistema."
             },
             {
-              "texto": "Acrescentar a linguagem de programação",
+              "texto": "Acrescentar a linguagem de programação usada",
               "retorno": "Isso é decisão técnica, não faz parte da história."
             }
           ]
@@ -1684,7 +1684,7 @@
           "pergunta": "Qual técnica usar?",
           "opcoes": [
             {
-              "texto": "Decomposição funcional, quebrando em partes menores",
+              "texto": "Decomposição funcional",
               "certa": true,
               "retorno": "Isso: marcar, remarcar, cancelar e consultar horários livres, em níveis."
             },
@@ -1700,6 +1700,834 @@
         }
       ],
       "fim": "Ator, include, extend, história de usuário e decomposição: o 2º bimestre inteiro aplicado num caso só."
+    },
+    {
+      "titulo": "A biblioteca da faculdade",
+      "resumo": "A bibliotecária Sônia quer um sistema de empréstimos, e você é o analista. Assunto (slide 05): ator, caso de uso, fronteira do sistema, cenário principal e exceções.",
+      "cenas": [
+        {
+          "texto": "Primeira reunião com a Sônia. Você vai especificar os requisitos funcionais com casos de uso, na ordem que a aula ensinou.",
+          "pergunta": "Por onde você começa?",
+          "opcoes": [
+            {
+              "texto": "Identificar os atores",
+              "certa": true,
+              "retorno": "Isso. A ordem é: atores, casos de uso, cenários, exceções. Primeiro, descobrir QUEM usa o sistema."
+            },
+            {
+              "texto": "Escrever as exceções",
+              "retorno": "Exceções são o último passo. Sem saber quem usa e para quê, não dá para saber o que pode dar errado."
+            },
+            {
+              "texto": "Descrever os cenários",
+              "retorno": "Cenários vêm depois dos atores e dos casos de uso. Comece pelos atores."
+            }
+          ]
+        },
+        {
+          "texto": "Quem usa o sistema: alunos, a Sônia e o sistema de matrícula da faculdade, que informa se o aluno está com a matrícula ativa.",
+          "pergunta": "O sistema de matrícula é um ator?",
+          "opcoes": [
+            {
+              "texto": "Sim: ator é papel e pode ser outro sistema",
+              "certa": true,
+              "retorno": "Certo. Ator é qualquer coisa de FORA que conversa com o sistema: pessoa, outro sistema, sensor, máquina."
+            },
+            {
+              "texto": "Não: ator precisa ser sempre uma pessoa física",
+              "retorno": "Ator é um papel externo. Outro sistema, um sensor ou uma máquina também podem ser atores."
+            },
+            {
+              "texto": "Não: ele fica dentro do retângulo",
+              "retorno": "Dentro do retângulo ficam os casos de uso. O sistema de matrícula é externo, então é ator e fica fora."
+            }
+          ]
+        },
+        {
+          "texto": "A Sônia cadastra livros, mas às vezes também pega livros emprestados, como qualquer leitor.",
+          "pergunta": "Como ela aparece no diagrama?",
+          "opcoes": [
+            {
+              "texto": "Como dois atores: Bibliotecária e Leitor",
+              "certa": true,
+              "retorno": "Isso. Ator é PAPEL, não pessoa. A mesma pessoa com dois papéis vira dois atores."
+            },
+            {
+              "texto": "Como um ator só, chamado Sônia",
+              "retorno": "Ator não leva nome de pessoa: se a Sônia sair do emprego, o diagrama ficaria errado. Use os papéis."
+            },
+            {
+              "texto": "Como um caso de uso dentro do sistema",
+              "retorno": "Caso de uso é o que o sistema FAZ (um objetivo). A Sônia é quem usa: é ator."
+            }
+          ]
+        },
+        {
+          "texto": "Hora de dar nome ao caso de uso principal da biblioteca.",
+          "pergunta": "Qual é o melhor nome?",
+          "opcoes": [
+            {
+              "texto": "Emprestar livro",
+              "certa": true,
+              "retorno": "Certo. Nome de caso de uso começa com VERBO e diz o objetivo do ator."
+            },
+            {
+              "texto": "Empréstimo",
+              "retorno": "Falta o verbo. Caso de uso é uma ação: “Emprestar livro”."
+            },
+            {
+              "texto": "Tela de empréstimo",
+              "retorno": "Caso de uso não é tela. É o objetivo do ator, com verbo: “Emprestar livro”."
+            }
+          ]
+        },
+        {
+          "texto": "Você desenha o retângulo do sistema da biblioteca.",
+          "pergunta": "Onde ficam os atores e os casos de uso?",
+          "opcoes": [
+            {
+              "texto": "Atores fora; casos de uso dentro",
+              "certa": true,
+              "retorno": "Isso. O retângulo é a fronteira do sistema: o que ele faz fica dentro, quem usa fica fora."
+            },
+            {
+              "texto": "Atores dentro; casos de uso fora",
+              "retorno": "Ao contrário. Os atores são externos; os casos de uso são o que o sistema faz, então ficam dentro."
+            },
+            {
+              "texto": "Tudo dentro do retângulo, junto",
+              "retorno": "Se o ator ficasse dentro, ele seria parte do sistema. Ator é sempre externo."
+            }
+          ]
+        },
+        {
+          "texto": "Cenário principal de Emprestar livro: o aluno entrega o livro e a carteirinha, a Sônia lê o código, o sistema registra e mostra a data de devolução.",
+          "pergunta": "Qual destes é uma exceção?",
+          "opcoes": [
+            {
+              "texto": "O aluno tem livro atrasado e é bloqueado",
+              "certa": true,
+              "retorno": "Certo. Exceção é o que foge do caminho feliz: algo deu errado ou é incomum."
+            },
+            {
+              "texto": "O sistema mostra a data de devolução",
+              "retorno": "Isso é o caminho feliz, tudo dando certo. Faz parte do cenário principal."
+            },
+            {
+              "texto": "A Sônia lê o código de barras do livro",
+              "retorno": "Isso é um passo normal do cenário principal, não uma exceção."
+            }
+          ]
+        },
+        {
+          "texto": "No diagrama, uma linha contínua liga o ator Leitor ao caso de uso Emprestar livro.",
+          "pergunta": "O que essa linha significa?",
+          "opcoes": [
+            {
+              "texto": "O Leitor participa desse caso de uso",
+              "certa": true,
+              "retorno": "Isso. A linha contínua é a associação: este ator usa este caso de uso."
+            },
+            {
+              "texto": "O caso de uso é opcional para o Leitor",
+              "retorno": "“Às vezes” é o «extend», com seta tracejada. A linha contínua só diz quem participa."
+            },
+            {
+              "texto": "O Leitor herda esse caso de uso",
+              "retorno": "Herança é generalização, com seta de triângulo vazado. A linha contínua é participação."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: ordem = atores, casos de uso, cenários, exceções. Ator é papel externo (pessoa, sistema, sensor); a mesma pessoa pode ser dois atores. Nome de caso de uso começa com verbo. Atores fora do retângulo, casos de uso dentro. Cenário principal = tudo dá certo; exceção = erro ou situação incomum. Linha contínua = o ator participa."
+    },
+    {
+      "titulo": "O delivery de marmitas",
+      "resumo": "A Marmitaria da Tia Neide quer um aplicativo de pedidos. Você decide como ligar os casos de uso. Assunto (slide 05): include, extend, generalização e as setas.",
+      "cenas": [
+        {
+          "texto": "Todo pedido do app precisa SEMPRE calcular o frete, sem exceção.",
+          "pergunta": "Como ligar Fazer Pedido e Calcular Frete?",
+          "opcoes": [
+            {
+              "texto": "«include», porque acontece sempre",
+              "certa": true,
+              "retorno": "Isso. Include = SEMPRE. Toda vez que alguém faz pedido, o frete é calculado junto."
+            },
+            {
+              "texto": "«extend», porque é só um detalhe",
+              "retorno": "Extend é para o que acontece ÀS VEZES. O frete acontece sempre, então é include."
+            },
+            {
+              "texto": "Generalização, porque frete é pedido",
+              "retorno": "Generalização é herança (“é um tipo de”). Frete não é um tipo de pedido; ele faz parte de todo pedido."
+            }
+          ]
+        },
+        {
+          "texto": "Você vai desenhar a seta tracejada desse «include».",
+          "pergunta": "Para onde ela aponta?",
+          "opcoes": [
+            {
+              "texto": "De Fazer Pedido para Calcular Frete",
+              "certa": true,
+              "retorno": "Certo. No include, a seta sai do caso BASE e aponta para o INCLUÍDO: “Fazer Pedido inclui Calcular Frete”."
+            },
+            {
+              "texto": "De Calcular Frete para Fazer Pedido",
+              "retorno": "Essa direção é a do extend. No include, a seta sai do base (Fazer Pedido)."
+            },
+            {
+              "texto": "Do Cliente para Calcular Frete",
+              "retorno": "Ator se liga a caso de uso por linha contínua, sem «include». A seta tracejada liga dois casos de uso."
+            }
+          ]
+        },
+        {
+          "texto": "Só às vezes o cliente aplica um cupom de desconto no pedido.",
+          "pergunta": "Qual relacionamento e para onde vai a seta?",
+          "opcoes": [
+            {
+              "texto": "«extend», de Aplicar Cupom para Fazer Pedido",
+              "certa": true,
+              "retorno": "Isso. Extend = ÀS VEZES, e a seta sai do OPCIONAL e aponta para o base."
+            },
+            {
+              "texto": "«extend», de Fazer Pedido para Aplicar Cupom",
+              "retorno": "O tipo está certo, mas a seta está invertida. No extend, ela sai do opcional (Aplicar Cupom)."
+            },
+            {
+              "texto": "«include», de Fazer Pedido para Aplicar Cupom",
+              "retorno": "Include obrigaria TODO pedido a ter cupom. Como é só às vezes, é extend."
+            }
+          ]
+        },
+        {
+          "texto": "O app tem Cliente e Cliente VIP. O VIP faz tudo o que o Cliente faz e ainda pode Agendar Marmitas da Semana.",
+          "pergunta": "Como representar isso?",
+          "opcoes": [
+            {
+              "texto": "Generalização: o VIP herda do Cliente",
+              "certa": true,
+              "retorno": "Certo. O filho (VIP) herda os casos de uso do pai (Cliente) e ainda tem os seus."
+            },
+            {
+              "texto": "«include» do Cliente VIP para o Cliente",
+              "retorno": "Include liga casos de uso, não atores. Entre atores, “é um tipo de” é generalização."
+            },
+            {
+              "texto": "Dois atores sem ligação nenhuma",
+              "retorno": "Assim você teria de repetir todos os casos de uso do Cliente no VIP. A generalização evita isso."
+            }
+          ]
+        },
+        {
+          "texto": "Você vai desenhar a seta da generalização (linha com triângulo vazado na ponta).",
+          "pergunta": "Ela sai de quem e aponta para quem?",
+          "opcoes": [
+            {
+              "texto": "Sai do VIP e aponta para o Cliente",
+              "certa": true,
+              "retorno": "Isso. A seta sai do FILHO e aponta para o PAI, como na aula: sai do Cliente e aponta para o Usuário."
+            },
+            {
+              "texto": "Sai do Cliente e aponta para o VIP",
+              "retorno": "Invertido. Quem herda (o filho, VIP) é quem aponta para o pai."
+            },
+            {
+              "texto": "Sai do sistema e aponta para os dois",
+              "retorno": "O sistema não entra nessa seta. Ela liga o filho (VIP) ao pai (Cliente)."
+            }
+          ]
+        },
+        {
+          "texto": "Em dias de chuva, o entregador pode registrar atraso na entrega. Nos outros dias, não.",
+          "pergunta": "Registrar Atraso é o quê em relação a Entregar Pedido?",
+          "opcoes": [
+            {
+              "texto": "«extend»: só em certas condições",
+              "certa": true,
+              "retorno": "Certo. Acontece só às vezes, quando chove. Isso é extend."
+            },
+            {
+              "texto": "«include»: faz parte de toda entrega",
+              "retorno": "Se fosse include, toda entrega teria atraso registrado, até em dia de sol."
+            },
+            {
+              "texto": "Um ator novo, chamado Chuva",
+              "retorno": "Chuva é uma condição, não alguém que usa o sistema. A condição aparece no extend."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: include = SEMPRE, seta do caso base para o incluído. Extend = ÀS VEZES, seta do opcional para o base. Generalização = herança: o filho faz tudo do pai e mais o seu; a seta (triângulo vazado) sai do filho e aponta para o pai."
+    },
+    {
+      "titulo": "O quadro de cartões do Carona UNIPAR",
+      "resumo": "A equipe do app de caronas da faculdade escreve histórias de usuário. Ajude a deixar cada cartão certo. Assunto (slide 05): histórias de usuário e critérios de aceite.",
+      "cenas": [
+        {
+          "texto": "Primeiro cartão: “Como aluno, quero oferecer carona.”",
+          "pergunta": "O que está faltando?",
+          "opcoes": [
+            {
+              "texto": "O benefício, a parte do “para que”",
+              "certa": true,
+              "retorno": "Isso. O formato é: Como [persona], quero [ação] para que [benefício]. Sem o benefício, ninguém sabe POR QUE isso importa."
+            },
+            {
+              "texto": "A persona, a parte do “como”",
+              "retorno": "A persona está lá: “aluno”. O que falta é o benefício, o “para que”."
+            },
+            {
+              "texto": "A tela e o banco de dados usados",
+              "retorno": "História de usuário não fala de tecnologia. Ela fala da necessidade, com o benefício."
+            }
+          ]
+        },
+        {
+          "texto": "A equipe reescreveu o cartão de três jeitos.",
+          "pergunta": "Qual versão está no formato certo?",
+          "opcoes": [
+            {
+              "texto": "Como aluno, quero oferecer carona para dividir a gasolina",
+              "certa": true,
+              "retorno": "Certo: persona (aluno), ação (oferecer carona) e benefício (dividir a gasolina)."
+            },
+            {
+              "texto": "O sistema deve permitir que o aluno ofereça carona",
+              "retorno": "Esse é o jeito de requisito tradicional. História de usuário fala do ponto de vista do usuário: “Como aluno, quero...”."
+            },
+            {
+              "texto": "Como sistema, quero salvar a carona para o aluno ver depois",
+              "retorno": "A persona tem de ser um tipo de USUÁRIO, não o sistema."
+            }
+          ]
+        },
+        {
+          "texto": "Agora a equipe monta o cartão completo, igual ao modelo da aula.",
+          "pergunta": "O que vai no topo e o que vai embaixo da frase?",
+          "opcoes": [
+            {
+              "texto": "Topo: número e título; embaixo: critérios de aceite",
+              "certa": true,
+              "retorno": "Isso. Número e título no topo, a história no meio e os critérios de aceite (1, 2... n) embaixo."
+            },
+            {
+              "texto": "Topo: critérios de aceite; embaixo: número e título",
+              "retorno": "Invertido. O número e o título identificam o cartão, por isso ficam no topo."
+            },
+            {
+              "texto": "Topo: nome do programador; embaixo: o prazo final",
+              "retorno": "O cartão da aula não leva programador nem prazo. Leva número e título, história e critérios de aceite."
+            }
+          ]
+        },
+        {
+          "texto": "Falta escrever os critérios de aceite da história de oferecer carona.",
+          "pergunta": "Qual é um bom critério de aceite?",
+          "opcoes": [
+            {
+              "texto": "A carona some da lista quando as vagas acabam",
+              "certa": true,
+              "retorno": "Certo. Dá para TESTAR: lota as vagas e confere se a carona sumiu. Critério bom é testável."
+            },
+            {
+              "texto": "O app deve ser rápido e agradável de usar",
+              "retorno": "“Rápido” e “agradável” quanto? Não dá para testar. Critério de aceite precisa ser testável."
+            },
+            {
+              "texto": "A tela de caronas deve ficar bonita no celular",
+              "retorno": "“Bonita” depende de quem olha. Não dá para dizer, num teste, se passou ou não."
+            }
+          ]
+        },
+        {
+          "texto": "Alguém escreve: “Como aluno, quero usar o app para resolver toda a minha vida de transporte.”",
+          "pergunta": "Qual é o problema dessa história?",
+          "opcoes": [
+            {
+              "texto": "É grande demais; precisa virar histórias menores",
+              "certa": true,
+              "retorno": "Isso. Uma história tem de caber num pedaço de trabalho. Divida: oferecer carona, buscar carona, avaliar motorista..."
+            },
+            {
+              "texto": "Falta dizer qual linguagem de programação usar",
+              "retorno": "História de usuário não fala de tecnologia. O problema é o tamanho."
+            },
+            {
+              "texto": "Está perfeita; quanto mais ampla, melhor",
+              "retorno": "História ampla demais não dá para estimar nem testar. Precisa ser dividida."
+            }
+          ]
+        },
+        {
+          "texto": "O professor pergunta à equipe por que usar histórias de usuário.",
+          "pergunta": "Segundo a aula, qual é a principal vantagem?",
+          "opcoes": [
+            {
+              "texto": "Facilitar a conversa entre usuários e equipe",
+              "certa": true,
+              "retorno": "Certo. Escritas na língua do usuário, sem termo técnico, todo mundo entende e conversa sobre elas. Também ficam mais rastreáveis."
+            },
+            {
+              "texto": "Dispensar a conversa com o usuário final do app",
+              "retorno": "É o contrário: as histórias existem para FACILITAR essa conversa."
+            },
+            {
+              "texto": "Substituir os testes depois do sistema pronto",
+              "retorno": "Os critérios de aceite ajudam a testar, mas não substituem os testes."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: Como [persona], quero [ação] para que [benefício]. A persona é um tipo de usuário, nunca o sistema. Cartão: número e título no topo, a história, e critérios de aceite embaixo. Critério de aceite precisa ser testável. História grande demais deve ser dividida. Vantagem: facilita a comunicação e deixa os requisitos mais compreensíveis e rastreáveis."
+    },
+    {
+      "titulo": "A fila do caixa da cafeteria",
+      "resumo": "A cafeteria da faculdade tem fila enorme no caixa e ninguém entende o caminho do pedido. Você desenha o processo. Assunto (slide 06): modelagem de processos.",
+      "cenas": [
+        {
+          "texto": "O dono quer ver, passo a passo, o caminho do pedido e quem faz cada tarefa.",
+          "pergunta": "Que técnica mostra isso?",
+          "opcoes": [
+            {
+              "texto": "Modelagem de processos",
+              "certa": true,
+              "retorno": "Isso. Ela representa o fluxo de atividades: como as tarefas são feitas e por quem."
+            },
+            {
+              "texto": "Modelagem de domínio",
+              "retorno": "Domínio mostra as COISAS do negócio e como se relacionam, não o passo a passo."
+            },
+            {
+              "texto": "Decomposição funcional",
+              "retorno": "Decomposição quebra um recurso em pedaços menores, em níveis. Para o fluxo das tarefas, use processos."
+            }
+          ]
+        },
+        {
+          "texto": "O diagrama começa quando o cliente termina de comer e vai ao caixa, como o “Refeição Concluída” do exemplo do restaurante.",
+          "pergunta": "O que é esse ponto de partida?",
+          "opcoes": [
+            {
+              "texto": "Um evento de início",
+              "certa": true,
+              "retorno": "Certo. Algo acontece e dispara o processo: é o evento de início."
+            },
+            {
+              "texto": "Uma tarefa do caixa",
+              "retorno": "Tarefa é algo que alguém FAZ. O que dispara o processo é um evento."
+            },
+            {
+              "texto": "Uma faixa do cliente",
+              "retorno": "Faixa mostra QUEM faz. O ponto de partida é o evento de início."
+            }
+          ]
+        },
+        {
+          "texto": "O diagrama tem duas faixas horizontais: Cliente e Atendente de Caixa.",
+          "pergunta": "Para que servem as faixas?",
+          "opcoes": [
+            {
+              "texto": "Mostrar quem é responsável por cada tarefa",
+              "certa": true,
+              "retorno": "Isso. Cada faixa é um participante; a tarefa desenhada nela é responsabilidade dele."
+            },
+            {
+              "texto": "Mostrar a ordem em que os eventos terminam",
+              "retorno": "A ordem vem das setas. As faixas dizem QUEM faz cada tarefa."
+            },
+            {
+              "texto": "Separar as tarefas rápidas das demoradas",
+              "retorno": "Faixa não mede tempo. Ela separa os responsáveis."
+            }
+          ]
+        },
+        {
+          "texto": "Entre as faixas do Cliente e do Atendente há setas tracejadas: comanda, valor, pagamento, comprovante.",
+          "pergunta": "O que essas setas representam?",
+          "opcoes": [
+            {
+              "texto": "Mensagens trocadas entre os participantes",
+              "certa": true,
+              "retorno": "Certo. A seta tracejada é a troca de mensagens entre quem participa do processo."
+            },
+            {
+              "texto": "Tarefas que podem ser puladas no caminho",
+              "retorno": "Tracejado aqui não quer dizer “opcional”. São mensagens entre os participantes."
+            },
+            {
+              "texto": "Herança entre o cliente e o atendente",
+              "retorno": "Herança é coisa de diagrama de caso de uso. No processo, a seta tracejada é mensagem."
+            }
+          ]
+        },
+        {
+          "texto": "Na faixa do Atendente: Receber Comanda → ? → Receber Pagamento → Entregar Comprovante.",
+          "pergunta": "Que tarefa entra no lugar do “?”",
+          "opcoes": [
+            {
+              "texto": "Calcular o valor total",
+              "certa": true,
+              "retorno": "Isso. Primeiro o atendente recebe a comanda e calcula o total; só depois o cliente paga."
+            },
+            {
+              "texto": "Entregar o comprovante",
+              "retorno": "O comprovante só sai depois do pagamento. Ele é o último passo do atendente."
+            },
+            {
+              "texto": "Encerrar todo o processo",
+              "retorno": "Ainda faltam o pagamento e o comprovante. Depois de receber a comanda, vem o cálculo."
+            }
+          ]
+        },
+        {
+          "texto": "O comprovante foi entregue.",
+          "pergunta": "Como o processo termina no diagrama?",
+          "opcoes": [
+            {
+              "texto": "Com um evento de fim, como Pagamento Recebido",
+              "certa": true,
+              "retorno": "Certo. Assim como começou com um evento, o processo termina com um evento de fim."
+            },
+            {
+              "texto": "Com a faixa do Atendente acabando na direita",
+              "retorno": "A faixa é só o espaço de quem faz. O fim é marcado por um evento."
+            },
+            {
+              "texto": "Com uma seta tracejada voltando ao início",
+              "retorno": "Seta tracejada é mensagem. O fim do processo é um evento de fim."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: modelagem de processos mostra o fluxo das tarefas e quem faz cada uma. Começa num evento de início e termina num evento de fim. Faixas = responsáveis. Setas tracejadas = mensagens entre os participantes. Exemplo da aula: Receber Pagamento no restaurante (comanda, valor total, pagamento, comprovante)."
+    },
+    {
+      "titulo": "O sistema do laboratório em pedaços",
+      "resumo": "O coordenador pediu um sistema para “gerenciar o laboratório”. É grande demais para estimar. Você quebra o problema. Assunto (slide 06): decomposição funcional.",
+      "cenas": [
+        {
+          "texto": "O pedido inteiro é “Gerenciar Laboratório”. Ninguém consegue dizer quanto tempo leva.",
+          "pergunta": "Qual técnica usar primeiro?",
+          "opcoes": [
+            {
+              "texto": "Decomposição funcional",
+              "certa": true,
+              "retorno": "Isso. Ela pega um recurso grande e quebra em pedaços menores, organizados em níveis."
+            },
+            {
+              "texto": "Prototipação da tela",
+              "retorno": "Protótipo ajuda a validar com o usuário, mas não divide um recurso grande em partes."
+            },
+            {
+              "texto": "Lista de verificação",
+              "retorno": "Checklist revisa se falta algo. Para quebrar um recurso grande, use decomposição."
+            }
+          ]
+        },
+        {
+          "texto": "“Gerenciar Laboratório” é o nível 1. Agora você vai montar o nível 2.",
+          "pergunta": "Qual divisão faz sentido?",
+          "opcoes": [
+            {
+              "texto": "Reservar sala, Controlar máquinas, Registrar defeitos",
+              "certa": true,
+              "retorno": "Certo. São funções do mesmo tamanho, cada uma uma parte do todo."
+            },
+            {
+              "texto": "Botão salvar, Tela inicial e o banco de dados MySQL",
+              "retorno": "Isso é tela e tecnologia, não função do negócio. A decomposição divide o que o sistema FAZ."
+            },
+            {
+              "texto": "Reservar sala, Escolher horário, Clicar em confirmar",
+              "retorno": "Mistura níveis: “Escolher horário” e “Clicar em confirmar” são pedaços DE “Reservar sala”."
+            }
+          ]
+        },
+        {
+          "texto": "“Registrar defeitos” se divide em: Abrir chamado, Enviar foto do problema e Avisar o técnico.",
+          "pergunta": "Em que nível ficam esses três?",
+          "opcoes": [
+            {
+              "texto": "Nível 3",
+              "certa": true,
+              "retorno": "Isso. Nível 1 = Gerenciar Laboratório; nível 2 = Registrar defeitos; nível 3 = os pedaços dele."
+            },
+            {
+              "texto": "Nível 2",
+              "retorno": "O nível 2 é o próprio “Registrar defeitos”. Os pedaços dele ficam um nível abaixo: 3."
+            },
+            {
+              "texto": "Nível 1",
+              "retorno": "O nível 1 é o todo, “Gerenciar Laboratório”. Esses são pedaços de um pedaço: nível 3."
+            }
+          ]
+        },
+        {
+          "texto": "O coordenador pergunta por que essa divisão deixa o trabalho mais fácil.",
+          "pergunta": "Segundo a aula, como a decomposição reduz a complexidade?",
+          "opcoes": [
+            {
+              "texto": "Isolando funções em níveis hierárquicos",
+              "certa": true,
+              "retorno": "Certo. Cada pedaço fica isolado, e a equipe foca num componente de cada vez."
+            },
+            {
+              "texto": "Juntando todas as funções numa tela só",
+              "retorno": "É o contrário: ela separa, não junta."
+            },
+            {
+              "texto": "Trocando os requisitos por protótipos",
+              "retorno": "Protótipo é outra técnica. A decomposição isola funções em níveis."
+            }
+          ]
+        },
+        {
+          "texto": "Com os três níveis prontos, a equipe enxerga o sistema de outro jeito.",
+          "pergunta": "Que tipo de visão a decomposição oferece?",
+          "opcoes": [
+            {
+              "texto": "Uma visão granular, bem detalhada",
+              "certa": true,
+              "retorno": "Isso. Granular = em grãos pequenos, com detalhe. Dá para estimar e planejar cada pedaço."
+            },
+            {
+              "texto": "Uma visão geral, sem nenhum detalhe",
+              "retorno": "A visão geral é só o nível 1. A decomposição desce até o detalhe."
+            },
+            {
+              "texto": "Uma visão só das telas do sistema",
+              "retorno": "Decomposição divide funções, não telas."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: decomposição funcional quebra um recurso grande em pedaços menores, em níveis (1 = o todo, 2 = as partes, 3 = as partes das partes). Reduz a complexidade isolando funções, permite focar em componentes específicos e dá uma visão granular. Exemplos da aula: Gerenciamento de Conta do banco e Pintar uma sala."
+    },
+    {
+      "titulo": "O hotel da serra",
+      "resumo": "O Hotel da Serra vai ter sistema de reservas, mas ninguém na reunião fala a mesma língua. Assunto (slide 06): modelagem de domínio.",
+      "cenas": [
+        {
+          "texto": "Na reunião, um diz “hóspede”, outro “cliente” e outro “cadastrado”, todos para a mesma coisa. Ninguém se entende.",
+          "pergunta": "Que técnica ajuda?",
+          "opcoes": [
+            {
+              "texto": "Modelagem de domínio, padronizando os termos",
+              "certa": true,
+              "retorno": "Isso. Ela define os conceitos do negócio e o nome de cada um, e assim acaba a confusão."
+            },
+            {
+              "texto": "Modelagem de processos, desenhando faixas",
+              "retorno": "Processos mostram o fluxo das tarefas. O problema aqui são os NOMES das coisas: domínio."
+            },
+            {
+              "texto": "Prototipação, mostrando a tela de cadastro",
+              "retorno": "Uma tela não resolve três nomes para a mesma coisa. É preciso modelar o domínio."
+            }
+          ]
+        },
+        {
+          "texto": "Você lista as entidades do domínio do hotel: Conta, Perfil, Hotel, Acomodação, Reserva de Estadia...",
+          "pergunta": "Qual destes NÃO é uma entidade do domínio?",
+          "opcoes": [
+            {
+              "texto": "Botão Reservar Agora",
+              "certa": true,
+              "retorno": "Certo. Botão é coisa da tela. Entidade é um conceito do negócio, que existiria até no papel."
+            },
+            {
+              "texto": "Reserva de Estadia",
+              "retorno": "Reserva é um conceito do negócio do hotel: é entidade."
+            },
+            {
+              "texto": "Acomodação",
+              "retorno": "Acomodação (o quarto) é um conceito do negócio: é entidade."
+            }
+          ]
+        },
+        {
+          "texto": "Uma Reserva de Estadia tem um ou vários Hóspedes e uma ou várias Acomodações.",
+          "pergunta": "Como isso aparece no modelo de domínio?",
+          "opcoes": [
+            {
+              "texto": "Como relacionamentos com quantidade",
+              "certa": true,
+              "retorno": "Isso. O modelo liga as entidades e diz quantos de cada lado: um, um ou vários..."
+            },
+            {
+              "texto": "Como passos do cenário principal",
+              "retorno": "Cenário principal é de caso de uso. No domínio, isso é relacionamento entre entidades."
+            },
+            {
+              "texto": "Como critérios de aceite da reserva",
+              "retorno": "Critério de aceite é de história de usuário. No domínio, são relacionamentos."
+            }
+          ]
+        },
+        {
+          "texto": "No modelo da aula, uma Conta se liga a um Perfil.",
+          "pergunta": "Quantos Perfis uma Conta possui?",
+          "opcoes": [
+            {
+              "texto": "Um",
+              "certa": true,
+              "retorno": "Certo. Cada Conta tem um Perfil. (Já os Meios de Pagamento podem ser um ou vários.)"
+            },
+            {
+              "texto": "Nenhum",
+              "retorno": "Toda Conta tem Perfil no modelo da aula: um."
+            },
+            {
+              "texto": "Vários",
+              "retorno": "Vários são os Meios de Pagamento. Perfil é um só."
+            }
+          ]
+        },
+        {
+          "texto": "No fim da reunião, o gerente pergunta para que serviu tudo isso.",
+          "pergunta": "Segundo a aula, a modelagem de domínio minimiza o quê?",
+          "opcoes": [
+            {
+              "texto": "As ambiguidades",
+              "certa": true,
+              "retorno": "Isso. Com termos padronizados e relações claras, todo mundo entende o mesmo, e a consistência melhora."
+            },
+            {
+              "texto": "Os custos do servidor",
+              "retorno": "Modelagem de domínio não mexe em servidor. Ela reduz ambiguidades."
+            },
+            {
+              "texto": "As telas do sistema",
+              "retorno": "Ela nem fala de telas. Fala dos conceitos do negócio, e reduz ambiguidades."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: modelagem de domínio define os conceitos (entidades) do negócio e os relacionamentos entre eles, com quantidades. Ajuda a entender o universo do software, melhora a consistência e minimiza ambiguidades. Elemento de tela (botão) não é entidade. Exemplos da aula: e-commerce (Cliente faz Pedido com Produtos) e hotel."
+    },
+    {
+      "titulo": "A entrega da especificação",
+      "resumo": "Faltam dois dias para entregar a especificação do app da marmitaria. Você confere se está tudo certo. Assunto (slide 06): validação, gerenciamento, lista de verificação e prototipação.",
+      "cenas": [
+        {
+          "texto": "O estagiário pergunta qual é a diferença entre validar e gerenciar requisitos.",
+          "pergunta": "O que você responde?",
+          "opcoes": [
+            {
+              "texto": "Validar confere; gerenciar mantém organizado",
+              "certa": true,
+              "retorno": "Isso. Validar = conferir se estão certos e completos. Gerenciar = manter organizados ao longo do projeto."
+            },
+            {
+              "texto": "Validar programa; gerenciar testa o código",
+              "retorno": "As duas tratam de requisitos, não de código. Validar confere; gerenciar organiza."
+            },
+            {
+              "texto": "Os dois são a mesma coisa com nomes diferentes",
+              "retorno": "São coisas diferentes: uma confere se está certo, a outra mantém tudo organizado."
+            }
+          ]
+        },
+        {
+          "texto": "Antes de entregar, você quer ter certeza de que nada importante ficou de fora.",
+          "pergunta": "Qual técnica usar?",
+          "opcoes": [
+            {
+              "texto": "Lista de verificação",
+              "certa": true,
+              "retorno": "Certo. O checklist passa item por item e acha o que está faltando ou inconsistente."
+            },
+            {
+              "texto": "Decomposição funcional",
+              "retorno": "Decomposição quebra recursos grandes. Para conferir se falta algo, use a lista de verificação."
+            },
+            {
+              "texto": "Modelagem de processos",
+              "retorno": "Processos mostram o fluxo. Para revisar se está completo, use a lista de verificação."
+            }
+          ]
+        },
+        {
+          "texto": "Você vai montar o checklist da especificação.",
+          "pergunta": "Qual item combina com essa lista?",
+          "opcoes": [
+            {
+              "texto": "Os requisitos de pagamento foram revisados?",
+              "certa": true,
+              "retorno": "Isso. Item de checklist é uma pergunta de revisão: algo foi feito, conferido ou está faltando?"
+            },
+            {
+              "texto": "Qual cor o cliente prefere para o logotipo?",
+              "retorno": "Isso é gosto, não revisão de requisito. O checklist confere completude e consistência."
+            },
+            {
+              "texto": "Quantas linhas de código o app vai ter no fim?",
+              "retorno": "Linhas de código nem existem ainda. O checklist revisa os requisitos."
+            }
+          ]
+        },
+        {
+          "texto": "A Tia Neide lê a especificação e diz: “Só vou saber se é isso quando eu vir a tela.”",
+          "pergunta": "O que fazer?",
+          "opcoes": [
+            {
+              "texto": "Mostrar um protótipo para ela mexer",
+              "certa": true,
+              "retorno": "Certo. Prototipação cria uma versão preliminar: o usuário vê, mexe e aponta o que está errado."
+            },
+            {
+              "texto": "Mandar a especificação em PDF de novo",
+              "retorno": "Ela já leu e não conseguiu imaginar. Ela precisa VER e mexer: protótipo."
+            },
+            {
+              "texto": "Começar a programar o app inteiro",
+              "retorno": "Programar tudo para só depois descobrir o erro sai caro. O protótipo valida antes."
+            }
+          ]
+        },
+        {
+          "texto": "Mexendo no protótipo, ela pergunta: “Cadê o botão para cancelar o pedido?”",
+          "pergunta": "O que aconteceu?",
+          "opcoes": [
+            {
+              "texto": "O protótipo revelou um requisito faltando",
+              "certa": true,
+              "retorno": "Isso. É exatamente para isso que ele serve: achar o que ficou de fora antes de programar."
+            },
+            {
+              "texto": "Ela errou, pois cancelar não é requisito",
+              "retorno": "Se a usuária precisa cancelar, é um requisito. O protótipo mostrou que ele faltava."
+            },
+            {
+              "texto": "O protótipo falhou e deve ser descartado",
+              "retorno": "O protótipo funcionou muito bem: achou um requisito ausente. Basta acrescentar o cancelamento."
+            }
+          ]
+        },
+        {
+          "texto": "O gerente pergunta para que serve todo esse cuidado antes de programar.",
+          "pergunta": "Segundo a aula, para que servem as técnicas de validação e gerenciamento?",
+          "opcoes": [
+            {
+              "texto": "Reduzir riscos e evitar falhas na entrega",
+              "certa": true,
+              "retorno": "Certo. Achar o erro no papel custa pouco; achar depois de pronto custa muito."
+            },
+            {
+              "texto": "Deixar o sistema mais bonito para o cliente",
+              "retorno": "Beleza não é o objetivo. Elas reduzem riscos e evitam falhas."
+            },
+            {
+              "texto": "Trocar a conversa com o cliente por papel",
+              "retorno": "Elas até aumentam a conversa com o cliente (protótipo!). O objetivo é reduzir riscos."
+            }
+          ]
+        }
+      ],
+      "fim": "Para guardar: validar = conferir se os requisitos estão certos e completos; gerenciar = mantê-los organizados. Lista de verificação acha o que falta e o que está inconsistente. Prototipação mostra uma versão preliminar: o usuário vê, mexe e revela requisitos ausentes. Objetivo: reduzir riscos e evitar falhas na entrega."
     }
   ],
   "jogos": [

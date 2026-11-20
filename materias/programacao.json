@@ -483,11 +483,11 @@
               "retorno": "Certo. O default pega tudo que nenhum case pegou."
             },
             {
-              "texto": "O último case do switch.",
+              "texto": "O último case do switch, que pega o resto.",
               "retorno": "Um case só roda quando o valor é igual ao dele."
             },
             {
-              "texto": "O programa dá erro de compilação.",
+              "texto": "Nenhuma: o programa dá erro de compilação.",
               "retorno": "Ele compila normalmente. O valor digitado só aparece quando o programa roda."
             }
           ]

@@ -8,9 +8,12 @@
   - cada pergunta tem 4 opções diferentes e um "correct" válido;
   - o tema ("topic") existe em materias/index.json;
   - nenhuma pergunta se repete e nenhuma resposta certa se repete na mesma matéria;
-  - a resposta certa NÃO é visivelmente maior que as outras (mais de 15% maior
-    que a segunda maior), porque isso entrega a resposta;
-  - histórias têm exatamente uma opção certa por cena;
+  - a resposta certa NÃO é visivelmente maior que as outras (mais de 10% maior
+    que a maior errada), porque isso entrega a resposta;
+  - em cada matéria, a certa não pode ser a opção mais longa em mais de 35% das
+    perguntas (o acaso, com 4 opções, dá 25%);
+  - histórias têm exatamente uma opção certa por cena, e a certa também não pode
+    ser visivelmente maior que as erradas;
   - jogos, termos e práticas têm os campos necessários.
 
   Erros fazem o programa terminar com código 1. Avisos só aparecem na tela.
@@ -22,6 +25,10 @@ const path = require('path');
 
 // pasta é a pasta materias/, ao lado desta pasta ferramentas/.
 const pasta = path.join(__dirname, '..', 'materias');
+
+// LIMITE: quanto a certa pode passar da maior errada. 1.10 = até 10% maior.
+// Diminuir deixa a regra mais rígida; aumentar deixa passar respostas mais compridas.
+const LIMITE = 1.10;
 
 // erros e avisos guardam as mensagens encontradas.
 const erros = [];
@@ -119,8 +126,9 @@ for (const materia of lista) {
     const maiorErrada = Math.max(...tamanhosErradas);
     // Conta quando a certa é a mais longa de todas.
     if (tamanhoCerta > maiorErrada) certaMaisLonga++;
-    // Se a certa passa de 15% a maior errada, ela fica visível demais: é erro.
-    if (tamanhoCerta > maiorErrada * 1.15 && tamanhoCerta - maiorErrada > 3) {
+    // Se a certa passa de 10% a maior errada, ela fica visível demais: é erro.
+    // A diferença mínima de 3 letras evita barrar respostas curtas, como "22" contra "8".
+    if (tamanhoCerta > maiorErrada * LIMITE && tamanhoCerta - maiorErrada > 3) {
       erros.push(`${rotulo}: a resposta certa é visivelmente maior (${tamanhoCerta} contra ${maiorErrada} letras)`);
     }
 
@@ -137,6 +145,12 @@ for (const materia of lista) {
       const certasCena = (cena.opcoes || []).filter((o) => o.certa).length;
       if (certasCena !== 1) erros.push(`${materia.id} história "${h.titulo}" cena ${c + 1}: precisa de 1 opção certa`);
       if (!(cena.opcoes || []).every((o) => o.retorno)) erros.push(`${materia.id} história "${h.titulo}" cena ${c + 1}: opção sem retorno`);
+      // Tamanho da escolha certa contra a maior errada, com a mesma regra das perguntas.
+      const certaCena = (cena.opcoes || []).find((o) => o.certa);
+      const maiorErradaCena = Math.max(...(cena.opcoes || []).filter((o) => !o.certa).map((o) => textoVisivel(o.texto).length));
+      if (certaCena && textoVisivel(certaCena.texto).length > maiorErradaCena * LIMITE && textoVisivel(certaCena.texto).length - maiorErradaCena > 3) {
+        erros.push(`${materia.id} história "${h.titulo}" cena ${c + 1}: a escolha certa é visivelmente maior (${textoVisivel(certaCena.texto).length} contra ${maiorErradaCena} letras)`);
+      }
     });
     if (!h.fim) erros.push(`${materia.id} história "${h.titulo}": falta "fim"`);
   });
@@ -174,6 +188,8 @@ for (const materia of lista) {
   // Resumo da matéria.
   const total = (dados.questoes || []).length;
   const pct = total ? Math.round((certaMaisLonga / total) * 100) : 0;
+  // Se a certa costuma ser a mais longa, chutar "a maior" vira estratégia: é erro.
+  if (pct > 35) erros.push(`${materia.id}: a certa é a opção mais longa em ${pct}% das perguntas (máximo 35%)`);
   console.log(`${materia.id.padEnd(12)} perguntas ${String(total).padStart(3)} | certa é a mais longa em ${pct}% | livro ${(dados.livro || []).length} | termos ${(dados.termos || []).length} | práticas ${(dados.praticas || []).length} | histórias ${(dados.historias || []).length} | jogos ${(dados.jogos || []).length}`);
   console.log(`             temas: ${JSON.stringify(porTema)}`);
 }

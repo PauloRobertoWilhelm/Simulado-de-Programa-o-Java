@@ -6,18 +6,22 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
-| Programação de Computadores | 33 | ainda não | não | não | 2 | 3 |
-| Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 3 | 7 |
-| Design Front End | 16 | ainda não | não | não | 2 | 3 |
-| Fundamentos de Redes | 181 | 163 | 14 capítulos | 25 termos e 20 práticas | 3 | 7 |
-| Testing, Compliance e QA | 20 | ainda não | não | não | 2 | 3 |
+| Programação de Computadores | 33 | ainda não | não | não | 2 | 4 |
+| Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 10 | 8 |
+| Design Front End | 16 | ainda não | não | não | 2 | 4 |
+| Fundamentos de Redes | 181 + contas sorteadas | 163 | 14 capítulos | 25 termos e 20 práticas | 11 | 8 |
+| Testing, Compliance e QA | 20 | ainda não | não | não | 2 | 4 |
 
 ## Como cada matéria funciona
 
 - **Livro:** capítulos curtos, explicados com comparações do dia a dia. O botão "Ouvir o capítulo" lê as páginas em voz alta e vira sozinho. Os capítulos lidos ficam marcados.
-- **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
-- **Histórias:** uma situação em cenas, em que você decide o que fazer e recebe o retorno de cada escolha.
-- **Jogos:** "classificar", em que cada item vai para a categoria certa, e "ordenar", em que você monta uma sequência.
+- **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
+  - **Rodízio:** cada rodada traz primeiro as perguntas que você viu menos vezes.
+  - **Repetir mesma prova:** as mesmas perguntas, em outra ordem e com as letras certas sorteadas de novo.
+  - **🔁 Só as que errei:** treina só as perguntas erradas ou puladas; cada uma sai da lista quando você acerta.
+  - **🎲 Contas novas (Redes):** TTL, sub-rede, máscara, CIDR, IP privado, classe, ACK do TCP e IPv6 com números sorteados na hora. A resposta muda a cada rodada, então só dá para acertar fazendo a conta.
+- **Histórias:** uma situação em cenas, em que você decide o que fazer e recebe o retorno de cada escolha. No fim, um resumo “Para guardar”. Em Redes e Requisitos, as histórias cobrem todos os capítulos do 2º bimestre.
+- **Jogos:** "classificar", em que cada item vai para a categoria certa, e "ordenar", em que você monta uma sequência. O "Certo ou errado?" é montado sozinho a partir das perguntas: aparece uma resposta só, e você diz se ela é a certa, sem poder comparar tamanhos.
 - **Praticar:** "Falar os termos" pergunta em voz alta, escuta a resposta, corrige o termo técnico, ensina a pronúncia e explica para que serve. "Digitar a resposta" traz contas e respostas sem alternativas.
 - **Voz nas perguntas:** "Ler em voz alta" lê a pergunta e a explicação. "Responder falando" marca a alternativa quando você fala a letra ("letra B").
 
@@ -31,7 +35,7 @@ Depois de mexer em `materias/`, rode:
 node ferramentas/validar-questoes.js
 ```
 
-Ele barra pergunta repetida, resposta certa repetida, resposta certa visivelmente maior que as outras, tema inexistente e história sem opção certa.
+Ele barra pergunta repetida, resposta certa repetida, tema inexistente e história sem opção certa. Também barra resposta certa mais de 10% maior que a maior errada (nas perguntas e nas histórias) e matéria em que a certa é a opção mais longa em mais de 35% das perguntas.
 
 ## Como abrir
 
@@ -52,6 +56,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `js/historias.js`: tela de histórias
 - `js/jogos.js`: tela de jogos
 - `js/pratica.js`: tela de treinos (falar os termos e digitar respostas)
+- `js/geradores.js`: perguntas de conta com números sorteados (Redes)
 - `ferramentas/validar-questoes.js`: confere o conteúdo das matérias
 - `css/styles.css`: visual geral
 - `css/materias.css`: visual das abas, histórias e jogos

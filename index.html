@@ -222,6 +222,8 @@
 <script src="js/historias.js"></script>
 <script src="js/jogos.js"></script>
 <script src="js/pratica.js"></script>
+<!-- geradores.js cria as perguntas de conta com números sorteados (aba Redes). -->
+<script src="js/geradores.js"></script>
 <script>
 // ------------------------------------------------------------
 // BLOCO DE LÓGICA PRINCIPAL DO SIMULADO
@@ -290,6 +292,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function chaveNotas() {
     return materiaAtual.id === 'programacao' ? 'uniparJavaScores' : `unipar_${materiaAtual.id}_notas`;
+  }
+
+  // idDaPergunta() cria um "RG" para a pergunta: o enunciado mais o código.
+  // Parâmetro: q, a pergunta. Serve de chave nas listas de vistas e de erros.
+  function idDaPergunta(q) {
+    // Enunciado + "|" + código (vazio quando não tem código).
+    return `${q.statement}|${q.code || ""}`;
+  }
+
+  // lerMapa() lê do navegador um objeto { idDaPergunta: número }.
+  // Parâmetro: nome, o fim da chave ("vistas" ou "erros"). Devolve {} se não houver nada ou se estiver estragado.
+  function lerMapa(nome) {
+    // try/catch: um valor estragado no navegador não pode travar o simulado.
+    try {
+      // Lê o texto salvo em unipar_<matéria>_<nome> e transforma em objeto.
+      const valor = JSON.parse(localStorage.getItem(`unipar_${materiaAtual.id}_${nome}`));
+      // Só aceita objeto comum; qualquer outra coisa (lista, número, null) vira {}.
+      return valor && typeof valor === "object" && !Array.isArray(valor) ? valor : {};
+    } catch (erro) {
+      // Avisa no console para quem estiver depurando e segue com um mapa vazio.
+      console.warn(`Mapa "${nome}" ilegível, começando do zero.`, erro);
+      return {};
+    }
+  }
+
+  // gravarMapa() salva o objeto no navegador.
+  // Parâmetros: nome ("vistas" ou "erros") e mapa (o objeto). Efeito: escreve no localStorage.
+  function gravarMapa(nome, mapa) {
+    // try/catch: navegador sem espaço ou em modo privado pode recusar a gravação.
+    try {
+      // Grava como texto JSON na chave da matéria aberta.
+      localStorage.setItem(`unipar_${materiaAtual.id}_${nome}`, JSON.stringify(mapa));
+    } catch (erro) {
+      // Sem gravar, o simulado continua; só perde a memória das vistas e dos erros.
+      console.warn(`Não deu para salvar "${nome}".`, erro);
+    }
+  }
+
+  // registrarResposta() anota que a pergunta foi vista e se a pessoa errou.
+  // Parâmetros: q (a pergunta) e acertou (true ou false).
+  // Efeito: soma 1 em "vistas"; errou entra em "erros"; acertou sai de "erros".
+  function registrarResposta(q, acertou) {
+    // Contas sorteadas mudam toda vez, então não faz sentido lembrar delas.
+    if (q.topic === "contas") return;
+    // RG da pergunta.
+    const id = idDaPergunta(q);
+    // Soma 1 nas vezes em que esta pergunta apareceu.
+    const vistas = lerMapa("vistas");
+    vistas[id] = (vistas[id] || 0) + 1;
+    gravarMapa("vistas", vistas);
+    // Lista de erros: errou soma 1; acertou tira a pergunta da lista.
+    const erros = lerMapa("erros");
+    if (acertou) delete erros[id];
+    else erros[id] = (erros[id] || 0) + 1;
+    gravarMapa("erros", erros);
   }
 
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -411,13 +468,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("count-livro").textContent = livro.length;
       document.getElementById("count-perguntas").textContent = conteudo.questoes.length;
       document.getElementById("count-historias").textContent = conteudo.historias.length;
-      document.getElementById("count-jogos").textContent = conteudo.jogos.length;
+      // +1 conta o jogo "Certo ou errado?", que o js/jogos.js monta sozinho a partir das perguntas.
+      document.getElementById("count-jogos").textContent = conteudo.jogos.length + (conteudo.questoes.length >= 10 ? 1 : 0);
       document.getElementById("count-praticar").textContent = termos.length + praticas.length;
 
       // Cada arquivo js/ desenha a sua parte dentro do painel dela.
       window.Livro.montar(document.getElementById("panel-livro"), livro, materia.id);
       window.Historias.montar(document.getElementById("panel-historias"), conteudo.historias);
-      window.Jogos.montar(document.getElementById("panel-jogos"), conteudo.jogos);
+      // Os jogos recebem também as perguntas (para o "Certo ou errado?") e o id da matéria (para as contas).
+      window.Jogos.montar(document.getElementById("panel-jogos"), conteudo.jogos, conteudo.questoes, materia.id);
       window.Pratica.montar(document.getElementById("panel-praticar"), termos, praticas);
 
       // Preenche a caixa "O que estudar para a próxima prova".
@@ -514,6 +573,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function questoesDoTema(topic) {
     // "all": todas as perguntas da matéria.
     if (topic === "all") return bank;
+    // "erros": só as perguntas que estão na lista de erros do navegador.
+    if (topic === "erros") {
+      // Lê a lista de erros uma vez só.
+      const erros = lerMapa("erros");
+      // Fica com as perguntas cujo RG está na lista.
+      return bank.filter(q => erros[idDaPergunta(q)]);
+    }
+    // "contas": perguntas sorteadas na hora; aqui não há lista fixa.
+    if (topic === "contas") return [];
     // "bim1" ou "bim2": junta todos os temas daquele bimestre.
     if (topic === "bim1" || topic === "bim2") {
       // Tira o número do fim do texto: "bim2" vira 2.
@@ -544,12 +612,21 @@ document.addEventListener("DOMContentLoaded", () => {
     return botao;
   }
 
+  // temContas() diz se a matéria aberta tem perguntas de conta sorteadas (js/geradores.js).
+  function temContas() {
+    // Só vale se o arquivo carregou e se existe gerador para esta matéria.
+    return Boolean(window.Geradores && window.Geradores.tem(materiaAtual.id));
+  }
+
   // montarTemas() cria os botões de tema da matéria aberta, separados por bimestre.
-  function montarTemas() {
+  // Parâmetro: manter (true = tenta continuar no tema já escolhido; usado depois de uma rodada).
+  function montarTemas(manter = false) {
     // Tema que a matéria quer marcado ao abrir (em materias/index.json, campo "temaPadrao").
     const padrao = materiaAtual.temaPadrao;
-    // Usa o tema padrão só se ele tiver perguntas; senão, começa em "Tudo misturado".
-    selectedTopic = padrao && questoesDoTema(padrao).length ? padrao : "all";
+    // O tema atual ainda vale? "contas" vale se houver gerador; os outros, se tiverem perguntas.
+    const atualValido = selectedTopic === "contas" ? temContas() : questoesDoTema(selectedTopic).length > 0;
+    // Mantém o tema atual quando pedido e válido; senão usa o padrão (se tiver perguntas) ou "Tudo misturado".
+    if (!(manter && atualValido)) selectedTopic = padrao && questoesDoTema(padrao).length ? padrao : "all";
     // Só entram temas que têm pelo menos uma pergunta, para não aparecer botão vazio.
     const temas = materiaAtual.temas.filter(tema => bank.some(q => q.topic === tema.id));
     // A matéria é separada por bimestre se algum tema tiver o campo "bimestre".
@@ -558,6 +635,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const marcado = (id) => id === selectedTopic;
     // Primeiro botão de todos: "Tudo misturado".
     const itens = [criarBotaoTema({ id: "all", rotulo: "🎯 Tudo misturado" }, marcado("all"))];
+    // Quantas perguntas estão na lista de erros desta matéria.
+    const quantosErros = questoesDoTema("erros").length;
+    // Com algum erro guardado, aparece o botão para treinar só elas.
+    if (quantosErros) itens.push(criarBotaoTema({ id: "erros", rotulo: `🔁 Só as que errei (${quantosErros})` }, marcado("erros")));
+    // Matéria com gerador ganha o botão de contas que mudam a cada rodada.
+    if (temContas()) itens.push(criarBotaoTema({ id: "contas", rotulo: "🎲 Contas novas (sempre diferentes)" }, marcado("contas")));
 
     if (usaBimestre) {
       // O 2º bimestre vem primeiro, porque é a prova que está chegando.
@@ -586,22 +669,29 @@ document.addEventListener("DOMContentLoaded", () => {
     montarQuantidades();
   }
 
-  // montarQuantidades() oferece rodadas de 5, 10, 30, 50 e 100 questões, até o
-  // total do tema escolhido, sem repetir questão. A última opção é sempre "todas".
+  // TAMANHOS: rodadas oferecidas. Acrescentar um número aqui cria um botão novo.
+  const TAMANHOS = [5, 10, 20, 30, 50, 100];
+
+  // montarQuantidades() oferece rodadas de 5, 10, 20, 30, 50 e 100 questões, até o
+  // total do tema escolhido, sem repetir questão. A última opção é "todas".
+  // Nas contas sorteadas não existe "todas": a lista nunca acaba.
   function montarQuantidades() {
-    // Quantas perguntas o tema escolhido tem.
-    const total = questoesDoTema(selectedTopic).length;
-    // Fica só com as quantidades menores que o total e acrescenta o total no fim.
-    const opcoes = [5, 10, 30, 50, 100].filter(n => n < total).concat(total);
-    // Começa marcado em "todas".
-    selectedLen = total;
+    // Contas sorteadas: qualquer tamanho cabe.
+    const infinito = selectedTopic === "contas";
+    // Quantas perguntas o tema escolhido tem (contas: o maior tamanho da lista).
+    const total = infinito ? Math.max(...TAMANHOS) : questoesDoTema(selectedTopic).length;
+    // Fica com os tamanhos menores que o total e acrescenta o total no fim (sem repetir).
+    const opcoes = TAMANHOS.filter(n => n < total).concat(total);
+    // Começa em 20 (uma rodada de treino); se o tema tiver menos de 20, começa em "todas".
+    selectedLen = opcoes.includes(20) ? 20 : total;
     // Nome curto que aparece embaixo de cada número.
-    const nomes = { 5: "rápida", 10: "curta", 30: "média", 50: "longa", 100: "prova final" };
+    const nomes = { 5: "rápida", 10: "curta", 20: "treino", 30: "média", 50: "longa", 100: "prova final" };
 
     lenGrid.replaceChildren(...opcoes.map(n => {
       const botao = document.createElement("button");
       botao.type = "button";
-      botao.className = `len${n === total ? " on" : ""}`;
+      // Marca o botão do tamanho inicial.
+      botao.className = `len${n === selectedLen ? " on" : ""}`;
       botao.dataset.len = n;
 
       const numero = document.createElement("span");
@@ -610,8 +700,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const rotulo = document.createElement("span");
       rotulo.className = "l";
-      // "todas" quando é o total; senão, o nome curto da tabela acima.
-      rotulo.textContent = n === total ? "todas" : nomes[n];
+      // "todas" quando é o total de um tema fixo; senão, o nome curto da tabela acima.
+      rotulo.textContent = n === total && !infinito ? "todas" : nomes[n];
 
       botao.append(numero, rotulo);
       return botao;
@@ -687,6 +777,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ele filtra por tema, embaralha o banco e distribui as alternativas em posições
   // variadas para evitar respostas repetitivas na mesma coluna ou mesma posição.
   function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
+    // Contas: o gerador cria perguntas novas, com números sorteados agora.
+    if (topic === "contas") return sortearPosicoes(window.Geradores.gerar(materiaAtual.id, len));
+
     // Perguntas do tema, do bimestre ou de todos.
     const filtered = questoesDoTema(topic);
 
@@ -695,29 +788,34 @@ document.addEventListener("DOMContentLoaded", () => {
       return [];
     }
 
-    // Embaralha a ordem das perguntas.
-    const base = shuffleArray(filtered);
-    // deck é a lista final da rodada.
-    const deck = [];
+    // Quantas vezes cada pergunta já apareceu para esta pessoa.
+    const vistas = lerMapa("vistas");
+    // Embaralha e depois ordena pelas vezes vistas (menos vistas primeiro).
+    // O sort do JavaScript mantém a ordem dos empates, então quem empata continua sorteado.
+    const base = shuffleArray(filtered).sort((a, b) => (vistas[idDaPergunta(a)] || 0) - (vistas[idDaPergunta(b)] || 0));
     // Nunca repete questão na mesma rodada.
     const total = Math.min(len, base.length);
+    // Pega as menos vistas e embaralha de novo, para a ordem da prova não seguir a contagem.
+    return sortearPosicoes(shuffleArray(base.slice(0, total)));
+  }
+
+  // sortearPosicoes() muda a letra da resposta certa de cada pergunta.
+  // Parâmetro: lista de perguntas. Devolve uma lista nova (a original não muda).
+  // Regra: a letra certa nunca é a mesma da pergunta anterior.
+  function sortearPosicoes(lista) {
     // Posição (0 a 3) da resposta certa na pergunta anterior; -1 = nenhuma ainda.
     let posicaoAnterior = -1;
-
-    while (deck.length < total) {
-      // Próxima pergunta da lista embaralhada.
-      const baseQuestion = base[deck.length];
+    // Monta a lista nova pergunta por pergunta.
+    return lista.map(pergunta => {
       // Posições possíveis, tirando a da pergunta anterior: a letra certa nunca se repete em seguida.
-      const posicoes = baseQuestion.options.map((_, i) => i).filter(i => i !== posicaoAnterior);
-      // Sorteia uma dessas posições. Antes era uma sequência fixa (A, C, B, D...), fácil de decorar.
-      const targetIndex = posicoes[Math.floor(Math.random() * posicoes.length)];
+      const posicoes = pergunta.options.map((_, i) => i).filter(i => i !== posicaoAnterior);
+      // Sorteia uma dessas posições.
+      const alvo = posicoes[Math.floor(Math.random() * posicoes.length)];
       // Guarda a posição para a próxima pergunta evitar.
-      posicaoAnterior = targetIndex;
+      posicaoAnterior = alvo;
       // Coloca a resposta certa na posição sorteada e embaralha as erradas.
-      deck.push(withBalancedAnswerSlot(baseQuestion, targetIndex));
-    }
-
-    return deck;
+      return withBalancedAnswerSlot(pergunta, alvo);
+    });
   }
 
   // loadProgressState() lê o histórico do navegador.
@@ -956,6 +1054,8 @@ document.addEventListener("DOMContentLoaded", () => {
           selectedIndex,
           correctIndex: q.correct
         };
+        // Anota no navegador que a pergunta foi vista e se entrou (ou saiu) da lista de erros.
+        registrarResposta(q, isCorrect);
 
         playSound(isCorrect ? 'correct' : 'wrong'); // toca efeito sonoro conforme resposta correta ou errada
 
@@ -1071,6 +1171,8 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedIndex: null,
         correctIndex: currentQuestions[currentIndex].correct
       };
+      // Pular conta como erro: a pergunta vai para "Só as que errei".
+      registrarResposta(currentQuestions[currentIndex], false);
     }
 
     document.getElementById("feedback-area").innerHTML = `
@@ -1211,7 +1313,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const temaAtual = materiaAtual.temas.find(tema => tema.id === selectedTopic);
     // Nomes das escolhas que não são um tema só.
-    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre" };
+    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas" };
     // Mostra o nome do tema, ou o nome especial, no painel de progresso.
     document.getElementById("current-theme-label").textContent = temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
 
@@ -1219,6 +1321,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderReviewPanel(getWrongQuestionsFromCurrentRound());
     updateProgressPanel();
     renderChart(notas);
+    // Refaz os botões de tema: o número de "Só as que errei" mudou com esta rodada.
+    montarTemas(true);
   }
 
   // renderChart() desenha o gráfico de histórico usando Chart.js.
@@ -1385,7 +1489,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     screenResult.classList.add("hidden");
     closeReviewPanel();
-    startQuizWithQuestions(lastQuizQuestions.slice());
+    // Mesmas perguntas, mas em outra ordem e com as letras certas sorteadas de novo:
+    // assim não dá para repetir a prova decorando "a 1 era B, a 2 era D".
+    startQuizWithQuestions(sortearPosicoes(shuffleArray(lastQuizQuestions)));
   });
 
   document.getElementById("btn-retry").addEventListener("click", () => {

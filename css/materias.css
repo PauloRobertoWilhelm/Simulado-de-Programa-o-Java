@@ -255,6 +255,32 @@ button.len {
 }
 .game-categories .activity-option { text-align: center; }
 
+/* ===== JOGO "CERTO OU ERRADO?" ===== */
+/* Enunciado: a pergunta é longa, então usa letra menor e alinhada à esquerda (fica mais fácil de ler). */
+.game-item.ce-pergunta {
+  /* Tamanho de leitura normal. Aumentar deixa a pergunta mais chamativa, mas quebra em mais linhas. */
+  font-size: 1.05rem;
+  /* Texto corrido lê melhor alinhado à esquerda. */
+  text-align: left;
+}
+/* Caixa da resposta que a pessoa julga: borda tracejada na cor da matéria para separar da pergunta. */
+.ce-resposta {
+  /* Espaço interno da caixa. */
+  padding: 14px 16px;
+  /* Cantos arredondados iguais aos outros cartões. */
+  border-radius: var(--r-md);
+  /* Borda tracejada na cor de destaque da matéria (muda com a aba). */
+  border: 2px dashed var(--teal);
+  /* Letra um pouco maior que o normal, porque é o que está sendo julgado. */
+  font-size: 1.08rem;
+  /* Negrito médio para destacar a resposta. */
+  font-weight: 600;
+  /* Quebra palavras enormes (endereços IPv6) em vez de estourar a tela. */
+  overflow-wrap: anywhere;
+}
+/* Rótulo "Resposta:" em cor apagada, para o olho ir direto ao conteúdo. */
+.ce-resposta span { color: var(--muted-2); font-weight: 500; margin-right: 6px; }
+
 .game-slots {
   display: grid;
   gap: 6px;

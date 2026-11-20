@@ -1,0 +1,389 @@
+/*
+  Arquivo: css/moderno.css
+  Papel no sistema: visual novo do app, carregado DEPOIS de styles.css e materias.css.
+  Ele só sobrescreve a aparência; nenhuma regra de funcionamento muda.
+
+  Ideia do visual:
+  - fundo neutro (grafite azulado), sem as manchas roxas e rosas;
+  - UMA cor de destaque por matéria (vem de materias/index.json, campo "cores");
+  - uma família de fonte (Geist) e números com largura fixa;
+  - superfícies lisas, bordas finas, sem efeito 3D;
+  - botões com retorno ao passar o mouse e ao apertar.
+
+  Para voltar ao visual antigo: apague a linha de moderno.css no index.html.
+*/
+
+/* ===== CORES, FONTES E MEDIDAS ===== */
+:root {
+  /* Fundo da página: grafite com um toque de azul (nunca preto puro). */
+  --bg: #0b0e13;
+  /* Superfície 1: cartões e painéis. */
+  --surface: #12161d;
+  /* Superfície 2: botões e opções dentro dos cartões. */
+  --surface-2: #181d26;
+  /* Superfície 3: estado de "passar o mouse". */
+  --surface-3: #1f2530;
+  /* Borda fina e discreta, a mesma em tudo. */
+  --border: rgba(226, 232, 240, 0.08);
+  /* Borda um pouco mais visível, para hover. */
+  --border-soft: rgba(226, 232, 240, 0.14);
+  /* Texto principal: quase branco, para não cansar a vista. */
+  --text: #eef1f6;
+  /* Texto secundário. */
+  --muted: #a3acb9;
+  /* Texto terciário (legendas). */
+  --muted-2: #7c8696;
+  /* Cor de acerto, menos saturada que antes. */
+  --success: #4cc79a;
+  --success-bg: rgba(76, 199, 154, 0.12);
+  /* Cor de erro, menos saturada que antes. */
+  --error: #f0727f;
+  --error-bg: rgba(240, 114, 127, 0.12);
+  /* Fundo suave da cor da matéria (14% de opacidade). */
+  --accent-soft: color-mix(in srgb, var(--primary) 14%, transparent);
+  /* Borda na cor da matéria (55% de opacidade). */
+  --accent-line: color-mix(in srgb, var(--primary) 55%, transparent);
+  /* Raios: menor por dentro, maior por fora. */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  /* Sombra puxada para o azul do fundo, em vez de preto puro. */
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 12px 32px rgba(3, 7, 18, 0.45);
+  /* Uma fonte só para títulos e texto. */
+  --font-display: "Geist", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Geist", "Segoe UI", system-ui, sans-serif;
+  /* Fonte de código e números. */
+  --font-mono: "Geist Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+  /* Curva de animação com "freio" no fim, mais natural que a linear. */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ===== FUNDO E BASE ===== */
+html {
+  /* Cor de fundo atrás de tudo (aparece ao puxar a tela no celular). */
+  background-color: var(--bg);
+  /* Rolagem suave ao pular para âncoras. */
+  scroll-behavior: smooth;
+}
+body {
+  /* Fundo neutro. */
+  background: var(--bg);
+  /* Um único brilho no topo, na cor da matéria aberta, bem fraco. */
+  background-image: radial-gradient(900px 420px at 50% -160px, color-mix(in srgb, var(--primary) 16%, transparent), transparent 70%);
+  /* O brilho fica parado enquanto a página rola. */
+  background-attachment: fixed;
+  /* Letras mais nítidas nas telas. */
+  -webkit-font-smoothing: antialiased;
+  /* Altura mínima que não "pula" no celular (barra do navegador). */
+  min-height: 100dvh;
+}
+/* Tira as duas manchas animadas (rosa e ciano) do visual antigo. */
+body::before { display: none; }
+/* No lugar da segunda mancha: uma textura de granulado bem leve, que não recebe cliques. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: auto;
+  height: auto;
+  /* Ruído gerado por SVG (feTurbulence), com 4% de força. */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  filter: none;
+  animation: none;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Sem perspectiva 3D: os cartões ficam retos e estáveis. */
+.app { perspective: none; width: min(100%, 880px); }
+.screen { transform-style: flat; }
+/* Números (nota, cronômetro, contadores) com a mesma largura: não "dançam" ao mudar. */
+.timer, .progress-meta, .len .n, .score-ring .pct, .result-stat .value, .metric-pill strong, .mode-count { font-variant-numeric: tabular-nums; }
+
+/* ===== ABAS DAS MATÉRIAS ===== */
+.subject-tabs {
+  /* Sem a linha colorida embaixo; as abas viram um bloco só. */
+  border-bottom: none;
+  padding: 6px;
+  gap: 4px;
+  /* Fundo da faixa de abas. */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.subject-tab {
+  /* Aba sem borda e sem fundo: só o texto. */
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.88rem;
+  min-height: 44px;
+  border-radius: var(--r-md);
+  /* Transição curta de cor e fundo. */
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.subject-tab:hover { background: var(--surface-2); color: var(--text); }
+/* Aba aberta: fundo suave e texto na cor da matéria. */
+.subject-tab[aria-selected="true"] {
+  background: var(--accent-soft);
+  color: var(--primary);
+  font-weight: 600;
+  /* Linha fina por dentro, na cor da matéria. */
+  box-shadow: inset 0 0 0 1px var(--accent-line);
+}
+
+/* ===== CABEÇALHO DA MATÉRIA ===== */
+/* Cabeçalho alinhado à esquerda, como em apps atuais (menos "cartaz"). */
+.intro { text-align: left; padding: 34px 0 8px; }
+/* Selo do professor: texto simples com um ponto colorido, sem fonte de código. */
+.badge-top {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  color: var(--muted);
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.badge-top .pulse { background: var(--primary); box-shadow: none; animation: none; }
+/* Título: "Simulado de" pequeno e apagado em cima, nome da matéria grande embaixo. */
+.intro h1 {
+  font-weight: 650;
+  font-size: clamp(1.15rem, 2.6vw, 1.3rem);
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.intro h1 br { display: none; }
+.intro h1 .grad {
+  /* Sem texto em degradê: cor sólida, que lê melhor. */
+  display: block;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--text);
+  font-size: clamp(1.9rem, 5.4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-top: 4px;
+  /* Quebra as linhas de forma equilibrada (sem palavra sozinha no fim). */
+  text-wrap: balance;
+}
+.intro .sub { text-align: left; margin: 0 0 16px; max-width: none; font-size: 0.98rem; }
+/* Os três chips de propaganda (cronômetro, notas, sons) saem: não ajudam a estudar. */
+.chips { display: none; }
+
+/* Caixa "O que estudar para a próxima prova". */
+.focus-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--r-md);
+}
+/* Botão de leitura em voz alta: discreto, alinhado à esquerda. */
+.voice-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: 0;
+}
+.voice-toggle[aria-pressed="true"] { background: var(--accent-soft); color: var(--primary); border-color: var(--accent-line); }
+
+/* ===== LIVRO, PERGUNTAS, HISTÓRIAS, JOGOS, PRATICAR ===== */
+.mode-tabs {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 5px;
+  gap: 4px;
+}
+.mode-tab { font-weight: 500; color: var(--muted); border-radius: var(--r-md); transition: background 0.2s var(--ease), color 0.2s var(--ease); }
+.mode-tab:hover { background: var(--surface-2); }
+/* Parte aberta: fundo um pouco mais claro e sombra leve, como uma tecla apertada. */
+.mode-tab[aria-selected="true"] { background: var(--surface-3); color: var(--text); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+.mode-count { color: var(--muted-2); font-weight: 500; }
+.mode-tab[aria-selected="true"] .mode-count { color: var(--primary); }
+
+/* ===== ESCOLHA DE TEMA E QUANTIDADE ===== */
+.picker {
+  /* Painel liso, sem inclinação 3D. */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: none;
+  transform: none;
+  padding: 18px;
+}
+.picker:hover { transform: none; border-color: var(--border); box-shadow: none; }
+/* Título do painel em frase normal (sem CAIXA ALTA). */
+.picker h3 {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: -0.005em;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+}
+/* Rótulo "2º bimestre" / "1º bimestre". */
+.topic-group { color: var(--muted-2); font-weight: 500; font-size: 0.82rem; }
+.tpick, .len {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  font-weight: 500;
+  transform: none;
+  box-shadow: none;
+  transition: background 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.12s var(--ease);
+}
+.tpick:hover, .len:hover { background: var(--surface-3); border-color: var(--border-soft); transform: none; box-shadow: none; filter: none; }
+/* Ao apertar: afunda um pouquinho, como um botão de verdade. */
+.tpick:active, .len:active { transform: scale(0.98); }
+/* Selecionado: fundo e borda na cor da matéria. */
+.tpick.on, .len.on {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  box-shadow: none;
+  transform: none;
+  color: var(--text);
+}
+.len .n { font-family: var(--font-body); font-weight: 650; }
+.len .l { font-family: var(--font-body); color: var(--muted-2); letter-spacing: 0; }
+.len.on .l { color: var(--primary); }
+
+/* ===== BOTÕES ===== */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  /* Botão principal: cor sólida da matéria, texto escuro (contraste alto). */
+  background: var(--primary);
+  color: #0b0e13;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--primary) 22%, transparent);
+  min-height: 52px;
+  animation: none;
+  transform: none;
+  transition: transform 0.12s var(--ease), filter 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.06); box-shadow: 0 10px 28px color-mix(in srgb, var(--primary) 28%, transparent); }
+.btn:active { transform: translateY(0) scale(0.985); filter: brightness(0.98); }
+.btn:disabled { background: var(--surface-2); color: var(--muted-2); box-shadow: none; opacity: 1; }
+/* Botões secundários (e os antigos azul e vermelho): todos no mesmo estilo neutro. */
+.btn-ghost, #btn-back, #btn-home, #btn-quit {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-soft);
+  box-shadow: none;
+}
+.btn-ghost:hover, #btn-back:hover, #btn-home:hover, #btn-quit:hover { background: var(--surface-2); border-color: var(--border-soft); transform: translateY(-1px); filter: none; box-shadow: none; }
+/* "Abandonar prova": só o texto em vermelho avisa que é uma saída. */
+#btn-quit { color: var(--error); }
+
+/* Tela da pergunta: "Próxima" em cima, e as três ações menores lado a lado embaixo. */
+.nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.nav #btn-next { grid-column: 1 / -1; }
+.nav .btn-ghost { min-height: 44px; padding: 10px 8px; font-size: 0.86rem; font-weight: 500; }
+
+/* ===== TELA DA PERGUNTA ===== */
+.topbar { background: transparent; border: none; box-shadow: none; }
+.progress-meta .count { font-family: var(--font-body); color: var(--muted); }
+.progress-meta .count b { color: var(--text); }
+.timer { font-family: var(--font-mono); background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+.timer.danger { color: var(--error); border-color: color-mix(in srgb, var(--error) 50%, transparent); }
+/* Barra de progresso: fina, na cor da matéria. */
+.bar { background: var(--surface-2); height: 4px; border-radius: 99px; }
+.bar > i { background: var(--primary); box-shadow: none; }
+.q-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+  transform: none;
+}
+.q-card:hover { transform: none; box-shadow: var(--shadow); }
+/* Enunciado maior, com quebras de linha mais bonitas. */
+.q-statement { font-size: 1.14rem; font-weight: 550; letter-spacing: -0.01em; line-height: 1.45; text-wrap: pretty; }
+pre.code { background: #0d1117; border: 1px solid var(--border); border-radius: var(--r-md); font-family: var(--font-mono); }
+.option {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transform: none;
+  transition: background 0.15s var(--ease), border-color 0.15s var(--ease), transform 0.12s var(--ease);
+}
+.option:hover { background: var(--surface-3); border-color: var(--accent-line); transform: none; box-shadow: none; }
+.option:active { transform: scale(0.99); }
+/* Letra da alternativa (A, B, C, D): quadradinho com a cor da matéria. */
+.option .key {
+  font-family: var(--font-mono);
+  background: var(--accent-soft);
+  color: var(--primary);
+  border: none;
+  border-radius: 8px;
+}
+.option.correct { background: var(--success-bg); border-color: color-mix(in srgb, var(--success) 60%, transparent); }
+.option.correct .key { background: var(--success); color: #0b0e13; }
+.option.wrong { background: var(--error-bg); border-color: color-mix(in srgb, var(--error) 60%, transparent); }
+.option.wrong .key { background: var(--error); color: #0b0e13; }
+/* Explicação depois de responder: barra colorida à esquerda em vez de caixa cheia. */
+.feedback { background: var(--surface-2); border: 1px solid var(--border); border-left-width: 3px; border-radius: var(--r-md); }
+.feedback.ok { background: var(--surface-2); border-left-color: var(--success); }
+.feedback.no { background: var(--surface-2); border-left-color: var(--error); }
+
+/* ===== RESULTADO ===== */
+/* !important vence o brilho colorido que o JavaScript coloca direto no elemento. */
+.result-shell { background: var(--surface); border: 1px solid var(--border) !important; box-shadow: var(--shadow) !important; }
+.result-shell::before, .result-shell::after, .chart-container::before, .chart-container::after { display: none; }
+.score-ring { background: conic-gradient(var(--primary), color-mix(in srgb, var(--primary) 30%, transparent)); box-shadow: none; border: none; }
+.score-ring::before { background: var(--surface); border: none; }
+.score-ring .score-icon { display: none; }
+.score-ring .pct { font-family: var(--font-body); letter-spacing: -0.03em; }
+.result-stat, .metric-pill, .chart-container, .progress-panel, .review-panel, .performance-message {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.result-stat:hover, .chart-container:hover { transform: none; box-shadow: none; }
+
+/* ===== LIVRO, HISTÓRIAS, JOGOS, PRATICAR ===== */
+.activity-card, .activity-panel { background: var(--surface); border: 1px solid var(--border); box-shadow: none; }
+.activity-card:hover { background: var(--surface-2); border-color: var(--border-soft); }
+.activity-option { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--r-md); }
+.activity-option:hover:not(:disabled) { background: var(--surface-3); border-color: var(--accent-line); }
+.ce-resposta { border-color: var(--accent-line); }
+
+/* Explicação: as bordas de cima, de baixo e da direita ficam neutras; só a da esquerda tem cor. */
+.feedback.ok, .feedback.no { border-top-color: var(--border); border-right-color: var(--border); border-bottom-color: var(--border); }
+/* Alternativa clicada com o mouse não ganha o anel roxo antigo (o anel fica só para o teclado). */
+.option:focus:not(:focus-visible) { box-shadow: none; outline: none; }
+
+/* Rótulos do resultado: mesma fonte do resto, sem CAIXA ALTA e sem espaçamento largo. */
+.badge-status, .nota-line, .result-stat .label, .progress-title-row, .progress-level,
+.theme-progress-head, .theme-progress-head strong, .metric-label, .review-badge {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+}
+/* Selo do resultado ("Precisa estudar", "Aprovado"): discreto, com a cor só no texto. */
+.badge-status { background: var(--surface-2); border: 1px solid var(--border); font-weight: 600; }
+/* Nível ("Iniciante", "Bom") e tema da rodada na cor da matéria. */
+.progress-level, .theme-progress-head strong { color: var(--primary); }
+
+/* ===== FOCO DO TECLADO ===== */
+/* Contorno visível na cor da matéria para quem navega com Tab. */
+.btn:focus-visible, .tpick:focus-visible, .len:focus-visible, .option:focus-visible,
+.subject-tab:focus-visible, .mode-tab:focus-visible, .activity-card:focus-visible, .activity-option:focus-visible, .voice-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Menos espaço no topo do cabeçalho. */
+  .intro { padding-top: 22px; }
+  /* As três ações da pergunta continuam lado a lado, com letra menor. */
+  .nav .btn-ghost { font-size: 0.8rem; padding: 10px 4px; }
+}

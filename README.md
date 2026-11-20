@@ -6,11 +6,11 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
-| Programação de Computadores | 138 | 111 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
+| Design Front End | 103 | ainda não | não | não | 2 | 4 |
+| Programação de Computadores | 138 | 96 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
 | Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 10 | 8 |
-| Design Front End | 16 | ainda não | não | não | 2 | 4 |
 | Fundamentos de Redes | 181 + contas sorteadas | 163 | 14 capítulos | 25 termos e 20 práticas | 11 | 8 |
-| Testing, Compliance e QA | 20 | ainda não | não | não | 2 | 4 |
+| Testing, Compliance e QA | 107 | ainda não | não | não | 2 | 4 |
 
 ## Como cada matéria funciona
 
@@ -60,6 +60,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `ferramentas/validar-questoes.js`: confere o conteúdo das matérias
 - `css/styles.css`: visual geral
 - `css/materias.css`: visual das abas, histórias e jogos
+- `css/moderno.css`: visual atual (fundo neutro, uma cor por matéria, fonte Geist); apagar a linha dele no index.html volta ao visual antigo
 - `sw.js`: service worker, que permite usar o app sem internet
 - `manifest.json`: configuração para instalar como aplicativo
 - `script.js`: cópia antiga da lógica, que não é carregada pela página

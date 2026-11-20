@@ -5,8 +5,8 @@
     "titulo": "Design Front-End",
     "professor": "Prof. Sandro Ramos",
     "cores": [
-      "#ff4fd8",
-      "#ffb35c"
+      "#e9a15e",
+      "#f4cfa6"
     ],
     "prova1": "Todas as questões certas",
     "foco": {
@@ -48,8 +48,8 @@
     "titulo": "Programação de Computadores",
     "professor": "Prof. Lucas B. Cari",
     "cores": [
-      "#8f7bff",
-      "#57f4ff"
+      "#8d9cf5",
+      "#c6cdfa"
     ],
     "prova1": "30 de 70 pontos",
     "foco": {
@@ -132,8 +132,8 @@
     "titulo": "Engenharia de Requisitos",
     "professor": "Prof. Paulo Proença",
     "cores": [
-      "#ffce5c",
-      "#ff8a5c"
+      "#e3b956",
+      "#f1db9c"
     ],
     "prova1": "35 de 60 pontos",
     "foco": {
@@ -186,8 +186,8 @@
     "titulo": "Fundamentos de Redes de Computadores",
     "professor": "Prof. Patrick José Cardoso",
     "cores": [
-      "#6aa9ff",
-      "#57f4ff"
+      "#5ea6f0",
+      "#acd0f7"
     ],
     "prova1": "30 de 70 pontos",
     "foco": {
@@ -250,8 +250,8 @@
     "titulo": "Testing, Compliance e Quality Assurance",
     "professor": "Prof. Luiz",
     "cores": [
-      "#4ef0b0",
-      "#6aa9ff"
+      "#55c99a",
+      "#a6e3c9"
     ],
     "prova1": "24 de 50 pontos",
     "foco": {

@@ -6,7 +6,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
-| Programação de Computadores | 33 | ainda não | não | não | 2 | 4 |
+| Programação de Computadores | 138 | 111 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
 | Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 10 | 8 |
 | Design Front End | 16 | ainda não | não | não | 2 | 4 |
 | Fundamentos de Redes | 181 + contas sorteadas | 163 | 14 capítulos | 25 termos e 20 práticas | 11 | 8 |

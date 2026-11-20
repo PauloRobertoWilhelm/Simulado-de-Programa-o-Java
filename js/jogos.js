@@ -37,8 +37,8 @@ window.Jogos = (function () {
   // semEtiquetas() tira as marcações HTML (<b>, <code>) das explicações, para mostrar como texto puro.
   // Parâmetro: texto. Devolve o texto sem as etiquetas.
   function semEtiquetas(texto) {
-    // Troca qualquer "<...>" por nada.
-    return String(texto || '').replace(/<[^>]+>/g, '');
+    // Troca qualquer "<...>" por nada e depois desfaz os códigos &lt; &gt; &amp; (viram < > &).
+    return String(texto || '').replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
   }
 
   // montar() desenha a lista de jogos da matéria.

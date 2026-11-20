@@ -15,7 +15,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 ## Como cada matéria funciona
 
 - **Livro:** capítulos curtos, explicados com comparações do dia a dia. O botão "Ouvir o capítulo" lê as páginas em voz alta e vira sozinho. Os capítulos lidos ficam marcados.
-- **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
+- **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
   - **Rodízio:** cada rodada traz primeiro as perguntas que você viu menos vezes.
   - **Repetir mesma prova:** as mesmas perguntas, em outra ordem e com as letras certas sorteadas de novo.
   - **🔁 Só as que errei:** treina só as perguntas erradas ou puladas; cada uma sai da lista quando você acerta.

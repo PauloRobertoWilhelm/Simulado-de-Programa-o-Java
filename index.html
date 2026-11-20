@@ -670,9 +670,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // TAMANHOS: rodadas oferecidas. Acrescentar um número aqui cria um botão novo.
-  const TAMANHOS = [5, 10, 20, 30, 50, 100];
+  const TAMANHOS = [5, 10, 15, 20, 30, 50, 100];
 
-  // montarQuantidades() oferece rodadas de 5, 10, 20, 30, 50 e 100 questões, até o
+  // montarQuantidades() oferece rodadas de 5, 10, 15, 20, 30, 50 e 100 questões, até o
   // total do tema escolhido, sem repetir questão. A última opção é "todas".
   // Nas contas sorteadas não existe "todas": a lista nunca acaba.
   function montarQuantidades() {
@@ -685,7 +685,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Começa em 20 (uma rodada de treino); se o tema tiver menos de 20, começa em "todas".
     selectedLen = opcoes.includes(20) ? 20 : total;
     // Nome curto que aparece embaixo de cada número.
-    const nomes = { 5: "rápida", 10: "curta", 20: "treino", 30: "média", 50: "longa", 100: "prova final" };
+    const nomes = { 5: "rápida", 10: "curta", 15: "revisão", 20: "treino", 30: "média", 50: "longa", 100: "prova final" };
 
     lenGrid.replaceChildren(...opcoes.map(n => {
       const botao = document.createElement("button");

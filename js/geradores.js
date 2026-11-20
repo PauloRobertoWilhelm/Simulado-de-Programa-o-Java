@@ -346,13 +346,17 @@ window.Geradores = (function () {
     // Limite de tentativas para nunca travar.
     let tentativas = 0;
     while (geradores.length && lista.length < quantidade && tentativas < quantidade * 20) {
-      // Usa os geradores em rodízio, para misturar os tipos de conta.
-      const q = geradores[lista.length % geradores.length]();
-      // Só entra se o enunciado for novo e tiver 4 opções diferentes.
-      if (!usados.has(q.statement) && q.options.length === 4) {
-        usados.add(q.statement);
+      // Usa os geradores em rodízio pelo número de TENTATIVAS (não pelo tamanho da lista):
+      // assim, se um tipo de conta repetir, a próxima volta já usa outro tipo e nada trava.
+      const q = geradores[tentativas % geradores.length]();
+      // Chave = enunciado + opções. Duas perguntas com o mesmo texto mas endereços diferentes contam como diferentes.
+      const chave = q.statement + '|' + q.options.join(';');
+      // Só entra se a chave for nova e tiver 4 opções diferentes.
+      if (!usados.has(chave) && q.options.length === 4) {
+        usados.add(chave);
         lista.push(q);
       }
+      // Conta a tentativa, mesmo quando a pergunta foi descartada.
       tentativas++;
     }
     // Embaralha para os tipos não virem sempre na mesma ordem.

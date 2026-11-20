@@ -48,11 +48,31 @@
       <span class="badge-top"><span class="pulse"></span><span id="subject-badge">UNIPAR</span></span>
       <h1>Simulado de<br><span class="grad" id="subject-title">cada matéria</span></h1>
 
-      <!-- Cada matéria tem três partes. Os números são preenchidos pelo JavaScript. -->
+      <!-- Caixa que abre e fecha com o que deve cair na próxima prova. Preenchida pelo JavaScript. -->
+      <details class="focus-box hidden" id="focus-box">
+        <!-- summary é a linha clicável que abre a caixa. -->
+        <summary>🎯 O que estudar para a próxima prova</summary>
+        <!-- Parágrafo com a fonte da informação e o resultado da 1ª prova. -->
+        <p class="focus-note" id="focus-base"></p>
+        <!-- Lista dos assuntos, um item por assunto. -->
+        <ul class="focus-list" id="focus-list"></ul>
+      </details>
+
+      <!-- Liga e desliga a leitura em voz alta das perguntas e explicações. aria-pressed diz ao leitor de tela se está ligado. -->
+      <button type="button" class="voice-toggle" id="voice-toggle" aria-pressed="false">🔈 Ler em voz alta: desligado</button>
+
+      <!-- Cada matéria tem cinco partes. Os números são preenchidos pelo JavaScript. -->
       <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="O que estudar">
+        <!-- Livro: capítulos explicados de um jeito simples. -->
+        <button type="button" class="mode-tab" role="tab" data-mode="livro" aria-selected="false">Livro <span class="mode-count" id="count-livro"></span></button>
+        <!-- Perguntas: o simulado com cronômetro e nota. -->
         <button type="button" class="mode-tab" role="tab" data-mode="perguntas" aria-selected="true">Perguntas <span class="mode-count" id="count-perguntas"></span></button>
+        <!-- Histórias: situações em que você decide o que fazer. -->
         <button type="button" class="mode-tab" role="tab" data-mode="historias" aria-selected="false">Histórias <span class="mode-count" id="count-historias"></span></button>
+        <!-- Jogos: classificar e ordenar. -->
         <button type="button" class="mode-tab" role="tab" data-mode="jogos" aria-selected="false">Jogos <span class="mode-count" id="count-jogos"></span></button>
+        <!-- Praticar: falar os termos técnicos em voz alta ou digitar respostas e contas. -->
+        <button type="button" class="mode-tab" role="tab" data-mode="praticar" aria-selected="false">Praticar <span class="mode-count" id="count-praticar"></span></button>
       </div>
 
       <!-- PARTE 1: PERGUNTAS -->
@@ -89,9 +109,11 @@
       <!-- Mensagem para matérias sem perguntas. -->
       <p class="activity-empty hidden" id="perguntas-vazio">Esta matéria ainda não tem perguntas.</p>
 
-      <!-- PARTES 2 E 3: preenchidas por js/historias.js e js/jogos.js -->
+      <!-- As outras partes são preenchidas por js/livro.js, js/historias.js, js/jogos.js e js/pratica.js -->
+      <div id="panel-livro" class="hidden"></div>
       <div id="panel-historias" class="hidden"></div>
       <div id="panel-jogos" class="hidden"></div>
+      <div id="panel-praticar" class="hidden"></div>
     </div>
   </section>
 
@@ -194,8 +216,12 @@
 
 </div>
 
+<!-- voz.js vem primeiro, porque os outros arquivos usam as funções de fala e de escuta dele. -->
+<script src="js/voz.js"></script>
+<script src="js/livro.js"></script>
 <script src="js/historias.js"></script>
 <script src="js/jogos.js"></script>
+<script src="js/pratica.js"></script>
 <script>
 // ------------------------------------------------------------
 // BLOCO DE LÓGICA PRINCIPAL DO SIMULADO
@@ -377,13 +403,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (materiaAtual !== materia) return;
 
       bank = conteudo.questoes;
+      // Matérias antigas podem não ter livro, termos ou práticas: "|| []" usa uma lista vazia no lugar.
+      const livro = conteudo.livro || [];
+      const termos = conteudo.termos || [];
+      const praticas = conteudo.praticas || [];
+      // Mostra quantos itens cada parte tem, ao lado do nome da aba.
+      document.getElementById("count-livro").textContent = livro.length;
       document.getElementById("count-perguntas").textContent = conteudo.questoes.length;
       document.getElementById("count-historias").textContent = conteudo.historias.length;
       document.getElementById("count-jogos").textContent = conteudo.jogos.length;
+      document.getElementById("count-praticar").textContent = termos.length + praticas.length;
 
+      // Cada arquivo js/ desenha a sua parte dentro do painel dela.
+      window.Livro.montar(document.getElementById("panel-livro"), livro, materia.id);
       window.Historias.montar(document.getElementById("panel-historias"), conteudo.historias);
       window.Jogos.montar(document.getElementById("panel-jogos"), conteudo.jogos);
+      window.Pratica.montar(document.getElementById("panel-praticar"), termos, praticas);
 
+      // Preenche a caixa "O que estudar para a próxima prova".
+      mostrarFoco(materia);
       montarTemas();
       updateProgressPanel();
       trocarModo("perguntas");
@@ -395,51 +433,170 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // trocarModo() mostra Perguntas, Histórias ou Jogos.
+  // mostrarFoco() preenche a caixa com o que deve cair na próxima prova.
+  // Parâmetro: materia, o item da matéria em materias/index.json.
+  function mostrarFoco(materia) {
+    // Pega a caixa inteira.
+    const caixa = document.getElementById("focus-box");
+    // Matéria sem o campo "foco": esconde a caixa e para por aqui.
+    if (!materia.foco) {
+      caixa.classList.add("hidden");
+      return;
+    }
+    // Matéria com foco: mostra a caixa.
+    caixa.classList.remove("hidden");
+    // Texto do resultado da 1ª prova, só se ele existir.
+    const prova = materia.prova1 ? ` Sua 1ª prova: ${materia.prova1}.` : "";
+    // Junta a confiança, a fonte e o resultado num parágrafo só.
+    document.getElementById("focus-base").textContent = `Confiança: ${materia.foco.confianca}. ${materia.foco.base}${prova}`;
+    // Cria um item de lista para cada assunto. textContent impede que o texto vire código.
+    document.getElementById("focus-list").replaceChildren(...materia.foco.assuntos.map(assunto => {
+      // Cria o item <li>.
+      const item = document.createElement("li");
+      // Coloca o texto do assunto.
+      item.textContent = assunto;
+      // Devolve o item para a lista.
+      return item;
+    }));
+  }
+
+  // Botão "Ler em voz alta": guarda a escolha no navegador e muda o texto do botão.
+  const botaoVoz = document.getElementById("voice-toggle");
+  // atualizarBotaoVoz() mostra no botão se a leitura está ligada ou desligada.
+  function atualizarBotaoVoz() {
+    // Lê a escolha salva.
+    const ligado = window.Voz.ativo();
+    // Avisa o leitor de tela do estado atual.
+    botaoVoz.setAttribute("aria-pressed", ligado);
+    // Troca o texto e o ícone do botão.
+    botaoVoz.textContent = ligado ? "🔊 Ler em voz alta: ligado" : "🔈 Ler em voz alta: desligado";
+  }
+  // Ao tocar no botão, inverte a escolha e confirma falando.
+  botaoVoz.addEventListener("click", () => {
+    // Liga se estava desligado, e desliga se estava ligado.
+    window.Voz.definirAtivo(!window.Voz.ativo());
+    // Atualiza o texto do botão.
+    atualizarBotaoVoz();
+    // Se ligou, fala uma frase curta para mostrar que funciona.
+    if (window.Voz.ativo()) window.Voz.falar("Leitura em voz alta ligada.");
+  });
+  // Navegador sem voz: esconde o botão, que não serviria para nada.
+  if (!window.Voz.podeFalar) botaoVoz.classList.add("hidden");
+  // Mostra o estado salvo assim que a página abre.
+  atualizarBotaoVoz();
+
+  // trocarModo() mostra uma das cinco partes: livro, perguntas, histórias, jogos ou praticar.
+  // Parâmetro: modo, o mesmo texto do data-mode da aba.
   function trocarModo(modo) {
+    // Para qualquer fala ou escuta da parte anterior.
+    window.Voz.parar();
+    // Marca como selecionada só a aba do modo escolhido.
     document.querySelectorAll(".mode-tab").forEach(botao => {
       botao.setAttribute("aria-selected", botao.dataset.mode === modo);
     });
 
+    // Matéria sem perguntas mostra um aviso no lugar do simulado.
     const semPerguntas = modo === "perguntas" && bank.length === 0;
     document.getElementById("panel-perguntas").classList.toggle("hidden", modo !== "perguntas" || semPerguntas);
     document.getElementById("perguntas-vazio").classList.toggle("hidden", !semPerguntas);
-    document.getElementById("panel-historias").classList.toggle("hidden", modo !== "historias");
-    document.getElementById("panel-jogos").classList.toggle("hidden", modo !== "jogos");
+    // Os outros quatro painéis: aparece só o do modo escolhido.
+    ["livro", "historias", "jogos", "praticar"].forEach(nome => {
+      document.getElementById(`panel-${nome}`).classList.toggle("hidden", modo !== nome);
+    });
   }
 
   document.querySelectorAll(".mode-tab").forEach(botao => {
     botao.addEventListener("click", () => trocarModo(botao.dataset.mode));
   });
 
-  // montarTemas() cria os botões de tema da matéria aberta.
+  // questoesDoTema() devolve as perguntas de um tema, de um bimestre inteiro ou de todos.
+  // Parâmetro: topic, que pode ser "all", "bim1", "bim2" ou o id de um tema.
+  function questoesDoTema(topic) {
+    // "all": todas as perguntas da matéria.
+    if (topic === "all") return bank;
+    // "bim1" ou "bim2": junta todos os temas daquele bimestre.
+    if (topic === "bim1" || topic === "bim2") {
+      // Tira o número do fim do texto: "bim2" vira 2.
+      const numero = Number(topic.slice(3));
+      // Lista os ids dos temas que pertencem a esse bimestre.
+      const ids = materiaAtual.temas.filter(tema => tema.bimestre === numero).map(tema => tema.id);
+      // Devolve só as perguntas desses temas.
+      return bank.filter(q => ids.includes(q.topic));
+    }
+    // Qualquer outro valor é um tema só.
+    return bank.filter(q => q.topic === topic);
+  }
+
+  // criarBotaoTema() cria um botão de tema.
+  // Parâmetros: tema ({ id, rotulo }) e ligado (true deixa o botão marcado).
+  function criarBotaoTema(tema, ligado) {
+    // Cria o elemento <button>.
+    const botao = document.createElement("button");
+    // type="button" impede que o botão envie formulário.
+    botao.type = "button";
+    // A classe "on" marca o botão selecionado.
+    botao.className = `tpick${ligado ? " on" : ""}`;
+    // Guarda o id do tema para o filtro saber o que foi escolhido.
+    botao.dataset.topic = tema.id;
+    // Texto visível do botão.
+    botao.textContent = tema.rotulo;
+    // Devolve o botão pronto.
+    return botao;
+  }
+
+  // montarTemas() cria os botões de tema da matéria aberta, separados por bimestre.
   function montarTemas() {
-    selectedTopic = "all";
-    const temas = [{ id: "all", rotulo: "🎯 Tudo misturado" }, ...materiaAtual.temas];
+    // Tema que a matéria quer marcado ao abrir (em materias/index.json, campo "temaPadrao").
+    const padrao = materiaAtual.temaPadrao;
+    // Usa o tema padrão só se ele tiver perguntas; senão, começa em "Tudo misturado".
+    selectedTopic = padrao && questoesDoTema(padrao).length ? padrao : "all";
+    // Só entram temas que têm pelo menos uma pergunta, para não aparecer botão vazio.
+    const temas = materiaAtual.temas.filter(tema => bank.some(q => q.topic === tema.id));
+    // A matéria é separada por bimestre se algum tema tiver o campo "bimestre".
+    const usaBimestre = temas.some(tema => tema.bimestre);
+    // marcado() diz se um botão deve aparecer selecionado: só o do tema escolhido.
+    const marcado = (id) => id === selectedTopic;
+    // Primeiro botão de todos: "Tudo misturado".
+    const itens = [criarBotaoTema({ id: "all", rotulo: "🎯 Tudo misturado" }, marcado("all"))];
 
-    topicGrid.replaceChildren(...temas.map(tema => {
-      const botao = document.createElement("button");
-      botao.type = "button";
-      botao.className = `tpick${tema.id === "all" ? " on" : ""}`;
-      botao.dataset.topic = tema.id;
-      botao.textContent = tema.rotulo;
-      return botao;
-    }));
+    if (usaBimestre) {
+      // O 2º bimestre vem primeiro, porque é a prova que está chegando.
+      [2, 1].forEach(numero => {
+        // Temas desse bimestre.
+        const doBimestre = temas.filter(tema => tema.bimestre === numero);
+        // Bimestre sem temas: não mostra nada.
+        if (!doBimestre.length) return;
+        // Título do grupo, como "2º bimestre".
+        const titulo = document.createElement("p");
+        // Classe que faz o título ocupar a linha inteira.
+        titulo.className = "topic-group";
+        // Texto do título.
+        titulo.textContent = `${numero}º bimestre`;
+        // Título, botão "tudo do bimestre" e os temas do bimestre, nessa ordem.
+        itens.push(titulo, criarBotaoTema({ id: `bim${numero}`, rotulo: `📚 Tudo do ${numero}º bimestre` }, marcado(`bim${numero}`)), ...doBimestre.map(tema => criarBotaoTema(tema, marcado(tema.id))));
+      });
+    } else {
+      // Sem bimestre: os temas vão direto, um botão para cada.
+      itens.push(...temas.map(tema => criarBotaoTema(tema, marcado(tema.id))));
+    }
 
+    // Troca tudo o que havia na grade pelos botões novos.
+    topicGrid.replaceChildren(...itens);
+    // As quantidades dependem do tema escolhido, então são refeitas.
     montarQuantidades();
   }
 
-  // quantidadeDoTema() conta quantas questões existem no tema escolhido.
-  function quantidadeDoTema() {
-    return selectedTopic === "all" ? bank.length : bank.filter(q => q.topic === selectedTopic).length;
-  }
-
-  // montarQuantidades() só oferece rodadas que o banco consegue preencher, sem
-  // repetir questões. A última opção é sempre "todas".
+  // montarQuantidades() oferece rodadas de 5, 10, 30, 50 e 100 questões, até o
+  // total do tema escolhido, sem repetir questão. A última opção é sempre "todas".
   function montarQuantidades() {
-    const total = quantidadeDoTema();
-    const opcoes = [5, 10, 20].filter(n => n < total).concat(total);
+    // Quantas perguntas o tema escolhido tem.
+    const total = questoesDoTema(selectedTopic).length;
+    // Fica só com as quantidades menores que o total e acrescenta o total no fim.
+    const opcoes = [5, 10, 30, 50, 100].filter(n => n < total).concat(total);
+    // Começa marcado em "todas".
     selectedLen = total;
+    // Nome curto que aparece embaixo de cada número.
+    const nomes = { 5: "rápida", 10: "curta", 30: "média", 50: "longa", 100: "prova final" };
 
     lenGrid.replaceChildren(...opcoes.map(n => {
       const botao = document.createElement("button");
@@ -453,7 +610,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const rotulo = document.createElement("span");
       rotulo.className = "l";
-      rotulo.textContent = n === total ? "todas" : n === 5 ? "rápida" : n === 10 ? "curta" : "média";
+      // "todas" quando é o total; senão, o nome curto da tabela acima.
+      rotulo.textContent = n === total ? "todas" : nomes[n];
 
       botao.append(numero, rotulo);
       return botao;
@@ -529,24 +687,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ele filtra por tema, embaralha o banco e distribui as alternativas em posições
   // variadas para evitar respostas repetitivas na mesma coluna ou mesma posição.
   function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
-    let filtered = bank;
+    // Perguntas do tema, do bimestre ou de todos.
+    const filtered = questoesDoTema(topic);
 
-    if (topic !== "all") {
-      filtered = bank.filter(q => q.topic === topic);
-    }
-
+    // Nenhuma pergunta: devolve lista vazia, e quem chamou mostra o aviso.
     if (!filtered.length) {
       return [];
     }
 
+    // Embaralha a ordem das perguntas.
     const base = shuffleArray(filtered);
+    // deck é a lista final da rodada.
     const deck = [];
-    const answerSlots = [0, 2, 1, 3];
-    const total = Math.min(len, base.length); // nunca repete questão na mesma rodada
+    // Nunca repete questão na mesma rodada.
+    const total = Math.min(len, base.length);
+    // Posição (0 a 3) da resposta certa na pergunta anterior; -1 = nenhuma ainda.
+    let posicaoAnterior = -1;
 
     while (deck.length < total) {
+      // Próxima pergunta da lista embaralhada.
       const baseQuestion = base[deck.length];
-      const targetIndex = answerSlots[deck.length % answerSlots.length] % baseQuestion.options.length;
+      // Posições possíveis, tirando a da pergunta anterior: a letra certa nunca se repete em seguida.
+      const posicoes = baseQuestion.options.map((_, i) => i).filter(i => i !== posicaoAnterior);
+      // Sorteia uma dessas posições. Antes era uma sequência fixa (A, C, B, D...), fácil de decorar.
+      const targetIndex = posicoes[Math.floor(Math.random() * posicoes.length)];
+      // Guarda a posição para a próxima pergunta evitar.
+      posicaoAnterior = targetIndex;
+      // Coloca a resposta certa na posição sorteada e embaralha as erradas.
       deck.push(withBalancedAnswerSlot(baseQuestion, targetIndex));
     }
 
@@ -765,6 +932,17 @@ document.addEventListener("DOMContentLoaded", () => {
     html += `</div><div id="feedback-area"></div>`; // fecha o bloco de opções e prepara o espaço do feedback
     qCard.innerHTML = html; // insere todo o HTML da questão dentro do cartão da pergunta
 
+    // Texto para ouvir: o enunciado e as alternativas com a letra. O código fica só na tela.
+    const leitura = `${q.statement}. ` + optionsMapped
+      // Cada alternativa vira "Letra A: texto."
+      .map((opcao, i) => `Letra ${String.fromCharCode(65 + i)}: ${opcao.textoOriginal}.`)
+      // Junta tudo numa frase só.
+      .join(" ");
+    // Coloca os botões de voz entre as alternativas e a área de explicação.
+    document.getElementById("feedback-area").before(criarLinhaDeVoz(leitura));
+    // Se "Ler em voz alta" estiver ligado, lê a pergunta sozinho.
+    window.Voz.lerSeAtivo(leitura);
+
     document.querySelectorAll(".option").forEach(optEl => {
       optEl.addEventListener("click", function() {
         if (selectedOption !== null) return; // impede múltiplas escolhas na mesma pergunta
@@ -798,9 +976,91 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="why">${q.explain}</div>
           </div>
         `;
+        // Com a leitura ligada, fala se acertou, qual era a certa e a explicação.
+        window.Voz.lerSeAtivo(`${isCorrect ? "Você acertou!" : `Você errou. A certa é: ${q.options[q.correct]}.`} ${q.explain}`);
         btnNext.disabled = false; // habilita avanço para a próxima questão
       });
     });
+  }
+
+  // criarLinhaDeVoz() cria os botões "Ouvir a pergunta" e "Responder falando".
+  // Parâmetro: leitura, o texto da pergunta com as alternativas.
+  // Efeito: falar a letra (“letra B”) clica na alternativa B.
+  function criarLinhaDeVoz(leitura) {
+    // Caixa que agrupa os botões e o aviso.
+    const linha = document.createElement("div");
+    // Classe para o visual da linha.
+    linha.className = "voice-row";
+
+    // Botão que lê a pergunta em voz alta.
+    const ouvir = document.createElement("button");
+    // Não envia formulário.
+    ouvir.type = "button";
+    // Visual de botão secundário.
+    ouvir.className = "mini-btn";
+    // Texto do botão.
+    ouvir.textContent = "🔊 Ouvir a pergunta";
+    // Ao tocar, lê a pergunta.
+    ouvir.addEventListener("click", () => window.Voz.falar(leitura));
+    // Só aparece se o navegador tiver voz.
+    if (window.Voz.podeFalar) linha.append(ouvir);
+
+    // Navegador que não escuta o microfone (Firefox, por exemplo): só o botão de ouvir.
+    if (!window.Voz.podeOuvir) return linha;
+
+    // Botão que liga o microfone.
+    const falar = document.createElement("button");
+    // Não envia formulário.
+    falar.type = "button";
+    // Visual de botão secundário.
+    falar.className = "mini-btn";
+    // Texto do botão.
+    falar.textContent = "🎤 Responder falando";
+    // Aviso do que foi entendido; aria-live faz o leitor de tela anunciar a mudança.
+    const aviso = document.createElement("span");
+    // Classe para o visual do aviso.
+    aviso.className = "voice-status";
+    // Anuncia mudanças sem roubar o foco.
+    aviso.setAttribute("aria-live", "polite");
+
+    // Ao tocar, escuta uma vez e tenta achar a letra falada.
+    falar.addEventListener("click", () => {
+      // Já respondeu esta pergunta: não escuta de novo.
+      if (selectedOption !== null) return;
+      // Desliga o botão enquanto escuta, para não abrir dois microfones.
+      falar.disabled = true;
+      // Avisa que está ouvindo.
+      aviso.textContent = "Pode falar a letra, como “letra B”...";
+      // Liga o microfone (função de js/voz.js).
+      window.Voz.ouvir({
+        // Chamado com as frases que o navegador entendeu.
+        aoOuvir: (opcoes) => {
+          // Converte “letra B” em 1 (A = 0, B = 1...). -1 quer dizer que não achou letra.
+          const indice = window.Voz.letraFalada(opcoes);
+          // Não achou letra: mostra o que entendeu e explica como falar.
+          if (indice < 0) {
+            aviso.textContent = `Entendi “${opcoes[0]}”. Fale só a letra, como “letra B”.`;
+            return;
+          }
+          // Achou: mostra a letra e clica na alternativa, como se fosse o dedo.
+          aviso.textContent = `Você disse: letra ${String.fromCharCode(65 + indice)}.`;
+          qCard.querySelectorAll(".option")[indice].click();
+        },
+        // Erro (microfone bloqueado, sem internet...): mostra a orientação.
+        aoErro: (codigo) => {
+          aviso.textContent = window.Voz.mensagemDeErro(codigo);
+        },
+        // Terminou de escutar: religa o botão.
+        aoFim: () => {
+          falar.disabled = false;
+        }
+      });
+    });
+
+    // Coloca o botão e o aviso na linha.
+    linha.append(falar, aviso);
+    // Devolve a linha pronta.
+    return linha;
   }
 
   document.getElementById("btn-skip").addEventListener("click", () => {
@@ -834,6 +1094,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function goToIntro() {
+    // Para a leitura em voz alta ao sair da prova.
+    window.Voz.parar();
     clearInterval(timerInterval);
     screenQuiz.classList.add("hidden");
     screenResult.classList.add("hidden");
@@ -948,7 +1210,10 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem(chaveNotas(), JSON.stringify(notas));
 
     const temaAtual = materiaAtual.temas.find(tema => tema.id === selectedTopic);
-    document.getElementById("current-theme-label").textContent = temaAtual ? temaAtual.rotulo : "Tudo misturado";
+    // Nomes das escolhas que não são um tema só.
+    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre" };
+    // Mostra o nome do tema, ou o nome especial, no painel de progresso.
+    document.getElementById("current-theme-label").textContent = temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
 
     recordProgressSnapshot(pct, totalQuestions, score, selectedTopic);
     renderReviewPanel(getWrongQuestionsFromCurrentRound());

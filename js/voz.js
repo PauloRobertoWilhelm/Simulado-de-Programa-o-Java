@@ -15,6 +15,10 @@ window.Voz = (function () {
   const Reconhecedor = window.SpeechRecognition || window.webkitSpeechRecognition;
   let vozPortugues = null;
   let escutaAtual = null;
+  // geracao conta as falas. Quando uma fala nova começa (ou tudo para), a antiga
+  // perde o direito de chamar o "aoTerminar". Sem isso, ao trocar de tela no meio
+  // do livro, a fala cancelada virava a página sozinha num painel escondido.
+  let geracao = 0;
 
   // Procura uma voz em português do Brasil entre as instaladas no aparelho.
   function escolherVoz() {
@@ -45,14 +49,19 @@ window.Voz = (function () {
       return;
     }
     sintese.cancel();
+    // Esta fala recebe o próximo número; só ela pode chamar o aoTerminar.
+    const minha = ++geracao;
     const fala = new SpeechSynthesisUtterance(limparTexto(texto));
     fala.lang = 'pt-BR';
     if (vozPortugues) fala.voice = vozPortugues;
-    if (aoTerminar) fala.onend = aoTerminar;
+    // Só avisa que terminou se nenhuma outra fala começou depois desta.
+    if (aoTerminar) fala.onend = () => { if (minha === geracao) aoTerminar(); };
     sintese.speak(fala);
   }
 
   function parar() {
+    // Invalida o aoTerminar de qualquer fala que esteja tocando.
+    geracao++;
     if (sintese) sintese.cancel();
     if (escutaAtual) escutaAtual.abort();
   }

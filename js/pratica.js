@@ -244,11 +244,21 @@ window.Pratica = (function () {
         proximo.focus();
       }
 
+      // respostaCerta() compara o que foi digitado com as respostas aceitas.
+      // Em perguntas de texto ("texto": true), ignora acentos, maiúsculas e pontuação.
+      // Nas demais (código, IP, números), só ignora os espaços.
+      function respostaCerta(digitado) {
+        // Pergunta de texto: compara com o texto normalizado.
+        if (item.texto) return item.aceitas.some((aceita) => window.Voz.normalizar(aceita) === window.Voz.normalizar(digitado));
+        // Pergunta exata: compara sem os espaços.
+        return item.aceitas.some((aceita) => compacto(aceita) === compacto(digitado));
+      }
+
       const conferir = botao('btn', 'Conferir', () => {
         const resposta = compacto(campo.value);
         if (!resposta) return;
 
-        if (item.aceitas.some((aceita) => compacto(aceita) === resposta)) {
+        if (respostaCerta(campo.value)) {
           if (tentativas === 0) acertos++;
           retorno.textContent = `Certo! ${item.explicacao}`;
           retorno.className = 'activity-feedback ok';

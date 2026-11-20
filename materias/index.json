@@ -4,7 +4,10 @@
     "aba": "Programação",
     "titulo": "Programação de Computadores",
     "professor": "Prof. Lucas B. Cari",
-    "cores": ["#8f7bff", "#57f4ff"],
+    "cores": [
+      "#8f7bff",
+      "#57f4ff"
+    ],
     "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
@@ -17,14 +20,38 @@
       ]
     },
     "temas": [
-      { "id": "operadores", "rotulo": "➕ Operadores" },
-      { "id": "selecao", "rotulo": "🔀 If / Switch" },
-      { "id": "repeticao", "rotulo": "🔁 Laço While" },
-      { "id": "logica", "rotulo": "🧠 Lógica Básica" },
-      { "id": "for", "rotulo": "🔂 Laço For" },
-      { "id": "dowhile", "rotulo": "🔄 Do-while" },
-      { "id": "strings", "rotulo": "🔤 Strings" },
-      { "id": "arrays", "rotulo": "🧮 Arrays" }
+      {
+        "id": "operadores",
+        "rotulo": "➕ Operadores"
+      },
+      {
+        "id": "selecao",
+        "rotulo": "🔀 If / Switch"
+      },
+      {
+        "id": "repeticao",
+        "rotulo": "🔁 Laço While"
+      },
+      {
+        "id": "logica",
+        "rotulo": "🧠 Lógica Básica"
+      },
+      {
+        "id": "for",
+        "rotulo": "🔂 Laço For"
+      },
+      {
+        "id": "dowhile",
+        "rotulo": "🔄 Do-while"
+      },
+      {
+        "id": "strings",
+        "rotulo": "🔤 Strings"
+      },
+      {
+        "id": "arrays",
+        "rotulo": "🧮 Arrays"
+      }
     ]
   },
   {
@@ -32,32 +59,64 @@
     "aba": "Requisitos",
     "titulo": "Engenharia de Requisitos",
     "professor": "Prof. Paulo Proença",
-    "cores": ["#ffce5c", "#ff8a5c"],
+    "cores": [
+      "#ffce5c",
+      "#ff8a5c"
+    ],
     "prova1": "35 de 60 pontos",
     "foco": {
-      "confianca": "Média",
-      "base": "Atividades de outubro: casos de uso e histórias de usuário. O plano de ensino não veio junto.",
+      "confianca": "Alta",
+      "base": "O professor disse que a prova do 2º bimestre é só sobre os slides 05 (Casos de Uso) e 06 (Técnicas de Validação e Gerenciamento). Todas as perguntas do 2º bimestre vêm desses dois PDFs.",
       "assuntos": [
-        "Diagrama de caso de uso: ator, limite do sistema, include, extend, generalização",
-        "História de usuário e critérios de aceitação",
-        "Técnicas de elicitação e rastreabilidade",
-        "Classificação de metodologias, que tirou 6 pontos na 1ª prova"
+        "Casos de uso: ator, cenário principal, exceções e os 4 passos para especificar",
+        "Diagrama: include (sempre), extend (às vezes) e generalização de atores, com as setas",
+        "História de usuário: Como, quero, para que, mais os critérios de aceite",
+        "Técnicas: modelagem de processos, decomposição funcional, modelagem de domínio, checklist e prototipação"
       ]
     },
     "temas": [
-      { "id": "processo", "rotulo": "🗂️ Processo" },
-      { "id": "tipos", "rotulo": "⚖️ Funcionais e não funcionais" },
-      { "id": "metodologias", "rotulo": "🌀 Metodologias" },
-      { "id": "uml", "rotulo": "📐 UML e histórias de usuário" },
-      { "id": "elicitacao", "rotulo": "🎤 Elicitação e rastreabilidade" }
-    ]
+      {
+        "id": "processo",
+        "rotulo": "🗂️ Processo",
+        "bimestre": 1
+      },
+      {
+        "id": "tipos",
+        "rotulo": "⚖️ Funcionais e não funcionais",
+        "bimestre": 1
+      },
+      {
+        "id": "metodologias",
+        "rotulo": "🌀 Metodologias",
+        "bimestre": 1
+      },
+      {
+        "id": "casosdeuso",
+        "rotulo": "📐 Casos de uso e diagrama",
+        "bimestre": 2
+      },
+      {
+        "id": "historias",
+        "rotulo": "📝 Histórias de usuário",
+        "bimestre": 2
+      },
+      {
+        "id": "validacao",
+        "rotulo": "🔍 Técnicas de validação",
+        "bimestre": 2
+      }
+    ],
+    "temaPadrao": "bim2"
   },
   {
     "id": "design",
     "aba": "Design",
     "titulo": "Design Front-End",
     "professor": "Prof. Sandro Ramos",
-    "cores": ["#ff4fd8", "#ffb35c"],
+    "cores": [
+      "#ff4fd8",
+      "#ffb35c"
+    ],
     "prova1": "Todas as questões certas",
     "foco": {
       "confianca": "Média",
@@ -70,11 +129,26 @@
       ]
     },
     "temas": [
-      { "id": "ihc", "rotulo": "🧠 IHC e qualidade" },
-      { "id": "heuristicas", "rotulo": "🔎 Nielsen e Krug" },
-      { "id": "norman", "rotulo": "🚪 Norman e cognição" },
-      { "id": "visual", "rotulo": "🎨 Cores, protótipos e guias" },
-      { "id": "avaliacao", "rotulo": "♿ Avaliação e acessibilidade" }
+      {
+        "id": "ihc",
+        "rotulo": "🧠 IHC e qualidade"
+      },
+      {
+        "id": "heuristicas",
+        "rotulo": "🔎 Nielsen e Krug"
+      },
+      {
+        "id": "norman",
+        "rotulo": "🚪 Norman e cognição"
+      },
+      {
+        "id": "visual",
+        "rotulo": "🎨 Cores, protótipos e guias"
+      },
+      {
+        "id": "avaliacao",
+        "rotulo": "♿ Avaliação e acessibilidade"
+      }
     ]
   },
   {
@@ -82,33 +156,74 @@
     "aba": "Redes",
     "titulo": "Redes de Computadores",
     "professor": "Prof. Patrick José Cardoso",
-    "cores": ["#6aa9ff", "#57f4ff"],
+    "cores": [
+      "#6aa9ff",
+      "#57f4ff"
+    ],
     "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
-      "base": "Slides das aulas 06 e 07 do professor. A Aula 07 diz que a prova do 2º bimestre inclui a camada de transporte.",
+      "base": "O próprio professor diz que o Trabalho do 2º bimestre é a lista de revisão da prova. Ele cobre as Aulas 06, 07 e 08.",
       "assuntos": [
-        "Camada de rede: ARP, TTL, IPv4, IPv6, NAT, DHCP",
-        "Sub-redes: calcular rede, broadcast e hosts",
-        "Camada de transporte: portas, TCP, UDP e handshake",
-        "Roteamento ou aplicação, se der tempo: a ementa cita os dois e a próxima aula ainda não foi confirmada"
+        "Aula 06: encapsulamento, IP × MAC, TTL, IPs privados, NAT, sub-redes, IPv6 e DHCP",
+        "Aula 07: portas, sockets, TCP × UDP, handshake, seq e ACK, janela, FIN e RST",
+        "Aula 08: URL, HTTP, códigos de status, cookies, HTTPS, DNS, e-mail, FTP e SSH",
+        "Questão integradora: do Enter à página, passando pelas três camadas"
       ]
     },
     "temas": [
-      { "id": "modelos", "rotulo": "🧱 OSI e TCP/IP" },
-      { "id": "arquitetura", "rotulo": "🏢 Arquitetura e tipos de rede" },
-      { "id": "enlace", "rotulo": "📡 Enlace e acesso ao meio" },
-      { "id": "meios", "rotulo": "🔌 Meios e equipamentos" },
-      { "id": "rede", "rotulo": "🌐 IP, NAT e sub-redes" },
-      { "id": "transporte", "rotulo": "🚚 TCP, UDP e portas" }
-    ]
+      {
+        "id": "modelos",
+        "rotulo": "🧱 OSI e TCP/IP",
+        "bimestre": 1
+      },
+      {
+        "id": "arquitetura",
+        "rotulo": "🏢 Arquitetura e tipos de rede",
+        "bimestre": 1
+      },
+      {
+        "id": "enlace",
+        "rotulo": "📡 Enlace e acesso ao meio",
+        "bimestre": 1
+      },
+      {
+        "id": "meios",
+        "rotulo": "🔌 Meios e equipamentos",
+        "bimestre": 1
+      },
+      {
+        "id": "rede",
+        "rotulo": "🌐 Aula 06 · Camada de rede",
+        "bimestre": 2
+      },
+      {
+        "id": "transporte",
+        "rotulo": "🚚 Aula 07 · Camada de transporte",
+        "bimestre": 2
+      },
+      {
+        "id": "aplicacao",
+        "rotulo": "📨 Aula 08 · Camada de aplicação",
+        "bimestre": 2
+      },
+      {
+        "id": "integradora",
+        "rotulo": "🧩 Do Enter à página",
+        "bimestre": 2
+      }
+    ],
+    "temaPadrao": "bim2"
   },
   {
     "id": "testing",
     "aba": "Testes e QA",
     "titulo": "Testing, Compliance e QA",
     "professor": "Prof. Luiz",
-    "cores": ["#4ef0b0", "#6aa9ff"],
+    "cores": [
+      "#4ef0b0",
+      "#6aa9ff"
+    ],
     "prova1": "24 de 50 pontos",
     "foco": {
       "confianca": "Baixa",
@@ -121,12 +236,30 @@
       ]
     },
     "temas": [
-      { "id": "tipos", "rotulo": "🧪 Tipos de teste" },
-      { "id": "tecnicas", "rotulo": "📦 Caixa preta e técnicas" },
-      { "id": "praticas", "rotulo": "🤝 Práticas de QA" },
-      { "id": "qualidade", "rotulo": "🏅 Qualidade e impacto" },
-      { "id": "principios", "rotulo": "📜 Princípios e níveis" },
-      { "id": "compliance", "rotulo": "⚖️ Compliance" }
+      {
+        "id": "tipos",
+        "rotulo": "🧪 Tipos de teste"
+      },
+      {
+        "id": "tecnicas",
+        "rotulo": "📦 Caixa preta e técnicas"
+      },
+      {
+        "id": "praticas",
+        "rotulo": "🤝 Práticas de QA"
+      },
+      {
+        "id": "qualidade",
+        "rotulo": "🏅 Qualidade e impacto"
+      },
+      {
+        "id": "principios",
+        "rotulo": "📜 Princípios e níveis"
+      },
+      {
+        "id": "compliance",
+        "rotulo": "⚖️ Compliance"
+      }
     ]
   }
 ]

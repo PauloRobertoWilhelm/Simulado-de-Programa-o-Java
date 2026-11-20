@@ -63,7 +63,8 @@
 
 .mode-tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Cinco abas: cabem numa linha no computador e quebram em duas linhas no celular. */
+  grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
   gap: 6px;
   padding: 6px;
   margin: 6px 0 20px;
@@ -242,7 +243,180 @@ button.len {
 }
 .game-pieces { display: grid; gap: 8px; }
 
+/* ===== O QUE ESTUDAR E LEITURA EM VOZ ALTA ===== */
+/* Caixa que abre e fecha com os assuntos da próxima prova. */
+.focus-box {
+  /* Espaço embaixo, antes do botão de voz. */
+  margin: 0 0 12px;
+  /* Borda na cor da matéria, para chamar atenção sem gritar. */
+  border: 1px solid var(--primary-2);
+  /* Cantos arredondados no mesmo raio dos cartões. */
+  border-radius: var(--r-md);
+  /* Fundo escuro para o texto ficar legível. */
+  background: rgba(10, 14, 22, 0.75);
+  /* Texto alinhado à esquerda, que é mais fácil de ler em lista. */
+  text-align: left;
+}
+/* A linha clicável que abre a caixa. */
+.focus-box summary {
+  /* Mãozinha ao passar o mouse. */
+  cursor: pointer;
+  /* Espaço interno confortável para tocar no celular. */
+  padding: 12px 16px;
+  /* Mesma fonte dos títulos. */
+  font-family: var(--font-display);
+  /* Um pouco de peso para parecer clicável. */
+  font-weight: 600;
+}
+/* Texto da fonte da informação. */
+.focus-note {
+  /* Margem lateral igual à do summary. */
+  margin: 0 16px 8px;
+  /* Cor mais apagada, porque é informação de apoio. */
+  color: var(--muted);
+  /* Fonte um pouco menor. */
+  font-size: 0.92rem;
+}
+/* Lista de assuntos. */
+.focus-list {
+  /* Recuo para os marcadores da lista e espaço embaixo. */
+  margin: 0 16px 14px 34px;
+  /* Espaço entre as linhas. */
+  line-height: 1.6;
+}
+
+/* Botão que liga e desliga a leitura em voz alta. */
+.voice-toggle {
+  /* Espaço embaixo, antes das abas. */
+  margin: 0 0 6px;
+  /* Altura mínima boa para o dedo. */
+  min-height: 42px;
+  /* Espaço interno. */
+  padding: 8px 16px;
+  /* Borda suave. */
+  border: 1px solid var(--border);
+  /* Formato de pílula. */
+  border-radius: 999px;
+  /* Fundo escuro. */
+  background: rgba(15, 23, 42, 0.7);
+  /* Texto claro. */
+  color: var(--text);
+  /* Fonte do corpo do texto. */
+  font-family: var(--font-body);
+  /* Mãozinha ao passar o mouse. */
+  cursor: pointer;
+}
+/* Quando ligado, a borda fica na cor da matéria. */
+.voice-toggle[aria-pressed="true"] {
+  border-color: var(--teal);
+}
+
+/* Linha com "Ouvir a pergunta" e "Responder falando" dentro da questão. */
+.voice-row {
+  /* Coloca os itens lado a lado e quebra a linha se faltar espaço. */
+  display: flex;
+  flex-wrap: wrap;
+  /* Centraliza na vertical. */
+  align-items: center;
+  /* Espaço entre os botões. */
+  gap: 8px;
+  /* Espaço acima, separando das alternativas. */
+  margin-top: 14px;
+}
+/* Aviso do que o microfone entendeu. */
+.voice-status {
+  /* Cor apagada, porque é um aviso. */
+  color: var(--muted);
+  /* Fonte menor. */
+  font-size: 0.9rem;
+}
+
+/* Título "1º bimestre" / "2º bimestre" na grade de temas. */
+.topic-group {
+  /* Ocupa a linha inteira da grade flexível. */
+  flex-basis: 100%;
+  /* Espaço acima para separar os grupos. */
+  margin: 8px 0 0;
+  /* Cor da matéria, para marcar o grupo. */
+  color: var(--primary-2);
+  /* Fonte dos títulos. */
+  font-family: var(--font-display);
+  /* Peso de título. */
+  font-weight: 600;
+  /* Um pouco menor que o texto dos botões. */
+  font-size: 0.9rem;
+}
+
+/* ===== LIVRO ===== */
+/* Botão "Ouvir o capítulo". */
+.book-listen {
+  /* Centraliza o texto do botão. */
+  text-align: center;
+}
+/* Botões "Página anterior" e "Próxima página" lado a lado. */
+.book-nav {
+  /* Duas colunas iguais. */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Espaço entre os dois botões. */
+  gap: 10px;
+}
+/* Lista "Para guardar" no fim do capítulo. */
+.book-list {
+  /* Recuo para os marcadores. */
+  padding-left: 22px;
+  /* Espaço entre as linhas. */
+  line-height: 1.7;
+  /* Texto um pouco maior, porque é o resumo para decorar. */
+  font-size: 1.02rem;
+}
+
+/* ===== PRATICAR ===== */
+/* Linha com o campo de texto e o botão Conferir. */
+.practice-row {
+  /* Campo e botão lado a lado. */
+  display: flex;
+  /* Espaço entre eles. */
+  gap: 8px;
+}
+/* Campo onde a pessoa digita a resposta. */
+.practice-input {
+  /* Ocupa todo o espaço que sobra. */
+  flex: 1;
+  /* Largura total quando está sozinho. */
+  width: 100%;
+  /* Altura boa para o dedo. */
+  min-height: 48px;
+  /* Espaço interno. */
+  padding: 10px 14px;
+  /* Borda igual à das alternativas. */
+  border: 1.5px solid var(--border);
+  /* Cantos arredondados. */
+  border-radius: var(--r-sm);
+  /* Fundo escuro. */
+  background: rgba(255, 255, 255, 0.04);
+  /* Texto claro. */
+  color: var(--text);
+  /* Tamanho de leitura confortável. */
+  font-size: 1rem;
+}
+/* Campo para IP, código e contas: letra de largura fixa, mais fácil de conferir. */
+.code-input {
+  font-family: var(--font-mono);
+}
+/* Botão Conferir dentro da linha não ocupa a largura toda. */
+.practice-row .btn {
+  width: auto;
+}
+
 /* ===== FOCO E MOVIMENTO ===== */
+/* Contorno visível de teclado também nos campos e botões novos. */
+.practice-input:focus-visible,
+.voice-toggle:focus-visible,
+.focus-box summary:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
 .subject-tab:focus-visible,
 .mode-tab:focus-visible,
 .activity-card:focus-visible,

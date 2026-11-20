@@ -3,14 +3,24 @@
     {
       "topic": "processo",
       "statement": "Qual destas opções NÃO é uma etapa do processo de Engenharia de Requisitos?",
-      "options": ["Levantamento", "Negociação", "Manutenção", "Validação"],
+      "options": [
+        "Levantamento",
+        "Negociação",
+        "Manutenção",
+        "Validação"
+      ],
       "correct": 2,
       "explain": "<b>Processo:</b> as etapas são levantamento, análise, negociação, documentação, validação e gerenciamento. Manutenção pertence ao ciclo de vida do sistema. Definição, revisão e sustentação também não entram na lista da prova."
     },
     {
       "topic": "processo",
       "statement": "Clientes pedem coisas que entram em conflito entre si. Em qual etapa isso é resolvido?",
-      "options": ["Negociação", "Documentação", "Levantamento", "Gerenciamento"],
+      "options": [
+        "Negociação",
+        "Documentação",
+        "Levantamento",
+        "Gerenciamento"
+      ],
       "correct": 0,
       "explain": "<b>Negociação:</b> é o momento de resolver conflitos e definir prioridades entre as partes interessadas."
     },
@@ -18,10 +28,10 @@
       "topic": "processo",
       "statement": "O que a etapa de validação verifica?",
       "options": [
-        "Se o código compila sem erros.",
-        "Se os requisitos representam o que as partes interessadas realmente precisam.",
-        "Se o servidor aguenta muitos acessos.",
-        "Se a equipe entregou dentro do prazo."
+        "Se o código do sistema compila sem erro na primeira vez",
+        "Se os requisitos são o que as pessoas realmente precisam",
+        "Se o servidor aguenta muitos acessos ao mesmo tempo",
+        "Se a equipe entregou cada tarefa dentro do prazo"
       ],
       "correct": 1,
       "explain": "<b>Validação:</b> confere se os requisitos escritos estão certos antes de construir o sistema, porque corrigir depois custa mais."
@@ -29,7 +39,12 @@
     {
       "topic": "processo",
       "statement": "Qual destes é um benefício da Engenharia de Requisitos para o sucesso de um projeto?",
-      "options": ["Feedback contínuo", "Entrega parcial funcional", "Redução de falhas", "Código mais curto"],
+      "options": [
+        "Feedback contínuo",
+        "Entrega parcial funcional",
+        "Redução de falhas",
+        "Código mais curto"
+      ],
       "correct": 2,
       "explain": "<b>Benefícios:</b> o gabarito da prova marca redução de falhas, redução de custos e alinhamento com as necessidades. Feedback contínuo e entrega parcial funcional foram marcados como falsos."
     },
@@ -37,22 +52,22 @@
       "topic": "tipos",
       "statement": "O que são requisitos funcionais?",
       "options": [
-        "Requisitos que determinam o orçamento e o cronograma do projeto.",
-        "Requisitos que especificam características de desempenho e usabilidade.",
-        "Requisitos que tratam de segurança e restrições de hardware.",
-        "Requisitos que descrevem como o sistema deve executar determinadas funções ou comportamentos específicos."
+        "Definem o orçamento e o cronograma de entrega do projeto",
+        "Especificam o desempenho e a usabilidade esperados",
+        "Descrevem as funções e os comportamentos que o sistema deve ter",
+        "Tratam de segurança, confiabilidade e restrições de hardware"
       ],
-      "correct": 3,
+      "correct": 2,
       "explain": "<b>Funcional:</b> fala do que o sistema faz. Desempenho e usabilidade são características de requisitos não funcionais."
     },
     {
       "topic": "tipos",
       "statement": "O que são requisitos não funcionais?",
       "options": [
-        "Requisitos que definem como o sistema deve se comportar em termos de desempenho, segurança, usabilidade e confiabilidade.",
-        "Requisitos que descrevem as funções específicas que o sistema deve realizar.",
-        "Requisitos que tratam apenas da estética da interface.",
-        "Requisitos que especificam as interações entre módulos do sistema."
+        "Definem qualidades, como desempenho, segurança e usabilidade",
+        "Descrevem as funções específicas que o sistema deve realizar",
+        "Tratam apenas da estética e das cores da interface do sistema",
+        "Especificam como os módulos do sistema trocam dados entre si"
       ],
       "correct": 0,
       "explain": "<b>Não funcional:</b> fala de como o sistema deve ser: rápido, seguro, confiável e fácil de usar."
@@ -60,14 +75,24 @@
     {
       "topic": "tipos",
       "statement": "“A busca de entregas deve responder em até 2 segundos.” Que tipo de requisito é esse?",
-      "options": ["Funcional", "Não funcional", "Regra de negócio apenas", "Não é um requisito"],
+      "options": [
+        "Funcional",
+        "Não funcional",
+        "Regra de negócio apenas",
+        "Não é um requisito"
+      ],
       "correct": 1,
       "explain": "<b>Não funcional:</b> não descreve uma função nova, e sim uma qualidade da função de busca, o desempenho."
     },
     {
       "topic": "tipos",
       "statement": "“O atendente deve cadastrar remessas.” Que tipo de requisito é esse?",
-      "options": ["Não funcional", "De hardware", "Funcional", "De arquitetura"],
+      "options": [
+        "Não funcional",
+        "De hardware",
+        "Funcional",
+        "De arquitetura"
+      ],
       "correct": 2,
       "explain": "<b>Funcional:</b> descreve um serviço que o sistema oferece a quem usa."
     },
@@ -78,7 +103,7 @@
         "Relacionados às interações usuário x sistema.",
         "São a base para os testes de aceitação.",
         "Foco no comportamento do sistema.",
-        "Muitas vezes guiam as decisões de arquitetura do sistema."
+        "Costumam guiar as decisões de arquitetura."
       ],
       "correct": 3,
       "explain": "<b>Prova:</b> qualidades, restrições e decisões de arquitetura são não funcionais. Interações, serviços, funcionalidades, testes de aceitação e comportamento são funcionais."
@@ -86,88 +111,113 @@
     {
       "topic": "metodologias",
       "statement": "Como Scrum, Kanban e Extreme Programming (XP) são classificados?",
-      "options": ["Metodologia ágil", "Metodologia tradicional", "Metodologia híbrida", "Metodologia sequencial"],
+      "options": [
+        "Metodologia ágil",
+        "Metodologia tradicional",
+        "Metodologia híbrida",
+        "Metodologia sequencial"
+      ],
       "correct": 0,
       "explain": "<b>Ágil:</b> Scrum, Kanban e XP. Essa classificação errada custou pontos na prova, vale decorar."
     },
     {
       "topic": "metodologias",
       "statement": "Segundo o gabarito da prova, como o modelo Espiral é classificado?",
-      "options": ["Tradicional", "Ágil", "Híbrida", "Não é uma metodologia"],
+      "options": [
+        "Tradicional",
+        "Ágil",
+        "Híbrida",
+        "Não é uma metodologia"
+      ],
       "correct": 2,
       "explain": "<b>Híbrida:</b> a prova coloca o Espiral como híbrido."
     },
     {
       "topic": "metodologias",
       "statement": "Segundo o gabarito da prova, Cascata, Incremental e Iterativo são metodologias:",
-      "options": ["Ágeis", "Tradicionais", "Híbridas", "Experimentais"],
+      "options": [
+        "Ágeis",
+        "Tradicionais",
+        "Híbridas",
+        "Experimentais"
+      ],
       "correct": 1,
       "explain": "<b>Tradicional:</b> a prova agrupa Cascata, Incremental e Iterativo como tradicionais."
     },
     {
       "topic": "metodologias",
       "statement": "Qual destas opções NÃO é uma metodologia de desenvolvimento de software?",
-      "options": ["Prototipação", "Sequencial Linear", "Espiral", "Fuzzy"],
+      "options": [
+        "Prototipação",
+        "Sequencial Linear",
+        "Espiral",
+        "Fuzzy"
+      ],
       "correct": 3,
       "explain": "<b>Prova:</b> são metodologias Espiral, Prototipação, Cascata, Sequencial Linear e Incremental. Fuzzy, Componentizado e Empilhado foram marcadas como falsas no gabarito do professor."
     },
     {
       "topic": "metodologias",
       "statement": "Qual destas opções NÃO é uma etapa do Ciclo de Vida do Desenvolvimento de Sistemas?",
-      "options": ["Gerenciamento", "Planejamento", "Implementação", "Manutenção"],
+      "options": [
+        "Gerenciamento",
+        "Planejamento",
+        "Implementação",
+        "Manutenção"
+      ],
       "correct": 0,
       "explain": "<b>Ciclo de vida:</b> planejamento, análise, design, implementação e manutenção. Gerenciamento é etapa do processo de requisitos, não do ciclo de vida."
     },
     {
-      "topic": "uml",
+      "topic": "casosdeuso",
       "statement": "No diagrama de caso de uso, o que o relacionamento «include» indica?",
       "options": [
-        "Um comportamento opcional, que só acontece em certas condições.",
-        "Um comportamento que sempre é executado como parte do caso de uso base.",
-        "Que um ator herda o papel de outro ator.",
-        "Que dois atores usam a mesma tela."
+        "Um comportamento opcional, que só ocorre em certas condições",
+        "Um comportamento executado sempre, junto com o caso de uso base",
+        "Que um ator herda todos os casos de uso de outro ator",
+        "Que dois atores diferentes usam a mesma tela do sistema"
       ],
       "correct": 1,
       "explain": "<b>Include:</b> acontece sempre. Exemplo: reservar uma área comum sempre consulta a disponibilidade."
     },
     {
-      "topic": "uml",
+      "topic": "casosdeuso",
       "statement": "No diagrama de caso de uso, o que o relacionamento «extend» indica?",
       "options": [
-        "Um comportamento obrigatório do caso de uso base.",
-        "A ligação entre um ator e um caso de uso.",
-        "Um comportamento opcional, que só acontece em certas condições.",
-        "O limite do sistema."
+        "Um comportamento obrigatório, executado sempre com o caso base",
+        "A ligação simples entre um ator e um caso de uso",
+        "Um comportamento que só acontece em certas condições",
+        "O retângulo que marca o limite do sistema"
       ],
       "correct": 2,
       "explain": "<b>Extend:</b> acontece às vezes. Exemplo: uma reserva confirmada pode ser cancelada, gerando um reembolso."
     },
     {
-      "topic": "uml",
+      "topic": "casosdeuso",
       "statement": "Em um caso de uso, o que é um ator?",
       "options": [
-        "Uma tabela do banco de dados.",
-        "Um botão da interface.",
-        "Um módulo interno do sistema.",
-        "Um papel externo que interage com o sistema, que pode ser uma pessoa ou outro sistema."
+        "Uma tabela interna do banco de dados do sistema",
+        "Um botão da interface que dispara uma função",
+        "Um papel externo que interage com o sistema",
+        "Um módulo interno que processa os pedidos"
       ],
-      "correct": 3,
+      "correct": 2,
       "explain": "<b>Ator:</b> fica fora do limite do sistema. Na transportadora, o motorista e o serviço externo de mapas são atores."
     },
     {
-      "topic": "uml",
+      "topic": "casosdeuso",
       "statement": "O que o relacionamento de generalização mostra em um caso de uso?",
       "options": [
-        "Que um elemento mais específico herda de um elemento mais geral.",
-        "Que um caso de uso sempre chama outro.",
-        "Que um caso de uso é opcional.",
-        "Que o sistema depende da internet."
+        "Que um elemento específico herda de outro mais geral",
+        "Que um caso de uso sempre chama outro junto com ele",
+        "Que um caso de uso é opcional e só roda às vezes",
+        "Que o sistema depende da internet para funcionar"
       ],
       "correct": 0,
       "explain": "<b>Generalização:</b> funciona como herança. Exemplo: “Pagar com cartão” é um tipo de “Realizar pagamento”."
     },
     {
-      "topic": "uml",
+      "topic": "historias",
       "statement": "Qual é o formato mais usado para escrever uma história de usuário?",
       "options": [
         "O sistema deve fazer [função] em [tempo].",
@@ -179,16 +229,1264 @@
       "explain": "<b>História de usuário:</b> mostra quem quer, o que quer e por quê. O formato “Dado, quando, então” é usado em cenários de teste."
     },
     {
-      "topic": "uml",
+      "topic": "historias",
       "statement": "Para que servem os critérios de aceitação de uma história de usuário?",
       "options": [
-        "Para definir quanto o projeto vai custar.",
-        "Para listar quem vai programar a história.",
-        "Para indicar, de forma verificável, quando a história está pronta.",
-        "Para escolher a linguagem de programação."
+        "Para definir quanto o projeto vai custar ao cliente no final",
+        "Para listar quais programadores vão escrever a história",
+        "Para dizer, de forma testável, quando a história está pronta",
+        "Para escolher a linguagem de programação do projeto"
       ],
       "correct": 2,
       "explain": "<b>Critérios de aceitação:</b> precisam dar para testar. “Fácil de usar” não serve, “cancela até 1 hora antes da aula” serve."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Segundo a aula, o que um caso de uso descreve?",
+      "options": [
+        "A ordem em que as telas do sistema serão programadas pela equipe",
+        "As interações entre um ator e o sistema para atingir um objetivo",
+        "O banco de dados e as tabelas que o sistema vai usar",
+        "O cronograma e o custo de cada funcionalidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Caso de uso:</b> é uma conversa entre alguém de fora (o ator) e o sistema, com um objetivo. Exemplo: o usuário quer entrar no sistema (Login)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Quais são as três partes da estrutura básica de um caso de uso, segundo a aula?",
+      "options": [
+        "Classe, atributo e método",
+        "Ator, cenário principal e exceções",
+        "Requisito, custo e prazo de entrega",
+        "Entidade, atributo e chave primária"
+      ],
+      "correct": 1,
+      "explain": "<b>Estrutura:</b> o ator é quem interage, o cenário principal é o passo a passo quando tudo dá certo, e as exceções são o que pode dar errado."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No caso de uso “Login no Sistema”, a mensagem de erro para senha inválida fica em qual parte?",
+      "options": [
+        "Cenário principal",
+        "Exceções",
+        "Ator",
+        "Título"
+      ],
+      "correct": 1,
+      "explain": "<b>Exceção:</b> é o caminho de quando algo dá errado. A senha inválida é exatamente isso."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Qual passo pertence ao cenário principal do caso de uso “Login no Sistema”?",
+      "options": [
+        "O sistema mostra erro de senha inválida",
+        "O sistema valida usuário e senha",
+        "A equipe escolhe a cor da tela de login",
+        "O gerente aprova o orçamento do projeto"
+      ],
+      "correct": 1,
+      "explain": "<b>Cenário principal (aula):</b> o usuário acessa a tela, insere as credenciais, o sistema valida e concede o acesso. O erro de senha vai nas exceções."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Qual é a ordem para especificar requisitos funcionais com casos de uso, segundo a aula?",
+      "options": [
+        "Casos de uso, atores, exceções, cenários",
+        "Atores, casos de uso, cenários, exceções",
+        "Cenários, exceções, atores, casos de uso",
+        "Exceções, cenários, casos de uso, atores"
+      ],
+      "correct": 1,
+      "explain": "<b>Passo a passo da aula:</b> 1) identificar os atores; 2) definir os casos de uso de cada um; 3) especificar os cenários; 4) definir as exceções."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Qual é o objetivo do diagrama de casos de uso na UML, segundo a aula?",
+      "options": [
+        "Mostrar a ordem em que as classes trocam mensagens",
+        "Mostrar as tabelas e as chaves do banco de dados do sistema",
+        "Representar um requisito do sistema que será automatizado",
+        "Calcular quanto tempo cada tela leva para carregar"
+      ],
+      "correct": 2,
+      "explain": "<b>Diagrama de caso de uso:</b> desenha as necessidades (requisitos) que o sistema vai automatizar e quem usa cada uma."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Quais componentes do diagrama de caso de uso a aula cita?",
+      "options": [
+        "Ator, sistema e casos de uso",
+        "Classe, objeto e herança",
+        "Raia, evento de início e tarefa",
+        "Entidade, atributo e relacionamento"
+      ],
+      "correct": 0,
+      "explain": "<b>Três peças:</b> o ator (de fora), o sistema (o que está sendo modelado) e os casos de uso (as funcionalidades oferecidas)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No diagrama, o que fica DENTRO do limite do sistema?",
+      "options": [
+        "Os atores",
+        "Os casos de uso",
+        "Os sensores externos",
+        "Os outros sistemas"
+      ],
+      "correct": 1,
+      "explain": "<b>Dentro e fora:</b> os casos de uso são o que o sistema faz, então ficam dentro. Atores, inclusive sensores e outros sistemas, ficam do lado de fora."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Segundo a aula, qual destes NÃO pode ser um ator?",
+      "options": [
+        "Um sensor de temperatura",
+        "Outro sistema, como o de pagamento",
+        "Uma função interna do próprio sistema",
+        "Uma pessoa usando o aplicativo"
+      ],
+      "correct": 2,
+      "explain": "<b>Ator é externo:</b> usuários, máquinas, sensores e outros sistemas. O que é interno vira caso de uso, e não ator."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "A mesma pessoa é aluna e monitora no sistema da faculdade. Como isso aparece no diagrama?",
+      "options": [
+        "Como um ator só, com o nome da pessoa",
+        "Como dois atores, um para cada papel",
+        "Como um caso de uso ligando os dois papéis",
+        "Ela não aparece, pois pessoas não são atores"
+      ],
+      "correct": 1,
+      "explain": "<b>Ator é papel,</b> não pessoa. Aluno e Monitor são papéis diferentes, mesmo quando é a mesma pessoa."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Num sistema de irrigação, um sensor de umidade avisa quando a terra está seca. No diagrama de caso de uso, o sensor é:",
+      "options": [
+        "Um caso de uso",
+        "Um ator",
+        "Um «include»",
+        "O limite do sistema"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> atores podem ser usuários, máquinas, sensores e outros. O sensor interage com o sistema de fora."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo do banco da aula, quais casos de uso ficam com o Gerente?",
+      "options": [
+        "Realizar Saque e Consultar Saldo",
+        "Abrir Conta e Vender Seguro",
+        "Consultar Saldo e Abrir Conta",
+        "Vender Seguro e Realizar Saque"
+      ],
+      "correct": 1,
+      "explain": "<b>Exemplo da aula:</b> o Cliente faz Realizar Saque e Consultar Saldo; o Gerente faz Abrir Conta e Vender Seguro."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Processar Pedido tem «include» para Emitir Nota Fiscal. O que acontece toda vez que um pedido é processado?",
+      "options": [
+        "A nota pode ou não ser emitida",
+        "A nota fiscal também é emitida",
+        "O vendedor escolhe se emite a nota",
+        "A nota só sai se o cliente pedir"
+      ],
+      "correct": 1,
+      "explain": "<b>Include = sempre:</b> ao executar A, executa-se também B. Processou o pedido, saiu a nota."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Consultar Serasa aparece ligado a Processar Pedido por «extend». O que isso indica?",
+      "options": [
+        "A consulta ao Serasa acontece em todo pedido processado",
+        "A consulta ao Serasa só acontece em alguns pedidos",
+        "O Serasa é um ator que processa os pedidos sozinho",
+        "O pedido só começa depois que o Serasa termina"
+      ],
+      "correct": 1,
+      "explain": "<b>Extend = às vezes:</b> ao executar Processar Pedido, não necessariamente Consultar Serasa será executado. Por exemplo, só em compras a prazo."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Em Processar Pedido, “Solicitar Entrega” aparece como «extend». Qual situação combina com isso?",
+      "options": [
+        "Todo pedido, mesmo retirado na loja, gera entrega",
+        "Só pedidos com entrega em casa geram a solicitação",
+        "A entrega acontece antes de o pedido existir",
+        "A entrega é um ator que conversa com o vendedor"
+      ],
+      "correct": 1,
+      "explain": "<b>Opcional:</b> quem retira na loja não pede entrega. Por isso a relação é extend."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Qual frase resume a diferença entre «include» e «extend»?",
+      "options": [
+        "Include é para atores; extend é para casos de uso",
+        "Include sempre executa; extend executa só às vezes",
+        "Include é opcional e extend é sempre obrigatório",
+        "Include liga dois atores; extend liga ator e sistema"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra de bolso:</b> include é obrigatório (sempre junto) e extend é opcional (só em certas condições)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No condomínio, reservar uma área comum exige sempre consultar a disponibilidade. Qual relacionamento liga esses casos?",
+      "options": [
+        "«extend»",
+        "«include»",
+        "Generalização",
+        "Associação simples"
+      ],
+      "correct": 1,
+      "explain": "<b>Sempre = include:</b> não existe reserva sem antes consultar a disponibilidade."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No condomínio, uma solicitação de manutenção pode envolver atribuir um responsável e registrar materiais, mas nem sempre. Qual relacionamento usar?",
+      "options": [
+        "«include», porque acontece em toda solicitação",
+        "«extend», porque pode ou não acontecer",
+        "Generalização, porque é herança entre casos",
+        "Nenhum: são casos de uso sem ligação"
+      ],
+      "correct": 1,
+      "explain": "<b>“Pode envolver”</b> é pista de opcional, então é extend."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No condomínio, o acesso de um visitante depende de uma autorização cadastrada antes. Qual relacionamento?",
+      "options": [
+        "«extend», porque é opcional",
+        "«include», porque sempre é conferida",
+        "Generalização entre visitante e porteiro",
+        "Associação entre porteiro e visitante"
+      ],
+      "correct": 1,
+      "explain": "<b>“Depende de”</b> indica obrigatório. Todo acesso confere a autorização, então é include."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na agência de turismo, o seguro e os serviços adicionais são etapas opcionais da contratação. Como representar isso?",
+      "options": [
+        "Como «include», da contratação para o seguro",
+        "Como «extend», do seguro para a contratação",
+        "Como generalização, do seguro para o cliente",
+        "Como um ator chamado Serviço Adicional"
+      ],
+      "correct": 1,
+      "explain": "<b>Opcional = extend,</b> e a seta sai do caso opcional (seguro) e aponta para o caso base (contratação)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na agência de turismo, toda reserva precisa ter o pagamento validado antes de ser confirmada. Como representar?",
+      "options": [
+        "«extend» do pagamento para a confirmação",
+        "«include» da confirmação para o pagamento",
+        "Generalização da confirmação para o pagamento",
+        "Associação do pagamento com o cliente"
+      ],
+      "correct": 1,
+      "explain": "<b>Sempre = include,</b> com a seta saindo do caso base (confirmar a reserva) e apontando para o incluído (validar o pagamento)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Em “Processar Pedido «include» Emitir Nota Fiscal”, para onde aponta a seta tracejada?",
+      "options": [
+        "De Emitir Nota Fiscal para Processar Pedido",
+        "De Processar Pedido para Emitir Nota Fiscal",
+        "Do vendedor para Emitir Nota Fiscal",
+        "De Emitir Nota Fiscal para o vendedor"
+      ],
+      "correct": 1,
+      "explain": "<b>Include:</b> a seta sai de quem inclui (o caso base) e aponta para quem é incluído."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo da aula, para onde apontam as setas «extend» de Consultar Serasa e de Solicitar Entrega?",
+      "options": [
+        "Para o vendedor, que é o ator do diagrama",
+        "Para Processar Pedido, o caso de uso base",
+        "Para fora do sistema, porque são opcionais",
+        "Uma para a outra, ligando Serasa e Entrega"
+      ],
+      "correct": 1,
+      "explain": "<b>Extend:</b> a seta sai do caso opcional e aponta para o caso base que ele estende, ao contrário do include."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na aula, Cliente tem uma generalização para Usuário. O que o Cliente pode fazer?",
+      "options": [
+        "Usar só os casos de uso que são exclusivos dele",
+        "Usar os casos de uso do Usuário e os seus próprios",
+        "Nada, porque herança só existe entre classes",
+        "Só os casos de uso do Usuário, e não os seus próprios"
+      ],
+      "correct": 1,
+      "explain": "<b>Herança de ator:</b> o Cliente se comunica com os mesmos casos de uso do Usuário (Fazer Login) e ainda tem os dele (Realizar saque)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na generalização entre atores mostrada na aula, como fica a seta?",
+      "options": [
+        "Sai do Usuário e aponta para o Cliente",
+        "Sai do Cliente e aponta para o Usuário",
+        "Liga os dois sem nenhuma direção",
+        "Aponta do Cliente para Fazer Login"
+      ],
+      "correct": 1,
+      "explain": "<b>Seta com triângulo vazio:</b> sai do ator mais específico (Cliente) e aponta para o mais geral (Usuário)."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo da aula, o Usuário faz “Fazer Login”, e o Cliente herda do Usuário e faz “Realizar saque”. Qual caso de uso o Usuário comum NÃO acessa?",
+      "options": [
+        "Fazer Login",
+        "Realizar saque",
+        "Os dois casos de uso",
+        "Nenhum: acessa todos"
+      ],
+      "correct": 1,
+      "explain": "<b>A herança desce,</b> não sobe: o Cliente herda do Usuário, mas o Usuário não herda do Cliente."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Qual nome é melhor para um caso de uso?",
+      "options": [
+        "Tela de boletos",
+        "Emitir boleto",
+        "Banco de dados do boleto",
+        "Boleto"
+      ],
+      "correct": 1,
+      "explain": "<b>Caso de uso é ação:</b> verbo mais objeto, como Realizar Saque e Consultar Saldo. Tela e banco de dados não são funcionalidades."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "O que a linha contínua entre um ator e um caso de uso indica?",
+      "options": [
+        "Que o caso de uso é opcional para o ator",
+        "Que aquele ator participa daquele caso de uso",
+        "Que o ator herda tudo do caso de uso",
+        "Que o caso de uso roda antes do login"
+      ],
+      "correct": 1,
+      "explain": "<b>Associação:</b> a linha simples mostra quem usa cada funcionalidade."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No caso de uso “Compra em Loja Online”, qual item é uma exceção?",
+      "options": [
+        "O cliente coloca o produto no carrinho",
+        "O cartão é recusado pela operadora",
+        "O sistema mostra o total da compra",
+        "O cliente informa o endereço de entrega"
+      ],
+      "correct": 1,
+      "explain": "<b>Exceção:</b> é o que pode dar errado. O cartão recusado foge do caminho feliz."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No caso de uso “Alteração de Senha”, qual passo NÃO faz parte do cenário principal?",
+      "options": [
+        "O usuário informa a senha atual",
+        "O usuário digita a senha nova duas vezes para confirmar a troca",
+        "A senha nova não atende às regras e o sistema avisa",
+        "O sistema grava a senha nova e confirma"
+      ],
+      "correct": 2,
+      "explain": "<b>Cenário principal x exceção:</b> a senha fora das regras é algo que dá errado, então vai para as exceções."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No caso de uso “Agendamento de Consulta Médica Online”, quem é o ator principal?",
+      "options": [
+        "O banco de dados",
+        "O paciente",
+        "A tela de agenda",
+        "O botão de confirmar"
+      ],
+      "correct": 1,
+      "explain": "<b>Ator:</b> é quem está de fora querendo algo, aqui o paciente que quer marcar a consulta. Telas e botões são partes do sistema."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na técnica de casos de uso, o que cada caso de uso inclui, segundo a aula?",
+      "options": [
+        "Um custo, um prazo e um responsável técnico",
+        "Um ator, um objetivo e o fluxo de atividades",
+        "Uma tela, um botão e uma mensagem de erro",
+        "Uma classe, um atributo e um método público"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula de técnicas:</b> todo caso de uso tem um ator (usuário ou sistema), um objetivo e o fluxo de atividades."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo “Realizar Pagamento” da aula, qual é a sequência?",
+      "options": [
+        "Sistema gera a confirmação, cliente paga, depois informa os dados",
+        "Cliente informa dados, sistema processa, sai a confirmação",
+        "Cliente recebe a confirmação antes de informar qualquer dado",
+        "Gerente aprova, cliente informa dados e o banco processa tudo"
+      ],
+      "correct": 1,
+      "explain": "<b>Fluxo:</b> o ator (cliente) entra com as informações, o sistema processa e gera uma confirmação."
+    },
+    {
+      "topic": "historias",
+      "statement": "Segundo a aula, de que ponto de vista as histórias de usuário descrevem os requisitos?",
+      "options": [
+        "Do programador que vai codificar",
+        "Do usuário final do sistema",
+        "Do gerente que paga o projeto",
+        "Do banco de dados do sistema"
+      ],
+      "correct": 1,
+      "explain": "<b>História de usuário:</b> é uma descrição simples e objetiva, do ponto de vista de quem vai usar o sistema."
+    },
+    {
+      "topic": "historias",
+      "statement": "Qual é a principal vantagem das histórias de usuário, segundo a aula?",
+      "options": [
+        "Eliminar a necessidade de testar o sistema",
+        "Facilitar a comunicação entre desenvolvedores e usuários",
+        "Substituir todos os diagramas da UML e o documento de requisitos",
+        "Calcular o custo exato de cada funcionalidade"
+      ],
+      "correct": 1,
+      "explain": "<b>Vantagem (aula):</b> facilitar a comunicação entre desenvolvedores e usuários, deixando os requisitos mais compreensíveis e rastreáveis."
+    },
+    {
+      "topic": "historias",
+      "statement": "“Como cliente, quero adicionar itens ao carrinho.” O que falta nessa história?",
+      "options": [
+        "O tipo de usuário, a parte do “como”",
+        "O benefício, a parte do “para que”",
+        "A ação, a parte do “eu quero”",
+        "Nada, ela já está completa"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partes:</b> Como [tipo de usuário], eu quero [ação] para que [benefício]. Faltou o porquê."
+    },
+    {
+      "topic": "historias",
+      "statement": "Na história “Como cliente, quero adicionar itens ao carrinho para revisar minhas escolhas antes da compra”, qual é o benefício?",
+      "options": [
+        "Adicionar itens ao carrinho",
+        "Revisar as escolhas antes da compra",
+        "Ser um cliente cadastrado",
+        "Finalizar a compra mais rápido no site"
+      ],
+      "correct": 1,
+      "explain": "<b>Benefício:</b> é o que vem depois do “para”. A ação é adicionar ao carrinho, e o motivo é revisar as escolhas."
+    },
+    {
+      "topic": "historias",
+      "statement": "No cartão de história mostrado na aula, o que vem embaixo da frase “Como..., eu quero..., para que...”?",
+      "options": [
+        "O preço da funcionalidade",
+        "Os critérios de aceite",
+        "O código do programa",
+        "O diagrama de classes"
+      ],
+      "correct": 1,
+      "explain": "<b>Cartão da aula:</b> Número e Título no topo, a frase da história e, embaixo, Critério de aceite 1, 2... n."
+    },
+    {
+      "topic": "historias",
+      "statement": "Segundo o modelo de cartão da aula, o que vai no topo da história de usuário?",
+      "options": [
+        "Nome do programador",
+        "Número e título",
+        "Data da entrega final",
+        "Custo em horas"
+      ],
+      "correct": 1,
+      "explain": "<b>Topo do cartão:</b> “NÚMERO – TÍTULO”, para identificar e rastrear a história."
+    },
+    {
+      "topic": "historias",
+      "statement": "Qual destes é um critério de aceite ruim, porque não dá para testar?",
+      "options": [
+        "O carrinho mostra o total em reais",
+        "A tela deve ser agradável",
+        "O cancelamento é aceito até 1 hora antes",
+        "A senha precisa ter pelo menos 8 caracteres"
+      ],
+      "correct": 1,
+      "explain": "<b>Critério de aceite:</b> precisa dar para conferir com sim ou não. “Agradável” depende do gosto de cada um."
+    },
+    {
+      "topic": "historias",
+      "statement": "Qual é um bom critério de aceite para “Como aluno, quero ver minhas notas para acompanhar meu desempenho”?",
+      "options": [
+        "O aluno deve gostar muito da tela de notas do portal",
+        "As notas aparecem por matéria e bimestre, com a média",
+        "O sistema deve usar a linguagem Java no servidor",
+        "A tela precisa ser rápida e fácil para todo mundo"
+      ],
+      "correct": 1,
+      "explain": "<b>Testável e ligado à história:</b> dá para abrir a tela e conferir se as notas aparecem por matéria, por bimestre e com a média."
+    },
+    {
+      "topic": "historias",
+      "statement": "No cartão da aula, o que a parte “[persona]” representa?",
+      "options": [
+        "O programador responsável pela história",
+        "O tipo de usuário que tem a necessidade",
+        "O nome real do cliente que pagou o sistema",
+        "O ator secundário do diagrama de classes"
+      ],
+      "correct": 1,
+      "explain": "<b>Persona:</b> é o tipo de usuário, como cliente, aluno ou motorista, e não uma pessoa real com nome."
+    },
+    {
+      "topic": "historias",
+      "statement": "Qual destas frases está no formato de história de usuário?",
+      "options": [
+        "O sistema deve usar o banco de dados MySQL, na versão 8 ou mais nova",
+        "Como professor, quero lançar notas para avisar os alunos",
+        "A tela de notas deve carregar em até 2 segundos",
+        "Lançar notas: tela com campos e botão salvar"
+      ],
+      "correct": 1,
+      "explain": "<b>Formato:</b> Como + quero + para. As outras frases são um requisito técnico, um não funcional e uma descrição de tela."
+    },
+    {
+      "topic": "historias",
+      "statement": "Segundo a aula, as histórias de usuário tornam os requisitos mais compreensíveis e mais o quê?",
+      "options": [
+        "Baratos",
+        "Rastreáveis",
+        "Rápidos de programar",
+        "Secretos"
+      ],
+      "correct": 1,
+      "explain": "<b>Rastreável:</b> dá para seguir cada história, do pedido do usuário até o que foi entregue e testado."
+    },
+    {
+      "topic": "historias",
+      "statement": "Quem deve conseguir entender uma história de usuário?",
+      "options": [
+        "Só os programadores, porque usa termos técnicos",
+        "O usuário e a equipe, sem precisar de termos técnicos",
+        "Só o gerente, porque trata de custos e prazos",
+        "Só o testador, porque ela já é o caso de teste pronto"
+      ],
+      "correct": 1,
+      "explain": "<b>Linguagem simples:</b> a história serve justamente para o usuário e a equipe falarem a mesma língua."
+    },
+    {
+      "topic": "historias",
+      "statement": "“Como cliente, quero usar o sistema do banco para resolver minha vida financeira.” Qual é o problema dessa história?",
+      "options": [
+        "Está no formato errado, porque começa com “Como”",
+        "É grande demais e deve ser dividida em histórias menores",
+        "Fala do ponto de vista do usuário, e histórias devem falar do sistema",
+        "Tem benefício, e histórias não devem ter benefício"
+      ],
+      "correct": 1,
+      "explain": "<b>História gigante:</b> não dá para entregar nem testar de uma vez. Aqui entra a decomposição: saldo, extrato, pagamentos..."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, qual é a diferença entre validar e gerenciar requisitos?",
+      "options": [
+        "Validar é escrever o código; gerenciar é testar o sistema pronto",
+        "Validar confere se estão certos; gerenciar os mantém organizados",
+        "Validar é tarefa do cliente; gerenciar é tarefa só do programador",
+        "Validar acontece no fim; gerenciar acontece antes do projeto começar"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> a validação garante que os requisitos estão corretos e completos. O gerenciamento garante que eles sejam mantidos e organizados durante todo o ciclo."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Para que servem as técnicas de validação e gerenciamento de requisitos, segundo a aula?",
+      "options": [
+        "Aumentar o número de requisitos do projeto",
+        "Reduzir riscos e evitar falhas na entrega",
+        "Trocar a equipe de desenvolvimento no meio",
+        "Dispensar a conversa com os usuários finais"
+      ],
+      "correct": 1,
+      "explain": "<b>Objetivo:</b> com técnicas adequadas, a equipe reduz riscos e evita falhas na entrega."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica representa o fluxo de atividades de um sistema ou organização, mostrando como as tarefas são executadas?",
+      "options": [
+        "Modelagem de domínio",
+        "Modelagem de processos",
+        "Decomposição funcional",
+        "Lista de verificação"
+      ],
+      "correct": 1,
+      "explain": "<b>Modelagem de processos:</b> desenha o fluxo, quem faz o quê e em que ordem, para atingir um objetivo."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, quando a modelagem de processos é especialmente útil?",
+      "options": [
+        "Para escolher a linguagem de programação",
+        "Para entender fluxos complexos do negócio",
+        "Para calcular o salário da equipe do projeto",
+        "Para desenhar o logotipo da empresa cliente"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> é especialmente útil para entender fluxos complexos e como o sistema se encaixa no negócio, além de ajudar a achar melhorias."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama de processo do restaurante, o que inicia o processo de receber pagamento?",
+      "options": [
+        "A tarefa Cobrar Pagamento",
+        "O evento Refeição Concluída",
+        "O cliente pagando a comanda",
+        "O evento Pagamento Recebido"
+      ],
+      "correct": 1,
+      "explain": "<b>Evento de início:</b> é o círculo verde, Refeição Concluída. O círculo vermelho, Pagamento Recebido, é o fim."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama de processo do restaurante, qual tarefa vem logo depois de “Receber Comanda”?",
+      "options": [
+        "Cobrar Pagamento",
+        "Calcular Valor Total",
+        "Entregar Comprovante",
+        "Pagar Comanda"
+      ],
+      "correct": 1,
+      "explain": "<b>Ordem:</b> Receber Comanda, Calcular Valor Total, Cobrar Pagamento, (cliente) Pagar Comanda, Entregar Comprovante."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama de processo do restaurante, quem executa a tarefa “Pagar Comanda”?",
+      "options": [
+        "O atendente de caixa",
+        "O cliente",
+        "O cozinheiro",
+        "O sistema de cartão"
+      ],
+      "correct": 1,
+      "explain": "<b>Raias:</b> “Pagar Comanda” está na faixa do Cliente. As outras tarefas estão na faixa do Atendente de Caixa."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama de processo do restaurante, como o processo termina?",
+      "options": [
+        "Com a tarefa Calcular Valor Total",
+        "Com o evento Pagamento Recebido",
+        "Com o evento Refeição Concluída",
+        "Com o cliente saindo do restaurante"
+      ],
+      "correct": 1,
+      "explain": "<b>Evento de fim:</b> o círculo vermelho, Pagamento Recebido, logo depois de Entregar Comprovante."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama do restaurante, para que servem as faixas “Atendente de Caixa” e “Cliente”?",
+      "options": [
+        "Mostrar a ordem alfabética das tarefas",
+        "Mostrar quem é responsável por cada tarefa",
+        "Separar as tarefas pagas das que são gratuitas no restaurante",
+        "Indicar quanto tempo leva cada etapa"
+      ],
+      "correct": 1,
+      "explain": "<b>Raias (lanes):</b> cada faixa é um participante, e a tarefa fica na faixa de quem a executa."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama do restaurante, o que as setas tracejadas entre o caixa e o cliente representam?",
+      "options": [
+        "Tarefas que podem ser puladas sem problema",
+        "A troca de mensagens entre os participantes",
+        "O caminho do dinheiro dentro do caixa",
+        "O tempo de espera entre uma tarefa e outra"
+      ],
+      "correct": 1,
+      "explain": "<b>Linha tracejada:</b> é comunicação entre participantes. O caixa cobra e o cliente paga, o cliente paga e o caixa entrega o comprovante."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica pega um recurso grande do sistema e o quebra em pedaços menores, organizados em níveis?",
+      "options": [
+        "Modelagem de domínio",
+        "Decomposição funcional",
+        "Prototipação",
+        "Lista de verificação"
+      ],
+      "correct": 1,
+      "explain": "<b>Decomposição funcional:</b> divide grandes funcionalidades em partes menores e mais gerenciáveis, em níveis hierárquicos."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Como a decomposição funcional reduz a complexidade, segundo a aula?",
+      "options": [
+        "Juntando todas as funções num só módulo",
+        "Isolando funções em níveis hierárquicos",
+        "Eliminando os requisitos não funcionais",
+        "Trocando os casos de uso por protótipos"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> ela facilita a compreensão, dá uma visão mais granular e reduz a complexidade ao isolar funções em níveis hierárquicos."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No exemplo bancário da aula, em que “Gerenciamento de Conta” foi decomposto?",
+      "options": [
+        "Cliente, Produto, Pedido e Pagamento",
+        "Saldo, Histórico de Transações e Pagamentos",
+        "Login, Cadastro de cliente e Recuperação de senha",
+        "Abrir Conta, Vender Seguro e Saque"
+      ],
+      "correct": 1,
+      "explain": "<b>Exemplo da aula:</b> “Gerenciamento de Conta” vira “Saldo”, “Histórico de Transações” e “Pagamentos”. Cliente, Produto e Pedido são entidades do domínio."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na decomposição “Pintar uma sala”, em que nível fica “Preparação da sala”?",
+      "options": [
+        "Nível 1",
+        "Nível 2",
+        "Nível 3",
+        "Nível 4"
+      ],
+      "correct": 1,
+      "explain": "<b>Níveis:</b> no nível 1 está Pintar uma sala; no nível 2, as quatro partes (materiais, preparação, pintura, limpeza); no nível 3, as tarefas pequenas."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na decomposição “Pintar uma sala”, “Cobrir tomadas com fita” pertence a qual item do nível 2?",
+      "options": [
+        "Preparação de materiais",
+        "Preparação da sala",
+        "Pintura da sala",
+        "Limpeza da sala"
+      ],
+      "correct": 1,
+      "explain": "<b>Preparação da sala:</b> remover o papel de parede e as decorações, cobrir o chão com jornais, as tomadas com fita e os móveis com lençóis."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na decomposição “Pintar uma sala”, “Comprar rolos” fica abaixo de “Preparação de materiais”. Em que nível ele está?",
+      "options": [
+        "Nível 1",
+        "Nível 2",
+        "Nível 3",
+        "Nível 4"
+      ],
+      "correct": 2,
+      "explain": "<b>Preparação de materiais:</b> comprar tinta, escada, rolos e removedor de papel de parede."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na decomposição “Pintar uma sala”, “Limpar pincéis e rolos” fica abaixo de qual item?",
+      "options": [
+        "Pintura da sala",
+        "Preparação da sala",
+        "Limpeza da sala",
+        "Preparação de materiais"
+      ],
+      "correct": 2,
+      "explain": "<b>Limpeza da sala:</b> guardar ou jogar fora a tinta que sobrou, limpar pincéis e rolos, jogar fora os jornais e limpar os lençóis."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual item NÃO cabe no nível 2 de “Pintar uma sala”?",
+      "options": [
+        "Preparação de materiais",
+        "Pintar rodapés com pincel",
+        "Limpeza da sala",
+        "Preparação da sala"
+      ],
+      "correct": 1,
+      "explain": "<b>Pegadinha de nível:</b> “Pintar rodapés com pincel” é uma tarefa pequena, então fica no nível 3, abaixo de Pintura da sala."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Num sistema de escola, você vai decompor “Gerenciar Matrícula”. Qual divisão faz sentido?",
+      "options": [
+        "Cor da tela, Fonte do texto e Logotipo da escola no topo",
+        "Cadastrar aluno, Escolher turma, Emitir comprovante",
+        "Servidor, Banco de dados e Rede da escola",
+        "Programador, Testador e Analista"
+      ],
+      "correct": 1,
+      "explain": "<b>Decompor funções:</b> as partes também são funcionalidades. Visual, infraestrutura e pessoas não são funções do recurso."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica define os conceitos, as entidades e os relacionamentos do contexto do negócio?",
+      "options": [
+        "Modelagem de processos",
+        "Modelagem de domínio",
+        "Decomposição funcional",
+        "Prototipação"
+      ],
+      "correct": 1,
+      "explain": "<b>Modelagem de domínio:</b> mostra as “coisas” do negócio, como Cliente, Pedido e Produto, e como elas se ligam."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, a modelagem de domínio melhora a consistência e minimiza o quê?",
+      "options": [
+        "Custos de servidor",
+        "Ambiguidades",
+        "Linhas de código",
+        "Testes de regressão"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> ela clarifica os elementos e as relações, melhorando a consistência e minimizando ambiguidades, quando cada um entende uma coisa."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No exemplo de e-commerce da aula, qual frase descreve um relacionamento do domínio?",
+      "options": [
+        "O botão Comprar fica no canto direito da tela",
+        "Um Cliente faz um Pedido que contém Produtos",
+        "O site deve abrir em menos de 2 segundos",
+        "O pedido é gravado numa tabela do MySQL"
+      ],
+      "correct": 1,
+      "explain": "<b>Relacionamento:</b> liga entidades do negócio, como Cliente, Pedido e Produto. Tela, desempenho e banco de dados ficam fora do domínio."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual destes NÃO é uma entidade do domínio de e-commerce da aula?",
+      "options": [
+        "Cliente",
+        "Botão Finalizar",
+        "Produto",
+        "Pagamento do pedido"
+      ],
+      "correct": 1,
+      "explain": "<b>Entidades da aula:</b> Cliente, Produto, Pedido e Pagamento. Botão é um elemento de interface, não um conceito do negócio."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, quantos Perfis uma Conta possui?",
+      "options": [
+        "Vários",
+        "Um",
+        "Nenhum",
+        "Dois"
+      ],
+      "correct": 1,
+      "explain": "<b>Leia a seta:</b> a Conta “possui um” Perfil. Já o Perfil possui um ou vários Endereços."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, quantos Hóspedes uma Reserva de Estadia possui?",
+      "options": [
+        "Exatamente um",
+        "Um ou vários",
+        "Nenhum",
+        "No máximo dois"
+      ],
+      "correct": 1,
+      "explain": "<b>Seta da aula:</b> a Reserva de Estadia “possui um ou vários” Hóspedes e “pode ter várias” Avaliações."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, a quem um Hotel pertence?",
+      "options": [
+        "A um Hóspede e a uma Avaliação",
+        "A uma Cadeia de Hotéis e a uma Conta de Parceiro",
+        "A uma Reserva de Estadia e a um Meio de Pagamento da conta",
+        "A uma Oferta e a um Endereço"
+      ],
+      "correct": 1,
+      "explain": "<b>Grupo Hotéis:</b> o Hotel “pertence a uma” Cadeia de Hotéis e “pertence a uma” Conta de Parceiro, e pode ter várias Ofertas e Acomodações."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, em que grupo fica “Avaliação”?",
+      "options": [
+        "Contas",
+        "Estadia",
+        "Hotéis",
+        "Pagamentos"
+      ],
+      "correct": 1,
+      "explain": "<b>Grupos:</b> Contas (Conta, Perfil, Endereço, Meio de pagamento), Hotéis (Cadeia, Hotel, Oferta, Acomodação, Conta de parceiro) e Estadia (Reserva, Hóspede, Avaliação)."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica revisa os requisitos com itens do tipo “Confirmou compatibilidade com outros sistemas?”",
+      "options": [
+        "Prototipação",
+        "Lista de verificação",
+        "Modelagem de domínio",
+        "Decomposição funcional"
+      ],
+      "correct": 1,
+      "explain": "<b>Lista de verificação (checklist):</b> é uma lista de perguntas para conferir se os requisitos estão completos e se os pontos principais foram abordados."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O que a lista de verificação ajuda a encontrar, segundo a aula?",
+      "options": [
+        "Erros de digitação no código-fonte do sistema",
+        "Inconsistências e requisitos que estão faltando",
+        "O melhor horário para fazer as reuniões",
+        "A linguagem de programação mais rápida"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> ela auxilia na identificação de inconsistências ou de requisitos ausentes, promovendo a qualidade."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual pergunta combina com uma lista de verificação de requisitos?",
+      "options": [
+        "Qual é o salário do analista de requisitos?",
+        "Os requisitos de segurança foram revisados?",
+        "O cliente gostou da cor do logotipo novo?",
+        "Quantas linhas de código o projeto terá?"
+      ],
+      "correct": 1,
+      "explain": "<b>Item de checklist:</b> confere se um ponto importante do requisito foi tratado, como segurança ou compatibilidade."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica cria versões preliminares do sistema para o usuário ver e interagir?",
+      "options": [
+        "Lista de verificação",
+        "Prototipação",
+        "Modelagem de processos",
+        "Decomposição funcional"
+      ],
+      "correct": 1,
+      "explain": "<b>Prototipação:</b> são versões preliminares que o usuário vê e usa, o que facilita a validação dos requisitos."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Por que a prototipação ajuda a validar requisitos?",
+      "options": [
+        "Ela gera automaticamente o código final, pronto para o cliente",
+        "O usuário vê e mexe antes, e aponta o que está errado",
+        "Ela dispensa ouvir o usuário durante o projeto",
+        "Ela só mostra o banco de dados para o gerente"
+      ],
+      "correct": 1,
+      "explain": "<b>Ver para crer:</b> é mais fácil o usuário dizer “não era isso” olhando para uma tela do que lendo um texto."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O cliente diz: “só vou saber se é isso quando eu vir a tela”. O que mais ajuda?",
+      "options": [
+        "Fazer a decomposição funcional",
+        "Mostrar um protótipo da tela",
+        "Criar o modelo de domínio",
+        "Aplicar a lista de verificação"
+      ],
+      "correct": 1,
+      "explain": "<b>Prototipação:</b> o cliente precisa ver e interagir para validar o que pediu."
+    },
+    {
+      "topic": "validacao",
+      "statement": "A equipe não entende como o pedido passa do vendedor para o estoque e depois para a entrega. Qual técnica ajuda?",
+      "options": [
+        "Montar o modelo de domínio das entidades",
+        "Desenhar o fluxo com modelagem de processos",
+        "Escrever uma lista de verificação",
+        "Fazer um protótipo da tela inicial"
+      ],
+      "correct": 1,
+      "explain": "<b>Fluxo entre setores:</b> é o que a modelagem de processos mostra, com tarefas, ordem e responsáveis."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na reunião, as palavras “cliente”, “comprador” e “consumidor” são usadas para a mesma coisa e geram confusão. Qual técnica resolve?",
+      "options": [
+        "Fazer um protótipo de alta fidelidade",
+        "Modelar o domínio e padronizar os termos",
+        "Decompor a funcionalidade de compra",
+        "Criar o diagrama de casos de uso"
+      ],
+      "correct": 1,
+      "explain": "<b>Ambiguidade de termos:</b> é exatamente o que a modelagem de domínio minimiza, ao definir um conceito com um nome só."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O recurso “Gerenciar Estoque” é grande demais para estimar. Qual técnica usar primeiro?",
+      "options": [
+        "Fazer o modelo de domínio",
+        "Decompor em funções menores",
+        "Escrever a lista de verificação",
+        "Desenhar o processo de venda"
+      ],
+      "correct": 1,
+      "explain": "<b>Grande demais:</b> a decomposição funcional quebra o recurso em partes menores, como entrada, saída e inventário, que dá para estimar."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Antes de entregar a especificação, o analista quer ter certeza de que nada importante ficou de fora. Qual técnica?",
+      "options": [
+        "Modelar o domínio do negócio",
+        "Passar uma lista de verificação",
+        "Decompor o sistema em níveis",
+        "Desenhar o fluxo do processo"
+      ],
+      "correct": 1,
+      "explain": "<b>Checklist:</b> serve para revisar se os requisitos estão completos e achar o que está faltando."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Segundo a aula, no diagrama de casos de uso, devemos considerar um requisito como o quê?",
+      "options": [
+        "Uma tela pronta do sistema",
+        "Uma necessidade do sistema",
+        "Uma linha de código do programa",
+        "Um custo previsto no orçamento"
+      ],
+      "correct": 1,
+      "explain": "<b>Slide do diagrama:</b> o objetivo é representar um requisito que será automatizado, e a aula diz para considerar o requisito como uma necessidade do sistema."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na definição da aula, o que é o “Sistema” no diagrama de casos de uso?",
+      "options": [
+        "O servidor físico onde o programa vai rodar",
+        "O banco de dados que guarda as informações",
+        "O que está sendo modelado, com suas funções",
+        "A equipe que vai programar o projeto"
+      ],
+      "correct": 2,
+      "explain": "<b>Componentes da aula:</b> o ator é a entidade externa, o sistema é o que está sendo modelado (comportamentos ou funções) e os casos de uso são as funcionalidades oferecidas."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Segundo o slide sobre atores, um papel pode ser representado por quantos atores?",
+      "options": [
+        "Por exatamente um ator",
+        "Por vários atores",
+        "Por nenhum ator",
+        "Só por atores humanos"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> um ator representa um papel no sistema, mas um papel pode ser representado por vários atores."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na etapa “Identificar os Atores”, o que a equipe descobre, segundo a aula?",
+      "options": [
+        "Quem são os usuários e quais sistemas interagem",
+        "Quais funcionalidades cada ator precisa acessar",
+        "O que acontece em caso de erro ou situação incomum",
+        "Os passos e as ações do ator no sistema"
+      ],
+      "correct": 0,
+      "explain": "<b>Passo 1:</b> descobrir quem são os usuários e quais sistemas interagem. Depois vêm os casos de uso, os cenários e as exceções."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na etapa “Definir os Casos de Uso”, o que a equipe decide, segundo a aula?",
+      "options": [
+        "Quem são os usuários e quais sistemas interagem",
+        "Quais funcionalidades cada ator precisa acessar",
+        "O que acontece em caso de erro ou situação incomum",
+        "Os passos e as ações do ator no sistema"
+      ],
+      "correct": 1,
+      "explain": "<b>Passo 2:</b> para cada ator, quais funcionalidades ele precisa acessar."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Na etapa “Definir Exceções”, o que a equipe descreve, segundo a aula?",
+      "options": [
+        "Quem são os usuários e quais sistemas interagem",
+        "Quais funcionalidades cada ator precisa acessar",
+        "O que acontece em caso de erro ou situação incomum",
+        "Os passos e as ações do ator no sistema"
+      ],
+      "correct": 2,
+      "explain": "<b>Passo 4:</b> o que acontece quando dá erro ou numa situação fora do normal. Os passos e as ações do ator são o passo 3, Especificar Cenários."
+    },
+    {
+      "topic": "historias",
+      "statement": "No exemplo da aula, “Como um cliente, quero adicionar itens ao carrinho para revisar minhas escolhas antes da compra”, qual é a ação?",
+      "options": [
+        "Revisar as escolhas antes da compra",
+        "Adicionar itens ao carrinho",
+        "Ser um cliente da loja online",
+        "Finalizar a compra com cartão"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partes:</b> o “Como” é o cliente (persona), o “quero” é a ação (adicionar itens ao carrinho) e o “para” é o benefício (revisar as escolhas)."
+    },
+    {
+      "topic": "historias",
+      "statement": "Na história “Como motorista, quero ver as entregas do dia para planejar minha rota”, quem é a persona?",
+      "options": [
+        "As entregas do dia",
+        "O motorista",
+        "Planejar a rota",
+        "O sistema da transportadora"
+      ],
+      "correct": 1,
+      "explain": "<b>Persona:</b> é quem vem depois do “Como”. As entregas são a ação, e planejar a rota é o benefício."
+    },
+    {
+      "topic": "historias",
+      "statement": "Pelo modelo de cartão da aula, quantos critérios de aceite uma história pode ter?",
+      "options": [
+        "Exatamente um, sempre",
+        "Vários: critério 1, 2... até n",
+        "Nenhum, porque a história já basta",
+        "Exatamente três, nem mais nem menos"
+      ],
+      "correct": 1,
+      "explain": "<b>Cartão:</b> mostra “Critério de aceite 1, 2... n”, ou seja, quantos forem necessários para dizer que a história está pronta."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual exemplo de modelagem de processos aparece em texto na aula?",
+      "options": [
+        "Cliente compra, estoque baixa e a nota é emitida",
+        "Aluno se matricula, paga e recebe a carteirinha",
+        "Cliente contata, operador atende e a solução é enviada",
+        "Paciente agenda, clínica confirma e ele é atendido"
+      ],
+      "correct": 2,
+      "explain": "<b>Exemplo da aula:</b> o atendimento ao cliente. O cliente entra em contato, é atendido por um operador e a solução é enviada, com decisões e fluxos desenhados."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama do restaurante, o que o Atendente de Caixa faz logo depois de o cliente pagar a comanda?",
+      "options": [
+        "Calcular o valor total",
+        "Entregar o comprovante",
+        "Cobrar o pagamento de novo",
+        "Receber uma nova comanda"
+      ],
+      "correct": 1,
+      "explain": "<b>Fim do fluxo:</b> o cliente paga e o caixa entrega o comprovante de pagamento. Depois disso vem o evento de fim, Pagamento Recebido."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama do restaurante, qual é o nome do processo inteiro (a faixa maior, na lateral)?",
+      "options": [
+        "Atendente de Caixa",
+        "Receber Pagamento",
+        "Pagar Comanda",
+        "Refeição Concluída"
+      ],
+      "correct": 1,
+      "explain": "<b>Pegadinha:</b> o processo se chama Receber Pagamento. Atendente de Caixa é uma raia, Pagar Comanda é uma tarefa e Refeição Concluída é o evento de início."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, a decomposição funcional permite que a equipe foque em quê?",
+      "options": [
+        "Em um único documento com tudo junto",
+        "Em componentes específicos do sistema",
+        "Apenas nos requisitos não funcionais",
+        "Nas telas e nas cores da interface"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> ela divide grandes funcionalidades em partes menores e mais gerenciáveis, permitindo à equipe focar em componentes específicos."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, que tipo de visão do sistema a decomposição funcional oferece?",
+      "options": [
+        "Geral, ou seja, menos detalhada",
+        "Granular, ou seja, mais detalhada",
+        "Visual, ou seja, cheia de cores",
+        "Técnica, ou seja, só em código"
+      ],
+      "correct": 1,
+      "explain": "<b>Granular:</b> em pedaços pequenos e detalhados, como grãos. É o contrário de uma visão só geral."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, a Conta de Parceiro está ligada a quê?",
+      "options": [
+        "Possui várias Avaliações",
+        "Está vinculada a uma Conta",
+        "Pertence a uma Reserva",
+        "Possui um ou vários Hóspedes"
+      ],
+      "correct": 1,
+      "explain": "<b>Leia a seta:</b> a Conta de Parceiro “está vinculada a uma” Conta, no grupo Contas. O Hotel pertence à Conta de Parceiro."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, a quantas Acomodações uma Reserva de Estadia está associada?",
+      "options": [
+        "Sempre a exatamente uma",
+        "A uma ou várias",
+        "A nenhuma, só ao Hotel",
+        "No máximo a duas"
+      ],
+      "correct": 1,
+      "explain": "<b>Seta da aula:</b> a Reserva de Estadia “está associada a uma ou várias” Acomodações e “pertence a uma” Conta."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, quantos Meios de Pagamento uma Conta pode ter?",
+      "options": [
+        "Só um, fixo para sempre",
+        "Pode ter um ou vários",
+        "Nenhum: paga no hotel",
+        "Exatamente dois"
+      ],
+      "correct": 1,
+      "explain": "<b>Seta da aula:</b> a Conta “possui um ou vários” Meios de Pagamento e “possui um” Perfil."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No modelo de domínio do hotel, quantas Ofertas uma Acomodação pode ter?",
+      "options": [
+        "Várias",
+        "Uma",
+        "Nenhuma, nunca",
+        "Uma por hóspede"
+      ],
+      "correct": 1,
+      "explain": "<b>Pegadinha:</b> a Acomodação “pode ter uma” Oferta. Quem “pode ter várias” Ofertas é o Hotel."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, a modelagem de domínio ajuda a equipe a entender o quê?",
+      "options": [
+        "O código-fonte de cada tela do app",
+        "O universo de operação do software",
+        "O tempo de resposta do servidor",
+        "O salário de cada desenvolvedor"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> ela ajuda a equipe a entender melhor o universo de operação do software, ou seja, o mundo do negócio onde ele vai funcionar."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Segundo a aula, para que são usadas as listas de verificação?",
+      "options": [
+        "Escrever o código seguindo um padrão",
+        "Revisar se os requisitos estão completos",
+        "Desenhar as telas antes de programar",
+        "Dividir o sistema em níveis menores"
+      ],
+      "correct": 1,
+      "explain": "<b>Aula:</b> revisar e validar os requisitos, garantindo que estão completos e que os pontos principais foram abordados."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Um usuário mexe numa tela de teste e diz: “falta um botão para cancelar”. O que aconteceu?",
+      "options": [
+        "A decomposição dividiu o requisito em níveis",
+        "A prototipação revelou um requisito ausente",
+        "O modelo de domínio eliminou uma ambiguidade",
+        "A modelagem de processos desenhou o fluxo"
+      ],
+      "correct": 1,
+      "explain": "<b>Prototipação:</b> o usuário vê e interage antes de o sistema ficar pronto e aponta o que falta. É por isso que ela facilita a validação."
     }
   ],
   "historias": [
@@ -200,27 +1498,57 @@
           "texto": "A dona da academia quer que alunos reservem vagas, instrutores registrem treinos e atendentes cuidem das matrículas. Ela pede para a equipe começar a programar hoje mesmo.",
           "pergunta": "Qual é o primeiro passo?",
           "opcoes": [
-            { "texto": "Conversar com alunos, instrutores e atendentes para levantar as necessidades.", "certa": true, "retorno": "Isso. O levantamento vem primeiro: sem ouvir quem usa, o sistema nasce desalinhado." },
-            { "texto": "Escolher a linguagem e abrir o editor.", "retorno": "Ainda não. Programar antes de entender o problema aumenta falhas e custo." },
-            { "texto": "Desenhar as telas finais.", "retorno": "Cedo demais. Primeiro descubra o que cada perfil precisa fazer." }
+            {
+              "texto": "Conversar com alunos, instrutores e atendentes para levantar as necessidades.",
+              "certa": true,
+              "retorno": "Isso. O levantamento vem primeiro: sem ouvir quem usa, o sistema nasce desalinhado."
+            },
+            {
+              "texto": "Escolher a linguagem e abrir o editor.",
+              "retorno": "Ainda não. Programar antes de entender o problema aumenta falhas e custo."
+            },
+            {
+              "texto": "Desenhar as telas finais.",
+              "retorno": "Cedo demais. Primeiro descubra o que cada perfil precisa fazer."
+            }
           ]
         },
         {
           "texto": "Os instrutores querem que o aluno só reserve com 24 horas de antecedência. A recepção quer reservas até 1 hora antes da aula. Os dois pedidos não cabem juntos.",
           "pergunta": "Em qual etapa isso se resolve?",
           "opcoes": [
-            { "texto": "Negociação", "certa": true, "retorno": "Certo. Conflito entre partes interessadas se resolve na negociação." },
-            { "texto": "Documentação", "retorno": "Documentar registra a decisão, mas alguém precisa decidir antes." },
-            { "texto": "Validação", "retorno": "A validação confere os requisitos prontos. Aqui eles ainda estão em conflito." }
+            {
+              "texto": "Negociação",
+              "certa": true,
+              "retorno": "Certo. Conflito entre partes interessadas se resolve na negociação."
+            },
+            {
+              "texto": "Documentação",
+              "retorno": "Documentar registra a decisão, mas alguém precisa decidir antes."
+            },
+            {
+              "texto": "Validação",
+              "retorno": "A validação confere os requisitos prontos. Aqui eles ainda estão em conflito."
+            }
           ]
         },
         {
           "texto": "Você escreve: “Como aluno, quero cancelar minha reserva para liberar a vaga.” Agora faltam os critérios de aceitação.",
           "pergunta": "Qual é um bom critério?",
           "opcoes": [
-            { "texto": "O cancelamento é aceito até 1 hora antes da aula e a vaga volta a ficar disponível.", "certa": true, "retorno": "Bom critério: dá para testar e dizer se passou ou não." },
-            { "texto": "A tela deve ser bonita e fácil.", "retorno": "“Bonita” não dá para testar. O critério precisa ser verificável." },
-            { "texto": "O sistema deve usar banco de dados relacional.", "retorno": "Isso é decisão técnica. Não diz quando a história está pronta." }
+            {
+              "texto": "O cancelamento é aceito até 1 hora antes da aula e a vaga volta a ficar disponível.",
+              "certa": true,
+              "retorno": "Bom critério: dá para testar e dizer se passou ou não."
+            },
+            {
+              "texto": "A tela deve ser bonita e fácil.",
+              "retorno": "“Bonita” não dá para testar. O critério precisa ser verificável."
+            },
+            {
+              "texto": "O sistema deve usar banco de dados relacional.",
+              "retorno": "Isso é decisão técnica. Não diz quando a história está pronta."
+            }
           ]
         }
       ],
@@ -234,31 +1562,144 @@
           "texto": "A equipe lista os atores no quadro. Alguém escreve “Banco de dados” no meio da lista.",
           "pergunta": "Quem deve ficar como ator?",
           "opcoes": [
-            { "texto": "Motorista, atendente e o serviço externo de mapas.", "certa": true, "retorno": "Certo. Ator fica fora do sistema e interage com ele. Pode ser pessoa ou outro sistema." },
-            { "texto": "O banco de dados interno.", "retorno": "O banco fica dentro do sistema, então não é ator." },
-            { "texto": "O botão de salvar.", "retorno": "Botão é parte da interface, não um papel externo." }
+            {
+              "texto": "Motorista, atendente e o serviço externo de mapas.",
+              "certa": true,
+              "retorno": "Certo. Ator fica fora do sistema e interage com ele. Pode ser pessoa ou outro sistema."
+            },
+            {
+              "texto": "O banco de dados interno.",
+              "retorno": "O banco fica dentro do sistema, então não é ator."
+            },
+            {
+              "texto": "O botão de salvar.",
+              "retorno": "Botão é parte da interface, não um papel externo."
+            }
           ]
         },
         {
           "texto": "Toda vez que o financeiro emite uma cobrança, o sistema calcula o valor do frete. Sem exceção.",
           "pergunta": "Qual relacionamento liga “Emitir cobrança” a “Calcular frete”?",
           "opcoes": [
-            { "texto": "«include»", "certa": true, "retorno": "Isso. Se acontece sempre, é include." },
-            { "texto": "«extend»", "retorno": "Extend é para o que só acontece às vezes. Aqui acontece sempre." },
-            { "texto": "Generalização", "retorno": "Generalização é herança. Calcular frete não é um tipo de cobrança." }
+            {
+              "texto": "«include»",
+              "certa": true,
+              "retorno": "Isso. Se acontece sempre, é include."
+            },
+            {
+              "texto": "«extend»",
+              "retorno": "Extend é para o que só acontece às vezes. Aqui acontece sempre."
+            },
+            {
+              "texto": "Generalização",
+              "retorno": "Generalização é herança. Calcular frete não é um tipo de cobrança."
+            }
           ]
         },
         {
           "texto": "Ao atualizar uma entrega, o motorista só registra uma ocorrência quando algo dá errado.",
           "pergunta": "Qual relacionamento liga “Atualizar entrega” a “Registrar ocorrência”?",
           "opcoes": [
-            { "texto": "«extend»", "certa": true, "retorno": "Certo. Só acontece em certas condições, então é extend." },
-            { "texto": "«include»", "retorno": "Include seria obrigatório em toda entrega, e a ocorrência é exceção." },
-            { "texto": "Associação entre dois atores", "retorno": "A ligação é entre dois casos de uso, não entre atores." }
+            {
+              "texto": "«extend»",
+              "certa": true,
+              "retorno": "Certo. Só acontece em certas condições, então é extend."
+            },
+            {
+              "texto": "«include»",
+              "retorno": "Include seria obrigatório em toda entrega, e a ocorrência é exceção."
+            },
+            {
+              "texto": "Associação entre dois atores",
+              "retorno": "A ligação é entre dois casos de uso, não entre atores."
+            }
           ]
         }
       ],
       "fim": "Regra para guardar: acontece sempre é include, acontece às vezes é extend, e quem fica fora do sistema é ator."
+    },
+    {
+      "titulo": "O app da clínica",
+      "resumo": "Você é analista e precisa transformar o pedido de uma clínica em requisitos claros.",
+      "cenas": [
+        {
+          "texto": "A clínica quer que pacientes marquem consultas pela internet. Você começa a desenhar o diagrama de casos de uso. Alguém sugere colocar “Banco de Dados da Agenda” como ator.",
+          "pergunta": "Quem deve ficar como ator?",
+          "opcoes": [
+            {
+              "texto": "O paciente e a recepcionista",
+              "certa": true,
+              "retorno": "Certo. Ator fica de fora e interage com o sistema. O banco de dados é interno."
+            },
+            {
+              "texto": "O banco de dados da agenda",
+              "retorno": "O banco faz parte do sistema, então não é ator."
+            },
+            {
+              "texto": "A tela de agendamento",
+              "retorno": "Tela é parte da interface, não um papel externo."
+            }
+          ]
+        },
+        {
+          "texto": "Todo agendamento precisa conferir se o horário está livre. Às vezes o paciente também pede um lembrete por SMS.",
+          "pergunta": "Como ficam esses relacionamentos?",
+          "opcoes": [
+            {
+              "texto": "Conferir horário é «include»; o lembrete por SMS é «extend»",
+              "certa": true,
+              "retorno": "Isso: sempre é include, às vezes é extend."
+            },
+            {
+              "texto": "Os dois são «include»",
+              "retorno": "O lembrete é opcional, então não pode ser include."
+            },
+            {
+              "texto": "Conferir horário é «extend»; o SMS é «include»",
+              "retorno": "Invertido: conferir acontece sempre, e o SMS só às vezes."
+            }
+          ]
+        },
+        {
+          "texto": "O dono da clínica escreve: “Como paciente, quero marcar consulta.” Você revisa a história.",
+          "pergunta": "O que melhora essa história?",
+          "opcoes": [
+            {
+              "texto": "Acrescentar o “para que” e critérios de aceite testáveis",
+              "certa": true,
+              "retorno": "Certo. Falta o benefício, por exemplo “para não precisar ligar”, e os critérios, como “mostra só horários livres”."
+            },
+            {
+              "texto": "Trocar “paciente” por “sistema”",
+              "retorno": "A história é do ponto de vista do usuário, não do sistema."
+            },
+            {
+              "texto": "Acrescentar a linguagem de programação",
+              "retorno": "Isso é decisão técnica, não faz parte da história."
+            }
+          ]
+        },
+        {
+          "texto": "O recurso “Gerenciar Agenda” ficou grande demais para a equipe estimar.",
+          "pergunta": "Qual técnica usar?",
+          "opcoes": [
+            {
+              "texto": "Decomposição funcional, quebrando em partes menores",
+              "certa": true,
+              "retorno": "Isso: marcar, remarcar, cancelar e consultar horários livres, em níveis."
+            },
+            {
+              "texto": "Modelagem de domínio",
+              "retorno": "Ela mostra as entidades e as relações, mas não quebra a funcionalidade em partes."
+            },
+            {
+              "texto": "Lista de verificação",
+              "retorno": "O checklist revisa se está completo, mas não divide o recurso."
+            }
+          ]
+        }
+      ],
+      "fim": "Ator, include, extend, história de usuário e decomposição: o 2º bimestre inteiro aplicado num caso só."
     }
   ],
   "jogos": [
@@ -266,41 +1707,649 @@
       "tipo": "classificar",
       "nome": "Funcional ou não funcional?",
       "instrucao": "Classifique cada frase. Essa questão valia 8 pontos na prova.",
-      "categorias": ["Funcional", "Não funcional"],
+      "categorias": [
+        "Funcional",
+        "Não funcional"
+      ],
       "itens": [
-        { "texto": "Definem as qualidades que o sistema deve obedecer.", "categoria": "Não funcional", "porque": "Qualidade é não funcional." },
-        { "texto": "Muitas vezes guiam as decisões de arquitetura do sistema.", "categoria": "Não funcional", "porque": "Decisão de arquitetura vem de requisitos não funcionais." },
-        { "texto": "Definem as restrições que o sistema deve obedecer.", "categoria": "Não funcional", "porque": "Restrição é não funcional." },
-        { "texto": "Relacionados às interações usuário x sistema.", "categoria": "Funcional", "porque": "Interação é o que o sistema faz com o usuário." },
-        { "texto": "Definem serviços que o sistema deve proporcionar.", "categoria": "Funcional", "porque": "Serviço é função do sistema." },
-        { "texto": "São a base para o desenvolvimento de testes de aceitação.", "categoria": "Funcional", "porque": "O gabarito liga testes de aceitação aos funcionais." },
-        { "texto": "Foco no comportamento do sistema.", "categoria": "Funcional", "porque": "Comportamento é o que o sistema faz." },
-        { "texto": "O motorista atualiza o status da entrega.", "categoria": "Funcional", "porque": "É uma ação que o sistema oferece." },
-        { "texto": "A tela de reservas carrega em até 2 segundos.", "categoria": "Não funcional", "porque": "Desempenho é não funcional." },
-        { "texto": "Os dados dos clientes ficam criptografados.", "categoria": "Não funcional", "porque": "Segurança é não funcional." }
+        {
+          "texto": "Definem as qualidades que o sistema deve obedecer.",
+          "categoria": "Não funcional",
+          "porque": "Qualidade é não funcional."
+        },
+        {
+          "texto": "Muitas vezes guiam as decisões de arquitetura do sistema.",
+          "categoria": "Não funcional",
+          "porque": "Decisão de arquitetura vem de requisitos não funcionais."
+        },
+        {
+          "texto": "Definem as restrições que o sistema deve obedecer.",
+          "categoria": "Não funcional",
+          "porque": "Restrição é não funcional."
+        },
+        {
+          "texto": "Relacionados às interações usuário x sistema.",
+          "categoria": "Funcional",
+          "porque": "Interação é o que o sistema faz com o usuário."
+        },
+        {
+          "texto": "Definem serviços que o sistema deve proporcionar.",
+          "categoria": "Funcional",
+          "porque": "Serviço é função do sistema."
+        },
+        {
+          "texto": "São a base para o desenvolvimento de testes de aceitação.",
+          "categoria": "Funcional",
+          "porque": "O gabarito liga testes de aceitação aos funcionais."
+        },
+        {
+          "texto": "Foco no comportamento do sistema.",
+          "categoria": "Funcional",
+          "porque": "Comportamento é o que o sistema faz."
+        },
+        {
+          "texto": "O motorista atualiza o status da entrega.",
+          "categoria": "Funcional",
+          "porque": "É uma ação que o sistema oferece."
+        },
+        {
+          "texto": "A tela de reservas carrega em até 2 segundos.",
+          "categoria": "Não funcional",
+          "porque": "Desempenho é não funcional."
+        },
+        {
+          "texto": "Os dados dos clientes ficam criptografados.",
+          "categoria": "Não funcional",
+          "porque": "Segurança é não funcional."
+        }
       ]
     },
     {
       "tipo": "classificar",
       "nome": "Qual é a metodologia?",
       "instrucao": "Use a classificação do gabarito da prova.",
-      "categorias": ["Tradicional", "Ágil", "Híbrida"],
+      "categorias": [
+        "Tradicional",
+        "Ágil",
+        "Híbrida"
+      ],
       "itens": [
-        { "texto": "Cascata", "categoria": "Tradicional", "porque": "A prova marca Cascata como tradicional." },
-        { "texto": "Incremental", "categoria": "Tradicional", "porque": "A prova marca Incremental como tradicional." },
-        { "texto": "Iterativo", "categoria": "Tradicional", "porque": "A prova marca Iterativo como tradicional." },
-        { "texto": "Scrum", "categoria": "Ágil", "porque": "Scrum é ágil." },
-        { "texto": "Kanban", "categoria": "Ágil", "porque": "Kanban é ágil." },
-        { "texto": "Extreme Programming (XP)", "categoria": "Ágil", "porque": "XP é ágil." },
-        { "texto": "Espiral", "categoria": "Híbrida", "porque": "A prova marca Espiral como híbrida." }
+        {
+          "texto": "Cascata",
+          "categoria": "Tradicional",
+          "porque": "A prova marca Cascata como tradicional."
+        },
+        {
+          "texto": "Incremental",
+          "categoria": "Tradicional",
+          "porque": "A prova marca Incremental como tradicional."
+        },
+        {
+          "texto": "Iterativo",
+          "categoria": "Tradicional",
+          "porque": "A prova marca Iterativo como tradicional."
+        },
+        {
+          "texto": "Scrum",
+          "categoria": "Ágil",
+          "porque": "Scrum é ágil."
+        },
+        {
+          "texto": "Kanban",
+          "categoria": "Ágil",
+          "porque": "Kanban é ágil."
+        },
+        {
+          "texto": "Extreme Programming (XP)",
+          "categoria": "Ágil",
+          "porque": "XP é ágil."
+        },
+        {
+          "texto": "Espiral",
+          "categoria": "Híbrida",
+          "porque": "A prova marca Espiral como híbrida."
+        }
       ]
     },
     {
       "tipo": "ordenar",
       "nome": "Monte o processo de requisitos",
       "instrucao": "Toque nas etapas na ordem mais comum do processo.",
-      "sequencia": ["Levantamento", "Análise", "Negociação", "Documentação", "Validação", "Gerenciamento"],
+      "sequencia": [
+        "Levantamento",
+        "Análise",
+        "Negociação",
+        "Documentação",
+        "Validação",
+        "Gerenciamento"
+      ],
       "explicacao": "Primeiro você descobre e entende, depois resolve conflitos, escreve, confere e mantém os requisitos sob controle."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Include ou extend?",
+      "instrucao": "Sempre ou às vezes? Classifique cada relação.",
+      "categorias": [
+        "«include»",
+        "«extend»"
+      ],
+      "itens": [
+        {
+          "texto": "Processar Pedido → Emitir Nota Fiscal",
+          "categoria": "«include»",
+          "porque": "Exemplo da aula: sempre emite."
+        },
+        {
+          "texto": "Processar Pedido ← Consultar Serasa",
+          "categoria": "«extend»",
+          "porque": "Exemplo da aula: só em alguns pedidos."
+        },
+        {
+          "texto": "Processar Pedido ← Solicitar Entrega",
+          "categoria": "«extend»",
+          "porque": "Só quando há entrega."
+        },
+        {
+          "texto": "Reservar área comum → Consultar disponibilidade",
+          "categoria": "«include»",
+          "porque": "Toda reserva confere a disponibilidade."
+        },
+        {
+          "texto": "Acesso de visitante → Conferir autorização",
+          "categoria": "«include»",
+          "porque": "Depende da autorização, sempre."
+        },
+        {
+          "texto": "Solicitar manutenção ← Registrar materiais",
+          "categoria": "«extend»",
+          "porque": "Pode envolver, mas nem sempre."
+        },
+        {
+          "texto": "Contratar viagem ← Contratar seguro",
+          "categoria": "«extend»",
+          "porque": "O seguro é opcional."
+        },
+        {
+          "texto": "Confirmar reserva → Validar pagamento",
+          "categoria": "«include»",
+          "porque": "Toda confirmação valida o pagamento."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Qual técnica usar?",
+      "instrucao": "Escolha a técnica para cada situação.",
+      "categorias": [
+        "Modelagem de processos",
+        "Decomposição funcional",
+        "Modelagem de domínio",
+        "Lista de verificação",
+        "Prototipação"
+      ],
+      "itens": [
+        {
+          "texto": "Entender como o pedido passa por vendas, estoque e entrega",
+          "categoria": "Modelagem de processos",
+          "porque": "É fluxo de atividades entre setores."
+        },
+        {
+          "texto": "Desenhar quem faz cada tarefa no pagamento do restaurante",
+          "categoria": "Modelagem de processos",
+          "porque": "Raias e tarefas em ordem."
+        },
+        {
+          "texto": "Quebrar “Gerenciar Estoque” em partes menores",
+          "categoria": "Decomposição funcional",
+          "porque": "Divide a funcionalidade em níveis."
+        },
+        {
+          "texto": "Dividir “Pintar uma sala” em níveis",
+          "categoria": "Decomposição funcional",
+          "porque": "É o exemplo da aula."
+        },
+        {
+          "texto": "Definir que um Cliente faz Pedidos que contêm Produtos",
+          "categoria": "Modelagem de domínio",
+          "porque": "Entidades e relacionamentos do negócio."
+        },
+        {
+          "texto": "Acabar com a confusão entre “cliente” e “comprador”",
+          "categoria": "Modelagem de domínio",
+          "porque": "Minimiza ambiguidades."
+        },
+        {
+          "texto": "Conferir se os requisitos de segurança foram revisados",
+          "categoria": "Lista de verificação",
+          "porque": "É um item de checklist."
+        },
+        {
+          "texto": "Descobrir requisitos que ficaram faltando",
+          "categoria": "Lista de verificação",
+          "porque": "O checklist acha o que falta."
+        },
+        {
+          "texto": "Cliente que só entende vendo a tela funcionando",
+          "categoria": "Prototipação",
+          "porque": "Versão preliminar para ver e interagir."
+        },
+        {
+          "texto": "Validar o layout do app com usuários antes de programar",
+          "categoria": "Prototipação",
+          "porque": "Protótipo facilita a validação."
+        }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "Especificar com casos de uso",
+      "instrucao": "Toque nos passos na ordem da aula.",
+      "sequencia": [
+        "Identificar os atores",
+        "Definir os casos de uso",
+        "Especificar os cenários",
+        "Definir as exceções"
+      ],
+      "explicacao": "Primeiro quem, depois o quê, depois como, e por fim o que pode dar errado."
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "O processo do restaurante",
+      "instrucao": "Monte o fluxo do pagamento, do início ao fim.",
+      "sequencia": [
+        "Refeição Concluída",
+        "Receber Comanda",
+        "Calcular Valor Total",
+        "Cobrar Pagamento",
+        "Pagar Comanda",
+        "Entregar Comprovante",
+        "Pagamento Recebido"
+      ],
+      "explicacao": "Evento de início, tarefas do caixa, tarefa do cliente, comprovante e evento de fim."
+    }
+  ],
+  "livro": [
+    {
+      "titulo": "O que é um caso de uso",
+      "resumo": "Ator, cenário principal e exceções.",
+      "paginas": [
+        "Pense numa máquina de refrigerante. Você (de fora) quer um refri: coloca a moeda, escolhe e pega a lata. Isso é um caso de uso: uma conversa entre alguém de fora, o ator, e o sistema, para atingir um objetivo.",
+        "Todo caso de uso tem três partes. O ator é quem interage. O cenário principal é o passo a passo quando tudo dá certo. As exceções são o que pode dar errado: a moeda é falsa, o refri acabou.",
+        "Exemplo da aula, Login no Sistema. Ator: Usuário. Cenário principal: acessa a tela de login, insere usuário e senha, o sistema valida e concede o acesso. Exceção: se as credenciais forem inválidas, o sistema mostra uma mensagem de erro. Para especificar requisitos funcionais com casos de uso, siga esta ordem: identificar os atores, definir os casos de uso de cada um, especificar os cenários e definir as exceções."
+      ],
+      "guardar": [
+        "Caso de uso: ator + objetivo + passos",
+        "Cenário principal = tudo dá certo; exceção = algo dá errado",
+        "Ordem: atores, casos de uso, cenários, exceções"
+      ]
+    },
+    {
+      "titulo": "Desenhando o diagrama",
+      "resumo": "Boneco, elipse, retângulo e linha.",
+      "paginas": [
+        "O diagrama de casos de uso é um desenho da UML que mostra os requisitos que o sistema vai automatizar. Tem três peças: o ator (um bonequinho), o sistema (um retângulo, o limite) e os casos de uso (elipses com verbo, como Realizar Saque).",
+        "Ator fica do lado de fora e pode ser uma pessoa, uma máquina, um sensor ou outro sistema. Atenção: ator é um papel, não uma pessoa. Se a mesma pessoa é aluna e monitora, aparecem dois atores. O que é interno do sistema nunca vira ator: vira caso de uso, dentro do retângulo.",
+        "A linha simples entre o ator e a elipse diz quem usa o quê. No exemplo do banco da aula, o Cliente faz Realizar Saque e Consultar Saldo, e o Gerente faz Abrir Conta e Vender Seguro. Dica de nome: caso de uso é ação, verbo mais objeto, como Emitir boleto, e não “Tela de boletos”."
+      ],
+      "guardar": [
+        "Ator fica fora; casos de uso ficam dentro do retângulo",
+        "Ator é papel: pessoa, máquina, sensor ou sistema",
+        "Nome de caso de uso começa com verbo"
+      ]
+    },
+    {
+      "titulo": "Sempre, às vezes e herança",
+      "resumo": "Include, extend e generalização, com as setas.",
+      "paginas": [
+        "Include quer dizer sempre. Quando A inclui B, toda vez que A roda, B roda junto. Exemplo da aula: Processar Pedido «include» Emitir Nota Fiscal, porque processou, saiu a nota. A seta tracejada sai de A (o caso base) e aponta para B (o incluído).",
+        "Extend quer dizer às vezes. Quando B estende A, ao rodar A, B não necessariamente roda. Exemplo da aula: Consultar Serasa e Solicitar Entrega estendem Processar Pedido, porque nem todo pedido consulta o Serasa e nem todo pedido tem entrega. Aqui a seta é ao contrário: sai do caso opcional e aponta para o caso base.",
+        "Truque para provas de texto: “depende de”, “exige” e “sempre” indicam include; “pode”, “opcional” e “em alguns casos” indicam extend. Generalização é herança entre atores: o Cliente herda do Usuário, e a seta com triângulo vazio sai do Cliente e aponta para o Usuário. O Cliente usa os casos de uso do Usuário (Fazer Login) e os seus (Realizar saque), mas o Usuário não herda os do Cliente."
+      ],
+      "guardar": [
+        "Include = sempre; seta do base para o incluído",
+        "Extend = às vezes; seta do opcional para o base",
+        "Generalização: o filho herda os casos de uso do pai"
+      ]
+    },
+    {
+      "titulo": "Histórias de usuário",
+      "resumo": "Como, quero, para que, mais os critérios de aceite.",
+      "paginas": [
+        "Uma história de usuário é um pedido simples, escrito do ponto de vista de quem vai usar o sistema, como um bilhete: “Como cliente, quero adicionar itens ao carrinho para revisar minhas escolhas antes da compra.”",
+        "A estrutura tem três partes: Como [tipo de usuário ou persona], eu quero [ação] para que [benefício]. Se faltar o “para que”, a história ficou sem o motivo. A grande vantagem, segundo a aula, é facilitar a comunicação entre desenvolvedores e usuários, deixando os requisitos mais compreensíveis e rastreáveis.",
+        "No cartão da aula, em cima vem NÚMERO – TÍTULO, no meio a frase da história e embaixo os critérios de aceite. Critério bom dá para testar com sim ou não: “o cancelamento é aceito até 1 hora antes”. Critério ruim depende de gosto: “a tela deve ser agradável”. E história gigante, como “resolver minha vida financeira”, precisa ser dividida em histórias menores."
+      ],
+      "guardar": [
+        "Como [persona], eu quero [ação] para que [benefício]",
+        "Cartão: número e título, história, critérios de aceite",
+        "Critério de aceite precisa ser testável"
+      ]
+    },
+    {
+      "titulo": "Validar e gerenciar",
+      "resumo": "Lista de verificação e prototipação.",
+      "paginas": [
+        "Validar é conferir se os requisitos estão corretos e completos. Gerenciar é manter os requisitos organizados durante todo o projeto. Com as técnicas certas, a equipe reduz riscos e evita falhas na entrega.",
+        "A lista de verificação (checklist) é como a lista de coisas para levar numa viagem: “Verificou requisitos de segurança?”, “Confirmou compatibilidade com outros sistemas?”. Ela ajuda a achar inconsistências e requisitos que estão faltando.",
+        "A prototipação cria versões preliminares do sistema para o usuário ver e mexer antes. É muito mais fácil alguém dizer “não era isso” olhando uma tela do que lendo um texto. Quando o cliente diz “só vou saber quando eu vir”, a resposta é protótipo."
+      ],
+      "guardar": [
+        "Validar = está certo e completo; gerenciar = mantém organizado",
+        "Checklist acha o que está faltando",
+        "Protótipo: o usuário vê e mexe antes"
+      ]
+    },
+    {
+      "titulo": "O caminho das tarefas",
+      "resumo": "Modelagem de processos no exemplo do restaurante.",
+      "paginas": [
+        "A modelagem de processos desenha o fluxo de atividades: quem faz o quê e em que ordem, para chegar a um objetivo. É especialmente útil para entender fluxos complexos e como o sistema se encaixa no negócio, além de ajudar a achar melhorias.",
+        "No diagrama do restaurante da aula, há duas faixas (raias): Atendente de Caixa e Cliente. O processo começa no círculo verde, Refeição Concluída. Depois vêm Receber Comanda, Calcular Valor Total e Cobrar Pagamento. Então o Cliente faz Pagar Comanda, o caixa faz Entregar Comprovante de Pagamento, e o processo termina no círculo vermelho, Pagamento Recebido.",
+        "As setas cheias mostram a ordem das tarefas. As setas tracejadas mostram troca de mensagem entre participantes: o caixa cobra e o cliente paga; o cliente paga e o caixa entrega o comprovante. A raia em que a tarefa está diz quem a executa."
+      ],
+      "guardar": [
+        "Círculo verde = início; vermelho = fim",
+        "Raia = quem executa a tarefa",
+        "Tracejada = mensagem entre participantes"
+      ]
+    },
+    {
+      "titulo": "Quebrando o problema em pedaços",
+      "resumo": "Decomposição funcional: banco e pintar a sala.",
+      "paginas": [
+        "Comer uma pizza inteira de uma vez não dá: você corta em fatias. A decomposição funcional faz isso com o sistema: divide uma grande funcionalidade em partes menores e mais fáceis de entender, organizadas em níveis.",
+        "Exemplo da aula, no banco: “Gerenciamento de Conta” vira “Saldo”, “Histórico de Transações” e “Pagamentos”. Isso dá uma visão mais granular e reduz a complexidade, isolando as funções em níveis hierárquicos.",
+        "Exemplo “Pintar uma sala”. Nível 1: Pintar uma sala. Nível 2: Preparação de materiais, Preparação da sala, Pintura da sala e Limpeza da sala. Nível 3: comprar tinta, escada, rolos e removedor (materiais); remover o papel de parede, cobrir chão, tomadas e móveis (preparação); pintar com rolo e rodapés com pincel (pintura); guardar a tinta, limpar pincéis e jogar os jornais fora (limpeza)."
+      ],
+      "guardar": [
+        "Decompor = dividir em níveis, do geral ao detalhe",
+        "Banco: Saldo, Histórico de Transações e Pagamentos",
+        "Pintar a sala: 4 itens no nível 2"
+      ]
+    },
+    {
+      "titulo": "As coisas do negócio",
+      "resumo": "Modelagem de domínio: e-commerce e hotel.",
+      "paginas": [
+        "A modelagem de domínio desenha as “coisas” do negócio e como elas se ligam. Não é tela nem banco de dados: são conceitos. No e-commerce da aula, as entidades são Cliente, Produto, Pedido e Pagamento, e o relacionamento é “um Cliente faz um Pedido que contém Produtos”.",
+        "Para que serve? Para todo mundo falar a mesma língua. Ela clarifica os elementos e as relações, melhora a consistência e minimiza ambiguidades. Se na reunião um diz “cliente”, outro “comprador” e outro “consumidor”, o modelo de domínio escolhe um nome só.",
+        "No modelo do hotel da aula, há três grupos. Contas: a Conta possui um Perfil, o Perfil possui um ou vários Endereços e a Conta possui um ou vários Meios de pagamento. Hotéis: o Hotel pertence a uma Cadeia de Hotéis e a uma Conta de Parceiro, e pode ter várias Ofertas e Acomodações. Estadia: a Reserva pertence a uma Conta, está ligada a uma ou várias Acomodações, possui um ou vários Hóspedes e pode ter várias Avaliações."
+      ],
+      "guardar": [
+        "Domínio = conceitos do negócio e suas ligações",
+        "Minimiza ambiguidades: um nome para cada conceito",
+        "Leia as setas: “possui um”, “um ou vários”, “pertence a”"
+      ]
+    }
+  ],
+  "termos": [
+    {
+      "termo": "Ator",
+      "pronuncia": "a-tôr",
+      "pergunta": "Num caso de uso, como se chama quem está de fora e interage com o sistema?",
+      "aceitas": [
+        "ator",
+        "atores"
+      ],
+      "explicacao": "Pode ser pessoa, máquina, sensor ou outro sistema. Ator representa um papel."
+    },
+    {
+      "termo": "Caso de uso",
+      "pronuncia": "caso de uso",
+      "pergunta": "Como se chama a descrição da interação entre um ator e o sistema para atingir um objetivo?",
+      "aceitas": [
+        "caso de uso",
+        "casos de uso"
+      ],
+      "explicacao": "Tem ator, cenário principal e exceções."
+    },
+    {
+      "termo": "Include",
+      "pronuncia": "in-clúd",
+      "pergunta": "Qual relacionamento indica que um caso de uso sempre executa outro junto?",
+      "aceitas": [
+        "include",
+        "inclui",
+        "incluir",
+        "incloud",
+        "inclusao",
+        "includ"
+      ],
+      "explicacao": "Ao executar A, executa-se também B, como Processar Pedido e Emitir Nota Fiscal."
+    },
+    {
+      "termo": "Extend",
+      "pronuncia": "ex-ténd",
+      "pergunta": "Qual relacionamento indica um comportamento que só acontece às vezes?",
+      "aceitas": [
+        "extend",
+        "extends",
+        "estende",
+        "estender",
+        "extensao",
+        "istend",
+        "extendi"
+      ],
+      "explicacao": "Ao executar A, não necessariamente B será executado, como na consulta ao Serasa."
+    },
+    {
+      "termo": "Generalização",
+      "pronuncia": "generalização",
+      "pergunta": "Qual relacionamento faz um ator herdar os casos de uso de outro ator?",
+      "aceitas": [
+        "generalizacao",
+        "heranca",
+        "generalizar"
+      ],
+      "explicacao": "O Cliente herda do Usuário, com a seta de triângulo vazio apontando para o mais geral."
+    },
+    {
+      "termo": "Cenário principal",
+      "pronuncia": "cenário principal",
+      "pergunta": "Como se chama o passo a passo do caso de uso quando tudo dá certo?",
+      "aceitas": [
+        "cenario principal",
+        "fluxo principal",
+        "cenario"
+      ],
+      "explicacao": "No Login: acessa a tela, digita usuário e senha, o sistema valida e libera o acesso."
+    },
+    {
+      "termo": "Exceção",
+      "pronuncia": "e-ce-ção",
+      "pergunta": "Como se chama a parte do caso de uso que trata do que pode dar errado?",
+      "aceitas": [
+        "excecao",
+        "excecoes",
+        "fluxo de excecao"
+      ],
+      "explicacao": "Exemplo: uma mensagem de erro quando a senha é inválida."
+    },
+    {
+      "termo": "História de usuário",
+      "pronuncia": "história de usuário",
+      "pergunta": "Qual técnica escreve os requisitos no formato “Como..., eu quero..., para que...”?",
+      "aceitas": [
+        "historia de usuario",
+        "historias de usuario",
+        "user story",
+        "user stories"
+      ],
+      "explicacao": "A principal vantagem é facilitar a comunicação entre desenvolvedores e usuários."
+    },
+    {
+      "termo": "Critério de aceite",
+      "pronuncia": "critério de aceite",
+      "pergunta": "O que vem embaixo da história no cartão, dizendo quando ela está pronta?",
+      "aceitas": [
+        "criterio de aceite",
+        "criterios de aceite",
+        "criterio de aceitacao",
+        "criterios de aceitacao"
+      ],
+      "explicacao": "Precisa ser testável, com resposta sim ou não."
+    },
+    {
+      "termo": "Persona",
+      "pronuncia": "per-sô-na",
+      "pergunta": "No cartão da história, como se chama o tipo de usuário que tem a necessidade?",
+      "aceitas": [
+        "persona",
+        "tipo de usuario"
+      ],
+      "explicacao": "É a parte do “Como [persona]” da história."
+    },
+    {
+      "termo": "Decomposição funcional",
+      "pronuncia": "decomposição funcional",
+      "pergunta": "Qual técnica divide uma grande funcionalidade em partes menores, organizadas em níveis?",
+      "aceitas": [
+        "decomposicao funcional",
+        "decomposicao"
+      ],
+      "explicacao": "Exemplo: Gerenciamento de Conta vira Saldo, Histórico de Transações e Pagamentos."
+    },
+    {
+      "termo": "Modelagem de domínio",
+      "pronuncia": "modelagem de domínio",
+      "pergunta": "Qual técnica define as entidades e os relacionamentos do negócio, como Cliente, Pedido e Produto?",
+      "aceitas": [
+        "modelagem de dominio",
+        "modelo de dominio",
+        "dominio"
+      ],
+      "explicacao": "Melhora a consistência e minimiza ambiguidades."
+    },
+    {
+      "termo": "Modelagem de processos",
+      "pronuncia": "modelagem de processos",
+      "pergunta": "Qual técnica desenha o fluxo de atividades, com quem faz cada tarefa e em que ordem?",
+      "aceitas": [
+        "modelagem de processos",
+        "modelagem de processo",
+        "bpmn",
+        "processos"
+      ],
+      "explicacao": "Exemplo: o processo de pagamento do restaurante, com raias e eventos."
+    },
+    {
+      "termo": "Raia",
+      "pronuncia": "rái-a",
+      "pergunta": "No diagrama de processos, como se chama a faixa que mostra quem executa cada tarefa?",
+      "aceitas": [
+        "raia",
+        "raias",
+        "lane",
+        "swimlane",
+        "faixa"
+      ],
+      "explicacao": "No restaurante, há a raia do Atendente de Caixa e a raia do Cliente."
+    },
+    {
+      "termo": "Lista de verificação",
+      "pronuncia": "lista de verificação",
+      "pergunta": "Qual técnica revisa os requisitos com perguntas como “Verificou requisitos de segurança?”",
+      "aceitas": [
+        "lista de verificacao",
+        "checklist",
+        "check list",
+        "listas de verificacao"
+      ],
+      "explicacao": "Ajuda a achar inconsistências e requisitos que estão faltando."
+    },
+    {
+      "termo": "Prototipação",
+      "pronuncia": "prototipação",
+      "pergunta": "Qual técnica cria versões preliminares do sistema para o usuário ver e mexer?",
+      "aceitas": [
+        "prototipacao",
+        "prototipo",
+        "prototipos"
+      ],
+      "explicacao": "Facilita a validação: o usuário aponta o que está errado antes de o sistema ficar pronto."
+    }
+  ],
+  "praticas": [
+    {
+      "enunciado": "Complete a estrutura da história de usuário: Como [ ______ ], eu quero [ação] para que [benefício].",
+      "aceitas": [
+        "tipo de usuario",
+        "persona",
+        "usuario",
+        "tipo de usuário"
+      ],
+      "texto": true,
+      "dica": "É quem tem a necessidade.",
+      "explicacao": "Como [tipo de usuário ou persona], eu quero [ação] para que [benefício]."
+    },
+    {
+      "enunciado": "Toda vez que Processar Pedido roda, Emitir Nota Fiscal roda junto. Digite o nome do relacionamento.",
+      "aceitas": [
+        "include",
+        "<<include>>",
+        "«include»"
+      ],
+      "texto": true,
+      "dica": "Sempre junto.",
+      "explicacao": "Include: ao executar A, executa-se também B."
+    },
+    {
+      "enunciado": "Consultar Serasa só acontece em alguns pedidos. Digite o nome do relacionamento.",
+      "aceitas": [
+        "extend",
+        "extends",
+        "<<extend>>",
+        "«extend»"
+      ],
+      "texto": true,
+      "dica": "Às vezes.",
+      "explicacao": "Extend: ao executar A, não necessariamente B será executado."
+    },
+    {
+      "enunciado": "Na decomposição “Pintar uma sala”, em que nível ficam “Comprar tinta” e “Comprar escada”? (só o número)",
+      "aceitas": [
+        "3"
+      ],
+      "dica": "São as tarefas mais detalhadas.",
+      "explicacao": "Ficam no nível 3, abaixo de Preparação de materiais."
+    },
+    {
+      "enunciado": "Quantos itens tem o nível 2 da decomposição “Pintar uma sala”? (só o número)",
+      "aceitas": [
+        "4"
+      ],
+      "dica": "Materiais, sala, pintura...",
+      "explicacao": "São 4: Preparação de materiais, Preparação da sala, Pintura da sala e Limpeza da sala."
+    },
+    {
+      "enunciado": "No diagrama do restaurante, qual é o nome do evento de fim do processo?",
+      "aceitas": [
+        "pagamento recebido"
+      ],
+      "texto": true,
+      "dica": "É o círculo vermelho.",
+      "explicacao": "Pagamento Recebido; o início é Refeição Concluída."
+    },
+    {
+      "enunciado": "No exemplo do banco, Gerenciamento de Conta foi dividido em Saldo, Histórico de Transações e ______.",
+      "aceitas": [
+        "pagamentos",
+        "pagamento"
+      ],
+      "texto": true,
+      "dica": "É o que se faz com contas a pagar.",
+      "explicacao": "Saldo, Histórico de Transações e Pagamentos."
+    },
+    {
+      "enunciado": "Quais são as três partes da estrutura básica de um caso de uso? Escreva separadas por vírgula, na ordem da aula.",
+      "aceitas": [
+        "ator, cenario principal, excecoes",
+        "ator, cenario principal e excecoes",
+        "ator, cenario principal, excecao"
+      ],
+      "texto": true,
+      "dica": "Quem, o caminho feliz e o que dá errado.",
+      "explicacao": "Ator, cenário principal e exceções."
     }
   ]
 }

@@ -5,12 +5,12 @@
       "statement": "Analisando o comando de entrada de dados, o que faz a linha `Scanner scanner = new Scanner(System.in);`?",
       "code": "Scanner scanner = new Scanner(System.in);",
       "options": [
-        "Cria um objeto que lê o que o usuário digita no teclado.",
         "Imprime uma mensagem na tela solicitando dados.",
+        "Cria um leitor do que é digitado no teclado",
         "Lê arquivos de texto salvos no computador.",
         "Gera um erro, pois falta a importação java.io."
       ],
-      "correct": 0,
+      "correct": 1,
       "explain": "<b>Lógica:</b> A classe `Scanner` é usada para ler entradas. O `System.in` indica que a entrada será o teclado (System In = Entrada do Sistema). Ao usar `new`, estamos instanciando (criando) a ferramenta para usar no código."
     },
     {
@@ -18,12 +18,12 @@
       "statement": "Qual a diferença lógica entre usar `System.out.print` e `System.out.println`?",
       "code": "System.out.print(\"Digite o nome: \");\nString nome = scanner.nextLine();",
       "options": [
-        "O 'print' mantém o cursor na mesma linha, o 'println' quebra para a linha de baixo.",
-        "O 'println' serve só para números e o 'print' para textos.",
-        "O 'print' é mais rápido que o 'println'.",
-        "Não existe diferença, ambos fazem a mesma coisa."
+        "println serve só para números e print serve para textos",
+        "print mantém o cursor na linha; println pula para a próxima",
+        "print é mais rápido que println em qualquer programa",
+        "Não existe diferença, os dois fazem exatamente o mesmo"
       ],
-      "correct": 0,
+      "correct": 1,
       "explain": "<b>Lógica:</b> O sufixo `ln` significa 'line' (linha). Quando você usa apenas `print`, o cursor fica piscando logo após o texto, o que é ideal para perguntas como 'Digite o nome: '. O `println` joga o cursor para a próxima linha após imprimir."
     },
     {
@@ -31,12 +31,12 @@
       "statement": "O que o comando `scanner.nextLine()` faz no código de cadastro de alunos?",
       "code": "System.out.print(\"Nome: \");\nString nome = scanner.nextLine();",
       "options": [
-        "Lê toda a linha digitada pelo usuário, incluindo espaços, até ele apertar ENTER.",
-        "Lê apenas a primeira palavra digitada.",
-        "Converte o texto digitado para números inteiros.",
-        "Pula uma linha no console de comandos."
+        "Lê apenas a primeira palavra digitada pelo usuário",
+        "Converte o texto digitado em um número inteiro",
+        "Lê a linha inteira digitada, com espaços, até o ENTER",
+        "Pula uma linha em branco no console de comandos"
       ],
-      "correct": 0,
+      "correct": 2,
       "explain": "<b>Lógica:</b> O método `nextLine()` captura todos os caracteres digitados (incluindo espaços, como em 'Paulo Roberto') até encontrar uma quebra de linha (quando o usuário aperta ENTER), guardando tudo na variável String."
     },
     {
@@ -44,12 +44,12 @@
       "statement": "Por que usamos `scanner.nextDouble()` em vez de `scanner.nextInt()` para ler as notas?",
       "code": "System.out.print(\"Digite a primeira nota: \");\ndouble n1 = scanner.nextDouble();",
       "options": [
-        "Porque notas podem ter casas decimais (ex: 7.5), e double aceita números quebrados.",
-        "Porque nextDouble é obrigatório sempre que houver mais de uma nota.",
-        "Porque nextInt não existe no Java.",
-        "Porque double arredonda automaticamente a nota do aluno para cima."
+        "Porque nextDouble é obrigatório quando há mais de uma nota",
+        "Porque notas podem ter casas decimais, como 7.5",
+        "Porque o método nextInt não existe na linguagem Java",
+        "Porque double arredonda a nota do aluno para cima"
       ],
-      "correct": 0,
+      "correct": 1,
       "explain": "<b>Lógica:</b> `int` guarda apenas números inteiros (1, 2, 8, 10). Como notas escolares costumam ter vírgulas/pontos (como 7.5 ou 8.3), devemos usar o tipo `double`, que permite salvar números com precisão decimal."
     },
     {
@@ -57,12 +57,12 @@
       "statement": "Na fórmula da média escolar abaixo, o que aconteceria se removêssemos os parênteses?",
       "code": "double media = (n1 + n2 + n3) / 3;\n// Sem parênteses: double media = n1 + n2 + n3 / 3;",
       "options": [
-        "O computador dividiria apenas o n3 por 3, e depois somaria n1 e n2, dando um resultado errado.",
-        "Não mudaria nada, o Java lê sempre da esquerda para a direita.",
-        "Daria um erro de sintaxe e o código não rodaria.",
-        "O resultado seria sempre zero."
+        "Não mudaria nada, porque o Java lê da esquerda para a direita",
+        "Daria erro de sintaxe e o código não chegaria a rodar",
+        "Só o n3 seria dividido por 3, e o resultado sairia errado",
+        "O resultado da média seria sempre zero, para qualquer nota"
       ],
-      "correct": 0,
+      "correct": 2,
       "explain": "<b>Lógica:</b> Na matemática e na programação, a divisão (/) tem prioridade sobre a soma (+). Os parênteses forçam o computador a somar TUDO primeiro, e só depois dividir o total por 3. Sem eles, apenas a última nota seria dividida."
     },
     {
@@ -83,12 +83,12 @@
       "statement": "No final do programa, usamos o comando `scanner.close();`. Qual a lógica de usar esse comando?",
       "code": "  scanner.close();\n}",
       "options": [
-        "Liberar recursos de memória, avisando ao computador que não vamos mais usar o teclado.",
-        "Desligar o teclado do usuário por segurança.",
-        "Apagar todas as variáveis que foram digitadas.",
-        "É obrigatório usar, senão o arquivo não é salvo no computador."
+        "Desligar o teclado do usuário por motivo de segurança",
+        "Liberar o recurso do teclado, que não será mais usado",
+        "Apagar todas as variáveis que foram digitadas antes",
+        "Salvar o arquivo, porque sem ele nada é gravado no disco"
       ],
-      "correct": 0,
+      "correct": 1,
       "explain": "<b>Lógica:</b> Quando abrimos um `Scanner` associado ao `System.in`, o Java cria uma ligação constante com o teclado, ocupando memória RAM. O método `close()` encerra esse canal, evitando vazamento de memória (memory leak)."
     },
     {
@@ -211,15 +211,15 @@
     {
       "topic": "selecao",
       "statement": "Qual palavra será impressa na tela de acordo com a lógica IF/ELSE?",
-      "code": "int x = 13;\nint y = 2;\nif (x == y) {\n  System.out.println(\"Alfa\");\n} else {\n  System.out.println(\"Beta\");\n}",
+      "code": "int x = 13;\nint y = 13;\nif (x == y) {\n  System.out.println(\"Alfa\");\n} else {\n  System.out.println(\"Beta\");\n}",
       "options": [
         "Beta",
         "AlfaBeta",
         "Nenhuma saída",
         "Alfa"
       ],
-      "correct": 0,
-      "explain": "<b>Lógica:</b> A pergunta é: 13 é == 2? A resposta é Falso. Logo, o programa entra no bloco ELSE e imprime Beta."
+      "correct": 3,
+      "explain": "<b>Lógica:</b> 13 é == 13? Sim, é verdadeiro. Então o programa entra no bloco do IF e imprime Alfa. Lembre: == compara, e = só atribui."
     },
     {
       "topic": "operadores",
@@ -270,8 +270,8 @@
         "26",
         "14"
       ],
-      "correct": 0,
-      "explain": "<b>Lógica:</b> A atribuição composta `+=` soma 5, `*=` multiplica por 2 e `-=` subtrai 4. A sequência fica: 8 -> 13 -> 26 -> 22. Como a conta foi 8 + 5 = 13; 13 * 2 = 26; 26 - 4 = 22. O valor final é 22."
+      "correct": 1,
+      "explain": "<b>Passo a passo:</b> x começa em 8. Com x += 5 vira 13, com x *= 2 vira 26 e com x -= 4 vira 22. Cada operação usa o valor que ficou da linha anterior."
     },
     {
       "topic": "operadores",
@@ -292,12 +292,12 @@
       "code": "int a = 6;\nint b = 2;\nint c = 3;\nint resultado = a + b * c;\nSystem.out.println(resultado);",
       "options": [
         "12",
-        "18",
+        "24",
         "20",
         "14"
       ],
-      "correct": 1,
-      "explain": "<b>Lógica:</b> A multiplicação tem precedência sobre a soma. Primeiro calculamos `2 * 3 = 6`, depois `6 + 6 = 12`. O valor final é 12."
+      "correct": 0,
+      "explain": "<b>Precedência:</b> a multiplicação vem antes da soma. Primeiro b * c = 2 * 3 = 6, depois a + 6 = 6 + 6 = 12. Para somar primeiro, seria preciso escrever (a + b) * c, que daria 24."
     },
     {
       "topic": "selecao",
@@ -345,8 +345,8 @@
       "options": [
         "Par ou ímpar especial",
         "Não atende",
-        "Erro",
-        "Nada"
+        "As duas mensagens, uma por linha",
+        "Erro de compilação no operador %"
       ],
       "correct": 0,
       "explain": "<b>Lógica:</b> A condição usa `||` (ou). Se qualquer uma das condições for verdadeira, o bloco entra. Como 7 é ímpar, `valor % 2 == 1` é verdadeiro, então a mensagem sai."
@@ -367,15 +367,15 @@
     {
       "topic": "repeticao",
       "statement": "Qual será o valor final de `soma` no laço abaixo?",
-      "code": "int soma = 0;\nint i = 1;\nwhile (i <= 4) {\n  soma += i;\n  i++;\n}\nSystem.out.println(soma);",
+      "code": "int soma = 0;\nint i = 1;\nwhile (i <= 5) {\n  soma += i;\n  i++;\n}\nSystem.out.println(soma);",
       "options": [
-        "6",
         "10",
-        "9",
-        "15"
+        "15",
+        "14",
+        "21"
       ],
       "correct": 1,
-      "explain": "<b>Lógica:</b> A soma acontece em cada iteração: 1 + 2 + 3 + 4 = 10. O valor final da variável `soma` é 10."
+      "explain": "<b>Laço:</b> soma 1 + 2 + 3 + 4 + 5 = 15. Quando i vira 6, a condição i <= 5 fica falsa e o laço para."
     },
     {
       "topic": "repeticao",
@@ -409,9 +409,9 @@
       "code": "System.out.println(\"Digite sua idade:\");",
       "options": [
         "Exibir mensagem na tela para o usuário",
-        "Ler um número do teclado",
-        "Guardar a idade em memória",
-        "Comparar duas idades"
+        "Ler um número digitado pelo usuário no teclado",
+        "Guardar a idade digitada numa variável",
+        "Comparar a idade com a de outro usuário"
       ],
       "correct": 0,
       "explain": "<b>Lógica:</b> O `System.out.println` é usado para mostrar dados na tela, como mensagens e resultados. Ele imprime texto no console para orientar ou informar o usuário."
@@ -421,10 +421,10 @@
       "statement": "A expressão `resultado = numero1 + numero2;` representa qual operação?",
       "code": "int resultado = numero1 + numero2;",
       "options": [
-        "Concatenação",
-        "Atribuição de texto",
+        "Concatenação de dois textos",
+        "Atribuição de texto à variável",
         "Soma de valores numéricos",
-        "Comparação"
+        "Comparação entre os dois valores"
       ],
       "correct": 2,
       "explain": "<b>Lógica:</b> Quando os valores envolvidos são numéricos, o operador `+` realiza a soma matemática. Em Java, isso é uma operação aritmética e não concatenação."

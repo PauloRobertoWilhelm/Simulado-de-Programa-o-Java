@@ -428,6 +428,981 @@
       ],
       "correct": 2,
       "explain": "<b>Lógica:</b> Quando os valores envolvidos são numéricos, o operador `+` realiza a soma matemática. Em Java, isso é uma operação aritmética e não concatenação."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual é a saída do laço for abaixo?",
+      "code": "for (int i = 0; i < 5; i++) {\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "0 1 2 3 4",
+        "1 2 3 4 5",
+        "0 1 2 3 4 5",
+        "1 2 3 4"
+      ],
+      "correct": 0,
+      "explain": "<b>Passo a passo:</b> i começa em 0 e o laço roda enquanto i &lt; 5. Quando i vira 5, a condição fica falsa e o laço para antes de imprimir. Saem 0, 1, 2, 3 e 4."
+    },
+    {
+      "topic": "for",
+      "statement": "O que este laço for imprime?",
+      "code": "for (int i = 1; i <= 9; i += 2) {\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "1 3 5 7",
+        "1 3 5 7 9",
+        "2 4 6 8",
+        "1 3 5 7 9 11"
+      ],
+      "correct": 1,
+      "explain": "<b>Pulo de 2 em 2:</b> i += 2 soma 2 a cada volta: 1, 3, 5, 7, 9. O 9 entra porque a condição é &lt;= 9. O próximo seria 11, que já passa."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual é a saída deste laço que conta para trás?",
+      "code": "for (int i = 10; i > 0; i -= 3) {\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "10 7 4",
+        "9 6 3",
+        "10 7 4 1",
+        "10 7 4 1 -2"
+      ],
+      "correct": 2,
+      "explain": "<b>Tirando 3:</b> 10, 7, 4, 1. O próximo seria −2, mas −2 &gt; 0 é falso, então o laço para antes de imprimir."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual valor é impresso no fim?",
+      "code": "int soma = 0;\nfor (int i = 1; i <= 6; i++) {\n  soma += i;\n}\nSystem.out.println(soma);",
+      "options": [
+        "15",
+        "28",
+        "6",
+        "21"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma acumulada:</b> 1 + 2 + 3 + 4 + 5 + 6 = 21. A variável soma é a “caixinha” que guarda o total a cada volta."
+    },
+    {
+      "topic": "for",
+      "statement": "Quantas vezes o comando vezes++ roda neste laço dentro de laço?",
+      "code": "int vezes = 0;\nfor (int i = 0; i < 4; i++) {\n  for (int j = 0; j < 5; j++) {\n    vezes++;\n  }\n}\nSystem.out.println(vezes);",
+      "options": [
+        "20",
+        "9",
+        "25",
+        "16"
+      ],
+      "correct": 0,
+      "explain": "<b>Multiplica:</b> o laço de fora roda 4 vezes e, em cada uma, o de dentro roda 5. Total: 4 × 5 = 20."
+    },
+    {
+      "topic": "for",
+      "statement": "Quantas vezes a palavra “Oi” aparece?",
+      "code": "for (int i = 2; i <= 11; i++) {\n  System.out.println(\"Oi\");\n}",
+      "options": [
+        "9 vezes",
+        "11 vezes",
+        "10 vezes",
+        "8 vezes"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> de 2 até 11, incluindo os dois: 11 − 2 + 1 = 10 vezes. O “+ 1” existe porque as duas pontas entram."
+    },
+    {
+      "topic": "for",
+      "statement": "No cabeçalho for (int i = 0; i < 10; i++), o que faz cada uma das três partes?",
+      "options": [
+        "Cria i com 0, repete enquanto i < 10 e soma 1 por volta",
+        "Repete 10 vezes, zera o i e soma 1 só na última volta",
+        "Cria i com 10, para quando i < 10 e tira 1 por volta",
+        "Lê o i do teclado, compara com 10 e imprime o resultado"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partes:</b> início (int i = 0, roda uma vez só), condição (i &lt; 10, testada antes de cada volta) e passo (i++, roda no fim de cada volta)."
+    },
+    {
+      "topic": "for",
+      "statement": "O que este laço com break imprime?",
+      "code": "for (int i = 1; i <= 10; i++) {\n  if (i == 4) {\n    break;\n  }\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "1 2 3 4",
+        "1 2 3",
+        "4",
+        "1 2 3 5 6 7 8 9 10"
+      ],
+      "correct": 1,
+      "explain": "<b>break sai do laço:</b> quando i chega a 4, o break acontece ANTES do print. Por isso o 4 não aparece e nada depois dele."
+    },
+    {
+      "topic": "for",
+      "statement": "O que este laço com continue imprime?",
+      "code": "for (int i = 1; i <= 5; i++) {\n  if (i == 3) {\n    continue;\n  }\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "1 2",
+        "1 2 3 4 5",
+        "1 2 4 5",
+        "1 2 4"
+      ],
+      "correct": 2,
+      "explain": "<b>continue pula a volta:</b> no 3, ele pula direto para a próxima volta, sem imprimir. O laço continua até 5."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual valor é impresso?",
+      "code": "int f = 1;\nfor (int i = 1; i <= 5; i++) {\n  f *= i;\n}\nSystem.out.println(f);",
+      "options": [
+        "120",
+        "15",
+        "24",
+        "720"
+      ],
+      "correct": 0,
+      "explain": "<b>Multiplicação acumulada (fatorial):</b> 1 × 2 × 3 × 4 × 5 = 120. f começa em 1 porque multiplicar por 0 zeraria tudo."
+    },
+    {
+      "topic": "for",
+      "statement": "O que acontece quando este código é compilado?",
+      "code": "for (int i = 0; i < 3; i++) {\n}\nSystem.out.println(i);",
+      "options": [
+        "Imprime 3, o valor final de i",
+        "Imprime 2, da última volta",
+        "Erro: o i só existe no for",
+        "Imprime 0, o valor inicial"
+      ],
+      "correct": 2,
+      "explain": "<b>Escopo:</b> uma variável criada no cabeçalho do for só existe dentro dele. Fora do for, o Java não conhece o i e não compila."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual é a saída?",
+      "code": "for (int i = 1; i <= 10; i++) {\n  if (i % 2 == 0) {\n    System.out.print(i + \" \");\n  }\n}",
+      "options": [
+        "1 3 5 7 9",
+        "2 4 6 8 10",
+        "2 4 6 8",
+        "0 2 4 6 8 10"
+      ],
+      "correct": 1,
+      "explain": "<b>Resto da divisão:</b> i % 2 == 0 quer dizer “divide por 2 sem sobrar”, ou seja, número par. O laço vai de 1 a 10, então saem 2, 4, 6, 8 e 10."
+    },
+    {
+      "topic": "for",
+      "statement": "O que faz um laço escrito como for (;;) { ... } sem break dentro?",
+      "options": [
+        "Não executa o bloco nem uma vez",
+        "Repete para sempre: laço infinito",
+        "Dá erro por faltar as três partes",
+        "Executa o bloco uma vez e termina"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem condição:</b> quando a condição do for fica vazia, o Java entende “sempre verdadeiro”. Só um break (ou fechar o programa) para o laço."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual é a saída desta contagem regressiva?",
+      "code": "for (int i = 3; i >= 1; i--) {\n  System.out.print(i + \"... \");\n}\nSystem.out.println(\"Já!\");",
+      "options": [
+        "3... 2... 1... Já!",
+        "3... 2... 1...",
+        "1... 2... 3... Já!",
+        "3... 2... Já!"
+      ],
+      "correct": 0,
+      "explain": "<b>i-- tira 1:</b> 3, 2 e 1 passam no teste i &gt;= 1. Depois o laço acaba e o println, que está FORA do for, imprime “Já!”."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual é a saída do do-while abaixo?",
+      "code": "int i = 50;\ndo {\n  System.out.print(i + \" \");\n  i++;\n} while (i < 5);",
+      "options": [
+        "Nada aparece",
+        "50",
+        "50 51 52 53 54",
+        "Laço infinito"
+      ],
+      "correct": 1,
+      "explain": "<b>Executa primeiro, testa depois:</b> o do-while imprime 50 antes de olhar a condição. Depois, 51 &lt; 5 é falso e ele para. Roda pelo menos uma vez."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Agora o mesmo bloco está num while comum, com i = 50. O que é impresso?",
+      "code": "int i = 50;\nwhile (i < 5) {\n  System.out.print(i + \" \");\n  i++;\n}",
+      "options": [
+        "50, pois roda ao menos uma vez",
+        "Nada: o while testa antes",
+        "Um laço infinito a partir de 50",
+        "Erro de compilação no while"
+      ],
+      "correct": 1,
+      "explain": "<b>while testa antes:</b> 50 &lt; 5 já é falso na entrada, então o bloco nunca roda. Essa é a diferença para o do-while."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual é a principal diferença do do-while para o while?",
+      "options": [
+        "Testa a condição antes de executar",
+        "Executa o bloco ao menos uma vez",
+        "Só funciona com números inteiros",
+        "Não pode ter dois comandos dentro"
+      ],
+      "correct": 1,
+      "explain": "<b>Faz e depois pergunta:</b> o do-while executa o bloco e só então testa. O while pergunta antes de fazer."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual valor é impresso?",
+      "code": "int n = 1;\nint soma = 0;\ndo {\n  soma += n;\n  n += 2;\n} while (n <= 9);\nSystem.out.println(soma);",
+      "options": [
+        "16",
+        "36",
+        "25",
+        "24"
+      ],
+      "correct": 2,
+      "explain": "<b>Passo a passo:</b> soma recebe 1, 3, 5, 7 e 9 (n anda de 2 em 2 até passar de 9). 1 + 3 + 5 + 7 + 9 = 25."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Quantas voltas o laço dá? (o valor de voltas é impresso)",
+      "code": "int x = 100;\nint voltas = 0;\ndo {\n  x = x / 2;\n  voltas++;\n} while (x > 10);\nSystem.out.println(voltas);",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correct": 3,
+      "explain": "<b>Divisão inteira:</b> 100 → 50 → 25 → 12 → 6. Depois da 4ª volta, x = 6 e 6 &gt; 10 é falso. Repare: 25 / 2 dá 12, porque int corta a parte decimal."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "No do-while, onde fica o ponto e vírgula obrigatório?",
+      "options": [
+        "Depois do do, antes da chave",
+        "Depois de cada chave do bloco",
+        "Depois do while (condição), no fim",
+        "O do-while não usa ponto e vírgula"
+      ],
+      "correct": 2,
+      "explain": "<b>Fim da linha do while:</b> do { ... } while (condição); O ponto e vírgula no fim é obrigatório. Esquecer dele é erro de compilação."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual valor é impresso?",
+      "code": "int opcao = 0;\nint vezes = 0;\ndo {\n  vezes++;\n  opcao = vezes * 3;\n} while (opcao != 15);\nSystem.out.println(vezes);",
+      "options": [
+        "4",
+        "15",
+        "6",
+        "5"
+      ],
+      "correct": 3,
+      "explain": "<b>Até dar 15:</b> opcao vale 3, 6, 9, 12 e 15. Na 5ª volta, opcao = 15, a condição != 15 fica falsa e o laço para com vezes = 5."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "O programa precisa pedir a senha até o usuário digitar certo. Por que o do-while combina com isso?",
+      "options": [
+        "Porque o for não aceita texto digitado",
+        "Porque é preciso pedir pelo menos uma vez",
+        "Porque o while nunca consegue repetir",
+        "Porque o do-while para sozinho no erro"
+      ],
+      "correct": 1,
+      "explain": "<b>Primeiro pede, depois confere:</b> não dá para conferir uma senha que ainda não foi digitada. O do-while garante a primeira pergunta."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual valor é impresso?",
+      "code": "int c = 5;\ndo {\n  c--;\n} while (c > 0);\nSystem.out.println(c);",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "<b>Tirando 1:</b> c vai 4, 3, 2, 1, 0. Com c = 0, a condição c &gt; 0 é falsa e o laço para. Imprime 0."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual é a saída?",
+      "code": "int k = 1;\ndo {\n  System.out.print(k + \" \");\n  k *= 3;\n} while (k < 50);",
+      "options": [
+        "1 3 9",
+        "3 9 27",
+        "1 3 9 27 81",
+        "1 3 9 27"
+      ],
+      "correct": 3,
+      "explain": "<b>Multiplica por 3:</b> imprime 1, 3, 9 e 27. Depois k vira 81, e 81 &lt; 50 é falso: o 81 não é impresso."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual valor é impresso?",
+      "code": "String s = \"Programar\";\nSystem.out.println(s.length());",
+      "options": [
+        "8",
+        "10",
+        "9",
+        "7"
+      ],
+      "correct": 2,
+      "explain": "<b>length() conta as letras:</b> P-r-o-g-r-a-m-a-r são 9 caracteres."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que charAt(0) devolve?",
+      "code": "String s = \"Cascavel\";\nSystem.out.println(s.charAt(0));",
+      "options": [
+        "a",
+        "C",
+        "Ca",
+        "l"
+      ],
+      "correct": 1,
+      "explain": "<b>Índice começa em 0:</b> charAt(0) é a PRIMEIRA letra, o “C”."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual letra é impressa?",
+      "code": "String s = \"UNIPAR\";\nSystem.out.println(s.charAt(2));",
+      "options": [
+        "N",
+        "P",
+        "I",
+        "U"
+      ],
+      "correct": 2,
+      "explain": "<b>Contando do zero:</b> U é 0, N é 1, I é 2. charAt(2) devolve o “I”."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída de substring com um número só?",
+      "code": "String s = \"Internet\";\nSystem.out.println(s.substring(5));",
+      "options": [
+        "rnet",
+        "et",
+        "Inter",
+        "net"
+      ],
+      "correct": 3,
+      "explain": "<b>substring(5):</b> pega do índice 5 até o fim. I0 n1 t2 e3 r4 n5 e6 t7: do 5 em diante sobra “net”."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String s = \"Java\";\nSystem.out.println(s.substring(1, 3));",
+      "options": [
+        "ava",
+        "av",
+        "Ja",
+        "va"
+      ],
+      "correct": 1,
+      "explain": "<b>Início entra, fim não:</b> substring(1, 3) pega os índices 1 e 2. J0 a1 v2 a3: sai “av”."
+    },
+    {
+      "topic": "strings",
+      "statement": "Para comparar o CONTEÚDO de duas Strings em Java, o certo é usar:",
+      "options": [
+        "nome == outro",
+        "nome = outro",
+        "nome.equals(outro)",
+        "nome.length(outro)"
+      ],
+      "correct": 2,
+      "explain": "<b>equals compara o texto:</b> o == compara se é o MESMO objeto na memória, e pode dar falso mesmo com o texto igual. O = só atribui."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String a = \"Java\";\nString b = \"JAVA\";\nSystem.out.println(a.equals(b) + \" \" + a.equalsIgnoreCase(b));",
+      "options": [
+        "true true",
+        "false true",
+        "true false",
+        "false false"
+      ],
+      "correct": 1,
+      "explain": "<b>Maiúscula conta:</b> equals diferencia maiúsculas de minúsculas, então dá false. equalsIgnoreCase ignora essa diferença e dá true."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String s = \"  UNIPAR  \";\nSystem.out.println(\"[\" + s.trim() + \"]\");",
+      "options": [
+        "[  UNIPAR  ]",
+        "[UNIPAR  ]",
+        "[UNIPAR]",
+        "[ UNIPAR ]"
+      ],
+      "correct": 2,
+      "explain": "<b>trim() tira os espaços das pontas:</b> os do começo e os do fim. Os colchetes mostram que não sobrou espaço nenhum."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String s = \"banana\";\nSystem.out.println(s.replace('a', 'o'));",
+      "options": [
+        "bonana",
+        "banano",
+        "bonono",
+        "bnn"
+      ],
+      "correct": 2,
+      "explain": "<b>replace troca TODAS:</b> cada “a” vira “o”, não só o primeiro. banana vira bonono."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "System.out.println(1 + 2 + \"3\");",
+      "options": [
+        "123",
+        "6",
+        "33",
+        "15"
+      ],
+      "correct": 2,
+      "explain": "<b>Da esquerda para a direita:</b> 1 + 2 são números e dão 3. Depois 3 + \"3\" vira texto: “33”."
+    },
+    {
+      "topic": "strings",
+      "statement": "E agora, com o texto na frente?",
+      "code": "System.out.println(\"1\" + 2 + 3);",
+      "options": [
+        "6",
+        "15",
+        "33",
+        "123"
+      ],
+      "correct": 3,
+      "explain": "<b>Texto contagia:</b> \"1\" + 2 já vira o texto “12”, e “12” + 3 vira “123”. Nenhuma conta é feita."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String nome = \"ana\";\nSystem.out.println(nome.toUpperCase() + nome.length());",
+      "options": [
+        "ANA 3",
+        "ANA3",
+        "ANA + 3",
+        "ANA"
+      ],
+      "correct": 1,
+      "explain": "<b>Junta sem espaço:</b> toUpperCase() dá “ANA” e length() dá 3. O + junta os dois direto: “ANA3”."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "String s = \"Oi\";\nSystem.out.println(s.charAt(2));",
+      "options": [
+        "Imprime i, a última letra",
+        "Erro: não existe o índice 2",
+        "Imprime O, a primeira letra",
+        "Imprime um espaço em branco"
+      ],
+      "correct": 1,
+      "explain": "<b>“Oi” tem índices 0 e 1:</b> pedir o índice 2 gera StringIndexOutOfBoundsException. O último índice é sempre length() − 1."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual valor é impresso?",
+      "code": "String s = \"Cascavel\";\nSystem.out.println(s.indexOf(\"e\"));",
+      "options": [
+        "7",
+        "5",
+        "-1",
+        "6"
+      ],
+      "correct": 3,
+      "explain": "<b>indexOf devolve a posição:</b> C0 a1 s2 c3 a4 v5 e6 l7. O “e” está no índice 6. Se não achasse, devolveria −1."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual valor é impresso?",
+      "code": "int[] v = {4, 7, 2, 9};\nSystem.out.println(v[2]);",
+      "options": [
+        "7",
+        "9",
+        "2",
+        "4"
+      ],
+      "correct": 2,
+      "explain": "<b>Índice começa em 0:</b> v[0] = 4, v[1] = 7, v[2] = 2. A posição 2 é o TERCEIRO elemento."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "int[] notas = new int[6];\nSystem.out.println(\"Tamanho: \" + notas.length);",
+      "options": [
+        "Tamanho: 5",
+        "Tamanho: 6",
+        "Tamanho: 7",
+        "Tamanho: 0"
+      ],
+      "correct": 1,
+      "explain": "<b>length é a quantidade de posições:</b> new int[6] cria 6 posições, de 0 a 5. O tamanho é 6; o último índice é 5."
+    },
+    {
+      "topic": "arrays",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "int[] v = {4, 7, 2, 9};\nSystem.out.println(v[4]);",
+      "options": [
+        "Imprime 9, o último valor",
+        "Imprime 0, o valor padrão",
+        "Erro: o índice 4 não existe",
+        "Imprime 4, que é o tamanho"
+      ],
+      "correct": 2,
+      "explain": "<b>4 elementos = índices 0 a 3:</b> v[4] passa do fim e gera ArrayIndexOutOfBoundsException."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "double[] d = new double[2];\nSystem.out.println(d[1]);",
+      "options": [
+        "0",
+        "null",
+        "0.0",
+        "Erro de compilação"
+      ],
+      "correct": 2,
+      "explain": "<b>Valor padrão:</b> um vetor novo de double começa com 0.0 em todas as posições. (int começa com 0 e String começa com null.)"
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "String[] nomes = new String[2];\nSystem.out.println(nomes[0]);",
+      "options": [
+        "null",
+        "0",
+        "Texto vazio",
+        "Erro de compilação"
+      ],
+      "correct": 0,
+      "explain": "<b>String começa vazia de verdade:</b> cada posição ainda não aponta para nenhum texto, e o Java mostra null."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual valor é impresso?",
+      "code": "int[] v = {3, 5, 8};\nint soma = 0;\nfor (int i = 0; i < v.length; i++) {\n  soma += v[i];\n}\nSystem.out.println(soma);",
+      "options": [
+        "13",
+        "16",
+        "8",
+        "24"
+      ],
+      "correct": 1,
+      "explain": "<b>Percorrendo o vetor:</b> o for passa pelos índices 0, 1 e 2 e soma 3 + 5 + 8 = 16. Usar v.length evita errar o tamanho."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual valor é impresso?",
+      "code": "int[] v = {6, 14, 3, 11};\nint maior = v[0];\nfor (int i = 1; i < v.length; i++) {\n  if (v[i] > maior) {\n    maior = v[i];\n  }\n}\nSystem.out.println(maior);",
+      "options": [
+        "11",
+        "6",
+        "14",
+        "3"
+      ],
+      "correct": 2,
+      "explain": "<b>Guardando o maior:</b> começa com 6. O 14 é maior e toma o lugar. O 3 e o 11 são menores que 14 e não trocam nada."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Em Java, qual é o índice do PRIMEIRO elemento de um vetor?",
+      "options": [
+        "1 (um)",
+        "0 (zero)",
+        "-1 (menos um)",
+        "Depende do tamanho"
+      ],
+      "correct": 1,
+      "explain": "<b>Sempre zero:</b> o primeiro é v[0] e o último é v[v.length − 1]."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "int[] v = {1, 2, 3};\nfor (int i = v.length - 1; i >= 0; i--) {\n  System.out.print(v[i] + \" \");\n}",
+      "options": [
+        "1 2 3",
+        "3 2",
+        "3 2 1",
+        "2 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De trás para a frente:</b> i começa no último índice (2) e desce até 0. Imprime v[2], v[1] e v[0]."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "int[] v = {5, 5, 5};\nv[1] = 9;\nv[2] = v[1] + 1;\nSystem.out.println(v[0] + \" \" + v[1] + \" \" + v[2]);",
+      "options": [
+        "5 9 6",
+        "5 9 10",
+        "5 5 10",
+        "9 10 5"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma posição de cada vez:</b> v[1] vira 9. Depois v[2] recebe v[1] + 1 = 10. O v[0] não foi mexido e continua 5."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual linha cria corretamente um vetor de 5 inteiros?",
+      "options": [
+        "int v = new int[5];",
+        "int[] v = new int[5];",
+        "int[] v = int[5];",
+        "int[5] v = new int[];"
+      ],
+      "correct": 1,
+      "explain": "<b>Molde:</b> tipo[] nome = new tipo[tamanho]; Os colchetes vão no tipo, e o tamanho vai depois do new."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "int[] v = {2, 7, 4, 9, 6};\nint pares = 0;\nfor (int i = 0; i < v.length; i++) {\n  if (v[i] % 2 == 0) {\n    pares++;\n  }\n}\nSystem.out.println(\"Pares: \" + pares);",
+      "options": [
+        "Pares: 2",
+        "Pares: 3",
+        "Pares: 5",
+        "Pares: 12"
+      ],
+      "correct": 1,
+      "explain": "<b>Contador:</b> 2, 4 e 6 dividem por 2 sem sobrar. São 3 pares. (12 seria a SOMA dos pares, não a contagem.)"
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual valor é impresso?",
+      "code": "int n = 1;\nwhile (n < 40) {\n  n *= 2;\n}\nSystem.out.println(n);",
+      "options": [
+        "32",
+        "64",
+        "40",
+        "128"
+      ],
+      "correct": 1,
+      "explain": "<b>Dobrando:</b> 1, 2, 4, 8, 16, 32, 64. Quando n vira 64, 64 &lt; 40 é falso e o laço para. Imprime o valor que fez parar."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "O que acontece com este código?",
+      "code": "int i = 0;\nwhile (i < 5) {\n  System.out.println(i);\n}",
+      "options": [
+        "Imprime 0 1 2 3 4",
+        "Imprime 0 só uma vez e para",
+        "Laço infinito: i não muda",
+        "Dá erro de compilação no while"
+      ],
+      "correct": 2,
+      "explain": "<b>Faltou o i++:</b> o i fica 0 para sempre, e 0 &lt; 5 é sempre verdadeiro. O programa imprime 0 sem parar."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual valor é impresso?",
+      "code": "int x = 20;\nwhile (x > 0) {\n  x -= 6;\n}\nSystem.out.println(x);",
+      "options": [
+        "2",
+        "0",
+        "-6",
+        "-4"
+      ],
+      "correct": 3,
+      "explain": "<b>Tirando 6:</b> 20, 14, 8, 2, −4. Com x = 2 o laço ainda roda (2 &gt; 0) e x vira −4. Aí para."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual é a saída?",
+      "code": "int num = 4071;\nint digitos = 0;\nwhile (num > 0) {\n  num = num / 10;\n  digitos++;\n}\nSystem.out.println(\"Dígitos: \" + digitos);",
+      "options": [
+        "Dígitos: 3",
+        "Dígitos: 5",
+        "Dígitos: 4",
+        "Dígitos: 0"
+      ],
+      "correct": 2,
+      "explain": "<b>Dividir por 10 tira um dígito:</b> 4071 → 407 → 40 → 4 → 0. Foram 4 voltas, uma por dígito."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Quando o while é melhor escolha que o for?",
+      "options": [
+        "Quando o número de voltas é fixo",
+        "Quando não se sabe quantas voltas",
+        "Quando precisa rodar ao menos uma vez",
+        "Quando o laço tem um comando só"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra prática:</b> sabe quantas voltas? for. Repete até algo acontecer (sem saber quando)? while. Precisa rodar ao menos uma vez? do-while."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual é a saída?",
+      "code": "int num = 352;\nint soma = 0;\nwhile (num > 0) {\n  soma += num % 10;\n  num /= 10;\n}\nSystem.out.println(\"Soma: \" + soma);",
+      "options": [
+        "Soma: 352",
+        "Soma: 8",
+        "Soma: 10",
+        "Soma: 35"
+      ],
+      "correct": 2,
+      "explain": "<b>% 10 pega o último dígito:</b> 2, depois 5, depois 3. 2 + 5 + 3 = 10. O /= 10 vai “cortando” o número."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int a = 17;\nint b = 5;\nSystem.out.println(\"Quociente: \" + a / b);",
+      "options": [
+        "Quociente: 3.4",
+        "Quociente: 3",
+        "Quociente: 2",
+        "Quociente: 4"
+      ],
+      "correct": 1,
+      "explain": "<b>int com int dá int:</b> 17 / 5 seria 3,4, mas a parte decimal é cortada (não arredonda). Fica 3."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "System.out.println(\"Resto: \" + 17 % 5);",
+      "options": [
+        "Resto: 3",
+        "Resto: 0.4",
+        "Resto: 2",
+        "Resto: 3.4"
+      ],
+      "correct": 2,
+      "explain": "<b>% é o resto:</b> 5 cabe 3 vezes em 17 (15) e sobram 2. Esse foi um dos erros que mais tiraram ponto na 1ª prova."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "double r = 7 / 2;\nSystem.out.println(r);",
+      "options": [
+        "3.5",
+        "3.0",
+        "3",
+        "4.0"
+      ],
+      "correct": 1,
+      "explain": "<b>A conta vem antes da caixa:</b> 7 / 2 é int com int e dá 3. Só DEPOIS o 3 vai para o double e vira 3.0."
+    },
+    {
+      "topic": "operadores",
+      "statement": "E com um número decimal na conta?",
+      "code": "double r = 7 / 2.0;\nSystem.out.println(r);",
+      "options": [
+        "3.0",
+        "3",
+        "3.5",
+        "4.0"
+      ],
+      "correct": 2,
+      "explain": "<b>Um double basta:</b> com 2.0 na conta, a divisão é feita com decimais e dá 3.5."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int x = 5;\nx++;\nx++;\nx--;\nSystem.out.println(\"x = \" + x);",
+      "options": [
+        "x = 5",
+        "x = 7",
+        "x = 6",
+        "x = 8"
+      ],
+      "correct": 2,
+      "explain": "<b>++ soma 1 e -- tira 1:</b> 5 → 6 → 7 → 6."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int a = 5;\nint b = a++;\nSystem.out.println(a + \" \" + b);",
+      "options": [
+        "6 6",
+        "6 5",
+        "5 5",
+        "5 6"
+      ],
+      "correct": 1,
+      "explain": "<b>a++ entrega e depois soma:</b> b recebe o valor ANTIGO (5) e só então a vira 6. Com ++a seria o contrário."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int a = 4;\nint b = 9;\nSystem.out.println(a > 2 && b < 9);",
+      "options": [
+        "true",
+        "false",
+        "Erro de compilação",
+        "4 > 2"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige os dois:</b> a &gt; 2 é verdadeiro, mas b &lt; 9 é falso (9 não é menor que 9). Com &&, basta um falso para dar false."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int x = 10;\nx %= 4;\nx += 3;\nSystem.out.println(\"x: \" + x);",
+      "options": [
+        "x: 6",
+        "x: 3",
+        "x: 5",
+        "x: 2"
+      ],
+      "correct": 2,
+      "explain": "<b>Passo a passo:</b> x %= 4 guarda o resto de 10 por 4, que é 2. Depois x += 3 dá 5."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "int nota = 65;\nif (nota >= 90) {\n  System.out.println(\"Ótimo\");\n} else if (nota >= 70) {\n  System.out.println(\"Bom\");\n} else if (nota >= 50) {\n  System.out.println(\"Regular\");\n} else {\n  System.out.println(\"Insuficiente\");\n}",
+      "options": [
+        "Bom",
+        "Regular",
+        "Insuficiente",
+        "Regular Insuficiente"
+      ],
+      "correct": 1,
+      "explain": "<b>Para no primeiro verdadeiro:</b> 65 não é &gt;= 90 nem &gt;= 70, mas é &gt;= 50. Imprime “Regular” e pula o resto da corrente."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Atenção às chaves. Qual é a saída?",
+      "code": "int x = 3;\nif (x > 5)\n  System.out.println(\"A\");\nSystem.out.println(\"B\");",
+      "options": [
+        "A B",
+        "A",
+        "B",
+        "Nada"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem chaves, o if manda só na linha seguinte:</b> o println(\"A\") depende do if (falso), mas o println(\"B\") está fora dele e sempre roda."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Faltou um break. Qual é a saída?",
+      "code": "int op = 2;\nswitch (op) {\n  case 1: System.out.print(\"Um \");\n  case 2: System.out.print(\"Dois \");\n  case 3: System.out.print(\"Três \");\n    break;\n  default: System.out.print(\"Outro\");\n}",
+      "options": [
+        "Dois",
+        "Dois Três",
+        "Dois Três Outro",
+        "Um Dois Três"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem break, ele “cai” para o próximo case:</b> entra no case 2, imprime “Dois”, segue para o case 3, imprime “Três” e para no break."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "int dia = 9;\nswitch (dia) {\n  case 1: System.out.println(\"Dom\"); break;\n  case 7: System.out.println(\"Sáb\"); break;\n  default: System.out.println(\"Inválido\");\n}",
+      "options": [
+        "Sáb",
+        "Nada é impresso",
+        "Dom",
+        "Inválido"
+      ],
+      "correct": 3,
+      "explain": "<b>default é o “nenhum dos anteriores”:</b> 9 não bate com 1 nem com 7, então cai no default."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Por que if (x = 5) dá erro em Java?",
+      "options": [
+        "= atribui; para comparar usa-se ==",
+        "Falta ponto e vírgula depois do if",
+        "O if só compara textos, não números",
+        "O número 5 precisa estar entre aspas"
+      ],
+      "correct": 0,
+      "explain": "<b>Um igual guarda, dois iguais comparam:</b> x = 5 coloca 5 dentro de x. O if precisa de uma comparação que dê true ou false: x == 5."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "int idade = 16;\nboolean autorizado = true;\nif (idade >= 18 || autorizado) {\n  System.out.println(\"Entra\");\n} else {\n  System.out.println(\"Barrado\");\n}",
+      "options": [
+        "Barrado",
+        "Entra",
+        "Entra Barrado",
+        "Erro de compilação"
+      ],
+      "correct": 1,
+      "explain": "<b>|| precisa de um só:</b> idade &gt;= 18 é falso, mas autorizado é true. Com “ou”, basta um verdadeiro."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "String cor = \"verde\";\nswitch (cor) {\n  case \"vermelho\": System.out.println(\"Pare\"); break;\n  case \"verde\": System.out.println(\"Siga\"); break;\n  default: System.out.println(\"Atenção\");\n}",
+      "options": [
+        "Pare",
+        "Atenção",
+        "Siga Atenção",
+        "Siga"
+      ],
+      "correct": 3,
+      "explain": "<b>switch com texto:</b> o Java compara “verde” com cada case. Bate no segundo, imprime “Siga” e o break impede de cair no default."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "int a = 8;\nint b = 3;\nif (a > 5) {\n  if (b > 5) {\n    System.out.println(\"X\");\n  } else {\n    System.out.println(\"Y\");\n  }\n} else {\n  System.out.println(\"Z\");\n}",
+      "options": [
+        "X",
+        "Z",
+        "Y",
+        "X Y"
+      ],
+      "correct": 2,
+      "explain": "<b>if dentro de if:</b> a &gt; 5 é verdadeiro, então entra. Lá dentro, b &gt; 5 é falso e vai para o else: “Y”."
+    },
+    {
+      "topic": "logica",
+      "statement": "Qual tipo de dado guarda o texto “Ana Clara”?",
+      "options": [
+        "char",
+        "String",
+        "int",
+        "boolean"
+      ],
+      "correct": 1,
+      "explain": "<b>String guarda texto:</b> vários caracteres, entre aspas duplas. char guarda UM caractere só, entre aspas simples."
+    },
+    {
+      "topic": "logica",
+      "statement": "Qual tipo de dado guarda só verdadeiro ou falso?",
+      "options": [
+        "String",
+        "double",
+        "boolean",
+        "char"
+      ],
+      "correct": 2,
+      "explain": "<b>boolean:</b> só aceita true ou false. É o resultado de toda comparação, como idade &gt;= 18."
+    },
+    {
+      "topic": "logica",
+      "statement": "Qual declaração está correta em Java?",
+      "options": [
+        "char letra = \"A\";",
+        "char letra = 'A';",
+        "String nome = 'Ana';",
+        "int idade = \"20\";"
+      ],
+      "correct": 1,
+      "explain": "<b>Aspas certas:</b> char usa aspas simples ('A'); String usa aspas duplas (\"Ana\"); número não leva aspas."
+    },
+    {
+      "topic": "logica",
+      "statement": "Erro clássico de aspas. Qual é a saída?",
+      "code": "String nome = \"Lia\";\nSystem.out.println(\"nome\");",
+      "options": [
+        "Lia",
+        "nome",
+        "\"Lia\"",
+        "Erro de compilação"
+      ],
+      "correct": 1,
+      "explain": "<b>Entre aspas é texto fixo:</b> \"nome\" imprime a palavra nome. Para mostrar o valor da variável, é sem aspas: println(nome)."
     }
   ],
   "historias": [

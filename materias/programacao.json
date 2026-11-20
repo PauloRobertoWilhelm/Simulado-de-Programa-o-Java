@@ -1403,6 +1403,596 @@
       ],
       "correct": 1,
       "explain": "<b>Entre aspas é texto fixo:</b> \"nome\" imprime a palavra nome. Para mostrar o valor da variável, é sem aspas: println(nome)."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] matriz = {\n  {1, 2, 3},\n  {4, 5, 6},\n  {7, 8, 9}\n};\nSystem.out.println(\"Valor: \" + matriz[1][2]);",
+      "options": [
+        "Valor: 2",
+        "Valor: 8",
+        "Valor: 6",
+        "Valor: 5"
+      ],
+      "correct": 2,
+      "explain": "<b>Linha primeiro, coluna depois:</b> [1] é a 2ª linha {4, 5, 6} e [2] é a 3ª coluna dessa linha: o 6. Os dois índices começam em 0."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Como se declara uma matriz de inteiros em Java, igual ao slide da aula?",
+      "options": [
+        "int matriz[[]];",
+        "int[][] matriz;",
+        "int[2] matriz;",
+        "matriz int[][];"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois pares de colchetes:</b> int[][] diz “tabela de inteiros”, com linhas e colunas. Um par só seria um vetor comum."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] m = new int[3][4];\nSystem.out.println(m.length + \" \" + m[0].length);",
+      "options": [
+        "4 3",
+        "12",
+        "3 4",
+        "3 3"
+      ],
+      "correct": 2,
+      "explain": "<b>m.length conta as linhas e m[0].length conta as colunas:</b> new int[3][4] cria 3 linhas com 4 colunas cada."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] m = new int[2][3];\nm[0][0] = 1;\nm[0][1] = 2;\nm[1][2] = 9;\nSystem.out.println(\"Soma: \" + (m[1][0] + m[1][2]));",
+      "options": [
+        "Soma: 10",
+        "Soma: 9",
+        "Soma: 12",
+        "Soma: 3"
+      ],
+      "correct": 1,
+      "explain": "<b>Posição não preenchida vale 0:</b> m[1][0] nunca recebeu valor, então é 0. 0 + 9 = 9."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Como fica a saída deste percurso com laços aninhados?",
+      "code": "int[][] m = {{1, 2}, {3, 4}};\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    System.out.print(m[i][j] + \" \");\n  }\n  System.out.println();\n}",
+      "options": [
+        "1 3 na 1ª linha e 2 4 na 2ª",
+        "1 2 na 1ª linha e 3 4 na 2ª",
+        "1 2 3 4, tudo na mesma linha",
+        "4 3 na 1ª linha e 2 1 na 2ª"
+      ],
+      "correct": 1,
+      "explain": "<b>Linha por linha:</b> o for de fora escolhe a linha; o de dentro imprime as colunas dela. O println() vazio, depois do for de dentro, pula de linha."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] m = {{2, 4}, {6, 8}, {1, 3}};\nint total = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    total += m[i][j];\n  }\n}\nSystem.out.println(\"Total: \" + total);",
+      "options": [
+        "Total: 20",
+        "Total: 24",
+        "Total: 6",
+        "Total: 8"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma de tudo:</b> os dois laços passam por todas as casas: 2 + 4 + 6 + 8 + 1 + 3 = 24."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] m = {\n  {5, 1, 1},\n  {1, 7, 1},\n  {1, 1, 9}\n};\nint d = 0;\nfor (int i = 0; i < 3; i++) {\n  d += m[i][i];\n}\nSystem.out.println(\"Diagonal: \" + d);",
+      "options": [
+        "Diagonal: 27",
+        "Diagonal: 15",
+        "Diagonal: 21",
+        "Diagonal: 3"
+      ],
+      "correct": 2,
+      "explain": "<b>m[i][i] é a diagonal:</b> linha e coluna iguais: m[0][0] = 5, m[1][1] = 7 e m[2][2] = 9. 5 + 7 + 9 = 21."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "int[][] m = new int[2][2];\nSystem.out.println(m[2][0]);",
+      "options": [
+        "Imprime 0, o valor padrão",
+        "Erro: a linha 2 não existe",
+        "Imprime null, sem valor",
+        "Imprime 2, que é o tamanho"
+      ],
+      "correct": 1,
+      "explain": "<b>2 linhas = índices 0 e 1:</b> m[2] passa do fim e gera ArrayIndexOutOfBoundsException, como no vetor."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Ao percorrer uma matriz com dois laços aninhados, qual é o papel de cada laço?",
+      "options": [
+        "Os dois andam nas linhas, um em cada metade",
+        "O de fora anda nas linhas; o de dentro, nas colunas",
+        "O de fora soma os valores; o de dentro imprime",
+        "Um laço lê do teclado e o outro grava no arquivo"
+      ],
+      "correct": 1,
+      "explain": "<b>Um laço por dimensão:</b> como diz a aula, cada laço percorre uma dimensão. O i escolhe a linha e o j anda pelas colunas dela."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a saída?",
+      "code": "int[][] notas = {{7, 8}, {5, 9}, {10, 6}};\nfor (int i = 0; i < notas.length; i++) {\n  int soma = 0;\n  for (int j = 0; j < notas[i].length; j++) {\n    soma += notas[i][j];\n  }\n  System.out.print(soma + \" \");\n}",
+      "options": [
+        "15 14 16",
+        "22 23",
+        "45",
+        "15 14 16 45"
+      ],
+      "correct": 0,
+      "explain": "<b>Soma por linha:</b> a soma volta a 0 no começo de cada linha. Linha 0: 7 + 8 = 15; linha 1: 5 + 9 = 14; linha 2: 10 + 6 = 16. (22 e 23 seriam as colunas.)"
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é um uso típico de uma matriz?",
+      "options": [
+        "Guardar um único número inteiro por vez",
+        "Guardar uma tabela, como notas por aluno",
+        "Substituir uma classe e todos os seus métodos",
+        "Ler um texto digitado pelo usuário no teclado"
+      ],
+      "correct": 1,
+      "explain": "<b>Tabela de dados:</b> a aula cita tabelas, mapas e matrizes matemáticas. Cada linha pode ser um aluno, e cada coluna, uma nota."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Depois de m[2][1] = 5;, em que lugar da tabela ficou o 5?",
+      "code": "int[][] m = new int[3][3];\nm[2][1] = 5;",
+      "options": [
+        "2ª linha, 1ª coluna",
+        "3ª linha, 2ª coluna",
+        "2ª linha, 3ª coluna",
+        "1ª linha, 2ª coluna"
+      ],
+      "correct": 1,
+      "explain": "<b>Conte do zero:</b> o índice 2 é a 3ª linha e o índice 1 é a 2ª coluna."
+    },
+    {
+      "topic": "classes",
+      "statement": "Na programação orientada a objetos, o que é uma classe?",
+      "options": [
+        "Um objeto já criado e guardado na memória",
+        "Um molde que define atributos e métodos",
+        "Um laço que repete os comandos do objeto",
+        "Uma variável que guarda vários números"
+      ],
+      "correct": 1,
+      "explain": "<b>Molde:</b> a classe é a forma do bolo. Ela diz quais características (atributos) e ações (métodos) os objetos vão ter."
+    },
+    {
+      "topic": "classes",
+      "statement": "E o que é um objeto?",
+      "options": [
+        "O molde que define os atributos da classe",
+        "Uma instância criada a partir da classe",
+        "Um comentário que explica o código-fonte",
+        "A palavra-chave que repete um bloco"
+      ],
+      "correct": 1,
+      "explain": "<b>O bolo pronto:</b> o objeto é criado a partir da classe (com new) e tem seus próprios valores nos atributos."
+    },
+    {
+      "topic": "classes",
+      "statement": "No diagrama da aula, a classe Carro tem marca, modelo e ano. Esses itens são:",
+      "options": [
+        "Métodos",
+        "Atributos",
+        "Objetos",
+        "Parâmetros"
+      ],
+      "correct": 1,
+      "explain": "<b>Atributos = características:</b> ficam na 2ª parte do retângulo. Em Java, viram variáveis dentro da classe."
+    },
+    {
+      "topic": "classes",
+      "statement": "E acelerar() e frear(), na 3ª parte do retângulo, são:",
+      "options": [
+        "Atributos do Carro",
+        "Métodos do Carro",
+        "Objetos do Carro",
+        "Classes do Carro"
+      ],
+      "correct": 1,
+      "explain": "<b>Métodos = comportamentos:</b> são as ações que o objeto sabe fazer. Os parênteses no nome entregam: acelerar()."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual linha cria um objeto da classe Carro?",
+      "options": [
+        "Carro meuCarro = Carro.new();",
+        "Carro meuCarro = new Carro();",
+        "new Carro meuCarro = Carro();",
+        "Carro() meuCarro = new;"
+      ],
+      "correct": 1,
+      "explain": "<b>new cria o objeto:</b> Tipo nome = new Tipo(); É assim no exemplo TestaCarro da aula."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual é a saída?",
+      "code": "class Carro {\n  String marca;\n  int ano;\n}\n// no main:\nCarro a = new Carro();\nCarro b = new Carro();\na.marca = \"Toyota\";\nb.marca = \"Fiat\";\na.ano = 2020;\nb.ano = a.ano + 3;\nSystem.out.println(b.marca + \" \" + b.ano);",
+      "options": [
+        "Toyota 2020",
+        "Fiat 2023",
+        "Fiat 2020",
+        "Toyota 2023"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada objeto tem seus valores:</b> a e b vêm da mesma classe, mas são carros diferentes. b.marca é “Fiat” e b.ano é 2020 + 3 = 2023."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual é a saída?",
+      "code": "class Pessoa {\n  String nome;\n  int idade;\n  void fazerAniversario() {\n    idade++;\n  }\n}\n// no main:\nPessoa p = new Pessoa();\np.nome = \"Lia\";\np.idade = 19;\np.fazerAniversario();\np.fazerAniversario();\nSystem.out.println(p.nome + \" tem \" + p.idade);",
+      "options": [
+        "Lia tem 19",
+        "Lia tem 20",
+        "Lia tem 21",
+        "Lia tem 23"
+      ],
+      "correct": 2,
+      "explain": "<b>O método mexe no atributo:</b> cada chamada de fazerAniversario() soma 1 na idade. Duas chamadas: 19 → 20 → 21."
+    },
+    {
+      "topic": "classes",
+      "statement": "Nenhum atributo recebeu valor. Qual é a saída?",
+      "code": "class Produto {\n  String nome;\n  double preco;\n}\n// no main:\nProduto p = new Produto();\nSystem.out.println(p.nome + \" \" + p.preco);",
+      "options": [
+        "0 0.0",
+        "null 0.0",
+        "Erro de compilação",
+        "Produto 0.0"
+      ],
+      "correct": 1,
+      "explain": "<b>Valores padrão:</b> atributo String começa como null e atributo double começa como 0.0, igual nos vetores."
+    },
+    {
+      "topic": "classes",
+      "statement": "Em que ordem as mensagens aparecem?",
+      "code": "class Carro {\n  void acelerar() {\n    System.out.println(\"Acelerando\");\n  }\n  void frear() {\n    System.out.println(\"Freando\");\n  }\n}\n// no main:\nCarro c = new Carro();\nc.frear();\nc.acelerar();\nc.frear();",
+      "options": [
+        "Acelerando, Freando",
+        "Freando, Acelerando, Freando",
+        "Acelerando, Freando, Freando",
+        "Freando, Freando, Acelerando"
+      ],
+      "correct": 1,
+      "explain": "<b>Na ordem das chamadas:</b> a ordem dos métodos na classe não importa. O que vale é a ordem em que o main os chama: frear, acelerar e frear."
+    },
+    {
+      "topic": "classes",
+      "statement": "Segundo a aula, por que usar classes e objetos?",
+      "options": [
+        "Fazer o programa rodar sem precisar do método main",
+        "Organizar o código em partes e facilitar a manutenção",
+        "Eliminar todos os laços de repetição do programa",
+        "Deixar o código num único arquivo bem grande"
+      ],
+      "correct": 1,
+      "explain": "<b>Organização:</b> cada classe cuida de uma parte do problema. Isso deixa o código mais fácil de manter e de ampliar."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual é a saída?",
+      "code": "class Conta {\n  double saldo;\n}\n// no main:\nConta c1 = new Conta();\nConta c2 = new Conta();\nc1.saldo = 100;\nc2.saldo = 50;\nc1.saldo = c1.saldo - 30;\nSystem.out.println(c1.saldo + \" e \" + c2.saldo);",
+      "options": [
+        "70 e 50",
+        "70.0 e 50.0",
+        "70.0 e 20.0",
+        "100.0 e 50.0"
+      ],
+      "correct": 1,
+      "explain": "<b>Contas separadas:</b> tirar 30 de c1 não mexe em c2. E, como saldo é double, sai com “.0”."
+    },
+    {
+      "topic": "classes",
+      "statement": "O que significa a sigla POO?",
+      "options": [
+        "Programação Organizada por Operações",
+        "Programação Orientada a Objetos",
+        "Processo de Ordenação de Objetos",
+        "Padrão Oficial de Orientação"
+      ],
+      "correct": 1,
+      "explain": "<b>POO:</b> um paradigma que organiza o código em torno de objetos, cada um com seus dados e comportamentos."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que significa void na declaração de um método?",
+      "options": [
+        "O método não recebe nenhum parâmetro",
+        "O método não devolve nenhum valor",
+        "O método só pode ser usado uma vez",
+        "O método fica escondido de outras classes"
+      ],
+      "correct": 1,
+      "explain": "<b>void = vazio:</b> o método faz uma ação (imprimir, alterar um atributo), mas não devolve nada para quem chamou."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Num método com retorno, qual palavra-chave devolve o valor?",
+      "options": [
+        "void",
+        "return",
+        "public",
+        "new"
+      ],
+      "correct": 1,
+      "explain": "<b>return:</b> devolve o valor para o ponto onde o método foi chamado e encerra o método ali."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Em public int somar(), o que o int indica?",
+      "options": [
+        "O tipo do parâmetro que ele recebe",
+        "O tipo do valor que o método devolve",
+        "Que o método só aceita números",
+        "Quantas vezes o método vai rodar"
+      ],
+      "correct": 1,
+      "explain": "<b>Tipo de retorno:</b> fica antes do nome. int, double, String ou boolean dizem o que vem no return; void diz que não vem nada."
+    },
+    {
+      "topic": "metodos",
+      "statement": "E o public, no começo da declaração, indica o quê?",
+      "options": [
+        "Que o método devolve um valor para todos",
+        "Que outras classes podem acessar o método",
+        "Que o método roda sozinho, sem ser chamado",
+        "Que o método não pode receber parâmetros"
+      ],
+      "correct": 1,
+      "explain": "<b>Modificador de acesso:</b> public deixa o método ser usado por outras classes, como o Main."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a saída?",
+      "code": "class Calc {\n  int sum(int a, int b) {\n    return a + b;\n  }\n  int div(int a, int b) {\n    return a / b;\n  }\n}\n// no main:\nCalc c = new Calc();\nint r = c.sum(7, 5) + c.div(9, 2);\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 16.5",
+        "r = 16",
+        "r = 12",
+        "r = 17"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada chamada vira um valor:</b> sum(7, 5) devolve 12. div(9, 2) é divisão de int e devolve 4 (corta o ,5). 12 + 4 = 16."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que acontece ao compilar este código?",
+      "code": "class Saudacao {\n  void ola() {\n    System.out.println(\"Olá\");\n  }\n}\n// no main:\nSaudacao s = new Saudacao();\nString texto = s.ola();",
+      "options": [
+        "Guarda “Olá” na variável texto",
+        "Erro: ola() é void e não devolve nada",
+        "Imprime Olá e guarda null em texto",
+        "Guarda um texto vazio na variável"
+      ],
+      "correct": 1,
+      "explain": "<b>void não tem o que guardar:</b> ola() só imprime. Para guardar o texto, o método teria de ser String ola() { return \"Olá\"; }."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Quantas vezes “Teste” aparece na tela?",
+      "code": "class Impressora {\n  void imprimirMensagem() {\n    System.out.println(\"Teste\");\n  }\n}\n// no main:\nImpressora imp = new Impressora();\nimp.imprimirMensagem();\nimp.imprimirMensagem();",
+      "options": [
+        "1 vez",
+        "2 vezes",
+        "Nenhuma",
+        "3 vezes"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma por chamada:</b> o código do método roda toda vez que ele é chamado. Duas chamadas, duas mensagens."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a saída?",
+      "code": "class Boletim {\n  String situacao(double media) {\n    if (media >= 7) {\n      return \"Aprovado\";\n    }\n    return \"Recuperação\";\n  }\n}\n// no main:\nBoletim b = new Boletim();\nSystem.out.println(b.situacao(6.5) + \" / \" + b.situacao(7.0));",
+      "options": [
+        "Aprovado / Aprovado",
+        "Recuperação / Aprovado",
+        "Recuperação / Recuperação",
+        "Aprovado / Recuperação"
+      ],
+      "correct": 1,
+      "explain": "<b>return encerra o método:</b> com 6.5, o if é falso e cai no return de baixo. Com 7.0, o if é verdadeiro e o return “Aprovado” sai na hora."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a saída?",
+      "code": "class Verificador {\n  boolean ehPar(int n) {\n    return n % 2 == 0;\n  }\n}\n// no main:\nVerificador v = new Verificador();\nSystem.out.println(v.ehPar(10) + \" \" + v.ehPar(7));",
+      "options": [
+        "false true",
+        "true true",
+        "true false",
+        "false false"
+      ],
+      "correct": 2,
+      "explain": "<b>Retorno boolean:</b> 10 % 2 é 0, então devolve true. 7 % 2 é 1, então devolve false."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Segundo a aula, o que é modularização?",
+      "options": [
+        "Juntar todo o código num único método main gigante",
+        "Dividir o código em partes menores e independentes",
+        "Copiar o mesmo trecho em vários lugares do código",
+        "Trocar todos os métodos void por métodos com retorno"
+      ],
+      "correct": 1,
+      "explain": "<b>Peças de Lego:</b> cada método faz uma tarefa. O código fica mais fácil de ler, manter e depurar."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a saída?",
+      "code": "class Tabuada {\n  void mostrar(int n) {\n    for (int i = 1; i <= 3; i++) {\n      System.out.print(n * i + \" \");\n    }\n  }\n}\n// no main:\nnew Tabuada().mostrar(4);",
+      "options": [
+        "4 8 12 16",
+        "4 8 12",
+        "1 2 3",
+        "5 6 7"
+      ],
+      "correct": 1,
+      "explain": "<b>O parâmetro entra no método:</b> n vale 4, e o for faz 4 × 1, 4 × 2 e 4 × 3."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a diferença entre um método void e um método com retorno?",
+      "options": [
+        "O void devolve um valor; o com retorno só faz a ação",
+        "O void só faz a ação; o com retorno devolve um valor",
+        "O void recebe parâmetros; o com retorno nunca recebe",
+        "São iguais; a diferença é só o nome do método"
+      ],
+      "correct": 1,
+      "explain": "<b>Fazer x responder:</b> o void é “faça isto”. O com retorno é “calcule e me diga o resultado”, e por isso termina com return."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Qual é a saída?",
+      "code": "class Notas {\n  double media(double a, double b) {\n    return (a + b) / 2;\n  }\n}\n// no main:\nNotas n = new Notas();\nSystem.out.println(n.media(7, 8));",
+      "options": [
+        "7",
+        "7.5",
+        "15.0",
+        "7.0"
+      ],
+      "correct": 1,
+      "explain": "<b>double mantém o decimal:</b> os parâmetros são double, então 15 / 2 dá 7.5. Os parênteses fazem a soma antes da divisão."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na passagem por valor, o que o método recebe?",
+      "options": [
+        "O endereço da variável original",
+        "Uma cópia do valor da variável",
+        "A própria variável, para alterar",
+        "Nada, ele só lê do teclado"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma xerox:</b> o método recebe uma cópia. Ele pode rabiscar a cópia à vontade, que o original não muda."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Qual é a saída?",
+      "code": "class Operacoes {\n  int elevarAoQuadrado(int numero) {\n    numero = numero * numero;\n    return numero;\n  }\n}\n// no main:\nOperacoes op = new Operacoes();\nint x = 6;\nint q = op.elevarAoQuadrado(x);\nSystem.out.println(x + \" e \" + q);",
+      "options": [
+        "36 e 36",
+        "6 e 36",
+        "6 e 6",
+        "36 e 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Por valor:</b> o método mudou a CÓPIA (numero), não o x. O x continua 6, e o quadrado volta pelo return: 36."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Qual é a saída?",
+      "code": "class Teste {\n  void dobrar(int n) {\n    n = n * 2;\n  }\n}\n// no main:\nTeste t = new Teste();\nint valor = 15;\nt.dobrar(valor);\nSystem.out.println(\"valor = \" + valor);",
+      "options": [
+        "valor = 30",
+        "valor = 15",
+        "valor = 0",
+        "Erro de compilação"
+      ],
+      "correct": 1,
+      "explain": "<b>A cópia dobrou, o original não:</b> int é passado por valor. E, como o método é void, o resultado nem volta para o main."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Agora com um vetor. Qual é a saída?",
+      "code": "class Vetores {\n  void dobrar(int[] v) {\n    for (int i = 0; i < v.length; i++) {\n      v[i] = v[i] * 2;\n    }\n  }\n}\n// no main:\nint[] nums = {1, 2, 3};\nnew Vetores().dobrar(nums);\nSystem.out.println(nums[0] + \" \" + nums[1] + \" \" + nums[2]);",
+      "options": [
+        "1 2 3",
+        "2 4 6",
+        "1 4 9",
+        "3 2 1"
+      ],
+      "correct": 1,
+      "explain": "<b>Vetor é objeto:</b> o método recebe a referência (o “endereço”) do mesmo vetor. Mexer em v[i] mexe no nums do main."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Igual ao exemplo da aula. Qual é a saída?",
+      "code": "class ManipulandoVetores {\n  void ordenarVetor(int[] vetor) {\n    java.util.Arrays.sort(vetor);\n  }\n}\n// no main:\nint[] numeros = {42, 15, 8, 23};\nnew ManipulandoVetores().ordenarVetor(numeros);\nSystem.out.println(\"Maior: \" + numeros[numeros.length - 1] + \", primeiro: \" + numeros[0]);",
+      "options": [
+        "Maior: 23, primeiro: 42",
+        "Maior: 42, primeiro: 8",
+        "Maior: 42, primeiro: 42",
+        "Maior: 8, primeiro: 42"
+      ],
+      "correct": 1,
+      "explain": "<b>O sort mexeu no vetor original:</b> depois de ordenar, numeros fica {8, 15, 23, 42}. O primeiro é 8 e o último (o maior) é 42."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Segundo a observação da aula, como o Java passa os parâmetros?",
+      "options": [
+        "Sempre por referência, inclusive int e double",
+        "Por valor, a não ser quando lidamos com objetos",
+        "Por referência quando o método é do tipo void",
+        "Nunca passa: o método lê as variáveis do main"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra da aula:</b> tipos simples (int, double, boolean) vão por valor. Com objetos e vetores, o método mexe no original."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na passagem por referência, o que acontece ao mudar o parâmetro dentro do método?",
+      "options": [
+        "Só a cópia muda; a original fica igual",
+        "A variável original também muda",
+        "O Java dá erro de compilação",
+        "O método devolve o valor antigo"
+      ],
+      "correct": 1,
+      "explain": "<b>Endereço compartilhado:</b> o método recebe o “endereço” do original. Mudou lá dentro, mudou aqui fora."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Qual é a saída?",
+      "code": "class Pessoa {\n  int idade;\n}\nclass Cartorio {\n  void envelhecer(Pessoa p) {\n    p.idade = p.idade + 1;\n  }\n}\n// no main:\nPessoa ana = new Pessoa();\nana.idade = 20;\nnew Cartorio().envelhecer(ana);\nSystem.out.println(\"Ana: \" + ana.idade);",
+      "options": [
+        "Ana: 20",
+        "Ana: 21",
+        "Ana: 1",
+        "Ana: 22"
+      ],
+      "correct": 1,
+      "explain": "<b>Objeto passado = o mesmo objeto:</b> p e ana apontam para a mesma pessoa. Somar 1 em p.idade muda a idade da Ana."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No exemplo prático da aula, por que o main imprime o valor original depois de chamar elevarAoQuadrado?",
+      "options": [
+        "Para mostrar que o original virou o quadrado",
+        "Para mostrar que a cópia não mudou o original",
+        "Porque o método void não devolve nenhum valor",
+        "Para provar que o Java passa tudo por referência"
+      ],
+      "correct": 1,
+      "explain": "<b>A prova da passagem por valor:</b> mostrar o original igual, lado a lado com o quadrado, deixa claro que o método só trabalhou numa cópia."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na chamada op.elevarAoQuadrado(x), como se chama o x?",
+      "options": [
+        "Atributo, uma característica da classe",
+        "Argumento, o valor enviado ao método",
+        "Retorno, o valor que o método devolve",
+        "Objeto, a instância criada com new"
+      ],
+      "correct": 1,
+      "explain": "<b>Argumento x parâmetro:</b> o x, na chamada, é o argumento. A variável numero, na declaração do método, é o parâmetro que recebe a cópia."
     }
   ],
   "historias": [

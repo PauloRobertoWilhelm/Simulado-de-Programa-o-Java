@@ -54,48 +54,77 @@
     "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
-      "base": "Aulas 8 a 12, que vieram depois da matéria da 1ª prova.",
+      "base": "PDFs das Aulas 8 a 16 do Prof. Lucas, enviados em 20/11/2026. Os códigos das perguntas foram compilados e executados no Java para conferir o gabarito.",
       "assuntos": [
-        "Laços while, do-while e for: ler o código e dizer a saída",
-        "Strings: equals, length, charAt, substring, replace, trim",
-        "Arrays: declaração, índice começando em 0, percorrer com for",
-        "Os erros que mais tiraram pontos: resto da divisão, aspas e variável, if/else"
+        "Aulas 8 a 10: while, do-while e for — ler o código e dizer a saída",
+        "Aula 11: Strings — equals, length, charAt, substring, replace, trim e toUpperCase",
+        "Aulas 12 e 13: vetores e matrizes — índice começa em 0 e laços aninhados",
+        "Aulas 14 a 16: classes e objetos, métodos void e com retorno, passagem por valor e por referência"
       ]
     },
     "temas": [
       {
+        "id": "logica",
+        "rotulo": "🧠 Lógica Básica",
+        "bimestre": 1
+      },
+      {
         "id": "operadores",
-        "rotulo": "➕ Operadores"
+        "rotulo": "➕ Operadores",
+        "bimestre": 1
       },
       {
         "id": "selecao",
-        "rotulo": "🔀 If / Switch"
+        "rotulo": "🔀 If / Switch",
+        "bimestre": 1
       },
       {
         "id": "repeticao",
-        "rotulo": "🔁 Laço While"
-      },
-      {
-        "id": "logica",
-        "rotulo": "🧠 Lógica Básica"
-      },
-      {
-        "id": "for",
-        "rotulo": "🔂 Laço For"
+        "rotulo": "🔁 Aula 8 · While",
+        "bimestre": 2
       },
       {
         "id": "dowhile",
-        "rotulo": "🔄 Do-while"
+        "rotulo": "🔄 Aula 9 · Do-while",
+        "bimestre": 2
+      },
+      {
+        "id": "for",
+        "rotulo": "🔂 Aula 10 · For",
+        "bimestre": 2
       },
       {
         "id": "strings",
-        "rotulo": "🔤 Strings"
+        "rotulo": "🔤 Aula 11 · Strings",
+        "bimestre": 2
       },
       {
         "id": "arrays",
-        "rotulo": "🧮 Arrays"
+        "rotulo": "🧮 Aula 12 · Vetores",
+        "bimestre": 2
+      },
+      {
+        "id": "matrizes",
+        "rotulo": "🔲 Aula 13 · Matrizes",
+        "bimestre": 2
+      },
+      {
+        "id": "classes",
+        "rotulo": "🏗️ Aula 14 · Classes e objetos",
+        "bimestre": 2
+      },
+      {
+        "id": "metodos",
+        "rotulo": "⚙️ Aula 15 · Métodos",
+        "bimestre": 2
+      },
+      {
+        "id": "parametros",
+        "rotulo": "📦 Aula 16 · Parâmetros",
+        "bimestre": 2
       }
-    ]
+    ],
+    "temaPadrao": "bim2"
   },
   {
     "id": "requisitos",

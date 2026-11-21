@@ -14,23 +14,23 @@ Tudo o que o app tem. Nada desta lista pode sumir sem o Paulo pedir.
 ## O que cada matéria tem
 
 <!-- inventario:inicio -->
-_Contagem de 20/11/2026, gerada por `node ferramentas/inventario.js --atualizar`._
+_Contagem de 21/11/2026, gerada por `node ferramentas/inventario.js --atualizar`._
 
 | Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Livro | Histórias | Jogos | Termos | Práticas |
 |---|---|---|---|---|---|---|---|
 | Design Front End | 103 | 0 | 0 | 2 | 3 | 0 | 0 |
-| Programação de Computadores | 168 | 0 | 9 | 7 | 3 | 14 | 12 |
-| Engenharia de Requisitos | 124 | 0 | 8 | 10 | 7 | 16 | 8 |
-| Fundamentos de Redes | 181 | 0 | 14 | 11 | 7 | 25 | 20 |
+| Programação de Computadores | 500 | 0 | 9 | 7 | 3 | 14 | 12 |
+| Engenharia de Requisitos | 500 | 0 | 8 | 10 | 7 | 16 | 8 |
+| Fundamentos de Redes | 500 | 0 | 14 | 11 | 7 | 25 | 20 |
 | Testing, Compliance e QA | 107 | 0 | 0 | 2 | 3 | 0 | 0 |
 | Pensamento Computacional | 582 | 0 | 2 | 0 | 0 | 0 | 0 |
 
 Perguntas por tema:
 
 - **Design Front End:** ihc 18, heuristicas 22, norman 20, visual 22, avaliacao 21
-- **Programação de Computadores:** logica 17, selecao 17, operadores 22, repeticao 15, for 14, dowhile 10, strings 14, arrays 12, matrizes 12, classes 12, metodos 13, parametros 10
-- **Engenharia de Requisitos:** processo 4, tipos 5, metodologias 5, casosdeuso 43, historias 18, validacao 49
-- **Fundamentos de Redes:** modelos 6, arquitetura 6, enlace 3, meios 3, rede 54, transporte 42, aplicacao 60, integradora 7
+- **Programação de Computadores:** logica 17, selecao 17, operadores 22, repeticao 55, for 54, dowhile 45, strings 59, arrays 57, matrizes 52, classes 37, metodos 48, parametros 37
+- **Engenharia de Requisitos:** processo 4, tipos 5, metodologias 5, casosdeuso 286, historias 37, validacao 163
+- **Fundamentos de Redes:** modelos 6, arquitetura 6, enlace 3, meios 3, rede 303, transporte 112, aplicacao 60, integradora 7
 - **Testing, Compliance e QA:** tipos 18, tecnicas 18, praticas 17, qualidade 15, principios 18, compliance 21
 - **Pensamento Computacional:** portugol 312, fluxo 61, logica 166, pc 43
 <!-- inventario:fim -->
@@ -72,6 +72,7 @@ Perguntas por tema:
 
 - **Abas atuais:** as 5 do 2º bimestre (Design Front End, Programação de Computadores, Engenharia de Requisitos, Fundamentos de Redes e Testing, Compliance e QA) e Pensamento Computacional (1º período).
 - **Pensamento Computacional:** veio da "Plataforma de Estudos ADS" (`Documents/plataforma-estudos`, setembro de 2026), sem mudar o texto. São 577 perguntas, mais as 5 da revisão da prova anterior (também como capítulo do livro) e as 6 dicas (capítulo do livro). As 12 perguntas de Java desse app entraram em Programação. As perguntas importadas têm o campo `origem`.
+- **Variações (21/11/2026):** para Programação, Redes e Requisitos chegarem a 500, como Pensamento, entraram perguntas do mesmo tipo com valores trocados, só com os assuntos do material. **Programação:** 332 de "o que este código imprime?" (Aulas 8 a 16), todas compiladas e executadas no Java antes de entrar. **Redes:** 319 contas fixas, das mesmas que a rodada "contas" sorteia (sub-rede, TTL, IPv6, TCP). **Requisitos:** 376 com os conceitos dos slides 05 e 06 (include, extend, exceção, cenário principal, generalização e as 7 técnicas) aplicados a 19 sistemas de exemplo. Os sistemas das atividades do Classroom ficaram de fora. Design e Testing seguem como estão até chegar o material do 2º bimestre.
 - **Fora por pedido do Paulo (20/11/2026):** Labs Tools I, Diversidade Cultural e Extensão II.
 - **Do 1º período, ainda sem aba:** Linguagem e Interação, Cybersegurança, Direito Digital, Desenvolvimento para Internet e Ambientação Tech. Nunca existiram em nenhuma versão salva do app. Há material do portal do Prof. Patrick para Cybersegurança (Aula 08) e Ambientação Tech (Aulas 06 a 08); as outras precisam do material do Paulo.
 
@@ -82,3 +83,4 @@ Perguntas por tema:
 | 05/11/2026 | Aba "Engenharia de Software" (vazia, sem perguntas: é o nome do curso, não uma matéria) | Apagada a pedido do Paulo |
 | 20/11/2026 | 18 perguntas de Programação que cobravam assuntos fora dos slides | Voltaram para o simulado no mesmo dia, a pedido do Paulo ("era criar mais, não deletar o que já tinha") |
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
+| 21/11/2026 | (nada saiu) Entraram 332 perguntas em Programação, 319 em Redes e 376 em Requisitos (variações; cada uma chegou a 500) | `materias/programacao.json`, `materias/redes.json` e `materias/requisitos.json` |

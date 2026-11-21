@@ -2171,6 +2171,3834 @@
       ],
       "correct": 1,
       "explain": "<b>Etapa 6:</b> o HTML pede outros arquivos, como estilo, imagens e scripts. Uma página costuma gerar dezenas de requisições."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.31.5.58/30?",
+      "options": [
+        "172.31.5.59",
+        "172.31.5.68",
+        "172.31.5.57",
+        "172.31.5.58"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 58 cai no bloco de 56 a 59. Rede = 172.31.5.56, broadcast = 172.31.5.59, hosts de 172.31.5.57 a 172.31.5.58."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.31.3.217/30?",
+      "options": [
+        "172.31.3.220",
+        "172.31.3.219",
+        "172.31.3.216",
+        "172.31.3.217"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 217 cai no bloco de 216 a 219. Rede = 172.31.3.216, broadcast = 172.31.3.219, hosts de 172.31.3.217 a 172.31.3.218."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.85.63.38/30?",
+      "options": [
+        "10.85.63.39",
+        "10.85.63.37",
+        "10.85.63.48",
+        "10.85.63.38"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 38 cai no bloco de 36 a 39. Rede = 10.85.63.36, broadcast = 10.85.63.39, hosts de 10.85.63.37 a 10.85.63.38."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 11 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "118",
+        "139",
+        "116",
+        "117"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 11 = 117."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 3015. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "3015",
+        "3017",
+        "3016",
+        "3014"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 3015 + 1 = 3016."
+    },
+    {
+      "topic": "rede",
+      "statement": "Pelo modelo classful, qual é a classe do endereço 221.24.143.50?",
+      "options": [
+        "Classe D",
+        "Classe A",
+        "Classe B",
+        "Classe C"
+      ],
+      "correct": 3,
+      "explain": "<b>Olhe só o 1º número (221):</b> A vai de 1 a 126, B de 128 a 191, C de 192 a 223 e D/E de 224 a 255."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 245. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "11",
+        "10",
+        "245",
+        "117"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 245, que é 255. Depois: 255 − 245 = 10 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 10 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "118",
+        "119",
+        "117",
+        "138"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 10 = 118."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /17?",
+      "options": [
+        "65534",
+        "32767",
+        "32766",
+        "32768"
+      ],
+      "correct": 2,
+      "explain": "<b>Fórmula:</b> sobram 32 − 17 = 15 bits. 2^15 = 32768, e tirando a rede e o broadcast: 32768 − 2 = 32766."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 1000 bytes com seq = 4701. Qual ack o servidor devolve?",
+      "options": [
+        "5701",
+        "5702",
+        "5700",
+        "4702"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 4701 ao 5700. O próximo esperado é 4701 + 1000 = 5701."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual destes endereços IPv4 é PÚBLICO?",
+      "options": [
+        "10.223.161.79",
+        "192.168.208.192",
+        "100.20.57.255",
+        "10.186.50.102"
+      ],
+      "correct": 2,
+      "explain": "<b>Faixas privadas:</b> 10.0.0.0 a 10.255.255.255; 172.16.0.0 a 172.31.255.255; 192.168.0.0 a 192.168.255.255. Pegadinhas: 172.15 e 172.32 ficam FORA da faixa, e 192.169 também. A resposta é 100.20.57.255."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.28.173.241/29?",
+      "options": [
+        "172.28.173.240",
+        "172.28.173.246",
+        "172.28.173.255",
+        "172.28.173.247"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 241 cai no bloco de 240 a 247. Rede = 172.28.173.240, broadcast = 172.28.173.247, hosts de 172.28.173.241 a 172.28.173.246."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.29.161.26/30?",
+      "options": [
+        "172.29.161.24",
+        "172.29.161.27",
+        "172.29.161.26",
+        "172.29.161.31"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 26 cai no bloco de 24 a 27. Rede = 172.29.161.24, broadcast = 172.29.161.27, hosts de 172.29.161.25 a 172.29.161.26."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:01b4:0000:0000:0000:0b54:0201?",
+      "options": [
+        "2001:db8:1b4:0:b54:201",
+        "2001:0db8:01b4::0b54:0201",
+        "2001:db8:1b4::b54:201",
+        "2001:db8:1b4:::b54:201"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:1b4::b54:201."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantas sub-redes /25 cabem dentro de uma rede /20?",
+      "options": [
+        "10",
+        "30",
+        "32",
+        "64"
+      ],
+      "correct": 2,
+      "explain": "<b>Bits emprestados:</b> 25 − 20 = 5. Cada bit dobra a quantidade: 2^5 = 32 sub-redes. Aqui não se tira 2, isso é só para hosts."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.180.68/25?",
+      "options": [
+        "192.168.180.0",
+        "192.168.180.1",
+        "192.168.180.126",
+        "192.168.180.2"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 68 cai no bloco de 0 a 127. Rede = 192.168.180.0, broadcast = 192.168.180.127, hosts de 192.168.180.1 a 192.168.180.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.204.252/27?",
+      "options": [
+        "192.168.204.254",
+        "192.168.204.224",
+        "192.168.204.31",
+        "192.168.204.255"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 252 cai no bloco de 224 a 255. Rede = 192.168.204.224, broadcast = 192.168.204.255, hosts de 192.168.204.225 a 192.168.204.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.50.3/27?",
+      "options": [
+        "192.168.50.1",
+        "192.168.50.0",
+        "192.168.50.2",
+        "192.168.50.30"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 3 cai no bloco de 0 a 31. Rede = 192.168.50.0, broadcast = 192.168.50.31, hosts de 192.168.50.1 a 192.168.50.30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.21.123.150/28?",
+      "options": [
+        "172.21.123.160",
+        "172.21.123.150",
+        "172.21.123.144",
+        "172.21.123.159"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 150 cai no bloco de 144 a 159. Rede = 172.21.123.144, broadcast = 172.21.123.159, hosts de 172.21.123.145 a 172.21.123.158."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 35. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "29",
+        "93",
+        "35",
+        "30"
+      ],
+      "correct": 0,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 35, que é 64. Depois: 64 − 35 = 29 roteadores."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 300 bytes com seq = 4763. Qual ack o servidor devolve?",
+      "options": [
+        "5064",
+        "5063",
+        "4764",
+        "5062"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> os bytes vão do 4763 ao 5062. O próximo esperado é 4763 + 300 = 5063."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 951. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "952",
+        "953",
+        "951",
+        "950"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 951 + 1 = 952."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 4300 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 4300 ao 4800",
+        "Do 4301 ao 4800",
+        "Do 4300 ao 4799",
+        "Do 3800 ao 4300"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 4300 terminam no 4799 (4300 + 500 − 1). O ack depois dele será 4800."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.17.238.6/29?",
+      "options": [
+        "172.17.238.0",
+        "172.17.238.2",
+        "172.17.238.1",
+        "172.17.238.6"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 6 cai no bloco de 0 a 7. Rede = 172.17.238.0, broadcast = 172.17.238.7, hosts de 172.17.238.1 a 172.17.238.6."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.21.222.42/29?",
+      "options": [
+        "172.21.222.46",
+        "172.21.222.47",
+        "172.21.222.45",
+        "172.21.222.41"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 42 cai no bloco de 40 a 47. Rede = 172.21.222.40, broadcast = 172.21.222.47, hosts de 172.21.222.41 a 172.21.222.46."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.252.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/23",
+        "/21",
+        "/30",
+        "/22"
+      ],
+      "correct": 3,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /22."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantas sub-redes /28 cabem dentro de uma rede /22?",
+      "options": [
+        "64",
+        "128",
+        "12",
+        "62"
+      ],
+      "correct": 0,
+      "explain": "<b>Bits emprestados:</b> 28 − 22 = 6. Cada bit dobra a quantidade: 2^6 = 64 sub-redes. Aqui não se tira 2, isso é só para hosts."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0c94:0000:0000:0000:0010:000b?",
+      "options": [
+        "2001:db8:c94:0:10:b",
+        "2001:db8:c94:::10:b",
+        "2001:0db8:0c94::0010:000b",
+        "2001:db8:c94::10:b"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:c94::10:b."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /18?",
+      "options": [
+        "16382",
+        "32766",
+        "16384",
+        "16383"
+      ],
+      "correct": 0,
+      "explain": "<b>Fórmula:</b> sobram 32 − 18 = 14 bits. 2^14 = 16384, e tirando a rede e o broadcast: 16384 − 2 = 16382."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 20 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "275",
+        "234",
+        "236",
+        "235"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 20 = 235."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /23?",
+      "options": [
+        "255.255.252.0",
+        "255.255.255.0",
+        "255.255.254.0",
+        "255.255.255.254"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta os bits 1:</b> /23 são 23 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.254.0."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /26?",
+      "options": [
+        "255.255.255.224",
+        "255.255.255.192",
+        "255.255.192.0",
+        "255.255.255.128"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta os bits 1:</b> /26 são 26 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.255.192."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.171.209/26?",
+      "options": [
+        "192.168.171.209",
+        "192.168.171.255",
+        "192.168.171.0",
+        "192.168.171.192"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 209 cai no bloco de 192 a 255. Rede = 192.168.171.192, broadcast = 192.168.171.255, hosts de 192.168.171.193 a 192.168.171.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.240.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/21",
+        "/20",
+        "/19",
+        "/28"
+      ],
+      "correct": 1,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /20."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /19?",
+      "options": [
+        "255.255.192.0",
+        "255.255.240.0",
+        "255.255.255.224",
+        "255.255.224.0"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta os bits 1:</b> /19 são 19 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.224.0."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 120. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "8",
+        "9",
+        "135",
+        "120"
+      ],
+      "correct": 0,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 120, que é 128. Depois: 128 − 120 = 8 roteadores."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 3200 e leva 1000 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 3200 ao 4200",
+        "Do 3201 ao 4200",
+        "Do 2200 ao 3200",
+        "Do 3200 ao 4199"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 1000 bytes a partir do 3200 terminam no 4199 (3200 + 1000 − 1). O ack depois dele será 4200."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 5100 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 5100 ao 5600",
+        "Do 4600 ao 5100",
+        "Do 5101 ao 5600",
+        "Do 5100 ao 5599"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 5100 terminam no 5599 (5100 + 500 − 1). O ack depois dele será 5600."
+    },
+    {
+      "topic": "rede",
+      "statement": "Pelo modelo classful, qual é a classe do endereço 60.41.223.20?",
+      "options": [
+        "Classe A",
+        "Classe B",
+        "Classe C",
+        "Classe D"
+      ],
+      "correct": 0,
+      "explain": "<b>Olhe só o 1º número (60):</b> A vai de 1 a 126, B de 128 a 191, C de 192 a 223 e D/E de 224 a 255."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 5 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "251",
+        "249",
+        "250",
+        "260"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 5 = 250."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.255.252 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/30",
+        "/22",
+        "/29",
+        "/31"
+      ],
+      "correct": 0,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:052e:0000:0000:0000:0ce7:0a13?",
+      "options": [
+        "2001:db8:52e::ce7:a13",
+        "2001:db8:52e:0:ce7:a13",
+        "2001:db8:52e:::ce7:a13",
+        "2001:0db8:052e::0ce7:0a13"
+      ],
+      "correct": 0,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:52e::ce7:a13."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 5 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "122",
+        "124",
+        "133",
+        "123"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 5 = 123."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.98.82/26?",
+      "options": [
+        "192.168.98.127",
+        "192.168.98.64",
+        "192.168.98.128",
+        "192.168.98.82"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 82 cai no bloco de 64 a 127. Rede = 192.168.98.64, broadcast = 192.168.98.127, hosts de 192.168.98.65 a 192.168.98.126."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 783. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "785",
+        "784",
+        "782",
+        "783"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 783 + 1 = 784."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 1917. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "1916",
+        "1917",
+        "1918",
+        "1919"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 1917 + 1 = 1918."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:07d4:0000:0000:0000:0260:0b66?",
+      "options": [
+        "2001:db8:7d4:::260:b66",
+        "2001:db8:7d4::260:b66",
+        "2001:db8:7d4:0:260:b66",
+        "2001:0db8:07d4::0260:0b66"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:7d4::260:b66."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /29?",
+      "options": [
+        "255.255.255.252",
+        "255.255.255.240",
+        "255.255.248.0",
+        "255.255.255.248"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta os bits 1:</b> /29 são 29 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.255.248."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 500 bytes com seq = 2501. Qual ack o servidor devolve?",
+      "options": [
+        "3002",
+        "3001",
+        "2502",
+        "3000"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> os bytes vão do 2501 ao 3000. O próximo esperado é 2501 + 500 = 3001."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.20.176.129/25?",
+      "options": [
+        "172.20.176.129",
+        "172.20.176.128",
+        "172.20.176.0",
+        "172.20.176.255"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 129 cai no bloco de 128 a 255. Rede = 172.20.176.128, broadcast = 172.20.176.255, hosts de 172.20.176.129 a 172.20.176.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.199.121/25?",
+      "options": [
+        "192.168.199.128",
+        "192.168.199.127",
+        "192.168.199.0",
+        "192.168.199.121"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 121 cai no bloco de 0 a 127. Rede = 192.168.199.0, broadcast = 192.168.199.127, hosts de 192.168.199.1 a 192.168.199.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.82.30.149/26?",
+      "options": [
+        "10.82.30.130",
+        "10.82.30.129",
+        "10.82.30.190",
+        "10.82.30.128"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 149 cai no bloco de 128 a 191. Rede = 10.82.30.128, broadcast = 10.82.30.191, hosts de 10.82.30.129 a 10.82.30.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.107.8/25?",
+      "options": [
+        "192.168.107.2",
+        "192.168.107.0",
+        "192.168.107.1",
+        "192.168.107.126"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 8 cai no bloco de 0 a 127. Rede = 192.168.107.0, broadcast = 192.168.107.127, hosts de 192.168.107.1 a 192.168.107.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.66.205/25?",
+      "options": [
+        "192.168.66.254",
+        "192.168.66.127",
+        "192.168.66.255",
+        "192.168.66.128"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 205 cai no bloco de 128 a 255. Rede = 192.168.66.128, broadcast = 192.168.66.255, hosts de 192.168.66.129 a 192.168.66.254."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 400 bytes com seq = 2393. Qual ack o servidor devolve?",
+      "options": [
+        "2794",
+        "2793",
+        "2792",
+        "2394"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> os bytes vão do 2393 ao 2792. O próximo esperado é 2393 + 400 = 2793."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 227. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "29",
+        "99",
+        "28",
+        "227"
+      ],
+      "correct": 2,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 227, que é 255. Depois: 255 − 227 = 28 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.24.246.12/26?",
+      "options": [
+        "172.24.246.0",
+        "172.24.246.127",
+        "172.24.246.62",
+        "172.24.246.63"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 12 cai no bloco de 0 a 63. Rede = 172.24.246.0, broadcast = 172.24.246.63, hosts de 172.24.246.1 a 172.24.246.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.189.188/25?",
+      "options": [
+        "192.168.189.128",
+        "192.168.189.254",
+        "192.168.189.129",
+        "192.168.189.130"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 188 cai no bloco de 128 a 255. Rede = 192.168.189.128, broadcast = 192.168.189.255, hosts de 192.168.189.129 a 192.168.189.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /18?",
+      "options": [
+        "255.255.255.192",
+        "255.255.224.0",
+        "255.255.192.0",
+        "255.255.128.0"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta os bits 1:</b> /18 são 18 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.192.0."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.27.253.81/28?",
+      "options": [
+        "172.27.253.81",
+        "172.27.253.93",
+        "172.27.253.95",
+        "172.27.253.94"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 81 cai no bloco de 80 a 95. Rede = 172.27.253.80, broadcast = 172.27.253.95, hosts de 172.27.253.81 a 172.27.253.94."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.225.219/28?",
+      "options": [
+        "192.168.225.223",
+        "192.168.225.208",
+        "192.168.225.222",
+        "192.168.225.239"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 219 cai no bloco de 208 a 223. Rede = 192.168.225.208, broadcast = 192.168.225.223, hosts de 192.168.225.209 a 192.168.225.222."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.19.56.152/25?",
+      "options": [
+        "172.19.56.254",
+        "172.19.56.129",
+        "172.19.56.253",
+        "172.19.56.255"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 152 cai no bloco de 128 a 255. Rede = 172.19.56.128, broadcast = 172.19.56.255, hosts de 172.19.56.129 a 172.19.56.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 4 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "259",
+        "250",
+        "251",
+        "252"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 4 = 251."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 7300 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 7300 ao 7400",
+        "Do 7200 ao 7300",
+        "Do 7301 ao 7400",
+        "Do 7300 ao 7399"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 7300 terminam no 7399 (7300 + 100 − 1). O ack depois dele será 7400."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.29.88.27/25?",
+      "options": [
+        "172.29.88.1",
+        "172.29.88.126",
+        "172.29.88.125",
+        "172.29.88.127"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 27 cai no bloco de 0 a 127. Rede = 172.29.88.0, broadcast = 172.29.88.127, hosts de 172.29.88.1 a 172.29.88.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 53. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "75",
+        "12",
+        "11",
+        "53"
+      ],
+      "correct": 2,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 53, que é 64. Depois: 64 − 53 = 11 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.18.4.197/30?",
+      "options": [
+        "172.18.4.208",
+        "172.18.4.198",
+        "172.18.4.196",
+        "172.18.4.197"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 197 cai no bloco de 196 a 199. Rede = 172.18.4.196, broadcast = 172.18.4.199, hosts de 172.18.4.197 a 172.18.4.198."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.114.138.94/30?",
+      "options": [
+        "10.114.138.95",
+        "10.114.138.96",
+        "10.114.138.92",
+        "10.114.138.94"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 94 cai no bloco de 92 a 95. Rede = 10.114.138.92, broadcast = 10.114.138.95, hosts de 10.114.138.93 a 10.114.138.94."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 19 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "236",
+        "235",
+        "274",
+        "237"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 19 = 236."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 5200 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 5200 ao 5399",
+        "Do 5200 ao 5400",
+        "Do 5201 ao 5400",
+        "Do 5000 ao 5200"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 5200 terminam no 5399 (5200 + 200 − 1). O ack depois dele será 5400."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 40. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "40",
+        "88",
+        "25",
+        "24"
+      ],
+      "correct": 3,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 40, que é 64. Depois: 64 − 40 = 24 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /25?",
+      "options": [
+        "255.255.255.0",
+        "255.255.128.0",
+        "255.255.255.192",
+        "255.255.255.128"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta os bits 1:</b> /25 são 25 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.255.128."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:02f8:0000:0000:0000:05fe:04f8?",
+      "options": [
+        "2001:db8:2f8:::5fe:4f8",
+        "2001:db8:2f8::5fe:4f8",
+        "2001:0db8:02f8::05fe:04f8",
+        "2001:db8:2f8:0:5fe:4f8"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:2f8::5fe:4f8."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.152.210.22/27?",
+      "options": [
+        "10.152.210.30",
+        "10.152.210.2",
+        "10.152.210.1",
+        "10.152.210.0"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 22 cai no bloco de 0 a 31. Rede = 10.152.210.0, broadcast = 10.152.210.31, hosts de 10.152.210.1 a 10.152.210.30."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 55. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "10",
+        "9",
+        "73",
+        "55"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 55, que é 64. Depois: 64 − 55 = 9 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.189.181.93/28?",
+      "options": [
+        "10.189.181.95",
+        "10.189.181.94",
+        "10.189.181.80",
+        "10.189.181.111"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 93 cai no bloco de 80 a 95. Rede = 10.189.181.80, broadcast = 10.189.181.95, hosts de 10.189.181.81 a 10.189.181.94."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /24?",
+      "options": [
+        "510",
+        "254",
+        "256",
+        "255"
+      ],
+      "correct": 1,
+      "explain": "<b>Fórmula:</b> sobram 32 − 24 = 8 bits. 2^8 = 256, e tirando a rede e o broadcast: 256 − 2 = 254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 3 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "61",
+        "67",
+        "62",
+        "60"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 3 = 61."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.157.149/27?",
+      "options": [
+        "192.168.157.157",
+        "192.168.157.159",
+        "192.168.157.129",
+        "192.168.157.158"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 149 cai no bloco de 128 a 159. Rede = 192.168.157.128, broadcast = 192.168.157.159, hosts de 192.168.157.129 a 192.168.157.158."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 4435. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "4435",
+        "4436",
+        "4434",
+        "4437"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 4435 + 1 = 4436."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.24.153.54/29?",
+      "options": [
+        "10.24.153.63",
+        "10.24.153.55",
+        "10.24.153.48",
+        "10.24.153.54"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 54 cai no bloco de 48 a 55. Rede = 10.24.153.48, broadcast = 10.24.153.55, hosts de 10.24.153.49 a 10.24.153.54."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /27?",
+      "options": [
+        "32",
+        "30",
+        "31",
+        "62"
+      ],
+      "correct": 1,
+      "explain": "<b>Fórmula:</b> sobram 32 − 27 = 5 bits. 2^5 = 32, e tirando a rede e o broadcast: 32 − 2 = 30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.206.30.165/30?",
+      "options": [
+        "10.206.30.168",
+        "10.206.30.167",
+        "10.206.30.165",
+        "10.206.30.164"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 165 cai no bloco de 164 a 167. Rede = 10.206.30.164, broadcast = 10.206.30.167, hosts de 10.206.30.165 a 10.206.30.166."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 3800 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 3800 ao 4299",
+        "Do 3801 ao 4300",
+        "Do 3300 ao 3800",
+        "Do 3800 ao 4300"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 3800 terminam no 4299 (3800 + 500 − 1). O ack depois dele será 4300."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.116.36.70/28?",
+      "options": [
+        "10.116.36.80",
+        "10.116.36.64",
+        "10.116.36.79",
+        "10.116.36.70"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 70 cai no bloco de 64 a 79. Rede = 10.116.36.64, broadcast = 10.116.36.79, hosts de 10.116.36.65 a 10.116.36.78."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0988:0000:0000:0000:04df:0591?",
+      "options": [
+        "2001:db8:988:::4df:591",
+        "2001:db8:988:0:4df:591",
+        "2001:db8:988::4df:591",
+        "2001:0db8:0988::04df:0591"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:988::4df:591."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.22.248.90/26?",
+      "options": [
+        "172.22.248.127",
+        "172.22.248.65",
+        "172.22.248.126",
+        "172.22.248.125"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 90 cai no bloco de 64 a 127. Rede = 172.22.248.64, broadcast = 172.22.248.127, hosts de 172.22.248.65 a 172.22.248.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.125.185.45/29?",
+      "options": [
+        "10.125.185.46",
+        "10.125.185.45",
+        "10.125.185.41",
+        "10.125.185.47"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 45 cai no bloco de 40 a 47. Rede = 10.125.185.40, broadcast = 10.125.185.47, hosts de 10.125.185.41 a 10.125.185.46."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 7869. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "7868",
+        "7869",
+        "7871",
+        "7870"
+      ],
+      "correct": 3,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 7869 + 1 = 7870."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 100 bytes com seq = 3669. Qual ack o servidor devolve?",
+      "options": [
+        "3768",
+        "3769",
+        "3770",
+        "3670"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> os bytes vão do 3669 ao 3768. O próximo esperado é 3669 + 100 = 3769."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.22.119.238/28?",
+      "options": [
+        "172.22.119.239",
+        "172.22.119.224",
+        "172.22.119.238",
+        "172.22.119.255"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 238 cai no bloco de 224 a 239. Rede = 172.22.119.224, broadcast = 172.22.119.239, hosts de 172.22.119.225 a 172.22.119.238."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 20 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "43",
+        "44",
+        "84",
+        "45"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 20 = 44."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.224.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/20",
+        "/19",
+        "/18",
+        "/27"
+      ],
+      "correct": 1,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /19."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.192.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/26",
+        "/18",
+        "/17",
+        "/19"
+      ],
+      "correct": 1,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /18."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual destes endereços IPv4 é PRIVADO?",
+      "options": [
+        "9.90.203.161",
+        "100.154.153.85",
+        "172.56.186.237",
+        "10.84.227.174"
+      ],
+      "correct": 3,
+      "explain": "<b>Faixas privadas:</b> 10.0.0.0 a 10.255.255.255; 172.16.0.0 a 172.31.255.255; 192.168.0.0 a 192.168.255.255. Pegadinhas: 172.15 e 172.32 ficam FORA da faixa, e 192.169 também. A resposta é 10.84.227.174."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.115.43/29?",
+      "options": [
+        "192.168.115.41",
+        "192.168.115.40",
+        "192.168.115.46",
+        "192.168.115.42"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 43 cai no bloco de 40 a 47. Rede = 192.168.115.40, broadcast = 192.168.115.47, hosts de 192.168.115.41 a 192.168.115.46."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /17?",
+      "options": [
+        "255.255.192.0",
+        "255.255.128.0",
+        "255.255.0.0",
+        "255.255.255.128"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta os bits 1:</b> /17 são 17 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.128.0."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 100 bytes com seq = 3852. Qual ack o servidor devolve?",
+      "options": [
+        "3952",
+        "3953",
+        "3853",
+        "3951"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 3852 ao 3951. O próximo esperado é 3852 + 100 = 3952."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 101. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "154",
+        "27",
+        "28",
+        "101"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 101, que é 128. Depois: 128 − 101 = 27 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.202.67.85/30?",
+      "options": [
+        "10.202.67.85",
+        "10.202.67.86",
+        "10.202.67.88",
+        "10.202.67.87"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 85 cai no bloco de 84 a 87. Rede = 10.202.67.84, broadcast = 10.202.67.87, hosts de 10.202.67.85 a 10.202.67.86."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.248.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/21",
+        "/22",
+        "/29",
+        "/20"
+      ],
+      "correct": 0,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /21."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.88.48.37/30?",
+      "options": [
+        "10.88.48.39",
+        "10.88.48.37",
+        "10.88.48.48",
+        "10.88.48.38"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 37 cai no bloco de 36 a 39. Rede = 10.88.48.36, broadcast = 10.88.48.39, hosts de 10.88.48.37 a 10.88.48.38."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 9 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "54",
+        "73",
+        "55",
+        "56"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 9 = 55."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 3100 e leva 1000 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 3100 ao 4099",
+        "Do 2100 ao 3100",
+        "Do 3100 ao 4100",
+        "Do 3101 ao 4100"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 1000 bytes a partir do 3100 terminam no 4099 (3100 + 1000 − 1). O ack depois dele será 4100."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 500 bytes com seq = 5967. Qual ack o servidor devolve?",
+      "options": [
+        "6467",
+        "6466",
+        "5968",
+        "6468"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 5967 ao 6466. O próximo esperado é 5967 + 500 = 6467."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 5571. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "5570",
+        "5571",
+        "5572",
+        "5573"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5571 + 1 = 5572."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.95.73/30?",
+      "options": [
+        "192.168.95.74",
+        "192.168.95.75",
+        "192.168.95.79",
+        "192.168.95.72"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 73 cai no bloco de 72 a 75. Rede = 192.168.95.72, broadcast = 192.168.95.75, hosts de 192.168.95.73 a 192.168.95.74."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.29.107.45/25?",
+      "options": [
+        "172.29.107.45",
+        "172.29.107.128",
+        "172.29.107.127",
+        "172.29.107.0"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 45 cai no bloco de 0 a 127. Rede = 172.29.107.0, broadcast = 172.29.107.127, hosts de 172.29.107.1 a 172.29.107.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 242. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "242",
+        "13",
+        "114",
+        "14"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 242, que é 255. Depois: 255 − 242 = 13 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 13 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "52",
+        "51",
+        "77",
+        "50"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 13 = 51."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.23.150/25?",
+      "options": [
+        "192.168.23.128",
+        "192.168.23.254",
+        "192.168.23.130",
+        "192.168.23.129"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 150 cai no bloco de 128 a 255. Rede = 192.168.23.128, broadcast = 192.168.23.255, hosts de 192.168.23.129 a 192.168.23.254."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 120 bytes com seq = 4214. Qual ack o servidor devolve?",
+      "options": [
+        "4334",
+        "4335",
+        "4215",
+        "4333"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 4214 ao 4333. O próximo esperado é 4214 + 120 = 4334."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 19 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "83",
+        "46",
+        "44",
+        "45"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 19 = 45."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.31.179.238/26?",
+      "options": [
+        "172.31.179.192",
+        "172.31.179.255",
+        "172.31.179.0",
+        "172.31.179.238"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 238 cai no bloco de 192 a 255. Rede = 172.31.179.192, broadcast = 172.31.179.255, hosts de 172.31.179.193 a 172.31.179.254."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 5313. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "5315",
+        "5314",
+        "5313",
+        "5312"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5313 + 1 = 5314."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.175.200/26?",
+      "options": [
+        "192.168.175.255",
+        "192.168.175.192",
+        "192.168.175.63",
+        "192.168.175.254"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 200 cai no bloco de 192 a 255. Rede = 192.168.175.192, broadcast = 192.168.175.255, hosts de 192.168.175.193 a 192.168.175.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.21.25.115/29?",
+      "options": [
+        "172.21.25.120",
+        "172.21.25.119",
+        "172.21.25.115",
+        "172.21.25.112"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 115 cai no bloco de 112 a 119. Rede = 172.21.25.112, broadcast = 172.21.25.119, hosts de 172.21.25.113 a 172.21.25.118."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.144.174/25?",
+      "options": [
+        "192.168.144.127",
+        "192.168.144.128",
+        "192.168.144.255",
+        "192.168.144.254"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 174 cai no bloco de 128 a 255. Rede = 192.168.144.128, broadcast = 192.168.144.255, hosts de 192.168.144.129 a 192.168.144.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 239. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "17",
+        "111",
+        "239",
+        "16"
+      ],
+      "correct": 3,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 239, que é 255. Depois: 255 − 239 = 16 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.76.65/30?",
+      "options": [
+        "192.168.76.72",
+        "192.168.76.65",
+        "192.168.76.67",
+        "192.168.76.66"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 65 cai no bloco de 64 a 67. Rede = 192.168.76.64, broadcast = 192.168.76.67, hosts de 192.168.76.65 a 192.168.76.66."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /19?",
+      "options": [
+        "8190",
+        "8192",
+        "8191",
+        "16382"
+      ],
+      "correct": 0,
+      "explain": "<b>Fórmula:</b> sobram 32 − 19 = 13 bits. 2^13 = 8192, e tirando a rede e o broadcast: 8192 − 2 = 8190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.27.126.54/28?",
+      "options": [
+        "172.27.126.49",
+        "172.27.126.48",
+        "172.27.126.62",
+        "172.27.126.50"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 54 cai no bloco de 48 a 63. Rede = 172.27.126.48, broadcast = 172.27.126.63, hosts de 172.27.126.49 a 172.27.126.62."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 1900 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 1900 ao 2100",
+        "Do 1700 ao 1900",
+        "Do 1901 ao 2100",
+        "Do 1900 ao 2099"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 1900 terminam no 2099 (1900 + 200 − 1). O ack depois dele será 2100."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0887:0000:0000:0000:08f0:0920?",
+      "options": [
+        "2001:db8:887:::8f0:920",
+        "2001:db8:887:0:8f0:920",
+        "2001:db8:887::8f0:920",
+        "2001:0db8:0887::08f0:0920"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:887::8f0:920."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.190.221.60/29?",
+      "options": [
+        "10.190.221.56",
+        "10.190.221.62",
+        "10.190.221.58",
+        "10.190.221.57"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 60 cai no bloco de 56 a 63. Rede = 10.190.221.56, broadcast = 10.190.221.63, hosts de 10.190.221.57 a 10.190.221.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0014:0000:0000:0000:0c85:0ee7?",
+      "options": [
+        "2001:db8:14:0:c85:ee7",
+        "2001:0db8:0014::0c85:0ee7",
+        "2001:db8:14:::c85:ee7",
+        "2001:db8:14::c85:ee7"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:14::c85:ee7."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 6200 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 6200 ao 6400",
+        "Do 6200 ao 6399",
+        "Do 6000 ao 6200",
+        "Do 6201 ao 6400"
+      ],
+      "correct": 1,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 6200 terminam no 6399 (6200 + 200 − 1). O ack depois dele será 6400."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.155.140.94/27?",
+      "options": [
+        "10.155.140.94",
+        "10.155.140.95",
+        "10.155.140.127",
+        "10.155.140.64"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 94 cai no bloco de 64 a 95. Rede = 10.155.140.64, broadcast = 10.155.140.95, hosts de 10.155.140.65 a 10.155.140.94."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 1875. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "1875",
+        "1877",
+        "1874",
+        "1876"
+      ],
+      "correct": 3,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 1875 + 1 = 1876."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 7 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "248",
+        "247",
+        "262",
+        "249"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 7 = 248."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /25?",
+      "options": [
+        "254",
+        "128",
+        "126",
+        "127"
+      ],
+      "correct": 2,
+      "explain": "<b>Fórmula:</b> sobram 32 − 25 = 7 bits. 2^7 = 128, e tirando a rede e o broadcast: 128 − 2 = 126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.18.238.173/25?",
+      "options": [
+        "172.18.238.129",
+        "172.18.238.130",
+        "172.18.238.128",
+        "172.18.238.254"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 173 cai no bloco de 128 a 255. Rede = 172.18.238.128, broadcast = 172.18.238.255, hosts de 172.18.238.129 a 172.18.238.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 125. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "125",
+        "130",
+        "4",
+        "3"
+      ],
+      "correct": 3,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 125, que é 128. Depois: 128 − 125 = 3 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.21.51.185/29?",
+      "options": [
+        "172.21.51.192",
+        "172.21.51.184",
+        "172.21.51.185",
+        "172.21.51.191"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 185 cai no bloco de 184 a 191. Rede = 172.21.51.184, broadcast = 172.21.51.191, hosts de 172.21.51.185 a 172.21.51.190."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 200 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 200 ao 299",
+        "Do 100 ao 200",
+        "Do 201 ao 300",
+        "Do 200 ao 300"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 200 terminam no 299 (200 + 100 − 1). O ack depois dele será 300."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 250 bytes com seq = 7359. Qual ack o servidor devolve?",
+      "options": [
+        "7360",
+        "7610",
+        "7609",
+        "7608"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> os bytes vão do 7359 ao 7608. O próximo esperado é 7359 + 250 = 7609."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.27.125.162/25?",
+      "options": [
+        "172.27.125.127",
+        "172.27.125.255",
+        "172.27.125.254",
+        "172.27.125.128"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 162 cai no bloco de 128 a 255. Rede = 172.27.125.128, broadcast = 172.27.125.255, hosts de 172.27.125.129 a 172.27.125.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.105.51.69/30?",
+      "options": [
+        "10.105.51.69",
+        "10.105.51.76",
+        "10.105.51.70",
+        "10.105.51.68"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 69 cai no bloco de 68 a 71. Rede = 10.105.51.68, broadcast = 10.105.51.71, hosts de 10.105.51.69 a 10.105.51.70."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.2.242.237/30?",
+      "options": [
+        "10.2.242.236",
+        "10.2.242.238",
+        "10.2.242.237",
+        "10.2.242.240"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 237 cai no bloco de 236 a 239. Rede = 10.2.242.236, broadcast = 10.2.242.239, hosts de 10.2.242.237 a 10.2.242.238."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.18.59.38/27?",
+      "options": [
+        "172.18.59.64",
+        "172.18.59.38",
+        "172.18.59.63",
+        "172.18.59.32"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 38 cai no bloco de 32 a 63. Rede = 172.18.59.32, broadcast = 172.18.59.63, hosts de 172.18.59.33 a 172.18.59.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.128.0 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/17",
+        "/25",
+        "/16",
+        "/18"
+      ],
+      "correct": 0,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /17."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.29.202.5/25?",
+      "options": [
+        "172.29.202.127",
+        "172.29.202.1",
+        "172.29.202.125",
+        "172.29.202.126"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 5 cai no bloco de 0 a 127. Rede = 172.29.202.0, broadcast = 172.29.202.127, hosts de 172.29.202.1 a 172.29.202.126."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 2521. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "2523",
+        "2522",
+        "2521",
+        "2520"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 2521 + 1 = 2522."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 512 bytes com seq = 2425. Qual ack o servidor devolve?",
+      "options": [
+        "2938",
+        "2936",
+        "2426",
+        "2937"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 2425 ao 2936. O próximo esperado é 2425 + 512 = 2937."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0ec4:0000:0000:0000:0600:0491?",
+      "options": [
+        "2001:db8:ec4:0:600:491",
+        "2001:db8:ec4:::600:491",
+        "2001:0db8:0ec4::0600:0491",
+        "2001:db8:ec4::600:491"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:ec4::600:491."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.17.246.247/25?",
+      "options": [
+        "172.17.246.129",
+        "172.17.246.254",
+        "172.17.246.253",
+        "172.17.246.255"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 247 cai no bloco de 128 a 255. Rede = 172.17.246.128, broadcast = 172.17.246.255, hosts de 172.17.246.129 a 172.17.246.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /23?",
+      "options": [
+        "510",
+        "511",
+        "512",
+        "1022"
+      ],
+      "correct": 0,
+      "explain": "<b>Fórmula:</b> sobram 32 − 23 = 9 bits. 2^9 = 512, e tirando a rede e o broadcast: 512 − 2 = 510."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.255.192 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/18",
+        "/25",
+        "/27",
+        "/26"
+      ],
+      "correct": 3,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /26."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.35.237/26?",
+      "options": [
+        "192.168.35.192",
+        "192.168.35.254",
+        "192.168.35.63",
+        "192.168.35.255"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 237 cai no bloco de 192 a 255. Rede = 192.168.35.192, broadcast = 192.168.35.255, hosts de 192.168.35.193 a 192.168.35.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:020d:0000:0000:0000:0196:0192?",
+      "options": [
+        "2001:db8:20d:::196:192",
+        "2001:db8:20d::196:192",
+        "2001:db8:20d:0:196:192",
+        "2001:0db8:020d::0196:0192"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:20d::196:192."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.210.111.103/28?",
+      "options": [
+        "10.210.111.97",
+        "10.210.111.110",
+        "10.210.111.111",
+        "10.210.111.109"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 103 cai no bloco de 96 a 111. Rede = 10.210.111.96, broadcast = 10.210.111.111, hosts de 10.210.111.97 a 10.210.111.110."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.127.78.102/28?",
+      "options": [
+        "10.127.78.102",
+        "10.127.78.96",
+        "10.127.78.112",
+        "10.127.78.111"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 102 cai no bloco de 96 a 111. Rede = 10.127.78.96, broadcast = 10.127.78.111, hosts de 10.127.78.97 a 10.127.78.110."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 12 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "51",
+        "76",
+        "53",
+        "52"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 12 = 52."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 43. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "21",
+        "22",
+        "85",
+        "43"
+      ],
+      "correct": 0,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 43, que é 64. Depois: 64 − 43 = 21 roteadores."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 100 bytes com seq = 5238. Qual ack o servidor devolve?",
+      "options": [
+        "5337",
+        "5239",
+        "5338",
+        "5339"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> os bytes vão do 5238 ao 5337. O próximo esperado é 5238 + 100 = 5338."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.194.132.247/27?",
+      "options": [
+        "10.194.132.255",
+        "10.194.132.247",
+        "10.194.132.224",
+        "10.194.132.0"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 247 cai no bloco de 224 a 255. Rede = 10.194.132.224, broadcast = 10.194.132.255, hosts de 10.194.132.225 a 10.194.132.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.112.36/28?",
+      "options": [
+        "192.168.112.63",
+        "192.168.112.32",
+        "192.168.112.47",
+        "192.168.112.46"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 36 cai no bloco de 32 a 47. Rede = 192.168.112.32, broadcast = 192.168.112.47, hosts de 192.168.112.33 a 192.168.112.46."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.185.218.21/29?",
+      "options": [
+        "10.185.218.18",
+        "10.185.218.16",
+        "10.185.218.22",
+        "10.185.218.17"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 21 cai no bloco de 16 a 23. Rede = 10.185.218.16, broadcast = 10.185.218.23, hosts de 10.185.218.17 a 10.185.218.22."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0744:0000:0000:0000:0e1a:090d?",
+      "options": [
+        "2001:0db8:0744::0e1a:090d",
+        "2001:db8:744::e1a:90d",
+        "2001:db8:744:::e1a:90d",
+        "2001:db8:744:0:e1a:90d"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:744::e1a:90d."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.36.49.196/28?",
+      "options": [
+        "10.36.49.207",
+        "10.36.49.223",
+        "10.36.49.206",
+        "10.36.49.192"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 196 cai no bloco de 192 a 207. Rede = 10.36.49.192, broadcast = 10.36.49.207, hosts de 10.36.49.193 a 10.36.49.206."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 120 bytes com seq = 3418. Qual ack o servidor devolve?",
+      "options": [
+        "3538",
+        "3419",
+        "3537",
+        "3539"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 3418 ao 3537. O próximo esperado é 3418 + 120 = 3538."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:09e1:0000:0000:0000:0831:0e2f?",
+      "options": [
+        "2001:db8:9e1:0:831:e2f",
+        "2001:db8:9e1:::831:e2f",
+        "2001:0db8:09e1::0831:0e2f",
+        "2001:db8:9e1::831:e2f"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:9e1::831:e2f."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.255.3/29?",
+      "options": [
+        "192.168.255.1",
+        "192.168.255.6",
+        "192.168.255.7",
+        "192.168.255.5"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 3 cai no bloco de 0 a 7. Rede = 192.168.255.0, broadcast = 192.168.255.7, hosts de 192.168.255.1 a 192.168.255.6."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.113.219/26?",
+      "options": [
+        "192.168.113.254",
+        "192.168.113.253",
+        "192.168.113.255",
+        "192.168.113.193"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 219 cai no bloco de 192 a 255. Rede = 192.168.113.192, broadcast = 192.168.113.255, hosts de 192.168.113.193 a 192.168.113.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.225.206/28?",
+      "options": [
+        "192.168.225.194",
+        "192.168.225.193",
+        "192.168.225.192",
+        "192.168.225.206"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 206 cai no bloco de 192 a 207. Rede = 192.168.225.192, broadcast = 192.168.225.207, hosts de 192.168.225.193 a 192.168.225.206."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.22.216.188/26?",
+      "options": [
+        "172.22.216.190",
+        "172.22.216.129",
+        "172.22.216.189",
+        "172.22.216.191"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 188 cai no bloco de 128 a 191. Rede = 172.22.216.128, broadcast = 172.22.216.191, hosts de 172.22.216.129 a 172.22.216.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.195.225/28?",
+      "options": [
+        "192.168.195.226",
+        "192.168.195.238",
+        "192.168.195.225",
+        "192.168.195.224"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 225 cai no bloco de 224 a 239. Rede = 192.168.195.224, broadcast = 192.168.195.239, hosts de 192.168.195.225 a 192.168.195.238."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 5991. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "5991",
+        "5993",
+        "5990",
+        "5992"
+      ],
+      "correct": 3,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5991 + 1 = 5992."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.255.240 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/27",
+        "/28",
+        "/29",
+        "/20"
+      ],
+      "correct": 1,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /28."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 8379. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "8378",
+        "8381",
+        "8379",
+        "8380"
+      ],
+      "correct": 3,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 8379 + 1 = 8380."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 17 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "237",
+        "239",
+        "272",
+        "238"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 17 = 238."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 3300 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 3100 ao 3300",
+        "Do 3300 ao 3500",
+        "Do 3300 ao 3499",
+        "Do 3301 ao 3500"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 3300 terminam no 3499 (3300 + 200 − 1). O ack depois dele será 3500."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.176.206.241/25?",
+      "options": [
+        "10.176.206.128",
+        "10.176.206.241",
+        "10.176.206.0",
+        "10.176.206.255"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 241 cai no bloco de 128 a 255. Rede = 10.176.206.128, broadcast = 10.176.206.255, hosts de 10.176.206.129 a 10.176.206.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.4.38.22/26?",
+      "options": [
+        "10.4.38.63",
+        "10.4.38.22",
+        "10.4.38.64",
+        "10.4.38.0"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 22 cai no bloco de 0 a 63. Rede = 10.4.38.0, broadcast = 10.4.38.63, hosts de 10.4.38.1 a 10.4.38.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.116.54/30?",
+      "options": [
+        "192.168.116.55",
+        "192.168.116.59",
+        "192.168.116.52",
+        "192.168.116.54"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 54 cai no bloco de 52 a 55. Rede = 192.168.116.52, broadcast = 192.168.116.55, hosts de 192.168.116.53 a 192.168.116.54."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 2400 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 1900 ao 2400",
+        "Do 2400 ao 2899",
+        "Do 2400 ao 2900",
+        "Do 2401 ao 2900"
+      ],
+      "correct": 1,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 2400 terminam no 2899 (2400 + 500 − 1). O ack depois dele será 2900."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.249.164.154/30?",
+      "options": [
+        "10.249.164.153",
+        "10.249.164.154",
+        "10.249.164.160",
+        "10.249.164.152"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 154 cai no bloco de 152 a 155. Rede = 10.249.164.152, broadcast = 10.249.164.155, hosts de 10.249.164.153 a 10.249.164.154."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 2907. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "2906",
+        "2908",
+        "2909",
+        "2907"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 2907 + 1 = 2908."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.60.161.41/27?",
+      "options": [
+        "10.60.161.62",
+        "10.60.161.32",
+        "10.60.161.95",
+        "10.60.161.63"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 41 cai no bloco de 32 a 63. Rede = 10.60.161.32, broadcast = 10.60.161.63, hosts de 10.60.161.33 a 10.60.161.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 110. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "18",
+        "19",
+        "110",
+        "145"
+      ],
+      "correct": 0,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 110, que é 128. Depois: 128 − 110 = 18 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:00a1:0000:0000:0000:033d:0efb?",
+      "options": [
+        "2001:db8:a1:0:33d:efb",
+        "2001:db8:a1:::33d:efb",
+        "2001:db8:a1::33d:efb",
+        "2001:0db8:00a1::033d:0efb"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:a1::33d:efb."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 250. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "6",
+        "5",
+        "250",
+        "122"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 250, que é 255. Depois: 255 − 250 = 5 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.31.242.209/29?",
+      "options": [
+        "172.31.242.223",
+        "172.31.242.215",
+        "172.31.242.208",
+        "172.31.242.214"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 209 cai no bloco de 208 a 215. Rede = 172.31.242.208, broadcast = 172.31.242.215, hosts de 172.31.242.209 a 172.31.242.214."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.19.186.180/28?",
+      "options": [
+        "172.19.186.190",
+        "172.19.186.176",
+        "172.19.186.177",
+        "172.19.186.178"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 180 cai no bloco de 176 a 191. Rede = 172.19.186.176, broadcast = 172.19.186.191, hosts de 172.19.186.177 a 172.19.186.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.25.29.30/28?",
+      "options": [
+        "172.25.29.31",
+        "172.25.29.30",
+        "172.25.29.29",
+        "172.25.29.17"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 30 cai no bloco de 16 a 31. Rede = 172.25.29.16, broadcast = 172.25.29.31, hosts de 172.25.29.17 a 172.25.29.30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.71.10/29?",
+      "options": [
+        "192.168.71.14",
+        "192.168.71.9",
+        "192.168.71.15",
+        "192.168.71.13"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 10 cai no bloco de 8 a 15. Rede = 192.168.71.8, broadcast = 192.168.71.15, hosts de 192.168.71.9 a 192.168.71.14."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /16?",
+      "options": [
+        "131070",
+        "65536",
+        "65535",
+        "65534"
+      ],
+      "correct": 3,
+      "explain": "<b>Fórmula:</b> sobram 32 − 16 = 16 bits. 2^16 = 65536, e tirando a rede e o broadcast: 65536 − 2 = 65534."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.22.138.163/25?",
+      "options": [
+        "172.22.138.255",
+        "172.22.138.129",
+        "172.22.138.254",
+        "172.22.138.253"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 163 cai no bloco de 128 a 255. Rede = 172.22.138.128, broadcast = 172.22.138.255, hosts de 172.22.138.129 a 172.22.138.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.52.164/27?",
+      "options": [
+        "192.168.52.192",
+        "192.168.52.160",
+        "192.168.52.164",
+        "192.168.52.191"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 164 cai no bloco de 160 a 191. Rede = 192.168.52.160, broadcast = 192.168.52.191, hosts de 192.168.52.161 a 192.168.52.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.21.151.45/30?",
+      "options": [
+        "172.21.151.56",
+        "172.21.151.44",
+        "172.21.151.46",
+        "172.21.151.45"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 45 cai no bloco de 44 a 47. Rede = 172.21.151.44, broadcast = 172.21.151.47, hosts de 172.21.151.45 a 172.21.151.46."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 8 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "136",
+        "119",
+        "121",
+        "120"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 8 = 120."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /30?",
+      "options": [
+        "255.255.255.252",
+        "255.255.255.254",
+        "255.255.255.248",
+        "255.255.252.0"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta os bits 1:</b> /30 são 30 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.255.252."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 121. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "121",
+        "134",
+        "8",
+        "7"
+      ],
+      "correct": 3,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 121, que é 128. Depois: 128 − 121 = 7 roteadores."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 120 bytes com seq = 1677. Qual ack o servidor devolve?",
+      "options": [
+        "1678",
+        "1796",
+        "1797",
+        "1798"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> os bytes vão do 1677 ao 1796. O próximo esperado é 1677 + 120 = 1797."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 7833. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "7834",
+        "7832",
+        "7835",
+        "7833"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 7833 + 1 = 7834."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 6 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "58",
+        "70",
+        "57",
+        "59"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 6 = 58."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 7 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "135",
+        "122",
+        "121",
+        "120"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 7 = 121."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.27.225.27/28?",
+      "options": [
+        "172.27.225.31",
+        "172.27.225.47",
+        "172.27.225.30",
+        "172.27.225.16"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 27 cai no bloco de 16 a 31. Rede = 172.27.225.16, broadcast = 172.27.225.31, hosts de 172.27.225.17 a 172.27.225.30."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 6500 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 6500 ao 6599",
+        "Do 6500 ao 6600",
+        "Do 6400 ao 6500",
+        "Do 6501 ao 6600"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 6500 terminam no 6599 (6500 + 100 − 1). O ack depois dele será 6600."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 500 bytes com seq = 8655. Qual ack o servidor devolve?",
+      "options": [
+        "9156",
+        "9154",
+        "8656",
+        "9155"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 8655 ao 9154. O próximo esperado é 8655 + 500 = 9155."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 4000 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 4001 ao 4200",
+        "Do 4000 ao 4200",
+        "Do 3800 ao 4000",
+        "Do 4000 ao 4199"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 4000 terminam no 4199 (4000 + 200 − 1). O ack depois dele será 4200."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.177.18.59/25?",
+      "options": [
+        "10.177.18.127",
+        "10.177.18.59",
+        "10.177.18.128",
+        "10.177.18.0"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 59 cai no bloco de 0 a 127. Rede = 10.177.18.0, broadcast = 10.177.18.127, hosts de 10.177.18.1 a 10.177.18.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.17.185.137/27?",
+      "options": [
+        "172.17.185.128",
+        "172.17.185.137",
+        "172.17.185.159",
+        "172.17.185.160"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 137 cai no bloco de 128 a 159. Rede = 172.17.185.128, broadcast = 172.17.185.159, hosts de 172.17.185.129 a 172.17.185.158."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:04b8:0000:0000:0000:0ffc:0278?",
+      "options": [
+        "2001:0db8:04b8::0ffc:0278",
+        "2001:db8:4b8:0:ffc:278",
+        "2001:db8:4b8::ffc:278",
+        "2001:db8:4b8:::ffc:278"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:4b8::ffc:278."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.19.173.41/26?",
+      "options": [
+        "172.19.173.61",
+        "172.19.173.62",
+        "172.19.173.1",
+        "172.19.173.63"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 41 cai no bloco de 0 a 63. Rede = 172.19.173.0, broadcast = 172.19.173.63, hosts de 172.19.173.1 a 172.19.173.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.202.200.153/30?",
+      "options": [
+        "10.202.200.153",
+        "10.202.200.154",
+        "10.202.200.156",
+        "10.202.200.155"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 153 cai no bloco de 152 a 155. Rede = 10.202.200.152, broadcast = 10.202.200.155, hosts de 10.202.200.153 a 10.202.200.154."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.31.55.123/26?",
+      "options": [
+        "172.31.55.64",
+        "172.31.55.127",
+        "172.31.55.191",
+        "172.31.55.126"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 123 cai no bloco de 64 a 127. Rede = 172.31.55.64, broadcast = 172.31.55.127, hosts de 172.31.55.65 a 172.31.55.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "A máscara 255.255.255.248 corresponde a qual prefixo CIDR?",
+      "options": [
+        "/28",
+        "/30",
+        "/29",
+        "/21"
+      ],
+      "correct": 2,
+      "explain": "<b>Contar bits 1:</b> 255 = 8 bits. Some 8 para cada 255 e, no número quebrado, conte os 1 do começo do binário. Total: /29."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 1000 bytes com seq = 8564. Qual ack o servidor devolve?",
+      "options": [
+        "9565",
+        "9563",
+        "8565",
+        "9564"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 8564 ao 9563. O próximo esperado é 8564 + 1000 = 9564."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.92.229/27?",
+      "options": [
+        "192.168.92.254",
+        "192.168.92.225",
+        "192.168.92.226",
+        "192.168.92.224"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 229 cai no bloco de 224 a 255. Rede = 192.168.92.224, broadcast = 192.168.92.255, hosts de 192.168.92.225 a 192.168.92.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.37.244.226/27?",
+      "options": [
+        "10.37.244.255",
+        "10.37.244.0",
+        "10.37.244.226",
+        "10.37.244.224"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 226 cai no bloco de 224 a 255. Rede = 10.37.244.224, broadcast = 10.37.244.255, hosts de 10.37.244.225 a 10.37.244.254."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 962. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "963",
+        "964",
+        "962",
+        "961"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 962 + 1 = 963."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /21?",
+      "options": [
+        "2046",
+        "2047",
+        "2048",
+        "4094"
+      ],
+      "correct": 0,
+      "explain": "<b>Fórmula:</b> sobram 32 − 21 = 11 bits. 2^11 = 2048, e tirando a rede e o broadcast: 2048 − 2 = 2046."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.130.237/28?",
+      "options": [
+        "192.168.130.237",
+        "192.168.130.225",
+        "192.168.130.238",
+        "192.168.130.239"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 237 cai no bloco de 224 a 239. Rede = 192.168.130.224, broadcast = 192.168.130.239, hosts de 192.168.130.225 a 192.168.130.238."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.24.15.227/27?",
+      "options": [
+        "172.24.15.254",
+        "172.24.15.225",
+        "172.24.15.226",
+        "172.24.15.224"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 227 cai no bloco de 224 a 255. Rede = 172.24.15.224, broadcast = 172.24.15.255, hosts de 172.24.15.225 a 172.24.15.254."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 7500 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 7500 ao 7600",
+        "Do 7501 ao 7600",
+        "Do 7500 ao 7599",
+        "Do 7400 ao 7500"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 7500 terminam no 7599 (7500 + 100 − 1). O ack depois dele será 7600."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 47. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "18",
+        "81",
+        "17",
+        "47"
+      ],
+      "correct": 2,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 47, que é 64. Depois: 64 − 47 = 17 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0fe7:0000:0000:0000:0531:0660?",
+      "options": [
+        "2001:0db8:0fe7::0531:0660",
+        "2001:db8:fe7:::531:660",
+        "2001:db8:fe7::531:660",
+        "2001:db8:fe7:0:531:660"
+      ],
+      "correct": 2,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:fe7::531:660."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.17.214.44/26?",
+      "options": [
+        "172.17.214.63",
+        "172.17.214.62",
+        "172.17.214.127",
+        "172.17.214.0"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 44 cai no bloco de 0 a 63. Rede = 172.17.214.0, broadcast = 172.17.214.63, hosts de 172.17.214.1 a 172.17.214.62."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 1400 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 1200 ao 1400",
+        "Do 1400 ao 1600",
+        "Do 1400 ao 1599",
+        "Do 1401 ao 1600"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 1400 terminam no 1599 (1400 + 200 − 1). O ack depois dele será 1600."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 100 bytes com seq = 4010. Qual ack o servidor devolve?",
+      "options": [
+        "4109",
+        "4011",
+        "4111",
+        "4110"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 4010 ao 4109. O próximo esperado é 4010 + 100 = 4110."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /28?",
+      "options": [
+        "255.255.255.224",
+        "255.255.255.248",
+        "255.255.240.0",
+        "255.255.255.240"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta os bits 1:</b> /28 são 28 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.255.240."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 6 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "123",
+        "122",
+        "121",
+        "134"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 6 = 122."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 10 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "53",
+        "74",
+        "55",
+        "54"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 10 = 54."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 4195. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "4196",
+        "4197",
+        "4194",
+        "4195"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 4195 + 1 = 4196."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.42.168/27?",
+      "options": [
+        "192.168.42.160",
+        "192.168.42.191",
+        "192.168.42.192",
+        "192.168.42.168"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 168 cai no bloco de 160 a 191. Rede = 192.168.42.160, broadcast = 192.168.42.191, hosts de 192.168.42.161 a 192.168.42.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0f71:0000:0000:0000:022f:0c0b?",
+      "options": [
+        "2001:0db8:0f71::022f:0c0b",
+        "2001:db8:f71:0:22f:c0b",
+        "2001:db8:f71:::22f:c0b",
+        "2001:db8:f71::22f:c0b"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:f71::22f:c0b."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.27.165.117/27?",
+      "options": [
+        "172.27.165.97",
+        "172.27.165.98",
+        "172.27.165.126",
+        "172.27.165.96"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 117 cai no bloco de 96 a 127. Rede = 172.27.165.96, broadcast = 172.27.165.127, hosts de 172.27.165.97 a 172.27.165.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.16.199.139/28?",
+      "options": [
+        "172.16.199.128",
+        "172.16.199.159",
+        "172.16.199.142",
+        "172.16.199.143"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 139 cai no bloco de 128 a 143. Rede = 172.16.199.128, broadcast = 172.16.199.143, hosts de 172.16.199.129 a 172.16.199.142."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.53.110/26?",
+      "options": [
+        "192.168.53.128",
+        "192.168.53.127",
+        "192.168.53.110",
+        "192.168.53.64"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 110 cai no bloco de 64 a 127. Rede = 192.168.53.64, broadcast = 192.168.53.127, hosts de 192.168.53.65 a 192.168.53.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.81.120.86/29?",
+      "options": [
+        "10.81.120.80",
+        "10.81.120.88",
+        "10.81.120.87",
+        "10.81.120.86"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 86 cai no bloco de 80 a 87. Rede = 10.81.120.80, broadcast = 10.81.120.87, hosts de 10.81.120.81 a 10.81.120.86."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.194.218/29?",
+      "options": [
+        "192.168.194.223",
+        "192.168.194.222",
+        "192.168.194.216",
+        "192.168.194.231"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 218 cai no bloco de 216 a 223. Rede = 192.168.194.216, broadcast = 192.168.194.223, hosts de 192.168.194.217 a 192.168.194.222."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 200 bytes com seq = 8622. Qual ack o servidor devolve?",
+      "options": [
+        "8821",
+        "8822",
+        "8623",
+        "8823"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> os bytes vão do 8622 ao 8821. O próximo esperado é 8622 + 200 = 8822."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 8934. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "8936",
+        "8933",
+        "8935",
+        "8934"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 8934 + 1 = 8935."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.25.102.6/26?",
+      "options": [
+        "172.25.102.63",
+        "172.25.102.0",
+        "172.25.102.62",
+        "172.25.102.127"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 6 cai no bloco de 0 a 63. Rede = 172.25.102.0, broadcast = 172.25.102.63, hosts de 172.25.102.1 a 172.25.102.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.228.1/29?",
+      "options": [
+        "192.168.228.0",
+        "192.168.228.8",
+        "192.168.228.7",
+        "192.168.228.1"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 1 cai no bloco de 0 a 7. Rede = 192.168.228.0, broadcast = 192.168.228.7, hosts de 192.168.228.1 a 192.168.228.6."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:083c:0000:0000:0000:0cf9:08d2?",
+      "options": [
+        "2001:db8:83c::cf9:8d2",
+        "2001:db8:83c:0:cf9:8d2",
+        "2001:0db8:083c::0cf9:08d2",
+        "2001:db8:83c:::cf9:8d2"
+      ],
+      "correct": 0,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:83c::cf9:8d2."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0fb6:0000:0000:0000:0f20:0f52?",
+      "options": [
+        "2001:db8:fb6:::f20:f52",
+        "2001:db8:fb6::f20:f52",
+        "2001:0db8:0fb6::0f20:0f52",
+        "2001:db8:fb6:0:f20:f52"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:fb6::f20:f52."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.185.141.42/25?",
+      "options": [
+        "10.185.141.125",
+        "10.185.141.1",
+        "10.185.141.127",
+        "10.185.141.126"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 42 cai no bloco de 0 a 127. Rede = 10.185.141.0, broadcast = 10.185.141.127, hosts de 10.185.141.1 a 10.185.141.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.20.118.2/27?",
+      "options": [
+        "172.20.118.30",
+        "172.20.118.1",
+        "172.20.118.31",
+        "172.20.118.29"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 2 cai no bloco de 0 a 31. Rede = 172.20.118.0, broadcast = 172.20.118.31, hosts de 172.20.118.1 a 172.20.118.30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.248.137/30?",
+      "options": [
+        "192.168.248.136",
+        "192.168.248.139",
+        "192.168.248.137",
+        "192.168.248.140"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 137 cai no bloco de 136 a 139. Rede = 192.168.248.136, broadcast = 192.168.248.139, hosts de 192.168.248.137 a 192.168.248.138."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.24.11.197/27?",
+      "options": [
+        "172.24.11.192",
+        "172.24.11.223",
+        "172.24.11.222",
+        "172.24.11.255"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 197 cai no bloco de 192 a 223. Rede = 172.24.11.192, broadcast = 172.24.11.223, hosts de 172.24.11.193 a 172.24.11.222."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.231.15.138/28?",
+      "options": [
+        "10.231.15.143",
+        "10.231.15.142",
+        "10.231.15.141",
+        "10.231.15.129"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 138 cai no bloco de 128 a 143. Rede = 10.231.15.128, broadcast = 10.231.15.143, hosts de 10.231.15.129 a 10.231.15.142."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.223.180/26?",
+      "options": [
+        "192.168.223.190",
+        "192.168.223.129",
+        "192.168.223.128",
+        "192.168.223.130"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 180 cai no bloco de 128 a 191. Rede = 192.168.223.128, broadcast = 192.168.223.191, hosts de 192.168.223.129 a 192.168.223.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 4 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "125",
+        "123",
+        "132",
+        "124"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 4 = 124."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 400 bytes com seq = 3630. Qual ack o servidor devolve?",
+      "options": [
+        "4029",
+        "3631",
+        "4031",
+        "4030"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 3630 ao 4029. O próximo esperado é 3630 + 400 = 4030."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 16 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "271",
+        "238",
+        "240",
+        "239"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 16 = 239."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.26.115.221/30?",
+      "options": [
+        "172.26.115.221",
+        "172.26.115.220",
+        "172.26.115.222",
+        "172.26.115.228"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 221 cai no bloco de 220 a 223. Rede = 172.26.115.220, broadcast = 172.26.115.223, hosts de 172.26.115.221 a 172.26.115.222."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.32.142/29?",
+      "options": [
+        "192.168.32.138",
+        "192.168.32.136",
+        "192.168.32.142",
+        "192.168.32.137"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 142 cai no bloco de 136 a 143. Rede = 192.168.32.136, broadcast = 192.168.32.143, hosts de 192.168.32.137 a 192.168.32.142."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /21?",
+      "options": [
+        "255.255.240.0",
+        "255.255.252.0",
+        "255.255.255.248",
+        "255.255.248.0"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta os bits 1:</b> /21 são 21 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.248.0."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 3600 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 3500 ao 3600",
+        "Do 3600 ao 3700",
+        "Do 3600 ao 3699",
+        "Do 3601 ao 3700"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 3600 terminam no 3699 (3600 + 100 − 1). O ack depois dele será 3700."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 3225. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "3226",
+        "3224",
+        "3227",
+        "3225"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 3225 + 1 = 3226."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.125.159.153/25?",
+      "options": [
+        "10.125.159.254",
+        "10.125.159.255",
+        "10.125.159.128",
+        "10.125.159.127"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 153 cai no bloco de 128 a 255. Rede = 10.125.159.128, broadcast = 10.125.159.255, hosts de 10.125.159.129 a 10.125.159.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantas sub-redes /21 cabem dentro de uma rede /20?",
+      "options": [
+        "7",
+        "4",
+        "1",
+        "2"
+      ],
+      "correct": 3,
+      "explain": "<b>Bits emprestados:</b> 21 − 20 = 1. Cada bit dobra a quantidade: 2^1 = 2 sub-redes. Aqui não se tira 2, isso é só para hosts."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 64 e passa por 17 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "81",
+        "46",
+        "47",
+        "48"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 64 − 17 = 47."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.187.111.253/28?",
+      "options": [
+        "10.187.111.254",
+        "10.187.111.253",
+        "10.187.111.255",
+        "10.187.111.241"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 253 cai no bloco de 240 a 255. Rede = 10.187.111.240, broadcast = 10.187.111.255, hosts de 10.187.111.241 a 10.187.111.254."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0b7b:0000:0000:0000:0f57:0b5e?",
+      "options": [
+        "2001:db8:b7b::f57:b5e",
+        "2001:db8:b7b:::f57:b5e",
+        "2001:0db8:0b7b::0f57:0b5e",
+        "2001:db8:b7b:0:f57:b5e"
+      ],
+      "correct": 0,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:b7b::f57:b5e."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 1300 e leva 1000 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 1301 ao 2300",
+        "Do 300 ao 1300",
+        "Do 1300 ao 2299",
+        "Do 1300 ao 2300"
+      ],
+      "correct": 2,
+      "explain": "<b>Seq é o primeiro byte:</b> 1000 bytes a partir do 1300 terminam no 2299 (1300 + 1000 − 1). O ack depois dele será 2300."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0dcd:0000:0000:0000:0f51:0bcd?",
+      "options": [
+        "2001:db8:dcd:::f51:bcd",
+        "2001:db8:dcd:0:f51:bcd",
+        "2001:0db8:0dcd::0f51:0bcd",
+        "2001:db8:dcd::f51:bcd"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:dcd::f51:bcd."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.200.13/26?",
+      "options": [
+        "192.168.200.1",
+        "192.168.200.63",
+        "192.168.200.61",
+        "192.168.200.62"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 13 cai no bloco de 0 a 63. Rede = 192.168.200.0, broadcast = 192.168.200.63, hosts de 192.168.200.1 a 192.168.200.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.19.33.86/26?",
+      "options": [
+        "172.19.33.127",
+        "172.19.33.126",
+        "172.19.33.65",
+        "172.19.33.125"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 86 cai no bloco de 64 a 127. Rede = 172.19.33.64, broadcast = 172.19.33.127, hosts de 172.19.33.65 a 172.19.33.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.19.85.211/27?",
+      "options": [
+        "172.19.85.223",
+        "172.19.85.192",
+        "172.19.85.255",
+        "172.19.85.222"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 211 cai no bloco de 192 a 223. Rede = 172.19.85.192, broadcast = 172.19.85.223, hosts de 172.19.85.193 a 172.19.85.222."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 512 bytes com seq = 4807. Qual ack o servidor devolve?",
+      "options": [
+        "5319",
+        "5320",
+        "5318",
+        "4808"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> os bytes vão do 4807 ao 5318. O próximo esperado é 4807 + 512 = 5319."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 5673. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "5674",
+        "5672",
+        "5675",
+        "5673"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5673 + 1 = 5674."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 120 bytes com seq = 5335. Qual ack o servidor devolve?",
+      "options": [
+        "5454",
+        "5456",
+        "5336",
+        "5455"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 5335 ao 5454. O próximo esperado é 5335 + 120 = 5455."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.52.196/27?",
+      "options": [
+        "192.168.52.194",
+        "192.168.52.193",
+        "192.168.52.192",
+        "192.168.52.222"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 196 cai no bloco de 192 a 223. Rede = 192.168.52.192, broadcast = 192.168.52.223, hosts de 192.168.52.193 a 192.168.52.222."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.26.201.139/27?",
+      "options": [
+        "172.26.201.159",
+        "172.26.201.160",
+        "172.26.201.128",
+        "172.26.201.139"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 139 cai no bloco de 128 a 159. Rede = 172.26.201.128, broadcast = 172.26.201.159, hosts de 172.26.201.129 a 172.26.201.158."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 689. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "689",
+        "688",
+        "690",
+        "691"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 689 + 1 = 690."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.255.54.142/30?",
+      "options": [
+        "10.255.54.142",
+        "10.255.54.144",
+        "10.255.54.143",
+        "10.255.54.140"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 142 cai no bloco de 140 a 143. Rede = 10.255.54.140, broadcast = 10.255.54.143, hosts de 10.255.54.141 a 10.255.54.142."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 7700 e leva 200 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 7701 ao 7900",
+        "Do 7700 ao 7899",
+        "Do 7500 ao 7700",
+        "Do 7700 ao 7900"
+      ],
+      "correct": 1,
+      "explain": "<b>Seq é o primeiro byte:</b> 200 bytes a partir do 7700 terminam no 7899 (7700 + 200 − 1). O ack depois dele será 7900."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 10.183.11.39/27?",
+      "options": [
+        "10.183.11.39",
+        "10.183.11.64",
+        "10.183.11.32",
+        "10.183.11.63"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 39 cai no bloco de 32 a 63. Rede = 10.183.11.32, broadcast = 10.183.11.63, hosts de 10.183.11.33 a 10.183.11.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.11.221/29?",
+      "options": [
+        "192.168.11.223",
+        "192.168.11.231",
+        "192.168.11.216",
+        "192.168.11.222"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 221 cai no bloco de 216 a 223. Rede = 192.168.11.216, broadcast = 192.168.11.223, hosts de 192.168.11.217 a 192.168.11.222."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.19.145.45/28?",
+      "options": [
+        "172.19.145.32",
+        "172.19.145.46",
+        "172.19.145.33",
+        "172.19.145.34"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 45 cai no bloco de 32 a 47. Rede = 172.19.145.32, broadcast = 172.19.145.47, hosts de 172.19.145.33 a 172.19.145.46."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.241.112.10/25?",
+      "options": [
+        "10.241.112.126",
+        "10.241.112.1",
+        "10.241.112.0",
+        "10.241.112.2"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /25 tem máscara final 128, então o salto é 256 − 128 = 128. O 10 cai no bloco de 0 a 127. Rede = 10.241.112.0, broadcast = 10.241.112.127, hosts de 10.241.112.1 a 10.241.112.126."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 4200 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 4200 ao 4699",
+        "Do 4201 ao 4700",
+        "Do 3700 ao 4200",
+        "Do 4200 ao 4700"
+      ],
+      "correct": 0,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 4200 terminam no 4699 (4200 + 500 − 1). O ack depois dele será 4700."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.139.165/28?",
+      "options": [
+        "192.168.139.176",
+        "192.168.139.175",
+        "192.168.139.160",
+        "192.168.139.165"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 165 cai no bloco de 160 a 175. Rede = 192.168.139.160, broadcast = 192.168.139.175, hosts de 192.168.139.161 a 192.168.139.174."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 192.168.221.61/26?",
+      "options": [
+        "192.168.221.0",
+        "192.168.221.61",
+        "192.168.221.64",
+        "192.168.221.63"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 61 cai no bloco de 0 a 63. Rede = 192.168.221.0, broadcast = 192.168.221.63, hosts de 192.168.221.1 a 192.168.221.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 192.168.219.188/27?",
+      "options": [
+        "192.168.219.190",
+        "192.168.219.223",
+        "192.168.219.191",
+        "192.168.219.160"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 188 cai no bloco de 160 a 191. Rede = 192.168.219.160, broadcast = 192.168.219.191, hosts de 192.168.219.161 a 192.168.219.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.19.251.18/30?",
+      "options": [
+        "172.19.251.19",
+        "172.19.251.23",
+        "172.19.251.16",
+        "172.19.251.18"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 18 cai no bloco de 16 a 19. Rede = 172.19.251.16, broadcast = 172.19.251.19, hosts de 172.19.251.17 a 172.19.251.18."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.106.123.182/26?",
+      "options": [
+        "10.106.123.128",
+        "10.106.123.130",
+        "10.106.123.190",
+        "10.106.123.129"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 182 cai no bloco de 128 a 191. Rede = 10.106.123.128, broadcast = 10.106.123.191, hosts de 10.106.123.129 a 10.106.123.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 113. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "142",
+        "16",
+        "15",
+        "113"
+      ],
+      "correct": 2,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 113, que é 128. Depois: 128 − 113 = 15 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 42. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "23",
+        "22",
+        "42",
+        "86"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 42, que é 64. Depois: 64 − 42 = 22 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 128 e passa por 3 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "131",
+        "124",
+        "125",
+        "126"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 128 − 3 = 125."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.29.201.146/28?",
+      "options": [
+        "172.29.201.158",
+        "172.29.201.157",
+        "172.29.201.145",
+        "172.29.201.159"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 146 cai no bloco de 144 a 159. Rede = 172.29.201.144, broadcast = 172.29.201.159, hosts de 172.29.201.145 a 172.29.201.158."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 2026. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "2025",
+        "2026",
+        "2027",
+        "2028"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 2026 + 1 = 2027."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 192.168.156.245/29?",
+      "options": [
+        "192.168.156.241",
+        "192.168.156.245",
+        "192.168.156.246",
+        "192.168.156.247"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 245 cai no bloco de 240 a 247. Rede = 192.168.156.240, broadcast = 192.168.156.247, hosts de 192.168.156.241 a 192.168.156.246."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /22?",
+      "options": [
+        "255.255.252.0",
+        "255.255.255.252",
+        "255.255.254.0",
+        "255.255.248.0"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta os bits 1:</b> /22 são 22 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.252.0."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:02a0:0000:0000:0000:0489:0cc7?",
+      "options": [
+        "2001:db8:2a0:::489:cc7",
+        "2001:db8:2a0::489:cc7",
+        "2001:db8:2a0:0:489:cc7",
+        "2001:0db8:02a0::0489:0cc7"
+      ],
+      "correct": 1,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:2a0::489:cc7."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 8100 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 8100 ao 8600",
+        "Do 8101 ao 8600",
+        "Do 7600 ao 8100",
+        "Do 8100 ao 8599"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 8100 terminam no 8599 (8100 + 500 − 1). O ack depois dele será 8600."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 6 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "249",
+        "250",
+        "248",
+        "261"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 6 = 249."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 200 bytes com seq = 3362. Qual ack o servidor devolve?",
+      "options": [
+        "3563",
+        "3363",
+        "3562",
+        "3561"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> os bytes vão do 3362 ao 3561. O próximo esperado é 3362 + 200 = 3562."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.17.121.117/30?",
+      "options": [
+        "172.17.121.120",
+        "172.17.121.117",
+        "172.17.121.119",
+        "172.17.121.116"
+      ],
+      "correct": 3,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 117 cai no bloco de 116 a 119. Rede = 172.17.121.116, broadcast = 172.17.121.119, hosts de 172.17.121.117 a 172.17.121.118."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 10.208.130.17/27?",
+      "options": [
+        "10.208.130.0",
+        "10.208.130.31",
+        "10.208.130.30",
+        "10.208.130.63"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 17 cai no bloco de 0 a 31. Rede = 10.208.130.0, broadcast = 10.208.130.31, hosts de 10.208.130.1 a 10.208.130.30."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quantos hosts utilizáveis cabem numa sub-rede /26?",
+      "options": [
+        "64",
+        "63",
+        "126",
+        "62"
+      ],
+      "correct": 3,
+      "explain": "<b>Fórmula:</b> sobram 32 − 26 = 6 bits. 2^6 = 64, e tirando a rede e o broadcast: 64 − 2 = 62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 192.168.171.166/30?",
+      "options": [
+        "192.168.171.165",
+        "192.168.171.164",
+        "192.168.171.172",
+        "192.168.171.166"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 166 cai no bloco de 164 a 167. Rede = 192.168.171.164, broadcast = 192.168.171.167, hosts de 192.168.171.165 a 192.168.171.166."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:06b6:0000:0000:0000:07ce:0b37?",
+      "options": [
+        "2001:db8:6b6:0:7ce:b37",
+        "2001:0db8:06b6::07ce:0b37",
+        "2001:db8:6b6:::7ce:b37",
+        "2001:db8:6b6::7ce:b37"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:6b6::7ce:b37."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 172.21.8.84/28?",
+      "options": [
+        "172.21.8.80",
+        "172.21.8.82",
+        "172.21.8.81",
+        "172.21.8.94"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 84 cai no bloco de 80 a 95. Rede = 172.21.8.80, broadcast = 172.21.8.95, hosts de 172.21.8.81 a 172.21.8.94."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 200 bytes com seq = 5428. Qual ack o servidor devolve?",
+      "options": [
+        "5429",
+        "5627",
+        "5628",
+        "5629"
+      ],
+      "correct": 2,
+      "explain": "<b>Conta:</b> os bytes vão do 5428 ao 5627. O próximo esperado é 5428 + 200 = 5628."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.104.118.100/26?",
+      "options": [
+        "10.104.118.127",
+        "10.104.118.65",
+        "10.104.118.126",
+        "10.104.118.125"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 100 cai no bloco de 64 a 127. Rede = 10.104.118.64, broadcast = 10.104.118.127, hosts de 10.104.118.65 a 10.104.118.126."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 5664. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "5666",
+        "5663",
+        "5665",
+        "5664"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5664 + 1 = 5665."
+    },
+    {
+      "topic": "rede",
+      "statement": "Um pacote sai com TTL = 255 e passa por 9 roteadores até o destino. Com que TTL ele chega?",
+      "options": [
+        "264",
+        "246",
+        "245",
+        "247"
+      ],
+      "correct": 1,
+      "explain": "<b>Conta:</b> cada roteador tira 1 do TTL. 255 − 9 = 246."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia 300 bytes com seq = 3327. Qual ack o servidor devolve?",
+      "options": [
+        "3628",
+        "3626",
+        "3328",
+        "3627"
+      ],
+      "correct": 3,
+      "explain": "<b>Conta:</b> os bytes vão do 3327 ao 3626. O próximo esperado é 3327 + 300 = 3627."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a máscara em decimal do prefixo /20?",
+      "options": [
+        "255.255.240.0",
+        "255.255.255.240",
+        "255.255.248.0",
+        "255.255.224.0"
+      ],
+      "correct": 0,
+      "explain": "<b>Conta os bits 1:</b> /20 são 20 bits 1 seguidos. Cada octeto cheio vale 255, e o octeto quebrado vale 256 − 2^(bits que faltam). Resultado: 255.255.240.0."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.30.133.106/30?",
+      "options": [
+        "172.30.133.106",
+        "172.30.133.108",
+        "172.30.133.104",
+        "172.30.133.107"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /30 tem máscara final 252, então o salto é 256 − 252 = 4. O 106 cai no bloco de 104 a 107. Rede = 172.30.133.104, broadcast = 172.30.133.107, hosts de 172.30.133.105 a 172.30.133.106."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 1000 e leva 100 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 1000 ao 1100",
+        "Do 1000 ao 1099",
+        "Do 1001 ao 1100",
+        "Do 900 ao 1000"
+      ],
+      "correct": 1,
+      "explain": "<b>Seq é o primeiro byte:</b> 100 bytes a partir do 1000 terminam no 1099 (1000 + 100 − 1). O ack depois dele será 1100."
+    },
+    {
+      "topic": "rede",
+      "statement": "A resposta de um ping chega com TTL = 229. Os sistemas começam com 64, 128 ou 255. Quantos roteadores o pacote atravessou, mais provavelmente?",
+      "options": [
+        "229",
+        "26",
+        "101",
+        "27"
+      ],
+      "correct": 1,
+      "explain": "<b>Truque:</b> pegue o valor inicial mais próximo ACIMA de 229, que é 255. Depois: 255 − 229 = 26 roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.17.186.58/29?",
+      "options": [
+        "10.17.186.56",
+        "10.17.186.62",
+        "10.17.186.57",
+        "10.17.186.58"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /29 tem máscara final 248, então o salto é 256 − 248 = 8. O 58 cai no bloco de 56 a 63. Rede = 10.17.186.56, broadcast = 10.17.186.63, hosts de 10.17.186.57 a 10.17.186.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o PRIMEIRO host utilizável da sub-rede de 10.71.24.154/26?",
+      "options": [
+        "10.71.24.129",
+        "10.71.24.128",
+        "10.71.24.190",
+        "10.71.24.130"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 154 cai no bloco de 128 a 191. Rede = 10.71.24.128, broadcast = 10.71.24.191, hosts de 10.71.24.129 a 10.71.24.190."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.58.170.60/27?",
+      "options": [
+        "10.58.170.62",
+        "10.58.170.33",
+        "10.58.170.63",
+        "10.58.170.61"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 60 cai no bloco de 32 a 63. Rede = 10.58.170.32, broadcast = 10.58.170.63, hosts de 10.58.170.33 a 10.58.170.62."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de rede de 172.19.251.101/26?",
+      "options": [
+        "172.19.251.64",
+        "172.19.251.101",
+        "172.19.251.127",
+        "172.19.251.128"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 101 cai no bloco de 64 a 127. Rede = 172.19.251.64, broadcast = 172.19.251.127, hosts de 172.19.251.65 a 172.19.251.126."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 172.19.141.143/27?",
+      "options": [
+        "172.19.141.129",
+        "172.19.141.159",
+        "172.19.141.158",
+        "172.19.141.157"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /27 tem máscara final 224, então o salto é 256 − 224 = 32. O 143 cai no bloco de 128 a 159. Rede = 172.19.141.128, broadcast = 172.19.141.159, hosts de 172.19.141.129 a 172.19.141.158."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O servidor responde SYN+ACK com seq = 5429. Qual ack o cliente envia no 3º passo?",
+      "options": [
+        "5431",
+        "5428",
+        "5430",
+        "5429"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 5429 + 1 = 5430."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.29.150.152/28?",
+      "options": [
+        "172.29.150.159",
+        "172.29.150.144",
+        "172.29.150.175",
+        "172.29.150.158"
+      ],
+      "correct": 0,
+      "explain": "<b>Salto:</b> /28 tem máscara final 240, então o salto é 256 − 240 = 16. O 152 cai no bloco de 144 a 159. Rede = 172.29.150.144, broadcast = 172.29.150.159, hosts de 172.29.150.145 a 172.29.150.158."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o endereço de broadcast de 172.30.248.99/26?",
+      "options": [
+        "172.30.248.64",
+        "172.30.248.126",
+        "172.30.248.127",
+        "172.30.248.191"
+      ],
+      "correct": 2,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 99 cai no bloco de 64 a 127. Rede = 172.30.248.64, broadcast = 172.30.248.127, hosts de 172.30.248.65 a 172.30.248.126."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O cliente envia SYN com seq = 2987. Qual é o ack no SYN+ACK do servidor?",
+      "options": [
+        "2986",
+        "2988",
+        "2989",
+        "2987"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra do ACK:</b> é o próximo byte esperado, e o SYN conta como 1. 2987 + 1 = 2988."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Um segmento tem seq = 7500 e leva 500 bytes. Quais bytes ele carrega?",
+      "options": [
+        "Do 7000 ao 7500",
+        "Do 7501 ao 8000",
+        "Do 7500 ao 8000",
+        "Do 7500 ao 7999"
+      ],
+      "correct": 3,
+      "explain": "<b>Seq é o primeiro byte:</b> 500 bytes a partir do 7500 terminam no 7999 (7500 + 500 − 1). O ack depois dele será 8000."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0406:0000:0000:0000:077e:0830?",
+      "options": [
+        "2001:0db8:0406::077e:0830",
+        "2001:db8:406:::77e:830",
+        "2001:db8:406:0:77e:830",
+        "2001:db8:406::77e:830"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:406::77e:830."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é a forma mais curta de 2001:0db8:0935:0000:0000:0000:043b:0186?",
+      "options": [
+        "2001:db8:935:0:43b:186",
+        "2001:0db8:0935::043b:0186",
+        "2001:db8:935:::43b:186",
+        "2001:db8:935::43b:186"
+      ],
+      "correct": 3,
+      "explain": "<b>Duas regras:</b> 1) tire os zeros à esquerda de cada grupo (0db8 vira db8); 2) troque UMA sequência de grupos zerados por \"::\". Resultado: 2001:db8:935::43b:186."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual é o ÚLTIMO host utilizável da sub-rede de 10.209.22.185/26?",
+      "options": [
+        "10.209.22.191",
+        "10.209.22.190",
+        "10.209.22.189",
+        "10.209.22.129"
+      ],
+      "correct": 1,
+      "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 185 cai no bloco de 128 a 191. Rede = 10.209.22.128, broadcast = 10.209.22.191, hosts de 10.209.22.129 a 10.209.22.190."
     }
   ],
   "historias": [

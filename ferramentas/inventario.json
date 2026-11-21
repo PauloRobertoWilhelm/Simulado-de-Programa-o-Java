@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "20/11/2026",
+  "atualizadoEm": "21/11/2026",
   "materias": {
     "design": {
       "aba": "Design Front End",
@@ -27,7 +27,7 @@
     },
     "programacao": {
       "aba": "Programação de Computadores",
-      "perguntas": 168,
+      "perguntas": 500,
       "guardadas": 0,
       "livro": 9,
       "historias": 7,
@@ -52,20 +52,20 @@
         "logica": 17,
         "selecao": 17,
         "operadores": 22,
-        "repeticao": 15,
-        "for": 14,
-        "dowhile": 10,
-        "strings": 14,
-        "arrays": 12,
-        "matrizes": 12,
-        "classes": 12,
-        "metodos": 13,
-        "parametros": 10
+        "repeticao": 55,
+        "for": 54,
+        "dowhile": 45,
+        "strings": 59,
+        "arrays": 57,
+        "matrizes": 52,
+        "classes": 37,
+        "metodos": 48,
+        "parametros": 37
       }
     },
     "requisitos": {
       "aba": "Engenharia de Requisitos",
-      "perguntas": 124,
+      "perguntas": 500,
       "guardadas": 0,
       "livro": 8,
       "historias": 10,
@@ -84,14 +84,14 @@
         "processo": 4,
         "tipos": 5,
         "metodologias": 5,
-        "casosdeuso": 43,
-        "historias": 18,
-        "validacao": 49
+        "casosdeuso": 286,
+        "historias": 37,
+        "validacao": 163
       }
     },
     "redes": {
       "aba": "Fundamentos de Redes",
-      "perguntas": 181,
+      "perguntas": 500,
       "guardadas": 0,
       "livro": 14,
       "historias": 11,
@@ -113,8 +113,8 @@
         "arquitetura": 6,
         "enlace": 3,
         "meios": 3,
-        "rede": 54,
-        "transporte": 42,
+        "rede": 303,
+        "transporte": 112,
         "aplicacao": 60,
         "integradora": 7
       }

@@ -7,7 +7,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
 | Design Front End | 103 | ainda não | não | não | 2 | 4 |
-| Programação de Computadores | 138 | 96 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
+| Programação de Computadores | 156 | 109 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
 | Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 10 | 8 |
 | Fundamentos de Redes | 181 + contas sorteadas | 163 | 14 capítulos | 25 termos e 20 práticas | 11 | 8 |
 | Testing, Compliance e QA | 107 | ainda não | não | não | 2 | 4 |
@@ -26,6 +26,10 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 - **Voz nas perguntas:** "Ler em voz alta" lê a pergunta e a explicação. "Responder falando" marca a alternativa quando você fala a letra ("letra B").
 
 A voz funciona no Chrome e no Edge; o microfone precisa de internet e de permissão no navegador. As notas de cada matéria ficam separadas, salvas no próprio navegador.
+
+## Não perder conteúdo
+
+O arquivo `CONTEUDO.md` lista tudo o que o app tem. Nada é apagado: pergunta que sai do simulado vai para `materias/arquivo/`. Antes de cada commit, a trava `.githooks/pre-commit` roda `node ferramentas/inventario.js` e bloqueia o commit se algo diminuiu ou sumiu. Num clone novo, ative a trava com `git config core.hooksPath .githooks`. As regras para o Claude ficam em `CLAUDE.md`.
 
 ## Conferir o conteúdo
 

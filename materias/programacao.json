@@ -1761,6 +1761,238 @@
       ],
       "correct": 1,
       "explain": "<b>Argumento x parâmetro:</b> o x, na chamada, é o argumento. A variável numero, na declaração do método, é o parâmetro que recebe a cópia."
+    },
+    {
+      "topic": "for",
+      "statement": "O que este laço com break imprime?",
+      "code": "for (int i = 1; i <= 10; i++) {\n  if (i == 4) {\n    break;\n  }\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "1 2 3 4",
+        "1 2 3",
+        "4",
+        "1 2 3 5 6 7 8 9 10"
+      ],
+      "correct": 1,
+      "explain": "<b>break sai do laço:</b> quando i chega a 4, o break acontece ANTES do print. Por isso o 4 não aparece e nada depois dele."
+    },
+    {
+      "topic": "for",
+      "statement": "O que este laço com continue imprime?",
+      "code": "for (int i = 1; i <= 5; i++) {\n  if (i == 3) {\n    continue;\n  }\n  System.out.print(i + \" \");\n}",
+      "options": [
+        "1 2",
+        "1 2 3 4 5",
+        "1 2 4 5",
+        "1 2 4"
+      ],
+      "correct": 2,
+      "explain": "<b>continue pula a volta:</b> no 3, ele pula direto para a próxima volta, sem imprimir. O laço continua até 5."
+    },
+    {
+      "topic": "for",
+      "statement": "O que acontece quando este código é compilado?",
+      "code": "for (int i = 0; i < 3; i++) {\n}\nSystem.out.println(i);",
+      "options": [
+        "Imprime 3, o valor final de i",
+        "Imprime 2, da última volta",
+        "Erro: o i só existe no for",
+        "Imprime 0, o valor inicial"
+      ],
+      "correct": 2,
+      "explain": "<b>Escopo:</b> uma variável criada no cabeçalho do for só existe dentro dele. Fora do for, o Java não conhece o i e não compila."
+    },
+    {
+      "topic": "for",
+      "statement": "O que faz um laço escrito como for (;;) { ... } sem break dentro?",
+      "options": [
+        "Não executa o bloco nem uma vez",
+        "Repete para sempre: laço infinito",
+        "Dá erro por faltar as três partes",
+        "Executa o bloco uma vez e termina"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem condição:</b> quando a condição do for fica vazia, o Java entende “sempre verdadeiro”. Só um break (ou fechar o programa) para o laço."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "String a = \"Java\";\nString b = \"JAVA\";\nSystem.out.println(a.equals(b) + \" \" + a.equalsIgnoreCase(b));",
+      "options": [
+        "true true",
+        "false true",
+        "true false",
+        "false false"
+      ],
+      "correct": 1,
+      "explain": "<b>Maiúscula conta:</b> equals diferencia maiúsculas de minúsculas, então dá false. equalsIgnoreCase ignora essa diferença e dá true."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída?",
+      "code": "System.out.println(1 + 2 + \"3\");",
+      "options": [
+        "123",
+        "6",
+        "33",
+        "15"
+      ],
+      "correct": 2,
+      "explain": "<b>Da esquerda para a direita:</b> 1 + 2 são números e dão 3. Depois 3 + \"3\" vira texto: “33”."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "String s = \"Oi\";\nSystem.out.println(s.charAt(2));",
+      "options": [
+        "Imprime i, a última letra",
+        "Erro: não existe o índice 2",
+        "Imprime O, a primeira letra",
+        "Imprime um espaço em branco"
+      ],
+      "correct": 1,
+      "explain": "<b>“Oi” tem índices 0 e 1:</b> pedir o índice 2 gera StringIndexOutOfBoundsException. O último índice é sempre length() − 1."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual valor é impresso?",
+      "code": "String s = \"Cascavel\";\nSystem.out.println(s.indexOf(\"e\"));",
+      "options": [
+        "7",
+        "5",
+        "-1",
+        "6"
+      ],
+      "correct": 3,
+      "explain": "<b>indexOf devolve a posição:</b> C0 a1 s2 c3 a4 v5 e6 l7. O “e” está no índice 6. Se não achasse, devolveria −1."
+    },
+    {
+      "topic": "arrays",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "int[] v = {4, 7, 2, 9};\nSystem.out.println(v[4]);",
+      "options": [
+        "Imprime 9, o último valor",
+        "Imprime 0, o valor padrão",
+        "Erro: o índice 4 não existe",
+        "Imprime 4, que é o tamanho"
+      ],
+      "correct": 2,
+      "explain": "<b>4 elementos = índices 0 a 3:</b> v[4] passa do fim e gera ArrayIndexOutOfBoundsException."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "double[] d = new double[2];\nSystem.out.println(d[1]);",
+      "options": [
+        "0",
+        "null",
+        "0.0",
+        "Erro de compilação"
+      ],
+      "correct": 2,
+      "explain": "<b>Valor padrão:</b> um vetor novo de double começa com 0.0 em todas as posições. (int começa com 0 e String começa com null.)"
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a saída?",
+      "code": "String[] nomes = new String[2];\nSystem.out.println(nomes[0]);",
+      "options": [
+        "null",
+        "0",
+        "Texto vazio",
+        "Erro de compilação"
+      ],
+      "correct": 0,
+      "explain": "<b>String começa vazia de verdade:</b> cada posição ainda não aponta para nenhum texto, e o Java mostra null."
+    },
+    {
+      "topic": "operadores",
+      "statement": "Qual é a saída?",
+      "code": "int a = 5;\nint b = a++;\nSystem.out.println(a + \" \" + b);",
+      "options": [
+        "6 6",
+        "6 5",
+        "5 5",
+        "5 6"
+      ],
+      "correct": 1,
+      "explain": "<b>a++ entrega e depois soma:</b> b recebe o valor ANTIGO (5) e só então a vira 6. Com ++a seria o contrário."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Atenção às chaves. Qual é a saída?",
+      "code": "int x = 3;\nif (x > 5)\n  System.out.println(\"A\");\nSystem.out.println(\"B\");",
+      "options": [
+        "A B",
+        "A",
+        "B",
+        "Nada"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem chaves, o if manda só na linha seguinte:</b> o println(\"A\") depende do if (falso), mas o println(\"B\") está fora dele e sempre roda."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Faltou um break. Qual é a saída?",
+      "code": "int op = 2;\nswitch (op) {\n  case 1: System.out.print(\"Um \");\n  case 2: System.out.print(\"Dois \");\n  case 3: System.out.print(\"Três \");\n    break;\n  default: System.out.print(\"Outro\");\n}",
+      "options": [
+        "Dois",
+        "Dois Três",
+        "Dois Três Outro",
+        "Um Dois Três"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem break, ele “cai” para o próximo case:</b> entra no case 2, imprime “Dois”, segue para o case 3, imprime “Três” e para no break."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Por que if (x = 5) dá erro em Java?",
+      "options": [
+        "= atribui; para comparar usa-se ==",
+        "Falta ponto e vírgula depois do if",
+        "O if só compara textos, não números",
+        "O número 5 precisa estar entre aspas"
+      ],
+      "correct": 0,
+      "explain": "<b>Um igual guarda, dois iguais comparam:</b> x = 5 coloca 5 dentro de x. O if precisa de uma comparação que dê true ou false: x == 5."
+    },
+    {
+      "topic": "selecao",
+      "statement": "Qual é a saída?",
+      "code": "String cor = \"verde\";\nswitch (cor) {\n  case \"vermelho\": System.out.println(\"Pare\"); break;\n  case \"verde\": System.out.println(\"Siga\"); break;\n  default: System.out.println(\"Atenção\");\n}",
+      "options": [
+        "Pare",
+        "Atenção",
+        "Siga Atenção",
+        "Siga"
+      ],
+      "correct": 3,
+      "explain": "<b>switch com texto:</b> o Java compara “verde” com cada case. Bate no segundo, imprime “Siga” e o break impede de cair no default."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "O que acontece ao rodar este código?",
+      "code": "int[][] m = new int[2][2];\nSystem.out.println(m[2][0]);",
+      "options": [
+        "Imprime 0, o valor padrão",
+        "Erro: a linha 2 não existe",
+        "Imprime null, sem valor",
+        "Imprime 2, que é o tamanho"
+      ],
+      "correct": 1,
+      "explain": "<b>2 linhas = índices 0 e 1:</b> m[2] passa do fim e gera ArrayIndexOutOfBoundsException, como no vetor."
+    },
+    {
+      "topic": "classes",
+      "statement": "Nenhum atributo recebeu valor. Qual é a saída?",
+      "code": "class Produto {\n  String nome;\n  double preco;\n}\n// no main:\nProduto p = new Produto();\nSystem.out.println(p.nome + \" \" + p.preco);",
+      "options": [
+        "0 0.0",
+        "null 0.0",
+        "Erro de compilação",
+        "Produto 0.0"
+      ],
+      "correct": 1,
+      "explain": "<b>Valores padrão:</b> atributo String começa como null e atributo double começa como 0.0, igual nos vetores."
     }
   ],
   "historias": [

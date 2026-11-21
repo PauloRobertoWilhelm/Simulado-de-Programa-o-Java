@@ -1,0 +1,12 @@
+#!/bin/sh
+# Trava do commit: roda sozinha antes de cada commit.
+# Ativada com: git config core.hooksPath .githooks
+# Sem Node instalado nesta máquina, avisa e deixa passar (não trava quem não tem Node).
+if ! command -v node >/dev/null 2>&1; then
+  echo "Aviso: Node não encontrado; a trava de conteúdo não rodou."
+  exit 0
+fi
+# 1) Nada pode ter diminuído ou sumido (perguntas, histórias, jogos, livro, temas, telas, arquivos).
+node ferramentas/inventario.js || { echo "Commit bloqueado: algum conteúdo diminuiu ou sumiu (lista acima)."; exit 1; }
+# 2) As perguntas precisam passar no verificador (sem resposta certa comprida, sem repetidas).
+node ferramentas/validar-questoes.js > /dev/null || { echo "Commit bloqueado: o verificador de perguntas achou erros. Rode: node ferramentas/validar-questoes.js"; exit 1; }

@@ -172,8 +172,24 @@ body::after {
   text-wrap: balance;
 }
 .intro .sub { text-align: left; margin: 0 0 16px; max-width: none; font-size: 0.98rem; }
-/* Os três chips de propaganda (cronômetro, notas, sons) saem: não ajudam a estudar. */
-.chips { display: none; }
+/* Os três chips (cronômetro, notas, sons) continuam: agora alinhados à esquerda, no estilo liso. */
+.chips { justify-content: flex-start; gap: 8px; margin-bottom: 18px; }
+.chip {
+  /* Fundo e borda iguais aos outros painéis. */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  /* Um pouco menor que antes, para não competir com os botões de tema. */
+  padding: 9px 12px;
+  font-size: 0.86rem;
+  color: var(--muted);
+  box-shadow: none;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+/* Ao passar o mouse: só clareia o fundo (sem o giro 3D antigo). */
+.chip:hover { transform: none; background: var(--surface-2); border-color: var(--border-soft); box-shadow: none; }
+/* Palavra em destaque dentro do chip, na mesma fonte do resto. */
+.chip b { font-family: var(--font-body); font-weight: 600; color: var(--text); }
 
 /* Caixa "O que estudar para a próxima prova". */
 .focus-box {

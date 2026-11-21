@@ -7,10 +7,11 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
 | Design Front End | 103 | ainda não | não | não | 2 | 4 |
-| Programação de Computadores | 156 | 109 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
+| Programação de Computadores | 168 | 112 (Aulas 8 a 16) | 9 capítulos | 14 termos e 12 práticas | 7 | 4 |
 | Engenharia de Requisitos | 124 | 110 (só slides 05 e 06) | 8 capítulos | 16 termos e 8 práticas | 10 | 8 |
 | Fundamentos de Redes | 181 + contas sorteadas | 163 | 14 capítulos | 25 termos e 20 práticas | 11 | 8 |
 | Testing, Compliance e QA | 107 | ainda não | não | não | 2 | 4 |
+| Pensamento Computacional | 582 | 1º período | 2 capítulos | não | 0 | 1 |
 
 ## Como cada matéria funciona
 
@@ -30,6 +31,10 @@ A voz funciona no Chrome e no Edge; o microfone precisa de internet e de permiss
 ## Não perder conteúdo
 
 O arquivo `CONTEUDO.md` lista tudo o que o app tem. Nada é apagado: pergunta que sai do simulado vai para `materias/arquivo/`. Antes de cada commit, a trava `.githooks/pre-commit` roda `node ferramentas/inventario.js` e bloqueia o commit se algo diminuiu ou sumiu. Num clone novo, ative a trava com `git config core.hooksPath .githooks`. As regras para o Claude ficam em `CLAUDE.md`.
+
+## Material (PDFs)
+
+Todo PDF recebido fica em `material/<matéria>/`, com o PDF original e um `.md` com o texto, e a lista do que foi criado a partir de cada um em `material/README.md`. A pasta fica fora do GitHub (`.gitignore`), porque o repositório é público e as provas têm dados pessoais.
 
 ## Conferir o conteúdo
 

@@ -13,7 +13,8 @@
   - capítulos do livro, histórias, jogos, termos e práticas não diminuíram;
   - nenhum tema sumiu;
   - nenhum elemento da tela (id no index.html) sumiu;
-  - nenhum arquivo de js/, css/, materias/ ou ferramentas/ sumiu.
+  - nenhum arquivo de js/, css/, materias/ ou ferramentas/ sumiu;
+  - a quantidade de arquivos em material/ (PDFs e .md do Paulo, fora do GitHub) não caiu.
 
   Para TIRAR uma pergunta do simulado sem perder: mova-a para materias/arquivo/<matéria>.json.
   Ela sai da prova, mas continua contando aqui.
@@ -100,8 +101,11 @@ function contar() {
   const ids = [...new Set([...html.matchAll(/\sid="([^"$]+)"/g)].map((r) => r[1]))].sort();
   // Arquivos das pastas que formam o app.
   const arquivos = ['js', 'css', 'materias', 'ferramentas'].flatMap(listarArquivos).sort();
+  // Quantos arquivos há em material/ (PDFs e .md do Paulo). A pasta fica fora do GitHub,
+  // então só a quantidade vai para a base, nunca os nomes.
+  const material = listarArquivos('material').length;
   // Devolve tudo junto.
-  return { materias, ids, arquivos };
+  return { materias, ids, arquivos, material };
 }
 
 // conferir() compara a contagem atual com a base e devolve a lista de problemas.
@@ -128,6 +132,8 @@ function conferir(atual, base) {
   (base.ids || []).filter((i) => !atual.ids.includes(i)).forEach((i) => problemas.push(`index.html: o elemento id="${i}" sumiu`));
   // Arquivos que sumiram.
   (base.arquivos || []).filter((a) => !atual.arquivos.includes(a)).forEach((a) => problemas.push(`o arquivo ${a} sumiu`));
+  // Material do Paulo (PDFs e .md em material/): a quantidade não pode cair.
+  if ((base.material || 0) > atual.material) problemas.push(`material/: havia ${base.material} arquivos e agora há ${atual.material} (PDF ou .md do Paulo sumiu)`);
   // Devolve a lista (vazia = tudo certo).
   return problemas;
 }
@@ -183,7 +189,7 @@ if (atualizar) {
       fs.writeFileSync(arquivoCartao, novo);
     }
   }
-  console.log(`INVENTÁRIO atualizado em ${hoje}: ${Object.keys(atual.materias).length} matérias, ${atual.ids.length} elementos de tela, ${atual.arquivos.length} arquivos.`);
+  console.log(`INVENTÁRIO atualizado em ${hoje}: ${Object.keys(atual.materias).length} matérias, ${atual.ids.length} elementos de tela, ${atual.arquivos.length} arquivos, ${atual.material} arquivos em material/.`);
 } else {
   // Só conferência: tudo certo.
   console.log('INVENTÁRIO OK: nada diminuiu nem sumiu.');

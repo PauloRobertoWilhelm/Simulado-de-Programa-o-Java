@@ -91,33 +91,46 @@ for (const materia of lista) {
   // Contador de perguntas por tema, para o resumo.
   const porTema = {};
 
+  // Perguntas trazidas de outro app (campo "origem"), contadas por tipo de problema.
+  // Elas entram sem mudar o texto; fora do padrão viram um aviso só, para revisar depois.
+  const foraDoPadrao = {};
   // Confere cada pergunta.
   (dados.questoes || []).forEach((q, i) => {
     // rotulo identifica a pergunta nas mensagens.
     const rotulo = `${materia.id} #${i + 1} "${String(q.statement).slice(0, 50)}"`;
+    // Pergunta importada? (tem o campo "origem", como "plataforma-estudos").
+    const importada = Boolean(q.origem);
+    // falha(): problema de padrão. Na pergunta normal é erro; na importada só conta para o aviso.
+    // Parâmetros: tipo (nome curto do problema, para contar) e mensagem (texto do erro).
+    const falha = (tipo, mensagem) => {
+      if (importada) foraDoPadrao[tipo] = (foraDoPadrao[tipo] || 0) + 1;
+      else erros.push(mensagem);
+    };
     // Conta a pergunta no tema dela.
     porTema[q.topic] = (porTema[q.topic] || 0) + 1;
 
-    // Precisa de exatamente 4 opções.
-    if (!Array.isArray(q.options) || q.options.length !== 4) erros.push(`${rotulo}: precisa de 4 opções`);
+    // Precisa de exatamente 4 opções (importada: aceita de 2 a 6, como no app de origem).
+    const qtdOpcoes = Array.isArray(q.options) ? q.options.length : 0;
+    if (importada ? (qtdOpcoes < 2 || qtdOpcoes > 6) : qtdOpcoes !== 4) erros.push(`${rotulo}: número de opções inválido (${qtdOpcoes})`);
+    else if (importada && qtdOpcoes !== 4) foraDoPadrao['sem 4 opções'] = (foraDoPadrao['sem 4 opções'] || 0) + 1;
     // O índice da certa precisa existir.
     if (!(q.correct >= 0 && q.correct < (q.options || []).length)) erros.push(`${rotulo}: "correct" fora das opções`);
     // O tema precisa existir em index.json.
     if (!temas.has(q.topic)) erros.push(`${rotulo}: tema "${q.topic}" não existe em index.json`);
     // As 4 opções precisam ser diferentes entre si.
-    if (new Set((q.options || []).map(exato)).size !== (q.options || []).length) erros.push(`${rotulo}: opções repetidas`);
+    if (new Set((q.options || []).map(exato)).size !== (q.options || []).length) falha('opções repetidas', `${rotulo}: opções repetidas`);
     // Toda pergunta precisa de explicação.
     if (!q.explain) erros.push(`${rotulo}: falta "explain"`);
 
     // Enunciado repetido (mesmo texto e mesmo código) é erro.
     const chave = normalizar(q.statement) + '|' + normalizar(q.code || '');
-    if (enunciados.has(chave)) erros.push(`${rotulo}: pergunta repetida`);
+    if (enunciados.has(chave)) falha('enunciado repetido', `${rotulo}: pergunta repetida`);
     enunciados.add(chave);
 
     // Resposta certa repetida na mesma matéria é erro.
     const certa = (q.options || [])[q.correct];
     const chaveCerta = exato(certa);
-    if (certas.has(chaveCerta)) erros.push(`${rotulo}: resposta certa igual à da pergunta ${certas.get(chaveCerta)}`);
+    if (certas.has(chaveCerta)) falha('resposta certa repetida', `${rotulo}: resposta certa igual à da pergunta ${certas.get(chaveCerta)}`);
     certas.set(chaveCerta, i + 1);
 
     // Medida de tamanho: a certa contra as erradas.
@@ -129,15 +142,19 @@ for (const materia of lista) {
     // Se a certa passa de 10% a maior errada, ela fica visível demais: é erro.
     // A diferença mínima de 3 letras evita barrar respostas curtas, como "22" contra "8".
     if (tamanhoCerta > maiorErrada * LIMITE && tamanhoCerta - maiorErrada > 3) {
-      erros.push(`${rotulo}: a resposta certa é visivelmente maior (${tamanhoCerta} contra ${maiorErrada} letras)`);
+      falha('certa visivelmente maior', `${rotulo}: a resposta certa é visivelmente maior (${tamanhoCerta} contra ${maiorErrada} letras)`);
     }
 
     // Aviso: palavra longa da certa aparece no enunciado e em nenhuma errada.
     const palavrasEnunciado = new Set(normalizar(q.statement).split(' '));
     const palavrasErradas = new Set((q.options || []).filter((_, j) => j !== q.correct).flatMap((o) => normalizar(o).split(' ')));
     const dica = normalizar(certa).split(' ').find((p) => p.length >= 7 && palavrasEnunciado.has(p) && !palavrasErradas.has(p));
-    if (dica) avisos.push(`${rotulo}: a palavra "${dica}" do enunciado só aparece na resposta certa`);
+    if (dica && !importada) avisos.push(`${rotulo}: a palavra "${dica}" do enunciado só aparece na resposta certa`);
   });
+
+  // Um aviso só, por matéria, com o resumo das perguntas importadas fora do padrão.
+  const tiposFora = Object.entries(foraDoPadrao);
+  if (tiposFora.length) avisos.push(`${materia.id}: perguntas importadas fora do padrão, para revisar depois: ${tiposFora.map(([t, n]) => `${t} ${n}`).join(', ')}`);
 
   // Confere as histórias: uma opção certa por cena.
   (dados.historias || []).forEach((h) => {

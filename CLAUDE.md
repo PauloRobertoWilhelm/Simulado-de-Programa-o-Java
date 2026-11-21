@@ -14,6 +14,12 @@ Simulados UNIPAR: app de estudo do Paulo (ADS, iniciante), uma aba por matéria 
 - **Ao acrescentar conteúdo, atualize a base.** Rode `node ferramentas/inventario.js --atualizar` e commite junto `CONTEUDO.md` e `ferramentas/inventario.json`.
 - **Se o Paulo disser que algo sumiu, confira antes de responder.** Use o histórico do git (`git log`, `git show <commit>:arquivo`) e o `CONTEUDO.md`.
 
+## Material (PDFs) do Paulo
+
+- **Todo PDF que o Paulo mandar vira `.md` ANTES de qualquer conteúdo.** Salve o PDF original e um `.md` com o texto em `material/<matéria>/` e registre em `material/README.md` o que foi criado a partir dele.
+- **`material/` fica fora do GitHub** (está no `.gitignore`): o repositório é público e as provas têm nome e notas. Não publique sem o Paulo pedir.
+- **Consulta:** para refazer ou conferir conteúdo, leia primeiro os `.md` de `material/`.
+
 ## Conteúdo
 
 - **Perguntas, histórias e livro só do material que o Paulo mandou** (PDFs e provas). Matéria sem material fica como está até ele mandar.

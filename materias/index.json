@@ -290,5 +290,44 @@
         "rotulo": "⚖️ Compliance"
       }
     ]
+  },
+  {
+    "id": "pensamento",
+    "aba": "Pensamento Computacional",
+    "titulo": "Pensamento Computacional",
+    "professor": "1º período",
+    "cores": [
+      "#c98fd8",
+      "#e6c9ee"
+    ],
+    "importado": "Plataforma de Estudos ADS (Documents/plataforma-estudos, setembro de 2026), sem mudar o texto",
+    "foco": {
+      "confianca": "Alta",
+      "base": "Perguntas, dicas e revisão da prova anterior que estavam na Plataforma de Estudos ADS (setembro de 2026). Trazidas para cá sem mudar o texto.",
+      "assuntos": [
+        "Portugol: ler o código e dizer a saída",
+        "Lógica",
+        "Fluxogramas e seus símbolos",
+        "Pensamento computacional"
+      ]
+    },
+    "temas": [
+      {
+        "id": "portugol",
+        "rotulo": "🧩 Portugol"
+      },
+      {
+        "id": "logica",
+        "rotulo": "🧠 Lógica"
+      },
+      {
+        "id": "fluxo",
+        "rotulo": "🔀 Fluxogramas"
+      },
+      {
+        "id": "pc",
+        "rotulo": "💡 Pensamento computacional"
+      }
+    ]
   }
 ]

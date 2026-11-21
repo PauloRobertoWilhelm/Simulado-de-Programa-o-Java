@@ -27,7 +27,7 @@
     },
     "programacao": {
       "aba": "Programação de Computadores",
-      "perguntas": 156,
+      "perguntas": 168,
       "guardadas": 0,
       "livro": 9,
       "historias": 7,
@@ -50,9 +50,9 @@
       ],
       "porTema": {
         "logica": 17,
-        "selecao": 14,
-        "operadores": 16,
-        "repeticao": 12,
+        "selecao": 17,
+        "operadores": 22,
+        "repeticao": 15,
         "for": 14,
         "dowhile": 10,
         "strings": 14,
@@ -144,6 +144,28 @@
         "principios": 18,
         "compliance": 21
       }
+    },
+    "pensamento": {
+      "aba": "Pensamento Computacional",
+      "perguntas": 582,
+      "guardadas": 0,
+      "livro": 2,
+      "historias": 0,
+      "jogos": 0,
+      "termos": 0,
+      "praticas": 0,
+      "temas": [
+        "portugol",
+        "logica",
+        "fluxo",
+        "pc"
+      ],
+      "porTema": {
+        "portugol": 312,
+        "fluxo": 61,
+        "logica": 166,
+        "pc": 43
+      }
     }
   },
   "ids": [
@@ -225,9 +247,11 @@
     "materias/arquivo/programacao.json",
     "materias/design.json",
     "materias/index.json",
+    "materias/pensamento.json",
     "materias/programacao.json",
     "materias/redes.json",
     "materias/requisitos.json",
     "materias/testing.json"
-  ]
+  ],
+  "material": 87
 }

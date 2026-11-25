@@ -1,0 +1,139 @@
+/*
+  Arquivo: css/futuro.css
+  Papel no sistema: camada futurista por cima do ouro. É o último CSS carregado.
+  Trabalha junto com js/futuro.js (circuito do fundo, luz do mouse e núcleo).
+  Para voltar ao ouro simples: apague as linhas de futuro.css e futuro.js no index.html.
+*/
+
+:root {
+  /* Letra de ficção científica: só no nome da matéria e nos números grandes. */
+  --font-futuro: "Orbitron", "Chakra Petch", sans-serif;
+  /* Painéis meio transparentes: o circuito aparece de leve por trás. */
+  --surface: rgba(19, 17, 11, 0.86);
+  --surface-2: rgba(38, 33, 21, 0.72);
+  --surface-3: rgba(60, 51, 29, 0.8);
+  /* Brilho em volta do que está aceso. */
+  --brilho: 0 0 14px rgba(232, 185, 74, 0.38);
+}
+
+/* ===== FUNDO ===== */
+/* Folha do circuito: parada atrás de tudo e sem receber toques. */
+.circuito { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; -webkit-mask-image: radial-gradient(120% 90% at 50% 20%, #000 30%, rgba(0, 0, 0, 0.35) 100%); mask-image: radial-gradient(120% 90% at 50% 20%, #000 30%, rgba(0, 0, 0, 0.35) 100%); }
+/* Com o circuito, a malha fica mais apagada. */
+body::after { opacity: 0.45; }
+/* Durante a prova o circuito quase some, para não atrapalhar a leitura. */
+body:has(#screen-quiz:not(.hidden)) .circuito { opacity: 0.3; transition: opacity 0.6s var(--ease); }
+
+/* ===== CABEÇALHO ===== */
+.intro { position: relative; }
+/* Espaço para o núcleo, à direita do título. */
+.intro h1, .intro .badge-top { max-width: calc(100% - 178px); }
+/* Nome da matéria: metal com um reflexo que passa devagar e um halo em volta. */
+.intro h1 .grad {
+  font-family: var(--font-futuro);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 4.3vw, 2.3rem);
+  letter-spacing: 0;
+  line-height: 1.16;
+  background: linear-gradient(105deg, #d9a432 0%, #f6d678 22%, #fffbe9 30%, #f6d678 38%, #d9a432 60%, #f0c75e 100%) 0 0 / 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: reflexo 7s linear infinite;
+  filter: drop-shadow(0 0 16px rgba(232, 185, 74, 0.32));
+}
+@keyframes reflexo { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+
+/* Núcleo: três anéis em volta da porcentagem já vista. */
+.nucleo { position: absolute; top: 18px; right: 0; width: 148px; height: 148px; display: grid; place-items: center; }
+.nucleo svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* Os anéis giram em torno do próprio centro. */
+.nucleo circle { fill: none; transform-origin: 50% 50%; }
+/* Anel de fora: tracinhos, girando devagar. */
+.nucleo .n-fora { stroke: rgba(232, 185, 74, 0.55); stroke-width: 1.5; stroke-dasharray: 2 5; animation: girar 34s linear infinite; }
+/* Anel do meio: três arcos, girando ao contrário. */
+.nucleo .n-meio { stroke: rgba(255, 231, 163, 0.75); stroke-width: 2.5; stroke-dasharray: 52 40; animation: girar 18s linear infinite reverse; }
+/* Trilho e arco do que já foi visto. 251 é o comprimento da volta inteira (raio 40). */
+.nucleo .n-trilho { stroke: rgba(232, 185, 74, 0.16); stroke-width: 6; }
+.nucleo .n-arco { stroke: var(--primary); stroke-width: 6; stroke-dasharray: calc(var(--pct, 0) * 251) 251; transform: rotate(-90deg); transition: stroke-dasharray 0.9s var(--ease); filter: drop-shadow(0 0 5px rgba(232, 185, 74, 0.8)); }
+@keyframes girar { to { transform: rotate(360deg); } }
+/* Miolo: a porcentagem e o que ela é. */
+.nucleo-texto { position: relative; display: grid; justify-items: center; gap: 1px; }
+.nucleo-texto b { font-family: var(--font-futuro); font-size: 1.12rem; font-weight: 700; color: var(--teal); text-shadow: 0 0 12px rgba(232, 185, 74, 0.65); }
+.nucleo-texto span { font-family: var(--font-mono); font-size: 0.64rem; color: var(--muted-2); }
+
+/* ===== PAINÉIS DE VIDRO ===== */
+.picker, .q-card, .activity-panel, .result-shell, .progress-panel, .review-panel, .chart-container, .subject-tabs, .mode-tabs, .rev-secao, .activity-card, .focus-box { -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px); }
+/* Luz que segue o mouse: um círculo claro por cima do fundo de cada peça. */
+.painel-item, .activity-card, .rev-secao, .option, .tpick, .cpick, .len { background-image: radial-gradient(190px circle at var(--mx, -300px) var(--my, -300px), rgba(255, 220, 130, 0.15), transparent 70%); }
+/* Painéis grandes: a mesma luz, junto com os cantos marcados. */
+.picker, .q-card, .activity-panel { background: var(--cantos), radial-gradient(340px circle at var(--mx, -500px) var(--my, -500px), rgba(232, 185, 74, 0.13), transparent 70%), var(--surface); }
+/* Escolhido continua com o degradê de ouro e ganha brilho. */
+.tpick.on, .cpick.on, .len.on { background-image: linear-gradient(90deg, rgba(232, 185, 74, 0.32), rgba(232, 185, 74, 0.08)); box-shadow: inset 3px 0 0 var(--primary), var(--brilho); }
+/* A barra de iniciar não é transparente: passa por cima de texto. */
+.barra-iniciar { background: var(--cantos), #171409; box-shadow: 0 -2px 30px rgba(232, 185, 74, 0.14), 0 14px 34px rgba(0, 0, 0, 0.6); }
+
+/* ===== ENTRADA DAS TELAS ===== */
+/* Cada painel "liga": abre de cima para baixo com um clarão. Os seguintes ligam um pouco depois. */
+#screen-intro:not(.hidden) .painel-estudo, #screen-intro:not(.hidden) .picker, .q-card { animation: ligar 0.5s var(--ease) both; }
+#screen-intro:not(.hidden) .picker:nth-of-type(2) { animation-delay: 0.07s; }
+#screen-intro:not(.hidden) .picker:nth-of-type(3) { animation-delay: 0.14s; }
+@keyframes ligar {
+  0% { opacity: 0; clip-path: inset(0 0 100% 0); filter: brightness(2); }
+  100% { opacity: 1; clip-path: inset(-40px); filter: none; }
+}
+/* Linha de varredura que desce uma vez a cada pergunta nova. */
+.q-card { position: relative; overflow: hidden; }
+.q-card .q-statement::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--teal), transparent); box-shadow: 0 0 18px 3px rgba(232, 185, 74, 0.5); animation: varrer 0.9s ease-out both; pointer-events: none; }
+@keyframes varrer { from { transform: translateY(0); opacity: 1; } to { transform: translateY(460px); opacity: 0; } }
+
+/* ===== ABAS ===== */
+/* Partes da matéria: placas inclinadas. O texto continua reto, dentro. */
+.mode-tab { clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); border-radius: 0; }
+.mode-tab:hover:not([aria-selected="true"]) { background: rgba(232, 185, 74, 0.13); color: var(--teal); }
+/* Aba aberta da matéria: luz subindo da linha. */
+.subject-tab[aria-selected="true"] { background: radial-gradient(90% 90% at 50% 110%, rgba(232, 185, 74, 0.42), transparent 75%); text-shadow: 0 0 14px rgba(232, 185, 74, 0.7); }
+
+/* ===== NÚMEROS E RESPOSTAS ===== */
+.painel-item strong, .score-ring .pct, .result-stat .value, .metric-pill strong, .len .n { font-family: var(--font-futuro); letter-spacing: 0; }
+.painel-item strong { font-size: 1.3rem; text-shadow: 0 0 14px rgba(232, 185, 74, 0.4); }
+.len .n { font-size: 1.16rem; }
+.score-ring .pct { font-size: 2.1rem; text-shadow: 0 0 22px rgba(232, 185, 74, 0.55); }
+/* Alternativa: a letra fica num chanfro. */
+.option .key { clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px); background: rgba(232, 185, 74, 0.2); border: none; font-weight: 600; }
+.option:hover { transform: translateX(3px); }
+/* Certo e errado acendem na própria cor. */
+.option.correct, .option.correct:hover { background-image: none; box-shadow: inset 3px 0 0 var(--success), 0 0 22px rgba(76, 199, 154, 0.28); transform: none; }
+.option.wrong, .option.wrong:hover { background-image: none; box-shadow: inset 3px 0 0 var(--error), 0 0 22px rgba(240, 114, 127, 0.22); transform: none; }
+/* Barras de progresso acesas. */
+.painel-barra i, .bar > i { filter: drop-shadow(0 0 6px rgba(255, 226, 150, 0.7)); }
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Núcleo menor, ao lado do nome do professor. */
+  .nucleo { width: 92px; height: 92px; top: 12px; }
+  .nucleo-texto b { font-size: 0.8rem; }
+  .nucleo-texto span { display: block; font-size: 0.56rem; }
+  /* Professor e "Simulado de" dividem a linha com o núcleo; o nome usa a largura toda, logo abaixo. */
+  .intro .badge-top { max-width: calc(100% - 106px); }
+  .intro h1 { max-width: 100%; }
+  .intro h1 .grad { margin-top: 30px; overflow-wrap: break-word; }
+  /* Vidro fosco pesa em celular simples: aqui o fundo é só mais opaco. */
+  .picker, .q-card, .activity-panel, .result-shell, .progress-panel, .review-panel, .chart-container, .subject-tabs, .mode-tabs, .rev-secao, .activity-card, .focus-box { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  :root { --surface: rgba(18, 16, 10, 0.95); }
+  .mode-tab { clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+}
+
+/* ===== MENOS MOVIMENTO ===== */
+/* Quem pede isso no sistema vê tudo parado. */
+@media (prefers-reduced-motion: reduce) {
+  .intro h1 .grad, .nucleo .n-fora, .nucleo .n-meio, .q-card .q-statement::before, .q-card, #screen-intro:not(.hidden) .painel-estudo, #screen-intro:not(.hidden) .picker { animation: none; }
+  .q-card .q-statement::before { display: none; }
+}
+
+/* ===== ABAS EM DOIS GRUPOS ===== */
+/* Com 11 matérias, as abas quebram em linhas: cada uma tem pelo menos 140px. */
+.subject-tabs { display: grid; grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+/* Título do período: ocupa a linha inteira. */
+.subject-group { grid-column: 1 / -1; padding: 8px 10px 2px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--primary); text-align: left; }
+/* Aviso de matéria sem material: fácil de ler. */
+.activity-empty { border: 1px dashed var(--border-soft); background: var(--surface); border-radius: 0; color: var(--muted); line-height: 1.6; text-align: left; }

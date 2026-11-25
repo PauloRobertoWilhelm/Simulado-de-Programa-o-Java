@@ -174,6 +174,109 @@
         "logica": 166,
         "pc": 43
       }
+    },
+    "linguagem": {
+      "aba": "Linguagem e Interação",
+      "perguntas": 0,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 0,
+      "historias": 0,
+      "jogos": 0,
+      "termos": 0,
+      "praticas": 0,
+      "temas": [],
+      "porTema": {}
+    },
+    "cyberseguranca": {
+      "aba": "Cybersegurança",
+      "perguntas": 69,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 5,
+      "historias": 2,
+      "jogos": 4,
+      "termos": 0,
+      "praticas": 5,
+      "temas": [
+        "firewall",
+        "regras",
+        "waf",
+        "dmz",
+        "lateral",
+        "ids",
+        "desafios",
+        "profundidade"
+      ],
+      "porTema": {
+        "firewall": 14,
+        "regras": 5,
+        "waf": 8,
+        "dmz": 7,
+        "lateral": 7,
+        "ids": 10,
+        "desafios": 8,
+        "profundidade": 10
+      }
+    },
+    "direito": {
+      "aba": "Direito Digital",
+      "perguntas": 0,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 0,
+      "historias": 0,
+      "jogos": 0,
+      "termos": 0,
+      "praticas": 0,
+      "temas": [],
+      "porTema": {}
+    },
+    "internet": {
+      "aba": "Desenvolvimento para Internet",
+      "perguntas": 0,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 0,
+      "historias": 0,
+      "jogos": 0,
+      "termos": 0,
+      "praticas": 0,
+      "temas": [],
+      "porTema": {}
+    },
+    "ambientacao": {
+      "aba": "Ambientação Tech",
+      "perguntas": 90,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 4,
+      "historias": 2,
+      "jogos": 4,
+      "termos": 0,
+      "praticas": 6,
+      "temas": [
+        "arquivos",
+        "metadados",
+        "alocacao",
+        "vm",
+        "recursos",
+        "snapshot",
+        "redeip",
+        "diag",
+        "revredes"
+      ],
+      "porTema": {
+        "arquivos": 11,
+        "metadados": 11,
+        "alocacao": 10,
+        "vm": 9,
+        "recursos": 11,
+        "snapshot": 7,
+        "redeip": 10,
+        "diag": 8,
+        "revredes": 13
+      }
     }
   },
   "ids": [
@@ -209,6 +312,8 @@
     "focus-list",
     "len-grid",
     "mode-tabs",
+    "nucleo",
+    "nucleo-pct",
     "opts-container",
     "painel-estudo",
     "panel-historias",
@@ -252,6 +357,7 @@
   ],
   "arquivos": [
     "css/estudo.css",
+    "css/futuro.css",
     "css/materias.css",
     "css/moderno.css",
     "css/ouro.css",
@@ -259,6 +365,7 @@
     "ferramentas/inventario.js",
     "ferramentas/inventario.json",
     "ferramentas/validar-questoes.js",
+    "js/futuro.js",
     "js/geradores.js",
     "js/historias.js",
     "js/jogos.js",
@@ -267,15 +374,20 @@
     "js/revisao.js",
     "js/visual.js",
     "js/voz.js",
+    "materias/ambientacao.json",
     "materias/arquivo/programacao.json",
+    "materias/cyberseguranca.json",
     "materias/design.json",
+    "materias/direito.json",
     "materias/index.json",
+    "materias/internet.json",
+    "materias/linguagem.json",
     "materias/pensamento.json",
     "materias/programacao.json",
     "materias/redes.json",
     "materias/requisitos.json",
     "materias/testing.json"
   ],
-  "material": 97,
+  "material": 107,
   "materialVazio": 0
 }

@@ -1,0 +1,1427 @@
+{
+  "questoes": [
+    {
+      "topic": "arquivos",
+      "statement": "O que é um sistema de arquivos?",
+      "options": [
+        "A memória que guarda dados enquanto há energia",
+        "O cabo que liga o disco ao processador do PC",
+        "O que organiza, nomeia e recupera dados no disco",
+        "O programa que o usuário usa para editar textos"
+      ],
+      "correct": 2,
+      "explain": "<b>Componente do SO:</b> divide o disco em blocos e sabe quais são de cada arquivo."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Um vídeo de 6 GB não copia para um pendrive FAT32 quase vazio. Por quê?",
+      "options": [
+        "O computador está sem memória RAM",
+        "FAT32 não aceita arquivo de 4 GiB ou mais",
+        "O vídeo tem um nome comprido demais",
+        "O pendrive só aceita fotos e documentos"
+      ],
+      "correct": 1,
+      "explain": "<b>Espaço livre não é a única regra.</b>"
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual é a solução para o pendrive, mantendo a compatibilidade com TVs?",
+      "options": [
+        "Formatar em ext4",
+        "Formatar em exFAT",
+        "Formatar em APFS",
+        "Formatar em FAT32"
+      ],
+      "correct": 1,
+      "explain": "<b>exFAT</b> não tem o limite de 4 GiB. Formatar apaga tudo: copie antes."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual é o sistema de arquivos padrão do Windows?",
+      "options": [
+        "NTFS",
+        "ext4",
+        "APFS",
+        "FAT32"
+      ],
+      "correct": 0,
+      "explain": "<b>NTFS:</b> cada arquivo é um registro na MFT."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual é o padrão em distribuições Linux, com inodes e extents?",
+      "options": [
+        "HFS",
+        "exFAT",
+        "ext4",
+        "NTFS"
+      ],
+      "correct": 2,
+      "explain": "<b>ext4,</b> com journaling."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual é o padrão do macOS, com copy-on-write?",
+      "options": [
+        "NTFS",
+        "APFS",
+        "ext3",
+        "FAT16"
+      ],
+      "correct": 1,
+      "explain": "<b>APFS:</b> B-trees e copy-on-write."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual estrutura o NTFS usa para registrar os arquivos?",
+      "options": [
+        "O bitmap",
+        "A B-tree",
+        "A MFT",
+        "O inode"
+      ],
+      "correct": 2,
+      "explain": "<b>Master File Table.</b>"
+    },
+    {
+      "topic": "arquivos",
+      "statement": "O que o copy-on-write faz ao alterar um bloco?",
+      "options": [
+        "Sobrescreve o bloco que já existia",
+        "Grava a versão nova em outro lugar",
+        "Apaga o arquivo e cria outro vazio",
+        "Copia o disco todo para a memória"
+      ],
+      "correct": 1,
+      "explain": "<b>Nunca sobrescreve no lugar:</b> se a energia cair, a versão antiga está inteira."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Para que serve o journaling?",
+      "options": [
+        "Guardar cópias de todos os arquivos",
+        "Recuperar a estrutura após uma queda",
+        "Acelerar a internet do computador",
+        "Compactar arquivos grandes do disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Anota a operação antes de fazer.</b> Protege os metadados; não é backup."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Qual destes não tem journaling nem permissões?",
+      "options": [
+        "O NTFS",
+        "O ext4",
+        "O FAT32",
+        "O APFS"
+      ],
+      "correct": 2,
+      "explain": "<b>FAT32:</b> simples e compatível com quase tudo."
+    },
+    {
+      "topic": "arquivos",
+      "statement": "Quem de fato escreve no disco quando um programa salva um arquivo?",
+      "options": [
+        "O kernel",
+        "O monitor",
+        "O teclado",
+        "O usuário"
+      ],
+      "correct": 0,
+      "explain": "<b>O programa pede</b> por chamada de sistema, e o kernel grava."
+    },
+    {
+      "topic": "metadados",
+      "statement": "O que são metadados de um arquivo?",
+      "options": [
+        "O texto ou a foto que está dentro dele",
+        "Os blocos vazios que sobraram no disco",
+        "Dados sobre o arquivo, como datas e dono",
+        "Os programas que conseguem abrir ele"
+      ],
+      "correct": 2,
+      "explain": "<b>Nome, tamanho, datas, permissões, dono e localização.</b>"
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o que o mtime registra?",
+      "options": [
+        "A última alteração do conteúdo",
+        "A última leitura do conteúdo",
+        "A última troca de permissão",
+        "A criação do arquivo no disco"
+      ],
+      "correct": 0,
+      "explain": "<b>m de modify.</b>"
+    },
+    {
+      "topic": "metadados",
+      "statement": "E o ctime, no Linux, registra o quê?",
+      "options": [
+        "A última cópia feita do arquivo",
+        "A última mudança dos metadados",
+        "A última vez que alguém o leu",
+        "A data em que foi criado no disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Pegadinha clássica:</b> ctime NÃO é criação. Um chmod já muda o ctime."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Como se chama o identificador único de um arquivo no Linux?",
+      "options": [
+        "octal",
+        "cluster",
+        "inode",
+        "journal"
+      ],
+      "correct": 2,
+      "explain": "<b>O “RG” do arquivo.</b> O nome fica no diretório."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No stat, Blocks: 24 conta unidades de quantos bytes?",
+      "options": [
+        "512 bytes",
+        "1.024 bytes",
+        "2.048 bytes",
+        "4.096 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>24 × 512 = 12.288 bytes</b> alocados."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Quanto vale cada letra das permissões rwx?",
+      "options": [
+        "r = 1, w = 2, x = 4",
+        "r = 4, w = 2, x = 1",
+        "r = 2, w = 4, x = 1",
+        "r = 3, w = 2, x = 1"
+      ],
+      "correct": 1,
+      "explain": "<b>É binário:</b> 100, 010 e 001."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal de rw-r--r--?",
+      "options": [
+        "755",
+        "600",
+        "777",
+        "644"
+      ],
+      "correct": 3,
+      "explain": "<b>6 = 4+2; 4; 4.</b>"
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal de rwxr-xr-x?",
+      "options": [
+        "775",
+        "644",
+        "711",
+        "755"
+      ],
+      "correct": 3,
+      "explain": "<b>7 = 4+2+1; 5 = 4+1; 5.</b>"
+    },
+    {
+      "topic": "metadados",
+      "statement": "Um arquivo com senhas, só para o dono ler e escrever, deve ter qual permissão?",
+      "options": [
+        "640",
+        "600",
+        "700",
+        "666"
+      ],
+      "correct": 1,
+      "explain": "<b>6 para o dono, 0 para os outros.</b> Menor privilégio."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Por que 777 é perigoso num servidor?",
+      "options": [
+        "Qualquer um pode alterar e executar",
+        "Ninguém consegue mais ler o arquivo",
+        "O arquivo fica invisível na pasta",
+        "O dono perde o próprio acesso"
+      ],
+      "correct": 0,
+      "explain": "<b>Tudo liberado para todos.</b>"
+    },
+    {
+      "topic": "metadados",
+      "statement": "O que faz o comando ls -i arquivo?",
+      "options": [
+        "Copia a pasta",
+        "Apaga o arquivo",
+        "Mostra o inode",
+        "Mostra a senha"
+      ],
+      "correct": 2,
+      "explain": "<b>i de inode.</b>"
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Com blocos de 4.096 bytes, quantos blocos um arquivo de 10.000 bytes ocupa?",
+      "options": [
+        "3 blocos",
+        "2 blocos",
+        "1 bloco",
+        "4 blocos"
+      ],
+      "correct": 0,
+      "explain": "<b>10.000 ÷ 4.096 = 2,44:</b> arredonda para cima."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Nesse caso, quantos bytes são desperdiçados?",
+      "options": [
+        "5.904 bytes",
+        "4.096 bytes",
+        "2.288 bytes",
+        "1.904 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>3 × 4.096 = 12.288;</b> 12.288 − 10.000 = 2.288."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 6.000 bytes, com blocos de 4.096: qual é o desperdício?",
+      "options": [
+        "2.096 bytes",
+        "6.192 bytes",
+        "2.192 bytes",
+        "1.904 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>2 blocos = 8.192;</b> 8.192 − 6.000 = 2.192."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "E um arquivo de 4.097 bytes, quanto desperdiça?",
+      "options": [
+        "0 byte",
+        "1 byte",
+        "4.095 bytes",
+        "4.097 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Um byte a mais pede outro bloco:</b> 8.192 − 4.097 = 4.095."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "O que é fragmentação interna?",
+      "options": [
+        "Pasta dividida em várias partições",
+        "Blocos do arquivo espalhados no disco",
+        "Arquivo quebrado por falta de energia",
+        "Espaço perdido dentro do último bloco"
+      ],
+      "correct": 3,
+      "explain": "<b>O disco só aloca blocos inteiros.</b>"
+    },
+    {
+      "topic": "alocacao",
+      "statement": "O que é fragmentação externa?",
+      "options": [
+        "Disco dividido em dois volumes",
+        "Erro de leitura na memória RAM",
+        "Buracos livres espalhados no disco",
+        "Sobra no último bloco do arquivo"
+      ],
+      "correct": 2,
+      "explain": "<b>Típica da alocação contígua.</b>"
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Por que SSD sofre menos com blocos espalhados?",
+      "options": [
+        "Usa um sistema sem nenhum bloco",
+        "Apaga os arquivos antigos sozinho",
+        "Não tem peça mecânica para mover",
+        "Guarda tudo num bloco só, contínuo"
+      ],
+      "correct": 2,
+      "explain": "<b>Acesso eletrônico:</b> não se desfragmenta SSD; usa-se TRIM."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Qual alocação o FAT32 usa?",
+      "options": [
+        "Aleatória",
+        "Indexada",
+        "Encadeada",
+        "Contígua"
+      ],
+      "correct": 2,
+      "explain": "<b>A tabela guarda o próximo bloco.</b>"
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Para muitos arquivos pequenos e temporários, qual alocação é melhor?",
+      "options": [
+        "A contígua, bem simples",
+        "A encadeada, como no FAT",
+        "Nenhuma, só a memória",
+        "A indexada, ou por extents"
+      ],
+      "correct": 3,
+      "explain": "<b>Aproveita os buracos e acessa rápido.</b>"
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Qual é o efeito de blocos grandes?",
+      "options": [
+        "Mais metadados para o sistema controlar",
+        "Mais desperdício com arquivos pequenos",
+        "Menos velocidade com arquivos grandes",
+        "Menos espaço total no disco rígido"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca:</b> menos controle, mais sobra."
+    },
+    {
+      "topic": "vm",
+      "statement": "O que é um hypervisor?",
+      "options": [
+        "O software que cria e gerencia as VMs",
+        "O arquivo de instalação de um sistema",
+        "O sistema instalado dentro de uma VM",
+        "O programa que acelera o processador"
+      ],
+      "correct": 0,
+      "explain": "<b>Reparte CPU, memória, disco e rede.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "O que é host e o que é guest?",
+      "options": [
+        "Host é o sistema da VM; guest, a máquina real",
+        "Host é a máquina real; guest, o sistema da VM",
+        "Host é o instalador; guest, o usuário comum",
+        "Host é o disco virtual; guest, a placa virtual"
+      ],
+      "correct": 1,
+      "explain": "<b>Hospedeiro e convidado.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "Qual é a diferença do hypervisor tipo 1?",
+      "options": [
+        "Roda dentro de um contêiner",
+        "Roda como programa do Windows",
+        "Roda apenas em celulares",
+        "Roda direto sobre o hardware"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem SO no meio:</b> ESXi, Hyper-V, KVM."
+    },
+    {
+      "topic": "vm",
+      "statement": "O VirtualBox é de que tipo?",
+      "options": [
+        "Emulador, sobre a nuvem",
+        "Tipo 2, sobre o sistema",
+        "Contêiner, sobre o kernel",
+        "Tipo 1, sobre o hardware"
+      ],
+      "correct": 1,
+      "explain": "<b>Programa instalado no SO que você já usa.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "O Hyper-V é de que tipo, mesmo no Windows 11?",
+      "options": [
+        "Tipo 2",
+        "Tipo 3",
+        "Tipo 1",
+        "Tipo 0"
+      ],
+      "correct": 2,
+      "explain": "<b>Pegadinha:</b> ao ativar, ele fica por baixo do próprio Windows."
+    },
+    {
+      "topic": "vm",
+      "statement": "Por que contêiner não é VM?",
+      "options": [
+        "Só funciona sem internet",
+        "Precisa de disco físico próprio",
+        "Tem um processador só para ele",
+        "Compartilha o kernel do host"
+      ],
+      "correct": 3,
+      "explain": "<b>Isola processos, não máquinas.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "Uma empresa quer juntar 10 servidores em menos máquinas. Qual hypervisor?",
+      "options": [
+        "Qualquer um, são todos iguais",
+        "Tipo 2, como o VirtualBox",
+        "Tipo 1, como ESXi ou KVM",
+        "Nenhum, basta um contêiner"
+      ],
+      "correct": 2,
+      "explain": "<b>Data center usa tipo 1.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "Ao criar uma instância na nuvem, você está alugando o quê?",
+      "options": [
+        "Um pendrive com o sistema",
+        "Um domínio com um site",
+        "Uma VM sobre um hypervisor",
+        "Um computador só seu em casa"
+      ],
+      "correct": 2,
+      "explain": "<b>Nuvem é virtualização.</b>"
+    },
+    {
+      "topic": "vm",
+      "statement": "O que precisa estar ligado no BIOS para virtualizar bem?",
+      "options": [
+        "VT-x ou AMD-V",
+        "DNS ou DHCP",
+        "RJ-45 ou SFP",
+        "MBR ou GPT"
+      ],
+      "correct": 0,
+      "explain": "<b>Instruções do processador.</b> No AMD aparece como SVM."
+    },
+    {
+      "topic": "recursos",
+      "statement": "O que é o disco virtual de uma VM?",
+      "options": [
+        "Um pedaço da RAM",
+        "Um SSD extra no PC",
+        "Um arquivo no host",
+        "Uma pasta da nuvem"
+      ],
+      "correct": 2,
+      "explain": "<b>VDI, VMDK, VHDX ou QCOW2.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual é o formato de disco do VirtualBox?",
+      "options": [
+        "QCOW2",
+        "VHDX",
+        "VDI",
+        "VMDK"
+      ],
+      "correct": 2,
+      "explain": "<b>VDI.</b> VMDK é do VMware; VHDX, do Hyper-V; QCOW2, do KVM."
+    },
+    {
+      "topic": "recursos",
+      "statement": "O que faz o disco dinâmico?",
+      "options": [
+        "Reserva todo o espaço na criação",
+        "Apaga o que não é usado no mês",
+        "Começa pequeno e cresce com o uso",
+        "Muda de formato a cada boot"
+      ],
+      "correct": 2,
+      "explain": "<b>A VM vê 25 GB, o arquivo ocupa só o gravado.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual é a regra prática para a RAM do host?",
+      "options": [
+        "Dar toda a memória para a VM ligada",
+        "Usar no máximo 512 MB em cada VM",
+        "Desligar a memória virtual do host",
+        "Deixar ao menos 4 GB livres para ele"
+      ],
+      "correct": 3,
+      "explain": "<b>Se faltar, os dois travam usando o disco (swap).</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "E a regra prática para as vCPUs?",
+      "options": [
+        "Até metade das threads do host",
+        "O dobro das threads do host",
+        "Sempre uma só, em qualquer caso",
+        "Todas as threads que existirem"
+      ],
+      "correct": 0,
+      "explain": "<b>Para o host não travar.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual modo de rede do VirtualBox é o padrão?",
+      "options": [
+        "Rede interna",
+        "Somente host",
+        "NAT",
+        "Bridge"
+      ],
+      "correct": 2,
+      "explain": "<b>A VM navega, mas os outros não a alcançam.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual modo dá à VM um IP próprio na rede física?",
+      "options": [
+        "Rede interna fechada",
+        "Rede NAT compartilhada",
+        "Placa em modo bridge",
+        "Somente host e VMs"
+      ],
+      "correct": 2,
+      "explain": "<b>Vira mais um computador da rede.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual modo simula uma rede fechada, só de VMs?",
+      "options": [
+        "Modo bridge",
+        "Rede interna",
+        "NAT padrão",
+        "Rede pública"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem internet e sem host.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Por que conferir o hash SHA-256 da ISO?",
+      "options": [
+        "Para saber se ela não foi alterada",
+        "Para escolher o idioma do sistema",
+        "Para diminuir o tamanho do arquivo",
+        "Para deixar a instalação mais rápida"
+      ],
+      "correct": 0,
+      "explain": "<b>Um bit diferente muda o hash inteiro.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "O que o GPT permite que o MBR não permite?",
+      "options": [
+        "Até 128 partições e discos enormes",
+        "Discos sem nenhuma partição neles",
+        "Só 4 partições e discos de 2 TiB",
+        "Partições dentro da memória RAM"
+      ],
+      "correct": 0,
+      "explain": "<b>GPT é o atual, com UEFI.</b>"
+    },
+    {
+      "topic": "recursos",
+      "statement": "Depois de instalar, a VM voltou ao instalador. O que fazer?",
+      "options": [
+        "Remover a ISO da unidade óptica",
+        "Aumentar a memória da máquina",
+        "Trocar o modo de rede para NAT",
+        "Formatar o computador do host"
+      ],
+      "correct": 0,
+      "explain": "<b>A ISO vem antes do disco na ordem de boot.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "O que é um snapshot?",
+      "options": [
+        "Uma fotografia do estado da VM",
+        "Uma cópia da VM em outro disco",
+        "Um teclado virtual da VM",
+        "Um programa que limpa a VM"
+      ],
+      "correct": 0,
+      "explain": "<b>Dá para voltar a esse ponto.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Por que snapshot não é backup?",
+      "options": [
+        "Só guarda os arquivos de texto",
+        "Precisa de internet para existir",
+        "Apaga a VM depois de uma hora",
+        "Fica no mesmo disco e depende dele"
+      ],
+      "correct": 3,
+      "explain": "<b>Se o SSD morrer, vão todos juntos.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Você criou teste.txt depois do snapshot e restaurou. O que acontece?",
+      "options": [
+        "O arquivo some",
+        "O arquivo dobra",
+        "O arquivo fica",
+        "O host trava"
+      ],
+      "correct": 0,
+      "explain": "<b>As mudanças iam para o disco de diferenças,</b> descartado ao restaurar."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "O que é um clone vinculado?",
+      "options": [
+        "Copia todos os arquivos de forma independente",
+        "Liga duas VMs pela mesma placa de rede real",
+        "Aproveita o disco original e grava diferenças",
+        "Exporta a VM para um arquivo num HD externo"
+      ],
+      "correct": 2,
+      "explain": "<b>Economiza espaço, mas depende do original.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Para que serve exportar para .ova?",
+      "options": [
+        "Ligar a VM direto na internet",
+        "Levar a VM inteira num arquivo só",
+        "Trocar o sistema dentro da VM",
+        "Diminuir a memória usada pela VM"
+      ],
+      "correct": 1,
+      "explain": "<b>Guardado em outro disco, serve de backup.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Antes de uma mudança arriscada na VM, o que fazer?",
+      "options": [
+        "Tirar um snapshot",
+        "Apagar o disco",
+        "Tirar a rede",
+        "Desligar o host"
+      ],
+      "correct": 0,
+      "explain": "<b>É a rede de segurança.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Para que servem as Guest Additions?",
+      "options": [
+        "Aumentar o disco do computador real",
+        "Integrar tela, pastas e mouse com o host",
+        "Proteger a VM contra vírus da internet",
+        "Criar usuários novos no sistema da VM"
+      ],
+      "correct": 1,
+      "explain": "<b>Drivers instalados no convidado.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "Quais quatro peças um computador precisa para conversar na rede?",
+      "options": [
+        "IP, máscara, gateway e DNS",
+        "Cabo, caixa, tomada e luz",
+        "CPU, RAM, disco e fonte",
+        "Teclado, mouse, tela e som"
+      ],
+      "correct": 0,
+      "explain": "<b>Endereço, bairro, saída e agenda de nomes.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "Na comparação da aula, o que é o gateway?",
+      "options": [
+        "O nome de cada aparelho",
+        "A porta de saída da rede",
+        "O bairro inteiro da rede",
+        "O carteiro do provedor"
+      ],
+      "correct": 1,
+      "explain": "<b>O que vai para outra rede passa por ele.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "O que indica um IP 169.254.x.x?",
+      "options": [
+        "O DHCP não respondeu",
+        "O site saiu do ar",
+        "A internet está rápida",
+        "O DNS está errado"
+      ],
+      "correct": 0,
+      "explain": "<b>Link-local:</b> o sistema se deu um IP sozinho."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Por que toda a turma viu 10.0.2.15 sem conflito?",
+      "options": [
+        "O switch aceita IPs repetidos",
+        "O IP muda a cada cinco segundos",
+        "Cada VM está numa rede isolada",
+        "O professor sorteou os endereços"
+      ],
+      "correct": 2,
+      "explain": "<b>É como o apartamento 101 de prédios diferentes.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "O que é CGNAT (100.64.0.0/10)?",
+      "options": [
+        "O cliente compra um IP só para ele",
+        "O roteador desliga todo IP durante a noite",
+        "O provedor divide um IP entre clientes",
+        "O switch troca o MAC das placas"
+      ],
+      "correct": 2,
+      "explain": "<b>Faixa usada por provedores.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "Na tabela de rotas, qual vence?",
+      "options": [
+        "A mais antiga de todas",
+        "A mais específica",
+        "A mais curta",
+        "A primeira"
+      ],
+      "correct": 1,
+      "explain": "<b>Maior prefixo.</b> Se nenhuma combinar, vale a padrão."
+    },
+    {
+      "topic": "redeip",
+      "statement": "O que acontece sem a linha default na tabela de rotas?",
+      "options": [
+        "Perde o nome do usuário",
+        "Fala com todos da internet",
+        "Só fala com a própria rede",
+        "Para de ligar o monitor"
+      ],
+      "correct": 2,
+      "explain": "<b>Nada sai da rede local.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "O que é consultado ANTES do servidor DNS?",
+      "options": [
+        "O servidor raiz da internet",
+        "O arquivo hosts e o cache",
+        "O site que será aberto",
+        "O provedor do vizinho"
+      ],
+      "correct": 1,
+      "explain": "<b>Por isso malware altera o hosts.</b>"
+    },
+    {
+      "topic": "redeip",
+      "statement": "No Ubuntu, o que é o 127.0.0.53 do resolv.conf?",
+      "options": [
+        "O gateway padrão da rede da VM",
+        "O IP público da sua casa",
+        "Um intermediário local com cache",
+        "O DNS verdadeiro do provedor"
+      ],
+      "correct": 2,
+      "explain": "<b>systemd-resolved.</b> O DNS de verdade aparece em resolvectl dns."
+    },
+    {
+      "topic": "redeip",
+      "statement": "O que muda a cada salto no caminho do pacote?",
+      "options": [
+        "O IP do destino final",
+        "O nome do site aberto",
+        "A porta do servidor",
+        "O MAC de quem entrega"
+      ],
+      "correct": 3,
+      "explain": "<b>Como encomenda:</b> o endereço final fica na etiqueta."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual é a primeira pergunta do diagnóstico de baixo para cima?",
+      "options": [
+        "O serviço responde?",
+        "Resolvo os nomes?",
+        "O site está bonito?",
+        "Tenho um IP válido?"
+      ],
+      "correct": 3,
+      "explain": "<b>Da base para o topo.</b>"
+    },
+    {
+      "topic": "diag",
+      "statement": "O ping 8.8.8.8 funciona, mas unipar.br não resolve. Qual é o problema?",
+      "options": [
+        "O cabo",
+        "O gateway",
+        "O DNS",
+        "A placa"
+      ],
+      "correct": 2,
+      "explain": "<b>IP não depende de DNS;</b> nome depende."
+    },
+    {
+      "topic": "diag",
+      "statement": "Apareceu “Network is unreachable”. O que provavelmente falta?",
+      "options": [
+        "O arquivo hosts",
+        "A senha do Wi-Fi",
+        "O navegador",
+        "A rota padrão"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem gateway, nada sai.</b>"
+    },
+    {
+      "topic": "diag",
+      "statement": "Apareceu “Temporary failure in name resolution”. O que falhou?",
+      "options": [
+        "A resolução de nomes",
+        "A permissão da pasta",
+        "A memória do servidor",
+        "A energia do roteador"
+      ],
+      "correct": 0,
+      "explain": "<b>DNS.</b>"
+    },
+    {
+      "topic": "diag",
+      "statement": "O ping no gateway falha. Onde procurar primeiro?",
+      "options": [
+        "Na rede local",
+        "No servidor raiz",
+        "No site remoto",
+        "No registro MX"
+      ],
+      "correct": 0,
+      "explain": "<b>Wi-Fi, cabo, IP ou máscara.</b>"
+    },
+    {
+      "topic": "diag",
+      "statement": "No traceroute, o que significa * * *?",
+      "options": [
+        "O caminho todo está quebrado",
+        "O destino foi desligado agora",
+        "O computador está sem cabo",
+        "Aquele roteador não respondeu"
+      ],
+      "correct": 3,
+      "explain": "<b>Não quer dizer que parou.</b>"
+    },
+    {
+      "topic": "diag",
+      "statement": "No ping, o que é o time?",
+      "options": [
+        "A ida e volta, em milissegundos",
+        "A data em que o site foi criado",
+        "O número de saltos que restam",
+        "A hora certa do servidor remoto"
+      ],
+      "correct": 0,
+      "explain": "<b>Latência.</b> O número de saltos que restam é o ttl."
+    },
+    {
+      "topic": "diag",
+      "statement": "Num chamado, o que deve ser escrito?",
+      "options": [
+        "A marca do computador usado",
+        "O nome de quem reclamou mais",
+        "Qual passo falhou e a evidência",
+        "Que a internet caiu de novo"
+      ],
+      "correct": 2,
+      "explain": "<b>“A internet caiu” não é diagnóstico.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual topologia é o padrão das LANs atuais?",
+      "options": [
+        "Malha",
+        "Anel",
+        "Barramento",
+        "Estrela"
+      ],
+      "correct": 3,
+      "explain": "<b>Todos ligados a um switch.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 5 nós, quantos enlaces há?",
+      "options": [
+        "20 enlaces",
+        "5 enlaces",
+        "25 enlaces",
+        "10 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2 = 5 × 4 / 2 = 10.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual é a diferença entre comutação de circuitos e de pacotes?",
+      "options": [
+        "Pacotes só serve para voz; circuitos, para texto",
+        "Circuitos reserva o caminho; pacotes, sob demanda",
+        "Pacotes reserva o caminho; circuitos, sob demanda",
+        "Circuitos só existe no Wi-Fi; pacotes, no cabo"
+      ],
+      "correct": 1,
+      "explain": "<b>A internet usa pacotes.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual cabo leva 10 Gbps até 100 metros?",
+      "options": [
+        "Cat6",
+        "Cat6A",
+        "Cat3",
+        "Cat5e"
+      ],
+      "correct": 1,
+      "explain": "<b>O Cat6 só chega a uns 55 m com 10 Gbps.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual fibra alcança quilômetros e usa laser?",
+      "options": [
+        "Multimodo",
+        "Coaxial",
+        "Monomodo",
+        "Trançada"
+      ],
+      "correct": 2,
+      "explain": "<b>Núcleo fino.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "O que o switch usa para APRENDER?",
+      "options": [
+        "O MAC de origem",
+        "A porta TCP",
+        "O IP de origem",
+        "O MAC de destino"
+      ],
+      "correct": 0,
+      "explain": "<b>Aprende pela origem</b> e encaminha pelo destino."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Quem separa domínios de broadcast?",
+      "options": [
+        "O cabo",
+        "O roteador",
+        "O repetidor",
+        "O hub"
+      ],
+      "correct": 1,
+      "explain": "<b>Não encaminha broadcast.</b> A VLAN também divide."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual método o Wi-Fi usa para evitar colisões?",
+      "options": [
+        "FDDI",
+        "Token",
+        "CSMA/CA",
+        "CSMA/CD"
+      ],
+      "correct": 2,
+      "explain": "<b>CA = evitar.</b> CD = detectar, da Ethernet compartilhada."
+    },
+    {
+      "topic": "revredes",
+      "statement": "O que o RTS/CTS resolve?",
+      "options": [
+        "A senha esquecida",
+        "O cabo muito longo",
+        "O IP duplicado",
+        "A estação escondida"
+      ],
+      "correct": 3,
+      "explain": "<b>O CTS é ouvido por todos.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "O que é uma porta trunk?",
+      "options": [
+        "Liga o computador direto na tomada",
+        "Bloqueia todas as redes sem fio",
+        "Guarda a tabela de nomes do DNS",
+        "Carrega várias VLANs com etiqueta"
+      ],
+      "correct": 3,
+      "explain": "<b>802.1Q.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "No vetor de distância (como RIP), qual é o limite?",
+      "options": [
+        "255 saltos",
+        "15 saltos",
+        "30 saltos",
+        "7 saltos"
+      ],
+      "correct": 1,
+      "explain": "<b>16 é inalcançável.</b>"
+    },
+    {
+      "topic": "revredes",
+      "statement": "Qual algoritmo o estado de enlace (OSPF) usa?",
+      "options": [
+        "Euclides",
+        "Huffman",
+        "Dijkstra",
+        "Bellman-Ford"
+      ],
+      "correct": 2,
+      "explain": "<b>Mapa completo e menor custo.</b> O vetor de distância usa Bellman-Ford."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa questão de afirmativas, qual é a técnica da aula?",
+      "options": [
+        "Julgar cada uma e riscar as falsas",
+        "Marcar a alternativa mais comprida",
+        "Pular as que têm mais de duas",
+        "Responder sempre a letra do meio"
+      ],
+      "correct": 0,
+      "explain": "<b>Ao achar uma falsa, elimine as alternativas que a contêm.</b>"
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "O vídeo que não cabia",
+      "resumo": "50 GB livres e um arquivo de 6 GB que não copia.",
+      "cenas": [
+        {
+          "texto": "Uma colega tem um pendrive de 64 GB quase vazio. Um vídeo de 6 GB dá erro ao copiar.",
+          "pergunta": "O que você verifica primeiro?",
+          "opcoes": [
+            {
+              "texto": "O nome do arquivo de vídeo",
+              "certa": false,
+              "retorno": "O nome não é o problema."
+            },
+            {
+              "texto": "O sistema de arquivos dele",
+              "certa": true,
+              "retorno": "Isso. Está em FAT32, que para nos 4 GiB."
+            },
+            {
+              "texto": "A velocidade da internet",
+              "certa": false,
+              "retorno": "A cópia é local, sem internet."
+            }
+          ]
+        },
+        {
+          "texto": "Ela quer usar na TV da sala.",
+          "pergunta": "Que formato usar?",
+          "opcoes": [
+            {
+              "texto": "FAT32 de novo, com outro nome",
+              "certa": false,
+              "retorno": "O limite continuaria."
+            },
+            {
+              "texto": "ext4, que é usado em servidores",
+              "certa": false,
+              "retorno": "A TV não leria."
+            },
+            {
+              "texto": "exFAT, depois de copiar os dados",
+              "certa": true,
+              "retorno": "Certo. Formatar apaga tudo, por isso a cópia antes."
+            }
+          ]
+        }
+      ],
+      "fim": "Espaço livre não é a única regra: cada sistema de arquivos tem limites."
+    },
+    {
+      "titulo": "A internet caiu?",
+      "resumo": "Um chamado de suporte resolvido passo a passo.",
+      "cenas": [
+        {
+          "texto": "O usuário diz que a internet caiu. O ping no gateway e em 8.8.8.8 respondem.",
+          "pergunta": "O que testar agora?",
+          "opcoes": [
+            {
+              "texto": "O cabo de força do PC",
+              "certa": false,
+              "retorno": "A rede já respondeu."
+            },
+            {
+              "texto": "A resolução de nomes",
+              "certa": true,
+              "retorno": "Isso: é o próximo degrau."
+            },
+            {
+              "texto": "O brilho da tela dele",
+              "certa": false,
+              "retorno": "Não tem relação."
+            }
+          ]
+        },
+        {
+          "texto": "O nslookup falha.",
+          "pergunta": "Qual é o laudo?",
+          "opcoes": [
+            {
+              "texto": "O computador precisa ser trocado",
+              "certa": false,
+              "retorno": "O hardware está bem."
+            },
+            {
+              "texto": "Problema de DNS, com a evidência",
+              "certa": true,
+              "retorno": "Perfeito: passo que falhou e prova."
+            },
+            {
+              "texto": "A internet caiu, sem mais nada",
+              "certa": false,
+              "retorno": "Isso não é diagnóstico."
+            }
+          ]
+        }
+      ],
+      "fim": "Teste da base para o topo e escreva a evidência."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "classificar",
+      "nome": "De quem é o sistema de arquivos?",
+      "instrucao": "Onde ele é o padrão?",
+      "categorias": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Pendrives"
+      ],
+      "itens": [
+        {
+          "texto": "NTFS",
+          "categoria": "Windows",
+          "porque": "Usa a MFT."
+        },
+        {
+          "texto": "ext4",
+          "categoria": "Linux",
+          "porque": "Inodes e extents."
+        },
+        {
+          "texto": "APFS",
+          "categoria": "macOS",
+          "porque": "Copy-on-write."
+        },
+        {
+          "texto": "exFAT",
+          "categoria": "Pendrives",
+          "porque": "Sem o limite de 4 GiB."
+        },
+        {
+          "texto": "FAT32",
+          "categoria": "Pendrives",
+          "porque": "Antigo e compatível."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Tipo 1, tipo 2 ou contêiner?",
+      "instrucao": "Classifique.",
+      "categorias": [
+        "Tipo 1",
+        "Tipo 2",
+        "Contêiner"
+      ],
+      "itens": [
+        {
+          "texto": "VirtualBox",
+          "categoria": "Tipo 2",
+          "porque": "Programa no SO."
+        },
+        {
+          "texto": "VMware ESXi",
+          "categoria": "Tipo 1",
+          "porque": "Direto no servidor."
+        },
+        {
+          "texto": "Hyper-V",
+          "categoria": "Tipo 1",
+          "porque": "Mesmo no Windows 11."
+        },
+        {
+          "texto": "KVM",
+          "categoria": "Tipo 1",
+          "porque": "O kernel vira hypervisor."
+        },
+        {
+          "texto": "VMware Workstation",
+          "categoria": "Tipo 2",
+          "porque": "Instalado no SO."
+        },
+        {
+          "texto": "Compartilha o kernel do host",
+          "categoria": "Contêiner",
+          "porque": "Isola processos."
+        }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "Diagnóstico de baixo para cima",
+      "instrucao": "Ordene as perguntas.",
+      "sequencia": [
+        "Tenho um IP válido?",
+        "Alcanço o gateway?",
+        "Existe rota para fora?",
+        "Alcanço um IP na internet?",
+        "Resolvo nomes?",
+        "O serviço responde?"
+      ],
+      "explicacao": "O primeiro teste que falha aponta o defeito."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Que peça da rede falhou?",
+      "instrucao": "Pelo sintoma, descubra.",
+      "categorias": [
+        "DHCP",
+        "Gateway",
+        "DNS"
+      ],
+      "itens": [
+        {
+          "texto": "IP 169.254.80.12",
+          "categoria": "DHCP",
+          "porque": "Ninguém deu o IP."
+        },
+        {
+          "texto": "Network is unreachable",
+          "categoria": "Gateway",
+          "porque": "Falta a rota padrão."
+        },
+        {
+          "texto": "8.8.8.8 responde, unipar.br não",
+          "categoria": "DNS",
+          "porque": "Só o nome falha."
+        },
+        {
+          "texto": "Temporary failure in name resolution",
+          "categoria": "DNS",
+          "porque": "Não resolveu o nome."
+        }
+      ]
+    }
+  ],
+  "livro": [
+    {
+      "titulo": "O bibliotecário do disco",
+      "resumo": "Aula 06: sistemas de arquivos, metadados e permissões.",
+      "paginas": [
+        "O disco é uma estante gigante de caixinhas iguais, os blocos. O sistema de arquivos é o bibliotecário: sabe quais caixinhas são de cada arquivo. FAT32 é antigo e não aceita arquivo de 4 GiB. exFAT é para pendrive. NTFS é do Windows, ext4 é do Linux e APFS é do Mac.",
+        "Além do conteúdo, há a ficha do livro: os metadados. No Linux, mtime é a mudança do conteúdo e ctime é a mudança da ficha (não é a criação!). As permissões são r = 4, w = 2, x = 1. 644 é rw-r--r--; 600 é só do dono.",
+        "Todo arquivo ocupa blocos inteiros. Um arquivo de 10.000 bytes em blocos de 4.096 usa 3 blocos e desperdiça 2.288 bytes: é a fragmentação interna. SSD não precisa desfragmentar."
+      ],
+      "guardar": [
+        "FAT32 não aceita 4 GiB ou mais",
+        "ctime não é criação",
+        "r=4, w=2, x=1",
+        "Arredonde os blocos para cima"
+      ]
+    },
+    {
+      "titulo": "Um computador dentro do outro",
+      "resumo": "Aula 07: máquinas virtuais.",
+      "paginas": [
+        "A máquina virtual é um computador de mentira que acha que é de verdade. Quem faz o truque é o hypervisor. Tipo 1 roda direto no hardware (ESXi, Hyper-V, KVM). Tipo 2 é um programa (VirtualBox). Contêiner não é VM: ele usa o kernel do host.",
+        "O disco da VM é só um arquivo. Dinâmico cresce com o uso; fixo já ocupa tudo. Deixe 4 GB de RAM para o host e use até metade das threads. Na rede, NAT navega sem ser visto, e bridge vira mais um computador da casa.",
+        "Snapshot é uma foto para voltar no tempo. Mas não é backup: mora no mesmo disco. Backup é exportar um .ova para outro lugar."
+      ],
+      "guardar": [
+        "Tipo 1 no hardware; tipo 2 no sistema",
+        "Snapshot não é backup",
+        "Confira o hash da ISO"
+      ]
+    },
+    {
+      "titulo": "As quatro peças da conversa",
+      "resumo": "Aula 08: IP, máscara, gateway e DNS.",
+      "paginas": [
+        "IP é o endereço da casa. A máscara diz qual é o bairro. O gateway é a saída do bairro. O DNS é a agenda de nomes. Se o destino é do mesmo bairro, entrega direta; se não, vai pelo gateway.",
+        "Diagnóstico de baixo para cima: tenho IP? alcanço o gateway? existe rota? alcanço 8.8.8.8? resolvo nomes? o serviço responde? O primeiro que falhar mostra onde está o defeito. IP 169.254 quer dizer que o DHCP não respondeu."
+      ],
+      "guardar": [
+        "IP, máscara, gateway e DNS",
+        "Ping no IP funciona e nome não: DNS",
+        "Sem rota default, nada sai"
+      ]
+    },
+    {
+      "titulo": "Revisão relâmpago de redes",
+      "resumo": "Aula 09: do cabo à rota.",
+      "paginas": [
+        "Estrela é a topologia comum. Malha cheia tem n(n−1)/2 enlaces. Cat6A leva 10 Gbps a 100 m. Fibra monomodo vai longe. O switch aprende o MAC de origem; o roteador separa domínios de broadcast.",
+        "Cabo compartilhado usa CSMA/CD, que detecta; Wi-Fi usa CSMA/CA, que evita. RIP conta saltos, até 15. OSPF tem o mapa e usa Dijkstra. Vence sempre a rota mais específica."
+      ],
+      "guardar": [
+        "CD detecta; CA evita",
+        "RIP: 15 saltos",
+        "OSPF: Dijkstra"
+      ]
+    }
+  ],
+  "termos": [],
+  "praticas": [
+    {
+      "enunciado": "Qual é o octal de rw-------?",
+      "aceitas": [
+        "600"
+      ],
+      "dica": "r=4, w=2.",
+      "explicacao": "4+2 = 6 para o dono, 0 e 0."
+    },
+    {
+      "enunciado": "Um arquivo de 9.000 bytes em blocos de 4.096 ocupa quantos blocos? (só o número)",
+      "aceitas": [
+        "3",
+        "três"
+      ],
+      "dica": "Arredonde para cima.",
+      "explicacao": "9.000 ÷ 4.096 = 2,2: 3 blocos."
+    },
+    {
+      "enunciado": "Malha totalmente conectada com 6 nós: quantos enlaces? (só o número)",
+      "aceitas": [
+        "15"
+      ],
+      "dica": "n(n−1)/2.",
+      "explicacao": "6 × 5 / 2 = 15."
+    },
+    {
+      "enunciado": "Qual modo de rede dá IP próprio à VM na rede física?",
+      "aceitas": [
+        "bridge",
+        "modo bridge",
+        "placa em modo bridge"
+      ],
+      "texto": true,
+      "dica": "Ponte, em inglês.",
+      "explicacao": "Bridge."
+    },
+    {
+      "enunciado": "Qual peça da rede traduz nomes em IP? (sigla)",
+      "aceitas": [
+        "dns"
+      ],
+      "texto": true,
+      "dica": "A agenda.",
+      "explicacao": "DNS."
+    },
+    {
+      "enunciado": "Como se chama o software que cria e gerencia VMs?",
+      "aceitas": [
+        "hypervisor",
+        "hipervisor"
+      ],
+      "texto": true,
+      "dica": "Começa com H.",
+      "explicacao": "Hypervisor."
+    }
+  ]
+}

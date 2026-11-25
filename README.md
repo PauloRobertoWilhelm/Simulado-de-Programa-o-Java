@@ -11,6 +11,9 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 | Engenharia de Requisitos | 531 | 517 (só slides 05 e 06 e o resumão) | 9 capítulos | 16 termos e 11 práticas | 10 | 9 |
 | Fundamentos de Redes | 550 + contas sorteadas | 532 | 15 capítulos | 25 termos e 25 práticas | 11 | 10 |
 | Testing, Compliance e QA | 107 | ainda não | não | não | 2 | 4 |
+| Cybersegurança | 69 | 1º período (Aula 08) | 5 capítulos | 5 práticas | 2 | 5 |
+| Ambientação Tech | 90 | 1º período (Aulas 06 a 09) | 4 capítulos | 6 práticas | 2 | 5 |
+| Linguagem e Interação, Direito Digital e Desenvolvimento para Internet | 0 | aguardam material | não | não | 0 | 0 |
 | Pensamento Computacional | 582 | 1º período | 2 capítulos | não | 0 | 1 |
 
 ## Como cada matéria funciona
@@ -72,6 +75,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `css/styles.css`: visual geral
 - `css/materias.css`: visual das abas, histórias e jogos
 - `css/moderno.css`: visual atual (fundo neutro, uma cor por matéria, fonte Geist); apagar a linha dele no index.html volta ao visual antigo
+- `css/futuro.css` e `js/futuro.js`: camada futurista (circuito, núcleo, vidro, luz do mouse); apagar as linhas deles no index.html volta ao ouro simples
 - `css/ouro.css`: visual "tecnologia em ouro"; apagar a linha dele no index.html volta ao visual anterior
 - `css/estudo.css`: acabamento (painel de progresso, temas, código colorido, resultado); apagar a linha dele no index.html volta ao visual anterior
 - `js/visual.js`: código Java colorido e painel de progresso

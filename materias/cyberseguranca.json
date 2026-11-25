@@ -1,0 +1,1213 @@
+{
+  "questoes": [
+    {
+      "topic": "firewall",
+      "statement": "O que um firewall controla?",
+      "options": [
+        "A velocidade da internet de cada computador",
+        "O conteúdo dos arquivos salvos no servidor",
+        "O tráfego entre redes de confiança diferentes",
+        "A senha que cada usuário usa no sistema"
+      ],
+      "correct": 2,
+      "explain": "<b>Porteiro entre redes:</b> aplica regras objetivas de IP, porta e protocolo."
+    },
+    {
+      "topic": "firewall",
+      "statement": "O que o firewall decide sobre uma conexão?",
+      "options": [
+        "O que será dito dentro dela",
+        "Quanto tempo ela vai durar",
+        "Se ela pode ou não acontecer",
+        "Qual usuário está digitando"
+      ],
+      "correct": 2,
+      "explain": "<b>Se a conversa pode existir,</b> e não o que é falado nela."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Onde o firewall fica, classicamente?",
+      "options": [
+        "Na borda da rede",
+        "No cabo do usuário",
+        "Dentro do navegador",
+        "No banco de dados"
+      ],
+      "correct": 0,
+      "explain": "<b>Na borda,</b> mas também pode separar partes internas da rede."
+    },
+    {
+      "topic": "firewall",
+      "statement": "O que significa a postura “default deny”?",
+      "options": [
+        "Liberar tudo e negar só o perigoso",
+        "Negar tudo e liberar só o necessário",
+        "Negar somente o que vem de fora",
+        "Liberar somente a porta do site"
+      ],
+      "correct": 1,
+      "explain": "<b>Nega por padrão:</b> o que nenhuma regra liberou é descartado."
+    },
+    {
+      "topic": "firewall",
+      "statement": "O que o filtro de pacotes analisa?",
+      "options": [
+        "O histórico de navegação do usuário",
+        "A lista de processos abertos no servidor",
+        "Só o cabeçalho de cada pacote isolado",
+        "O texto completo de cada requisição web"
+      ],
+      "correct": 2,
+      "explain": "<b>IP, porta e protocolo,</b> pacote por pacote, sem memória."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Qual é o limite do filtro de pacotes?",
+      "options": [
+        "Não lembra da conexão",
+        "Não aceita nenhuma regra",
+        "Não conhece as portas",
+        "Não lê o IP de origem"
+      ],
+      "correct": 0,
+      "explain": "<b>Sem memória:</b> a resposta de uma conexão legítima também precisaria de regra própria."
+    },
+    {
+      "topic": "firewall",
+      "statement": "O que o firewall stateful tem que o filtro de pacotes não tem?",
+      "options": [
+        "Uma lista com os sites mais visitados",
+        "Uma tabela com o estado das conexões",
+        "Uma cópia do conteúdo das mensagens",
+        "Um antivírus para cada computador"
+      ],
+      "correct": 1,
+      "explain": "<b>Ele lembra da conversa:</b> a resposta de quem começou por dentro entra sem regra extra."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Um pacote finge ser resposta, mas não está na tabela de estados. O que o stateful faz?",
+      "options": [
+        "Cria uma regra nova",
+        "Avisa o navegador",
+        "Descarta o pacote",
+        "Entrega o pacote"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem registro, sem entrada.</b>"
+    },
+    {
+      "topic": "firewall",
+      "statement": "O Security Group da AWS se comporta como qual tipo de firewall?",
+      "options": [
+        "Proxy, termina e abre outra conexão",
+        "WAF, lê o conteúdo da requisição",
+        "Sem estado, precisa liberar a volta",
+        "Stateful, libera a resposta sozinho"
+      ],
+      "correct": 3,
+      "explain": "<b>Stateful.</b> Já a NACL da AWS é sem estado: precisa liberar ida e volta."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Como o proxy (application gateway) trabalha?",
+      "options": [
+        "Copia o pacote e deixa o original passar",
+        "Olha só a porta e ignora a aplicação",
+        "Troca o endereço MAC de cada quadro",
+        "Termina a conexão do cliente e abre outra"
+      ],
+      "correct": 3,
+      "explain": "<b>São duas conexões:</b> o servidor só vê o IP do proxy."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Qual é a diferença entre proxy de saída e proxy reverso?",
+      "options": [
+        "Saída protege o usuário; reverso, a aplicação",
+        "Saída fica na nuvem; reverso fica no celular",
+        "Saída usa TCP sempre; reverso usa só o UDP",
+        "Saída protege a aplicação; reverso, o usuário"
+      ],
+      "correct": 0,
+      "explain": "<b>Sentidos opostos.</b> O WAF é um proxy reverso."
+    },
+    {
+      "topic": "firewall",
+      "statement": "O que o NGFW soma ao firewall stateful?",
+      "options": [
+        "Aplicação, usuário e IPS integrado",
+        "Backup e criptografia dos discos",
+        "Só mais portas na lista de regras",
+        "Tradução de nomes em endereços"
+      ],
+      "correct": 0,
+      "explain": "<b>Próxima geração:</b> a mesma porta 443 pode ser liberada para o Teams e negada para o BitTorrent."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Teams e BitTorrent usam a porta 443. Quem consegue liberar um e barrar o outro?",
+      "options": [
+        "O switch comum",
+        "O cabo de rede",
+        "O NGFW",
+        "O filtro de pacotes"
+      ],
+      "correct": 2,
+      "explain": "<b>Ele identifica a aplicação,</b> não só a porta."
+    },
+    {
+      "topic": "firewall",
+      "statement": "Qual é a ordem das quatro gerações, da que vê menos à que vê mais?",
+      "options": [
+        "NGFW, proxy, stateful, filtro de pacotes",
+        "Proxy, NGFW, filtro de pacotes, stateful",
+        "Stateful, filtro de pacotes, NGFW, proxy",
+        "Filtro de pacotes, stateful, proxy, NGFW"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada geração soma visibilidade.</b>"
+    },
+    {
+      "topic": "regras",
+      "statement": "Quais são as três partes de uma regra de firewall?",
+      "options": [
+        "Origem, porta e protocolo, destino",
+        "Memória, disco e processador",
+        "Assunto, corpo e anexo do e-mail",
+        "Usuário, senha e nome da máquina"
+      ],
+      "correct": 0,
+      "explain": "<b>Quem, o quê e para onde.</b> Nada sobre o conteúdo."
+    },
+    {
+      "topic": "regras",
+      "statement": "Numa lista de regras lida de cima para baixo, qual vale?",
+      "options": [
+        "A primeira que casar",
+        "A última que casar",
+        "A mais comprida delas",
+        "A que tiver porta maior"
+      ],
+      "correct": 0,
+      "explain": "<b>Primeiro casamento decide;</b> se nenhuma casar, vale a política padrão."
+    },
+    {
+      "topic": "regras",
+      "statement": "Qual é o efeito desta última linha?",
+      "code": "iptables -A INPUT -p tcp -s 10.0.0.0/24 --dport 22 -j ACCEPT\niptables -A INPUT -p tcp --dport 443 -j ACCEPT\niptables -P INPUT DROP",
+      "options": [
+        "Libera tudo o que chegar ao servidor",
+        "Apaga as regras que vieram antes dela",
+        "Registra na tela cada pacote aceito",
+        "Descarta o que nenhuma regra liberou"
+      ],
+      "correct": 3,
+      "explain": "<b>-P INPUT DROP</b> é a política padrão: default deny."
+    },
+    {
+      "topic": "regras",
+      "statement": "Com essas regras, o IP 203.0.113.9 tenta a porta 22. O que acontece?",
+      "code": "iptables -A INPUT -p tcp -s 10.0.0.0/24 --dport 22 -j ACCEPT\niptables -A INPUT -p tcp --dport 443 -j ACCEPT\niptables -P INPUT DROP",
+      "options": [
+        "É aceito pela primeira regra toda",
+        "É aceito pela regra da porta 443",
+        "É descartado pela política padrão",
+        "É desviado para a rede 10.0.0.0"
+      ],
+      "correct": 2,
+      "explain": "<b>A porta 22 só aceita 10.0.0.0/24.</b> Ele não está nessa rede."
+    },
+    {
+      "topic": "regras",
+      "statement": "O que esta regra permite?",
+      "code": "sudo ufw allow from 10.0.2.0/24 to any port 5432 proto tcp\nsudo ufw default deny incoming",
+      "options": [
+        "A internet toda acessar o Postgres",
+        "O Postgres acessar a internet toda",
+        "A rede de apps apagar o Postgres",
+        "A rede de apps acessar o Postgres"
+      ],
+      "correct": 3,
+      "explain": "<b>Origem 10.0.2.0/24, porta 5432.</b> O resto que entra é negado."
+    },
+    {
+      "topic": "waf",
+      "statement": "O NGFW liberava só a porta 443, e mesmo assim houve SQL Injection. Por quê?",
+      "options": [
+        "A requisição veio de um IP já bloqueado",
+        "O atacante desligou o firewall antes",
+        "A porta 443 estava aberta por engano",
+        "Ninguém leu o conteúdo da requisição"
+      ],
+      "correct": 3,
+      "explain": "<b>Porta certa, conteúdo malicioso:</b> o firewall só olhou o envelope."
+    },
+    {
+      "topic": "waf",
+      "statement": "Em que camada o WAF trabalha?",
+      "options": [
+        "Na camada 3, do endereço IP",
+        "Na camada 2, do endereço MAC",
+        "Na camada 1, do cabo físico",
+        "Na camada 7, da aplicação"
+      ],
+      "correct": 3,
+      "explain": "<b>L7:</b> ele entende HTTP, JSON e GraphQL."
+    },
+    {
+      "topic": "waf",
+      "statement": "Na comparação da aula, o firewall vê o envelope. E o WAF?",
+      "options": [
+        "Devolve a carta ao remetente",
+        "Escreve um endereço novo nele",
+        "Guarda o envelope num cofre",
+        "Lê a carta que está dentro dele"
+      ],
+      "correct": 3,
+      "explain": "<b>WAF lê o conteúdo:</b> por isso acha SQL Injection e XSS."
+    },
+    {
+      "topic": "waf",
+      "statement": "O que é o OWASP CRS?",
+      "options": [
+        "Um conjunto de regras usado por WAFs",
+        "Um cabo de rede com blindagem extra",
+        "Um sistema operacional para servidor",
+        "Um tipo de senha com dois fatores"
+      ],
+      "correct": 0,
+      "explain": "<b>Core Rule Set:</b> regras prontas que o WAF compara com o payload."
+    },
+    {
+      "topic": "waf",
+      "statement": "Quais ataques o WAF costuma pegar?",
+      "options": [
+        "Roubo de notebook, incêndio e falta de luz",
+        "Cabo rompido, switch queimado e HD cheio",
+        "Senha anotada, papel perdido e tela aberta",
+        "SQL Injection, XSS e Command Injection"
+      ],
+      "correct": 3,
+      "explain": "<b>Ataques no conteúdo da requisição.</b>"
+    },
+    {
+      "topic": "waf",
+      "statement": "O ataque vem de um IP comum, sem nada suspeito. Por que o WAF ainda pega?",
+      "options": [
+        "Ele conhece a senha de cada atacante",
+        "Ele inspeciona o conteúdo, não o IP",
+        "Ele bloqueia todo IP que é residencial",
+        "Ele desliga o site quando há visita"
+      ],
+      "correct": 1,
+      "explain": "<b>Payload, não reputação.</b>"
+    },
+    {
+      "topic": "waf",
+      "statement": "Onde o WAF deve ficar na arquitetura?",
+      "options": [
+        "Na borda, antes da aplicação",
+        "Depois do banco, bem no final",
+        "No computador do cliente",
+        "Na subnet mais isolada"
+      ],
+      "correct": 0,
+      "explain": "<b>Na subnet pública, junto ou antes do balanceador.</b>"
+    },
+    {
+      "topic": "waf",
+      "statement": "Por que um proxy comum não substitui o WAF?",
+      "options": [
+        "Ele só existe em computador antigo",
+        "Ele filtra a saída, e o ataque entra",
+        "Ele não consegue ler nenhuma URL",
+        "Ele só funciona em redes sem fio"
+      ],
+      "correct": 1,
+      "explain": "<b>Direções opostas.</b>"
+    },
+    {
+      "topic": "dmz",
+      "statement": "O que é a DMZ?",
+      "options": [
+        "Uma lista com os usuários bloqueados",
+        "Uma zona intermediária entre dois firewalls",
+        "Um disco com a cópia de todos os dados",
+        "Uma rede sem fio aberta para os visitantes"
+      ],
+      "correct": 1,
+      "explain": "<b>Zona desmilitarizada:</b> abriga o que precisa ser acessado pela internet."
+    },
+    {
+      "topic": "dmz",
+      "statement": "Se um servidor da DMZ for invadido, o que deve acontecer?",
+      "options": [
+        "O servidor se conserta em um minuto",
+        "O atacante não alcança a rede interna",
+        "O atacante passa a mandar no firewall todo",
+        "A rede interna fica toda desligada"
+      ],
+      "correct": 1,
+      "explain": "<b>DMZ contém o dano:</b> ela nega DMZ para LAN."
+    },
+    {
+      "topic": "dmz",
+      "statement": "Que serviços costumam ficar na DMZ?",
+      "options": [
+        "Banco de dados e estações",
+        "Impressoras e câmeras internas",
+        "Backup e folha de pagamento",
+        "Site, e-mail e DNS público"
+      ],
+      "correct": 3,
+      "explain": "<b>O que a internet precisa alcançar.</b> O crítico fica na LAN."
+    },
+    {
+      "topic": "dmz",
+      "statement": "Numa VPC de 3 camadas, onde fica o banco de dados?",
+      "options": [
+        "Na subnet pública",
+        "Na subnet isolada",
+        "Na subnet privada",
+        "Fora da nuvem toda"
+      ],
+      "correct": 1,
+      "explain": "<b>Isolada:</b> sem nenhuma rota para a internet."
+    },
+    {
+      "topic": "dmz",
+      "statement": "Na VPC, o que fica exposto na subnet pública?",
+      "options": [
+        "As cópias de backup",
+        "Os microsserviços",
+        "O balanceador de carga",
+        "O banco de dados"
+      ],
+      "correct": 2,
+      "explain": "<b>Só o ALB/Ingress.</b>"
+    },
+    {
+      "topic": "dmz",
+      "statement": "Os microsserviços na subnet privada saem para a internet como?",
+      "options": [
+        "Não saem em hipótese alguma",
+        "Pelo banco, com IP próprio",
+        "Pelo cabo, sem usar rota",
+        "Pelo NAT, sem ter IP público"
+      ],
+      "correct": 3,
+      "explain": "<b>Sai, mas não entra.</b>"
+    },
+    {
+      "topic": "dmz",
+      "statement": "Por que o ataque direto ao IP privado do banco nem sai do lugar?",
+      "options": [
+        "O banco responde devagar demais",
+        "O IP privado muda a cada segundo",
+        "Não existe rota da internet até ele",
+        "O firewall pede a senha do banco"
+      ],
+      "correct": 2,
+      "explain": "<b>Segurança por arquitetura,</b> antes de qualquer regra."
+    },
+    {
+      "topic": "lateral",
+      "statement": "O que é o tráfego Norte-Sul?",
+      "options": [
+        "O que vai do teclado até a tela",
+        "O que circula entre microsserviços",
+        "O que fica salvo dentro do disco",
+        "O que entra e sai pelo perímetro"
+      ],
+      "correct": 3,
+      "explain": "<b>Borda ↔ cliente.</b> É o que NGFW e WAF protegem."
+    },
+    {
+      "topic": "lateral",
+      "statement": "O que é o tráfego Leste-Oeste?",
+      "options": [
+        "O que entra da internet para o balanceador",
+        "O que sai do provedor para a sua casa",
+        "O que passa pelo cabo do monitor",
+        "O que circula entre os serviços de dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Microsserviço ↔ microsserviço.</b>"
+    },
+    {
+      "topic": "lateral",
+      "statement": "O que é movimento lateral?",
+      "options": [
+        "O pacote voltar para a origem com erro",
+        "O usuário trocar de cadeira no escritório",
+        "O invasor ir de um sistema a outro por dentro",
+        "O servidor mudar de prédio na manutenção"
+      ],
+      "correct": 2,
+      "explain": "<b>Já dentro, ele tenta alcançar outros serviços.</b>"
+    },
+    {
+      "topic": "lateral",
+      "statement": "O que a NetworkPolicy do Kubernetes faz?",
+      "options": [
+        "Funciona como firewall dentro do cluster",
+        "Aumenta a memória de cada um dos pods",
+        "Cria cópias de segurança dos containers",
+        "Traduz nomes de sites em endereços IP"
+      ],
+      "correct": 0,
+      "explain": "<b>Nega por padrão</b> e libera por rótulo ou namespace."
+    },
+    {
+      "topic": "lateral",
+      "statement": "O que o mTLS garante entre microsserviços?",
+      "options": [
+        "Cada um prova a identidade em toda chamada",
+        "Cada um responde mais rápido que o anterior",
+        "Cada um usa a mesma senha do administrador",
+        "Cada um guarda uma cópia do banco de dados"
+      ],
+      "correct": 0,
+      "explain": "<b>Certificado dos dois lados:</b> base do Zero Trust."
+    },
+    {
+      "topic": "lateral",
+      "statement": "Um funcionário teve a senha roubada e o invasor entrou pela VPN. Por que a borda não alarmou?",
+      "options": [
+        "O invasor era antigo",
+        "O login era válido",
+        "A VPN não usa senha",
+        "O firewall estava sem luz"
+      ],
+      "correct": 1,
+      "explain": "<b>Credencial válida:</b> quem percebe é o controle interno."
+    },
+    {
+      "topic": "lateral",
+      "statement": "Qual é a ideia do Zero Trust?",
+      "options": [
+        "Não confiar só por estar na rede interna",
+        "Usar uma só senha bem forte para todos",
+        "Bloquear a internet de toda a empresa",
+        "Confiar em todos que entraram pela VPN"
+      ],
+      "correct": 0,
+      "explain": "<b>Toda chamada precisa provar quem é.</b>"
+    },
+    {
+      "topic": "ids",
+      "statement": "Qual é a diferença entre IDS e IPS?",
+      "options": [
+        "IDS detecta e alerta; IPS detecta e bloqueia",
+        "IDS guarda senhas; IPS guarda os backups",
+        "IDS detecta e bloqueia; IPS só envia alertas",
+        "IDS é para Wi-Fi; IPS é para rede cabeada"
+      ],
+      "correct": 0,
+      "explain": "<b>Câmera × segurança.</b>"
+    },
+    {
+      "topic": "ids",
+      "statement": "Onde o IDS fica em relação ao tráfego?",
+      "options": [
+        "No meio dele, parando cada pacote",
+        "Fora do caminho, vendo uma cópia",
+        "Dentro do teclado do usuário",
+        "Depois do fim da conexão"
+      ],
+      "correct": 1,
+      "explain": "<b>Passivo:</b> escuta uma cópia."
+    },
+    {
+      "topic": "ids",
+      "statement": "Onde o IPS fica?",
+      "options": [
+        "No caminho do tráfego (inline)",
+        "Na tela do usuário que navega",
+        "Só no relatório do fim do mês",
+        "Numa cópia separada do tráfego"
+      ],
+      "correct": 0,
+      "explain": "<b>Inline:</b> por isso consegue derrubar a conexão."
+    },
+    {
+      "topic": "ids",
+      "statement": "Por que o NIST usa o termo IDPS?",
+      "options": [
+        "O mesmo motor faz as duas coisas",
+        "O IPS foi proibido em empresas",
+        "O IDS e o IPS são bem diferentes",
+        "O IDS só existe na teoria"
+      ],
+      "correct": 0,
+      "explain": "<b>O que muda é o modo de operação.</b>"
+    },
+    {
+      "topic": "ids",
+      "statement": "O que é um NIDS?",
+      "options": [
+        "Detecção que olha o host",
+        "Firewall que lê e-mail",
+        "Backup que roda à noite",
+        "Detecção que olha a rede"
+      ],
+      "correct": 3,
+      "explain": "<b>N de network.</b> O HIDS fica no host."
+    },
+    {
+      "topic": "ids",
+      "statement": "O que o HIDS observa?",
+      "options": [
+        "Pacotes que passam no switch da rede",
+        "Processos, arquivos e logs da máquina",
+        "Sinais de rádio do ponto de acesso",
+        "Cabos ligados atrás do servidor"
+      ],
+      "correct": 1,
+      "explain": "<b>H de host.</b> O EDR é a evolução dele."
+    },
+    {
+      "topic": "ids",
+      "statement": "Qual é a vantagem da detecção por assinatura?",
+      "options": [
+        "Funciona sem olhar o tráfego",
+        "Não precisa de atualização alguma",
+        "É rápida e precisa no que já conhece",
+        "Descobre qualquer ataque nunca visto"
+      ],
+      "correct": 2,
+      "explain": "<b>Como antivírus clássico:</b> não pega ataque novo."
+    },
+    {
+      "topic": "ids",
+      "statement": "Qual é a vantagem da detecção por anomalia?",
+      "options": [
+        "Nunca gera nenhum alarme falso",
+        "Pode pegar um ataque novo (0-day)",
+        "Dispensa conhecer o normal da rede",
+        "Só precisa de uma lista de vírus"
+      ],
+      "correct": 1,
+      "explain": "<b>Compara com o normal;</b> em troca, erra mais."
+    },
+    {
+      "topic": "ids",
+      "statement": "O que esta regra do Suricata procura?",
+      "code": "alert tcp any any -> $HTTP_SERVERS any (\n  msg:\"WEB-ATTACK SQL Injection Attempt\";\n  content:\"UNION\"; nocase; http_uri;\n  content:\"SELECT\"; nocase; http_uri;\n  sid:1000001; rev:1;)",
+      "options": [
+        "Arquivos grandes na pasta do servidor",
+        "Senhas fracas no banco de usuários",
+        "UNION e SELECT na URL da requisição",
+        "Vinte pacotes SYN em três segundos"
+      ],
+      "correct": 2,
+      "explain": "<b>content + http_uri:</b> olha dentro da requisição."
+    },
+    {
+      "topic": "ids",
+      "statement": "E esta outra regra, detecta o quê?",
+      "code": "alert tcp any any -> $HOME_NET any (\n  flags:S;\n  threshold:type threshold, track by_src, count 20, seconds 3;\n  sid:1000002; rev:1;)",
+      "options": [
+        "Um usuário com senha vencida",
+        "Uma possível varredura de portas",
+        "Um e-mail com anexo suspeito",
+        "Uma injeção de SQL no formulário"
+      ],
+      "correct": 1,
+      "explain": "<b>20 SYN em 3 segundos</b> da mesma origem: comportamento de varredura."
+    },
+    {
+      "topic": "desafios",
+      "statement": "O que é um falso positivo?",
+      "options": [
+        "Um arquivo que sumiu do servidor",
+        "Algo legítimo marcado como ataque",
+        "Uma senha certa que foi recusada ontem",
+        "Um ataque real que não foi visto"
+      ],
+      "correct": 1,
+      "explain": "<b>Alarme errado.</b> Em modo IPS pode derrubar uma venda."
+    },
+    {
+      "topic": "desafios",
+      "statement": "O que é um falso negativo?",
+      "options": [
+        "Um tráfego normal que foi bloqueado",
+        "Um ataque real que não foi detectado",
+        "Uma regra repetida dentro do firewall",
+        "Um alerta que chegou duas vezes"
+      ],
+      "correct": 1,
+      "explain": "<b>A violação acontece em silêncio.</b>"
+    },
+    {
+      "topic": "desafios",
+      "statement": "Por que muitas empresas começam em modo IDS antes do IPS?",
+      "options": [
+        "Porque o IDS bloqueia melhor que o IPS",
+        "Para economizar a conta de luz do servidor",
+        "Para ajustar as regras sem bloquear cliente",
+        "Porque o IPS não funciona em rede cabeada"
+      ],
+      "correct": 2,
+      "explain": "<b>Calibrar primeiro, bloquear depois.</b>"
+    },
+    {
+      "topic": "desafios",
+      "statement": "Um IDS no meio da rede olha tráfego HTTPS. O que ele vê?",
+      "options": [
+        "Bytes cifrados, não o conteúdo",
+        "O código-fonte do servidor",
+        "A foto do usuário que acessa",
+        "A senha e o texto da mensagem"
+      ],
+      "correct": 0,
+      "explain": "<b>Cifrado:</b> sem decifrar, não há o que inspecionar."
+    },
+    {
+      "topic": "desafios",
+      "statement": "O que é a terminação TLS na borda?",
+      "options": [
+        "Trocar o HTTPS por HTTP no celular do cliente",
+        "Desligar a criptografia do site para sempre",
+        "Decifrar no balanceador ou WAF para inspecionar",
+        "Guardar as senhas decifradas dentro do log"
+      ],
+      "correct": 2,
+      "explain": "<b>Ponto natural de inspeção:</b> decifra, inspeciona e recifra."
+    },
+    {
+      "topic": "desafios",
+      "statement": "O que é egress filtering?",
+      "options": [
+        "Restringir o tráfego de saída",
+        "Esconder o nome da rede",
+        "Apagar os arquivos mais antigos",
+        "Restringir o tráfego de entrada"
+      ],
+      "correct": 0,
+      "explain": "<b>Egress = saída.</b>"
+    },
+    {
+      "topic": "desafios",
+      "statement": "Por que a saída sem filtro é perigosa?",
+      "options": [
+        "O usuário baixa arquivos grandes demais à noite",
+        "O invasor abre uma conexão de dentro para fora",
+        "O site fica mais lento para quem está longe",
+        "O servidor esquece o próprio endereço na rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Reverse shell e vazamento de dados</b> usam a saída."
+    },
+    {
+      "topic": "desafios",
+      "statement": "A aula diz que firewall que só filtra entrada é como uma porta...",
+      "options": [
+        "com vidro que deixa ver dentro",
+        "com tranca só do lado de fora",
+        "com a chave pendurada na rua",
+        "com duas trancas bem iguais"
+      ],
+      "correct": 1,
+      "explain": "<b>Quem já está dentro sai livremente.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "Qual é a ideia da defesa em profundidade?",
+      "options": [
+        "Uma camada só, mas que seja perfeita",
+        "Nenhuma camada, para ganhar desempenho",
+        "Várias camadas, porque uma pode falhar",
+        "Camadas iguais repetidas no mesmo lugar"
+      ],
+      "correct": 2,
+      "explain": "<b>Redundância assumindo falha.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "Qual é a ordem das camadas, de fora para dentro?",
+      "options": [
+        "Host e aplicação, perímetro, dados, rede",
+        "Rede, dados, perímetro, host e aplicação",
+        "Perímetro, rede, host e aplicação, dados",
+        "Dados, host e aplicação, rede, perímetro"
+      ],
+      "correct": 2,
+      "explain": "<b>Do portão até o cofre.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "NGFW e WAF ficam em que camada?",
+      "options": [
+        "Dados",
+        "Perímetro",
+        "Aplicação",
+        "Rede interna"
+      ],
+      "correct": 1,
+      "explain": "<b>São o portão.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "Criptografia e backup protegem qual camada?",
+      "options": [
+        "A da borda",
+        "A da rede",
+        "A do host",
+        "A dos dados"
+      ],
+      "correct": 3,
+      "explain": "<b>Última linha:</b> dados cifrados não têm valor para o atacante."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "EDR e IDS/IPS ficam em que camada, segundo a aula?",
+      "options": [
+        "Perímetro externo",
+        "Dados e backup",
+        "Cabo e energia",
+        "Host e aplicação"
+      ],
+      "correct": 3,
+      "explain": "<b>Junto da máquina e do programa.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "O que significa “assume breach”?",
+      "options": [
+        "Projetar pensando em quando a falha vier",
+        "Aceitar o ataque sem tentar se defender",
+        "Contratar quem já invadiu a sua empresa",
+        "Garantir que nunca haverá uma invasão"
+      ],
+      "correct": 0,
+      "explain": "<b>Não é “se”, é “quando”.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "O que faz um SOC?",
+      "options": [
+        "Vende computadores para empresas",
+        "Desenvolve jogos para celulares",
+        "Conserta o cabo de rede da rua",
+        "Monitora os alertas o tempo todo"
+      ],
+      "correct": 3,
+      "explain": "<b>Equipe 24 horas por dia.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "Um microsserviço infectado tenta falar direto com o de pagamentos. O que impede?",
+      "options": [
+        "Senha do Wi-Fi da sala",
+        "Proxy de saída da LAN",
+        "Backup do fim do dia",
+        "NetworkPolicy ou mTLS"
+      ],
+      "correct": 3,
+      "explain": "<b>Segmentação Leste-Oeste.</b>"
+    },
+    {
+      "topic": "profundidade",
+      "statement": "O mesmo script tenta abrir conexão para um IP externo na porta 4444. O que barra?",
+      "options": [
+        "O índice do banco de dados",
+        "O registro MX do domínio",
+        "O filtro de saída (egress)",
+        "O certificado do site"
+      ],
+      "correct": 2,
+      "explain": "<b>Saída restrita:</b> destino desconhecido não passa."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "Como as três últimas aulas da disciplina se ligam?",
+      "options": [
+        "Backup, depois senhas, depois antivírus",
+        "Pentest, depois controles, depois riscos",
+        "Riscos, depois pentest, depois controles",
+        "Controles, depois riscos, depois pentest"
+      ],
+      "correct": 2,
+      "explain": "<b>Aula 06, 07 e 08:</b> conhecer o risco, achar a falha e impedir."
+    }
+  ],
+  "historias": [
+    {
+      "titulo": "A porta estava certa",
+      "resumo": "Uma loja segura pela porta e vulnerável pelo conteúdo.",
+      "cenas": [
+        {
+          "texto": "A loja liberou só a porta 443. Dias depois, um pentest extraiu dados pelo campo de busca. O chefe pergunta como.",
+          "pergunta": "O que você responde?",
+          "opcoes": [
+            {
+              "texto": "Alguém deixou a porta 22 aberta no fim",
+              "certa": false,
+              "retorno": "Só a 443 estava aberta. O problema foi o conteúdo."
+            },
+            {
+              "texto": "O cabo da loja estava com mau contato",
+              "certa": false,
+              "retorno": "Um cabo ruim não causa SQL Injection."
+            },
+            {
+              "texto": "O firewall viu a porta, não o conteúdo",
+              "certa": true,
+              "retorno": "Isso. O envelope estava certo; a carta, não."
+            }
+          ]
+        },
+        {
+          "texto": "Ele pede uma solução para a borda.",
+          "pergunta": "O que instalar?",
+          "opcoes": [
+            {
+              "texto": "Um WAF na frente da aplicação",
+              "certa": true,
+              "retorno": "Certo. Ele lê o payload e barra a injeção."
+            },
+            {
+              "texto": "Mais um filtro de pacotes igual",
+              "certa": false,
+              "retorno": "Continuaria olhando só o cabeçalho."
+            },
+            {
+              "texto": "Um proxy de saída nos caixas",
+              "certa": false,
+              "retorno": "O ataque vem de fora para dentro."
+            }
+          ]
+        }
+      ],
+      "fim": "Porta liberada não é conteúdo confiável: quem lê o conteúdo é o WAF."
+    },
+    {
+      "titulo": "O login era verdadeiro",
+      "resumo": "Um invasor entra pela VPN com senha roubada.",
+      "cenas": [
+        {
+          "texto": "Às 3h, uma estação tenta falar direto com o serviço de pagamentos. O login da VPN era válido.",
+          "pergunta": "Como se chama o que o invasor está fazendo?",
+          "opcoes": [
+            {
+              "texto": "Terminação TLS",
+              "certa": false,
+              "retorno": "Isso é decifrar na borda."
+            },
+            {
+              "texto": "Falso positivo",
+              "certa": false,
+              "retorno": "O ataque é real."
+            },
+            {
+              "texto": "Movimento lateral",
+              "certa": true,
+              "retorno": "Isso: anda de um sistema a outro por dentro."
+            }
+          ]
+        },
+        {
+          "texto": "Você precisa impedir que isso chegue aos pagamentos.",
+          "pergunta": "Qual controle usar?",
+          "opcoes": [
+            {
+              "texto": "NetworkPolicy, negando por padrão",
+              "certa": true,
+              "retorno": "Certo: só o serviço de pedidos fala com pagamentos."
+            },
+            {
+              "texto": "Uma DMZ só para as impressoras",
+              "certa": false,
+              "retorno": "Não protege o caminho entre serviços."
+            },
+            {
+              "texto": "Mais banda na internet da empresa",
+              "certa": false,
+              "retorno": "Velocidade não segura ninguém."
+            }
+          ]
+        }
+      ],
+      "fim": "Estar dentro da rede não é motivo para ser confiado: isso é Zero Trust."
+    }
+  ],
+  "jogos": [
+    {
+      "tipo": "classificar",
+      "nome": "Qual geração de firewall?",
+      "instrucao": "Ligue a característica ao tipo.",
+      "categorias": [
+        "Filtro de pacotes",
+        "Stateful",
+        "Proxy",
+        "NGFW"
+      ],
+      "itens": [
+        {
+          "texto": "Sem memória da conexão",
+          "categoria": "Filtro de pacotes",
+          "porque": "Julga cada pacote sozinho."
+        },
+        {
+          "texto": "Tabela de estados",
+          "categoria": "Stateful",
+          "porque": "Lembra da conversa."
+        },
+        {
+          "texto": "Faz duas conexões",
+          "categoria": "Proxy",
+          "porque": "Termina uma e abre outra."
+        },
+        {
+          "texto": "Libera Teams e nega BitTorrent na 443",
+          "categoria": "NGFW",
+          "porque": "Reconhece a aplicação."
+        },
+        {
+          "texto": "Security Group da AWS",
+          "categoria": "Stateful",
+          "porque": "Libera a resposta sozinho."
+        },
+        {
+          "texto": "NACL da AWS",
+          "categoria": "Filtro de pacotes",
+          "porque": "É sem estado."
+        },
+        {
+          "texto": "Filtra sites por categoria",
+          "categoria": "Proxy",
+          "porque": "Enxerga a URL."
+        },
+        {
+          "texto": "Traz IPS integrado",
+          "categoria": "NGFW",
+          "porque": "Próxima geração."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "IDS ou IPS?",
+      "instrucao": "Quem faz isso?",
+      "categorias": [
+        "IDS",
+        "IPS"
+      ],
+      "itens": [
+        {
+          "texto": "Só avisa",
+          "categoria": "IDS",
+          "porque": "Detecção."
+        },
+        {
+          "texto": "Bloqueia na hora",
+          "categoria": "IPS",
+          "porque": "Prevenção."
+        },
+        {
+          "texto": "Fica fora do caminho",
+          "categoria": "IDS",
+          "porque": "Vê uma cópia."
+        },
+        {
+          "texto": "Fica inline",
+          "categoria": "IPS",
+          "porque": "No caminho do tráfego."
+        },
+        {
+          "texto": "É a câmera",
+          "categoria": "IDS",
+          "porque": "Vê e avisa."
+        },
+        {
+          "texto": "É o segurança",
+          "categoria": "IPS",
+          "porque": "Vê e age."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Em que camada da defesa?",
+      "instrucao": "Coloque cada controle na camada.",
+      "categorias": [
+        "Perímetro",
+        "Rede",
+        "Host e aplicação",
+        "Dados"
+      ],
+      "itens": [
+        {
+          "texto": "WAF",
+          "categoria": "Perímetro",
+          "porque": "Na borda."
+        },
+        {
+          "texto": "NGFW",
+          "categoria": "Perímetro",
+          "porque": "Na borda."
+        },
+        {
+          "texto": "NetworkPolicy",
+          "categoria": "Rede",
+          "porque": "Segmenta por dentro."
+        },
+        {
+          "texto": "Security Group",
+          "categoria": "Rede",
+          "porque": "Controla quem fala com quem."
+        },
+        {
+          "texto": "EDR",
+          "categoria": "Host e aplicação",
+          "porque": "Vigia a máquina."
+        },
+        {
+          "texto": "Código seguro",
+          "categoria": "Host e aplicação",
+          "porque": "Protege o programa."
+        },
+        {
+          "texto": "Criptografia",
+          "categoria": "Dados",
+          "porque": "Última linha."
+        },
+        {
+          "texto": "Backup",
+          "categoria": "Dados",
+          "porque": "Recupera o que se perdeu."
+        }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "Do portão ao cofre",
+      "instrucao": "Ordene as camadas de fora para dentro.",
+      "sequencia": [
+        "Perímetro",
+        "Rede",
+        "Host e aplicação",
+        "Dados"
+      ],
+      "explicacao": "É a defesa em profundidade."
+    }
+  ],
+  "livro": [
+    {
+      "titulo": "O porteiro da rede",
+      "resumo": "O que é firewall e as quatro gerações.",
+      "paginas": [
+        "O firewall é um porteiro entre redes. Ele olha quem vem (IP), por qual porta e para onde vai, e decide se a conversa pode acontecer. Ele não escuta a conversa. A boa postura é negar tudo e liberar só o necessário.",
+        "Filtro de pacotes: julga cada pacote sozinho, sem memória. Stateful: anota as conversas numa tabela, e a resposta entra sem regra nova. Proxy: um intermediário que faz duas conexões e vê a aplicação. NGFW: soma tudo e ainda reconhece a aplicação, o usuário e ameaças."
+      ],
+      "guardar": [
+        "Firewall decide se a conexão pode existir",
+        "Stateful lembra da conversa",
+        "NGFW vê aplicação e usuário"
+      ]
+    },
+    {
+      "titulo": "O envelope e a carta",
+      "resumo": "Por que o WAF é diferente do firewall.",
+      "paginas": [
+        "Um site tinha só a porta 443 aberta, tudo certo, e mesmo assim sofreu SQL Injection. O firewall viu o envelope (porta certa) e deixou passar. O veneno estava na carta, dentro da requisição.",
+        "O WAF lê a carta. Ele trabalha na camada 7, entende HTTP e JSON e compara com regras prontas, como as do OWASP CRS. Por isso pega SQL Injection e XSS mesmo vindo de um IP normal."
+      ],
+      "guardar": [
+        "Firewall vê o envelope; WAF lê a carta",
+        "WAF fica na borda, antes da aplicação"
+      ]
+    },
+    {
+      "titulo": "A sala de visitas",
+      "resumo": "DMZ, VPC em três camadas e o movimento por dentro.",
+      "paginas": [
+        "A DMZ é a sala de visitas: o que a internet precisa ver fica lá, entre dois firewalls. Se alguém invadir a sala, ainda não entrou no quarto. Na nuvem, a mesma ideia vira três subnets: pública (balanceador), privada (serviços) e isolada (banco, sem rota para a internet).",
+        "Norte-Sul é quem entra e sai pela porta da frente. Leste-Oeste é quem anda entre os cômodos. Um invasor com senha roubada entra pela frente sem alarme e tenta andar por dentro: isso é movimento lateral. NetworkPolicy e mTLS barram."
+      ],
+      "guardar": [
+        "DMZ contém o dano",
+        "Banco na subnet isolada",
+        "Leste-Oeste: NetworkPolicy e mTLS"
+      ]
+    },
+    {
+      "titulo": "A câmera e o segurança",
+      "resumo": "IDS, IPS e seus desafios.",
+      "paginas": [
+        "O IDS é a câmera: vê e avisa. O IPS é o segurança: vê e age, porque fica no caminho. Por assinatura, ele reconhece o que já conhece. Por anomalia, estranha o que foge do normal, e por isso pega ataque novo, mas erra mais.",
+        "Falso positivo: barrou quem era bom. Falso negativo: deixou passar quem era mau. Por isso se começa como IDS e só depois se liga o bloqueio. Dois pontos cegos: o tráfego cifrado, que precisa ser decifrado na borda, e a saída (egress), que quase ninguém tranca."
+      ],
+      "guardar": [
+        "IDS avisa; IPS bloqueia",
+        "Falso positivo × falso negativo",
+        "Filtre também a saída"
+      ]
+    },
+    {
+      "titulo": "As camadas da cebola",
+      "resumo": "Defesa em profundidade.",
+      "paginas": [
+        "Nenhuma camada precisa ser perfeita. Perímetro: NGFW e WAF. Rede: Security Groups e NetworkPolicy. Host e aplicação: IDS/IPS, EDR e código seguro. Dados: criptografia, backup e controle de acesso.",
+        "“Assume breach” é planejar para quando a falha acontecer. E a disciplina fecha o ciclo: conhecer os riscos, achar a falha no pentest e construir o controle que a impede."
+      ],
+      "guardar": [
+        "Perímetro, rede, host e aplicação, dados",
+        "Não é “se”, é “quando”"
+      ]
+    }
+  ],
+  "termos": [],
+  "praticas": [
+    {
+      "enunciado": "Qual sigla é o firewall que lê o conteúdo da aplicação (camada 7)?",
+      "aceitas": [
+        "waf"
+      ],
+      "texto": true,
+      "dica": "Web Application...",
+      "explicacao": "WAF: Web Application Firewall."
+    },
+    {
+      "enunciado": "Qual sigla DETECTA E BLOQUEIA: IDS ou IPS?",
+      "aceitas": [
+        "ips"
+      ],
+      "texto": true,
+      "dica": "P de prevenção.",
+      "explicacao": "IPS bloqueia; IDS avisa."
+    },
+    {
+      "enunciado": "Como se chama a zona entre dois firewalls? (sigla)",
+      "aceitas": [
+        "dmz"
+      ],
+      "texto": true,
+      "dica": "Zona desmilitarizada.",
+      "explicacao": "DMZ."
+    },
+    {
+      "enunciado": "Ataque real que não foi detectado é falso...",
+      "aceitas": [
+        "negativo",
+        "falso negativo"
+      ],
+      "texto": true,
+      "dica": "O contrário de positivo.",
+      "explicacao": "Falso negativo."
+    },
+    {
+      "enunciado": "Filtrar o tráfego de SAÍDA é fazer ... filtering (em inglês).",
+      "aceitas": [
+        "egress",
+        "egress filtering"
+      ],
+      "texto": true,
+      "dica": "Contrário de ingress.",
+      "explicacao": "Egress filtering."
+    }
+  ]
+}

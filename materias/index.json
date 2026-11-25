@@ -110,7 +110,8 @@
           }
         ]
       }
-    ]
+    ],
+    "periodo": "2º período"
   },
   {
     "id": "programacao",
@@ -434,7 +435,8 @@
         ]
       }
     ],
-    "temaPadrao": "bim2"
+    "temaPadrao": "bim2",
+    "periodo": "2º período"
   },
   {
     "id": "requisitos",
@@ -563,7 +565,8 @@
         ]
       }
     ],
-    "temaPadrao": "bim2"
+    "temaPadrao": "bim2",
+    "periodo": "2º período"
   },
   {
     "id": "redes",
@@ -793,7 +796,8 @@
         "bimestre": 2
       }
     ],
-    "temaPadrao": "bim2"
+    "temaPadrao": "bim2",
+    "periodo": "2º período"
   },
   {
     "id": "testing",
@@ -944,7 +948,8 @@
           }
         ]
       }
-    ]
+    ],
+    "periodo": "2º período"
   },
   {
     "id": "pensamento",
@@ -1074,6 +1079,160 @@
             "rotulo": "Conceito dos pilares"
           }
         ]
+      }
+    ],
+    "periodo": "1º período"
+  },
+  {
+    "id": "linguagem",
+    "aba": "Linguagem e Interação",
+    "titulo": "Linguagem e Interação",
+    "professor": "1º período",
+    "periodo": "1º período",
+    "cores": [
+      "#e88f8f",
+      "#f4c4c4"
+    ],
+    "aguardando": "Ainda não recebi o material de Linguagem e Interação. Mande os PDFs, os slides ou a prova, e eu crio as perguntas, o livro, as histórias e os jogos.",
+    "temas": []
+  },
+  {
+    "id": "cyberseguranca",
+    "aba": "Cybersegurança",
+    "titulo": "Cybersegurança",
+    "professor": "1º período · portal do Prof. Patrick",
+    "periodo": "1º período",
+    "cores": [
+      "#6fd0c0",
+      "#b5e8df"
+    ],
+    "foco": {
+      "confianca": "Média",
+      "base": "Só a Aula 08 está publicada no portal do professor (as Aulas 01 a 07 estão como “em breve”). Tudo aqui vem dela.",
+      "assuntos": [
+        "Firewall: as quatro gerações e como ler uma regra",
+        "WAF, DMZ e VPC em três camadas",
+        "IDS, IPS, falso positivo e falso negativo",
+        "Zero Trust, filtro de saída e defesa em profundidade"
+      ]
+    },
+    "temas": [
+      {
+        "id": "firewall",
+        "rotulo": "🧱 Firewall: as 4 gerações"
+      },
+      {
+        "id": "regras",
+        "rotulo": "📜 Lendo regras"
+      },
+      {
+        "id": "waf",
+        "rotulo": "✉️ WAF"
+      },
+      {
+        "id": "dmz",
+        "rotulo": "🏛️ DMZ e VPC"
+      },
+      {
+        "id": "lateral",
+        "rotulo": "🧭 Norte-Sul, Leste-Oeste e Zero Trust"
+      },
+      {
+        "id": "ids",
+        "rotulo": "📹 IDS e IPS"
+      },
+      {
+        "id": "desafios",
+        "rotulo": "⚖️ Falsos alarmes, TLS e saída"
+      },
+      {
+        "id": "profundidade",
+        "rotulo": "🧅 Defesa em profundidade"
+      }
+    ]
+  },
+  {
+    "id": "direito",
+    "aba": "Direito Digital",
+    "titulo": "Direito Digital",
+    "professor": "1º período",
+    "periodo": "1º período",
+    "cores": [
+      "#b0a3f0",
+      "#d6cff8"
+    ],
+    "aguardando": "Ainda não recebi o material de Direito Digital. Mande os PDFs, os slides ou a prova, e eu crio as perguntas, o livro, as histórias e os jogos.",
+    "temas": []
+  },
+  {
+    "id": "internet",
+    "aba": "Desenvolvimento para Internet",
+    "titulo": "Desenvolvimento para Internet",
+    "professor": "1º período",
+    "periodo": "1º período",
+    "cores": [
+      "#f0a36f",
+      "#f7cfb3"
+    ],
+    "aguardando": "Ainda não recebi o material de Desenvolvimento para Internet. Mande os PDFs, os slides ou a prova, e eu crio as perguntas, o livro, as histórias e os jogos.",
+    "temas": []
+  },
+  {
+    "id": "ambientacao",
+    "aba": "Ambientação Tech",
+    "titulo": "Ambientação Tech",
+    "professor": "1º período · portal do Prof. Patrick",
+    "periodo": "1º período",
+    "cores": [
+      "#8fd06f",
+      "#c6e8b5"
+    ],
+    "foco": {
+      "confianca": "Média",
+      "base": "As Aulas 06 a 09 estão publicadas no portal do professor (01 a 05 estão como “em breve”). O portal marca a turma como 5º período: confira se a sua turma usa o mesmo material.",
+      "assuntos": [
+        "Aula 06: sistemas de arquivos, permissões e fragmentação",
+        "Aula 07: hypervisor, recursos da VM, snapshot e clone",
+        "Aula 08: IP, máscara, gateway, DNS e diagnóstico",
+        "Aula 09: revisão de redes"
+      ]
+    },
+    "temas": [
+      {
+        "id": "arquivos",
+        "rotulo": "🗂️ Aula 06 · Sistemas de arquivos"
+      },
+      {
+        "id": "metadados",
+        "rotulo": "🏷️ Aula 06 · Metadados e permissões"
+      },
+      {
+        "id": "alocacao",
+        "rotulo": "🧮 Aula 06 · Blocos e fragmentação"
+      },
+      {
+        "id": "vm",
+        "rotulo": "🖥️ Aula 07 · Hypervisor e VM"
+      },
+      {
+        "id": "recursos",
+        "rotulo": "⚙️ Aula 07 · Recursos e instalação"
+      },
+      {
+        "id": "snapshot",
+        "rotulo": "📸 Aula 07 · Snapshot e clone"
+      },
+      {
+        "id": "redeip",
+        "rotulo": "🌐 Aula 08 · IP, gateway e DNS"
+      },
+      {
+        "id": "diag",
+        "rotulo": "🩺 Aula 08 · Diagnóstico"
+      },
+      {
+        "id": "revredes",
+        "rotulo": "🔁 Aula 09 · Revisão de redes"
       }
     ]
   }

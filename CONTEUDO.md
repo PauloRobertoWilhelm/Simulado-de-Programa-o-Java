@@ -47,6 +47,7 @@ Perguntas por tema:
 - **Topo:** uma aba para cada matéria.
 - **Tela inicial da matéria:**
   - professor e título;
+  - painel de estudo (perguntas já vistas, para revisar e melhor nota);
   - caixa "O que estudar para a próxima prova";
   - botão "Ler em voz alta";
   - as cinco partes: Livro, Perguntas, Histórias, Jogos e Praticar.
@@ -55,7 +56,8 @@ Perguntas por tema:
   - temas especiais: Tudo misturado, Só as que errei (aparece quando há erros) e Contas novas (só em Redes);
   - temas por bimestre;
   - rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas;
-  - botão "Iniciar prova".
+  - barra com o resumo da rodada e o botão "Iniciar prova";
+  - quantidade de perguntas e barrinha do já visto em cada tema.
 - **Durante a prova:**
   - contador e cronômetro, com a barra de progresso;
   - botões "Ouvir a pergunta" e "Responder falando";

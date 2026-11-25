@@ -70,6 +70,8 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `css/styles.css`: visual geral
 - `css/materias.css`: visual das abas, histórias e jogos
 - `css/moderno.css`: visual atual (fundo neutro, uma cor por matéria, fonte Geist); apagar a linha dele no index.html volta ao visual antigo
+- `css/estudo.css`: acabamento (painel de progresso, temas, código colorido, resultado); apagar a linha dele no index.html volta ao visual anterior
+- `js/visual.js`: código Java colorido e painel de progresso
 - `sw.js`: service worker, que permite usar o app sem internet
 - `manifest.json`: configuração para instalar como aplicativo
 - `script.js`: cópia antiga da lógica, que não é carregada pela página

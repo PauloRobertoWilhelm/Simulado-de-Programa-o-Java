@@ -1,0 +1,202 @@
+/*
+  Arquivo: css/estudo.css
+  Papel no sistema: acabamento do visual. É carregado por último, depois de moderno.css.
+  Cuida do painel de progresso, dos botões de tema, do código colorido, da barra de iniciar e do resultado.
+  Para voltar ao visual anterior: apague a linha de estudo.css no index.html.
+*/
+
+/* ===== MEDIDAS E CORES ===== */
+:root {
+  /* Fundo da página. Um pouco mais claro que antes, para os cartões se destacarem. */
+  --bg: #0c1017;
+  /* Cartões. */
+  --surface: #131923;
+  /* Botões dentro dos cartões. */
+  --surface-2: #1a2230;
+  /* Botões com o mouse em cima. */
+  --surface-3: #222c3c;
+  /* Texto secundário mais claro: contraste melhor para ler bastante tempo. */
+  --muted: #b3bdcc;
+  /* Legendas. */
+  --muted-2: #8e9aac;
+}
+
+/* Largura do app no computador: cabe mais conteúdo sem esticar demais as linhas. */
+.app { width: min(100%, 980px); }
+
+/* ===== ABAS DAS MATÉRIAS ===== */
+/* Cada aba ganha um traço na cor da própria matéria. --cor-aba vem do JavaScript. */
+.subject-tab { position: relative; padding-top: 22px; }
+/* O traço colorido, centralizado em cima do nome. */
+.subject-tab::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 18px;
+  height: 4px;
+  margin-left: -9px;
+  border-radius: 4px;
+  background: var(--cor-aba, var(--muted-2));
+  /* Apagado enquanto a aba não está aberta. */
+  opacity: 0.55;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+/* Com o mouse em cima ou com a aba aberta, o traço acende e cresce. */
+.subject-tab:hover::before, .subject-tab[aria-selected="true"]::before { opacity: 1; transform: scaleX(1.5); }
+
+/* ===== PAINEL DE ESTUDO (já vistas, para revisar, melhor nota) ===== */
+.painel-estudo {
+  /* Três blocos: o primeiro é o dobro dos outros, porque tem a barra. */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1px;
+  margin: 4px 0 16px;
+  /* O fundo aparece no vão de 1px entre os blocos e vira a linha divisória. */
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+/* Cada bloco do painel. */
+.painel-item { background: var(--surface); padding: 14px 18px; display: grid; gap: 4px; align-content: start; }
+/* Nome do número. */
+.painel-item span { color: var(--muted-2); font-size: 0.82rem; }
+/* O número. */
+.painel-item strong { font-size: 1.3rem; font-weight: 650; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+/* Trilho da barra. */
+.painel-barra { height: 6px; margin-top: 6px; border-radius: 6px; background: var(--surface-3); overflow: hidden; }
+/* Parte preenchida: cresce por escala, que é mais leve para o navegador que mudar a largura. */
+.painel-barra i { display: block; height: 100%; background: var(--primary); border-radius: 6px; transform-origin: left; transform: scaleX(var(--pct, 0)); transition: transform 0.5s var(--ease); }
+
+/* ===== BOTÕES DE TEMA ===== */
+/* Grade de colunas iguais: os botões ficam alinhados, e não cada um de um tamanho. */
+#topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
+/* Título do bimestre ocupa a linha inteira. */
+#topic-grid .topic-group { grid-column: 1 / -1; margin: 10px 0 0; }
+/* O botão do tema: nome de um lado, quantidade do outro. */
+#topic-grid .tpick {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 50px;
+  padding: 11px 14px;
+  text-align: left;
+  /* Esconde só a ponta da barrinha nos cantos arredondados. */
+  overflow: hidden;
+}
+/* Quantidade de perguntas, à direita. */
+.tpick-n { color: var(--muted-2); font-weight: 500; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.tpick.on .tpick-n { color: var(--primary); }
+/* Barrinha embaixo do botão: quanto do tema você já viu. */
+#topic-grid .tpick::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  transform-origin: left;
+  transform: scaleX(var(--pct, 0));
+}
+
+/* ===== BARRA DE INICIAR ===== */
+/* Gruda no rodapé da tela enquanto você escolhe: não precisa rolar até o fim para começar. */
+.barra-iniciar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 300px);
+  align-items: center;
+  gap: 14px;
+  padding: 10px 10px 10px 18px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  background: var(--surface-2);
+  box-shadow: 0 14px 34px rgba(3, 7, 18, 0.55);
+}
+/* Resumo do que vai começar, por exemplo "20 questões · Tudo do 2º bimestre". */
+.resumo-rodada { color: var(--muted); font-size: 0.92rem; text-align: left; }
+.resumo-rodada b { color: var(--text); font-weight: 600; }
+/* O botão dentro da barra não precisa da própria sombra. */
+.barra-iniciar .btn { margin: 0; box-shadow: none; }
+
+/* ===== PERGUNTA E CÓDIGO ===== */
+/* Mais respiro em volta da pergunta. */
+.q-card { padding: 26px; }
+/* Enunciado com largura boa de ler. */
+.q-statement { max-width: 70ch; }
+/* Código maior, com espaço entre as linhas. */
+pre.code { font-size: 0.93rem; line-height: 1.7; padding: 16px 18px; background: #0a0e15; border-left: 3px solid var(--primary); color: #d7deea; tab-size: 2; }
+/* Cores do código: palavra reservada, texto, número, comentário, classe e método. */
+.cod-pal { color: #6fb3f2; }
+.cod-txt { color: #7fcf9f; }
+.cod-num { color: #e8a36b; }
+.cod-com { color: #8391a5; font-style: italic; }
+.cod-cla { color: #e6c76a; }
+.cod-met { color: #c9a5ee; }
+/* Explicação com letra um pouco maior, porque é onde se aprende. */
+.feedback .why { font-size: 1rem; line-height: 1.65; max-width: 72ch; }
+/* Botões de voz na mesma fonte e com altura boa para o dedo. */
+.mini-btn { font-family: var(--font-body); min-height: 40px; padding: 8px 14px; font-size: 0.86rem; background: var(--surface-2); border: 1px solid var(--border); transition: background 0.2s var(--ease); }
+.mini-btn:hover { background: var(--surface-3); }
+
+/* ===== RESULTADO ===== */
+/* O cartão do resultado estava inclinado (efeito 3D antigo). Agora fica reto. */
+.result-shell { transform: none; animation: none; padding: 26px 20px 18px; }
+/* O anel mostra a nota de verdade: a parte colorida é a porcentagem de acertos. */
+.score-ring { background: conic-gradient(var(--primary) calc(var(--pct, 0) * 1turn), var(--surface-3) 0); }
+/* Número da nota sem brilho em volta. */
+.score-ring .pct { text-shadow: none; }
+/* Números e legendas do resultado em tamanho legível. */
+.result-stat .value, .metric-pill strong { font-size: 1.35rem; }
+.result-stat .label, .metric-label, .theme-progress-head, .progress-title-row { font-size: 0.85rem; }
+/* Mensagem do resultado sem o fundo roxo antigo. */
+.performance-message { background: var(--surface-2); text-shadow: none; }
+/* Revisão dos erros: letra de tamanho normal e só uma faixa vermelha na lateral. */
+.review-card.bad { background: var(--surface-2); border: 1px solid var(--border); border-left: 3px solid var(--error); }
+.review-answer { font-size: 0.95rem; line-height: 1.6; }
+.review-badge { background: transparent; border: none; padding: 0; color: var(--error); font-size: 0.82rem; }
+/* Selo e mensagem do resultado sem brilho: a cor fica só no texto. */
+.badge-status.fail, .badge-status.pass { background: var(--surface-2); box-shadow: none; font-size: 0.85rem; }
+.badge-status.fail { color: var(--error); }
+.badge-status.pass { color: var(--success); }
+.performance-message.fail, .performance-message.pass, .performance-message.average { background: var(--surface-2); border-color: var(--border); box-shadow: none; }
+/* Botões do fim: o de compartilhar ocupa a linha, os outros ficam em duas colunas. */
+.acoes-resultado { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.acoes-resultado #btn-share { grid-column: 1 / -1; }
+
+/* ===== LIVRO, HISTÓRIAS E JOGOS ===== */
+/* Cartões em duas colunas no computador: menos rolagem para achar o capítulo. */
+@media (min-width: 760px) {
+  .activity-list { grid-template-columns: 1fr 1fr; }
+  /* O que não é cartão (como "0 de 14 capítulos lidos") ocupa a linha toda. */
+  .activity-list > :not(.activity-card) { grid-column: 1 / -1; }
+}
+.activity-card { border-radius: var(--r-md); padding: 18px; align-content: start; transition: background 0.2s var(--ease), transform 0.15s var(--ease); }
+.activity-card:hover { transform: translateY(-2px); }
+.activity-card:active { transform: scale(0.99); }
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Painel: a barra em cima e os dois números embaixo. */
+  .painel-estudo { grid-template-columns: 1fr 1fr; }
+  .painel-item:first-child { grid-column: 1 / -1; }
+  /* Temas em uma coluna só. */
+  #topic-grid { grid-template-columns: 1fr; }
+  /* Barra de iniciar: o resumo em cima e o botão embaixo. */
+  .barra-iniciar { grid-template-columns: 1fr; gap: 8px; padding: 10px 12px; bottom: 8px; }
+  .resumo-rodada { text-align: center; }
+  /* Pergunta com menos margem, para sobrar espaço para o código. */
+  .q-card { padding: 18px; }
+  pre.code { font-size: 0.84rem; padding: 14px; }
+}
+
+/* Quem pede menos movimento no sistema não vê as animações. */
+@media (prefers-reduced-motion: reduce) {
+  .painel-barra i, .subject-tab::before, .activity-card { transition: none; }
+}

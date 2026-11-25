@@ -40,6 +40,8 @@
 <link rel="stylesheet" href="css/materias.css" />
 <!-- Visual novo: vem por último para valer por cima dos outros dois arquivos. -->
 <link rel="stylesheet" href="css/moderno.css" />
+<!-- Acabamento: painel de progresso, temas, código colorido e resultado. -->
+<link rel="stylesheet" href="css/estudo.css" />
 </head>
 <body>
 <div class="app">
@@ -52,6 +54,16 @@
     <div class="intro">
       <span class="badge-top"><span class="pulse"></span><span id="subject-badge">UNIPAR</span></span>
       <h1>Simulado de<br><span class="grad" id="subject-title">cada matéria</span></h1>
+
+      <!-- Painel de estudo: quanto da matéria você já viu. Preenchido por Visual.painel() em js/visual.js. -->
+      <div class="painel-estudo" id="painel-estudo">
+        <!-- Perguntas já vistas, com a barra. -->
+        <div class="painel-item"><span>Perguntas já vistas</span><strong id="est-vistas">0 de 0</strong><div class="painel-barra"><i id="est-barra"></i></div></div>
+        <!-- Quantas estão na lista "Só as que errei". -->
+        <div class="painel-item"><span>Para revisar</span><strong id="est-erros">0</strong></div>
+        <!-- Melhor nota já tirada nesta matéria. -->
+        <div class="painel-item"><span>Melhor nota</span><strong id="est-melhor">–</strong></div>
+      </div>
 
       <!-- Caixa que abre e fecha com o que deve cair na próxima prova. Preenchida pelo JavaScript. -->
       <details class="focus-box hidden" id="focus-box">
@@ -108,7 +120,12 @@
           <div class="len-grid" id="len-grid"></div>
         </div>
 
-        <button class="btn" id="btn-start" disabled>Carregando questões...</button>
+        <!-- Barra que acompanha a tela: mostra o que foi escolhido e o botão de começar. -->
+        <div class="barra-iniciar">
+          <!-- Resumo da rodada, escrito por atualizarResumo(). aria-live avisa o leitor de tela quando muda. -->
+          <span class="resumo-rodada" id="resumo-rodada" aria-live="polite"></span>
+          <button class="btn" id="btn-start" disabled>Carregando questões...</button>
+        </div>
       </div>
 
       <!-- Mensagem para matérias sem perguntas. -->
@@ -210,7 +227,7 @@
       <div id="review-list" class="review-list"></div>
     </div>
 
-    <div style="margin-top:8px;display:flex;flex-direction:column;gap:10px">
+    <div class="acoes-resultado">
       <button class="btn" id="btn-share">📤 Compartilhar resultado</button>
       <button class="btn btn-ghost" id="btn-review">📚 Revisar erros</button>
       <button class="btn btn-ghost" id="btn-repeat">↻ Repetir mesma prova</button>
@@ -223,6 +240,8 @@
 
 <!-- voz.js vem primeiro, porque os outros arquivos usam as funções de fala e de escuta dele. -->
 <script src="js/voz.js"></script>
+<!-- visual.js cuida só da aparência: código colorido e painel de progresso. -->
+<script src="js/visual.js"></script>
 <script src="js/livro.js"></script>
 <script src="js/historias.js"></script>
 <script src="js/jogos.js"></script>
@@ -431,6 +450,8 @@ document.addEventListener("DOMContentLoaded", () => {
       aba.setAttribute("role", "tab");
       aba.dataset.materia = materia.id;
       aba.textContent = materia.aba;
+      // Cor da matéria, usada pelo traço em cima do nome (css/estudo.css).
+      aba.style.setProperty("--cor-aba", materia.cores[0]);
       aba.addEventListener("click", () => abrirMateria(materia));
       subjectTabs.append(aba);
     });
@@ -625,8 +646,20 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.className = `tpick${ligado ? " on" : ""}`;
     // Guarda o id do tema para o filtro saber o que foi escolhido.
     botao.dataset.topic = tema.id;
-    // Texto visível do botão.
-    botao.textContent = tema.rotulo;
+    // Texto visível do botão, dentro de um <span> para o número ficar do outro lado.
+    const nome = document.createElement("span");
+    // Classe do nome: atualizarResumo() lê o texto daqui.
+    nome.className = "tpick-nome";
+    // Escreve o nome do tema.
+    nome.textContent = tema.rotulo;
+    // Coloca o nome no botão.
+    botao.append(nome);
+    // Perguntas deste tema, e quantas delas já apareceram para você.
+    const doTema = questoesDoTema(tema.id);
+    // Lê a lista de vistas uma vez só por botão.
+    const vistas = lerMapa("vistas");
+    // Mostra a quantidade e a barrinha do que já foi visto. "Só as que errei" já traz o número no nome.
+    if (tema.id !== "erros") window.Visual.marcarTema(botao, doTema.length, doTema.filter(q => vistas[idDaPergunta(q)]).length);
     // Devolve o botão pronto.
     return botao;
   }
@@ -686,6 +719,37 @@ document.addEventListener("DOMContentLoaded", () => {
     topicGrid.replaceChildren(...itens);
     // As quantidades dependem do tema escolhido, então são refeitas.
     montarQuantidades();
+    // O painel de progresso acompanha: muda depois de cada rodada.
+    atualizarPainel();
+  }
+
+  // atualizarPainel() manda os números da matéria para o painel de estudo.
+  function atualizarPainel() {
+    // Lista das perguntas já vistas nesta matéria.
+    const vistas = lerMapa("vistas");
+    // Preenche o painel (js/visual.js).
+    window.Visual.painel({
+      // Total de perguntas da matéria.
+      total: bank.length,
+      // Quantas já apareceram pelo menos uma vez.
+      vistas: bank.filter(q => vistas[idDaPergunta(q)]).length,
+      // Quantas estão na lista de erros.
+      erros: questoesDoTema("erros").length,
+      // Melhor porcentagem salva.
+      melhor: Number(loadProgressState().bestScore || 0)
+    });
+  }
+
+  // atualizarResumo() escreve o que vai começar, como "20 questões · Aula 10 · For".
+  function atualizarResumo() {
+    // Botão do tema marcado.
+    const marcado = topicGrid.querySelector(".tpick.on .tpick-nome");
+    // Quantidade em destaque. textContent impede que o texto vire código.
+    const numero = document.createElement("b");
+    // Escreve a quantidade.
+    numero.textContent = `${selectedLen} questões`;
+    // Junta a quantidade e o nome do tema na caixa do resumo.
+    document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${marcado ? marcado.textContent : "Tudo misturado"}`);
   }
 
   // TAMANHOS: rodadas oferecidas. Acrescentar um número aqui cria um botão novo.
@@ -725,6 +789,8 @@ document.addEventListener("DOMContentLoaded", () => {
       botao.append(numero, rotulo);
       return botao;
     }));
+    // A quantidade mudou: refaz o resumo da barra de iniciar.
+    atualizarResumo();
   }
 
   // Um único ouvinte cuida de todos os botões, mesmo os criados depois.
@@ -743,6 +809,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".len").forEach(b => b.classList.remove("on"));
     botao.classList.add("on");
     selectedLen = parseInt(botao.dataset.len);
+    // Mostra a nova quantidade na barra de iniciar.
+    atualizarResumo();
   });
 
   // mostrarAbas() esconde as abas durante a prova, para ninguém trocar de matéria sem querer.
@@ -1029,7 +1097,8 @@ document.addEventListener("DOMContentLoaded", () => {
     barFill.style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`; // calcula porcentagem de progresso e cresce a barra visualmente
 
     let html = `<div class="q-statement">${q.statement}</div>`; // monta o enunciado da pergunta em HTML
-    if (q.code) html += `<pre class="code">${q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`; // se houver código, ele é exibido em bloco monoespaçado e com caracteres escapados
+    // Código: em Programação sai colorido (Java); nas outras matérias sai sem cor, só com os sinais < e > protegidos.
+    if (q.code) html += `<pre class="code">${materiaAtual.id === "programacao" ? window.Visual.colorirJava(q.code) : q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
 
     let optionsMapped = q.options.map((texto, index) => ({
       textoOriginal: texto, // guarda o texto da alternativa exatamente como veio do JSON
@@ -1286,6 +1355,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const elapsedTime = Math.max(0, (timeLimitSeconds || totalQuestions * 60) - timeLeft);
 
     document.getElementById("res-pct").textContent = `${pct}%`;
+    // O anel é pintado até a porcentagem de acertos (0 a 1).
+    document.querySelector(".score-ring").style.setProperty("--pct", pct / 100);
     document.getElementById("res-frac").textContent = `${score}/${totalQuestions}`;
     document.getElementById("res-nota").textContent = (pct / 10).toFixed(1).replace(".", ",");
     document.getElementById("res-acertos").textContent = score;
@@ -1367,9 +1438,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       : isMedium
         ? {
-            border: '#9A8BFF',
-            fill: 'rgba(154, 139, 255, 0.15)',
-            point: '#E0D9FF',
+            // Nota do meio: usa a cor da matéria aberta, em vez do roxo antigo.
+            border: materiaAtual.cores[0],
+            fill: `${materiaAtual.cores[0]}26`,
+            point: materiaAtual.cores[1],
             glow: 'rgba(154, 139, 255, 0.22)'
           }
         : {

@@ -3,7 +3,7 @@
   "materias": {
     "design": {
       "aba": "Design Front End",
-      "perguntas": 103,
+      "perguntas": 396,
       "guardadas": 0,
       "revisao": 0,
       "livro": 0,
@@ -19,16 +19,16 @@
         "avaliacao"
       ],
       "porTema": {
-        "ihc": 18,
-        "heuristicas": 22,
-        "norman": 20,
-        "visual": 22,
+        "ihc": 33,
+        "heuristicas": 123,
+        "norman": 79,
+        "visual": 140,
         "avaliacao": 21
       }
     },
     "programacao": {
       "aba": "Programação de Computadores",
-      "perguntas": 627,
+      "perguntas": 733,
       "guardadas": 0,
       "revisao": 10,
       "livro": 10,
@@ -52,14 +52,14 @@
       ],
       "porTema": {
         "logica": 17,
-        "selecao": 17,
-        "operadores": 22,
+        "selecao": 31,
+        "operadores": 60,
         "repeticao": 66,
         "for": 64,
-        "dowhile": 56,
-        "strings": 76,
+        "dowhile": 68,
+        "strings": 105,
         "arrays": 71,
-        "matrizes": 66,
+        "matrizes": 79,
         "classes": 51,
         "metodos": 65,
         "parametros": 56
@@ -94,7 +94,7 @@
     },
     "redes": {
       "aba": "Fundamentos de Redes",
-      "perguntas": 550,
+      "perguntas": 1031,
       "guardadas": 0,
       "revisao": 16,
       "livro": 15,
@@ -118,16 +118,16 @@
         "arquitetura": 6,
         "enlace": 3,
         "meios": 3,
-        "rede": 314,
-        "transporte": 122,
-        "aplicacao": 63,
+        "rede": 458,
+        "transporte": 287,
+        "aplicacao": 163,
         "integradora": 7,
-        "status": 26
+        "status": 98
       }
     },
     "testing": {
       "aba": "Testing, Compliance e QA",
-      "perguntas": 107,
+      "perguntas": 336,
       "guardadas": 0,
       "revisao": 0,
       "livro": 0,
@@ -144,9 +144,9 @@
         "compliance"
       ],
       "porTema": {
-        "tipos": 18,
-        "tecnicas": 18,
-        "praticas": 17,
+        "tipos": 106,
+        "tecnicas": 130,
+        "praticas": 46,
         "qualidade": 15,
         "principios": 18,
         "compliance": 21
@@ -190,7 +190,7 @@
     },
     "cyberseguranca": {
       "aba": "Cybersegurança",
-      "perguntas": 69,
+      "perguntas": 252,
       "guardadas": 0,
       "revisao": 0,
       "livro": 5,
@@ -210,13 +210,13 @@
       ],
       "porTema": {
         "firewall": 14,
-        "regras": 5,
-        "waf": 8,
+        "regras": 83,
+        "waf": 23,
         "dmz": 7,
-        "lateral": 7,
+        "lateral": 37,
         "ids": 10,
-        "desafios": 8,
-        "profundidade": 10
+        "desafios": 53,
+        "profundidade": 25
       }
     },
     "direito": {
@@ -247,7 +247,7 @@
     },
     "ambientacao": {
       "aba": "Ambientação Tech",
-      "perguntas": 90,
+      "perguntas": 387,
       "guardadas": 0,
       "revisao": 0,
       "livro": 4,
@@ -268,14 +268,14 @@
       ],
       "porTema": {
         "arquivos": 11,
-        "metadados": 11,
-        "alocacao": 10,
+        "metadados": 103,
+        "alocacao": 61,
         "vm": 9,
-        "recursos": 11,
-        "snapshot": 7,
-        "redeip": 10,
-        "diag": 8,
-        "revredes": 13
+        "recursos": 24,
+        "snapshot": 46,
+        "redeip": 39,
+        "diag": 60,
+        "revredes": 34
       }
     }
   },

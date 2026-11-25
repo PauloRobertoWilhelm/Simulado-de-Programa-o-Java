@@ -18,31 +18,31 @@ _Contagem de 25/11/2026, gerada por `node ferramentas/inventario.js --atualizar`
 
 | Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Revisão | Livro | Histórias | Jogos | Termos | Práticas |
 |---|---|---|---|---|---|---|---|---|
-| Design Front End | 103 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
-| Programação de Computadores | 627 | 0 | 10 | 10 | 7 | 8 | 14 | 20 |
+| Design Front End | 396 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
+| Programação de Computadores | 733 | 0 | 10 | 10 | 7 | 8 | 14 | 20 |
 | Engenharia de Requisitos | 531 | 0 | 7 | 9 | 10 | 8 | 16 | 11 |
-| Fundamentos de Redes | 550 | 0 | 16 | 15 | 11 | 9 | 25 | 25 |
-| Testing, Compliance e QA | 107 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
+| Fundamentos de Redes | 1031 | 0 | 16 | 15 | 11 | 9 | 25 | 25 |
+| Testing, Compliance e QA | 336 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
 | Pensamento Computacional | 582 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | Linguagem e Interação | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cybersegurança | 69 | 0 | 0 | 5 | 2 | 4 | 0 | 5 |
+| Cybersegurança | 252 | 0 | 0 | 5 | 2 | 4 | 0 | 5 |
 | Direito Digital | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Desenvolvimento para Internet | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Ambientação Tech | 90 | 0 | 0 | 4 | 2 | 4 | 0 | 6 |
+| Ambientação Tech | 387 | 0 | 0 | 4 | 2 | 4 | 0 | 6 |
 
 Perguntas por tema:
 
-- **Design Front End:** ihc 18, heuristicas 22, norman 20, visual 22, avaliacao 21
-- **Programação de Computadores:** logica 17, selecao 17, operadores 22, repeticao 66, for 64, dowhile 56, strings 76, arrays 71, matrizes 66, classes 51, metodos 65, parametros 56
+- **Design Front End:** ihc 33, heuristicas 123, norman 79, visual 140, avaliacao 21
+- **Programação de Computadores:** logica 17, selecao 31, operadores 60, repeticao 66, for 64, dowhile 68, strings 105, arrays 71, matrizes 79, classes 51, metodos 65, parametros 56
 - **Engenharia de Requisitos:** processo 4, tipos 5, metodologias 5, casosdeuso 298, historias 40, validacao 179
-- **Fundamentos de Redes:** modelos 6, arquitetura 6, enlace 3, meios 3, rede 314, transporte 122, aplicacao 63, integradora 7, status 26
-- **Testing, Compliance e QA:** tipos 18, tecnicas 18, praticas 17, qualidade 15, principios 18, compliance 21
+- **Fundamentos de Redes:** modelos 6, arquitetura 6, enlace 3, meios 3, rede 458, transporte 287, aplicacao 163, integradora 7, status 98
+- **Testing, Compliance e QA:** tipos 106, tecnicas 130, praticas 46, qualidade 15, principios 18, compliance 21
 - **Pensamento Computacional:** portugol 312, fluxo 61, logica 166, pc 43
 - **Linguagem e Interação:** 
-- **Cybersegurança:** firewall 14, regras 5, waf 8, dmz 7, lateral 7, ids 10, desafios 8, profundidade 10
+- **Cybersegurança:** firewall 14, regras 83, waf 23, dmz 7, lateral 37, ids 10, desafios 53, profundidade 25
 - **Direito Digital:** 
 - **Desenvolvimento para Internet:** 
-- **Ambientação Tech:** arquivos 11, metadados 11, alocacao 10, vm 9, recursos 11, snapshot 7, redeip 10, diag 8, revredes 13
+- **Ambientação Tech:** arquivos 11, metadados 103, alocacao 61, vm 9, recursos 24, snapshot 46, redeip 39, diag 60, revredes 34
 <!-- inventario:fim -->
 
 ## Material recebido (PDFs)
@@ -91,6 +91,7 @@ Perguntas por tema:
 - **Variações (21/11/2026):** para Programação, Redes e Requisitos chegarem a 500, como Pensamento, entraram perguntas do mesmo tipo com valores trocados, só com os assuntos do material. **Programação:** 332 de "o que este código imprime?" (Aulas 8 a 16), todas compiladas e executadas no Java antes de entrar. **Redes:** 319 contas fixas, das mesmas que a rodada "contas" sorteia (sub-rede, TTL, IPv6, TCP). **Requisitos:** 376 com os conceitos dos slides 05 e 06 (include, extend, exceção, cenário principal, generalização e as 7 técnicas) aplicados a 19 sistemas de exemplo. Os sistemas das atividades do Classroom ficaram de fora. Design e Testing seguem como estão até chegar o material do 2º bimestre.
 - **Conteúdo de 25/11/2026:** 127 perguntas em Programação (conceito, sintaxe e os códigos dos slides, executados no Java), 50 em Redes (26 no tema novo “Grupos HTTP · 1xx a 5xx”) e 31 em Requisitos (figuras e pegadinhas do resumão). Mais um capítulo de livro em cada uma, 8 jogos e 16 práticas.
 - **Fora por pedido do Paulo (20/11/2026):** Labs Tools I, Diversidade Cultural e Extensão II.
+- **Variações de 25/11/2026:** 1.589 perguntas novas com os conceitos do material e situações ou números novos: Redes +481, Design +293, Ambientação Tech +297, Testing +229, Cybersegurança +183 e Programação +106 (executadas no Java).
 - **1º período (25/11/2026):** Cybersegurança (Aula 08 do portal) e Ambientação Tech (Aulas 06 a 09 do portal) com conteúdo. Linguagem e Interação, Direito Digital e Desenvolvimento para Internet têm aba, mas aguardam o material do Paulo: sem perguntas inventadas.
 
 ## Histórico de remoções
@@ -100,6 +101,7 @@ Perguntas por tema:
 | 05/11/2026 | Aba "Engenharia de Software" (vazia, sem perguntas: é o nome do curso, não uma matéria) | Apagada a pedido do Paulo |
 | 20/11/2026 | 18 perguntas de Programação que cobravam assuntos fora dos slides | Voltaram para o simulado no mesmo dia, a pedido do Paulo ("era criar mais, não deletar o que já tinha") |
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
+| 25/11/2026 | (nada saiu) Entraram 1.589 perguntas (variações) em seis matérias | `materias/*.json` |
 | 25/11/2026 | (nada saiu) Entraram 5 abas do 1º período e o visual futurista | `materias/*.json`, `css/futuro.css` |
 | 25/11/2026 | (nada saiu) Cada pergunta ganhou o campo `assunto` (168 conteúdos) e o app ganhou o visual dourado | `materias/*.json`, `css/ouro.css` |
 | 25/11/2026 | (nada saiu) Entrou a aba Revisão em Programação (10 assuntos), Requisitos (7) e Redes (16, com números diferentes dos do trabalho) | campo `revisao` em `materias/*.json` |

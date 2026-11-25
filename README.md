@@ -6,13 +6,13 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 | Aba | Perguntas | 2º bimestre | Livro | Treinos | Histórias | Jogos |
 |---|---|---|---|---|---|---|
-| Design Front End | 103 | ainda não | não | não | 2 | 4 |
-| Programação de Computadores | 627 | 571 (Aulas 8 a 16) | 10 capítulos | 14 termos e 20 práticas | 7 | 9 |
+| Design Front End | 396 | ainda não | não | não | 2 | 4 |
+| Programação de Computadores | 733 | 625 (Aulas 8 a 16) | 10 capítulos | 14 termos e 20 práticas | 7 | 9 |
 | Engenharia de Requisitos | 531 | 517 (só slides 05 e 06 e o resumão) | 9 capítulos | 16 termos e 11 práticas | 10 | 9 |
-| Fundamentos de Redes | 550 + contas sorteadas | 532 | 15 capítulos | 25 termos e 25 práticas | 11 | 10 |
-| Testing, Compliance e QA | 107 | ainda não | não | não | 2 | 4 |
-| Cybersegurança | 69 | 1º período (Aula 08) | 5 capítulos | 5 práticas | 2 | 5 |
-| Ambientação Tech | 90 | 1º período (Aulas 06 a 09) | 4 capítulos | 6 práticas | 2 | 5 |
+| Fundamentos de Redes | 1.031 + contas sorteadas | 1.013 | 15 capítulos | 25 termos e 25 práticas | 11 | 10 |
+| Testing, Compliance e QA | 336 | ainda não | não | não | 2 | 4 |
+| Cybersegurança | 252 | 1º período (Aula 08) | 5 capítulos | 5 práticas | 2 | 5 |
+| Ambientação Tech | 387 | 1º período (Aulas 06 a 09) | 4 capítulos | 6 práticas | 2 | 5 |
 | Linguagem e Interação, Direito Digital e Desenvolvimento para Internet | 0 | aguardam material | não | não | 0 | 0 |
 | Pensamento Computacional | 582 | 1º período | 2 capítulos | não | 0 | 1 |
 

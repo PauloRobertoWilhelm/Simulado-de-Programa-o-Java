@@ -1390,6 +1390,3012 @@
       "correct": 1,
       "explain": "<b>Ligar as pontas:</b> a rastreabilidade liga cada requisito aos testes e às evidências (resultados, prints, logs). Auditor não aceita “confia em mim”.",
       "assunto": "normas"
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da academia, um campo aceita de 20 a 67. Quais valores a análise do valor limite testa?",
+      "options": [
+        "21, 22, 66 e 67",
+        "20, 21, 67 e 69",
+        "19, 20, 67 e 68",
+        "18, 20, 67 e 69"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (19 e 20), o máximo e o vizinho de fora (67 e 68)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da academia, o campo aceita de 20 a 67. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "19, 68 e 72",
+        "21, 22 e 72",
+        "19, 44 e 72",
+        "20, 44 e 67"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 20, de 20 a 67 e maior que 67."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da transportadora, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da transportadora\nQuando vou registrar a entrega\nEntão vejo a rota do dia em dia",
+      "options": [
+        "estou na tela da transportadora",
+        "vejo a rota do dia em dia",
+        "vou registrar a entrega",
+        "nenhum, falta o cenário"
+      ],
+      "correct": 2,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Medir se abrir a ordem de serviço leva até 2 segundos",
+        "Enviar placa do carro em branco, por experiência",
+        "Testar sozinho o método que calcula a mão de obra"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Usar a biblioteca sem roteiro, anotando achados",
+        "Refazer os testes do acervo após um conserto",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula a multa"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da farmácia, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da farmácia\nQuando vou vender o remédio\nEntão vejo o lote do remédio em dia",
+      "options": [
+        "vou vender o remédio agora",
+        "vejo o lote do remédio em dia",
+        "estou na tela da farmácia aberta",
+        "uso o sistema da farmácia e paro"
+      ],
+      "correct": 1,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Medir se agendar a consulta leva até 2 segundos",
+        "Refazer os testes da agenda médica após um conserto",
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Checar rápido se a clínica abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Ver se renovar o empréstimo atualiza o acervo no banco",
+        "Checar rápido se a biblioteca abre e faz o básico",
+        "Medir se renovar o empréstimo leva até 2 segundos",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da farmácia: cliente VIP E compra acima de R$ 400,00 ganha 10% de desconto. Um VIP gastou R$ 580,00. Quanto ele paga?",
+      "options": [
+        "R$ 522,00",
+        "R$ 570,00",
+        "R$ 464,00",
+        "R$ 580,00"
+      ],
+      "correct": 0,
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 580 é R$ 58,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Testar sozinho o método que calcula o desconto",
+        "Enviar número da receita em branco, por experiência",
+        "Checar rápido se a farmácia abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Usar o pet shop sem roteiro, anotando achados",
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Medir se marcar o banho leva até 2 segundos",
+        "Checar rápido se o pet shop abre e faz o básico"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da transportadora: cliente VIP E compra acima de R$ 400,00 ganha 15% de desconto. Um VIP gastou R$ 500,00. Quanto ele paga?",
+      "options": [
+        "R$ 500,00",
+        "R$ 425,00",
+        "R$ 485,00",
+        "R$ 350,00"
+      ],
+      "correct": 1,
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 500 é R$ 75,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Testar sozinho o método que calcula a mensalidade",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Percorrer a matrícula inteira, do começo ao fim, na tela",
+        "Refazer os testes da grade de aulas após um conserto"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do estacionamento, um campo aceita de 10 a 80. Quais valores a análise do valor limite testa?",
+      "options": [
+        "10, 11, 80 e 82",
+        "8, 10, 80 e 82",
+        "9, 10, 80 e 81",
+        "11, 12, 79 e 80"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (9 e 10), o máximo e o vizinho de fora (80 e 81)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Checar rápido se a loja online abre e faz o básico",
+        "Ver se fechar o pedido atualiza o estoque no banco",
+        "Percorrer a compra inteira, do começo ao fim, na tela",
+        "Usar a loja online sem roteiro, anotando achados"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Usar a oficina sem roteiro, anotando achados",
+        "Checar rápido se a oficina abre e faz o básico",
+        "Refazer os testes das peças após um conserto",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do banco, um campo aceita de 15 a 65. Quais valores a análise do valor limite testa?",
+      "options": [
+        "13, 15, 65 e 67",
+        "14, 15, 65 e 66",
+        "16, 17, 64 e 65",
+        "15, 16, 65 e 67"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (14 e 15), o máximo e o vizinho de fora (65 e 66)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do pet shop, um campo aceita de 2 a 35. Quais valores a análise do valor limite testa?",
+      "options": [
+        "2, 3, 35 e 37",
+        "3, 4, 34 e 35",
+        "1, 2, 35 e 36",
+        "0, 2, 35 e 37"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (35 e 36)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Usar o restaurante sem roteiro, anotando achados",
+        "Checar rápido se o restaurante abre e faz o básico",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Ver se enviar a comanda atualiza o cardápio no banco"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da clínica, um campo aceita de 1 a 52. Quais valores a análise do valor limite testa?",
+      "options": [
+        "-1, 1, 52 e 54",
+        "0, 1, 52 e 53",
+        "1, 2, 52 e 54",
+        "2, 3, 51 e 52"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (0 e 1), o máximo e o vizinho de fora (52 e 53)."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do banco, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do banco\nQuando vou fazer um Pix\nEntão vejo o saldo em dia",
+      "options": [
+        "vejo o saldo em dia",
+        "vou fazer um Pix",
+        "nenhum, falta o cenário",
+        "estou na tela do banco"
+      ],
+      "correct": 1,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da escola: cliente VIP E compra acima de R$ 150,00 ganha 10% de desconto. Um VIP gastou R$ 290,00. Quanto ele paga?",
+      "options": [
+        "R$ 261,00",
+        "R$ 232,00",
+        "R$ 290,00",
+        "R$ 280,00"
+      ],
+      "correct": 0,
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 290 é R$ 29,00 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do estacionamento, o campo aceita de 10 a 80. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "10, 45 e 80",
+        "9, 81 e 85",
+        "9, 45 e 85",
+        "11, 12 e 85"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 10, de 10 a 80 e maior que 80."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do estacionamento: cliente VIP E compra acima de R$ 350,00 ganha 10%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 350,00 exatos",
+        "VIP que gastou R$ 700,00 no mês",
+        "VIP que gastou R$ 400,00 no dia",
+        "VIP que gastou R$ 351,00 no dia"
+      ],
+      "correct": 0,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 350,00 a condição é falsa."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Usar o estacionamento sem roteiro, anotando achados",
+        "Enviar placa do veículo em branco, por experiência",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Medir se registrar a saída leva até 2 segundos"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Refazer os testes do lote do remédio após um conserto",
+        "Enviar número da receita em branco, por experiência",
+        "Percorrer a venda com receita, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes do boletim após um conserto",
+        "Enviar nota da prova em branco, por experiência",
+        "Ver se lançar a nota atualiza o boletim no banco",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do banco, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do banco\nQuando vou fazer um Pix\nEntão vejo o saldo em dia",
+      "options": [
+        "vejo o saldo em dia",
+        "uso o sistema do banco e paro",
+        "estou na tela do banco aberta",
+        "vou fazer um Pix agora"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da academia, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Checar rápido se a academia abre e faz o básico",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Testar sozinho o método que calcula a mensalidade",
+        "Enviar data da aula em branco, por experiência"
+      ],
+      "correct": 3,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Usar a transportadora sem roteiro, anotando achados",
+        "Checar rápido se a transportadora abre e faz o básico",
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Percorrer a entrega inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Refazer os testes da lista de faixas após um conserto",
+        "Percorrer a assinatura inteira, do começo ao fim, na tela",
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Checar rápido se o app de música abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Enviar peso da carga em branco, por experiência",
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Medir se registrar a entrega leva até 2 segundos",
+        "Refazer os testes da rota do dia após um conserto"
+      ],
+      "correct": 0,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Ver se registrar a saída atualiza as vagas no banco",
+        "Usar o estacionamento sem roteiro, anotando achados",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Checar rápido se o estacionamento abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da loja online: cliente VIP E compra acima de R$ 450,00 ganha 5% de desconto. Um VIP gastou R$ 490,00. Quanto ele paga?",
+      "options": [
+        "R$ 441,00",
+        "R$ 490,00",
+        "R$ 485,00",
+        "R$ 465,50"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 490 é R$ 24,50 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Testar sozinho o método que calcula as diárias",
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Refazer os testes da ocupação após um conserto",
+        "Checar rápido se o hotel abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Usar a biblioteca sem roteiro, anotando achados",
+        "Medir se renovar o empréstimo leva até 2 segundos",
+        "Enviar código do livro em branco, por experiência",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do banco: cliente VIP E compra acima de R$ 100,00 ganha 10%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 101,00 no dia",
+        "VIP que gastou R$ 200,00 no mês",
+        "VIP que gastou R$ 100,00 exatos",
+        "VIP que gastou R$ 150,00 no dia"
+      ],
+      "correct": 2,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 100,00 a condição é falsa."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da biblioteca, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da biblioteca\nQuando vou renovar o empréstimo\nEntão vejo o acervo em dia",
+      "options": [
+        "vou renovar o empréstimo",
+        "vejo o acervo em dia",
+        "nenhum, falta o cenário",
+        "estou na tela da biblioteca"
+      ],
+      "correct": 0,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Medir se abrir a ordem de serviço leva até 2 segundos",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Enviar placa do carro em branco, por experiência",
+        "Testar sozinho o método que calcula a mão de obra"
+      ],
+      "correct": 2,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Ver se enviar a comanda atualiza o cardápio no banco",
+        "Enviar número da mesa em branco, por experiência",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Checar rápido se o restaurante abre e faz o básico"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se registrar a saída atualiza as vagas no banco",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Usar o estacionamento sem roteiro, anotando achados",
+        "Enviar placa do veículo em branco, por experiência"
+      ],
+      "correct": 3,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Medir se escolher a poltrona leva até 2 segundos",
+        "Refazer os testes do mapa da sala após um conserto",
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Testar sozinho o método que calcula a meia-entrada"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do estacionamento, o campo aceita de 2 a 22. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "2, 12 e 22",
+        "1, 12 e 27",
+        "3, 4 e 27",
+        "1, 23 e 27"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 22 e maior que 22."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do banco: cliente VIP E compra acima de R$ 100,00 ganha 10% de desconto. Um VIP gastou R$ 140,00. Quanto ele paga?",
+      "options": [
+        "R$ 126,00",
+        "R$ 112,00",
+        "R$ 130,00",
+        "R$ 140,00"
+      ],
+      "correct": 0,
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 140 é R$ 14,00 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da escola: cliente VIP E compra acima de R$ 150,00 ganha 10%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 200,00 no dia",
+        "VIP que gastou R$ 150,00 exatos",
+        "VIP que gastou R$ 300,00 no mês",
+        "VIP que gastou R$ 151,00 no dia"
+      ],
+      "correct": 1,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 150,00 a condição é falsa."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da loja online: cliente VIP E compra acima de R$ 450,00 ganha 5%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 450,00 exatos",
+        "VIP que gastou R$ 900,00 no mês",
+        "VIP que gastou R$ 451,00 no dia",
+        "VIP que gastou R$ 500,00 no dia"
+      ],
+      "correct": 0,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 450,00 a condição é falsa."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da farmácia, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da farmácia\nQuando vou vender o remédio\nEntão vejo o lote do remédio em dia",
+      "options": [
+        "vejo o lote do remédio em dia",
+        "vou vender o remédio",
+        "nenhum, falta o cenário",
+        "estou na tela da farmácia"
+      ],
+      "correct": 1,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Medir se registrar a entrega leva até 2 segundos",
+        "Refazer os testes da rota do dia após um conserto",
+        "Usar a transportadora sem roteiro, anotando achados",
+        "Ver se registrar a entrega atualiza a rota do dia no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Checar rápido se a oficina abre e faz o básico",
+        "Refazer os testes das peças após um conserto",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Usar a oficina sem roteiro, anotando achados"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes da ficha do animal após um conserto",
+        "Enviar peso do animal em branco, por experiência",
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Ver se marcar o banho atualiza a ficha do animal no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do cinema, um campo aceita de 3 a 21. Quais valores a análise do valor limite testa?",
+      "options": [
+        "4, 5, 20 e 21",
+        "1, 3, 21 e 23",
+        "3, 4, 21 e 23",
+        "2, 3, 21 e 22"
+      ],
+      "correct": 3,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (21 e 22)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da biblioteca, um campo aceita de 30 a 65. Quais valores a análise do valor limite testa?",
+      "options": [
+        "30, 31, 65 e 67",
+        "28, 30, 65 e 67",
+        "31, 32, 64 e 65",
+        "29, 30, 65 e 66"
+      ],
+      "correct": 3,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (29 e 30), o máximo e o vizinho de fora (65 e 66)."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da loja online, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da loja online\nQuando vou fechar o pedido\nEntão vejo o estoque em dia",
+      "options": [
+        "vejo o estoque em dia",
+        "estou na tela da loja online aberta",
+        "uso o sistema da loja online e paro",
+        "vou fechar o pedido agora"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da clínica: cliente VIP E compra acima de R$ 200,00 ganha 5% de desconto. Um VIP gastou R$ 280,00. Quanto ele paga?",
+      "options": [
+        "R$ 280,00",
+        "R$ 266,00",
+        "R$ 275,00",
+        "R$ 252,00"
+      ],
+      "correct": 1,
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 280 é R$ 14,00 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do cinema, o campo aceita de 14 a 92. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "15, 16 e 97",
+        "13, 93 e 97",
+        "13, 53 e 97",
+        "14, 53 e 92"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 14, de 14 a 92 e maior que 92."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do restaurante, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do restaurante\nQuando vou enviar a comanda\nEntão vejo o cardápio em dia",
+      "options": [
+        "estou na tela do restaurante",
+        "nenhum, falta o cenário",
+        "vejo o cardápio em dia",
+        "vou enviar a comanda"
+      ],
+      "correct": 3,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da oficina, o campo aceita de 5 a 28. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "4, 17 e 33",
+        "6, 7 e 33",
+        "5, 17 e 28",
+        "4, 29 e 33"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 28 e maior que 28."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da transportadora, um campo aceita de 27 a 64. Quais valores a análise do valor limite testa?",
+      "options": [
+        "26, 27, 64 e 65",
+        "25, 27, 64 e 66",
+        "28, 29, 63 e 64",
+        "27, 28, 64 e 66"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (26 e 27), o máximo e o vizinho de fora (64 e 65)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da clínica, o campo aceita de 21 a 63. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "20, 64 e 68",
+        "20, 42 e 68",
+        "21, 42 e 63",
+        "22, 23 e 68"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 63 e maior que 63."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Checar rápido se a escola abre e faz o básico",
+        "Testar sozinho o método que calcula a média",
+        "Refazer os testes do boletim após um conserto",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da oficina: cliente VIP E compra acima de R$ 350,00 ganha 5% de desconto. Um VIP gastou R$ 510,00. Quanto ele paga?",
+      "options": [
+        "R$ 484,50",
+        "R$ 505,00",
+        "R$ 459,00",
+        "R$ 510,00"
+      ],
+      "correct": 0,
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 510 é R$ 25,50 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do cinema: cliente VIP E compra acima de R$ 400,00 ganha 5%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 401,00 no dia",
+        "VIP que gastou R$ 800,00 no mês",
+        "VIP que gastou R$ 400,00 exatos",
+        "VIP que gastou R$ 450,00 no dia"
+      ],
+      "correct": 2,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 400,00 a condição é falsa."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Usar a transportadora sem roteiro, anotando achados",
+        "Checar rápido se a transportadora abre e faz o básico",
+        "Refazer os testes da rota do dia após um conserto"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do banco, o campo aceita de 15 a 65. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "14, 66 e 70",
+        "16, 17 e 70",
+        "14, 40 e 70",
+        "15, 40 e 65"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 15, de 15 a 65 e maior que 65."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Checar rápido se a farmácia abre e faz o básico",
+        "Testar sozinho o método que calcula o desconto",
+        "Usar a farmácia sem roteiro, anotando achados",
+        "Ver se vender o remédio atualiza o lote do remédio no banco"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do pet shop, o campo aceita de 19 a 73. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "18, 46 e 78",
+        "19, 46 e 73",
+        "20, 21 e 78",
+        "18, 74 e 78"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 19, de 19 a 73 e maior que 73."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Ver se registrar a saída atualiza as vagas no banco",
+        "Checar rápido se o estacionamento abre e faz o básico",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Usar o estacionamento sem roteiro, anotando achados"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes da grade de aulas após um conserto",
+        "Percorrer a matrícula inteira, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula a mensalidade",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Refazer os testes do boletim após um conserto",
+        "Ver se lançar a nota atualiza o boletim no banco",
+        "Enviar nota da prova em branco, por experiência",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes da lista de faixas após um conserto",
+        "Percorrer a assinatura inteira, do começo ao fim, na tela",
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Checar rápido se o app de música abre e faz o básico"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Enviar nome da playlist em branco, por experiência",
+        "Checar rápido se o app de música abre e faz o básico",
+        "Refazer os testes da lista de faixas após um conserto"
+      ],
+      "correct": 1,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da academia, um campo aceita de 6 a 58. Quais valores a análise do valor limite testa?",
+      "options": [
+        "7, 8, 57 e 58",
+        "4, 6, 58 e 60",
+        "6, 7, 58 e 60",
+        "5, 6, 58 e 59"
+      ],
+      "correct": 3,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (58 e 59)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da biblioteca, um campo aceita de 5 a 45. Quais valores a análise do valor limite testa?",
+      "options": [
+        "3, 5, 45 e 47",
+        "5, 6, 45 e 47",
+        "4, 5, 45 e 46",
+        "6, 7, 44 e 45"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (45 e 46)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do cinema, o campo aceita de 3 a 21. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "2, 12 e 26",
+        "4, 5 e 26",
+        "3, 12 e 21",
+        "2, 22 e 26"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 3, de 3 a 21 e maior que 21."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da loja online, um campo aceita de 13 a 87. Quais valores a análise do valor limite testa?",
+      "options": [
+        "12, 13, 87 e 88",
+        "11, 13, 87 e 89",
+        "14, 15, 86 e 87",
+        "13, 14, 87 e 89"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (12 e 13), o máximo e o vizinho de fora (87 e 88)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da oficina, um campo aceita de 5 a 28. Quais valores a análise do valor limite testa?",
+      "options": [
+        "3, 5, 28 e 30",
+        "4, 5, 28 e 29",
+        "6, 7, 27 e 28",
+        "5, 6, 28 e 30"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (28 e 29)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da biblioteca: cliente VIP E compra acima de R$ 300,00 ganha 15% de desconto. Um VIP gastou R$ 400,00. Quanto ele paga?",
+      "options": [
+        "R$ 340,00",
+        "R$ 400,00",
+        "R$ 385,00",
+        "R$ 280,00"
+      ],
+      "correct": 0,
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 400 é R$ 60,00 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do restaurante, o campo aceita de 9 a 49. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "10, 11 e 54",
+        "8, 50 e 54",
+        "9, 29 e 49",
+        "8, 29 e 54"
+      ],
+      "correct": 3,
+      "explain": "<b>Três partições:</b> menor que 9, de 9 a 49 e maior que 49."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da escola, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Enviar nota da prova em branco, por experiência",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela",
+        "Ver se lançar a nota atualiza o boletim no banco",
+        "Checar rápido se a escola abre e faz o básico"
+      ],
+      "correct": 0,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Usar o cinema sem roteiro, anotando achados",
+        "Medir se escolher a poltrona leva até 2 segundos",
+        "Checar rápido se o cinema abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Usar o estacionamento sem roteiro, anotando achados",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Ver se registrar a saída atualiza as vagas no banco",
+        "Checar rápido se o estacionamento abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Checar rápido se o restaurante abre e faz o básico",
+        "Usar o restaurante sem roteiro, anotando achados",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Enviar número da mesa em branco, por experiência"
+      ],
+      "correct": 3,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Medir se reservar o quarto leva até 2 segundos",
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Refazer os testes da ocupação após um conserto",
+        "Enviar data de entrada em branco, por experiência"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da clínica, um campo aceita de 21 a 63. Quais valores a análise do valor limite testa?",
+      "options": [
+        "22, 23, 62 e 63",
+        "19, 21, 63 e 65",
+        "20, 21, 63 e 64",
+        "21, 22, 63 e 65"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (63 e 64)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da escola, o campo aceita de 6 a 21. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "6, 14 e 21",
+        "5, 22 e 26",
+        "5, 14 e 26",
+        "7, 8 e 26"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 21 e maior que 21."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Enviar peso do animal em branco, por experiência",
+        "Refazer os testes da ficha do animal após um conserto",
+        "Ver se marcar o banho atualiza a ficha do animal no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da academia, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da academia\nQuando vou marcar uma aula\nEntão vejo a grade de aulas em dia",
+      "options": [
+        "estou na tela da academia aberta",
+        "vou marcar uma aula agora",
+        "uso o sistema da academia e paro",
+        "vejo a grade de aulas em dia"
+      ],
+      "correct": 3,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da loja online, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da loja online\nQuando vou fechar o pedido\nEntão vejo o estoque em dia",
+      "options": [
+        "estou na tela da loja online",
+        "nenhum, falta o cenário",
+        "vejo o estoque em dia",
+        "vou fechar o pedido"
+      ],
+      "correct": 3,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da farmácia, um campo aceita de 12 a 99. Quais valores a análise do valor limite testa?",
+      "options": [
+        "10, 12, 99 e 101",
+        "11, 12, 99 e 100",
+        "13, 14, 98 e 99",
+        "12, 13, 99 e 101"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (11 e 12), o máximo e o vizinho de fora (99 e 100)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Usar a loja online sem roteiro, anotando achados",
+        "Ver se fechar o pedido atualiza o estoque no banco",
+        "Checar rápido se a loja online abre e faz o básico",
+        "Percorrer a compra inteira, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do restaurante: cliente VIP E compra acima de R$ 300,00 ganha 15%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 350,00 no dia",
+        "VIP que gastou R$ 300,00 exatos",
+        "VIP que gastou R$ 600,00 no mês",
+        "VIP que gastou R$ 301,00 no dia"
+      ],
+      "correct": 1,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 300,00 a condição é falsa."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Percorrer a compra inteira, do começo ao fim, na tela",
+        "Enviar CEP em branco, por experiência",
+        "Medir se fechar o pedido leva até 2 segundos",
+        "Testar sozinho o método que calcula o frete"
+      ],
+      "correct": 1,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do hotel, o campo aceita de 8 a 39. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "7, 40 e 44",
+        "9, 10 e 44",
+        "7, 24 e 44",
+        "8, 24 e 39"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 8, de 8 a 39 e maior que 39."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Ver se lançar a nota atualiza o boletim no banco",
+        "Checar rápido se a escola abre e faz o básico",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela",
+        "Enviar nota da prova em branco, por experiência"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Ver se fechar o pedido atualiza o estoque no banco",
+        "Checar rápido se a loja online abre e faz o básico",
+        "Usar a loja online sem roteiro, anotando achados",
+        "Percorrer a compra inteira, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do cinema, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do cinema\nQuando vou escolher a poltrona\nEntão vejo o mapa da sala em dia",
+      "options": [
+        "vejo o mapa da sala em dia",
+        "nenhum, falta o cenário",
+        "vou escolher a poltrona",
+        "estou na tela do cinema"
+      ],
+      "correct": 2,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da biblioteca, o campo aceita de 5 a 45. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "4, 46 e 50",
+        "5, 25 e 45",
+        "4, 25 e 50",
+        "6, 7 e 50"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 45 e maior que 45."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do hotel, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do hotel\nQuando vou reservar o quarto\nEntão vejo a ocupação em dia",
+      "options": [
+        "vejo a ocupação em dia",
+        "estou na tela do hotel",
+        "vou reservar o quarto",
+        "nenhum, falta o cenário"
+      ],
+      "correct": 2,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Enviar data de entrada em branco, por experiência",
+        "Refazer os testes da ocupação após um conserto",
+        "Ver se reservar o quarto atualiza a ocupação no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do hotel, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do hotel\nQuando vou reservar o quarto\nEntão vejo a ocupação em dia",
+      "options": [
+        "vou reservar o quarto agora",
+        "vejo a ocupação em dia",
+        "estou na tela do hotel aberta",
+        "uso o sistema do hotel e paro"
+      ],
+      "correct": 1,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula a dose",
+        "Medir se marcar o banho leva até 2 segundos",
+        "Usar o pet shop sem roteiro, anotando achados"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Checar rápido se a biblioteca abre e faz o básico",
+        "Medir se renovar o empréstimo leva até 2 segundos",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Enviar código do livro em branco, por experiência"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Testar sozinho o método que calcula a idade",
+        "Checar rápido se a clínica abre e faz o básico",
+        "Usar a clínica sem roteiro, anotando achados",
+        "Ver se agendar a consulta atualiza a agenda médica no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da clínica, o campo aceita de 1 a 52. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "0, 27 e 57",
+        "2, 3 e 57",
+        "1, 27 e 52",
+        "0, 53 e 57"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 1, de 1 a 52 e maior que 52."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do cinema, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do cinema\nQuando vou escolher a poltrona\nEntão vejo o mapa da sala em dia",
+      "options": [
+        "vou escolher a poltrona agora",
+        "uso o sistema do cinema e paro",
+        "estou na tela do cinema aberta",
+        "vejo o mapa da sala em dia"
+      ],
+      "correct": 3,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do hotel, um campo aceita de 8 a 39. Quais valores a análise do valor limite testa?",
+      "options": [
+        "9, 10, 38 e 39",
+        "7, 8, 39 e 40",
+        "8, 9, 39 e 41",
+        "6, 8, 39 e 41"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (39 e 40)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes do lote do remédio após um conserto",
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Enviar número da receita em branco, por experiência",
+        "Percorrer a venda com receita, do começo ao fim, na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Enviar data de nascimento em branco, por experiência",
+        "Refazer os testes da agenda médica após um conserto",
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Percorrer o agendamento inteiro, do começo ao fim, na tela"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do restaurante, um campo aceita de 9 a 49. Quais valores a análise do valor limite testa?",
+      "options": [
+        "7, 9, 49 e 51",
+        "8, 9, 49 e 50",
+        "9, 10, 49 e 51",
+        "10, 11, 48 e 49"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (8 e 9), o máximo e o vizinho de fora (49 e 50)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Checar rápido se o banco abre e faz o básico",
+        "Ver se fazer um Pix atualiza o saldo no banco",
+        "Percorrer a transferência inteira, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula os juros"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da oficina, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da oficina\nQuando vou abrir a ordem de serviço\nEntão vejo as peças em dia",
+      "options": [
+        "vejo as peças em dia",
+        "estou na tela da oficina aberta",
+        "vou abrir a ordem de serviço agora",
+        "uso o sistema da oficina e paro"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Enviar quantidade de ingressos em branco, por experiência",
+        "Percorrer a compra do ingresso, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula a meia-entrada"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Medir se enviar a comanda leva até 2 segundos",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Enviar número da mesa em branco, por experiência",
+        "Usar o restaurante sem roteiro, anotando achados"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Checar rápido se o pet shop abre e faz o básico",
+        "Refazer os testes da ficha do animal após um conserto",
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Enviar peso do animal em branco, por experiência"
+      ],
+      "correct": 3,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da clínica, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da clínica\nQuando vou agendar a consulta\nEntão vejo a agenda médica em dia",
+      "options": [
+        "vejo a agenda médica em dia",
+        "uso o sistema da clínica e paro",
+        "estou na tela da clínica aberta",
+        "vou agendar a consulta agora"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Percorrer a compra do ingresso, do começo ao fim, na tela",
+        "Enviar quantidade de ingressos em branco, por experiência",
+        "Testar sozinho o método que calcula a meia-entrada"
+      ],
+      "correct": 2,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Refazer os testes da lista de faixas após um conserto",
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Percorrer a assinatura inteira, do começo ao fim, na tela",
+        "Checar rápido se o app de música abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do restaurante: cliente VIP E compra acima de R$ 300,00 ganha 15% de desconto. Um VIP gastou R$ 460,00. Quanto ele paga?",
+      "options": [
+        "R$ 445,00",
+        "R$ 460,00",
+        "R$ 322,00",
+        "R$ 391,00"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 460 é R$ 69,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes do mapa da sala após um conserto",
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Testar sozinho o método que calcula a meia-entrada",
+        "Medir se escolher a poltrona leva até 2 segundos"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da escola, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da escola\nQuando vou lançar a nota\nEntão vejo o boletim em dia",
+      "options": [
+        "vejo o boletim em dia",
+        "estou na tela da escola aberta",
+        "vou lançar a nota agora",
+        "uso o sistema da escola e paro"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do app de música: cliente VIP E compra acima de R$ 200,00 ganha 15%. Quem NÃO ganha o desconto?",
+      "options": [
+        "VIP que gastou R$ 400,00 no mês",
+        "VIP que gastou R$ 250,00 no dia",
+        "VIP que gastou R$ 201,00 no dia",
+        "VIP que gastou R$ 200,00 exatos"
+      ],
+      "correct": 3,
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 200,00 a condição é falsa."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Testar sozinho o método que calcula a duração",
+        "Medir se criar a playlist leva até 2 segundos",
+        "Usar o app de música sem roteiro, anotando achados"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Percorrer a venda com receita, do começo ao fim, na tela",
+        "Refazer os testes do lote do remédio após um conserto",
+        "Enviar número da receita em branco, por experiência"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Checar rápido se a transportadora abre e faz o básico",
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Usar a transportadora sem roteiro, anotando achados",
+        "Percorrer a entrega inteira, do começo ao fim, na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da transportadora, o campo aceita de 8 a 34. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "9, 10 e 39",
+        "7, 21 e 39",
+        "8, 21 e 34",
+        "7, 35 e 39"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 8, de 8 a 34 e maior que 34."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Medir se criar a playlist leva até 2 segundos",
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Usar o app de música sem roteiro, anotando achados",
+        "Testar sozinho o método que calcula a duração"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Testar sozinho o método que calcula a mão de obra",
+        "Percorrer o conserto inteiro, do começo ao fim, na tela",
+        "Medir se abrir a ordem de serviço leva até 2 segundos",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da clínica, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da clínica\nQuando vou agendar a consulta\nEntão vejo a agenda médica em dia",
+      "options": [
+        "vou agendar a consulta",
+        "estou na tela da clínica",
+        "nenhum, falta o cenário",
+        "vejo a agenda médica em dia"
+      ],
+      "correct": 0,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Enviar código do livro em branco, por experiência",
+        "Checar rápido se a biblioteca abre e faz o básico",
+        "Medir se renovar o empréstimo leva até 2 segundos"
+      ],
+      "correct": 1,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Checar rápido se a farmácia abre e faz o básico",
+        "Testar sozinho o método que calcula o desconto",
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Usar a farmácia sem roteiro, anotando achados"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do restaurante, o campo aceita de 29 a 90. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "28, 60 e 95",
+        "30, 31 e 95",
+        "29, 60 e 90",
+        "28, 91 e 95"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 29, de 29 a 90 e maior que 90."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Testar sozinho o método que calcula o desconto",
+        "Medir se vender o remédio leva até 2 segundos",
+        "Checar rápido se a farmácia abre e faz o básico"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da academia, o campo aceita de 6 a 58. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "5, 32 e 63",
+        "7, 8 e 63",
+        "6, 32 e 58",
+        "5, 59 e 63"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 58 e maior que 58."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra da academia: cliente VIP E compra acima de R$ 100,00 ganha 20% de desconto. Um VIP gastou R$ 140,00. Quanto ele paga?",
+      "options": [
+        "R$ 140,00",
+        "R$ 120,00",
+        "R$ 84,00",
+        "R$ 112,00"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 140 é R$ 28,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Testar sozinho o método que calcula a mensalidade",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Checar rápido se a academia abre e faz o básico",
+        "Enviar data da aula em branco, por experiência"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do app de música, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do app de música\nQuando vou criar a playlist\nEntão vejo a lista de faixas em dia",
+      "options": [
+        "estou na tela do app de música aberta",
+        "vou criar a playlist agora",
+        "vejo a lista de faixas em dia",
+        "uso o sistema do app de música e paro"
+      ],
+      "correct": 2,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Enviar data de entrada em branco, por experiência",
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Ver se reservar o quarto atualiza a ocupação no banco",
+        "Testar sozinho o método que calcula as diárias"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se reservar o quarto atualiza a ocupação no banco",
+        "Refazer os testes da ocupação após um conserto",
+        "Enviar data de entrada em branco, por experiência",
+        "Percorrer a reserva inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Percorrer o agendamento inteiro, do começo ao fim, na tela",
+        "Enviar data de nascimento em branco, por experiência",
+        "Refazer os testes da agenda médica após um conserto"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do hotel, um campo aceita de 16 a 86. Quais valores a análise do valor limite testa?",
+      "options": [
+        "15, 16, 86 e 87",
+        "14, 16, 86 e 88",
+        "16, 17, 86 e 88",
+        "17, 18, 85 e 86"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (15 e 16), o máximo e o vizinho de fora (86 e 87)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Usar a clínica sem roteiro, anotando achados",
+        "Medir se agendar a consulta leva até 2 segundos",
+        "Checar rápido se a clínica abre e faz o básico",
+        "Ver se agendar a consulta atualiza a agenda médica no banco"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Usar o restaurante sem roteiro, anotando achados",
+        "Ver se enviar a comanda atualiza o cardápio no banco",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Checar rápido se o restaurante abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Checar rápido se o restaurante abre e faz o básico",
+        "Ver se enviar a comanda atualiza o cardápio no banco",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Usar o restaurante sem roteiro, anotando achados"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da escola, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da escola\nQuando vou lançar a nota\nEntão vejo o boletim em dia",
+      "options": [
+        "vou lançar a nota",
+        "nenhum, falta o cenário",
+        "vejo o boletim em dia",
+        "estou na tela da escola"
+      ],
+      "correct": 0,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do restaurante, um campo aceita de 29 a 90. Quais valores a análise do valor limite testa?",
+      "options": [
+        "30, 31, 89 e 90",
+        "28, 29, 90 e 91",
+        "29, 30, 90 e 92",
+        "27, 29, 90 e 92"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (28 e 29), o máximo e o vizinho de fora (90 e 91)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Percorrer o conserto inteiro, do começo ao fim, na tela",
+        "Medir se abrir a ordem de serviço leva até 2 segundos",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Testar sozinho o método que calcula a mão de obra"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do estacionamento, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do estacionamento\nQuando vou registrar a saída\nEntão vejo as vagas em dia",
+      "options": [
+        "vejo as vagas em dia",
+        "uso o sistema do estacionamento e paro",
+        "vou registrar a saída agora",
+        "estou na tela do estacionamento aberta"
+      ],
+      "correct": 0,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do pet shop, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do pet shop\nQuando vou marcar o banho\nEntão vejo a ficha do animal em dia",
+      "options": [
+        "estou na tela do pet shop aberta",
+        "uso o sistema do pet shop e paro",
+        "vejo a ficha do animal em dia",
+        "vou marcar o banho agora"
+      ],
+      "correct": 2,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Percorrer a transferência inteira, do começo ao fim, na tela",
+        "Ver se fazer um Pix atualiza o saldo no banco",
+        "Checar rápido se o banco abre e faz o básico",
+        "Testar sozinho o método que calcula os juros"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do app de música, um campo aceita de 21 a 72. Quais valores a análise do valor limite testa?",
+      "options": [
+        "20, 21, 72 e 73",
+        "22, 23, 71 e 72",
+        "19, 21, 72 e 74",
+        "21, 22, 72 e 74"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (72 e 73)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Percorrer a transferência inteira, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula os juros",
+        "Usar o banco sem roteiro, anotando achados",
+        "Checar rápido se o banco abre e faz o básico"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Checar rápido se o pet shop abre e faz o básico",
+        "Usar o pet shop sem roteiro, anotando achados",
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Enviar peso do animal em branco, por experiência"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Percorrer a matrícula inteira, do começo ao fim, na tela",
+        "Refazer os testes da grade de aulas após um conserto",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Testar sozinho o método que calcula a mensalidade"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Percorrer a transferência inteira, do começo ao fim, na tela",
+        "Refazer os testes do saldo após um conserto",
+        "Testar sozinho o método que calcula os juros",
+        "Ver se fazer um Pix atualiza o saldo no banco"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Usar o estacionamento sem roteiro, anotando achados",
+        "Ver se registrar a saída atualiza as vagas no banco",
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Checar rápido se o estacionamento abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Testar sozinho o método que calcula o frete",
+        "Medir se fechar o pedido leva até 2 segundos",
+        "Refazer os testes do estoque após um conserto",
+        "Percorrer a compra inteira, do começo ao fim, na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da biblioteca, o campo aceita de 30 a 65. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "31, 32 e 70",
+        "29, 66 e 70",
+        "30, 48 e 65",
+        "29, 48 e 70"
+      ],
+      "correct": 3,
+      "explain": "<b>Três partições:</b> menor que 30, de 30 a 65 e maior que 65."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do app de música, o campo aceita de 5 a 35. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "4, 36 e 40",
+        "4, 20 e 40",
+        "6, 7 e 40",
+        "5, 20 e 35"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 35 e maior que 35."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Usar a escola sem roteiro, anotando achados",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela",
+        "Refazer os testes do boletim após um conserto",
+        "Checar rápido se a escola abre e faz o básico"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do pet shop: cliente VIP E compra acima de R$ 450,00 ganha 20% de desconto. Um VIP gastou R$ 510,00. Quanto ele paga?",
+      "options": [
+        "R$ 510,00",
+        "R$ 306,00",
+        "R$ 490,00",
+        "R$ 408,00"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 510 é R$ 102,00 de desconto."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da transportadora, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da transportadora\nQuando vou registrar a entrega\nEntão vejo a rota do dia em dia",
+      "options": [
+        "estou na tela da transportadora aberta",
+        "vejo a rota do dia em dia",
+        "uso o sistema da transportadora e paro",
+        "vou registrar a entrega agora"
+      ],
+      "correct": 1,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Enviar número da mesa em branco, por experiência",
+        "Refazer os testes do cardápio após um conserto",
+        "Usar o restaurante sem roteiro, anotando achados",
+        "Percorrer o pedido da mesa, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Checar rápido se a transportadora abre e faz o básico",
+        "Usar a transportadora sem roteiro, anotando achados",
+        "Percorrer a entrega inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Ver se fechar o pedido atualiza o estoque no banco",
+        "Usar a loja online sem roteiro, anotando achados",
+        "Refazer os testes do estoque após um conserto",
+        "Percorrer a compra inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Usar a biblioteca sem roteiro, anotando achados",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Refazer os testes do acervo após um conserto",
+        "Medir se renovar o empréstimo leva até 2 segundos"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do banco, um campo aceita de 6 a 55. Quais valores a análise do valor limite testa?",
+      "options": [
+        "4, 6, 55 e 57",
+        "7, 8, 54 e 55",
+        "5, 6, 55 e 56",
+        "6, 7, 55 e 57"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (55 e 56)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Enviar data da aula em branco, por experiência",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Checar rápido se a academia abre e faz o básico",
+        "Medir se marcar uma aula leva até 2 segundos"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do pet shop, o campo aceita de 2 a 35. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "3, 4 e 40",
+        "1, 19 e 40",
+        "2, 19 e 35",
+        "1, 36 e 40"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 35 e maior que 35."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Refazer os testes da ficha do animal após um conserto",
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Ver se marcar o banho atualiza a ficha do animal no banco",
+        "Enviar peso do animal em branco, por experiência"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do app de música, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do app de música\nQuando vou criar a playlist\nEntão vejo a lista de faixas em dia",
+      "options": [
+        "vejo a lista de faixas em dia",
+        "nenhum, falta o cenário",
+        "estou na tela do app de música",
+        "vou criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da farmácia, um campo aceita de 2 a 59. Quais valores a análise do valor limite testa?",
+      "options": [
+        "3, 4, 58 e 59",
+        "2, 3, 59 e 61",
+        "1, 2, 59 e 60",
+        "0, 2, 59 e 61"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (59 e 60)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do pet shop, um campo aceita de 19 a 73. Quais valores a análise do valor limite testa?",
+      "options": [
+        "20, 21, 72 e 73",
+        "18, 19, 73 e 74",
+        "19, 20, 73 e 75",
+        "17, 19, 73 e 75"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (18 e 19), o máximo e o vizinho de fora (73 e 74)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Enviar data de nascimento em branco, por experiência",
+        "Percorrer o agendamento inteiro, do começo ao fim, na tela",
+        "Refazer os testes da agenda médica após um conserto"
+      ],
+      "correct": 1,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Ver se criar a playlist atualiza a lista de faixas no banco",
+        "Checar rápido se o app de música abre e faz o básico",
+        "Refazer os testes da lista de faixas após um conserto",
+        "Usar o app de música sem roteiro, anotando achados"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da escola, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Checar rápido se a escola abre e faz o básico",
+        "Medir se lançar a nota leva até 2 segundos",
+        "Usar a escola sem roteiro, anotando achados",
+        "Percorrer a matrícula do aluno, do começo ao fim, na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do banco, qual atividade é um exemplo de suposição de erro?",
+      "options": [
+        "Ver se fazer um Pix atualiza o saldo no banco",
+        "Checar rápido se o banco abre e faz o básico",
+        "Enviar chave Pix em branco, por experiência",
+        "Percorrer a transferência inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da escola, um campo aceita de 25 a 97. Quais valores a análise do valor limite testa?",
+      "options": [
+        "24, 25, 97 e 98",
+        "26, 27, 96 e 97",
+        "25, 26, 97 e 99",
+        "23, 25, 97 e 99"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (24 e 25), o máximo e o vizinho de fora (97 e 98)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do app de música, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Checar rápido se o app de música abre e faz o básico",
+        "Percorrer a assinatura inteira, do começo ao fim, na tela",
+        "Refazer os testes da lista de faixas após um conserto",
+        "Ver se criar a playlist atualiza a lista de faixas no banco"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da transportadora, o campo aceita de 27 a 64. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "26, 65 e 69",
+        "26, 46 e 69",
+        "28, 29 e 69",
+        "27, 46 e 64"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 27, de 27 a 64 e maior que 64."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Medir se escolher a poltrona leva até 2 segundos",
+        "Checar rápido se o cinema abre e faz o básico",
+        "Refazer os testes do mapa da sala após um conserto",
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Medir se renovar o empréstimo leva até 2 segundos",
+        "Checar rápido se a biblioteca abre e faz o básico",
+        "Enviar código do livro em branco, por experiência"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do estacionamento: cliente VIP E compra acima de R$ 350,00 ganha 10% de desconto. Um VIP gastou R$ 530,00. Quanto ele paga?",
+      "options": [
+        "R$ 520,00",
+        "R$ 424,00",
+        "R$ 530,00",
+        "R$ 477,00"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 530 é R$ 53,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Enviar data de entrada em branco, por experiência",
+        "Testar sozinho o método que calcula as diárias",
+        "Refazer os testes da ocupação após um conserto"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Checar rápido se o hotel abre e faz o básico",
+        "Usar o hotel sem roteiro, anotando achados",
+        "Refazer os testes da ocupação após um conserto"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do hotel, o campo aceita de 16 a 86. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "15, 87 e 91",
+        "15, 51 e 91",
+        "16, 51 e 86",
+        "17, 18 e 91"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 16, de 16 a 86 e maior que 86."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Usar a academia sem roteiro, anotando achados",
+        "Enviar data da aula em branco, por experiência",
+        "Checar rápido se a academia abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do pet shop, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do pet shop\nQuando vou marcar o banho\nEntão vejo a ficha do animal em dia",
+      "options": [
+        "vou marcar o banho",
+        "vejo a ficha do animal em dia",
+        "estou na tela do pet shop",
+        "nenhum, falta o cenário"
+      ],
+      "correct": 0,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da escola, o campo aceita de 25 a 97. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "24, 61 e 102",
+        "24, 98 e 102",
+        "26, 27 e 102",
+        "25, 61 e 97"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 25, de 25 a 97 e maior que 97."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do estacionamento, um campo aceita de 2 a 22. Quais valores a análise do valor limite testa?",
+      "options": [
+        "1, 2, 22 e 23",
+        "0, 2, 22 e 24",
+        "2, 3, 22 e 24",
+        "3, 4, 21 e 22"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (22 e 23)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da loja online, o campo aceita de 3 a 53. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "2, 28 e 58",
+        "3, 28 e 53",
+        "4, 5 e 58",
+        "2, 54 e 58"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 3, de 3 a 53 e maior que 53."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da loja online, um campo aceita de 3 a 53. Quais valores a análise do valor limite testa?",
+      "options": [
+        "4, 5, 52 e 53",
+        "2, 3, 53 e 54",
+        "3, 4, 53 e 55",
+        "1, 3, 53 e 55"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (53 e 54)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Refazer os testes da agenda médica após um conserto",
+        "Medir se agendar a consulta leva até 2 segundos",
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Enviar data de nascimento em branco, por experiência"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Usar a loja online sem roteiro, anotando achados",
+        "Refazer os testes do estoque após um conserto",
+        "Medir se fechar o pedido leva até 2 segundos",
+        "Percorrer a compra inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do estacionamento, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela do estacionamento\nQuando vou registrar a saída\nEntão vejo as vagas em dia",
+      "options": [
+        "vejo as vagas em dia",
+        "estou na tela do estacionamento",
+        "vou registrar a saída",
+        "nenhum, falta o cenário"
+      ],
+      "correct": 2,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da oficina, o campo aceita de 21 a 98. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "20, 99 e 103",
+        "20, 60 e 103",
+        "21, 60 e 98",
+        "22, 23 e 103"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 98 e maior que 98."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do banco, o campo aceita de 6 a 55. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "6, 31 e 55",
+        "5, 56 e 60",
+        "5, 31 e 60",
+        "7, 8 e 60"
+      ],
+      "correct": 2,
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 55 e maior que 55."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da farmácia, o campo aceita de 12 a 99. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "11, 56 e 104",
+        "13, 14 e 104",
+        "11, 100 e 104",
+        "12, 56 e 99"
+      ],
+      "correct": 0,
+      "explain": "<b>Três partições:</b> menor que 12, de 12 a 99 e maior que 99."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da biblioteca, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela da biblioteca\nQuando vou renovar o empréstimo\nEntão vejo o acervo em dia",
+      "options": [
+        "uso o sistema da biblioteca e paro",
+        "vejo o acervo em dia",
+        "estou na tela da biblioteca aberta",
+        "vou renovar o empréstimo agora"
+      ],
+      "correct": 1,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário do restaurante, qual trecho é o RESULTADO esperado?",
+      "code": "Dado que estou na tela do restaurante\nQuando vou enviar a comanda\nEntão vejo o cardápio em dia",
+      "options": [
+        "uso o sistema do restaurante e paro",
+        "vou enviar a comanda agora",
+        "estou na tela do restaurante aberta",
+        "vejo o cardápio em dia"
+      ],
+      "correct": 3,
+      "explain": "<b>Então</b> é o resultado que o teste confere."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da transportadora, um campo aceita de 8 a 34. Quais valores a análise do valor limite testa?",
+      "options": [
+        "7, 8, 34 e 35",
+        "6, 8, 34 e 36",
+        "9, 10, 33 e 34",
+        "8, 9, 34 e 36"
+      ],
+      "correct": 0,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (34 e 35)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema do pet shop, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Percorrer o atendimento inteiro, do começo ao fim, na tela",
+        "Usar o pet shop sem roteiro, anotando achados",
+        "Checar rápido se o pet shop abre e faz o básico",
+        "Enviar peso do animal em branco, por experiência"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nfunc",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste não funcional?",
+      "options": [
+        "Medir se fazer um Pix leva até 2 segundos",
+        "Refazer os testes do saldo após um conserto",
+        "Percorrer a transferência inteira, do começo ao fim, na tela",
+        "Enviar chave Pix em branco, por experiência"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da escola, um campo aceita de 6 a 21. Quais valores a análise do valor limite testa?",
+      "options": [
+        "7, 8, 20 e 21",
+        "5, 6, 21 e 22",
+        "4, 6, 21 e 23",
+        "6, 7, 21 e 23"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (21 e 22)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da farmácia, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Ver se vender o remédio atualiza o lote do remédio no banco",
+        "Percorrer a venda com receita, do começo ao fim, na tela",
+        "Refazer os testes do lote do remédio após um conserto",
+        "Enviar número da receita em branco, por experiência"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da biblioteca, qual atividade é um exemplo de teste de integração?",
+      "options": [
+        "Checar rápido se a biblioteca abre e faz o básico",
+        "Medir se renovar o empréstimo leva até 2 segundos",
+        "Percorrer o empréstimo inteiro, do começo ao fim, na tela",
+        "Ver se renovar o empréstimo atualiza o acervo no banco"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do app de música, o campo aceita de 21 a 72. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "21, 47 e 72",
+        "20, 47 e 77",
+        "20, 73 e 77",
+        "22, 23 e 77"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 72 e maior que 72."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do cinema: cliente VIP E compra acima de R$ 400,00 ganha 5% de desconto. Um VIP gastou R$ 520,00. Quanto ele paga?",
+      "options": [
+        "R$ 468,00",
+        "R$ 515,00",
+        "R$ 520,00",
+        "R$ 494,00"
+      ],
+      "correct": 3,
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 520 é R$ 26,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula o tempo",
+        "Medir se registrar a saída leva até 2 segundos",
+        "Refazer os testes das vagas após um conserto"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Medir se escolher a poltrona leva até 2 segundos",
+        "Refazer os testes do mapa da sala após um conserto",
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Testar sozinho o método que calcula a meia-entrada"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do banco, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Testar sozinho o método que calcula os juros",
+        "Ver se fazer um Pix atualiza o saldo no banco",
+        "Checar rápido se o banco abre e faz o básico",
+        "Percorrer a transferência inteira, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do cinema, um campo aceita de 14 a 92. Quais valores a análise do valor limite testa?",
+      "options": [
+        "14, 15, 92 e 94",
+        "15, 16, 91 e 92",
+        "13, 14, 92 e 93",
+        "12, 14, 92 e 94"
+      ],
+      "correct": 2,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (13 e 14), o máximo e o vizinho de fora (92 e 93)."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema do app de música, um campo aceita de 5 a 35. Quais valores a análise do valor limite testa?",
+      "options": [
+        "5, 6, 35 e 37",
+        "4, 5, 35 e 36",
+        "6, 7, 34 e 35",
+        "3, 5, 35 e 37"
+      ],
+      "correct": 1,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (35 e 36)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da academia, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Refazer os testes da grade de aulas após um conserto",
+        "Testar sozinho o método que calcula a mensalidade",
+        "Ver se marcar uma aula atualiza a grade de aulas no banco",
+        "Checar rápido se a academia abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "statement": "No cenário da academia, qual trecho é a AÇÃO que o usuário faz?",
+      "code": "Dado que estou na tela da academia\nQuando vou marcar uma aula\nEntão vejo a grade de aulas em dia",
+      "options": [
+        "vou marcar uma aula",
+        "vejo a grade de aulas em dia",
+        "estou na tela da academia",
+        "nenhum, falta o cenário"
+      ],
+      "correct": 0,
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Percorrer o conserto inteiro, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula a mão de obra",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Medir se abrir a ordem de serviço leva até 2 segundos"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da oficina, um campo aceita de 21 a 98. Quais valores a análise do valor limite testa?",
+      "options": [
+        "19, 21, 98 e 100",
+        "22, 23, 97 e 98",
+        "21, 22, 98 e 100",
+        "20, 21, 98 e 99"
+      ],
+      "correct": 3,
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (98 e 99)."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Medir se registrar a entrega leva até 2 segundos",
+        "Refazer os testes da rota do dia após um conserto",
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Testar sozinho o método que calcula a distância"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da loja online, o campo aceita de 13 a 87. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "13, 50 e 87",
+        "14, 15 e 92",
+        "12, 88 e 92",
+        "12, 50 e 92"
+      ],
+      "correct": 3,
+      "explain": "<b>Três partições:</b> menor que 13, de 13 a 87 e maior que 87."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do hotel, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Refazer os testes da ocupação após um conserto",
+        "Percorrer a reserva inteira, do começo ao fim, na tela",
+        "Enviar data de entrada em branco, por experiência",
+        "Medir se reservar o quarto leva até 2 segundos"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do app de música: cliente VIP E compra acima de R$ 200,00 ganha 15% de desconto. Um VIP gastou R$ 320,00. Quanto ele paga?",
+      "options": [
+        "R$ 320,00",
+        "R$ 272,00",
+        "R$ 305,00",
+        "R$ 224,00"
+      ],
+      "correct": 1,
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 320 é R$ 48,00 de desconto."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da clínica, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Enviar data de nascimento em branco, por experiência",
+        "Ver se agendar a consulta atualiza a agenda médica no banco",
+        "Refazer os testes da agenda médica após um conserto",
+        "Percorrer o agendamento inteiro, do começo ao fim, na tela"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do cinema, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Percorrer a compra do ingresso, do começo ao fim, na tela",
+        "Ver se escolher a poltrona atualiza o mapa da sala no banco",
+        "Testar sozinho o método que calcula a meia-entrada",
+        "Enviar quantidade de ingressos em branco, por experiência"
+      ],
+      "correct": 0,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema do estacionamento, qual atividade é um exemplo de teste de regressão?",
+      "options": [
+        "Percorrer a entrada e a saída, do começo ao fim, na tela",
+        "Testar sozinho o método que calcula o tempo",
+        "Medir se registrar a saída leva até 2 segundos",
+        "Refazer os testes das vagas após um conserto"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "statement": "No sistema da farmácia, o campo aceita de 2 a 59. Qual grupo tem um valor de cada partição (abaixo, dentro e acima)?",
+      "options": [
+        "1, 60 e 64",
+        "1, 31 e 64",
+        "2, 31 e 59",
+        "3, 4 e 64"
+      ],
+      "correct": 1,
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 59 e maior que 59."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema da transportadora, qual atividade é um exemplo de teste end-to-end?",
+      "options": [
+        "Ver se registrar a entrega atualiza a rota do dia no banco",
+        "Checar rápido se a transportadora abre e faz o básico",
+        "Percorrer a entrega inteira, do começo ao fim, na tela",
+        "Usar a transportadora sem roteiro, anotando achados"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "statement": "No sistema do restaurante, qual atividade é um exemplo de teste de unidade?",
+      "options": [
+        "Percorrer o pedido da mesa, do começo ao fim, na tela",
+        "Enviar número da mesa em branco, por experiência",
+        "Testar sozinho o método que calcula a gorjeta",
+        "Usar o restaurante sem roteiro, anotando achados"
+      ],
+      "correct": 2,
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "statement": "No sistema da oficina, qual atividade é um exemplo de teste de fumaça?",
+      "options": [
+        "Enviar placa do carro em branco, por experiência",
+        "Testar sozinho o método que calcula a mão de obra",
+        "Ver se abrir a ordem de serviço atualiza as peças no banco",
+        "Checar rápido se a oficina abre e faz o básico"
+      ],
+      "correct": 3,
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "tabela",
+      "statement": "Regra do hotel: cliente VIP E compra acima de R$ 150,00 ganha 20% de desconto. Um VIP gastou R$ 310,00. Quanto ele paga?",
+      "options": [
+        "R$ 290,00",
+        "R$ 248,00",
+        "R$ 186,00",
+        "R$ 310,00"
+      ],
+      "correct": 1,
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 310 é R$ 62,00 de desconto."
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "exp",
+      "statement": "No sistema da loja online, qual atividade é um exemplo de teste exploratório?",
+      "options": [
+        "Percorrer a compra inteira, do começo ao fim, na tela",
+        "Usar a loja online sem roteiro, anotando achados",
+        "Ver se fechar o pedido atualiza o estoque no banco",
+        "Checar rápido se a loja online abre e faz o básico"
+      ],
+      "correct": 1,
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
     }
   ],
   "historias": [

@@ -1079,6 +1079,3599 @@
       ],
       "correct": 0,
       "explain": "<b>Ao achar uma falsa, elimine as alternativas que a contêm.</b>"
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da transportadora?",
+      "options": [
+        "8.8.8.8 responde, mas o site da transportadora não é achado",
+        "Copiar a VM da transportadora gravando só as diferenças",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da transportadora em .ova para outro disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 432 aparece como no ls -l?",
+      "options": [
+        "-wxr---w-",
+        "r---w--wx",
+        "r---wx-wx",
+        "r---wx-w-"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 3 = -wx; 2 = -w-."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente do pet shop?",
+      "options": [
+        "Copiar a VM do pet shop gravando só as diferenças",
+        "Exportar a VM do pet shop em .ova para outro disco",
+        "8.8.8.8 responde, mas o site do pet shop não é achado",
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 24 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "300 enlaces",
+        "576 enlaces",
+        "276 enlaces",
+        "552 enlaces"
+      ],
+      "correct": 2,
+      "explain": "<b>n(n−1)/2:</b> 24 × 23 ÷ 2 = 276."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.203.4.9. Por onde ele sai?",
+      "code": "default via 192.168.12.1 dev enp0s3\n192.168.12.0/24 dev enp0s3 scope link\n10.203.0.0/16 via 192.168.12.18 dev enp0s3",
+      "options": [
+        "Para 192.168.12.18, pela rota 10.203",
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.12.0/24",
+        "Para 192.168.12.1, pela rota padrão"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da transportadora?",
+      "options": [
+        "Tudo responde, menos o programa da transportadora",
+        "O PC da transportadora só alcança a própria rede",
+        "8.8.8.8 responde, mas o site da transportadora não é achado",
+        "Fotografar a VM da transportadora antes de atualizar"
+      ],
+      "correct": 1,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 176”. Quantos bytes estão alocados?",
+      "options": [
+        "720.896 bytes alocados",
+        "180.224 bytes alocados",
+        "45.056 bytes alocados",
+        "90.112 bytes alocados"
+      ],
+      "correct": 3,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 176 × 512 = 90.112."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 570 aparece como no ls -l?",
+      "options": [
+        "r-xrwx--x",
+        "r-x---rwx",
+        "r-xrwx---",
+        "rw-rwx---"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 7 = rwx; 0 = ---."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 56”. Quantos bytes estão alocados?",
+      "options": [
+        "28.672 bytes alocados",
+        "229.376 bytes alocados",
+        "57.344 bytes alocados",
+        "14.336 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 56 × 512 = 28.672."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 6.337 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "193 bytes",
+        "2.048 bytes",
+        "1.955 bytes",
+        "1.855 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 4 blocos = 8.192 bytes; 8.192 − 6.337 = 1.855."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da clínica?",
+      "options": [
+        "Fotografar a VM da clínica antes de atualizar",
+        "Tudo responde, menos o programa da clínica",
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "O PC da clínica só alcança a própria rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente do hotel?",
+      "options": [
+        "Exportar a VM do hotel em .ova para outro disco",
+        "O PC do hotel está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Copiar a VM do hotel gravando só as diferenças"
+      ],
+      "correct": 0,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 17.486 bytes, com blocos de 4.096 bytes, ocupa quanto no disco?",
+      "options": [
+        "24.576 bytes em 6 blocos",
+        "20.480 bytes em 5 blocos",
+        "16.384 bytes em 4 blocos",
+        "17.486 bytes em 5 blocos"
+      ],
+      "correct": 1,
+      "explain": "<b>Só blocos inteiros:</b> 17.486 ÷ 4.096 dá 4,27, que vira 5."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.186.8.8. Por onde ele sai?",
+      "code": "default via 192.168.84.1 dev enp0s3\n192.168.84.0/24 dev enp0s3 scope link\n10.186.0.0/16 via 192.168.84.66 dev enp0s3",
+      "options": [
+        "Para 192.168.84.66, pela rota 10.186",
+        "Para 192.168.84.1, pela rota padrão",
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.84.0/24"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente do cinema?",
+      "options": [
+        "Copiar a VM do cinema gravando só as diferenças",
+        "Exportar a VM do cinema em .ova para outro disco",
+        "8.8.8.8 responde, mas o site do cinema não é achado",
+        "O PC do cinema está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxr--rwx?",
+      "options": [
+        "740",
+        "747",
+        "767",
+        "774"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; r-- = 4; rwx = 7."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 9.618 bytes, com blocos de 2.048 bytes, ocupa quanto no disco?",
+      "options": [
+        "10.240 bytes em 5 blocos",
+        "8.192 bytes em 4 blocos",
+        "12.288 bytes em 6 blocos",
+        "9.618 bytes em 5 blocos"
+      ],
+      "correct": 0,
+      "explain": "<b>Só blocos inteiros:</b> 9.618 ÷ 2.048 dá 4,70, que vira 5."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da oficina?",
+      "options": [
+        "Copiar a VM da oficina gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da oficina não é achado",
+        "Exportar a VM da oficina em .ova para outro disco",
+        "Fotografar a VM da oficina antes de atualizar"
+      ],
+      "correct": 3,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.213.4.9. Por onde ele sai?",
+      "code": "default via 192.168.13.1 dev enp0s3\n192.168.13.0/24 dev enp0s3 scope link\n10.213.0.0/16 via 192.168.13.80 dev enp0s3",
+      "options": [
+        "Para 192.168.13.80, pela rota 10.213",
+        "Direto, pela rede 192.168.13.0/24",
+        "Para 192.168.13.1, pela rota padrão",
+        "É descartado por falta de rota"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da loja online?",
+      "options": [
+        "Tudo responde, menos o programa da loja online",
+        "O PC da loja online só alcança a própria rede",
+        "Fotografar a VM da loja online antes de atualizar",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 18.645 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.935 bytes",
+        "4.096 bytes",
+        "1.835 bytes",
+        "2.261 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 20.480 bytes; 20.480 − 18.645 = 1.835."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da biblioteca?",
+      "options": [
+        "A VM da biblioteca ganha IP na rede física",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "Tudo responde, menos o programa da biblioteca",
+        "O PC da biblioteca só alcança a própria rede"
+      ],
+      "correct": 0,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 28.659 bytes, com blocos de 8.192 bytes, ocupa quanto no disco?",
+      "options": [
+        "24.576 bytes em 3 blocos",
+        "32.768 bytes em 4 blocos",
+        "28.659 bytes em 4 blocos",
+        "40.960 bytes em 5 blocos"
+      ],
+      "correct": 1,
+      "explain": "<b>Só blocos inteiros:</b> 28.659 ÷ 8.192 dá 3,50, que vira 4."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente do banco?",
+      "options": [
+        "O PC do banco está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do banco não é achado",
+        "Exportar a VM do banco em .ova para outro disco",
+        "Copiar a VM do banco gravando só as diferenças"
+      ],
+      "correct": 2,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.212 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.932 bytes",
+        "2.048 bytes",
+        "2.032 bytes",
+        "116 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 3 blocos = 6.144 bytes; 6.144 − 4.212 = 1.932."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r--r---wx?",
+      "options": [
+        "444",
+        "463",
+        "443",
+        "434"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; r-- = 4; -wx = 3."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 21 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "420 enlaces",
+        "210 enlaces",
+        "441 enlaces",
+        "231 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 21 × 20 ÷ 2 = 210."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxr--rw-?",
+      "options": [
+        "476",
+        "746",
+        "766",
+        "046"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; r-- = 4; rw- = 6."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da clínica?",
+      "options": [
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da clínica em .ova para outro disco",
+        "Copiar a VM da clínica gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da clínica não é achado"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da academia?",
+      "options": [
+        "O PC da academia só alcança a própria rede",
+        "O PC da academia está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM da academia antes de atualizar",
+        "Tudo responde, menos o programa da academia"
+      ],
+      "correct": 0,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da academia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da academia não é achado",
+        "O PC da academia está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da academia gravando só as diferenças",
+        "Exportar a VM da academia em .ova para outro disco"
+      ],
+      "correct": 2,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente do hotel?",
+      "options": [
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Fotografar a VM do hotel antes de atualizar",
+        "O PC do hotel só alcança a própria rede",
+        "Tudo responde, menos o programa do hotel"
+      ],
+      "correct": 2,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da transportadora?",
+      "options": [
+        "A VM da transportadora ganha IP na rede física",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway",
+        "O PC da transportadora só alcança a própria rede",
+        "Tudo responde, menos o programa da transportadora"
+      ],
+      "correct": 0,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da transportadora?",
+      "options": [
+        "O PC da transportadora só alcança a própria rede",
+        "Tudo responde, menos o programa da transportadora",
+        "Fotografar a VM da transportadora antes de atualizar",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 1,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da oficina?",
+      "options": [
+        "Exportar a VM da oficina em .ova para outro disco",
+        "Copiar a VM da oficina gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da oficina não é achado",
+        "O PC da oficina está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 1,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente do restaurante?",
+      "options": [
+        "8.8.8.8 responde, mas o site do restaurante não é achado",
+        "O PC do restaurante só alcança a própria rede",
+        "Fotografar a VM do restaurante antes de atualizar",
+        "Tudo responde, menos o programa do restaurante"
+      ],
+      "correct": 3,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.146.4.9. Por onde ele sai?",
+      "code": "default via 192.168.54.1 dev enp0s3\n192.168.54.0/24 dev enp0s3 scope link\n10.146.0.0/16 via 192.168.54.99 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.54.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.54.99, pela rota 10.146",
+        "Para 192.168.54.1, pela rota padrão"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 641 aparece como no ls -l?",
+      "options": [
+        "rw---xr--",
+        "rw-rw---x",
+        "r--rw---x",
+        "rw-r----x"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 4 = r--; 1 = --x."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 42.863 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.903 bytes",
+        "6.289 bytes",
+        "8.192 bytes",
+        "6.389 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 49.152 bytes; 49.152 − 42.863 = 6.289."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.180.4.9. Por onde ele sai?",
+      "code": "default via 192.168.49.1 dev enp0s3\n192.168.49.0/24 dev enp0s3 scope link\n10.180.0.0/16 via 192.168.49.81 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Para 192.168.49.81, pela rota 10.180",
+        "Direto, pela rede 192.168.49.0/24",
+        "Para 192.168.49.1, pela rota padrão"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente do restaurante?",
+      "options": [
+        "A VM do restaurante ganha IP na rede física",
+        "O PC do restaurante só alcança a própria rede",
+        "8.8.8.8 responde, mas o site do restaurante não é achado",
+        "Tudo responde, menos o programa do restaurante"
+      ],
+      "correct": 0,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.204.8.8. Por onde ele sai?",
+      "code": "default via 192.168.117.1 dev enp0s3\n192.168.117.0/24 dev enp0s3 scope link\n10.204.0.0/16 via 192.168.117.21 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.117.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.117.21, pela rota 10.204",
+        "Para 192.168.117.1, pela rota padrão"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 29.563 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "4.987 bytes",
+        "3.205 bytes",
+        "8.192 bytes",
+        "3.305 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 4 blocos = 32.768 bytes; 32.768 − 29.563 = 3.205."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 21.784 bytes, com blocos de 4.096 bytes, ocupa quanto no disco?",
+      "options": [
+        "24.576 bytes em 6 blocos",
+        "28.672 bytes em 7 blocos",
+        "20.480 bytes em 5 blocos",
+        "21.784 bytes em 6 blocos"
+      ],
+      "correct": 0,
+      "explain": "<b>Só blocos inteiros:</b> 21.784 ÷ 4.096 dá 5,32, que vira 6."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.133.4.9. Por onde ele sai?",
+      "code": "default via 192.168.26.1 dev enp0s3\n192.168.26.0/24 dev enp0s3 scope link\n10.133.0.0/16 via 192.168.26.69 dev enp0s3",
+      "options": [
+        "Para 192.168.26.1, pela rota padrão",
+        "Direto, pela rede 192.168.26.0/24",
+        "Para 192.168.26.69, pela rota 10.133",
+        "É descartado por falta de rota"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente do hotel?",
+      "options": [
+        "O PC do hotel está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM do hotel gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Exportar a VM do hotel em .ova para outro disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 11.464 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "3.272 bytes",
+        "5.020 bytes",
+        "8.192 bytes",
+        "4.920 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 16.384 bytes; 16.384 − 11.464 = 4.920."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 104”. Quantos bytes estão alocados?",
+      "options": [
+        "53.248 bytes alocados",
+        "425.984 bytes alocados",
+        "106.496 bytes alocados",
+        "26.624 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 104 × 512 = 53.248."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 8 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "56 enlaces",
+        "28 enlaces",
+        "64 enlaces",
+        "36 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 8 × 7 ÷ 2 = 28."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da oficina?",
+      "options": [
+        "Tudo responde, menos o programa da oficina",
+        "O PC da oficina só alcança a própria rede",
+        "O PC da oficina está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM da oficina antes de atualizar"
+      ],
+      "correct": 0,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 12 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "132 enlaces",
+        "144 enlaces",
+        "78 enlaces",
+        "66 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2:</b> 12 × 11 ÷ 2 = 66."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente do restaurante?",
+      "options": [
+        "Copiar a VM do restaurante gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do restaurante não é achado",
+        "Exportar a VM do restaurante em .ova para outro disco",
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 2,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.149.8.8. Por onde ele sai?",
+      "code": "default via 192.168.120.1 dev enp0s3\n192.168.120.0/24 dev enp0s3 scope link\n10.149.0.0/16 via 192.168.120.76 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.120.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.120.1, pela rota padrão",
+        "Para 192.168.120.76, pela rota 10.149"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente do hotel?",
+      "options": [
+        "O PC do hotel só alcança a própria rede",
+        "Fotografar a VM do hotel antes de atualizar",
+        "Tudo responde, menos o programa do hotel",
+        "8.8.8.8 responde, mas o site do hotel não é achado"
+      ],
+      "correct": 2,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 3.602 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "494 bytes",
+        "594 bytes",
+        "1.024 bytes",
+        "530 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 4 blocos = 4.096 bytes; 4.096 − 3.602 = 494."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 477 aparece como no ls -l?",
+      "options": [
+        "r----xrwx",
+        "r--rwxrwx",
+        "r-xrwxrwx",
+        "r--rwx---"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 7 = rwx; 7 = rwx."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.167.4.9. Por onde ele sai?",
+      "code": "default via 192.168.85.1 dev enp0s3\n192.168.85.0/24 dev enp0s3 scope link\n10.167.0.0/16 via 192.168.85.75 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.85.0/24",
+        "Para 192.168.85.75, pela rota 10.167",
+        "Para 192.168.85.1, pela rota padrão",
+        "É descartado por falta de rota"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 7.508 bytes, com blocos de 2.048 bytes, ocupa quanto no disco?",
+      "options": [
+        "6.144 bytes em 3 blocos",
+        "8.192 bytes em 4 blocos",
+        "10.240 bytes em 5 blocos",
+        "7.508 bytes em 4 blocos"
+      ],
+      "correct": 1,
+      "explain": "<b>Só blocos inteiros:</b> 7.508 ÷ 2.048 dá 3,67, que vira 4."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 437 aparece como no ls -l?",
+      "options": [
+        "r--r-xrwx",
+        "r-x-wxrwx",
+        "r---wx---",
+        "r---wxrwx"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 3 = -wx; 7 = rwx."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.49.151. Por onde ele sai?",
+      "code": "default via 192.168.49.1 dev enp0s3\n192.168.49.0/24 dev enp0s3 scope link\n10.151.0.0/16 via 192.168.49.44 dev enp0s3",
+      "options": [
+        "Para 192.168.49.44, pela rota 10.151",
+        "Direto, pela rede 192.168.49.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.49.1, pela rota padrão"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da farmácia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "Copiar a VM da farmácia gravando só as diferenças",
+        "Exportar a VM da farmácia em .ova para outro disco",
+        "O PC da farmácia está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx--x-w-?",
+      "options": [
+        "172",
+        "712",
+        "721",
+        "732"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; --x = 1; -w- = 2."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da transportadora?",
+      "options": [
+        "Copiar a VM da transportadora gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da transportadora não é achado",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da transportadora em .ova para outro disco"
+      ],
+      "correct": 2,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 425 aparece como no ls -l?",
+      "options": [
+        "r---w-rw-",
+        "r---w-r-x",
+        "r-x-w-r-x",
+        "r--r--r-x"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 2 = -w-; 5 = r-x."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente do pet shop?",
+      "options": [
+        "8.8.8.8 responde, mas o site do pet shop não é achado",
+        "Exportar a VM do pet shop em .ova para outro disco",
+        "Copiar a VM do pet shop gravando só as diferenças",
+        "Fotografar a VM do pet shop antes de atualizar"
+      ],
+      "correct": 3,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.8.162. Por onde ele sai?",
+      "code": "default via 192.168.8.1 dev enp0s3\n192.168.8.0/24 dev enp0s3 scope link\n10.162.0.0/16 via 192.168.8.32 dev enp0s3",
+      "options": [
+        "Para 192.168.8.1, pela rota padrão",
+        "Direto, pela rede 192.168.8.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.8.32, pela rota 10.162"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.105.204. Por onde ele sai?",
+      "code": "default via 192.168.105.1 dev enp0s3\n192.168.105.0/24 dev enp0s3 scope link\n10.204.0.0/16 via 192.168.105.11 dev enp0s3",
+      "options": [
+        "Para 192.168.105.1, pela rota padrão",
+        "Para 192.168.105.11, pela rota 10.204",
+        "Direto, pela rede 192.168.105.0/24",
+        "É descartado por falta de rota"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente do pet shop?",
+      "options": [
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway",
+        "A VM do pet shop ganha IP na rede física",
+        "Tudo responde, menos o programa do pet shop",
+        "O PC do pet shop só alcança a própria rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxrwxr--?",
+      "options": [
+        "714",
+        "747",
+        "775",
+        "774"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; rwx = 7; r-- = 4."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-x-wx--x?",
+      "options": [
+        "513",
+        "531",
+        "351",
+        "631"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; -wx = 3; --x = 1."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 541 aparece como no ls -l?",
+      "options": [
+        "r--r-x--x",
+        "r-xr---w-",
+        "r-xrw---x",
+        "r-xr----x"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 4 = r--; 1 = --x."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 7 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "28 enlaces",
+        "42 enlaces",
+        "49 enlaces",
+        "21 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2:</b> 7 × 6 ÷ 2 = 21."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 1.580 bytes, com blocos de 512 bytes, ocupa quanto no disco?",
+      "options": [
+        "1.536 bytes em 3 blocos",
+        "1.580 bytes em 4 blocos",
+        "2.560 bytes em 5 blocos",
+        "2.048 bytes em 4 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 1.580 ÷ 512 dá 3,09, que vira 4."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 426 aparece como no ls -l?",
+      "options": [
+        "r-x-w-rw-",
+        "r---w-rw-",
+        "r---w-rwx",
+        "r--rw--w-"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 2 = -w-; 6 = rw-."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.192 bytes, com blocos de 512 bytes, ocupa quanto no disco?",
+      "options": [
+        "2.048 bytes em 4 blocos",
+        "2.192 bytes em 5 blocos",
+        "3.072 bytes em 6 blocos",
+        "2.560 bytes em 5 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 2.192 ÷ 512 dá 4,28, que vira 5."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 15 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "105 enlaces",
+        "120 enlaces",
+        "210 enlaces",
+        "225 enlaces"
+      ],
+      "correct": 0,
+      "explain": "<b>n(n−1)/2:</b> 15 × 14 ÷ 2 = 105."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da farmácia?",
+      "options": [
+        "O PC da farmácia só alcança a própria rede",
+        "Fotografar a VM da farmácia antes de atualizar",
+        "O PC da farmácia está com IP 169.254.x.x, sem gateway",
+        "Tudo responde, menos o programa da farmácia"
+      ],
+      "correct": 3,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da farmácia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "Fotografar a VM da farmácia antes de atualizar",
+        "O PC da farmácia só alcança a própria rede",
+        "Tudo responde, menos o programa da farmácia"
+      ],
+      "correct": 2,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.174.8.8. Por onde ele sai?",
+      "code": "default via 192.168.95.1 dev enp0s3\n192.168.95.0/24 dev enp0s3 scope link\n10.174.0.0/16 via 192.168.95.78 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Para 192.168.95.1, pela rota padrão",
+        "Direto, pela rede 192.168.95.0/24",
+        "Para 192.168.95.78, pela rota 10.174"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 730 aparece como no ls -l?",
+      "options": [
+        "-wxrwx---",
+        "rwx-wx---",
+        "----wx---",
+        "rwx-wx--x"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 7 = rwx; 3 = -wx; 0 = ---."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.43.219. Por onde ele sai?",
+      "code": "default via 192.168.43.1 dev enp0s3\n192.168.43.0/24 dev enp0s3 scope link\n10.219.0.0/16 via 192.168.43.76 dev enp0s3",
+      "options": [
+        "Para 192.168.43.1, pela rota padrão",
+        "Direto, pela rede 192.168.43.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.43.76, pela rota 10.219"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 22 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "462 enlaces",
+        "484 enlaces",
+        "253 enlaces",
+        "231 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2:</b> 22 × 21 ÷ 2 = 231."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.189.4.9. Por onde ele sai?",
+      "code": "default via 192.168.48.1 dev enp0s3\n192.168.48.0/24 dev enp0s3 scope link\n10.189.0.0/16 via 192.168.48.68 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.48.0/24",
+        "Para 192.168.48.1, pela rota padrão",
+        "Para 192.168.48.68, pela rota 10.189",
+        "É descartado por falta de rota"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 646 aparece como no ls -l?",
+      "options": [
+        "rw-rw-r--",
+        "rw-rw-rw-",
+        "rw-r--rwx",
+        "rw-r--rw-"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 4 = r--; 6 = rw-."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente do restaurante?",
+      "options": [
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM do restaurante antes de atualizar",
+        "O PC do restaurante só alcança a própria rede",
+        "Tudo responde, menos o programa do restaurante"
+      ],
+      "correct": 2,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente do restaurante?",
+      "options": [
+        "Copiar a VM do restaurante gravando só as diferenças",
+        "Exportar a VM do restaurante em .ova para outro disco",
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do restaurante não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 427 aparece como no ls -l?",
+      "options": [
+        "r---w-rwx",
+        "r---w----",
+        "r-x-w-rwx",
+        "r--r--rwx"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 2 = -w-; 7 = rwx."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 9.445 bytes, com blocos de 8.192 bytes, ocupa quanto no disco?",
+      "options": [
+        "24.576 bytes em 3 blocos",
+        "8.192 bytes em 1 blocos",
+        "9.445 bytes em 2 blocos",
+        "16.384 bytes em 2 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 9.445 ÷ 8.192 dá 1,15, que vira 2."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxrwx-wx?",
+      "options": [
+        "073",
+        "773",
+        "713",
+        "774"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; rwx = 7; -wx = 3."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.356 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "3.936 bytes",
+        "4.096 bytes",
+        "260 bytes",
+        "3.836 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 8.192 bytes; 8.192 − 4.356 = 3.836."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 72”. Quantos bytes estão alocados?",
+      "options": [
+        "36.864 bytes alocados",
+        "18.432 bytes alocados",
+        "73.728 bytes alocados",
+        "294.912 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 72 × 512 = 36.864."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da biblioteca?",
+      "options": [
+        "Fotografar a VM da biblioteca antes de atualizar",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da biblioteca em .ova para outro disco",
+        "Copiar a VM da biblioteca gravando só as diferenças"
+      ],
+      "correct": 0,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da academia?",
+      "options": [
+        "O PC da academia só alcança a própria rede",
+        "Tudo responde, menos o programa da academia",
+        "O PC da academia está com IP 169.254.x.x, sem gateway",
+        "A VM da academia ganha IP na rede física"
+      ],
+      "correct": 3,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.636 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.560 bytes",
+        "2.048 bytes",
+        "1.460 bytes",
+        "588 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 4.096 bytes; 4.096 − 2.636 = 1.460."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da academia?",
+      "options": [
+        "Fotografar a VM da academia antes de atualizar",
+        "O PC da academia está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da academia gravando só as diferenças",
+        "Exportar a VM da academia em .ova para outro disco"
+      ],
+      "correct": 0,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da loja online?",
+      "options": [
+        "Exportar a VM da loja online em .ova para outro disco",
+        "Copiar a VM da loja online gravando só as diferenças",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM da loja online antes de atualizar"
+      ],
+      "correct": 3,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente do banco?",
+      "options": [
+        "8.8.8.8 responde, mas o site do banco não é achado",
+        "A VM do banco ganha IP na rede física",
+        "O PC do banco só alcança a própria rede",
+        "Tudo responde, menos o programa do banco"
+      ],
+      "correct": 1,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.768 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "208 bytes",
+        "512 bytes",
+        "304 bytes",
+        "404 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 3.072 bytes; 3.072 − 2.768 = 304."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx--x--x?",
+      "options": [
+        "711",
+        "171",
+        "712",
+        "011"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; --x = 1; --x = 1."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 444 aparece como no ls -l?",
+      "options": [
+        "r--r--r--",
+        "r--rw-r--",
+        "r-xr--r--",
+        "r--r--r-x"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 4 = r--; 4 = r--."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente do banco?",
+      "options": [
+        "Fotografar a VM do banco antes de atualizar",
+        "Tudo responde, menos o programa do banco",
+        "O PC do banco está com IP 169.254.x.x, sem gateway",
+        "O PC do banco só alcança a própria rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente do hotel?",
+      "options": [
+        "Exportar a VM do hotel em .ova para outro disco",
+        "O PC do hotel está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Copiar a VM do hotel gravando só as diferenças"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da biblioteca?",
+      "options": [
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site da biblioteca não é achado",
+        "Copiar a VM da biblioteca gravando só as diferenças",
+        "Exportar a VM da biblioteca em .ova para outro disco"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 18 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "153 enlaces",
+        "171 enlaces",
+        "324 enlaces",
+        "306 enlaces"
+      ],
+      "correct": 0,
+      "explain": "<b>n(n−1)/2:</b> 18 × 17 ÷ 2 = 153."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx-wxrwx?",
+      "options": [
+        "773",
+        "737",
+        "757",
+        "037"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; -wx = 3; rwx = 7."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente do banco?",
+      "options": [
+        "O PC do banco está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do banco não é achado",
+        "Exportar a VM do banco em .ova para outro disco",
+        "Copiar a VM do banco gravando só as diferenças"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 9.999 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.807 bytes",
+        "241 bytes",
+        "341 bytes",
+        "2.048 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 10.240 bytes; 10.240 − 9.999 = 241."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente do pet shop?",
+      "options": [
+        "Copiar a VM do pet shop gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do pet shop não é achado",
+        "Exportar a VM do pet shop em .ova para outro disco",
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da loja online?",
+      "options": [
+        "O PC da loja online só alcança a própria rede",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM da loja online antes de atualizar",
+        "Tudo responde, menos o programa da loja online"
+      ],
+      "correct": 0,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r--rwx-w-?",
+      "options": [
+        "472",
+        "412",
+        "473",
+        "572"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; rwx = 7; -w- = 2."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 4 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "6 enlaces",
+        "10 enlaces",
+        "12 enlaces",
+        "16 enlaces"
+      ],
+      "correct": 0,
+      "explain": "<b>n(n−1)/2:</b> 4 × 3 ÷ 2 = 6."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da oficina?",
+      "options": [
+        "O PC da oficina está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site da oficina não é achado",
+        "Copiar a VM da oficina gravando só as diferenças",
+        "Exportar a VM da oficina em .ova para outro disco"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da escola?",
+      "options": [
+        "8.8.8.8 responde, mas o site da escola não é achado",
+        "O PC da escola está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da escola gravando só as diferenças",
+        "Exportar a VM da escola em .ova para outro disco"
+      ],
+      "correct": 2,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.162.4.9. Por onde ele sai?",
+      "code": "default via 192.168.87.1 dev enp0s3\n192.168.87.0/24 dev enp0s3 scope link\n10.162.0.0/16 via 192.168.87.94 dev enp0s3",
+      "options": [
+        "Para 192.168.87.1, pela rota padrão",
+        "É descartado por falta de rota",
+        "Para 192.168.87.94, pela rota 10.162",
+        "Direto, pela rede 192.168.87.0/24"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da clínica?",
+      "options": [
+        "A VM da clínica ganha IP na rede física",
+        "O PC da clínica só alcança a própria rede",
+        "Tudo responde, menos o programa da clínica",
+        "8.8.8.8 responde, mas o site da clínica não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-xr-xr-x?",
+      "options": [
+        "655",
+        "575",
+        "556",
+        "555"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; r-x = 5; r-x = 5."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.247.4.9. Por onde ele sai?",
+      "code": "default via 192.168.68.1 dev enp0s3\n192.168.68.0/24 dev enp0s3 scope link\n10.247.0.0/16 via 192.168.68.55 dev enp0s3",
+      "options": [
+        "Para 192.168.68.55, pela rota 10.247",
+        "Para 192.168.68.1, pela rota padrão",
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.68.0/24"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.192.8.8. Por onde ele sai?",
+      "code": "default via 192.168.92.1 dev enp0s3\n192.168.92.0/24 dev enp0s3 scope link\n10.192.0.0/16 via 192.168.92.54 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.92.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.92.54, pela rota 10.192",
+        "Para 192.168.92.1, pela rota padrão"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da loja online?",
+      "options": [
+        "Exportar a VM da loja online em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da loja online não é achado",
+        "Copiar a VM da loja online gravando só as diferenças",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente do pet shop?",
+      "options": [
+        "Exportar a VM do pet shop em .ova para outro disco",
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM do pet shop gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do pet shop não é achado"
+      ],
+      "correct": 2,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.51.220. Por onde ele sai?",
+      "code": "default via 192.168.51.1 dev enp0s3\n192.168.51.0/24 dev enp0s3 scope link\n10.220.0.0/16 via 192.168.51.26 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.51.0/24",
+        "Para 192.168.51.26, pela rota 10.220",
+        "Para 192.168.51.1, pela rota padrão"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.906 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "512 bytes",
+        "346 bytes",
+        "166 bytes",
+        "266 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 3.072 bytes; 3.072 − 2.906 = 166."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente do cinema?",
+      "options": [
+        "Copiar a VM do cinema gravando só as diferenças",
+        "Exportar a VM do cinema em .ova para outro disco",
+        "O PC do cinema está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do cinema não é achado"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente do cinema?",
+      "options": [
+        "O PC do cinema só alcança a própria rede",
+        "8.8.8.8 responde, mas o site do cinema não é achado",
+        "A VM do cinema ganha IP na rede física",
+        "Tudo responde, menos o programa do cinema"
+      ],
+      "correct": 2,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da loja online?",
+      "options": [
+        "Exportar a VM da loja online em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da loja online não é achado",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da loja online gravando só as diferenças"
+      ],
+      "correct": 0,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 23 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "506 enlaces",
+        "253 enlaces",
+        "529 enlaces",
+        "276 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 23 × 22 ÷ 2 = 253."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da oficina?",
+      "options": [
+        "O PC da oficina só alcança a própria rede",
+        "Tudo responde, menos o programa da oficina",
+        "A VM da oficina ganha IP na rede física",
+        "8.8.8.8 responde, mas o site da oficina não é achado"
+      ],
+      "correct": 2,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 14 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "182 enlaces",
+        "91 enlaces",
+        "105 enlaces",
+        "196 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 14 × 13 ÷ 2 = 91."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.422 bytes, com blocos de 1.024 bytes, ocupa quanto no disco?",
+      "options": [
+        "2.422 bytes em 3 blocos",
+        "2.048 bytes em 2 blocos",
+        "3.072 bytes em 3 blocos",
+        "4.096 bytes em 4 blocos"
+      ],
+      "correct": 2,
+      "explain": "<b>Só blocos inteiros:</b> 2.422 ÷ 1.024 dá 2,37, que vira 3."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da loja online?",
+      "options": [
+        "8.8.8.8 responde, mas o site da loja online não é achado",
+        "Exportar a VM da loja online em .ova para outro disco",
+        "Copiar a VM da loja online gravando só as diferenças",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da clínica?",
+      "options": [
+        "Copiar a VM da clínica gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da clínica não é achado",
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da clínica em .ova para outro disco"
+      ],
+      "correct": 3,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-x------?",
+      "options": [
+        "501",
+        "600",
+        "500",
+        "520"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; --- = 0; --- = 0."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 661 aparece como no ls -l?",
+      "options": [
+        "rw-rw---x",
+        "rw-rw--w-",
+        "rw------x",
+        "rw---xrw-"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 6 = rw-; 1 = --x."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 144”. Quantos bytes estão alocados?",
+      "options": [
+        "73.728 bytes alocados",
+        "36.864 bytes alocados",
+        "147.456 bytes alocados",
+        "589.824 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 144 × 512 = 73.728."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da clínica?",
+      "options": [
+        "Copiar a VM da clínica gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da clínica não é achado",
+        "Exportar a VM da clínica em .ova para outro disco",
+        "O PC da clínica está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.457 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.024 bytes",
+        "763 bytes",
+        "663 bytes",
+        "361 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 5.120 bytes; 5.120 − 4.457 = 663."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente do hotel?",
+      "options": [
+        "O PC do hotel está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM do hotel gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Exportar a VM do hotel em .ova para outro disco"
+      ],
+      "correct": 2,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da farmácia?",
+      "options": [
+        "Tudo responde, menos o programa da farmácia",
+        "O PC da farmácia só alcança a própria rede",
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "A VM da farmácia ganha IP na rede física"
+      ],
+      "correct": 3,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 1.705 bytes, com blocos de 1.024 bytes, ocupa quanto no disco?",
+      "options": [
+        "3.072 bytes em 3 blocos",
+        "1.705 bytes em 2 blocos",
+        "2.048 bytes em 2 blocos",
+        "1.024 bytes em 1 blocos"
+      ],
+      "correct": 2,
+      "explain": "<b>Só blocos inteiros:</b> 1.705 ÷ 1.024 dá 1,67, que vira 2."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 550 aparece como no ls -l?",
+      "options": [
+        "r-x---r-x",
+        "r-xr-x--x",
+        "r-xr-x---",
+        "rw-r-x---"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 5 = r-x; 0 = ---."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 112”. Quantos bytes estão alocados?",
+      "options": [
+        "28.672 bytes alocados",
+        "57.344 bytes alocados",
+        "458.752 bytes alocados",
+        "114.688 bytes alocados"
+      ],
+      "correct": 1,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 112 × 512 = 57.344."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 96”. Quantos bytes estão alocados?",
+      "options": [
+        "393.216 bytes alocados",
+        "49.152 bytes alocados",
+        "98.304 bytes alocados",
+        "24.576 bytes alocados"
+      ],
+      "correct": 1,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 96 × 512 = 49.152."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.876 bytes, com blocos de 2.048 bytes, ocupa quanto no disco?",
+      "options": [
+        "8.192 bytes em 4 blocos",
+        "4.876 bytes em 3 blocos",
+        "6.144 bytes em 3 blocos",
+        "4.096 bytes em 2 blocos"
+      ],
+      "correct": 2,
+      "explain": "<b>Só blocos inteiros:</b> 4.876 ÷ 2.048 dá 2,38, que vira 3."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 454 aparece como no ls -l?",
+      "options": [
+        "r-xr-xr--",
+        "r--r--r-x",
+        "r--r-xr--",
+        "r-xr--r--"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 5 = r-x; 4 = r--."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 532 aparece como no ls -l?",
+      "options": [
+        "rw--wx-w-",
+        "-wxr-x-w-",
+        "r-xr-x-w-",
+        "r-x-wx-w-"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 3 = -wx; 2 = -w-."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 751 aparece como no ls -l?",
+      "options": [
+        "rwxr-x-w-",
+        "rwxr-x--x",
+        "rwxrwx--x",
+        "r-xrwx--x"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 7 = rwx; 5 = r-x; 1 = --x."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente do cinema?",
+      "options": [
+        "8.8.8.8 responde, mas o site do cinema não é achado",
+        "O PC do cinema só alcança a própria rede",
+        "Tudo responde, menos o programa do cinema",
+        "Fotografar a VM do cinema antes de atualizar"
+      ],
+      "correct": 2,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente do banco?",
+      "options": [
+        "Fotografar a VM do banco antes de atualizar",
+        "O PC do banco está com IP 169.254.x.x, sem gateway",
+        "Tudo responde, menos o programa do banco",
+        "O PC do banco só alcança a própria rede"
+      ],
+      "correct": 3,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 466 aparece como no ls -l?",
+      "options": [
+        "rw-r--rw-",
+        "r-xrw-rw-",
+        "r-----rw-",
+        "r--rw-rw-"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 6 = rw-; 6 = rw-."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw--wxr--?",
+      "options": [
+        "634",
+        "734",
+        "654",
+        "635"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; -wx = 3; r-- = 4."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 11.475 bytes, com blocos de 4.096 bytes, ocupa quanto no disco?",
+      "options": [
+        "16.384 bytes em 4 blocos",
+        "12.288 bytes em 3 blocos",
+        "8.192 bytes em 2 blocos",
+        "11.475 bytes em 3 blocos"
+      ],
+      "correct": 1,
+      "explain": "<b>Só blocos inteiros:</b> 11.475 ÷ 4.096 dá 2,80, que vira 3."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 760 aparece como no ls -l?",
+      "options": [
+        "rw-rwx---",
+        "rwx---rw-",
+        "---rw----",
+        "rwxrw----"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 7 = rwx; 6 = rw-; 0 = ---."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 24”. Quantos bytes estão alocados?",
+      "options": [
+        "98.304 bytes alocados",
+        "24.576 bytes alocados",
+        "12.288 bytes alocados",
+        "6.144 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 24 × 512 = 12.288."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-xrw-rwx?",
+      "options": [
+        "567",
+        "507",
+        "576",
+        "560"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; rw- = 6; rwx = 7."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-xrwx--x?",
+      "options": [
+        "671",
+        "571",
+        "751",
+        "572"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; rwx = 7; --x = 1."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente do restaurante?",
+      "options": [
+        "8.8.8.8 responde, mas o site do restaurante não é achado",
+        "Copiar a VM do restaurante gravando só as diferenças",
+        "Exportar a VM do restaurante em .ova para outro disco",
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da escola?",
+      "options": [
+        "8.8.8.8 responde, mas o site da escola não é achado",
+        "Copiar a VM da escola gravando só as diferenças",
+        "O PC da escola está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da escola em .ova para outro disco"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da clínica?",
+      "options": [
+        "Fotografar a VM da clínica antes de atualizar",
+        "Tudo responde, menos o programa da clínica",
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "O PC da clínica só alcança a própria rede"
+      ],
+      "correct": 3,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da biblioteca?",
+      "options": [
+        "Copiar a VM da biblioteca gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da biblioteca não é achado",
+        "Exportar a VM da biblioteca em .ova para outro disco",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente do pet shop?",
+      "options": [
+        "O PC do pet shop só alcança a própria rede",
+        "Tudo responde, menos o programa do pet shop",
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM do pet shop antes de atualizar"
+      ],
+      "correct": 1,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.175 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.024 bytes",
+        "945 bytes",
+        "79 bytes",
+        "1.045 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 5.120 bytes; 5.120 − 4.175 = 945."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente do restaurante?",
+      "options": [
+        "8.8.8.8 responde, mas o site do restaurante não é achado",
+        "Exportar a VM do restaurante em .ova para outro disco",
+        "Copiar a VM do restaurante gravando só as diferenças",
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw-r-x-wx?",
+      "options": [
+        "563",
+        "653",
+        "753",
+        "654"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; r-x = 5; -wx = 3."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 26 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "325 enlaces",
+        "650 enlaces",
+        "351 enlaces",
+        "676 enlaces"
+      ],
+      "correct": 0,
+      "explain": "<b>n(n−1)/2:</b> 26 × 25 ÷ 2 = 325."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 184”. Quantos bytes estão alocados?",
+      "options": [
+        "753.664 bytes alocados",
+        "94.208 bytes alocados",
+        "188.416 bytes alocados",
+        "47.104 bytes alocados"
+      ],
+      "correct": 1,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 184 × 512 = 94.208."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da loja online?",
+      "options": [
+        "Copiar a VM da loja online gravando só as diferenças",
+        "O PC da loja online está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da loja online em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da loja online não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 41.356 bytes, com blocos de 8.192 bytes, ocupa quanto no disco?",
+      "options": [
+        "49.152 bytes em 6 blocos",
+        "40.960 bytes em 5 blocos",
+        "41.356 bytes em 6 blocos",
+        "57.344 bytes em 7 blocos"
+      ],
+      "correct": 0,
+      "explain": "<b>Só blocos inteiros:</b> 41.356 ÷ 8.192 dá 5,05, que vira 6."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.110.136. Por onde ele sai?",
+      "code": "default via 192.168.110.1 dev enp0s3\n192.168.110.0/24 dev enp0s3 scope link\n10.136.0.0/16 via 192.168.110.54 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.110.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.110.1, pela rota padrão",
+        "Para 192.168.110.54, pela rota 10.136"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da escola?",
+      "options": [
+        "Fotografar a VM da escola antes de atualizar",
+        "O PC da escola só alcança a própria rede",
+        "8.8.8.8 responde, mas o site da escola não é achado",
+        "Tudo responde, menos o programa da escola"
+      ],
+      "correct": 1,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da farmácia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "O PC da farmácia está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da farmácia gravando só as diferenças",
+        "Exportar a VM da farmácia em .ova para outro disco"
+      ],
+      "correct": 3,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente do pet shop?",
+      "options": [
+        "Copiar a VM do pet shop gravando só as diferenças",
+        "O PC do pet shop está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM do pet shop em .ova para outro disco",
+        "8.8.8.8 responde, mas o site do pet shop não é achado"
+      ],
+      "correct": 2,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx-w-r-x?",
+      "options": [
+        "745",
+        "275",
+        "725",
+        "752"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; -w- = 2; r-x = 5."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 3.615 bytes, com blocos de 1.024 bytes, ocupa quanto no disco?",
+      "options": [
+        "3.072 bytes em 3 blocos",
+        "5.120 bytes em 5 blocos",
+        "4.096 bytes em 4 blocos",
+        "3.615 bytes em 4 blocos"
+      ],
+      "correct": 2,
+      "explain": "<b>Só blocos inteiros:</b> 3.615 ÷ 1.024 dá 3,53, que vira 4."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 1.454 bytes, com blocos de 512 bytes, ocupa quanto no disco?",
+      "options": [
+        "2.048 bytes em 4 blocos",
+        "1.454 bytes em 3 blocos",
+        "1.024 bytes em 2 blocos",
+        "1.536 bytes em 3 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 1.454 ÷ 512 dá 2,84, que vira 3."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 136”. Quantos bytes estão alocados?",
+      "options": [
+        "34.816 bytes alocados",
+        "557.056 bytes alocados",
+        "69.632 bytes alocados",
+        "139.264 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 136 × 512 = 69.632."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw-r-x---?",
+      "options": [
+        "605",
+        "560",
+        "650",
+        "750"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; r-x = 5; --- = 0."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxrw--wx?",
+      "options": [
+        "063",
+        "764",
+        "736",
+        "763"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; rw- = 6; -wx = 3."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.755 bytes, com blocos de 2.048 bytes, ocupa quanto no disco?",
+      "options": [
+        "6.144 bytes em 3 blocos",
+        "4.096 bytes em 2 blocos",
+        "2.048 bytes em 1 blocos",
+        "2.755 bytes em 2 blocos"
+      ],
+      "correct": 1,
+      "explain": "<b>Só blocos inteiros:</b> 2.755 ÷ 2.048 dá 1,35, que vira 2."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente do banco?",
+      "options": [
+        "Exportar a VM do banco em .ova para outro disco",
+        "Copiar a VM do banco gravando só as diferenças",
+        "Fotografar a VM do banco antes de atualizar",
+        "O PC do banco está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 2,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 645 aparece como no ls -l?",
+      "options": [
+        "rwxr--r-x",
+        "rw-rw-r-x",
+        "rw-r--r-x",
+        "rw-r-xr--"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 4 = r--; 5 = r-x."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 160”. Quantos bytes estão alocados?",
+      "options": [
+        "163.840 bytes alocados",
+        "81.920 bytes alocados",
+        "40.960 bytes alocados",
+        "655.360 bytes alocados"
+      ],
+      "correct": 1,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 160 × 512 = 81.920."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 17 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "289 enlaces",
+        "272 enlaces",
+        "153 enlaces",
+        "136 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2:</b> 17 × 16 ÷ 2 = 136."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente do hotel?",
+      "options": [
+        "8.8.8.8 responde, mas o site do hotel não é achado",
+        "Exportar a VM do hotel em .ova para outro disco",
+        "Copiar a VM do hotel gravando só as diferenças",
+        "Fotografar a VM do hotel antes de atualizar"
+      ],
+      "correct": 3,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.107.146. Por onde ele sai?",
+      "code": "default via 192.168.107.1 dev enp0s3\n192.168.107.0/24 dev enp0s3 scope link\n10.146.0.0/16 via 192.168.107.83 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.107.0/24",
+        "Para 192.168.107.83, pela rota 10.146",
+        "Para 192.168.107.1, pela rota padrão",
+        "É descartado por falta de rota"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente do restaurante?",
+      "options": [
+        "Exportar a VM do restaurante em .ova para outro disco",
+        "O PC do restaurante está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM do restaurante antes de atualizar",
+        "Copiar a VM do restaurante gravando só as diferenças"
+      ],
+      "correct": 2,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 5.544 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.448 bytes",
+        "600 bytes",
+        "2.048 bytes",
+        "700 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 3 blocos = 6.144 bytes; 6.144 − 5.544 = 600."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 168”. Quantos bytes estão alocados?",
+      "options": [
+        "688.128 bytes alocados",
+        "172.032 bytes alocados",
+        "86.016 bytes alocados",
+        "43.008 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 168 × 512 = 86.016."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx-w-r--?",
+      "options": [
+        "274",
+        "724",
+        "744",
+        "742"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; -w- = 2; r-- = 4."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 423 aparece como no ls -l?",
+      "options": [
+        "r-x-w--wx",
+        "r--r---wx",
+        "-w-r---wx",
+        "r---w--wx"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 2 = -w-; 3 = -wx."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.331 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "841 bytes",
+        "741 bytes",
+        "1.024 bytes",
+        "283 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 3 blocos = 3.072 bytes; 3.072 − 2.331 = 741."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 39.752 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "8.192 bytes",
+        "1.208 bytes",
+        "1.308 bytes",
+        "6.984 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 40.960 bytes; 40.960 − 39.752 = 1.208."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.567 bytes, com blocos de 1.024 bytes, ocupa quanto no disco?",
+      "options": [
+        "6.144 bytes em 6 blocos",
+        "4.567 bytes em 5 blocos",
+        "4.096 bytes em 4 blocos",
+        "5.120 bytes em 5 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 4.567 ÷ 1.024 dá 4,46, que vira 5."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw--wx-w-?",
+      "options": [
+        "632",
+        "623",
+        "633",
+        "362"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; -wx = 3; -w- = 2."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 607 aparece como no ls -l?",
+      "options": [
+        "rw----rwx",
+        "---rw-rwx",
+        "rw-rwx---",
+        "rw--w-rwx"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 0 = ---; 7 = rwx."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw---xr--?",
+      "options": [
+        "714",
+        "615",
+        "641",
+        "614"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; --x = 1; r-- = 4."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da biblioteca?",
+      "options": [
+        "O PC da biblioteca só alcança a própria rede",
+        "Tudo responde, menos o programa da biblioteca",
+        "Fotografar a VM da biblioteca antes de atualizar",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 192”. Quantos bytes estão alocados?",
+      "options": [
+        "196.608 bytes alocados",
+        "786.432 bytes alocados",
+        "98.304 bytes alocados",
+        "49.152 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 192 × 512 = 98.304."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx-wxr-x?",
+      "options": [
+        "375",
+        "755",
+        "735",
+        "035"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; -wx = 3; r-x = 5."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da escola?",
+      "options": [
+        "A VM da escola ganha IP na rede física",
+        "O PC da escola está com IP 169.254.x.x, sem gateway",
+        "O PC da escola só alcança a própria rede",
+        "Tudo responde, menos o programa da escola"
+      ],
+      "correct": 0,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente do cinema?",
+      "options": [
+        "Copiar a VM do cinema gravando só as diferenças",
+        "O PC do cinema está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do cinema não é achado",
+        "Exportar a VM do cinema em .ova para outro disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.88.244. Por onde ele sai?",
+      "code": "default via 192.168.88.1 dev enp0s3\n192.168.88.0/24 dev enp0s3 scope link\n10.244.0.0/16 via 192.168.88.99 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Para 192.168.88.99, pela rota 10.244",
+        "Para 192.168.88.1, pela rota padrão",
+        "Direto, pela rede 192.168.88.0/24"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r---wx---?",
+      "options": [
+        "431",
+        "450",
+        "530",
+        "430"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; -wx = 3; --- = 0."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da escola?",
+      "options": [
+        "Copiar a VM da escola gravando só as diferenças",
+        "Exportar a VM da escola em .ova para outro disco",
+        "Fotografar a VM da escola antes de atualizar",
+        "8.8.8.8 responde, mas o site da escola não é achado"
+      ],
+      "correct": 2,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da oficina?",
+      "options": [
+        "Exportar a VM da oficina em .ova para outro disco",
+        "Copiar a VM da oficina gravando só as diferenças",
+        "O PC da oficina está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site da oficina não é achado"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 40”. Quantos bytes estão alocados?",
+      "options": [
+        "40.960 bytes alocados",
+        "163.840 bytes alocados",
+        "10.240 bytes alocados",
+        "20.480 bytes alocados"
+      ],
+      "correct": 3,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 40 × 512 = 20.480."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 667 aparece como no ls -l?",
+      "options": [
+        "rw----rwx",
+        "rwxrw-rwx",
+        "rw-rwxrw-",
+        "rw-rw-rwx"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 6 = rw-; 7 = rwx."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da transportadora?",
+      "options": [
+        "Exportar a VM da transportadora em .ova para outro disco",
+        "Fotografar a VM da transportadora antes de atualizar",
+        "Copiar a VM da transportadora gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da transportadora não é achado"
+      ],
+      "correct": 1,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 10.246.4.9. Por onde ele sai?",
+      "code": "default via 192.168.29.1 dev enp0s3\n192.168.29.0/24 dev enp0s3 scope link\n10.246.0.0/16 via 192.168.29.9 dev enp0s3",
+      "options": [
+        "Para 192.168.29.1, pela rota padrão",
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.29.0/24",
+        "Para 192.168.29.9, pela rota 10.246"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> a rota /16 é mais específica que a padrão."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da transportadora?",
+      "options": [
+        "Exportar a VM da transportadora em .ova para outro disco",
+        "Copiar a VM da transportadora gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da transportadora não é achado",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 2,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-xr-----?",
+      "options": [
+        "450",
+        "540",
+        "640",
+        "504"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; r-- = 4; --- = 0."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.698 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "374 bytes",
+        "512 bytes",
+        "474 bytes",
+        "138 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 3.072 bytes; 3.072 − 2.698 = 374."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 64”. Quantos bytes estão alocados?",
+      "options": [
+        "32.768 bytes alocados",
+        "65.536 bytes alocados",
+        "262.144 bytes alocados",
+        "16.384 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 64 × 512 = 32.768."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da clínica?",
+      "options": [
+        "8.8.8.8 responde, mas o site da clínica não é achado",
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da clínica em .ova para outro disco",
+        "Copiar a VM da clínica gravando só as diferenças"
+      ],
+      "correct": 3,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 9 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "81 enlaces",
+        "72 enlaces",
+        "36 enlaces",
+        "45 enlaces"
+      ],
+      "correct": 2,
+      "explain": "<b>n(n−1)/2:</b> 9 × 8 ÷ 2 = 36."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 4.300 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "204 bytes",
+        "4.096 bytes",
+        "3.992 bytes",
+        "3.892 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 8.192 bytes; 8.192 − 4.300 = 3.892."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r--r-x---?",
+      "options": [
+        "450",
+        "405",
+        "470",
+        "540"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; r-x = 5; --- = 0."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 6.591 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.601 bytes",
+        "4.096 bytes",
+        "1.701 bytes",
+        "2.495 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 8.192 bytes; 8.192 − 6.591 = 1.601."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da farmácia?",
+      "options": [
+        "Copiar a VM da farmácia gravando só as diferenças",
+        "Fotografar a VM da farmácia antes de atualizar",
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "Exportar a VM da farmácia em .ova para outro disco"
+      ],
+      "correct": 1,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da academia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da academia não é achado",
+        "Copiar a VM da academia gravando só as diferenças",
+        "Exportar a VM da academia em .ova para outro disco",
+        "O PC da academia está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente do banco?",
+      "options": [
+        "Copiar a VM do banco gravando só as diferenças",
+        "8.8.8.8 responde, mas o site do banco não é achado",
+        "Exportar a VM do banco em .ova para outro disco",
+        "O PC do banco está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 3,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 32”. Quantos bytes estão alocados?",
+      "options": [
+        "16.384 bytes alocados",
+        "32.768 bytes alocados",
+        "8.192 bytes alocados",
+        "131.072 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 32 × 512 = 16.384."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx--xr-x?",
+      "options": [
+        "715",
+        "716",
+        "735",
+        "175"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; --x = 1; r-x = 5."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.460 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "100 bytes",
+        "412 bytes",
+        "200 bytes",
+        "512 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 2.560 bytes; 2.560 − 2.460 = 100."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 128”. Quantos bytes estão alocados?",
+      "options": [
+        "131.072 bytes alocados",
+        "524.288 bytes alocados",
+        "65.536 bytes alocados",
+        "32.768 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 128 × 512 = 65.536."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da biblioteca?",
+      "options": [
+        "Exportar a VM da biblioteca em .ova para outro disco",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site da biblioteca não é achado",
+        "Copiar a VM da biblioteca gravando só as diferenças"
+      ],
+      "correct": 2,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r-x---r--?",
+      "options": [
+        "505",
+        "504",
+        "540",
+        "524"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-x = 5; --- = 0; r-- = 4."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 11.725 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "663 bytes",
+        "563 bytes",
+        "4.096 bytes",
+        "3.533 bytes"
+      ],
+      "correct": 1,
+      "explain": "<b>Arredonde para cima:</b> 3 blocos = 12.288 bytes; 12.288 − 11.725 = 563."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r--r-----?",
+      "options": [
+        "440",
+        "441",
+        "404",
+        "460"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; r-- = 4; --- = 0."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.224.8.8. Por onde ele sai?",
+      "code": "default via 192.168.40.1 dev enp0s3\n192.168.40.0/24 dev enp0s3 scope link\n10.224.0.0/16 via 192.168.40.34 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.40.0/24",
+        "Para 192.168.40.34, pela rota 10.224",
+        "Para 192.168.40.1, pela rota padrão"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 605 aparece como no ls -l?",
+      "options": [
+        "rw--w-r-x",
+        "---rw-r-x",
+        "rwx---r-x",
+        "rw----r-x"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 0 = ---; 5 = r-x."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.58.139. Por onde ele sai?",
+      "code": "default via 192.168.58.1 dev enp0s3\n192.168.58.0/24 dev enp0s3 scope link\n10.139.0.0/16 via 192.168.58.29 dev enp0s3",
+      "options": [
+        "Para 192.168.58.29, pela rota 10.139",
+        "É descartado por falta de rota",
+        "Para 192.168.58.1, pela rota padrão",
+        "Direto, pela rede 192.168.58.0/24"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente do banco?",
+      "options": [
+        "Copiar a VM do banco gravando só as diferenças",
+        "O PC do banco está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM do banco em .ova para outro disco",
+        "8.8.8.8 responde, mas o site do banco não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 607 bytes, com blocos de 512 bytes, ocupa quanto no disco?",
+      "options": [
+        "512 bytes em 1 blocos",
+        "607 bytes em 2 blocos",
+        "1.536 bytes em 3 blocos",
+        "1.024 bytes em 2 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 607 ÷ 512 dá 1,19, que vira 2."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 152”. Quantos bytes estão alocados?",
+      "options": [
+        "77.824 bytes alocados",
+        "622.592 bytes alocados",
+        "155.648 bytes alocados",
+        "38.912 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 152 × 512 = 77.824."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da escola?",
+      "options": [
+        "8.8.8.8 responde, mas o site da escola não é achado",
+        "Exportar a VM da escola em .ova para outro disco",
+        "Copiar a VM da escola gravando só as diferenças",
+        "O PC da escola está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 1,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da oficina?",
+      "options": [
+        "O PC da oficina está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM da oficina em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da oficina não é achado",
+        "Copiar a VM da oficina gravando só as diferenças"
+      ],
+      "correct": 1,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da academia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da academia não é achado",
+        "Fotografar a VM da academia antes de atualizar",
+        "O PC da academia só alcança a própria rede",
+        "Tudo responde, menos o programa da academia"
+      ],
+      "correct": 3,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da transportadora?",
+      "options": [
+        "Exportar a VM da transportadora em .ova para outro disco",
+        "O PC da transportadora está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da transportadora gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da transportadora não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 404 aparece como no ls -l?",
+      "options": [
+        "r-x---r--",
+        "r--r-----",
+        "r-----r--",
+        "r---w-r--"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 0 = ---; 4 = r--."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r---wxr--?",
+      "options": [
+        "454",
+        "443",
+        "534",
+        "434"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; -wx = 3; r-- = 4."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.979 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "93 bytes",
+        "512 bytes",
+        "193 bytes",
+        "419 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 3.072 bytes; 3.072 − 2.979 = 93."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwx--x---?",
+      "options": [
+        "010",
+        "711",
+        "170",
+        "710"
+      ],
+      "correct": 3,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; --x = 1; --- = 0."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 25 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "600 enlaces",
+        "625 enlaces",
+        "300 enlaces",
+        "325 enlaces"
+      ],
+      "correct": 2,
+      "explain": "<b>n(n−1)/2:</b> 25 × 24 ÷ 2 = 300."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 574 aparece como no ls -l?",
+      "options": [
+        "r-xr--rwx",
+        "r-x--xr--",
+        "r-xrwxr-x",
+        "r-xrwxr--"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 7 = rwx; 4 = r--."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 11 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "110 enlaces",
+        "55 enlaces",
+        "121 enlaces",
+        "66 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 11 × 10 ÷ 2 = 55."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 572 aparece como no ls -l?",
+      "options": [
+        "r-xrwx-wx",
+        "r-x--x-w-",
+        "r-xrwx-w-",
+        "r-x-w-rwx"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 7 = rwx; 2 = -w-."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 11.064 bytes, com blocos de 2.048 bytes, ocupa quanto no disco?",
+      "options": [
+        "10.240 bytes em 5 blocos",
+        "14.336 bytes em 7 blocos",
+        "11.064 bytes em 6 blocos",
+        "12.288 bytes em 6 blocos"
+      ],
+      "correct": 3,
+      "explain": "<b>Só blocos inteiros:</b> 11.064 ÷ 2.048 dá 5,40, que vira 6."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente da oficina?",
+      "options": [
+        "Tudo responde, menos o programa da oficina",
+        "Fotografar a VM da oficina antes de atualizar",
+        "8.8.8.8 responde, mas o site da oficina não é achado",
+        "O PC da oficina só alcança a própria rede"
+      ],
+      "correct": 3,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 11.125 bytes é gravado com blocos de 2.048 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "885 bytes",
+        "1.263 bytes",
+        "2.048 bytes",
+        "1.163 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 12.288 bytes; 12.288 − 11.125 = 1.163."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 471 aparece como no ls -l?",
+      "options": [
+        "r-xrwx--x",
+        "rwxr----x",
+        "r--rwx--x",
+        "r--rwx-w-"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 4 = r--; 7 = rwx; 1 = --x."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 192.168.119.193. Por onde ele sai?",
+      "code": "default via 192.168.119.1 dev enp0s3\n192.168.119.0/24 dev enp0s3 scope link\n10.193.0.0/16 via 192.168.119.77 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Para 192.168.119.77, pela rota 10.193",
+        "Para 192.168.119.1, pela rota padrão",
+        "Direto, pela rede 192.168.119.0/24"
+      ],
+      "correct": 3,
+      "explain": "<b>Vence a rota mais específica:</b> está na rede local: não precisa de gateway."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 33.927 bytes, com blocos de 8.192 bytes, ocupa quanto no disco?",
+      "options": [
+        "40.960 bytes em 5 blocos",
+        "49.152 bytes em 6 blocos",
+        "33.927 bytes em 5 blocos",
+        "32.768 bytes em 4 blocos"
+      ],
+      "correct": 0,
+      "explain": "<b>Só blocos inteiros:</b> 33.927 ÷ 8.192 dá 4,14, que vira 5."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 12.490 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "4.298 bytes",
+        "3.994 bytes",
+        "3.894 bytes",
+        "8.192 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 16.384 bytes; 16.384 − 12.490 = 3.894."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente do cinema?",
+      "options": [
+        "Exportar a VM do cinema em .ova para outro disco",
+        "Copiar a VM do cinema gravando só as diferenças",
+        "O PC do cinema está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site do cinema não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da farmácia?",
+      "options": [
+        "Exportar a VM da farmácia em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "O PC da farmácia está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da farmácia gravando só as diferenças"
+      ],
+      "correct": 1,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 10 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "90 enlaces",
+        "55 enlaces",
+        "45 enlaces",
+        "100 enlaces"
+      ],
+      "correct": 2,
+      "explain": "<b>n(n−1)/2:</b> 10 × 9 ÷ 2 = 45."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente da clínica?",
+      "options": [
+        "O PC da clínica está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da clínica gravando só as diferenças",
+        "Fotografar a VM da clínica antes de atualizar",
+        "Exportar a VM da clínica em .ova para outro disco"
+      ],
+      "correct": 2,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 5.604 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "540 bytes",
+        "640 bytes",
+        "1.024 bytes",
+        "484 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 6 blocos = 6.144 bytes; 6.144 − 5.604 = 540."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 10.531 bytes é gravado com blocos de 4.096 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.757 bytes",
+        "2.339 bytes",
+        "4.096 bytes",
+        "1.857 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 3 blocos = 12.288 bytes; 12.288 − 10.531 = 1.757."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 80”. Quantos bytes estão alocados?",
+      "options": [
+        "40.960 bytes alocados",
+        "81.920 bytes alocados",
+        "327.680 bytes alocados",
+        "20.480 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 80 × 512 = 40.960."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente da loja online?",
+      "options": [
+        "O PC da loja online está com IP 169.254.x.x, sem gateway",
+        "A VM da loja online ganha IP na rede física",
+        "Tudo responde, menos o programa da loja online",
+        "O PC da loja online só alcança a própria rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dhcp no ambiente da escola?",
+      "options": [
+        "O PC da escola está com IP 169.254.x.x, sem gateway",
+        "8.8.8.8 responde, mas o site da escola não é achado",
+        "Exportar a VM da escola em .ova para outro disco",
+        "Copiar a VM da escola gravando só as diferenças"
+      ],
+      "correct": 0,
+      "explain": "<b>Falha de DHCP:</b> o sistema se deu um IP 169.254."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 542 aparece como no ls -l?",
+      "options": [
+        "r-xr---wx",
+        "r-xr---w-",
+        "r--r-x-w-",
+        "r-xrw--w-"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 4 = r--; 2 = -w-."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 20 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "400 enlaces",
+        "190 enlaces",
+        "210 enlaces",
+        "380 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 20 × 19 ÷ 2 = 190."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da biblioteca?",
+      "options": [
+        "Exportar a VM da biblioteca em .ova para outro disco",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da biblioteca gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da biblioteca não é achado"
+      ],
+      "correct": 0,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 775 aparece como no ls -l?",
+      "options": [
+        "rwx--xr-x",
+        "rwxrwxr-x",
+        "rwxrwxrw-",
+        "---rwxr-x"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 7 = rwx; 7 = rwx; 5 = r-x."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw---xrw-?",
+      "options": [
+        "616",
+        "636",
+        "716",
+        "617"
+      ],
+      "correct": 0,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; --x = 1; rw- = 6."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rwxrw-rw-?",
+      "options": [
+        "767",
+        "066",
+        "766",
+        "706"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rwx = 7; rw- = 6; rw- = 6."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 39.083 bytes é gravado com blocos de 8.192 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "1.977 bytes",
+        "6.315 bytes",
+        "1.877 bytes",
+        "8.192 bytes"
+      ],
+      "correct": 2,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 40.960 bytes; 40.960 − 39.083 = 1.877."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de clone vinculado no ambiente da farmácia?",
+      "options": [
+        "Copiar a VM da farmácia gravando só as diferenças",
+        "Exportar a VM da farmácia em .ova para outro disco",
+        "8.8.8.8 responde, mas o site da farmácia não é achado",
+        "O PC da farmácia está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 0,
+      "explain": "<b>Clone vinculado:</b> aproveita o original e grava diferenças."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 48”. Quantos bytes estão alocados?",
+      "options": [
+        "196.608 bytes alocados",
+        "49.152 bytes alocados",
+        "24.576 bytes alocados",
+        "12.288 bytes alocados"
+      ],
+      "correct": 2,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 48 × 512 = 24.576."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 16 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "136 enlaces",
+        "256 enlaces",
+        "120 enlaces",
+        "240 enlaces"
+      ],
+      "correct": 2,
+      "explain": "<b>n(n−1)/2:</b> 16 × 15 ÷ 2 = 120."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente do pet shop?",
+      "options": [
+        "8.8.8.8 responde, mas o site do pet shop não é achado",
+        "Tudo responde, menos o programa do pet shop",
+        "Fotografar a VM do pet shop antes de atualizar",
+        "O PC do pet shop só alcança a própria rede"
+      ],
+      "correct": 3,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falta de gateway no ambiente do cinema?",
+      "options": [
+        "Tudo responde, menos o programa do cinema",
+        "8.8.8.8 responde, mas o site do cinema não é achado",
+        "O PC do cinema só alcança a própria rede",
+        "Fotografar a VM do cinema antes de atualizar"
+      ],
+      "correct": 2,
+      "explain": "<b>Falta de gateway:</b> sem rota padrão, nada sai da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 1.362 bytes é gravado com blocos de 1.024 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "686 bytes",
+        "338 bytes",
+        "786 bytes",
+        "1.024 bytes"
+      ],
+      "correct": 0,
+      "explain": "<b>Arredonde para cima:</b> 2 blocos = 2.048 bytes; 2.048 − 1.362 = 686."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.180.8.8. Por onde ele sai?",
+      "code": "default via 192.168.101.1 dev enp0s3\n192.168.101.0/24 dev enp0s3 scope link\n10.180.0.0/16 via 192.168.101.62 dev enp0s3",
+      "options": [
+        "É descartado por falta de rota",
+        "Para 192.168.101.1, pela rota padrão",
+        "Direto, pela rede 192.168.101.0/24",
+        "Para 192.168.101.62, pela rota 10.180"
+      ],
+      "correct": 1,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão r--r--rwx?",
+      "options": [
+        "547",
+        "440",
+        "447",
+        "467"
+      ],
+      "correct": 2,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> r-- = 4; r-- = 4; rwx = 7."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da escola?",
+      "options": [
+        "Tudo responde, menos o programa da escola",
+        "O PC da escola só alcança a própria rede",
+        "O PC da escola está com IP 169.254.x.x, sem gateway",
+        "Fotografar a VM da escola antes de atualizar"
+      ],
+      "correct": 0,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de backup de verdade no ambiente da academia?",
+      "options": [
+        "8.8.8.8 responde, mas o site da academia não é achado",
+        "Exportar a VM da academia em .ova para outro disco",
+        "O PC da academia está com IP 169.254.x.x, sem gateway",
+        "Copiar a VM da academia gravando só as diferenças"
+      ],
+      "correct": 1,
+      "explain": "<b>Backup de verdade:</b> cópia independente, em outro lugar."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 606 aparece como no ls -l?",
+      "options": [
+        "---rw-rw-",
+        "rw----rw-",
+        "rwx---rw-",
+        "rw--w-rw-"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 0 = ---; 6 = rw-."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 19 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "190 enlaces",
+        "361 enlaces",
+        "342 enlaces",
+        "171 enlaces"
+      ],
+      "correct": 3,
+      "explain": "<b>n(n−1)/2:</b> 19 × 18 ÷ 2 = 171."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.232.8.8. Por onde ele sai?",
+      "code": "default via 192.168.85.1 dev enp0s3\n192.168.85.0/24 dev enp0s3 scope link\n10.232.0.0/16 via 192.168.85.83 dev enp0s3",
+      "options": [
+        "Para 192.168.85.1, pela rota padrão",
+        "É descartado por falta de rota",
+        "Direto, pela rede 192.168.85.0/24",
+        "Para 192.168.85.83, pela rota 10.232"
+      ],
+      "correct": 0,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 663 aparece como no ls -l?",
+      "options": [
+        "rw-----wx",
+        "rwxrw--wx",
+        "rw-rw--wx",
+        "rw-rw-r--"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 6 = rw-; 3 = -wx."
+    },
+    {
+      "topic": "revredes",
+      "statement": "Numa malha totalmente conectada com 13 nós, quantos enlaces ponto a ponto há?",
+      "options": [
+        "156 enlaces",
+        "78 enlaces",
+        "169 enlaces",
+        "91 enlaces"
+      ],
+      "correct": 1,
+      "explain": "<b>n(n−1)/2:</b> 13 × 12 ÷ 2 = 78."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 120”. Quantos bytes estão alocados?",
+      "options": [
+        "61.440 bytes alocados",
+        "30.720 bytes alocados",
+        "122.880 bytes alocados",
+        "491.520 bytes alocados"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 120 × 512 = 61.440."
+    },
+    {
+      "topic": "metadados",
+      "statement": "No Linux, o stat mostra “Blocks: 88”. Quantos bytes estão alocados?",
+      "options": [
+        "90.112 bytes alocados",
+        "360.448 bytes alocados",
+        "22.528 bytes alocados",
+        "45.056 bytes alocados"
+      ],
+      "correct": 3,
+      "explain": "<b>Blocks conta unidades de 512 bytes:</b> 88 × 512 = 45.056."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 533 aparece como no ls -l?",
+      "options": [
+        "-wxr-x-wx",
+        "r-x-wxr--",
+        "r-xr-x-wx",
+        "r-x-wx-wx"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada dígito vira três letras:</b> 5 = r-x; 3 = -wx; 3 = -wx."
+    },
+    {
+      "topic": "metadados",
+      "statement": "Qual é o octal da permissão rw-rwxr-x?",
+      "options": [
+        "765",
+        "675",
+        "676",
+        "657"
+      ],
+      "correct": 1,
+      "explain": "<b>r = 4, w = 2, x = 1:</b> rw- = 6; rwx = 7; r-x = 5."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de problema no serviço no ambiente da biblioteca?",
+      "options": [
+        "Fotografar a VM da biblioteca antes de atualizar",
+        "Tudo responde, menos o programa da biblioteca",
+        "O PC da biblioteca está com IP 169.254.x.x, sem gateway",
+        "O PC da biblioteca só alcança a própria rede"
+      ],
+      "correct": 1,
+      "explain": "<b>Problema no serviço:</b> a rede está boa; a aplicação não."
+    },
+    {
+      "topic": "redeip",
+      "statement": "Um pacote vai para 8.185.8.8. Por onde ele sai?",
+      "code": "default via 192.168.70.1 dev enp0s3\n192.168.70.0/24 dev enp0s3 scope link\n10.185.0.0/16 via 192.168.70.78 dev enp0s3",
+      "options": [
+        "Direto, pela rede 192.168.70.0/24",
+        "É descartado por falta de rota",
+        "Para 192.168.70.1, pela rota padrão",
+        "Para 192.168.70.78, pela rota 10.185"
+      ],
+      "correct": 2,
+      "explain": "<b>Vence a rota mais específica:</b> nenhuma outra linha combina."
+    },
+    {
+      "topic": "recursos",
+      "statement": "Qual situação é um exemplo de rede em modo bridge no ambiente do hotel?",
+      "options": [
+        "Tudo responde, menos o programa do hotel",
+        "O PC do hotel só alcança a própria rede",
+        "A VM do hotel ganha IP na rede física",
+        "O PC do hotel está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 2,
+      "explain": "<b>Rede em modo bridge:</b> a VM vira mais um computador da rede."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 2.166 bytes é gravado com blocos de 512 bytes. Quanto se perde por fragmentação interna?",
+      "options": [
+        "512 bytes",
+        "118 bytes",
+        "494 bytes",
+        "394 bytes"
+      ],
+      "correct": 3,
+      "explain": "<b>Arredonde para cima:</b> 5 blocos = 2.560 bytes; 2.560 − 2.166 = 394."
+    },
+    {
+      "topic": "diag",
+      "statement": "Qual situação é um exemplo de falha de dns no ambiente da academia?",
+      "options": [
+        "Exportar a VM da academia em .ova para outro disco",
+        "Copiar a VM da academia gravando só as diferenças",
+        "8.8.8.8 responde, mas o site da academia não é achado",
+        "O PC da academia está com IP 169.254.x.x, sem gateway"
+      ],
+      "correct": 2,
+      "explain": "<b>Falha de DNS:</b> o IP responde, o nome não."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 676 aparece como no ls -l?",
+      "options": [
+        "rw-rwxrw-",
+        "rwxrwxrw-",
+        "rw-rwxrwx",
+        "rw---xrw-"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada dígito vira três letras:</b> 6 = rw-; 7 = rwx; 6 = rw-."
+    },
+    {
+      "topic": "snapshot",
+      "statement": "Qual situação é um exemplo de uso certo de snapshot no ambiente do cinema?",
+      "options": [
+        "O PC do cinema está com IP 169.254.x.x, sem gateway",
+        "Exportar a VM do cinema em .ova para outro disco",
+        "Fotografar a VM do cinema antes de atualizar",
+        "Copiar a VM do cinema gravando só as diferenças"
+      ],
+      "correct": 2,
+      "explain": "<b>Uso certo de snapshot:</b> ponto de volta antes de uma mudança arriscada."
+    },
+    {
+      "topic": "alocacao",
+      "statement": "Um arquivo de 22.345 bytes, com blocos de 8.192 bytes, ocupa quanto no disco?",
+      "options": [
+        "22.345 bytes em 3 blocos",
+        "16.384 bytes em 2 blocos",
+        "24.576 bytes em 3 blocos",
+        "32.768 bytes em 4 blocos"
+      ],
+      "correct": 2,
+      "explain": "<b>Só blocos inteiros:</b> 22.345 ÷ 8.192 dá 2,73, que vira 3."
+    },
+    {
+      "topic": "metadados",
+      "statement": "A permissão 776 aparece como no ls -l?",
+      "options": [
+        "---rwxrw-",
+        "rwxrwxrw-",
+        "rwx--xrw-",
+        "rwxrwxrwx"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada dígito vira três letras:</b> 7 = rwx; 7 = rwx; 6 = rw-."
     }
   ],
   "historias": [

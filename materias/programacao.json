@@ -8659,6 +8659,1490 @@
       "correct": 3,
       "explain": "<b>Primitivo = cópia.</b> Arrays e objetos agem como “por referência”.",
       "assunto": "valor"
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Arquivo?",
+      "code": "String s = \"Arquivo\";\nSystem.out.println(s.replace('r', 'w'));",
+      "options": [
+        "wrquivo",
+        "Awquivo",
+        "rquivo",
+        "Arquivo"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “r” vira “w”."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 16;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 66",
+        "total 36",
+        "total 26",
+        "total 46"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Internet?",
+      "code": "String s = \"Internet\";\nSystem.out.println(s.replace('n', 'k'));",
+      "options": [
+        "Internet",
+        "Ikternet",
+        "knternet",
+        "Ikterket"
+      ],
+      "correct": 3,
+      "explain": "<b>Troca todas:</b> cada “n” vira “k”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Matriz?",
+      "code": "String a = \"Matriz\";\nString b = \"matriz\";\nint n = 12;\nif (a.equals(b)) {\n  n = n + 19;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 31",
+        "n = 19",
+        "n = 32",
+        "n = 12"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Vetor?",
+      "code": "String a = \"Vetor\";\nString b = \"Vetor\";\nint n = 13;\nif (a.equals(b)) {\n  n = n + 20;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 33",
+        "n = 20",
+        "n = 34",
+        "n = 13"
+      ],
+      "correct": 0,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 4;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 54",
+        "total 24",
+        "total 14",
+        "total 34"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Metodo?",
+      "code": "String s = \"Metodo\";\nSystem.out.println(s.replace('e', 'z'));",
+      "options": [
+        "etodo",
+        "Mztodo",
+        "Metodo",
+        "zetodo"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “e” vira “z”."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 3;\nint total = 8;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 38",
+        "total 28",
+        "total 58",
+        "total 18"
+      ],
+      "correct": 0,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 4;\nint b = 6;\nboolean p = a > 7 && b > 4;\nboolean q = a == 4 || b < 4;\nSystem.out.println(\"caso 11: \" + p + \" e \" + q);",
+      "options": [
+        "caso 11: true e true",
+        "caso 11: false e false",
+        "caso 11: false e true",
+        "caso 11: true e false"
+      ],
+      "correct": 2,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -6 e depois 11. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "11 em 2",
+        "-6 em 2",
+        "-6 em 1",
+        "11 em 1"
+      ],
+      "correct": 0,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Unipar?",
+      "code": "String s = \"Unipar\";\nSystem.out.println(s.replace('n', 'q'));",
+      "options": [
+        "nipar",
+        "Uqipar",
+        "qnipar",
+        "Unipar"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “n” vira “q”."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -9 e depois 12. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-9 em 2",
+        "12 em 1",
+        "12 em 2",
+        "-9 em 1"
+      ],
+      "correct": 2,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 2 + 4 * 6 - 2;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 18",
+        "r = 24",
+        "r = 12",
+        "r = 34"
+      ],
+      "correct": 1,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 2;\nint b = 11;\nboolean p = a > 6 && b > 2;\nboolean q = a == 2 || b < 9;\nSystem.out.println(\"caso 2: \" + p + \" e \" + q);",
+      "options": [
+        "caso 2: false e true",
+        "caso 2: true e true",
+        "caso 2: false e false",
+        "caso 2: true e false"
+      ],
+      "correct": 0,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -1 e depois 27. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-1 em 1",
+        "-1 em 2",
+        "27 em 1",
+        "27 em 2"
+      ],
+      "correct": 3,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Memoria?",
+      "code": "String a = \"Memoria\";\nString b = \"memoria\";\nint n = 9;\nif (a.equals(b)) {\n  n = n + 16;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 16",
+        "n = 9",
+        "n = 25",
+        "n = 26"
+      ],
+      "correct": 1,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 3;\nint b = 7;\nboolean p = a > 9 && b > 3;\nboolean q = a == 3 || b < 5;\nSystem.out.println(\"caso 10: \" + p + \" e \" + q);",
+      "options": [
+        "caso 10: false e false",
+        "caso 10: true e true",
+        "caso 10: true e false",
+        "caso 10: false e true"
+      ],
+      "correct": 3,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 4 + 3 * 6 - 4;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 13",
+        "r = 10",
+        "r = 38",
+        "r = 18"
+      ],
+      "correct": 3,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 12;\nx += 9;\nx *= 2;\nx -= 6;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 24",
+        "x final: 36",
+        "x final: 42",
+        "x final: 15"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 24;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 34",
+        "total 74",
+        "total 44",
+        "total 54"
+      ],
+      "correct": 0,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 14;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 44",
+        "total 24",
+        "total 64",
+        "total 34"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -9 e depois 29. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-9 em 2",
+        "29 em 2",
+        "29 em 1",
+        "-9 em 1"
+      ],
+      "correct": 1,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 8;\nint b = 9;\nboolean p = a > 3 && b > 8;\nboolean q = a == 8 || b < 7;\nSystem.out.println(\"caso 1: \" + p + \" e \" + q);",
+      "options": [
+        "caso 1: false e false",
+        "caso 1: false e true",
+        "caso 1: true e false",
+        "caso 1: true e true"
+      ],
+      "correct": 3,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 26;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 56",
+        "total 76",
+        "total 36",
+        "total 46"
+      ],
+      "correct": 2,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -8 e depois 7. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "7 em 2",
+        "-8 em 2",
+        "7 em 1",
+        "-8 em 1"
+      ],
+      "correct": 0,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Classe?",
+      "code": "String a = \"Classe\";\nString b = \"classe\";\nint n = 15;\nif (a.equals(b)) {\n  n = n + 22;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 38",
+        "n = 22",
+        "n = 15",
+        "n = 37"
+      ],
+      "correct": 2,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {3, 5}, {9, 10} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 19",
+        "soma da matriz: 8",
+        "soma da matriz: 13",
+        "soma da matriz: 27"
+      ],
+      "correct": 3,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Banana?",
+      "code": "String a = \"Banana\";\nString b = \"Banana\";\nint n = 8;\nif (a.equals(b)) {\n  n = n + 15;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 15",
+        "n = 24",
+        "n = 8",
+        "n = 23"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Teclado?",
+      "code": "String s = \"Teclado\";\nSystem.out.println(s.replace('e', 'q'));",
+      "options": [
+        "Tqclado",
+        "qeclado",
+        "Teclado",
+        "eclado"
+      ],
+      "correct": 0,
+      "explain": "<b>Troca todas:</b> cada “e” vira “q”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Classe?",
+      "code": "String s = \"Classe\";\nSystem.out.println(s.replace('l', 'k'));",
+      "options": [
+        "lasse",
+        "Classe",
+        "klasse",
+        "Ckasse"
+      ],
+      "correct": 3,
+      "explain": "<b>Troca todas:</b> cada “l” vira “k”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Janela?",
+      "code": "String s = \"Janela\";\nSystem.out.println(s.replace('a', 'w'));",
+      "options": [
+        "wanela",
+        "Janela",
+        "Jwnela",
+        "Jwnelw"
+      ],
+      "correct": 3,
+      "explain": "<b>Troca todas:</b> cada “a” vira “w”."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 4;\nint b = 7;\nboolean p = a > 8 && b > 4;\nboolean q = a == 4 || b < 5;\nSystem.out.println(\"caso 14: \" + p + \" e \" + q);",
+      "options": [
+        "caso 14: true e false",
+        "caso 14: false e true",
+        "caso 14: false e false",
+        "caso 14: true e true"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {9, 7}, {5, 12} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 33",
+        "soma da matriz: 17",
+        "soma da matriz: 16",
+        "soma da matriz: 21"
+      ],
+      "correct": 0,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 18;\nx += 7;\nx *= 2;\nx -= 3;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 29",
+        "x final: 22",
+        "x final: 50",
+        "x final: 47"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {8, 7}, {3, 1} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 15",
+        "soma da matriz: 9",
+        "soma da matriz: 4",
+        "soma da matriz: 19"
+      ],
+      "correct": 3,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -9 e depois 38. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-9 em 1",
+        "38 em 1",
+        "-9 em 2",
+        "38 em 2"
+      ],
+      "correct": 3,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 14;\nx += 5;\nx *= 2;\nx -= 8;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 11",
+        "x final: 16",
+        "x final: 38",
+        "x final: 30"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 12;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 42",
+        "total 62",
+        "total 32",
+        "total 22"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 2 + 8 * 7 - 2;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 56",
+        "r = 42",
+        "r = 17",
+        "r = 68"
+      ],
+      "correct": 0,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Janela?",
+      "code": "String a = \"Janela\";\nString b = \"Janela\";\nint n = 17;\nif (a.equals(b)) {\n  n = n + 24;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 42",
+        "n = 24",
+        "n = 17",
+        "n = 41"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Teclado?",
+      "code": "String a = \"Teclado\";\nString b = \"teclado\";\nint n = 6;\nif (a.equals(b)) {\n  n = n + 13;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 13",
+        "n = 6",
+        "n = 20",
+        "n = 19"
+      ],
+      "correct": 1,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 9 + 8 * 9 - 9;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 26",
+        "r = 72",
+        "r = 144",
+        "r = 9"
+      ],
+      "correct": 1,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 18;\nx += 9;\nx *= 2;\nx -= 5;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 54",
+        "x final: 31",
+        "x final: 22",
+        "x final: 49"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -3 e depois 22. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-3 em 1",
+        "22 em 2",
+        "22 em 1",
+        "-3 em 2"
+      ],
+      "correct": 1,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {8, 7}, {4, 4} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 8",
+        "soma da matriz: 23",
+        "soma da matriz: 12",
+        "soma da matriz: 15"
+      ],
+      "correct": 1,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 18;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 48",
+        "total 68",
+        "total 38",
+        "total 28"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 14;\nx += 4;\nx *= 2;\nx -= 7;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 11",
+        "x final: 15",
+        "x final: 36",
+        "x final: 29"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Objeto?",
+      "code": "String a = \"Objeto\";\nString b = \"Objeto\";\nint n = 11;\nif (a.equals(b)) {\n  n = n + 18;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 30",
+        "n = 29",
+        "n = 18",
+        "n = 11"
+      ],
+      "correct": 1,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 16;\nx += 7;\nx *= 2;\nx -= 5;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 46",
+        "x final: 25",
+        "x final: 18",
+        "x final: 41"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Objeto?",
+      "code": "String s = \"Objeto\";\nSystem.out.println(s.replace('b', 'q'));",
+      "options": [
+        "qbjeto",
+        "Oqjeto",
+        "Objeto",
+        "bjeto"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “b” vira “q”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Sistema?",
+      "code": "String s = \"Sistema\";\nSystem.out.println(s.replace('i', 'k'));",
+      "options": [
+        "kistema",
+        "istema",
+        "Skstema",
+        "Sistema"
+      ],
+      "correct": 2,
+      "explain": "<b>Troca todas:</b> cada “i” vira “k”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Memoria?",
+      "code": "String s = \"Memoria\";\nSystem.out.println(s.replace('e', 'z'));",
+      "options": [
+        "zemoria",
+        "Memoria",
+        "Mzmoria",
+        "emoria"
+      ],
+      "correct": 2,
+      "explain": "<b>Troca todas:</b> cada “e” vira “z”."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -9 e depois 37. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "37 em 2",
+        "37 em 1",
+        "-9 em 1",
+        "-9 em 2"
+      ],
+      "correct": 0,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {2, 8}, {7, 3} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 10",
+        "soma da matriz: 21",
+        "soma da matriz: 5",
+        "soma da matriz: 20"
+      ],
+      "correct": 3,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -8 e depois 18. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-8 em 1",
+        "18 em 1",
+        "-8 em 2",
+        "18 em 2"
+      ],
+      "correct": 3,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 6;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 56",
+        "total 26",
+        "total 36",
+        "total 16"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 9;\nint b = 10;\nboolean p = a > 9 && b > 9;\nboolean q = a == 9 || b < 8;\nSystem.out.println(\"caso 13: \" + p + \" e \" + q);",
+      "options": [
+        "caso 13: false e false",
+        "caso 13: true e false",
+        "caso 13: true e true",
+        "caso 13: false e true"
+      ],
+      "correct": 3,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {4, 5}, {8, 14} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 22",
+        "soma da matriz: 9",
+        "soma da matriz: 18",
+        "soma da matriz: 31"
+      ],
+      "correct": 3,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {4, 4}, {7, 11} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 8",
+        "soma da matriz: 18",
+        "soma da matriz: 26",
+        "soma da matriz: 15"
+      ],
+      "correct": 2,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 4;\nint b = 5;\nboolean p = a > 6 && b > 4;\nboolean q = a == 4 || b < 3;\nSystem.out.println(\"caso 5: \" + p + \" e \" + q);",
+      "options": [
+        "caso 5: false e false",
+        "caso 5: false e true",
+        "caso 5: true e false",
+        "caso 5: true e true"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Cascavel?",
+      "code": "String s = \"Cascavel\";\nSystem.out.println(s.replace('a', 'x'));",
+      "options": [
+        "xascavel",
+        "Cxscxvel",
+        "Cascavel",
+        "Cxscavel"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “a” vira “x”."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 9 + 7 * 5 - 9;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 21",
+        "r = -19",
+        "r = 35",
+        "r = 71"
+      ],
+      "correct": 2,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 0;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 20",
+        "total 30",
+        "total 50",
+        "total 10"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {9, 8}, {9, 13} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 17",
+        "soma da matriz: 22",
+        "soma da matriz: 39",
+        "soma da matriz: 40"
+      ],
+      "correct": 2,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Unipar?",
+      "code": "String a = \"Unipar\";\nString b = \"Unipar\";\nint n = 16;\nif (a.equals(b)) {\n  n = n + 23;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 16",
+        "n = 40",
+        "n = 23",
+        "n = 39"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 4 + 4 * 7 - 4;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 52",
+        "r = 16",
+        "r = 15",
+        "r = 28"
+      ],
+      "correct": 3,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 3;\nint total = 2;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 12",
+        "total 52",
+        "total 22",
+        "total 32"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {6, 7}, {5, 7} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 13",
+        "soma da matriz: 25",
+        "soma da matriz: 26",
+        "soma da matriz: 12"
+      ],
+      "correct": 1,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 19;\nx += 8;\nx *= 2;\nx -= 9;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 54",
+        "x final: 18",
+        "x final: 26",
+        "x final: 45"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Cascavel?",
+      "code": "String a = \"Cascavel\";\nString b = \"cascavel\";\nint n = 3;\nif (a.equals(b)) {\n  n = n + 10;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 13",
+        "n = 14",
+        "n = 10",
+        "n = 3"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Arquivo?",
+      "code": "String a = \"Arquivo\";\nString b = \"Arquivo\";\nint n = 7;\nif (a.equals(b)) {\n  n = n + 14;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 21",
+        "n = 14",
+        "n = 7",
+        "n = 22"
+      ],
+      "correct": 0,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Vetor?",
+      "code": "String s = \"Vetor\";\nSystem.out.println(s.replace('e', 'x'));",
+      "options": [
+        "Vetor",
+        "xetor",
+        "Vxtor",
+        "etor"
+      ],
+      "correct": 2,
+      "explain": "<b>Troca todas:</b> cada “e” vira “x”."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Metodo?",
+      "code": "String a = \"Metodo\";\nString b = \"Metodo\";\nint n = 14;\nif (a.equals(b)) {\n  n = n + 21;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 21",
+        "n = 36",
+        "n = 35",
+        "n = 14"
+      ],
+      "correct": 2,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 8 + 7 * 3 - 8;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = -27",
+        "r = 18",
+        "r = 21",
+        "r = 37"
+      ],
+      "correct": 2,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Banana?",
+      "code": "String s = \"Banana\";\nSystem.out.println(s.replace('a', 'x'));",
+      "options": [
+        "xanana",
+        "Bxnxnx",
+        "Bxnana",
+        "Banana"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “a” vira “x”."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 14;\nx += 3;\nx *= 2;\nx -= 6;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 28",
+        "x final: 34",
+        "x final: 14",
+        "x final: 11"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 2;\nint b = 6;\nboolean p = a > 6 && b > 2;\nboolean q = a == 2 || b < 4;\nSystem.out.println(\"caso 9: \" + p + \" e \" + q);",
+      "options": [
+        "caso 9: true e true",
+        "caso 9: true e false",
+        "caso 9: false e true",
+        "caso 9: false e false"
+      ],
+      "correct": 2,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Programa?",
+      "code": "String s = \"Programa\";\nSystem.out.println(s.replace('r', 'z'));",
+      "options": [
+        "Pzograma",
+        "Pzogzama",
+        "Programa",
+        "zrograma"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “r” vira “z”."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 6;\nint b = 9;\nboolean p = a > 5 && b > 6;\nboolean q = a == 6 || b < 7;\nSystem.out.println(\"caso 7: \" + p + \" e \" + q);",
+      "options": [
+        "caso 7: true e false",
+        "caso 7: true e true",
+        "caso 7: false e true",
+        "caso 7: false e false"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 8 + 9 * 5 - 8;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 77",
+        "r = 22",
+        "r = -19",
+        "r = 45"
+      ],
+      "correct": 3,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Sistema?",
+      "code": "String a = \"Sistema\";\nString b = \"Sistema\";\nint n = 10;\nif (a.equals(b)) {\n  n = n + 17;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 10",
+        "n = 28",
+        "n = 17",
+        "n = 27"
+      ],
+      "correct": 3,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {4, 3}, {6, 5} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 9",
+        "soma da matriz: 11",
+        "soma da matriz: 18",
+        "soma da matriz: 7"
+      ],
+      "correct": 2,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 18;\nx += 7;\nx *= 2;\nx -= 4;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 46",
+        "x final: 21",
+        "x final: 28",
+        "x final: 50"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "strings",
+      "assunto": "equals",
+      "statement": "Qual é a saída ao comparar com Internet?",
+      "code": "String a = \"Internet\";\nString b = \"Internet\";\nint n = 5;\nif (a.equals(b)) {\n  n = n + 12;\n}\nSystem.out.println(\"n = \" + n);",
+      "options": [
+        "n = 12",
+        "n = 18",
+        "n = 17",
+        "n = 5"
+      ],
+      "correct": 2,
+      "explain": "<b>equals compara letra por letra,</b> e maiúscula conta."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 8;\nint b = 9;\nboolean p = a > 4 && b > 8;\nboolean q = a == 8 || b < 7;\nSystem.out.println(\"caso 4: \" + p + \" e \" + q);",
+      "options": [
+        "caso 4: false e true",
+        "caso 4: true e true",
+        "caso 4: true e false",
+        "caso 4: false e false"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 9;\nint b = 9;\nboolean p = a > 5 && b > 9;\nboolean q = a == 9 || b < 7;\nSystem.out.println(\"caso 12: \" + p + \" e \" + q);",
+      "options": [
+        "caso 12: true e true",
+        "caso 12: false e false",
+        "caso 12: false e true",
+        "caso 12: true e false"
+      ],
+      "correct": 2,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 10;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 40",
+        "total 20",
+        "total 60",
+        "total 30"
+      ],
+      "correct": 1,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 4 + 5 * 8 - 4;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 24",
+        "r = 40",
+        "r = 68",
+        "r = 17"
+      ],
+      "correct": 1,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "ordem",
+      "statement": "Pela ordem das contas, qual é a saída?",
+      "code": "int r = 2 + 9 * 6 - 2;\nSystem.out.println(\"r = \" + r);",
+      "options": [
+        "r = 38",
+        "r = 64",
+        "r = 17",
+        "r = 54"
+      ],
+      "correct": 3,
+      "explain": "<b>Multiplicação antes</b> de soma e subtração."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 1;\nint total = 20;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 30",
+        "total 70",
+        "total 50",
+        "total 40"
+      ],
+      "correct": 0,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -7 e depois 15. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "15 em 2",
+        "-7 em 2",
+        "-7 em 1",
+        "15 em 1"
+      ],
+      "correct": 0,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 12;\nx += 4;\nx *= 2;\nx -= 6;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 26",
+        "x final: 14",
+        "x final: 32",
+        "x final: 10"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {8, 9}, {5, 8} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 16",
+        "soma da matriz: 17",
+        "soma da matriz: 13",
+        "soma da matriz: 30"
+      ],
+      "correct": 3,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 13;\nx += 9;\nx *= 2;\nx -= 2;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 42",
+        "x final: 44",
+        "x final: 29",
+        "x final: 20"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {8, 8}, {3, 15} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 18",
+        "soma da matriz: 23",
+        "soma da matriz: 34",
+        "soma da matriz: 16"
+      ],
+      "correct": 2,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 3;\nint b = 11;\nboolean p = a > 2 && b > 3;\nboolean q = a == 3 || b < 9;\nSystem.out.println(\"caso 6: \" + p + \" e \" + q);",
+      "options": [
+        "caso 6: false e true",
+        "caso 6: true e true",
+        "caso 6: false e false",
+        "caso 6: true e false"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "selecao",
+      "assunto": "switch",
+      "statement": "Siga o switch. O que aparece?",
+      "code": "int op = 2;\nint total = 22;\nswitch (op) {\n  case 1: total += 10; break;\n  case 2: total += 20;\n  case 3: total += 30; break;\n  default: total += 100;\n}\nSystem.out.println(\"total \" + total);",
+      "options": [
+        "total 32",
+        "total 42",
+        "total 52",
+        "total 72"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, cai no próximo caso:</b> o 2 soma 20 e também 30."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 2;\nint b = 10;\nboolean p = a > 7 && b > 2;\nboolean q = a == 2 || b < 8;\nSystem.out.println(\"caso 3: \" + p + \" e \" + q);",
+      "options": [
+        "caso 3: false e true",
+        "caso 3: false e false",
+        "caso 3: true e false",
+        "caso 3: true e true"
+      ],
+      "correct": 0,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 8;\nint b = 10;\nboolean p = a > 3 && b > 8;\nboolean q = a == 8 || b < 8;\nSystem.out.println(\"caso 15: \" + p + \" e \" + q);",
+      "options": [
+        "caso 15: true e true",
+        "caso 15: true e false",
+        "caso 15: false e false",
+        "caso 15: false e true"
+      ],
+      "correct": 0,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -9 e depois 10. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-9 em 1",
+        "10 em 2",
+        "10 em 1",
+        "-9 em 2"
+      ],
+      "correct": 1,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "strings",
+      "assunto": "replace",
+      "statement": "O que este replace devolve para Matriz?",
+      "code": "String s = \"Matriz\";\nSystem.out.println(s.replace('a', 'w'));",
+      "options": [
+        "Matriz",
+        "Mwtriz",
+        "watriz",
+        "atriz"
+      ],
+      "correct": 1,
+      "explain": "<b>Troca todas:</b> cada “a” vira “w”."
+    },
+    {
+      "topic": "dowhile",
+      "assunto": "valid",
+      "statement": "A pessoa digita -2 e depois 17. O que é impresso no final?",
+      "code": "int tentativas = 0;\nint numero;\ndo {\n  numero = scanner.nextInt();\n  tentativas++;\n} while (numero <= 0);\nSystem.out.println(numero + \" em \" + tentativas);",
+      "options": [
+        "-2 em 2",
+        "17 em 2",
+        "17 em 1",
+        "-2 em 1"
+      ],
+      "correct": 1,
+      "explain": "<b>Repete enquanto o número não for positivo;</b> cada leitura conta uma tentativa."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 12;\nx += 8;\nx *= 2;\nx -= 7;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 40",
+        "x final: 13",
+        "x final: 33",
+        "x final: 21"
+      ],
+      "correct": 2,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "logicos",
+      "statement": "Com os operadores lógicos, qual é a saída?",
+      "code": "int a = 8;\nint b = 11;\nboolean p = a > 5 && b > 8;\nboolean q = a == 8 || b < 9;\nSystem.out.println(\"caso 8: \" + p + \" e \" + q);",
+      "options": [
+        "caso 8: false e false",
+        "caso 8: true e true",
+        "caso 8: false e true",
+        "caso 8: true e false"
+      ],
+      "correct": 1,
+      "explain": "<b>&& exige as duas;</b> || aceita uma só."
+    },
+    {
+      "topic": "operadores",
+      "assunto": "composta",
+      "statement": "Depois de todas as atribuições, qual é a saída?",
+      "code": "int x = 13;\nx += 5;\nx *= 2;\nx -= 9;\nSystem.out.println(\"x final: \" + x);",
+      "options": [
+        "x final: 14",
+        "x final: 9",
+        "x final: 27",
+        "x final: 36"
+      ],
+      "correct": 2,
+      "explain": "<b>Uma linha de cada vez:</b> soma, dobra e subtrai."
+    },
+    {
+      "topic": "matrizes",
+      "assunto": "soma",
+      "statement": "Qual é a soma impressa?",
+      "code": "int[][] m = { {2, 4}, {6, 9} };\nint soma = 0;\nfor (int i = 0; i < m.length; i++) {\n  for (int j = 0; j < m[i].length; j++) {\n    soma += m[i][j];\n  }\n}\nSystem.out.println(\"soma da matriz: \" + soma);",
+      "options": [
+        "soma da matriz: 11",
+        "soma da matriz: 21",
+        "soma da matriz: 6",
+        "soma da matriz: 15"
+      ],
+      "correct": 1,
+      "explain": "<b>Os dois laços passam por todas as posições.</b>"
     }
   ],
   "historias": [

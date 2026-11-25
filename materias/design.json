@@ -1338,6 +1338,3815 @@
       "correct": 1,
       "explain": "<b>Perceptível:</b> o som precisa de alternativa visual. Legendas atendem a todos; a janela de Libras atende quem tem a Libras como primeira língua.",
       "assunto": "acess"
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CC1150, qual é a cor em RGB?",
+      "options": [
+        "rgb(80, 17, 204)",
+        "rgb(17, 204, 80)",
+        "rgb(204, 80, 17)",
+        "rgb(204, 17, 80)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), 50 = 80 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Oferecer “desfazer” ao desmarcar um banho",
+        "Mostrar uma barra enquanto a vacina é registrada",
+        "Tirar da tela o que não ajuda a marcar o banho",
+        "Pôr um guia curto de como marcar o banho"
+      ],
+      "correct": 1,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da biblioteca, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se a busca no acervo roda",
+        "Um texto sobre o acervo parece um botão",
+        "O usuário não acha onde renovar o empréstimo",
+        "Um aviso aparece logo que a busca no acervo roda"
+      ],
+      "correct": 1,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(340, 50%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(100, 50%, 40%)",
+        "hsl(340, 50%, 20%)",
+        "hsl(340, 70%, 40%)",
+        "hsl(340, 50%, 60%)"
+      ],
+      "correct": 3,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Pôr um guia curto de como renovar o empréstimo",
+        "Usar um só ícone para renovar o empréstimo",
+        "Tirar da tela o que não ajuda a renovar o empréstimo",
+        "Oferecer “desfazer” ao remover uma reserva"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #442260, qual é a cor em RGB?",
+      "options": [
+        "rgb(96, 34, 68)",
+        "rgb(68, 34, 96)",
+        "rgb(68, 96, 34)",
+        "rgb(34, 68, 96)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> 44 = 68 (vermelho), 22 = 34 (verde), 60 = 96 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da academia, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da academia",
+        "Montar a tela de marcar uma aula já com as cores finais",
+        "Rabiscar no papel a tela de marcar uma aula",
+        "Chamar de “Processar” o botão de marcar uma aula"
+      ],
+      "correct": 0,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CC8860, qual é a cor em RGB?",
+      "options": [
+        "rgb(204, 96, 136)",
+        "rgb(96, 136, 204)",
+        "rgb(136, 204, 96)",
+        "rgb(204, 136, 96)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 88 = 136 (verde), 60 = 96 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como enviar a comanda",
+        "Tirar da tela o que não ajuda a enviar a comanda",
+        "Mostrar uma barra enquanto a conta é fechada",
+        "Oferecer “desfazer” ao tirar um item da mesa"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da escola, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de lançar a nota",
+        "Montar a tela de lançar a nota já com as cores finais",
+        "Rabiscar no papel a tela de lançar a nota",
+        "Trocar um valor e mudar a cor de todas as telas da escola"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto do pet shop, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Chamar de “Processar” o botão de marcar o banho",
+        "Montar a tela de marcar o banho já com as cores finais",
+        "Rabiscar no papel a tela de marcar o banho",
+        "Trocar um valor e mudar a cor de todas as telas do pet shop"
+      ],
+      "correct": 3,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Mostrar uma barra enquanto o álbum é baixado",
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Tirar da tela o que não ajuda a criar a playlist",
+        "Pôr um guia curto de como criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da escola, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Montar a tela de lançar a nota já com as cores finais",
+        "Chamar de “Processar” o botão de lançar a nota",
+        "Rabiscar no papel a tela de lançar a nota",
+        "Trocar um valor e mudar a cor de todas as telas da escola"
+      ],
+      "correct": 2,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da escola, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da escola",
+        "Montar a tela de lançar a nota já com as cores finais",
+        "Chamar de “Processar” o botão de lançar a nota",
+        "Rabiscar no papel a tela de lançar a nota"
+      ],
+      "correct": 0,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do cinema, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se o ingresso é emitido",
+        "Um texto sobre o mapa da sala parece um botão",
+        "Um aviso aparece logo que o ingresso é emitido",
+        "O usuário não acha onde escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #002210, qual é a cor em RGB?",
+      "options": [
+        "rgb(16, 34, 0)",
+        "rgb(0, 16, 34)",
+        "rgb(0, 34, 16)",
+        "rgb(34, 0, 16)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> 00 = 0 (vermelho), 22 = 34 (verde), 10 = 16 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Oferecer “desfazer” ao apagar uma falta",
+        "Tirar da tela o que não ajuda a lançar a nota",
+        "Pôr um guia curto de como lançar a nota",
+        "Mostrar uma barra enquanto o boletim é montado"
+      ],
+      "correct": 0,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Mostrar uma barra enquanto o exame é enviado",
+        "Oferecer “desfazer” ao excluir um horário",
+        "Pôr um guia curto de como agendar a consulta",
+        "Tirar da tela o que não ajuda a agendar a consulta"
+      ],
+      "correct": 1,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da farmácia, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "Um aviso aparece logo que a receita é validada",
+        "O usuário não sabe se a receita é validada",
+        "O usuário não acha onde vender o remédio",
+        "Um texto sobre o lote do remédio parece um botão"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #88AA70, qual é a cor em RGB?",
+      "options": [
+        "rgb(112, 170, 136)",
+        "rgb(170, 136, 112)",
+        "rgb(136, 112, 170)",
+        "rgb(136, 170, 112)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), AA = 170 (verde), 70 = 112 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(300, 70%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(300, 90%, 40%)",
+        "hsl(300, 70%, 20%)",
+        "hsl(300, 70%, 60%)",
+        "hsl(60, 70%, 40%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Mostrar uma barra enquanto a receita é validada",
+        "Tirar da tela o que não ajuda a vender o remédio",
+        "Pôr um guia curto de como vender o remédio"
+      ],
+      "correct": 1,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(160, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(160, 80%, 30%)",
+        "hsl(280, 60%, 30%)",
+        "hsl(160, 60%, 10%)",
+        "hsl(160, 60%, 50%)"
+      ],
+      "correct": 3,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Pôr um guia curto de como fechar o pedido",
+        "Tirar da tela o que não ajuda a fechar o pedido"
+      ],
+      "correct": 1,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da transportadora, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "Um aviso aparece logo que a rota é traçada",
+        "O usuário não sabe se a rota é traçada",
+        "Um texto sobre a rota do dia parece um botão",
+        "O usuário não acha onde registrar a entrega"
+      ],
+      "correct": 2,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da biblioteca, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de renovar o empréstimo já com as cores finais",
+        "Rabiscar no papel a tela de renovar o empréstimo",
+        "Trocar um valor e mudar a cor de todas as telas da biblioteca",
+        "Chamar de “Processar” o botão de renovar o empréstimo"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Tirar da tela o que não ajuda a marcar uma aula",
+        "Pôr um guia curto de como marcar uma aula",
+        "Oferecer “desfazer” ao desmarcar uma aula"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Pôr um guia curto de como escolher a poltrona",
+        "Pôr máscara no campo quantidade de ingressos",
+        "Oferecer “desfazer” ao soltar uma poltrona",
+        "Tirar da tela o que não ajuda a escolher a poltrona"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Pôr máscara no campo quantidade de ingressos",
+        "Tirar da tela o que não ajuda a escolher a poltrona",
+        "Oferecer “desfazer” ao soltar uma poltrona",
+        "Usar um só ícone para escolher a poltrona"
+      ],
+      "correct": 3,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Oferecer “desfazer” ao excluir um horário",
+        "Pôr um guia curto de como agendar a consulta",
+        "Tirar da tela o que não ajuda a agendar a consulta",
+        "Mostrar uma barra enquanto o exame é enviado"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do banco, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do banco",
+        "Montar a tela de fazer um Pix já com as cores finais",
+        "Rabiscar no papel a tela de fazer um Pix",
+        "Chamar de “Processar” o botão de fazer um Pix"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do cinema, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de escolher a poltrona",
+        "Montar a tela de escolher a poltrona já com as cores finais",
+        "Rabiscar no papel a tela de escolher a poltrona",
+        "Trocar um valor e mudar a cor de todas as telas do cinema"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr um guia curto de como abrir a ordem de serviço",
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço",
+        "Usar um só ícone para abrir a ordem de serviço",
+        "Mostrar uma barra enquanto o orçamento é gerado"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da loja online, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da loja online",
+        "Montar a tela de fechar o pedido já com as cores finais",
+        "Chamar de “Processar” o botão de fechar o pedido",
+        "Rabiscar no papel a tela de fechar o pedido"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do restaurante, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do restaurante",
+        "Montar a tela de enviar a comanda já com as cores finais",
+        "Rabiscar no papel a tela de enviar a comanda",
+        "Chamar de “Processar” o botão de enviar a comanda"
+      ],
+      "correct": 2,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(250, 70%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(250, 70%, 30%)",
+        "hsl(250, 90%, 50%)",
+        "hsl(250, 70%, 70%)",
+        "hsl(10, 70%, 50%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #DDAA40, qual é a cor em RGB?",
+      "options": [
+        "rgb(221, 170, 64)",
+        "rgb(170, 221, 64)",
+        "rgb(221, 64, 170)",
+        "rgb(64, 170, 221)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), AA = 170 (verde), 40 = 64 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Pôr máscara no campo placa do carro",
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço",
+        "Deixar à vista os carros atendidos",
+        "Oferecer “desfazer” ao remover uma peça"
+      ],
+      "correct": 0,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto do cinema, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Rabiscar no papel a tela de escolher a poltrona",
+        "Trocar um valor e mudar a cor de todas as telas do cinema",
+        "Montar a tela de escolher a poltrona já com as cores finais",
+        "Chamar de “Processar” o botão de escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #FF66B0, qual é a cor em RGB?",
+      "options": [
+        "rgb(255, 102, 176)",
+        "rgb(102, 255, 176)",
+        "rgb(255, 176, 102)",
+        "rgb(176, 102, 255)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), 66 = 102 (verde), B0 = 176 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr um guia curto de como fechar o pedido",
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Tirar da tela o que não ajuda a fechar o pedido",
+        "Mostrar uma barra enquanto o pagamento é processado"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CCDD10, qual é a cor em RGB?",
+      "options": [
+        "rgb(221, 204, 16)",
+        "rgb(204, 221, 16)",
+        "rgb(204, 16, 221)",
+        "rgb(16, 221, 204)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), DD = 221 (verde), 10 = 16 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da transportadora, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que a rota é traçada",
+        "O usuário não acha onde registrar a entrega",
+        "Um texto sobre a rota do dia parece um botão",
+        "O usuário não sabe se a rota é traçada"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da biblioteca, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se a busca no acervo roda",
+        "Um texto sobre o acervo parece um botão",
+        "Um aviso aparece logo que a busca no acervo roda",
+        "O usuário não acha onde renovar o empréstimo"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Mostrar uma barra enquanto o orçamento é gerado",
+        "Pôr um guia curto de como abrir a ordem de serviço",
+        "Usar um só ícone para abrir a ordem de serviço",
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço"
+      ],
+      "correct": 2,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do app de música, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do app de música",
+        "Chamar de “Processar” o botão de criar a playlist",
+        "Montar a tela de criar a playlist já com as cores finais",
+        "Rabiscar no papel a tela de criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como enviar a comanda",
+        "Oferecer “desfazer” ao tirar um item da mesa",
+        "Mostrar uma barra enquanto a conta é fechada",
+        "Tirar da tela o que não ajuda a enviar a comanda"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da biblioteca, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Montar a tela de renovar o empréstimo já com as cores finais",
+        "Rabiscar no papel a tela de renovar o empréstimo",
+        "Chamar de “Processar” o botão de renovar o empréstimo",
+        "Trocar um valor e mudar a cor de todas as telas da biblioteca"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Pôr um guia curto de como marcar uma aula",
+        "Tirar da tela o que não ajuda a marcar uma aula",
+        "Oferecer “desfazer” ao desmarcar uma aula"
+      ],
+      "correct": 0,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #FFEEE0, qual é a cor em RGB?",
+      "options": [
+        "rgb(238, 255, 224)",
+        "rgb(255, 224, 238)",
+        "rgb(224, 238, 255)",
+        "rgb(255, 238, 224)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), EE = 238 (verde), E0 = 224 (azul)."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da oficina, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de abrir a ordem de serviço",
+        "Rabiscar no papel a tela de abrir a ordem de serviço",
+        "Montar a tela de abrir a ordem de serviço já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da oficina"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #773390, qual é a cor em RGB?",
+      "options": [
+        "rgb(119, 144, 51)",
+        "rgb(119, 51, 144)",
+        "rgb(51, 119, 144)",
+        "rgb(144, 51, 119)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 90 = 144 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do hotel, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de reservar o quarto já com as cores finais",
+        "Rabiscar no papel a tela de reservar o quarto",
+        "Trocar um valor e mudar a cor de todas as telas do hotel",
+        "Chamar de “Processar” o botão de reservar o quarto"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Pôr máscara no campo nota da prova",
+        "Deixar à vista as turmas abertas",
+        "Usar um só ícone para lançar a nota",
+        "Mostrar uma barra enquanto o boletim é montado"
+      ],
+      "correct": 1,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Usar um só ícone para registrar a saída",
+        "Pôr um guia curto de como registrar a saída",
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Oferecer “desfazer” ao liberar uma vaga"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do banco, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se o comprovante é gerado",
+        "O usuário não acha onde fazer um Pix",
+        "Um aviso aparece logo que o comprovante é gerado",
+        "Um texto sobre o saldo parece um botão"
+      ],
+      "correct": 3,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da loja online, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que o pagamento é processado",
+        "O usuário não acha onde fechar o pedido",
+        "O usuário não sabe se o pagamento é processado",
+        "Um texto sobre o estoque parece um botão"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #33EE70, qual é a cor em RGB?",
+      "options": [
+        "rgb(51, 238, 112)",
+        "rgb(51, 112, 238)",
+        "rgb(238, 51, 112)",
+        "rgb(112, 238, 51)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), EE = 238 (verde), 70 = 112 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #BB2280, qual é a cor em RGB?",
+      "options": [
+        "rgb(34, 187, 128)",
+        "rgb(187, 34, 128)",
+        "rgb(128, 34, 187)",
+        "rgb(187, 128, 34)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 22 = 34 (verde), 80 = 128 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #DD2290, qual é a cor em RGB?",
+      "options": [
+        "rgb(144, 34, 221)",
+        "rgb(221, 144, 34)",
+        "rgb(34, 221, 144)",
+        "rgb(221, 34, 144)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 22 = 34 (verde), 90 = 144 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(110, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(230, 40%, 50%)",
+        "hsl(110, 60%, 50%)",
+        "hsl(110, 40%, 70%)",
+        "hsl(110, 40%, 30%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da academia, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não sabe se a ficha de treino abre",
+        "O usuário não acha onde marcar uma aula",
+        "Um texto sobre a grade de aulas parece um botão",
+        "Um aviso aparece logo que a ficha de treino abre"
+      ],
+      "correct": 3,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #5500C0, qual é a cor em RGB?",
+      "options": [
+        "rgb(0, 85, 192)",
+        "rgb(85, 0, 192)",
+        "rgb(85, 192, 0)",
+        "rgb(192, 0, 85)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), 00 = 0 (verde), C0 = 192 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do estacionamento, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do estacionamento",
+        "Montar a tela de registrar a saída já com as cores finais",
+        "Rabiscar no papel a tela de registrar a saída",
+        "Chamar de “Processar” o botão de registrar a saída"
+      ],
+      "correct": 2,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #113380, qual é a cor em RGB?",
+      "options": [
+        "rgb(17, 51, 128)",
+        "rgb(51, 17, 128)",
+        "rgb(17, 128, 51)",
+        "rgb(128, 51, 17)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> 11 = 17 (vermelho), 33 = 51 (verde), 80 = 128 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr um guia curto de como criar a playlist",
+        "Tirar da tela o que não ajuda a criar a playlist",
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Mostrar uma barra enquanto o álbum é baixado"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da transportadora, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de registrar a entrega",
+        "Montar a tela de registrar a entrega já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da transportadora",
+        "Chamar de “Processar” o botão de registrar a entrega"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(90, 50%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(90, 50%, 30%)",
+        "hsl(90, 50%, 70%)",
+        "hsl(210, 50%, 50%)",
+        "hsl(90, 70%, 50%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da loja online, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de fechar o pedido",
+        "Rabiscar no papel a tela de fechar o pedido",
+        "Trocar um valor e mudar a cor de todas as telas da loja online",
+        "Montar a tela de fechar o pedido já com as cores finais"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do pet shop, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não acha onde marcar o banho",
+        "O usuário não sabe se a vacina é registrada",
+        "Um aviso aparece logo que a vacina é registrada",
+        "Um texto sobre a ficha do animal parece um botão"
+      ],
+      "correct": 3,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do hotel, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do hotel",
+        "Chamar de “Processar” o botão de reservar o quarto",
+        "Rabiscar no papel a tela de reservar o quarto",
+        "Montar a tela de reservar o quarto já com as cores finais"
+      ],
+      "correct": 1,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(90, 50%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(90, 70%, 40%)",
+        "hsl(90, 50%, 60%)",
+        "hsl(90, 50%, 20%)",
+        "hsl(210, 50%, 40%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Usar um só ícone para vender o remédio",
+        "Tirar da tela o que não ajuda a vender o remédio",
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Pôr máscara no campo número da receita"
+      ],
+      "correct": 3,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(240, 50%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(240, 50%, 50%)",
+        "hsl(240, 70%, 30%)",
+        "hsl(240, 50%, 10%)",
+        "hsl(0, 50%, 30%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(280, 40%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(280, 40%, 50%)",
+        "hsl(40, 40%, 30%)",
+        "hsl(280, 40%, 10%)",
+        "hsl(280, 60%, 30%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #EEFF70, qual é a cor em RGB?",
+      "options": [
+        "rgb(238, 255, 112)",
+        "rgb(238, 112, 255)",
+        "rgb(112, 255, 238)",
+        "rgb(255, 238, 112)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), FF = 255 (verde), 70 = 112 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da farmácia, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se a receita é validada",
+        "Um aviso aparece logo que a receita é validada",
+        "O usuário não acha onde vender o remédio",
+        "Um texto sobre o lote do remédio parece um botão"
+      ],
+      "correct": 3,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Usar um só ícone para fazer um Pix",
+        "Deixar à vista os contatos usados",
+        "Mostrar uma barra enquanto o comprovante é gerado",
+        "Pôr um guia curto de como fazer um Pix"
+      ],
+      "correct": 0,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Mostrar uma barra enquanto o comprovante é gerado",
+        "Deixar à vista os contatos usados",
+        "Pôr máscara no campo chave Pix",
+        "Usar um só ícone para fazer um Pix"
+      ],
+      "correct": 2,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Usar um só ícone para renovar o empréstimo",
+        "Oferecer “desfazer” ao remover uma reserva",
+        "Pôr máscara no campo código do livro",
+        "Tirar da tela o que não ajuda a renovar o empréstimo"
+      ],
+      "correct": 2,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da clínica, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se o exame é enviado",
+        "Um texto sobre a agenda médica parece um botão",
+        "O usuário não acha onde agendar a consulta",
+        "Um aviso aparece logo que o exame é enviado"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como lançar a nota",
+        "Tirar da tela o que não ajuda a lançar a nota",
+        "Oferecer “desfazer” ao apagar uma falta",
+        "Mostrar uma barra enquanto o boletim é montado"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Oferecer “desfazer” ao apagar um favorito",
+        "Tirar da tela o que não ajuda a fazer um Pix",
+        "Mostrar uma barra enquanto o comprovante é gerado",
+        "Pôr um guia curto de como fazer um Pix"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da clínica, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de agendar a consulta",
+        "Rabiscar no papel a tela de agendar a consulta",
+        "Trocar um valor e mudar a cor de todas as telas da clínica",
+        "Montar a tela de agendar a consulta já com as cores finais"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Deixar à vista os pratos pedidos",
+        "Pôr máscara no campo número da mesa",
+        "Usar um só ícone para enviar a comanda",
+        "Tirar da tela o que não ajuda a enviar a comanda"
+      ],
+      "correct": 0,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Pôr um guia curto de como enviar a comanda",
+        "Tirar da tela o que não ajuda a enviar a comanda",
+        "Oferecer “desfazer” ao tirar um item da mesa",
+        "Mostrar uma barra enquanto a conta é fechada"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da clínica, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "Um texto sobre a agenda médica parece um botão",
+        "O usuário não acha onde agendar a consulta",
+        "Um aviso aparece logo que o exame é enviado",
+        "O usuário não sabe se o exame é enviado"
+      ],
+      "correct": 0,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da oficina, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se o orçamento é gerado",
+        "Um texto sobre as peças parece um botão",
+        "Um aviso aparece logo que o orçamento é gerado",
+        "O usuário não acha onde abrir a ordem de serviço"
+      ],
+      "correct": 1,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr máscara no campo quantidade de ingressos",
+        "Pôr um guia curto de como escolher a poltrona",
+        "Mostrar uma barra enquanto o ingresso é emitido",
+        "Tirar da tela o que não ajuda a escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Pôr máscara no campo quantidade de ingressos",
+        "Tirar da tela o que não ajuda a escolher a poltrona",
+        "Pôr um guia curto de como escolher a poltrona",
+        "Mostrar uma barra enquanto o ingresso é emitido"
+      ],
+      "correct": 0,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Oferecer “desfazer” ao cancelar uma reserva",
+        "Tirar da tela o que não ajuda a reservar o quarto",
+        "Pôr um guia curto de como reservar o quarto"
+      ],
+      "correct": 3,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Pôr um guia curto de como criar a playlist",
+        "Tirar da tela o que não ajuda a criar a playlist",
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Mostrar uma barra enquanto o álbum é baixado"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(250, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(250, 60%, 50%)",
+        "hsl(250, 60%, 10%)",
+        "hsl(10, 60%, 30%)",
+        "hsl(250, 80%, 30%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Usar um só ícone para reservar o quarto",
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Pôr um guia curto de como reservar o quarto",
+        "Oferecer “desfazer” ao cancelar uma reserva"
+      ],
+      "correct": 0,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do hotel, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se a reserva é confirmada",
+        "O usuário não acha onde reservar o quarto",
+        "Um texto sobre a ocupação parece um botão",
+        "Um aviso aparece logo que a reserva é confirmada"
+      ],
+      "correct": 2,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #55BB90, qual é a cor em RGB?",
+      "options": [
+        "rgb(144, 187, 85)",
+        "rgb(85, 144, 187)",
+        "rgb(85, 187, 144)",
+        "rgb(187, 85, 144)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), BB = 187 (verde), 90 = 144 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(10, 70%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(10, 70%, 60%)",
+        "hsl(130, 70%, 40%)",
+        "hsl(10, 90%, 40%)",
+        "hsl(10, 70%, 20%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da escola, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se o boletim é montado",
+        "O usuário não acha onde lançar a nota",
+        "Um texto sobre o boletim parece um botão",
+        "Um aviso aparece logo que o boletim é montado"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr um guia curto de como renovar o empréstimo",
+        "Usar um só ícone para renovar o empréstimo",
+        "Tirar da tela o que não ajuda a renovar o empréstimo",
+        "Mostrar uma barra enquanto a busca no acervo roda"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Pôr um guia curto de como marcar o banho",
+        "Tirar da tela o que não ajuda a marcar o banho",
+        "Oferecer “desfazer” ao desmarcar um banho",
+        "Mostrar uma barra enquanto a vacina é registrada"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Tirar da tela o que não ajuda a fazer um Pix",
+        "Mostrar uma barra enquanto o comprovante é gerado",
+        "Pôr um guia curto de como fazer um Pix",
+        "Oferecer “desfazer” ao apagar um favorito"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #EE4410, qual é a cor em RGB?",
+      "options": [
+        "rgb(16, 68, 238)",
+        "rgb(68, 238, 16)",
+        "rgb(238, 16, 68)",
+        "rgb(238, 68, 16)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 44 = 68 (verde), 10 = 16 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Mostrar uma barra enquanto a rota é traçada",
+        "Pôr um guia curto de como registrar a entrega",
+        "Tirar da tela o que não ajuda a registrar a entrega",
+        "Usar um só ícone para registrar a entrega"
+      ],
+      "correct": 3,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como registrar a entrega",
+        "Usar um só ícone para registrar a entrega",
+        "Mostrar uma barra enquanto a rota é traçada",
+        "Tirar da tela o que não ajuda a registrar a entrega"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(330, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(90, 60%, 30%)",
+        "hsl(330, 60%, 10%)",
+        "hsl(330, 80%, 30%)",
+        "hsl(330, 60%, 50%)"
+      ],
+      "correct": 3,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Oferecer “desfazer” ao desmarcar uma aula",
+        "Usar um só ícone para marcar uma aula",
+        "Pôr um guia curto de como marcar uma aula",
+        "Mostrar uma barra enquanto a ficha de treino abre"
+      ],
+      "correct": 1,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da oficina, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não acha onde abrir a ordem de serviço",
+        "O usuário não sabe se o orçamento é gerado",
+        "Um texto sobre as peças parece um botão",
+        "Um aviso aparece logo que o orçamento é gerado"
+      ],
+      "correct": 3,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do pet shop, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do pet shop",
+        "Montar a tela de marcar o banho já com as cores finais",
+        "Chamar de “Processar” o botão de marcar o banho",
+        "Rabiscar no papel a tela de marcar o banho"
+      ],
+      "correct": 2,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Pôr um guia curto de como registrar a saída",
+        "Oferecer “desfazer” ao liberar uma vaga",
+        "Usar um só ícone para registrar a saída"
+      ],
+      "correct": 3,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da academia, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se a ficha de treino abre",
+        "Um aviso aparece logo que a ficha de treino abre",
+        "Um texto sobre a grade de aulas parece um botão",
+        "O usuário não acha onde marcar uma aula"
+      ],
+      "correct": 2,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Pôr um guia curto de como lançar a nota",
+        "Usar um só ícone para lançar a nota",
+        "Oferecer “desfazer” ao apagar uma falta",
+        "Mostrar uma barra enquanto o boletim é montado"
+      ],
+      "correct": 1,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Usar um só ícone para marcar o banho",
+        "Pôr um guia curto de como marcar o banho",
+        "Mostrar uma barra enquanto a vacina é registrada",
+        "Oferecer “desfazer” ao desmarcar um banho"
+      ],
+      "correct": 0,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CC99C0, qual é a cor em RGB?",
+      "options": [
+        "rgb(204, 153, 192)",
+        "rgb(204, 192, 153)",
+        "rgb(153, 204, 192)",
+        "rgb(192, 153, 204)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 99 = 153 (verde), C0 = 192 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do cinema, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de escolher a poltrona",
+        "Montar a tela de escolher a poltrona já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas do cinema",
+        "Chamar de “Processar” o botão de escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do banco, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Rabiscar no papel a tela de fazer um Pix",
+        "Montar a tela de fazer um Pix já com as cores finais",
+        "Chamar de “Processar” o botão de fazer um Pix",
+        "Trocar um valor e mudar a cor de todas as telas do banco"
+      ],
+      "correct": 2,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(230, 70%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(230, 70%, 20%)",
+        "hsl(230, 70%, 60%)",
+        "hsl(350, 70%, 40%)",
+        "hsl(230, 90%, 40%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Usar um só ícone para marcar uma aula",
+        "Pôr máscara no campo data da aula",
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Deixar à vista os treinos feitos"
+      ],
+      "correct": 1,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da escola, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não sabe se o boletim é montado",
+        "Um aviso aparece logo que o boletim é montado",
+        "Um texto sobre o boletim parece um botão",
+        "O usuário não acha onde lançar a nota"
+      ],
+      "correct": 1,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a entrega",
+        "Pôr um guia curto de como registrar a entrega",
+        "Oferecer “desfazer” ao excluir uma parada",
+        "Mostrar uma barra enquanto a rota é traçada"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Tirar da tela o que não ajuda a marcar uma aula",
+        "Oferecer “desfazer” ao desmarcar uma aula",
+        "Pôr um guia curto de como marcar uma aula"
+      ],
+      "correct": 3,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a entrega",
+        "Usar um só ícone para registrar a entrega",
+        "Mostrar uma barra enquanto a rota é traçada",
+        "Pôr um guia curto de como registrar a entrega"
+      ],
+      "correct": 2,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(280, 50%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(280, 70%, 40%)",
+        "hsl(40, 50%, 40%)",
+        "hsl(280, 50%, 60%)",
+        "hsl(280, 50%, 20%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da escola, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "O usuário não acha onde lançar a nota",
+        "O usuário não sabe se o boletim é montado",
+        "Um texto sobre o boletim parece um botão",
+        "Um aviso aparece logo que o boletim é montado"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como registrar a saída",
+        "Mostrar uma barra enquanto o ticket é impresso",
+        "Usar um só ícone para registrar a saída",
+        "Tirar da tela o que não ajuda a registrar a saída"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #DDBB10, qual é a cor em RGB?",
+      "options": [
+        "rgb(16, 187, 221)",
+        "rgb(221, 187, 16)",
+        "rgb(187, 221, 16)",
+        "rgb(221, 16, 187)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), BB = 187 (verde), 10 = 16 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #22EE80, qual é a cor em RGB?",
+      "options": [
+        "rgb(238, 34, 128)",
+        "rgb(34, 238, 128)",
+        "rgb(128, 238, 34)",
+        "rgb(34, 128, 238)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), EE = 238 (verde), 80 = 128 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Tirar da tela o que não ajuda a fechar o pedido",
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Pôr um guia curto de como fechar o pedido"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Oferecer “desfazer” ao remover uma peça",
+        "Usar um só ícone para abrir a ordem de serviço",
+        "Pôr máscara no campo placa do carro",
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço"
+      ],
+      "correct": 0,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Oferecer “desfazer” ao liberar uma vaga",
+        "Pôr máscara no campo placa do veículo",
+        "Usar um só ícone para registrar a saída"
+      ],
+      "correct": 2,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(0, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(0, 40%, 30%)",
+        "hsl(0, 40%, 70%)",
+        "hsl(120, 40%, 50%)",
+        "hsl(0, 60%, 50%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(0, 50%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(0, 70%, 30%)",
+        "hsl(0, 50%, 50%)",
+        "hsl(120, 50%, 30%)",
+        "hsl(0, 50%, 10%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da academia, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "Um aviso aparece logo que a ficha de treino abre",
+        "Um texto sobre a grade de aulas parece um botão",
+        "O usuário não sabe se a ficha de treino abre",
+        "O usuário não acha onde marcar uma aula"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da escola, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "Um texto sobre o boletim parece um botão",
+        "O usuário não acha onde lançar a nota",
+        "O usuário não sabe se o boletim é montado",
+        "Um aviso aparece logo que o boletim é montado"
+      ],
+      "correct": 0,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Tirar da tela o que não ajuda a vender o remédio",
+        "Mostrar uma barra enquanto a receita é validada",
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Pôr um guia curto de como vender o remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Controle e liberdade”?",
+      "options": [
+        "Tirar da tela o que não ajuda a reservar o quarto",
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Oferecer “desfazer” ao cancelar uma reserva",
+        "Pôr um guia curto de como reservar o quarto"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do hotel, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se a reserva é confirmada",
+        "Um texto sobre a ocupação parece um botão",
+        "Um aviso aparece logo que a reserva é confirmada",
+        "O usuário não acha onde reservar o quarto"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #DD99A0, qual é a cor em RGB?",
+      "options": [
+        "rgb(221, 153, 160)",
+        "rgb(160, 153, 221)",
+        "rgb(153, 221, 160)",
+        "rgb(221, 160, 153)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 99 = 153 (verde), A0 = 160 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(80, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(200, 40%, 50%)",
+        "hsl(80, 40%, 70%)",
+        "hsl(80, 60%, 50%)",
+        "hsl(80, 40%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Tirar da tela o que não ajuda a criar a playlist",
+        "Usar um só ícone para criar a playlist",
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Pôr máscara no campo nome da playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da academia, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de marcar uma aula já com as cores finais",
+        "Chamar de “Processar” o botão de marcar uma aula",
+        "Trocar um valor e mudar a cor de todas as telas da academia",
+        "Rabiscar no papel a tela de marcar uma aula"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto do hotel, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Chamar de “Processar” o botão de reservar o quarto",
+        "Trocar um valor e mudar a cor de todas as telas do hotel",
+        "Montar a tela de reservar o quarto já com as cores finais",
+        "Rabiscar no papel a tela de reservar o quarto"
+      ],
+      "correct": 1,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(210, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(210, 60%, 50%)",
+        "hsl(210, 80%, 30%)",
+        "hsl(210, 60%, 10%)",
+        "hsl(330, 60%, 30%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do app de música, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de criar a playlist já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas do app de música",
+        "Chamar de “Processar” o botão de criar a playlist",
+        "Rabiscar no papel a tela de criar a playlist"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da clínica, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não acha onde agendar a consulta",
+        "O usuário não sabe se o exame é enviado",
+        "Um aviso aparece logo que o exame é enviado",
+        "Um texto sobre a agenda médica parece um botão"
+      ],
+      "correct": 2,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da farmácia, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um texto sobre o lote do remédio parece um botão",
+        "O usuário não sabe se a receita é validada",
+        "O usuário não acha onde vender o remédio",
+        "Um aviso aparece logo que a receita é validada"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #33BBA0, qual é a cor em RGB?",
+      "options": [
+        "rgb(51, 160, 187)",
+        "rgb(187, 51, 160)",
+        "rgb(160, 187, 51)",
+        "rgb(51, 187, 160)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), A0 = 160 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Mostrar uma barra enquanto o ticket é impresso",
+        "Oferecer “desfazer” ao liberar uma vaga",
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Pôr um guia curto de como registrar a saída"
+      ],
+      "correct": 3,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como marcar o banho",
+        "Oferecer “desfazer” ao desmarcar um banho",
+        "Tirar da tela o que não ajuda a marcar o banho",
+        "Mostrar uma barra enquanto a vacina é registrada"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do banco, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que o comprovante é gerado",
+        "O usuário não sabe se o comprovante é gerado",
+        "O usuário não acha onde fazer um Pix",
+        "Um texto sobre o saldo parece um botão"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(190, 50%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(190, 50%, 20%)",
+        "hsl(190, 70%, 40%)",
+        "hsl(190, 50%, 60%)",
+        "hsl(310, 50%, 40%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da farmácia, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de vender o remédio",
+        "Trocar um valor e mudar a cor de todas as telas da farmácia",
+        "Montar a tela de vender o remédio já com as cores finais",
+        "Rabiscar no papel a tela de vender o remédio"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do app de música, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "Um aviso aparece logo que o álbum é baixado",
+        "Um texto sobre a lista de faixas parece um botão",
+        "O usuário não sabe se o álbum é baixado",
+        "O usuário não acha onde criar a playlist"
+      ],
+      "correct": 0,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do app de música, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "Um texto sobre a lista de faixas parece um botão",
+        "O usuário não sabe se o álbum é baixado",
+        "Um aviso aparece logo que o álbum é baixado",
+        "O usuário não acha onde criar a playlist"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Tirar da tela o que não ajuda a vender o remédio",
+        "Usar um só ícone para vender o remédio",
+        "Deixar à vista os remédios buscados",
+        "Pôr máscara no campo número da receita"
+      ],
+      "correct": 2,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do restaurante, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de enviar a comanda já com as cores finais",
+        "Chamar de “Processar” o botão de enviar a comanda",
+        "Trocar um valor e mudar a cor de todas as telas do restaurante",
+        "Rabiscar no papel a tela de enviar a comanda"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da biblioteca, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um texto sobre o acervo parece um botão",
+        "O usuário não sabe se a busca no acervo roda",
+        "Um aviso aparece logo que a busca no acervo roda",
+        "O usuário não acha onde renovar o empréstimo"
+      ],
+      "correct": 3,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da oficina, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de abrir a ordem de serviço",
+        "Montar a tela de abrir a ordem de serviço já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da oficina",
+        "Chamar de “Processar” o botão de abrir a ordem de serviço"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como renovar o empréstimo",
+        "Usar um só ícone para renovar o empréstimo",
+        "Mostrar uma barra enquanto a busca no acervo roda",
+        "Tirar da tela o que não ajuda a renovar o empréstimo"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CC6610, qual é a cor em RGB?",
+      "options": [
+        "rgb(204, 102, 16)",
+        "rgb(16, 102, 204)",
+        "rgb(102, 204, 16)",
+        "rgb(204, 16, 102)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 66 = 102 (verde), 10 = 16 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do estacionamento, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um texto sobre as vagas parece um botão",
+        "O usuário não acha onde registrar a saída",
+        "Um aviso aparece logo que o ticket é impresso",
+        "O usuário não sabe se o ticket é impresso"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da farmácia, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não sabe se a receita é validada",
+        "Um aviso aparece logo que a receita é validada",
+        "O usuário não acha onde vender o remédio",
+        "Um texto sobre o lote do remédio parece um botão"
+      ],
+      "correct": 1,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do estacionamento, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de registrar a saída",
+        "Montar a tela de registrar a saída já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas do estacionamento",
+        "Rabiscar no papel a tela de registrar a saída"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do app de música, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas do app de música",
+        "Montar a tela de criar a playlist já com as cores finais",
+        "Rabiscar no papel a tela de criar a playlist",
+        "Chamar de “Processar” o botão de criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da transportadora, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Montar a tela de registrar a entrega já com as cores finais",
+        "Rabiscar no papel a tela de registrar a entrega",
+        "Trocar um valor e mudar a cor de todas as telas da transportadora",
+        "Chamar de “Processar” o botão de registrar a entrega"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CC11E0, qual é a cor em RGB?",
+      "options": [
+        "rgb(17, 204, 224)",
+        "rgb(224, 17, 204)",
+        "rgb(204, 17, 224)",
+        "rgb(204, 224, 17)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), E0 = 224 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Deixar à vista os filmes vistos",
+        "Tirar da tela o que não ajuda a escolher a poltrona",
+        "Usar um só ícone para escolher a poltrona",
+        "Oferecer “desfazer” ao soltar uma poltrona"
+      ],
+      "correct": 0,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do banco, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não acha onde fazer um Pix",
+        "Um aviso aparece logo que o comprovante é gerado",
+        "Um texto sobre o saldo parece um botão",
+        "O usuário não sabe se o comprovante é gerado"
+      ],
+      "correct": 3,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do estacionamento, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não sabe se o ticket é impresso",
+        "O usuário não acha onde registrar a saída",
+        "Um texto sobre as vagas parece um botão",
+        "Um aviso aparece logo que o ticket é impresso"
+      ],
+      "correct": 3,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto do banco, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Montar a tela de fazer um Pix já com as cores finais",
+        "Chamar de “Processar” o botão de fazer um Pix",
+        "Trocar um valor e mudar a cor de todas as telas do banco",
+        "Rabiscar no papel a tela de fazer um Pix"
+      ],
+      "correct": 2,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do pet shop, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que a vacina é registrada",
+        "O usuário não acha onde marcar o banho",
+        "Um texto sobre a ficha do animal parece um botão",
+        "O usuário não sabe se a vacina é registrada"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Deixar à vista os treinos feitos",
+        "Usar um só ícone para marcar uma aula",
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Pôr máscara no campo data da aula"
+      ],
+      "correct": 0,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Mostrar uma barra enquanto a vacina é registrada",
+        "Usar um só ícone para marcar o banho",
+        "Deixar à vista os animais atendidos",
+        "Pôr máscara no campo peso do animal"
+      ],
+      "correct": 3,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a entrega",
+        "Deixar à vista os destinos usados",
+        "Usar um só ícone para registrar a entrega",
+        "Pôr máscara no campo peso da carga"
+      ],
+      "correct": 3,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do pet shop, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de marcar o banho",
+        "Trocar um valor e mudar a cor de todas as telas do pet shop",
+        "Montar a tela de marcar o banho já com as cores finais",
+        "Rabiscar no papel a tela de marcar o banho"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do cinema, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "O usuário não sabe se o ingresso é emitido",
+        "O usuário não acha onde escolher a poltrona",
+        "Um texto sobre o mapa da sala parece um botão",
+        "Um aviso aparece logo que o ingresso é emitido"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Pôr um guia curto de como fechar o pedido",
+        "Usar um só ícone para fechar o pedido"
+      ],
+      "correct": 3,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(140, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(140, 80%, 30%)",
+        "hsl(140, 60%, 50%)",
+        "hsl(140, 60%, 10%)",
+        "hsl(260, 60%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Usar um só ícone para marcar o banho",
+        "Deixar à vista os animais atendidos",
+        "Mostrar uma barra enquanto a vacina é registrada",
+        "Pôr máscara no campo peso do animal"
+      ],
+      "correct": 1,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da loja online, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "Um aviso aparece logo que o pagamento é processado",
+        "Um texto sobre o estoque parece um botão",
+        "O usuário não sabe se o pagamento é processado",
+        "O usuário não acha onde fechar o pedido"
+      ],
+      "correct": 0,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Oferecer “desfazer” ao tirar um item da mesa",
+        "Tirar da tela o que não ajuda a enviar a comanda",
+        "Pôr um guia curto de como enviar a comanda",
+        "Mostrar uma barra enquanto a conta é fechada"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #773380, qual é a cor em RGB?",
+      "options": [
+        "rgb(119, 51, 128)",
+        "rgb(51, 119, 128)",
+        "rgb(128, 51, 119)",
+        "rgb(119, 128, 51)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 80 = 128 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(260, 50%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(260, 70%, 30%)",
+        "hsl(260, 50%, 50%)",
+        "hsl(260, 50%, 10%)",
+        "hsl(20, 50%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Mostrar uma barra enquanto a busca no acervo roda",
+        "Pôr um guia curto de como renovar o empréstimo",
+        "Tirar da tela o que não ajuda a renovar o empréstimo",
+        "Usar um só ícone para renovar o empréstimo"
+      ],
+      "correct": 1,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do cinema, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "Um texto sobre o mapa da sala parece um botão",
+        "O usuário não sabe se o ingresso é emitido",
+        "Um aviso aparece logo que o ingresso é emitido",
+        "O usuário não acha onde escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Pôr máscara no campo data de entrada",
+        "Tirar da tela o que não ajuda a reservar o quarto",
+        "Usar um só ícone para reservar o quarto",
+        "Deixar à vista os hotéis visitados"
+      ],
+      "correct": 0,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Pôr máscara no campo número da receita",
+        "Usar um só ícone para vender o remédio",
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Tirar da tela o que não ajuda a vender o remédio"
+      ],
+      "correct": 1,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como lançar a nota",
+        "Mostrar uma barra enquanto o boletim é montado",
+        "Oferecer “desfazer” ao apagar uma falta",
+        "Tirar da tela o que não ajuda a lançar a nota"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da clínica, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "O usuário não sabe se o exame é enviado",
+        "Um texto sobre a agenda médica parece um botão",
+        "Um aviso aparece logo que o exame é enviado",
+        "O usuário não acha onde agendar a consulta"
+      ],
+      "correct": 3,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Pôr um guia curto de como criar a playlist",
+        "Usar um só ícone para criar a playlist",
+        "Tirar da tela o que não ajuda a criar a playlist"
+      ],
+      "correct": 2,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Oferecer “desfazer” ao liberar uma vaga",
+        "Mostrar uma barra enquanto o ticket é impresso",
+        "Pôr um guia curto de como registrar a saída"
+      ],
+      "correct": 2,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da oficina, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não acha onde abrir a ordem de serviço",
+        "Um aviso aparece logo que o orçamento é gerado",
+        "O usuário não sabe se o orçamento é gerado",
+        "Um texto sobre as peças parece um botão"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #AA3360, qual é a cor em RGB?",
+      "options": [
+        "rgb(51, 170, 96)",
+        "rgb(96, 51, 170)",
+        "rgb(170, 96, 51)",
+        "rgb(170, 51, 96)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 33 = 51 (verde), 60 = 96 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(210, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(210, 60%, 50%)",
+        "hsl(210, 40%, 70%)",
+        "hsl(330, 40%, 50%)",
+        "hsl(210, 40%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Usar um só ícone para fechar o pedido",
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Deixar à vista os produtos vistos"
+      ],
+      "correct": 3,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(50, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(50, 40%, 30%)",
+        "hsl(170, 40%, 50%)",
+        "hsl(50, 60%, 50%)",
+        "hsl(50, 40%, 70%)"
+      ],
+      "correct": 3,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da farmácia, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de vender o remédio",
+        "Chamar de “Processar” o botão de vender o remédio",
+        "Montar a tela de vender o remédio já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da farmácia"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do pet shop, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de marcar o banho",
+        "Chamar de “Processar” o botão de marcar o banho",
+        "Trocar um valor e mudar a cor de todas as telas do pet shop",
+        "Montar a tela de marcar o banho já com as cores finais"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #33BB30, qual é a cor em RGB?",
+      "options": [
+        "rgb(48, 187, 51)",
+        "rgb(187, 51, 48)",
+        "rgb(51, 48, 187)",
+        "rgb(51, 187, 48)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), 30 = 48 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(140, 60%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(260, 60%, 40%)",
+        "hsl(140, 60%, 20%)",
+        "hsl(140, 80%, 40%)",
+        "hsl(140, 60%, 60%)"
+      ],
+      "correct": 3,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela da loja online, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "O usuário não sabe se o pagamento é processado",
+        "Um aviso aparece logo que o pagamento é processado",
+        "Um texto sobre o estoque parece um botão",
+        "O usuário não acha onde fechar o pedido"
+      ],
+      "correct": 2,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(60, 60%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(60, 80%, 30%)",
+        "hsl(180, 60%, 30%)",
+        "hsl(60, 60%, 50%)",
+        "hsl(60, 60%, 10%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Tirar da tela o que não ajuda a renovar o empréstimo",
+        "Pôr um guia curto de como renovar o empréstimo",
+        "Oferecer “desfazer” ao remover uma reserva",
+        "Usar um só ícone para renovar o empréstimo"
+      ],
+      "correct": 3,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr máscara no campo quantidade de ingressos",
+        "Pôr um guia curto de como escolher a poltrona",
+        "Tirar da tela o que não ajuda a escolher a poltrona",
+        "Mostrar uma barra enquanto o ingresso é emitido"
+      ],
+      "correct": 3,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do pet shop, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se a vacina é registrada",
+        "Um aviso aparece logo que a vacina é registrada",
+        "O usuário não acha onde marcar o banho",
+        "Um texto sobre a ficha do animal parece um botão"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da loja online, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de fechar o pedido",
+        "Trocar um valor e mudar a cor de todas as telas da loja online",
+        "Rabiscar no papel a tela de fechar o pedido",
+        "Montar a tela de fechar o pedido já com as cores finais"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da academia, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que a ficha de treino abre",
+        "O usuário não acha onde marcar uma aula",
+        "Um texto sobre a grade de aulas parece um botão",
+        "O usuário não sabe se a ficha de treino abre"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(40, 60%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(160, 60%, 50%)",
+        "hsl(40, 60%, 70%)",
+        "hsl(40, 80%, 50%)",
+        "hsl(40, 60%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da clínica, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Rabiscar no papel a tela de agendar a consulta",
+        "Montar a tela de agendar a consulta já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da clínica",
+        "Chamar de “Processar” o botão de agendar a consulta"
+      ],
+      "correct": 2,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Pôr máscara no campo número da mesa",
+        "Usar um só ícone para enviar a comanda",
+        "Tirar da tela o que não ajuda a enviar a comanda",
+        "Pôr um guia curto de como enviar a comanda"
+      ],
+      "correct": 0,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como vender o remédio",
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Mostrar uma barra enquanto a receita é validada",
+        "Tirar da tela o que não ajuda a vender o remédio"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #22CCB0, qual é a cor em RGB?",
+      "options": [
+        "rgb(176, 204, 34)",
+        "rgb(204, 34, 176)",
+        "rgb(34, 204, 176)",
+        "rgb(34, 176, 204)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), CC = 204 (verde), B0 = 176 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da biblioteca, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da biblioteca",
+        "Chamar de “Processar” o botão de renovar o empréstimo",
+        "Montar a tela de renovar o empréstimo já com as cores finais",
+        "Rabiscar no papel a tela de renovar o empréstimo"
+      ],
+      "correct": 0,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como agendar a consulta",
+        "Mostrar uma barra enquanto o exame é enviado",
+        "Oferecer “desfazer” ao excluir um horário",
+        "Tirar da tela o que não ajuda a agendar a consulta"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da transportadora, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se a rota é traçada",
+        "O usuário não acha onde registrar a entrega",
+        "Um aviso aparece logo que a rota é traçada",
+        "Um texto sobre a rota do dia parece um botão"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Usar um só ícone para abrir a ordem de serviço",
+        "Mostrar uma barra enquanto o orçamento é gerado",
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço",
+        "Pôr um guia curto de como abrir a ordem de serviço"
+      ],
+      "correct": 3,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #8811A0, qual é a cor em RGB?",
+      "options": [
+        "rgb(136, 17, 160)",
+        "rgb(160, 17, 136)",
+        "rgb(136, 160, 17)",
+        "rgb(17, 136, 160)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), 11 = 17 (verde), A0 = 160 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #EE0020, qual é a cor em RGB?",
+      "options": [
+        "rgb(238, 0, 32)",
+        "rgb(238, 32, 0)",
+        "rgb(32, 0, 238)",
+        "rgb(0, 238, 32)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 00 = 0 (verde), 20 = 32 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #DD3360, qual é a cor em RGB?",
+      "options": [
+        "rgb(96, 51, 221)",
+        "rgb(51, 221, 96)",
+        "rgb(221, 51, 96)",
+        "rgb(221, 96, 51)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 33 = 51 (verde), 60 = 96 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do restaurante, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que a conta é fechada",
+        "O usuário não acha onde enviar a comanda",
+        "Um texto sobre o cardápio parece um botão",
+        "O usuário não sabe se a conta é fechada"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(210, 70%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(330, 70%, 30%)",
+        "hsl(210, 90%, 30%)",
+        "hsl(210, 70%, 50%)",
+        "hsl(210, 70%, 10%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(290, 70%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(50, 70%, 40%)",
+        "hsl(290, 90%, 40%)",
+        "hsl(290, 70%, 60%)",
+        "hsl(290, 70%, 20%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do estacionamento, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de registrar a saída",
+        "Montar a tela de registrar a saída já com as cores finais",
+        "Rabiscar no papel a tela de registrar a saída",
+        "Trocar um valor e mudar a cor de todas as telas do estacionamento"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CCAA90, qual é a cor em RGB?",
+      "options": [
+        "rgb(204, 170, 144)",
+        "rgb(170, 204, 144)",
+        "rgb(144, 170, 204)",
+        "rgb(204, 144, 170)"
+      ],
+      "correct": 0,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), AA = 170 (verde), 90 = 144 (azul)."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto do restaurante, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Montar a tela de enviar a comanda já com as cores finais",
+        "Rabiscar no papel a tela de enviar a comanda",
+        "Trocar um valor e mudar a cor de todas as telas do restaurante",
+        "Chamar de “Processar” o botão de enviar a comanda"
+      ],
+      "correct": 3,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do estacionamento, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não sabe se o ticket é impresso",
+        "Um texto sobre as vagas parece um botão",
+        "Um aviso aparece logo que o ticket é impresso",
+        "O usuário não acha onde registrar a saída"
+      ],
+      "correct": 0,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Deixar à vista os médicos visitados",
+        "Tirar da tela o que não ajuda a agendar a consulta",
+        "Pôr máscara no campo data de nascimento",
+        "Usar um só ícone para agendar a consulta"
+      ],
+      "correct": 0,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da biblioteca, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Deixar à vista os livros buscados",
+        "Pôr máscara no campo código do livro",
+        "Usar um só ícone para renovar o empréstimo",
+        "Tirar da tela o que não ajuda a renovar o empréstimo"
+      ],
+      "correct": 0,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da oficina, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Tirar da tela o que não ajuda a abrir a ordem de serviço",
+        "Oferecer “desfazer” ao remover uma peça",
+        "Pôr máscara no campo placa do carro",
+        "Deixar à vista os carros atendidos"
+      ],
+      "correct": 3,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Pôr máscara no campo data de entrada",
+        "Deixar à vista os hotéis visitados",
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Usar um só ícone para reservar o quarto"
+      ],
+      "correct": 1,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Oferecer “desfazer” ao excluir um horário",
+        "Usar um só ícone para agendar a consulta",
+        "Pôr máscara no campo data de nascimento",
+        "Tirar da tela o que não ajuda a agendar a consulta"
+      ],
+      "correct": 2,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(60, 50%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(60, 50%, 60%)",
+        "hsl(60, 50%, 20%)",
+        "hsl(60, 70%, 40%)",
+        "hsl(180, 50%, 40%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da transportadora, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Chamar de “Processar” o botão de registrar a entrega",
+        "Montar a tela de registrar a entrega já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da transportadora",
+        "Rabiscar no papel a tela de registrar a entrega"
+      ],
+      "correct": 0,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da loja online, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "O usuário não acha onde fechar o pedido",
+        "O usuário não sabe se o pagamento é processado",
+        "Um texto sobre o estoque parece um botão",
+        "Um aviso aparece logo que o pagamento é processado"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #AAFFF0, qual é a cor em RGB?",
+      "options": [
+        "rgb(240, 255, 170)",
+        "rgb(170, 240, 255)",
+        "rgb(170, 255, 240)",
+        "rgb(255, 170, 240)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), FF = 255 (verde), F0 = 240 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(270, 40%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(270, 60%, 40%)",
+        "hsl(30, 40%, 40%)",
+        "hsl(270, 40%, 60%)",
+        "hsl(270, 40%, 20%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Pôr um guia curto de como fechar o pedido",
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Oferecer “desfazer” ao cancelar um pedido",
+        "Tirar da tela o que não ajuda a fechar o pedido"
+      ],
+      "correct": 0,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como criar a playlist",
+        "Mostrar uma barra enquanto o álbum é baixado",
+        "Oferecer “desfazer” ao apagar uma playlist",
+        "Tirar da tela o que não ajuda a criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do app de música, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um aviso aparece logo que o álbum é baixado",
+        "O usuário não sabe se o álbum é baixado",
+        "O usuário não acha onde criar a playlist",
+        "Um texto sobre a lista de faixas parece um botão"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #AA77F0, qual é a cor em RGB?",
+      "options": [
+        "rgb(119, 170, 240)",
+        "rgb(170, 119, 240)",
+        "rgb(240, 119, 170)",
+        "rgb(170, 240, 119)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 77 = 119 (verde), F0 = 240 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(70, 40%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(70, 40%, 50%)",
+        "hsl(70, 40%, 10%)",
+        "hsl(70, 60%, 30%)",
+        "hsl(190, 40%, 30%)"
+      ],
+      "correct": 0,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do pet shop, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Mostrar uma barra enquanto a vacina é registrada",
+        "Tirar da tela o que não ajuda a marcar o banho",
+        "Oferecer “desfazer” ao desmarcar um banho",
+        "Pôr um guia curto de como marcar o banho"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Ajuda e documentação”?",
+      "options": [
+        "Oferecer “desfazer” ao apagar um favorito",
+        "Pôr um guia curto de como fazer um Pix",
+        "Mostrar uma barra enquanto o comprovante é gerado",
+        "Tirar da tela o que não ajuda a fazer um Pix"
+      ],
+      "correct": 1,
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como reservar o quarto",
+        "Oferecer “desfazer” ao cancelar uma reserva",
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Tirar da tela o que não ajuda a reservar o quarto"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da academia, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Oferecer “desfazer” ao desmarcar uma aula",
+        "Tirar da tela o que não ajuda a marcar uma aula",
+        "Mostrar uma barra enquanto a ficha de treino abre",
+        "Pôr um guia curto de como marcar uma aula"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do estacionamento, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Pôr máscara no campo placa do veículo",
+        "Usar um só ícone para registrar a saída",
+        "Tirar da tela o que não ajuda a registrar a saída",
+        "Deixar à vista as placas lidas"
+      ],
+      "correct": 3,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do estacionamento, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "Um aviso aparece logo que o ticket é impresso",
+        "O usuário não sabe se o ticket é impresso",
+        "Um texto sobre as vagas parece um botão",
+        "O usuário não acha onde registrar a saída"
+      ],
+      "correct": 2,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #6611C0, qual é a cor em RGB?",
+      "options": [
+        "rgb(192, 17, 102)",
+        "rgb(102, 17, 192)",
+        "rgb(102, 192, 17)",
+        "rgb(17, 102, 192)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> 66 = 102 (vermelho), 11 = 17 (verde), C0 = 192 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da transportadora, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "Um aviso aparece logo que a rota é traçada",
+        "O usuário não acha onde registrar a entrega",
+        "Um texto sobre a rota do dia parece um botão",
+        "O usuário não sabe se a rota é traçada"
+      ],
+      "correct": 0,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do app de música, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Tirar da tela o que não ajuda a criar a playlist",
+        "Usar um só ícone para criar a playlist",
+        "Pôr máscara no campo nome da playlist",
+        "Deixar à vista as faixas tocadas"
+      ],
+      "correct": 3,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Mostrar uma barra enquanto o boletim é montado",
+        "Usar um só ícone para lançar a nota",
+        "Pôr um guia curto de como lançar a nota",
+        "Pôr máscara no campo nota da prova"
+      ],
+      "correct": 3,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(90, 70%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(90, 70%, 10%)",
+        "hsl(210, 70%, 30%)",
+        "hsl(90, 70%, 50%)",
+        "hsl(90, 90%, 30%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da farmácia, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Montar a tela de vender o remédio já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da farmácia",
+        "Chamar de “Processar” o botão de vender o remédio",
+        "Rabiscar no papel a tela de vender o remédio"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da biblioteca, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Rabiscar no papel a tela de renovar o empréstimo",
+        "Chamar de “Processar” o botão de renovar o empréstimo",
+        "Trocar um valor e mudar a cor de todas as telas da biblioteca",
+        "Montar a tela de renovar o empréstimo já com as cores finais"
+      ],
+      "correct": 1,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #CCFFF0, qual é a cor em RGB?",
+      "options": [
+        "rgb(204, 240, 255)",
+        "rgb(240, 255, 204)",
+        "rgb(204, 255, 240)",
+        "rgb(255, 204, 240)"
+      ],
+      "correct": 2,
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), FF = 255 (verde), F0 = 240 (azul)."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da loja online, qual decisão atende à heurística “Prevenção de erros”?",
+      "options": [
+        "Usar um só ícone para fechar o pedido",
+        "Mostrar uma barra enquanto o pagamento é processado",
+        "Pôr máscara no campo CEP",
+        "Deixar à vista os produtos vistos"
+      ],
+      "correct": 2,
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #BB77F0, qual é a cor em RGB?",
+      "options": [
+        "rgb(240, 119, 187)",
+        "rgb(187, 119, 240)",
+        "rgb(119, 187, 240)",
+        "rgb(187, 240, 119)"
+      ],
+      "correct": 1,
+      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 77 = 119 (verde), F0 = 240 (azul)."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do restaurante, qual situação é um exemplo de golfo de avaliação?",
+      "options": [
+        "Um texto sobre o cardápio parece um botão",
+        "O usuário não sabe se a conta é fechada",
+        "Um aviso aparece logo que a conta é fechada",
+        "O usuário não acha onde enviar a comanda"
+      ],
+      "correct": 1,
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da clínica, qual item é um exemplo de protótipo de alta fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de agendar a consulta",
+        "Montar a tela de agendar a consulta já com as cores finais",
+        "Rabiscar no papel a tela de agendar a consulta",
+        "Trocar um valor e mudar a cor de todas as telas da clínica"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da clínica, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Tirar da tela o que não ajuda a agendar a consulta",
+        "Usar um só ícone para agendar a consulta",
+        "Pôr um guia curto de como agendar a consulta",
+        "Oferecer “desfazer” ao excluir um horário"
+      ],
+      "correct": 1,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(220, 50%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(220, 70%, 50%)",
+        "hsl(220, 50%, 70%)",
+        "hsl(340, 50%, 50%)",
+        "hsl(220, 50%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(270, 70%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(270, 90%, 40%)",
+        "hsl(30, 70%, 40%)",
+        "hsl(270, 70%, 60%)",
+        "hsl(270, 70%, 20%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da escola, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da escola",
+        "Montar a tela de lançar a nota já com as cores finais",
+        "Chamar de “Processar” o botão de lançar a nota",
+        "Rabiscar no papel a tela de lançar a nota"
+      ],
+      "correct": 2,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do cinema, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr máscara no campo quantidade de ingressos",
+        "Tirar da tela o que não ajuda a escolher a poltrona",
+        "Mostrar uma barra enquanto o ingresso é emitido",
+        "Pôr um guia curto de como escolher a poltrona"
+      ],
+      "correct": 1,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da farmácia, qual decisão atende à heurística “Design minimalista”?",
+      "options": [
+        "Pôr um guia curto de como vender o remédio",
+        "Oferecer “desfazer” ao estornar uma venda",
+        "Mostrar uma barra enquanto a receita é validada",
+        "Tirar da tela o que não ajuda a vender o remédio"
+      ],
+      "correct": 3,
+      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+    },
+    {
+      "topic": "ihc",
+      "assunto": "comunic",
+      "statement": "No projeto da academia, qual item é um exemplo de comunicabilidade ruim?",
+      "options": [
+        "Trocar um valor e mudar a cor de todas as telas da academia",
+        "Rabiscar no papel a tela de marcar uma aula",
+        "Montar a tela de marcar uma aula já com as cores finais",
+        "Chamar de “Processar” o botão de marcar uma aula"
+      ],
+      "correct": 3,
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da escola, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Mostrar uma barra enquanto o boletim é montado",
+        "Oferecer “desfazer” ao apagar uma falta",
+        "Tirar da tela o que não ajuda a lançar a nota",
+        "Pôr um guia curto de como lançar a nota"
+      ],
+      "correct": 0,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da oficina, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Chamar de “Processar” o botão de abrir a ordem de serviço",
+        "Rabiscar no papel a tela de abrir a ordem de serviço",
+        "Trocar um valor e mudar a cor de todas as telas da oficina",
+        "Montar a tela de abrir a ordem de serviço já com as cores finais"
+      ],
+      "correct": 2,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela do hotel, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um texto sobre a ocupação parece um botão",
+        "O usuário não sabe se a reserva é confirmada",
+        "Um aviso aparece logo que a reserva é confirmada",
+        "O usuário não acha onde reservar o quarto"
+      ],
+      "correct": 3,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela da biblioteca, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não acha onde renovar o empréstimo",
+        "Um texto sobre o acervo parece um botão",
+        "Um aviso aparece logo que a busca no acervo roda",
+        "O usuário não sabe se a busca no acervo roda"
+      ],
+      "correct": 2,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema da transportadora, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Tirar da tela o que não ajuda a registrar a entrega",
+        "Deixar à vista os destinos usados",
+        "Pôr máscara no campo peso da carga",
+        "Oferecer “desfazer” ao excluir uma parada"
+      ],
+      "correct": 1,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do banco, qual decisão atende à heurística “Reconhecimento em vez de memorização”?",
+      "options": [
+        "Pôr um guia curto de como fazer um Pix",
+        "Deixar à vista os contatos usados",
+        "Usar um só ícone para fazer um Pix",
+        "Mostrar uma barra enquanto o comprovante é gerado"
+      ],
+      "correct": 1,
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(190, 60%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(190, 60%, 30%)",
+        "hsl(190, 60%, 70%)",
+        "hsl(310, 60%, 50%)",
+        "hsl(190, 80%, 50%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do pet shop, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não acha onde marcar o banho",
+        "Um aviso aparece logo que a vacina é registrada",
+        "Um texto sobre a ficha do animal parece um botão",
+        "O usuário não sabe se a vacina é registrada"
+      ],
+      "correct": 1,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do restaurante, qual decisão atende à heurística “Consistência e padrões”?",
+      "options": [
+        "Tirar da tela o que não ajuda a enviar a comanda",
+        "Mostrar uma barra enquanto a conta é fechada",
+        "Usar um só ícone para enviar a comanda",
+        "Pôr um guia curto de como enviar a comanda"
+      ],
+      "correct": 2,
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "No código #3300F0, qual é a cor em RGB?",
+      "options": [
+        "rgb(51, 240, 0)",
+        "rgb(0, 51, 240)",
+        "rgb(240, 0, 51)",
+        "rgb(51, 0, 240)"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), 00 = 0 (verde), F0 = 240 (azul)."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da clínica, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de agendar a consulta",
+        "Rabiscar no papel a tela de agendar a consulta",
+        "Trocar um valor e mudar a cor de todas as telas da clínica",
+        "Montar a tela de agendar a consulta já com as cores finais"
+      ],
+      "correct": 1,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "figma",
+      "statement": "No projeto da farmácia, qual item é um exemplo de variável de cor (token)?",
+      "options": [
+        "Rabiscar no papel a tela de vender o remédio",
+        "Trocar um valor e mudar a cor de todas as telas da farmácia",
+        "Montar a tela de vender o remédio já com as cores finais",
+        "Chamar de “Processar” o botão de vender o remédio"
+      ],
+      "correct": 1,
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "statement": "Na tela da oficina, qual situação é um exemplo de golfo de execução?",
+      "options": [
+        "Um texto sobre as peças parece um botão",
+        "O usuário não sabe se o orçamento é gerado",
+        "O usuário não acha onde abrir a ordem de serviço",
+        "Um aviso aparece logo que o orçamento é gerado"
+      ],
+      "correct": 2,
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "statement": "No sistema do hotel, qual decisão atende à heurística “Visibilidade do status”?",
+      "options": [
+        "Pôr um guia curto de como reservar o quarto",
+        "Oferecer “desfazer” ao cancelar uma reserva",
+        "Mostrar uma barra enquanto a reserva é confirmada",
+        "Tirar da tela o que não ajuda a reservar o quarto"
+      ],
+      "correct": 2,
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do banco, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "Um texto sobre o saldo parece um botão",
+        "O usuário não sabe se o comprovante é gerado",
+        "O usuário não acha onde fazer um Pix",
+        "Um aviso aparece logo que o comprovante é gerado"
+      ],
+      "correct": 3,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do hotel, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Rabiscar no papel a tela de reservar o quarto",
+        "Chamar de “Processar” o botão de reservar o quarto",
+        "Montar a tela de reservar o quarto já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas do hotel"
+      ],
+      "correct": 0,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(60, 70%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(180, 70%, 30%)",
+        "hsl(60, 90%, 30%)",
+        "hsl(60, 70%, 50%)",
+        "hsl(60, 70%, 10%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do hotel, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não acha onde reservar o quarto",
+        "Um texto sobre a ocupação parece um botão",
+        "Um aviso aparece logo que a reserva é confirmada",
+        "O usuário não sabe se a reserva é confirmada"
+      ],
+      "correct": 2,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do cinema, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "Um aviso aparece logo que o ingresso é emitido",
+        "O usuário não acha onde escolher a poltrona",
+        "O usuário não sabe se o ingresso é emitido",
+        "Um texto sobre o mapa da sala parece um botão"
+      ],
+      "correct": 0,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(350, 60%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(110, 60%, 40%)",
+        "hsl(350, 60%, 60%)",
+        "hsl(350, 60%, 20%)",
+        "hsl(350, 80%, 40%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(270, 40%, 50%) apenas mais CLARA?",
+      "options": [
+        "hsl(30, 40%, 50%)",
+        "hsl(270, 40%, 30%)",
+        "hsl(270, 40%, 70%)",
+        "hsl(270, 60%, 50%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto da academia, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Montar a tela de marcar uma aula já com as cores finais",
+        "Trocar um valor e mudar a cor de todas as telas da academia",
+        "Rabiscar no papel a tela de marcar uma aula",
+        "Chamar de “Processar” o botão de marcar uma aula"
+      ],
+      "correct": 2,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(210, 60%, 40%) apenas mais CLARA?",
+      "options": [
+        "hsl(210, 60%, 20%)",
+        "hsl(330, 60%, 40%)",
+        "hsl(210, 60%, 60%)",
+        "hsl(210, 80%, 40%)"
+      ],
+      "correct": 2,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "norman",
+      "assunto": "principios",
+      "statement": "Na tela do restaurante, qual situação é um exemplo de bom feedback?",
+      "options": [
+        "O usuário não sabe se a conta é fechada",
+        "O usuário não acha onde enviar a comanda",
+        "Um texto sobre o cardápio parece um botão",
+        "Um aviso aparece logo que a conta é fechada"
+      ],
+      "correct": 3,
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+    },
+    {
+      "topic": "visual",
+      "assunto": "cores",
+      "statement": "Em HSL, qual é a cor hsl(230, 70%, 30%) apenas mais CLARA?",
+      "options": [
+        "hsl(230, 90%, 30%)",
+        "hsl(230, 70%, 50%)",
+        "hsl(230, 70%, 10%)",
+        "hsl(350, 70%, 30%)"
+      ],
+      "correct": 1,
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do cinema, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de escolher a poltrona",
+        "Trocar um valor e mudar a cor de todas as telas do cinema",
+        "Montar a tela de escolher a poltrona já com as cores finais",
+        "Rabiscar no papel a tela de escolher a poltrona"
+      ],
+      "correct": 3,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "statement": "No projeto do banco, qual item é um exemplo de protótipo de baixa fidelidade?",
+      "options": [
+        "Chamar de “Processar” o botão de fazer um Pix",
+        "Montar a tela de fazer um Pix já com as cores finais",
+        "Rabiscar no papel a tela de fazer um Pix",
+        "Trocar um valor e mudar a cor de todas as telas do banco"
+      ],
+      "correct": 2,
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "statement": "Na tela do restaurante, qual situação é um exemplo de falsa affordance?",
+      "options": [
+        "Um texto sobre o cardápio parece um botão",
+        "O usuário não acha onde enviar a comanda",
+        "Um aviso aparece logo que a conta é fechada",
+        "O usuário não sabe se a conta é fechada"
+      ],
+      "correct": 0,
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
     }
   ],
   "historias": [

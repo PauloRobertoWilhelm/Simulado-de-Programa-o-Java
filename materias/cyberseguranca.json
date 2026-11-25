@@ -832,6 +832,2272 @@
       ],
       "correct": 2,
       "explain": "<b>Aula 06, 07 e 08:</b> conhecer o risco, achar a falha e impedir."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do banco, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Pular de um serviço até o saldo, por dentro",
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Impedir o servidor de enviar o saldo para fora",
+        "Cifrar o saldo e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.102.42 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.124.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.102.42 passa pela regra 1",
+        "203.0.102.42 é barrado pela regra 3",
+        "203.0.102.42 é barrado pela regra 1",
+        "203.0.102.42 passa pela regra 2"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do app de música, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até a lista de faixas, por dentro",
+        "Impedir o servidor de enviar a lista de faixas para fora",
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Cifrar a lista de faixas e guardar um backup fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.25.16 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.25.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.25.16 é barrado pela regra 3",
+        "10.0.25.16 é barrado pela regra 1",
+        "10.0.25.16 passa pela regra 2",
+        "10.0.25.16 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.129.161 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.129.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.129.161 é barrado pela regra 3",
+        "10.0.129.161 passa pela regra 2",
+        "10.0.129.161 é barrado pela regra 1",
+        "10.0.129.161 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o lote do remédio",
+        "Cifrar o lote do remédio e guardar um backup fora",
+        "Achar SQL Injection no campo número da receita",
+        "Pular de um serviço até o lote do remédio, por dentro"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até o acervo, por dentro",
+        "Cifrar o acervo e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o acervo",
+        "Achar SQL Injection no campo código do livro"
+      ],
+      "correct": 1,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.42.226 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.42.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.42.226 é barrado pela regra 3",
+        "10.0.42.226 passa pela regra 1",
+        "10.0.42.226 é barrado pela regra 1",
+        "10.0.42.226 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Barrar um cliente comum ao renovar o empréstimo",
+        "Não notar uma injeção ao renovar o empréstimo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Só a rede interna acessa a porta que guarda o acervo"
+      ],
+      "correct": 2,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da academia, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai marcar uma aula",
+        "Só a rede interna acessa a porta que guarda a grade de aulas",
+        "Barrar um cliente comum ao marcar uma aula",
+        "Achar SQL Injection no campo data da aula"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Barrar um cliente comum ao registrar a entrega",
+        "Pular de um serviço até a rota do dia, por dentro",
+        "Cifrar a rota do dia e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a rota do dia"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da loja online, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Barrar um cliente comum ao fechar o pedido",
+        "Cifrar o estoque e guardar um backup fora",
+        "Pular de um serviço até o estoque, por dentro",
+        "Só a rede interna acessa a porta que guarda o estoque"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.6.94 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.48.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.6.94 passa pela regra 1",
+        "203.0.6.94 é barrado pela regra 3",
+        "203.0.6.94 é barrado pela regra 1",
+        "203.0.6.94 passa pela regra 2"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do hotel, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Achar SQL Injection no campo data de entrada",
+        "Barrar um cliente comum ao reservar o quarto",
+        "Pular de um serviço até a ocupação, por dentro"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.131.100 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.131.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.131.100 passa pela regra 1",
+        "10.0.131.100 passa pela regra 2",
+        "10.0.131.100 é barrado pela regra 1",
+        "10.0.131.100 é barrado pela regra 3"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.224.109 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.224.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.224.109 é barrado pela regra 1",
+        "10.0.224.109 é barrado pela regra 3",
+        "10.0.224.109 passa pela regra 2",
+        "10.0.224.109 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.172.33 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.172.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.172.33 passa pela regra 1",
+        "10.0.172.33 é barrado pela regra 3",
+        "10.0.172.33 passa pela regra 2",
+        "10.0.172.33 é barrado pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da escola, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até o boletim, por dentro",
+        "Cifrar o boletim e guardar um backup fora",
+        "Achar SQL Injection no campo nota da prova",
+        "Só a rede interna acessa a porta que guarda o boletim"
+      ],
+      "correct": 1,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.137.54 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.137.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.137.54 é barrado pela regra 1",
+        "10.0.137.54 passa pela regra 2",
+        "10.0.137.54 é barrado pela regra 3",
+        "10.0.137.54 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.46.187 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.46.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.46.187 passa pela regra 1",
+        "10.0.46.187 é barrado pela regra 3",
+        "10.0.46.187 passa pela regra 2",
+        "10.0.46.187 é barrado pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Impedir o servidor de enviar a rota do dia para fora",
+        "Barrar um cliente comum ao registrar a entrega",
+        "Pular de um serviço até a rota do dia, por dentro",
+        "Só a rede interna acessa a porta que guarda a rota do dia"
+      ],
+      "correct": 2,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do app de música, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Não notar uma injeção ao criar a playlist",
+        "Barrar um cliente comum ao criar a playlist",
+        "O cliente, de casa, vai criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.26.202 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.91.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.26.202 é barrado pela regra 3",
+        "203.0.26.202 é barrado pela regra 1",
+        "203.0.26.202 passa pela regra 2",
+        "203.0.26.202 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até a ficha do animal, por dentro",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Cifrar a ficha do animal e guardar um backup fora",
+        "Impedir o servidor de enviar a ficha do animal para fora"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.160.208 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.246.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.160.208 é barrado pela regra 3",
+        "203.0.160.208 passa pela regra 1",
+        "203.0.160.208 passa pela regra 2",
+        "203.0.160.208 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do banco, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Cifrar o saldo e guardar um backup fora",
+        "Barrar um cliente comum ao fazer um Pix",
+        "Não notar uma injeção ao fazer um Pix"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da academia, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Cifrar a grade de aulas e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a grade de aulas",
+        "Pular de um serviço até a grade de aulas, por dentro",
+        "Impedir o servidor de enviar a grade de aulas para fora"
+      ],
+      "correct": 2,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da loja online, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Barrar um cliente comum ao fechar o pedido",
+        "Impedir o servidor de enviar o estoque para fora",
+        "Só a rede interna acessa a porta que guarda o estoque",
+        "Pular de um serviço até o estoque, por dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do cinema, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Impedir o servidor de enviar o mapa da sala para fora",
+        "Pular de um serviço até o mapa da sala, por dentro",
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Achar SQL Injection no campo quantidade de ingressos"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.129.157 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.201.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.129.157 passa pela regra 2",
+        "203.0.129.157 é barrado pela regra 3",
+        "203.0.129.157 é barrado pela regra 1",
+        "203.0.129.157 passa pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a rota do dia",
+        "Barrar um cliente comum ao registrar a entrega",
+        "Pular de um serviço até a rota do dia, por dentro",
+        "Cifrar a rota do dia e guardar um backup fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da oficina, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Impedir o servidor de enviar as peças para fora",
+        "Não notar uma injeção ao abrir a ordem de serviço",
+        "O cliente, de casa, vai abrir a ordem de serviço",
+        "Só a rede interna acessa a porta que guarda as peças"
+      ],
+      "correct": 0,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da escola, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai lançar a nota",
+        "Barrar um cliente comum ao lançar a nota",
+        "Não notar uma injeção ao lançar a nota",
+        "Só a rede interna acessa a porta que guarda o boletim"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.154.162 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.154.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.154.162 é barrado pela regra 3",
+        "10.0.154.162 passa pela regra 1",
+        "10.0.154.162 passa pela regra 2",
+        "10.0.154.162 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da loja online, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Impedir o servidor de enviar o estoque para fora",
+        "Barrar um cliente comum ao fechar o pedido",
+        "Só a rede interna acessa a porta que guarda o estoque",
+        "Pular de um serviço até o estoque, por dentro"
+      ],
+      "correct": 0,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Cifrar a ficha do animal e guardar um backup fora",
+        "Impedir o servidor de enviar a ficha do animal para fora",
+        "Pular de um serviço até a ficha do animal, por dentro",
+        "Só a rede interna acessa a porta que guarda a ficha do animal"
+      ],
+      "correct": 1,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da clínica, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Pular de um serviço até a agenda médica, por dentro",
+        "Impedir o servidor de enviar a agenda médica para fora",
+        "Cifrar a agenda médica e guardar um backup fora"
+      ],
+      "correct": 2,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Achar SQL Injection no campo número da receita",
+        "Não notar uma injeção ao vender o remédio",
+        "Barrar um cliente comum ao vender o remédio",
+        "Só a rede interna acessa a porta que guarda o lote do remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o lote do remédio",
+        "Não notar uma injeção ao vender o remédio",
+        "O cliente, de casa, vai vender o remédio",
+        "Barrar um cliente comum ao vender o remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Achar SQL Injection no campo peso do animal",
+        "Barrar um cliente comum ao marcar o banho",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Cifrar a ficha do animal e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Barrar um cliente comum ao vender o remédio",
+        "O cliente, de casa, vai vender o remédio",
+        "Não notar uma injeção ao vender o remédio",
+        "Só a rede interna acessa a porta que guarda o lote do remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do hotel, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Barrar um cliente comum ao reservar o quarto",
+        "Não notar uma injeção ao reservar o quarto",
+        "Achar SQL Injection no campo data de entrada",
+        "Só a rede interna acessa a porta que guarda a ocupação"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.118.196 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.118.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.118.196 passa pela regra 2",
+        "10.0.118.196 é barrado pela regra 1",
+        "10.0.118.196 é barrado pela regra 3",
+        "10.0.118.196 passa pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Impedir o servidor de enviar a rota do dia para fora",
+        "Pular de um serviço até a rota do dia, por dentro",
+        "Só a rede interna acessa a porta que guarda a rota do dia",
+        "Barrar um cliente comum ao registrar a entrega"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.204.116 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.204.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.204.116 passa pela regra 1",
+        "10.0.204.116 passa pela regra 2",
+        "10.0.204.116 é barrado pela regra 3",
+        "10.0.204.116 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da oficina, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "O cliente, de casa, vai abrir a ordem de serviço",
+        "Não notar uma injeção ao abrir a ordem de serviço",
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Barrar um cliente comum ao abrir a ordem de serviço"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da academia, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Impedir o servidor de enviar a grade de aulas para fora",
+        "Pular de um serviço até a grade de aulas, por dentro",
+        "Cifrar a grade de aulas e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a grade de aulas"
+      ],
+      "correct": 0,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do banco, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Pular de um serviço até o saldo, por dentro",
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Cifrar o saldo e guardar um backup fora",
+        "Barrar um cliente comum ao fazer um Pix"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai enviar a comanda",
+        "Só a rede interna acessa a porta que guarda o cardápio",
+        "Barrar um cliente comum ao enviar a comanda",
+        "Cifrar o cardápio e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o acervo",
+        "Não notar uma injeção ao renovar o empréstimo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Barrar um cliente comum ao renovar o empréstimo"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Barrar um cliente comum ao registrar a saída",
+        "Achar SQL Injection no campo placa do veículo",
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Impedir o servidor de enviar as vagas para fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.194.127 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.194.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.194.127 passa pela regra 1",
+        "10.0.194.127 passa pela regra 2",
+        "10.0.194.127 é barrado pela regra 3",
+        "10.0.194.127 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema da clínica, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Impedir o servidor de enviar a agenda médica para fora",
+        "Pular de um serviço até a agenda médica, por dentro",
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Achar SQL Injection no campo data de nascimento"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da clínica, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Cifrar a agenda médica e guardar um backup fora",
+        "Achar SQL Injection no campo data de nascimento",
+        "Pular de um serviço até a agenda médica, por dentro",
+        "Só a rede interna acessa a porta que guarda a agenda médica"
+      ],
+      "correct": 0,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do banco, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Barrar um cliente comum ao fazer um Pix",
+        "Pular de um serviço até o saldo, por dentro",
+        "Cifrar o saldo e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o saldo"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do cinema, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Barrar um cliente comum ao escolher a poltrona",
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Cifrar o mapa da sala e guardar um backup fora",
+        "Pular de um serviço até o mapa da sala, por dentro"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.10.130 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.123.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.10.130 passa pela regra 2",
+        "203.0.10.130 passa pela regra 1",
+        "203.0.10.130 é barrado pela regra 3",
+        "203.0.10.130 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do hotel, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Não notar uma injeção ao reservar o quarto",
+        "O cliente, de casa, vai reservar o quarto",
+        "Achar SQL Injection no campo data de entrada"
+      ],
+      "correct": 2,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.9.99 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.9.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.9.99 passa pela regra 2",
+        "10.0.9.99 é barrado pela regra 3",
+        "10.0.9.99 passa pela regra 1",
+        "10.0.9.99 é barrado pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Achar SQL Injection no campo peso do animal",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Barrar um cliente comum ao marcar o banho",
+        "Não notar uma injeção ao marcar o banho"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.140.145 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.184.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.140.145 é barrado pela regra 1",
+        "203.0.140.145 passa pela regra 1",
+        "203.0.140.145 passa pela regra 2",
+        "203.0.140.145 é barrado pela regra 3"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.183.184 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.221.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.183.184 é barrado pela regra 1",
+        "203.0.183.184 passa pela regra 1",
+        "203.0.183.184 passa pela regra 2",
+        "203.0.183.184 é barrado pela regra 3"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a rota do dia",
+        "Não notar uma injeção ao registrar a entrega",
+        "Barrar um cliente comum ao registrar a entrega",
+        "Cifrar a rota do dia e guardar um backup fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da oficina, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Pular de um serviço até as peças, por dentro",
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Impedir o servidor de enviar as peças para fora",
+        "Achar SQL Injection no campo placa do carro"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "O cliente, de casa, vai registrar a saída",
+        "Não notar uma injeção ao registrar a saída",
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Cifrar as vagas e guardar um backup fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do cinema, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Barrar um cliente comum ao escolher a poltrona",
+        "Cifrar o mapa da sala e guardar um backup fora",
+        "Não notar uma injeção ao escolher a poltrona",
+        "Só a rede interna acessa a porta que guarda o mapa da sala"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.24.203 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.98.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.24.203 é barrado pela regra 3",
+        "203.0.24.203 passa pela regra 1",
+        "203.0.24.203 é barrado pela regra 1",
+        "203.0.24.203 passa pela regra 2"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.188.41 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.157.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.188.41 é barrado pela regra 3",
+        "203.0.188.41 é barrado pela regra 1",
+        "203.0.188.41 passa pela regra 1",
+        "203.0.188.41 passa pela regra 2"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.54.246 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.54.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.54.246 é barrado pela regra 1",
+        "10.0.54.246 é barrado pela regra 3",
+        "10.0.54.246 passa pela regra 2",
+        "10.0.54.246 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da oficina, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Não notar uma injeção ao abrir a ordem de serviço",
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Barrar um cliente comum ao abrir a ordem de serviço",
+        "O cliente, de casa, vai abrir a ordem de serviço"
+      ],
+      "correct": 3,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema do cinema, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Impedir o servidor de enviar o mapa da sala para fora",
+        "Pular de um serviço até o mapa da sala, por dentro",
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Achar SQL Injection no campo quantidade de ingressos"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "O cliente, de casa, vai registrar a entrega",
+        "Achar SQL Injection no campo peso da carga",
+        "Não notar uma injeção ao registrar a entrega",
+        "Só a rede interna acessa a porta que guarda a rota do dia"
+      ],
+      "correct": 1,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.88.167 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.70.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.88.167 é barrado pela regra 3",
+        "203.0.88.167 é barrado pela regra 1",
+        "203.0.88.167 passa pela regra 2",
+        "203.0.88.167 passa pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.154.174 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.128.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.154.174 é barrado pela regra 1",
+        "203.0.154.174 é barrado pela regra 3",
+        "203.0.154.174 passa pela regra 2",
+        "203.0.154.174 passa pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da escola, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Achar SQL Injection no campo nota da prova",
+        "Impedir o servidor de enviar o boletim para fora",
+        "Só a rede interna acessa a porta que guarda o boletim",
+        "Pular de um serviço até o boletim, por dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da oficina, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Pular de um serviço até as peças, por dentro",
+        "O cliente, de casa, vai abrir a ordem de serviço",
+        "Impedir o servidor de enviar as peças para fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do banco, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Cifrar o saldo e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Achar SQL Injection no campo chave Pix",
+        "Barrar um cliente comum ao fazer um Pix"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da clínica, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Não notar uma injeção ao agendar a consulta",
+        "Achar SQL Injection no campo data de nascimento",
+        "Barrar um cliente comum ao agendar a consulta"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.164.76 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.137.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.164.76 é barrado pela regra 1",
+        "203.0.164.76 passa pela regra 1",
+        "203.0.164.76 é barrado pela regra 3",
+        "203.0.164.76 passa pela regra 2"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da loja online, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até o estoque, por dentro",
+        "Barrar um cliente comum ao fechar o pedido",
+        "Só a rede interna acessa a porta que guarda o estoque",
+        "Cifrar o estoque e guardar um backup fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Impedir o servidor de enviar o cardápio para fora",
+        "Achar SQL Injection no campo número da mesa",
+        "Pular de um serviço até o cardápio, por dentro",
+        "Só a rede interna acessa a porta que guarda o cardápio"
+      ],
+      "correct": 0,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.163.147 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.207.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.163.147 é barrado pela regra 3",
+        "203.0.163.147 é barrado pela regra 1",
+        "203.0.163.147 passa pela regra 1",
+        "203.0.163.147 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.26.86 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.26.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.26.86 passa pela regra 2",
+        "10.0.26.86 é barrado pela regra 1",
+        "10.0.26.86 passa pela regra 1",
+        "10.0.26.86 é barrado pela regra 3"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Pular de um serviço até a rota do dia, por dentro",
+        "Barrar um cliente comum ao registrar a entrega",
+        "Impedir o servidor de enviar a rota do dia para fora",
+        "Só a rede interna acessa a porta que guarda a rota do dia"
+      ],
+      "correct": 2,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema da academia, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Impedir o servidor de enviar a grade de aulas para fora",
+        "Só a rede interna acessa a porta que guarda a grade de aulas",
+        "Pular de um serviço até a grade de aulas, por dentro",
+        "Cifrar a grade de aulas e guardar um backup fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.72.93 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.72.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.72.93 passa pela regra 1",
+        "10.0.72.93 é barrado pela regra 1",
+        "10.0.72.93 passa pela regra 2",
+        "10.0.72.93 é barrado pela regra 3"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.79.5 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.192.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.79.5 passa pela regra 1",
+        "203.0.79.5 passa pela regra 2",
+        "203.0.79.5 é barrado pela regra 3",
+        "203.0.79.5 é barrado pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do app de música, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Barrar um cliente comum ao criar a playlist",
+        "Cifrar a lista de faixas e guardar um backup fora",
+        "Achar SQL Injection no campo nome da playlist",
+        "Só a rede interna acessa a porta que guarda a lista de faixas"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.137.241 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.137.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.137.241 passa pela regra 1",
+        "10.0.137.241 é barrado pela regra 1",
+        "10.0.137.241 é barrado pela regra 3",
+        "10.0.137.241 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do hotel, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Impedir o servidor de enviar a ocupação para fora",
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Pular de um serviço até a ocupação, por dentro",
+        "Achar SQL Injection no campo data de entrada"
+      ],
+      "correct": 2,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da escola, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Impedir o servidor de enviar o boletim para fora",
+        "Pular de um serviço até o boletim, por dentro",
+        "Só a rede interna acessa a porta que guarda o boletim",
+        "Achar SQL Injection no campo nota da prova"
+      ],
+      "correct": 0,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.89.95 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.89.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.89.95 passa pela regra 1",
+        "10.0.89.95 é barrado pela regra 1",
+        "10.0.89.95 é barrado pela regra 3",
+        "10.0.89.95 passa pela regra 2"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do banco, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Cifrar o saldo e guardar um backup fora",
+        "Impedir o servidor de enviar o saldo para fora",
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Pular de um serviço até o saldo, por dentro"
+      ],
+      "correct": 1,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da escola, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Achar SQL Injection no campo nota da prova",
+        "Barrar um cliente comum ao lançar a nota",
+        "Cifrar o boletim e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o boletim"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.23.36 chega na porta 80. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.137.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.23.36 é barrado pela regra 1",
+        "203.0.23.36 passa pela regra 1",
+        "203.0.23.36 é barrado pela regra 3",
+        "203.0.23.36 passa pela regra 2"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.130.14 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.65.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.130.14 passa pela regra 1",
+        "203.0.130.14 passa pela regra 2",
+        "203.0.130.14 é barrado pela regra 1",
+        "203.0.130.14 é barrado pela regra 3"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do app de música, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Achar SQL Injection no campo nome da playlist",
+        "Não notar uma injeção ao criar a playlist",
+        "Barrar um cliente comum ao criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da transportadora, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai registrar a entrega",
+        "Não notar uma injeção ao registrar a entrega",
+        "Só a rede interna acessa a porta que guarda a rota do dia",
+        "Cifrar a rota do dia e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.83.85 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.150.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.83.85 é barrado pela regra 3",
+        "203.0.83.85 passa pela regra 1",
+        "203.0.83.85 é barrado pela regra 1",
+        "203.0.83.85 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Impedir o servidor de enviar as vagas para fora",
+        "Achar SQL Injection no campo placa do veículo",
+        "Pular de um serviço até as vagas, por dentro"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o cardápio",
+        "Barrar um cliente comum ao enviar a comanda",
+        "Achar SQL Injection no campo número da mesa",
+        "Pular de um serviço até o cardápio, por dentro"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.174.80 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.122.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.174.80 passa pela regra 1",
+        "203.0.174.80 é barrado pela regra 1",
+        "203.0.174.80 é barrado pela regra 3",
+        "203.0.174.80 passa pela regra 2"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Barrar um cliente comum ao marcar o banho",
+        "O cliente, de casa, vai marcar o banho",
+        "Não notar uma injeção ao marcar o banho",
+        "Só a rede interna acessa a porta que guarda a ficha do animal"
+      ],
+      "correct": 1,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Não notar uma injeção ao renovar o empréstimo",
+        "Só a rede interna acessa a porta que guarda o acervo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Achar SQL Injection no campo código do livro"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Barrar um cliente comum ao enviar a comanda",
+        "Achar SQL Injection no campo número da mesa",
+        "Só a rede interna acessa a porta que guarda o cardápio",
+        "Não notar uma injeção ao enviar a comanda"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.54.42 chega na porta 80. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.75.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.54.42 passa pela regra 2",
+        "203.0.54.42 passa pela regra 1",
+        "203.0.54.42 é barrado pela regra 1",
+        "203.0.54.42 é barrado pela regra 3"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.185.202 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.185.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.185.202 é barrado pela regra 3",
+        "10.0.185.202 passa pela regra 1",
+        "10.0.185.202 é barrado pela regra 1",
+        "10.0.185.202 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema da oficina, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "O cliente, de casa, vai abrir a ordem de serviço",
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Barrar um cliente comum ao abrir a ordem de serviço",
+        "Não notar uma injeção ao abrir a ordem de serviço"
+      ],
+      "correct": 1,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da clínica, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Achar SQL Injection no campo data de nascimento",
+        "Cifrar a agenda médica e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Pular de um serviço até a agenda médica, por dentro"
+      ],
+      "correct": 0,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.137.163 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.137.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.137.163 é barrado pela regra 3",
+        "10.0.137.163 passa pela regra 2",
+        "10.0.137.163 é barrado pela regra 1",
+        "10.0.137.163 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.115.86 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.86.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.115.86 passa pela regra 2",
+        "203.0.115.86 é barrado pela regra 1",
+        "203.0.115.86 passa pela regra 1",
+        "203.0.115.86 é barrado pela regra 3"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Cifrar o lote do remédio e guardar um backup fora",
+        "Pular de um serviço até o lote do remédio, por dentro",
+        "Impedir o servidor de enviar o lote do remédio para fora",
+        "Só a rede interna acessa a porta que guarda o lote do remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.173.50 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.173.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.173.50 é barrado pela regra 3",
+        "10.0.173.50 é barrado pela regra 1",
+        "10.0.173.50 passa pela regra 2",
+        "10.0.173.50 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.225.165 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.225.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.225.165 é barrado pela regra 1",
+        "10.0.225.165 passa pela regra 1",
+        "10.0.225.165 passa pela regra 2",
+        "10.0.225.165 é barrado pela regra 3"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da loja online, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Barrar um cliente comum ao fechar o pedido",
+        "Não notar uma injeção ao fechar o pedido",
+        "Só a rede interna acessa a porta que guarda o estoque",
+        "Cifrar o estoque e guardar um backup fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da oficina, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Não notar uma injeção ao abrir a ordem de serviço",
+        "O cliente, de casa, vai abrir a ordem de serviço",
+        "Barrar um cliente comum ao abrir a ordem de serviço",
+        "Só a rede interna acessa a porta que guarda as peças"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.164.9 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.133.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.164.9 é barrado pela regra 3",
+        "203.0.164.9 passa pela regra 1",
+        "203.0.164.9 passa pela regra 2",
+        "203.0.164.9 é barrado pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da oficina, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda as peças",
+        "Pular de um serviço até as peças, por dentro",
+        "Cifrar as peças e guardar um backup fora",
+        "Achar SQL Injection no campo placa do carro"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.17.79 chega na porta 8080. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.123.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.17.79 passa pela regra 2",
+        "203.0.17.79 é barrado pela regra 1",
+        "203.0.17.79 é barrado pela regra 3",
+        "203.0.17.79 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.39.98 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.20.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.39.98 é barrado pela regra 3",
+        "203.0.39.98 é barrado pela regra 1",
+        "203.0.39.98 passa pela regra 1",
+        "203.0.39.98 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Achar SQL Injection no campo peso do animal",
+        "Barrar um cliente comum ao marcar o banho",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Não notar uma injeção ao marcar o banho"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.240.45 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.240.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.240.45 é barrado pela regra 1",
+        "10.0.240.45 é barrado pela regra 3",
+        "10.0.240.45 passa pela regra 2",
+        "10.0.240.45 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.185.178 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.185.0/24\n2  ALLOW tcp :110 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.185.178 é barrado pela regra 3",
+        "10.0.185.178 passa pela regra 2",
+        "10.0.185.178 é barrado pela regra 1",
+        "10.0.185.178 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.162.85 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.137.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.162.85 é barrado pela regra 1",
+        "203.0.162.85 é barrado pela regra 3",
+        "203.0.162.85 passa pela regra 1",
+        "203.0.162.85 passa pela regra 2"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da academia, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Cifrar a grade de aulas e guardar um backup fora",
+        "Impedir o servidor de enviar a grade de aulas para fora",
+        "Só a rede interna acessa a porta que guarda a grade de aulas",
+        "Pular de um serviço até a grade de aulas, por dentro"
+      ],
+      "correct": 0,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Cifrar a ficha do animal e guardar um backup fora",
+        "Impedir o servidor de enviar a ficha do animal para fora",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Pular de um serviço até a ficha do animal, por dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da academia, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Barrar um cliente comum ao marcar uma aula",
+        "Achar SQL Injection no campo data da aula",
+        "Não notar uma injeção ao marcar uma aula",
+        "Só a rede interna acessa a porta que guarda a grade de aulas"
+      ],
+      "correct": 1,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.65.191 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.65.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.65.191 passa pela regra 2",
+        "10.0.65.191 passa pela regra 1",
+        "10.0.65.191 é barrado pela regra 1",
+        "10.0.65.191 é barrado pela regra 3"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.111.98 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.250.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.111.98 é barrado pela regra 3",
+        "203.0.111.98 é barrado pela regra 1",
+        "203.0.111.98 passa pela regra 2",
+        "203.0.111.98 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o cardápio",
+        "Pular de um serviço até o cardápio, por dentro",
+        "Barrar um cliente comum ao enviar a comanda",
+        "Impedir o servidor de enviar o cardápio para fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do app de música, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Pular de um serviço até a lista de faixas, por dentro",
+        "Cifrar a lista de faixas e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Impedir o servidor de enviar a lista de faixas para fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.250.93 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.250.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.250.93 passa pela regra 2",
+        "10.0.250.93 passa pela regra 1",
+        "10.0.250.93 é barrado pela regra 1",
+        "10.0.250.93 é barrado pela regra 3"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da academia, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Não notar uma injeção ao marcar uma aula",
+        "Achar SQL Injection no campo data da aula",
+        "Barrar um cliente comum ao marcar uma aula",
+        "Só a rede interna acessa a porta que guarda a grade de aulas"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Não notar uma injeção ao renovar o empréstimo",
+        "Barrar um cliente comum ao renovar o empréstimo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Só a rede interna acessa a porta que guarda o acervo"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o lote do remédio",
+        "Pular de um serviço até o lote do remédio, por dentro",
+        "Cifrar o lote do remédio e guardar um backup fora",
+        "Impedir o servidor de enviar o lote do remédio para fora"
+      ],
+      "correct": 1,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da academia, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Achar SQL Injection no campo data da aula",
+        "Só a rede interna acessa a porta que guarda a grade de aulas",
+        "Barrar um cliente comum ao marcar uma aula",
+        "Não notar uma injeção ao marcar uma aula"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o acervo",
+        "Barrar um cliente comum ao renovar o empréstimo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Pular de um serviço até o acervo, por dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.159.128 chega na porta 25. O que acontece?",
+      "code": "1  ALLOW tcp :25 de 10.0.77.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.159.128 passa pela regra 1",
+        "203.0.159.128 é barrado pela regra 3",
+        "203.0.159.128 passa pela regra 2",
+        "203.0.159.128 é barrado pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Pular de um serviço até as vagas, por dentro",
+        "Barrar um cliente comum ao registrar a saída",
+        "O cliente, de casa, vai registrar a saída"
+      ],
+      "correct": 3,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.157.168 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.191.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.157.168 passa pela regra 1",
+        "203.0.157.168 passa pela regra 2",
+        "203.0.157.168 é barrado pela regra 1",
+        "203.0.157.168 é barrado pela regra 3"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da biblioteca, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Barrar um cliente comum ao renovar o empréstimo",
+        "Impedir o servidor de enviar o acervo para fora",
+        "Só a rede interna acessa a porta que guarda o acervo",
+        "O cliente, de casa, vai renovar o empréstimo"
+      ],
+      "correct": 3,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do cinema, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Impedir o servidor de enviar o mapa da sala para fora",
+        "Pular de um serviço até o mapa da sala, por dentro",
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Achar SQL Injection no campo quantidade de ingressos"
+      ],
+      "correct": 1,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do app de música, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Cifrar a lista de faixas e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Impedir o servidor de enviar a lista de faixas para fora",
+        "Pular de um serviço até a lista de faixas, por dentro"
+      ],
+      "correct": 3,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.200.158 chega na porta 8080. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.22.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.200.158 passa pela regra 1",
+        "203.0.200.158 é barrado pela regra 1",
+        "203.0.200.158 passa pela regra 2",
+        "203.0.200.158 é barrado pela regra 3"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.54.84 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.204.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.54.84 passa pela regra 1",
+        "203.0.54.84 passa pela regra 2",
+        "203.0.54.84 é barrado pela regra 1",
+        "203.0.54.84 é barrado pela regra 3"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do hotel, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Barrar um cliente comum ao reservar o quarto",
+        "Pular de um serviço até a ocupação, por dentro",
+        "Achar SQL Injection no campo data de entrada"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.11.217 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.126.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.11.217 passa pela regra 1",
+        "203.0.11.217 é barrado pela regra 1",
+        "203.0.11.217 é barrado pela regra 3",
+        "203.0.11.217 passa pela regra 2"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.64.228 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.64.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.64.228 passa pela regra 1",
+        "10.0.64.228 passa pela regra 2",
+        "10.0.64.228 é barrado pela regra 1",
+        "10.0.64.228 é barrado pela regra 3"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.40.152 chega na porta 22. O que acontece?",
+      "code": "1  ALLOW tcp :22 de 10.0.40.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.40.152 passa pela regra 1",
+        "10.0.40.152 é barrado pela regra 1",
+        "10.0.40.152 é barrado pela regra 3",
+        "10.0.40.152 passa pela regra 2"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema do pet shop, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Pular de um serviço até a ficha do animal, por dentro",
+        "Impedir o servidor de enviar a ficha do animal para fora",
+        "Só a rede interna acessa a porta que guarda a ficha do animal",
+        "Cifrar a ficha do animal e guardar um backup fora"
+      ],
+      "correct": 2,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o lote do remédio",
+        "Cifrar o lote do remédio e guardar um backup fora",
+        "Pular de um serviço até o lote do remédio, por dentro",
+        "Impedir o servidor de enviar o lote do remédio para fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Cifrar o cardápio e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o cardápio",
+        "Barrar um cliente comum ao enviar a comanda",
+        "Achar SQL Injection no campo número da mesa"
+      ],
+      "correct": 0,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.115.2 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :5432 de 10.0.95.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.115.2 é barrado pela regra 1",
+        "203.0.115.2 é barrado pela regra 3",
+        "203.0.115.2 passa pela regra 1",
+        "203.0.115.2 passa pela regra 2"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do app de música, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Achar SQL Injection no campo nome da playlist",
+        "Barrar um cliente comum ao criar a playlist",
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Não notar uma injeção ao criar a playlist"
+      ],
+      "correct": 3,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da loja online, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Não notar uma injeção ao fechar o pedido",
+        "O cliente, de casa, vai fechar o pedido",
+        "Achar SQL Injection no campo CEP",
+        "Só a rede interna acessa a porta que guarda o estoque"
+      ],
+      "correct": 2,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.209.236 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.209.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.209.236 passa pela regra 1",
+        "10.0.209.236 passa pela regra 2",
+        "10.0.209.236 é barrado pela regra 3",
+        "10.0.209.236 é barrado pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da escola, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Não notar uma injeção ao lançar a nota",
+        "Barrar um cliente comum ao lançar a nota",
+        "Só a rede interna acessa a porta que guarda o boletim",
+        "Cifrar o boletim e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.34.150 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.34.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.34.150 é barrado pela regra 1",
+        "10.0.34.150 passa pela regra 1",
+        "10.0.34.150 é barrado pela regra 3",
+        "10.0.34.150 passa pela regra 2"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da clínica, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai agendar a consulta",
+        "Barrar um cliente comum ao agendar a consulta",
+        "Não notar uma injeção ao agendar a consulta",
+        "Só a rede interna acessa a porta que guarda a agenda médica"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do cinema, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Pular de um serviço até o mapa da sala, por dentro",
+        "Cifrar o mapa da sala e guardar um backup fora",
+        "Barrar um cliente comum ao escolher a poltrona"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.26.183 chega na porta 3306. O que acontece?",
+      "code": "1  ALLOW tcp :3306 de 10.0.238.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.26.183 passa pela regra 2",
+        "203.0.26.183 é barrado pela regra 1",
+        "203.0.26.183 é barrado pela regra 3",
+        "203.0.26.183 passa pela regra 1"
+      ],
+      "correct": 2,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema do hotel, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Barrar um cliente comum ao reservar o quarto",
+        "Achar SQL Injection no campo data de entrada",
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Cifrar a ocupação e guardar um backup fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do cinema, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "O cliente, de casa, vai escolher a poltrona",
+        "Barrar um cliente comum ao escolher a poltrona",
+        "Cifrar o mapa da sala e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o mapa da sala"
+      ],
+      "correct": 0,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema da clínica, qual situação é um exemplo de falso positivo?",
+      "options": [
+        "Cifrar a agenda médica e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Barrar um cliente comum ao agendar a consulta",
+        "Achar SQL Injection no campo data de nascimento"
+      ],
+      "correct": 2,
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.84.3 chega na porta 8080. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.118.0/24\n2  ALLOW tcp :8080 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.84.3 passa pela regra 2",
+        "203.0.84.3 é barrado pela regra 1",
+        "203.0.84.3 passa pela regra 1",
+        "203.0.84.3 é barrado pela regra 3"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da clínica, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Pular de um serviço até a agenda médica, por dentro",
+        "Só a rede interna acessa a porta que guarda a agenda médica",
+        "Impedir o servidor de enviar a agenda médica para fora",
+        "Achar SQL Injection no campo data de nascimento"
+      ],
+      "correct": 0,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema da loja online, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Cifrar o estoque e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o estoque",
+        "Não notar uma injeção ao fechar o pedido",
+        "O cliente, de casa, vai fechar o pedido"
+      ],
+      "correct": 3,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.5.24 chega na porta 443. O que acontece?",
+      "code": "1  ALLOW tcp :443 de 10.0.5.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.5.24 é barrado pela regra 3",
+        "10.0.5.24 é barrado pela regra 1",
+        "10.0.5.24 passa pela regra 2",
+        "10.0.5.24 passa pela regra 1"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema da escola, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Pular de um serviço até o boletim, por dentro",
+        "Só a rede interna acessa a porta que guarda o boletim",
+        "Cifrar o boletim e guardar um backup fora",
+        "Achar SQL Injection no campo nota da prova"
+      ],
+      "correct": 3,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.248.120 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.248.0/24\n2  ALLOW tcp :443 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.248.120 passa pela regra 1",
+        "10.0.248.120 é barrado pela regra 1",
+        "10.0.248.120 passa pela regra 2",
+        "10.0.248.120 é barrado pela regra 3"
+      ],
+      "correct": 3,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Achar SQL Injection no campo placa do veículo",
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Impedir o servidor de enviar as vagas para fora",
+        "Pular de um serviço até as vagas, por dentro"
+      ],
+      "correct": 2,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.26.134 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.26.0/24\n2  ALLOW tcp :22 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.26.134 passa pela regra 2",
+        "10.0.26.134 é barrado pela regra 3",
+        "10.0.26.134 passa pela regra 1",
+        "10.0.26.134 é barrado pela regra 1"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.192.163 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :80 de 10.0.192.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.192.163 passa pela regra 1",
+        "10.0.192.163 é barrado pela regra 3",
+        "10.0.192.163 é barrado pela regra 1",
+        "10.0.192.163 passa pela regra 2"
+      ],
+      "correct": 1,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de falso negativo?",
+      "options": [
+        "Não notar uma injeção ao registrar a saída",
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Pular de um serviço até as vagas, por dentro",
+        "Barrar um cliente comum ao registrar a saída"
+      ],
+      "correct": 0,
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+    },
+    {
+      "topic": "profundidade",
+      "statement": "No sistema da farmácia, qual situação é um exemplo de proteção da camada de dados?",
+      "options": [
+        "Pular de um serviço até o lote do remédio, por dentro",
+        "Impedir o servidor de enviar o lote do remédio para fora",
+        "Cifrar o lote do remédio e guardar um backup fora",
+        "Só a rede interna acessa a porta que guarda o lote do remédio"
+      ],
+      "correct": 2,
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do hotel, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Barrar um cliente comum ao reservar o quarto",
+        "Pular de um serviço até a ocupação, por dentro",
+        "Só a rede interna acessa a porta que guarda a ocupação",
+        "Impedir o servidor de enviar a ocupação para fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do estacionamento, qual situação é um exemplo de movimento lateral?",
+      "options": [
+        "Pular de um serviço até as vagas, por dentro",
+        "Achar SQL Injection no campo placa do veículo",
+        "Só a rede interna acessa a porta que guarda as vagas",
+        "Impedir o servidor de enviar as vagas para fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+    },
+    {
+      "topic": "desafios",
+      "statement": "No sistema do cinema, qual situação é um exemplo de filtro de saída (egress)?",
+      "options": [
+        "Achar SQL Injection no campo quantidade de ingressos",
+        "Só a rede interna acessa a porta que guarda o mapa da sala",
+        "Pular de um serviço até o mapa da sala, por dentro",
+        "Impedir o servidor de enviar o mapa da sala para fora"
+      ],
+      "correct": 3,
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+    },
+    {
+      "topic": "regras",
+      "statement": "No sistema do app de música, qual situação é um exemplo de regra de firewall?",
+      "options": [
+        "Só a rede interna acessa a porta que guarda a lista de faixas",
+        "Pular de um serviço até a lista de faixas, por dentro",
+        "Impedir o servidor de enviar a lista de faixas para fora",
+        "Cifrar a lista de faixas e guardar um backup fora"
+      ],
+      "correct": 0,
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+    },
+    {
+      "topic": "lateral",
+      "statement": "No sistema do banco, qual situação é um exemplo de tráfego norte-sul?",
+      "options": [
+        "Achar SQL Injection no campo chave Pix",
+        "O cliente, de casa, vai fazer um Pix",
+        "Só a rede interna acessa a porta que guarda o saldo",
+        "Não notar uma injeção ao fazer um Pix"
+      ],
+      "correct": 1,
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 10.0.75.106 chega na porta 23. O que acontece?",
+      "code": "1  ALLOW tcp :8080 de 10.0.75.0/24\n2  ALLOW tcp :25 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "10.0.75.106 é barrado pela regra 3",
+        "10.0.75.106 passa pela regra 2",
+        "10.0.75.106 passa pela regra 1",
+        "10.0.75.106 é barrado pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+    },
+    {
+      "topic": "regras",
+      "statement": "O pacote de 203.0.101.42 chega na porta 80. O que acontece?",
+      "code": "1  ALLOW tcp :53 de 10.0.167.0/24\n2  ALLOW tcp :80 de qualquer origem\n3  DROP todo o resto",
+      "options": [
+        "203.0.101.42 passa pela regra 2",
+        "203.0.101.42 é barrado pela regra 3",
+        "203.0.101.42 é barrado pela regra 1",
+        "203.0.101.42 passa pela regra 1"
+      ],
+      "correct": 0,
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+    },
+    {
+      "topic": "waf",
+      "statement": "No sistema do restaurante, qual situação é um exemplo de controle que o WAF faz?",
+      "options": [
+        "Pular de um serviço até o cardápio, por dentro",
+        "Achar SQL Injection no campo número da mesa",
+        "Barrar um cliente comum ao enviar a comanda",
+        "Só a rede interna acessa a porta que guarda o cardápio"
+      ],
+      "correct": 1,
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
     }
   ],
   "historias": [

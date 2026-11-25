@@ -5999,6 +5999,378 @@
       ],
       "correct": 1,
       "explain": "<b>Generalização entre atores:</b> pelo slide, a generalização de Aluno monitor para Aluno indica que Aluno monitor pode se comunicar com os mesmos casos de uso de Aluno. Então Aluno monitor usa “Fazer matrícula” e também o seu “Lançar presença da monitoria”."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "O que um caso de uso descreve?",
+      "options": [
+        "O preço e o prazo combinados com o cliente",
+        "A interação do ator com o sistema por um objetivo",
+        "A lista de tabelas que o banco de dados vai ter",
+        "A ordem em que os programadores vão codificar"
+      ],
+      "correct": 1,
+      "explain": "<b>Ator + sistema + objetivo:</b> é a definição do material."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo “Login no Sistema”, qual é a exceção?",
+      "options": [
+        "Mensagem de erro com credenciais inválidas",
+        "O sistema concede acesso ao usuário certo",
+        "O usuário insere o nome e a senha dele",
+        "O usuário acessa a tela de login do sistema"
+      ],
+      "correct": 0,
+      "explain": "<b>Exceção = o que pode dar errado.</b> As outras são passos do cenário principal."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No “Login no Sistema”, o que vem logo depois de inserir usuário e senha?",
+      "options": [
+        "O sistema encerra a sessão aberta",
+        "O sistema concede o acesso direto",
+        "O sistema valida as informações",
+        "O usuário acessa a tela de login"
+      ],
+      "correct": 2,
+      "explain": "<b>Acessa, insere, valida, concede.</b>"
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "O que o diagrama de casos de uso da UML representa?",
+      "options": [
+        "Um requisito do sistema a ser automatizado",
+        "O código-fonte do sistema já todo pronto",
+        "A rede de computadores do cliente",
+        "O cronograma de entregas do projeto"
+      ],
+      "correct": 0,
+      "explain": "<b>Requisito = uma necessidade do sistema.</b>"
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Um ator do diagrama pode ser o quê?",
+      "options": [
+        "Uma tela, um botão ou um campo de texto",
+        "Somente o programador que fez o sistema",
+        "Usuário, outro sistema, máquina ou sensor",
+        "Somente uma pessoa cadastrada no sistema"
+      ],
+      "correct": 2,
+      "explain": "<b>Ator é um papel externo,</b> não só gente."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Como o caso de uso é desenhado no diagrama?",
+      "options": [
+        "Como uma elipse com o nome dentro",
+        "Como um retângulo com três partes",
+        "Como um bonequinho com o nome dele",
+        "Como um círculo verde ou vermelho"
+      ],
+      "correct": 0,
+      "explain": "<b>Elipse é o caso de uso; bonequinho é o ator.</b>"
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "O que liga o ator ao caso de uso no diagrama?",
+      "options": [
+        "Uma seta tracejada",
+        "Um triângulo vazado",
+        "Uma linha simples",
+        "Uma raia colorida"
+      ],
+      "correct": 2,
+      "explain": "<b>Linha:</b> a seta tracejada é do include e do extend."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No include, de onde sai e para onde vai a seta?",
+      "options": [
+        "Sai do caso base e vai ao incluído",
+        "Sai do incluído e vai ao caso base",
+        "Sai do ator e vai ao caso incluído",
+        "Sai do sistema e vai até o ator"
+      ],
+      "correct": 0,
+      "explain": "<b>Base → incluído.</b> No extend é o contrário."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No extend, de onde sai e para onde vai a seta?",
+      "options": [
+        "Sai do ator filho e vai ao ator pai",
+        "Sai da extensão e vai ao caso base",
+        "Sai do ator e vai até a extensão",
+        "Sai do caso base e vai à extensão"
+      ],
+      "correct": 1,
+      "explain": "<b>Extensão → base.</b>"
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Como é a linha da generalização de atores?",
+      "options": [
+        "Tracejada, com rótulo entre sinais",
+        "Pontilhada, com círculo vermelho",
+        "Contínua, sem seta em nenhum lado",
+        "Contínua, com triângulo vazado"
+      ],
+      "correct": 3,
+      "explain": "<b>O triângulo aponta para o ator mais geral,</b> o pai."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "No exemplo, “Consultar Serasa” tem que relação com “Processar Pedido”?",
+      "options": [
+        "Nenhuma: são de atores diferentes",
+        "Generaliza: herda os casos dele",
+        "Inclui: é executado toda vez",
+        "Estende: nem sempre é executado"
+      ],
+      "correct": 3,
+      "explain": "<b>Opcional = extend.</b> Já “Emitir Nota Fiscal” é include."
+    },
+    {
+      "topic": "casosdeuso",
+      "statement": "Cliente herda de Usuário. O que o Cliente pode fazer?",
+      "options": [
+        "Somente Fazer Login, como o Usuário",
+        "Fazer Login e também Realizar Saque",
+        "Somente Realizar Saque, o caso dele",
+        "Nada, até o Usuário dar a permissão"
+      ],
+      "correct": 1,
+      "explain": "<b>O filho herda os casos do pai</b> e ainda tem os seus."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O que a VALIDAÇÃO de requisitos garante?",
+      "options": [
+        "Que eles sejam secretos e assinados",
+        "Que eles sejam baratos e bem rápidos",
+        "Que eles sejam mantidos e organizados",
+        "Que eles estejam corretos e completos"
+      ],
+      "correct": 3,
+      "explain": "<b>Corretos e completos.</b> Manter e organizar é o gerenciamento."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O que o GERENCIAMENTO de requisitos assegura?",
+      "options": [
+        "Que eles virem código sem testes",
+        "Que eles sejam mantidos e organizados",
+        "Que eles estejam corretos e completos",
+        "Que eles nunca mais possam mudar"
+      ],
+      "correct": 1,
+      "explain": "<b>Durante todo o ciclo de desenvolvimento.</b>"
+    },
+    {
+      "topic": "historias",
+      "statement": "O que os critérios de aceite de uma história definem?",
+      "options": [
+        "Quando a história está pronta",
+        "Quanto a história vai custar",
+        "Quem vai programar a história",
+        "Onde a história será salva"
+      ],
+      "correct": 0,
+      "explain": "<b>1, 2, n...:</b> a lista que diz se a história foi atendida."
+    },
+    {
+      "topic": "historias",
+      "statement": "Na figura do slide, o que aparece no título do post-it?",
+      "options": [
+        "Nome e cargo do programador",
+        "Data e hora da última reunião",
+        "Número e título da história",
+        "Preço e prazo combinados"
+      ],
+      "correct": 2,
+      "explain": "<b>“Número – Título”,</b> depois a frase Como / eu quero / para que e os critérios de aceite."
+    },
+    {
+      "topic": "historias",
+      "statement": "Qual é a vantagem das histórias de usuário segundo o material?",
+      "options": [
+        "Requisitos secretos e muito mais técnicos",
+        "Diagramas com raias e mensagens",
+        "Níveis hierárquicos de funções",
+        "Requisitos compreensíveis e rastreáveis"
+      ],
+      "correct": 3,
+      "explain": "<b>Facilitam a conversa</b> entre quem desenvolve e quem usa."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na figura da modelagem de processos, quais são as duas raias?",
+      "options": [
+        "Usuário e Banco de Dados",
+        "Cozinheiro e Gerente da loja",
+        "Atendente de Caixa e Cliente",
+        "Hóspede e Dono do hotel"
+      ],
+      "correct": 2,
+      "explain": "<b>Processo “Receber Pagamento”:</b> cada raia mostra quem faz cada tarefa."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No diagrama “Receber Pagamento”, o que o círculo verde e o vermelho indicam?",
+      "options": [
+        "Verde é o fim e vermelho é o início",
+        "Verde é certo e vermelho é errado",
+        "Verde é cliente e vermelho é caixa",
+        "Verde é o início e vermelho é o fim"
+      ],
+      "correct": 3,
+      "explain": "<b>Evento inicial e evento final.</b>"
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual tarefa fica na raia do Cliente em “Receber Pagamento”?",
+      "options": [
+        "Receber Comanda",
+        "Calcular Total",
+        "Pagar Comanda",
+        "Cobrar Valor"
+      ],
+      "correct": 2,
+      "explain": "<b>Ligada por mensagens tracejadas</b> às tarefas do atendente."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No processo “Receber Pagamento”, qual é a última tarefa antes do fim?",
+      "options": [
+        "Cobrar Pagamento",
+        "Entregar Comprovante",
+        "Receber Comanda",
+        "Calcular Valor Total"
+      ],
+      "correct": 1,
+      "explain": "<b>Receber Comanda, Calcular Valor Total, Cobrar Pagamento, Entregar Comprovante.</b>"
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual exemplo o slide usa para mostrar a decomposição funcional em árvore?",
+      "options": [
+        "Pintar uma sala",
+        "Receber pagamento",
+        "Reservar um hotel",
+        "Fazer um login"
+      ],
+      "correct": 0,
+      "explain": "<b>Árvore WBS:</b> nível 1 é o todo, nível 2 são as partes, nível 3 são as tarefas."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na árvore “Pintar uma sala”, o que fica no nível 2?",
+      "options": [
+        "A sala pintada, como um todo",
+        "Preparação, pintura e limpeza",
+        "Comprar tinta e cobrir o chão",
+        "Pintar rodapés com o pincel"
+      ],
+      "correct": 1,
+      "explain": "<b>Nível 2:</b> preparação de materiais, preparação da sala, pintura e limpeza. As tarefas miúdas são do nível 3."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na árvore “Pintar uma sala”, “comprar tinta” fica em que nível?",
+      "options": [
+        "No nível 1, do trabalho completo",
+        "No nível 3, das tarefas detalhadas",
+        "No nível 2, das grandes partes",
+        "Fora da árvore, como exceção"
+      ],
+      "correct": 1,
+      "explain": "<b>Quanto mais fundo, mais detalhe.</b>"
+    },
+    {
+      "topic": "validacao",
+      "statement": "Na figura da modelagem de domínio, quais são os três grupos?",
+      "options": [
+        "Contas, Hotéis e Estadia",
+        "Saldo, Histórico e Saque",
+        "Cliente, Produto e Pedido",
+        "Início, Tarefas e Fim"
+      ],
+      "correct": 0,
+      "explain": "<b>Sistema de hospedagem:</b> Conta e Perfil num grupo, Hotel e Oferta noutro, Reserva e Hóspede no terceiro."
+    },
+    {
+      "topic": "validacao",
+      "statement": "No domínio da hospedagem, Reserva, Hóspede e Avaliação ficam em que grupo?",
+      "options": [
+        "No grupo Contas",
+        "No grupo Hotéis",
+        "No grupo Estadia",
+        "No grupo Ofertas"
+      ],
+      "correct": 2,
+      "explain": "<b>Estadia:</b> tudo sobre ficar hospedado."
+    },
+    {
+      "topic": "validacao",
+      "statement": "O que expressam rótulos como “possui um ou vários” nas setas do domínio?",
+      "options": [
+        "Os passos e as ações de cada ator",
+        "As exceções e as mensagens de erro",
+        "Os relacionamentos e suas quantidades",
+        "As tarefas e a ordem em que ocorrem"
+      ],
+      "correct": 2,
+      "explain": "<b>Quantos de um para quantos do outro.</b>"
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual é a ideia-chave da modelagem de domínio?",
+      "options": [
+        "Fluxo de atividades da empresa",
+        "Versão preliminar do sistema",
+        "Entidades e relacionamentos",
+        "Ponto de vista do usuário final"
+      ],
+      "correct": 2,
+      "explain": "<b>As “coisas” do negócio e como se ligam:</b> um Cliente faz um Pedido que contém Produtos."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Qual técnica ajuda a descobrir o que está faltando nos requisitos?",
+      "options": [
+        "A lista de verificação",
+        "A história de usuário",
+        "A modelagem de domínio",
+        "A generalização de atores"
+      ],
+      "correct": 0,
+      "explain": "<b>Checklist:</b> “Verificou requisitos de segurança?”"
+    },
+    {
+      "topic": "validacao",
+      "statement": "Que pergunta é típica de uma checklist, segundo o slide?",
+      "options": [
+        "Pagar Comanda vem antes de Entregar Comprovante",
+        "Confirmou compatibilidade com outros sistemas?",
+        "Um Cliente faz um Pedido que contém Produtos",
+        "Como um cliente, quero adicionar itens ao carrinho"
+      ],
+      "correct": 1,
+      "explain": "<b>Pergunta de conferir:</b> as outras são história, domínio e processo."
+    },
+    {
+      "topic": "validacao",
+      "statement": "Para que serve a prototipação?",
+      "options": [
+        "Desenhar o fluxo de atividades da empresa",
+        "Listar as entidades e as ligações do negócio",
+        "Dar ao usuário uma versão para experimentar",
+        "Dividir uma grande função em partes menores"
+      ],
+      "correct": 2,
+      "explain": "<b>Versão preliminar:</b> o usuário vê, mexe e confirma se é aquilo mesmo."
     }
   ],
   "historias": [
@@ -7306,6 +7678,59 @@
         "Pagamento Recebido"
       ],
       "explicacao": "Evento de início, tarefas do caixa, tarefa do cliente, comprovante e evento de fim."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "De qual técnica é a figura?",
+      "instrucao": "Ligue o que aparece na figura do slide à técnica.",
+      "categorias": [
+        "História de usuário",
+        "Processos",
+        "Decomposição",
+        "Domínio"
+      ],
+      "itens": [
+        {
+          "texto": "Post-it com critérios de aceite",
+          "categoria": "História de usuário",
+          "porque": "Número, título, frase e critérios."
+        },
+        {
+          "texto": "Raias Atendente de Caixa e Cliente",
+          "categoria": "Processos",
+          "porque": "Processo Receber Pagamento."
+        },
+        {
+          "texto": "Círculo verde e círculo vermelho",
+          "categoria": "Processos",
+          "porque": "Início e fim do fluxo."
+        },
+        {
+          "texto": "Árvore “Pintar uma sala”",
+          "categoria": "Decomposição",
+          "porque": "Partes menores em níveis."
+        },
+        {
+          "texto": "Nível 3: comprar tinta",
+          "categoria": "Decomposição",
+          "porque": "A tarefa mais detalhada."
+        },
+        {
+          "texto": "Grupos Contas, Hotéis e Estadia",
+          "categoria": "Domínio",
+          "porque": "Entidades da hospedagem."
+        },
+        {
+          "texto": "Rótulo “possui um ou vários”",
+          "categoria": "Domínio",
+          "porque": "Relacionamento e quantidade."
+        },
+        {
+          "texto": "Como [persona], eu [quero], [para que]",
+          "categoria": "História de usuário",
+          "porque": "A frase da história."
+        }
+      ]
     }
   ],
   "livro": [
@@ -7419,6 +7844,23 @@
         "Domínio = conceitos do negócio e suas ligações",
         "Minimiza ambiguidades: um nome para cada conceito",
         "Leia as setas: “possui um”, “um ou vários”, “pertence a”"
+      ]
+    },
+    {
+      "titulo": "Revisão da prova: pegadinhas e figuras",
+      "resumo": "O resumão de Requisitos e como ler cada figura dos slides.",
+      "paginas": [
+        "Caso de uso é ator + cenário principal + exceções. Os 4 passos: identificar os atores, definir os casos de uso, especificar os cenários e definir as exceções. Ator é um papel: pode ser pessoa, outro sistema, máquina ou sensor.",
+        "No diagrama, o ator é um bonequinho, o caso de uso é uma elipse e uma linha liga os dois. Include: sempre executa, e a seta tracejada sai do caso base. Extend: nem sempre executa, e a seta tracejada sai da extensão. Generalização: linha contínua com triângulo vazado apontando para o ator mais geral; o filho herda os casos do pai.",
+        "Validação deixa os requisitos corretos e completos. Gerenciamento deixa os requisitos mantidos e organizados. História de usuário: Como [tipo de usuário], eu quero [ação] para que [benefício], com critérios de aceite, que dizem quando está pronta.",
+        "As figuras. História: um post-it com número, título, frase e critérios. Processo: “Receber Pagamento”, com as raias Atendente de Caixa e Cliente; verde é o início, vermelho é o fim. Decomposição: árvore “Pintar uma sala”, em três níveis. Domínio: hospedagem, com os grupos Contas, Hotéis e Estadia.",
+        "Uma ideia por técnica. Histórias: ponto de vista do usuário. Processos: fluxo de atividades. Decomposição: partes menores em níveis. Domínio: entidades e relacionamentos. Checklist: o que está faltando. Protótipo: versão preliminar para mexer."
+      ],
+      "guardar": [
+        "Include sempre; extend às vezes",
+        "Validar = corretos e completos",
+        "Gerenciar = mantidos e organizados",
+        "Cada figura mostra uma técnica"
       ]
     }
   ],
@@ -7690,6 +8132,34 @@
       "texto": true,
       "dica": "Quem, o caminho feliz e o que dá errado.",
       "explicacao": "Ator, cenário principal e exceções."
+    },
+    {
+      "enunciado": "Qual relacionamento é SEMPRE executado: include ou extend?",
+      "aceitas": [
+        "include"
+      ],
+      "texto": true,
+      "dica": "Obrigatório.",
+      "explicacao": "Include é obrigatório; extend é opcional."
+    },
+    {
+      "enunciado": "Como se chama a pessoa, sistema ou sensor que interage com o sistema?",
+      "aceitas": [
+        "ator"
+      ],
+      "texto": true,
+      "dica": "É um papel.",
+      "explicacao": "Ator: entidade externa que interage com o sistema."
+    },
+    {
+      "enunciado": "Qual figura representa o caso de uso no diagrama?",
+      "aceitas": [
+        "elipse",
+        "uma elipse"
+      ],
+      "texto": true,
+      "dica": "Um círculo achatado.",
+      "explicacao": "Elipse com o nome da funcionalidade."
     }
   ]
 }

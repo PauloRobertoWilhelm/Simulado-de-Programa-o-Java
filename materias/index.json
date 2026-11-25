@@ -54,7 +54,7 @@
     "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
-      "base": "PDFs das Aulas 8 a 16 do Prof. Lucas, enviados em 20/11/2026. Os códigos das perguntas foram compilados e executados no Java para conferir o gabarito.",
+      "base": "PDFs das Aulas 8 a 16 do Prof. Lucas e o resumo da prova, enviados em 20/11 e 25/11/2026. Os códigos das perguntas foram compilados e executados no Java para conferir o gabarito.",
       "assuntos": [
         "Aulas 8 a 10: while, do-while e for — ler o código e dizer a saída",
         "Aula 11: Strings — equals, length, charAt, substring, replace, trim e toUpperCase",
@@ -138,12 +138,13 @@
     "prova1": "35 de 60 pontos",
     "foco": {
       "confianca": "Alta",
-      "base": "O professor disse que a prova do 2º bimestre é só sobre os slides 05 (Casos de Uso) e 06 (Técnicas de Validação e Gerenciamento). Todas as perguntas do 2º bimestre vêm desses dois PDFs.",
+      "base": "O professor disse que a prova do 2º bimestre é só sobre os slides 05 (Casos de Uso) e 06 (Técnicas de Validação e Gerenciamento). Todas as perguntas do 2º bimestre vêm desses dois PDFs. O resumão de 24/11 entrou como revisão, com as figuras dos slides.",
       "assuntos": [
         "Casos de uso: ator, cenário principal, exceções e os 4 passos para especificar",
         "Diagrama: include (sempre), extend (às vezes) e generalização de atores, com as setas",
         "História de usuário: Como, quero, para que, mais os critérios de aceite",
-        "Técnicas: modelagem de processos, decomposição funcional, modelagem de domínio, checklist e prototipação"
+        "Técnicas: modelagem de processos, decomposição funcional, modelagem de domínio, checklist e prototipação",
+        "Figuras dos slides: post-it da história, raias do processo, árvore da decomposição e grupos do domínio"
       ]
     },
     "temas": [
@@ -192,12 +193,13 @@
     "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
-      "base": "O próprio professor diz que o Trabalho do 2º bimestre é a lista de revisão da prova. Ele cobre as Aulas 06, 07 e 08.",
+      "base": "O próprio professor diz que o Trabalho do 2º bimestre é a lista de revisão da prova. Ele cobre as Aulas 06, 07 e 08. Os grupos de status HTTP (1xx a 5xx) foram destacados pelo Paulo em 25/11/2026.",
       "assuntos": [
         "Aula 06: encapsulamento, IP × MAC, TTL, IPs privados, NAT, sub-redes, IPv6 e DHCP",
         "Aula 07: portas, sockets, TCP × UDP, handshake, seq e ACK, janela, FIN e RST",
         "Aula 08: URL, HTTP, códigos de status, cookies, HTTPS, DNS, e-mail, FTP e SSH",
-        "Questão integradora: do Enter à página, passando pelas três camadas"
+        "Questão integradora: do Enter à página, passando pelas três camadas",
+        "Grupos HTTP: para que serve cada um (1xx, 2xx, 3xx, 4xx, 5xx) e a diferença entre eles"
       ]
     },
     "temas": [
@@ -234,6 +236,11 @@
       {
         "id": "aplicacao",
         "rotulo": "📨 Aula 08 · Camada de aplicação",
+        "bimestre": 2
+      },
+      {
+        "id": "status",
+        "rotulo": "🚦 Grupos HTTP · 1xx a 5xx",
         "bimestre": 2
       },
       {

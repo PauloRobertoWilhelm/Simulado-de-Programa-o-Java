@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "21/11/2026",
+  "atualizadoEm": "25/11/2026",
   "materias": {
     "design": {
       "aba": "Design Front End",
@@ -27,13 +27,13 @@
     },
     "programacao": {
       "aba": "Programação de Computadores",
-      "perguntas": 500,
+      "perguntas": 627,
       "guardadas": 0,
-      "livro": 9,
+      "livro": 10,
       "historias": 7,
-      "jogos": 3,
+      "jogos": 8,
       "termos": 14,
-      "praticas": 12,
+      "praticas": 20,
       "temas": [
         "logica",
         "operadores",
@@ -52,26 +52,26 @@
         "logica": 17,
         "selecao": 17,
         "operadores": 22,
-        "repeticao": 55,
-        "for": 54,
-        "dowhile": 45,
-        "strings": 59,
-        "arrays": 57,
-        "matrizes": 52,
-        "classes": 37,
-        "metodos": 48,
-        "parametros": 37
+        "repeticao": 66,
+        "for": 64,
+        "dowhile": 56,
+        "strings": 76,
+        "arrays": 71,
+        "matrizes": 66,
+        "classes": 51,
+        "metodos": 65,
+        "parametros": 56
       }
     },
     "requisitos": {
       "aba": "Engenharia de Requisitos",
-      "perguntas": 500,
+      "perguntas": 531,
       "guardadas": 0,
-      "livro": 8,
+      "livro": 9,
       "historias": 10,
-      "jogos": 7,
+      "jogos": 8,
       "termos": 16,
-      "praticas": 8,
+      "praticas": 11,
       "temas": [
         "processo",
         "tipos",
@@ -84,20 +84,20 @@
         "processo": 4,
         "tipos": 5,
         "metodologias": 5,
-        "casosdeuso": 286,
-        "historias": 37,
-        "validacao": 163
+        "casosdeuso": 298,
+        "historias": 40,
+        "validacao": 179
       }
     },
     "redes": {
       "aba": "Fundamentos de Redes",
-      "perguntas": 500,
+      "perguntas": 550,
       "guardadas": 0,
-      "livro": 14,
+      "livro": 15,
       "historias": 11,
-      "jogos": 7,
+      "jogos": 9,
       "termos": 25,
-      "praticas": 20,
+      "praticas": 25,
       "temas": [
         "modelos",
         "arquitetura",
@@ -106,6 +106,7 @@
         "rede",
         "transporte",
         "aplicacao",
+        "status",
         "integradora"
       ],
       "porTema": {
@@ -113,10 +114,11 @@
         "arquitetura": 6,
         "enlace": 3,
         "meios": 3,
-        "rede": 303,
-        "transporte": 112,
-        "aplicacao": 60,
-        "integradora": 7
+        "rede": 314,
+        "transporte": 122,
+        "aplicacao": 63,
+        "integradora": 7,
+        "status": 26
       }
     },
     "testing": {
@@ -253,5 +255,6 @@
     "materias/requisitos.json",
     "materias/testing.json"
   ],
-  "material": 87
+  "material": 97,
+  "materialVazio": 0
 }

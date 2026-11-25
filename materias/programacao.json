@@ -6476,6 +6476,1562 @@
       ],
       "correct": 1,
       "explain": "<b>Cada objeto tem os próprios atributos:</b> c2 copiou só a marca e calculou o ano (2015 − 2 = 2013). O modelo de c2 nunca recebeu valor; String sem valor num atributo vale null."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Segundo a aula, quando a condição do while é verificada?",
+      "options": [
+        "Só na primeira volta do laço",
+        "Antes de cada volta do laço",
+        "Depois de cada volta do laço",
+        "Só quando o laço já terminou"
+      ],
+      "correct": 1,
+      "explain": "<b>ANTES:</b> o slide destaca essa palavra. O while é o guarda do portão: confere primeiro e só depois deixa entrar."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "A condição de um while já começa falsa. O que acontece com o bloco?",
+      "options": [
+        "O programa dá erro de compilação",
+        "O bloco é executado uma única vez",
+        "O bloco não é executado nenhuma vez",
+        "O laço repete para sempre, sem parar"
+      ],
+      "correct": 2,
+      "explain": "<b>Zero voltas:</b> como a conferência vem antes, se a primeira resposta for “falso” o bloco nem começa."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Para que a estrutura while é usada?",
+      "options": [
+        "Repetir enquanto a condição for verdadeira",
+        "Executar um bloco exatamente uma vez só",
+        "Escolher um entre vários casos possíveis",
+        "Repetir enquanto a condição ainda for falsa"
+      ],
+      "correct": 0,
+      "explain": "<b>While = enquanto:</b> o bloco se repete enquanto a resposta da condição for “verdadeiro”."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual destas é a sintaxe certa do while?",
+      "options": [
+        "while condição do { bloco }",
+        "while { bloco } (condição);",
+        "do while (condição) { bloco }",
+        "while (condição) { bloco }"
+      ],
+      "correct": 3,
+      "explain": "<b>Ordem:</b> a palavra while, a condição entre parênteses e depois o bloco entre chaves."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "No contador da aula, qual é o último número que aparece?",
+      "code": "int i = 1;\nwhile (i <= 10) {\n  System.out.println(i);\n  i++;\n}",
+      "options": [
+        "Por último aparece o 11",
+        "Por último aparece o 10",
+        "Por último aparece o 1",
+        "Por último aparece o 9"
+      ],
+      "correct": 1,
+      "explain": "<b>i &lt;= 10:</b> quando i vale 10 a condição ainda é verdadeira, então o 10 é impresso. Com 11 ela fica falsa e o laço acaba."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "No contador da aula, o que acontece se a linha i++ for apagada?",
+      "code": "int i = 1;\nwhile (i <= 10) {\n  System.out.println(i);\n  i++;\n}",
+      "options": [
+        "Não imprime nada",
+        "Imprime 1 para sempre",
+        "Imprime de 1 até 10",
+        "Imprime 1 uma vez só"
+      ],
+      "correct": 1,
+      "explain": "<b>Laço infinito:</b> sem i++, o i fica sempre em 1, e 1 &lt;= 10 nunca deixa de ser verdade."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "No contador da aula, o que muda ao trocar i <= 10 por i < 10?",
+      "code": "int i = 1;\nwhile (i <= 10) {\n  System.out.println(i);\n  i++;\n}",
+      "options": [
+        "O número 1 deixa de aparecer",
+        "O número 11 passa a aparecer",
+        "O laço passa a ser infinito",
+        "O número 10 deixa de aparecer"
+      ],
+      "correct": 3,
+      "explain": "<b>Menor, sem o igual:</b> quando i chega a 10, “10 &lt; 10” é falso, e o laço para no 9."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "No do-while, em que momento a condição é verificada?",
+      "options": [
+        "Depois de executar o bloco",
+        "Antes de executar o bloco",
+        "No meio do bloco de código",
+        "Somente se o bloco falhar"
+      ],
+      "correct": 0,
+      "explain": "<b>Primeiro prova, depois pergunta:</b> o bloco roda e só então a condição decide se haverá outra volta."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "No exemplo “digite um número positivo”, qual condição faz o laço pedir de novo?",
+      "options": [
+        "numero == 1",
+        "numero > 0",
+        "numero >= 0",
+        "numero <= 0"
+      ],
+      "correct": 3,
+      "explain": "<b>Pede de novo enquanto NÃO for positivo:</b> zero e negativos atendem a numero &lt;= 0, então o laço repete."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "A pessoa digita -3, depois 0 e depois 8. Quantas vezes o pedido “Digite um número positivo” aparece?",
+      "code": "Scanner scanner = new Scanner(System.in);\nint numero;\ndo {\n  System.out.print(\"Digite um número positivo: \");\n  numero = scanner.nextInt();\n} while (numero <= 0);\nSystem.out.println(\"Você digitou o número: \" + numero);",
+      "options": [
+        "Aparece uma vez só",
+        "Aparece três vezes",
+        "Aparece quatro vezes",
+        "Aparece duas vezes"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma vez por número digitado:</b> -3 e 0 mantêm o laço; o 8 encerra. São 3 pedidos."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "A pessoa digita -7, depois 0 e depois 9. Qual é a frase final do programa?",
+      "code": "Scanner scanner = new Scanner(System.in);\nint numero;\ndo {\n  System.out.print(\"Digite um número positivo: \");\n  numero = scanner.nextInt();\n} while (numero <= 0);\nSystem.out.println(\"Você digitou o número: \" + numero);",
+      "options": [
+        "Você digitou o número: -7",
+        "Você digitou o número: 0",
+        "Você digitou o número: 9",
+        "Você digitou o número: 2"
+      ],
+      "correct": 2,
+      "explain": "<b>Só sai com positivo:</b> o laço só termina no 9, e é esse o valor que está em numero no final."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Por que o Menu Interativo da aula usa do-while?",
+      "options": [
+        "As opções aparecem um número exato de vezes",
+        "O do-while é o único laço que aceita Scanner",
+        "O switch só funciona dentro de um do-while",
+        "As opções precisam aparecer antes da escolha"
+      ],
+      "correct": 3,
+      "explain": "<b>Ao menos uma vez:</b> o usuário só pode escolher depois de ver o menu. Por isso o bloco roda primeiro."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "O que o do-while garante, seja qual for a condição?",
+      "options": [
+        "Exatamente dez voltas do bloco",
+        "Nenhuma execução do bloco",
+        "No máximo uma execução do bloco",
+        "Pelo menos uma execução do bloco"
+      ],
+      "correct": 3,
+      "explain": "<b>Pelo menos uma:</b> é a frase do slide. Mesmo com a condição falsa, o bloco já rodou uma vez."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual destas é a sintaxe certa do do-while?",
+      "options": [
+        "do { bloco } while (condição);",
+        "do (condição) { bloco } while;",
+        "do { bloco } while condição",
+        "while (condição) do { bloco };"
+      ],
+      "correct": 0,
+      "explain": "<b>Repare no fim:</b> a condição fica entre parênteses, e a linha termina com ponto e vírgula."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "No menu da aula, qual comando lê a opção digitada?",
+      "options": [
+        "opcao = System.out.print();",
+        "opcao = new Scanner(int);",
+        "opcao = scanner.println();",
+        "opcao = scanner.nextInt();"
+      ],
+      "correct": 3,
+      "explain": "<b>nextInt():</b> lê o próximo número inteiro que a pessoa digitar e guarda em opcao."
+    },
+    {
+      "topic": "for",
+      "statement": "Segundo a aula, quando o for é especialmente útil?",
+      "options": [
+        "Quando se sabe o número exato de repetições",
+        "Quando a condição começa sempre como falsa",
+        "Quando o bloco deve rodar ao menos uma vez",
+        "Quando não se sabe quantas vezes vai repetir"
+      ],
+      "correct": 0,
+      "explain": "<b>Contagem com hora marcada:</b> sabe quantas vezes? Use for. Não sabe? while ou do-while."
+    },
+    {
+      "topic": "for",
+      "statement": "Em que ordem ficam as três partes dentro dos parênteses do for?",
+      "options": [
+        "Incremento; condição; inicialização",
+        "Inicialização; condição; incremento",
+        "Condição; inicialização; incremento",
+        "Inicialização; incremento; condição"
+      ],
+      "correct": 1,
+      "explain": "<b>Começo; até quando; passo:</b> separadas por ponto e vírgula, sempre nessa ordem."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual cabeçalho imprime de 10 até 1, como no slide?",
+      "options": [
+        "for (int i = 10; i <= 1; i--)",
+        "for (int i = 1; i <= 10; i--)",
+        "for (int i = 10; i >= 1; i++)",
+        "for (int i = 10; i >= 1; i--)"
+      ],
+      "correct": 3,
+      "explain": "<b>Descendo:</b> começa em 10, continua enquanto for maior ou igual a 1 e tira 1 a cada volta (i--)."
+    },
+    {
+      "topic": "for",
+      "statement": "Na contagem regressiva da aula, o que muda ao trocar i >= 1 por i > 1?",
+      "code": "for (int i = 10; i >= 1; i--) {\n  System.out.println(i);\n}",
+      "options": [
+        "O laço deixa de compilar",
+        "O número 1 não é mais impresso",
+        "O zero passa a ser impresso",
+        "O número 10 não é mais impresso"
+      ],
+      "correct": 1,
+      "explain": "<b>Maior, sem o igual:</b> quando i vale 1, “1 &gt; 1” é falso, e a contagem para no 2."
+    },
+    {
+      "topic": "for",
+      "statement": "No for da aula que conta de 1 a 10, quantas vezes o println roda?",
+      "code": "for (int i = 1; i <= 10; i++) {\n  System.out.println(i);\n}",
+      "options": [
+        "Roda 9 vezes",
+        "Roda 10 vezes",
+        "Roda 11 vezes",
+        "Roda 1 vez só"
+      ],
+      "correct": 1,
+      "explain": "<b>De 1 até 10, incluindo os dois:</b> são 10 voltas, uma para cada número."
+    },
+    {
+      "topic": "for",
+      "statement": "No cabeçalho do for, qual é o papel da terceira parte (i++ ou i--)?",
+      "options": [
+        "Decidir se haverá uma nova volta",
+        "Criar a variável antes da primeira volta",
+        "Mudar a variável ao fim de cada volta",
+        "Imprimir a variável a cada volta"
+      ],
+      "correct": 2,
+      "explain": "<b>O passo:</b> depois de rodar o bloco, o for soma (i++) ou tira (i--) e volta a conferir a condição."
+    },
+    {
+      "topic": "for",
+      "statement": "Quantas vezes a primeira parte do for (int i = 1) é executada?",
+      "options": [
+        "Uma vez, antes de tudo",
+        "Nenhuma vez no laço",
+        "Uma vez, depois de tudo",
+        "A cada volta do laço"
+      ],
+      "correct": 0,
+      "explain": "<b>Só no começo:</b> a inicialização cria a variável uma única vez; nas outras voltas o for só confere e soma."
+    },
+    {
+      "topic": "strings",
+      "statement": "Em Java, o que são as strings?",
+      "options": [
+        "Números da classe Integer",
+        "Vetores do tipo boolean",
+        "Objetos da classe String",
+        "Variáveis do tipo char"
+      ],
+      "correct": 2,
+      "explain": "<b>Objetos:</b> por isso elas têm métodos prontos, como length() e trim()."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual texto o programa mostra?",
+      "code": "String nome = \"João\";\nString saudacao = \"Olá, \" + nome + \"!\";\nSystem.out.println(saudacao);",
+      "options": [
+        "Olá, nome!",
+        "Olá, João!",
+        "Olá,João!",
+        "Olá, João"
+      ],
+      "correct": 1,
+      "explain": "<b>Concatenar é colar:</b> “Olá, ” (com o espaço) + João + “!”."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual operador une duas strings?",
+      "options": [
+        "O operador +",
+        "O operador =",
+        "O operador *",
+        "O operador &"
+      ],
+      "correct": 0,
+      "explain": "<b>O mais:</b> com números ele soma; com textos ele cola um no outro (concatena)."
+    },
+    {
+      "topic": "strings",
+      "statement": "Com a e b iguais a \"abc\", o que o trecho da aula mostra?",
+      "code": "String a = \"abc\";\nString b = \"abc\";\nif (a.equals(b)) {\n  System.out.println(\"As strings são iguais\");\n}",
+      "options": [
+        "As strings são iguais",
+        "O texto abc duas vezes",
+        "A palavra true na tela",
+        "Nada é mostrado na tela"
+      ],
+      "correct": 0,
+      "explain": "<b>equals compara o conteúdo:</b> abc e abc são iguais, então o if entra e imprime a frase."
+    },
+    {
+      "topic": "strings",
+      "statement": "E se b passar a valer \"ABC\", com letras maiúsculas?",
+      "code": "String a = \"abc\";\nString b = \"ABC\";\nif (a.equals(b)) {\n  System.out.println(\"As strings são iguais\");\n}",
+      "options": [
+        "Aparece a palavra false no terminal",
+        "Nada aparece: ABC não é igual a abc",
+        "Aparece: As strings são iguais",
+        "Aparece um erro de compilação"
+      ],
+      "correct": 1,
+      "explain": "<b>Maiúscula conta:</b> para o equals, A e a são diferentes. A condição é falsa e o if não entra."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que este trecho da aula imprime?",
+      "code": "String texto = \"Programação\";\nSystem.out.println(\"Tamanho: \" + texto.length());",
+      "options": [
+        "Tamanho: 12",
+        "Tamanho: 10",
+        "Tamanho: 0",
+        "Tamanho: 11"
+      ],
+      "correct": 3,
+      "explain": "<b>Conte as letras:</b> P-r-o-g-r-a-m-a-ç-ã-o são 11 caracteres. Letra com acento conta como uma."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que este trecho da aula imprime, usando charAt(0)?",
+      "code": "String texto = \"Java\";\nchar primeiraLetra = texto.charAt(0);\nSystem.out.println(\"Primeira letra: \" + primeiraLetra);",
+      "options": [
+        "Primeira letra: v",
+        "Primeira letra: 0",
+        "Primeira letra: J",
+        "Primeira letra: a"
+      ],
+      "correct": 2,
+      "explain": "<b>A contagem começa no 0:</b> a posição 0 de Java é o J."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que toUpperCase() e toLowerCase() devolvem?",
+      "options": [
+        "A mesma string, sem nenhuma mudança",
+        "Uma nova string, já convertida",
+        "Um char com a primeira letra",
+        "Um boolean dizendo se mudou"
+      ],
+      "correct": 1,
+      "explain": "<b>Nova string:</b> a original continua como era. Para guardar a convertida, é preciso atribuir a uma variável."
+    },
+    {
+      "topic": "strings",
+      "statement": "Em texto.substring(0, 5), o que acontece com o caractere do índice 5?",
+      "options": [
+        "É o último do resultado",
+        "É o primeiro do resultado",
+        "Vira um espaço em branco",
+        "Fica de fora do resultado"
+      ],
+      "correct": 3,
+      "explain": "<b>O fim não é incluído:</b> substring(0, 5) pega os índices 0, 1, 2, 3 e 4."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que replace('a', 'o') faz com a palavra banana?",
+      "options": [
+        "Troca só a primeira letra a por o",
+        "Troca todas as letras a por o",
+        "Troca todas as letras o por a",
+        "Remove as letras a da palavra"
+      ],
+      "correct": 1,
+      "explain": "<b>Todas as ocorrências:</b> banana vira bonono."
+    },
+    {
+      "topic": "strings",
+      "statement": "Quais espaços o trim() remove?",
+      "options": [
+        "Todos, inclusive os do meio",
+        "Os do início e os do final",
+        "Somente os que estão no meio",
+        "Somente os que estão no final"
+      ],
+      "correct": 1,
+      "explain": "<b>Aparar as pontas:</b> os espaços do meio continuam lá."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a saída, com os colchetes marcando as pontas do texto?",
+      "code": "String nome = \"  Ana Lia  \";\nSystem.out.println(\"[\" + nome.trim() + \"]\");",
+      "options": [
+        "[Ana Lia]",
+        "[AnaLia]",
+        "[ Ana Lia ]",
+        "[Ana Lia ]"
+      ],
+      "correct": 0,
+      "explain": "<b>trim() tira só as pontas:</b> o espaço entre Ana e Lia continua."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que o método equals() verifica?",
+      "options": [
+        "Qual das duas vem primeiro",
+        "Se as duas começam pela mesma letra",
+        "Se as duas têm o mesmo tamanho",
+        "Se o conteúdo das duas é igual"
+      ],
+      "correct": 3,
+      "explain": "<b>Conteúdo:</b> letra por letra. É assim que se compara texto em Java."
+    },
+    {
+      "topic": "arrays",
+      "statement": "O que um array permite armazenar em uma única variável?",
+      "options": [
+        "Vários valores de tipos diferentes",
+        "Vários valores do mesmo tipo",
+        "Um único valor de cada tipo",
+        "Somente textos e letras soltas"
+      ],
+      "correct": 1,
+      "explain": "<b>Mesmo tipo:</b> um int[] só guarda inteiros; um String[] só guarda textos."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Um array foi criado com new int[5]. Dá para ele passar a ter 6 posições?",
+      "options": [
+        "Sim, com numeros.length = 6",
+        "Sim, basta usar numeros[5]",
+        "Não, o tamanho é fixo",
+        "Só se o tipo for String"
+      ],
+      "correct": 2,
+      "explain": "<b>Tamanho fixo:</b> depois de definido, não pode ser alterado. É a observação do slide."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Em int[] numeros;, o que os colchetes [] indicam?",
+      "options": [
+        "Que o valor dela é zero",
+        "Que a variável é um método",
+        "Que a variável está vazia",
+        "Que a variável é um array"
+      ],
+      "correct": 3,
+      "explain": "<b>[] = array:</b> sem os colchetes seria só um int comum."
+    },
+    {
+      "topic": "arrays",
+      "statement": "O que a declaração de um array especifica?",
+      "options": [
+        "O endereço e o tipo do programa",
+        "O índice e o valor do primeiro",
+        "O tamanho e os valores iniciais",
+        "O tipo dos elementos e o nome"
+      ],
+      "correct": 3,
+      "explain": "<b>tipo[] nomeDoArray;</b> Na declaração ainda não há tamanho nem valores."
+    },
+    {
+      "topic": "arrays",
+      "statement": "O que significa inicializar um array?",
+      "options": [
+        "Escrever o nome do array no programa",
+        "Alocar memória para guardar os valores",
+        "Apagar os valores antigos da memória",
+        "Imprimir todos os valores na tela"
+      ],
+      "correct": 1,
+      "explain": "<b>Reservar as gavetas:</b> só depois disso o array pode guardar valores."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Em int[] numeros = {1, 2, 3, 4, 5};, o que define o tamanho?",
+      "options": [
+        "O comando numeros.length",
+        "O último valor da lista",
+        "A quantidade de valores",
+        "O maior valor da lista"
+      ],
+      "correct": 2,
+      "explain": "<b>Automático:</b> cinco valores entre chaves, cinco posições. Não precisa escrever o tamanho."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual linha só DECLARA o array, sem criar posições?",
+      "options": [
+        "int[] numeros = new int[5];",
+        "numeros = new int[5];",
+        "int[] numeros;",
+        "int[] numeros = {1, 2};"
+      ],
+      "correct": 2,
+      "explain": "<b>Só tipo e nome:</b> as outras linhas já reservam memória."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual linha cria um array já com valores predefinidos?",
+      "options": [
+        "int n = [4, 7, 9];",
+        "int[3] n = 4, 7, 9;",
+        "int[] n = (4, 7, 9);",
+        "int[] n = {4, 7, 9};"
+      ],
+      "correct": 3,
+      "explain": "<b>Chaves:</b> os valores ficam entre { } e separados por vírgula."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Para que serve o índice de um array?",
+      "options": [
+        "Somar os valores já guardados",
+        "Acessar cada valor pela posição",
+        "Definir o tipo dos elementos",
+        "Contar quantos valores existem"
+      ],
+      "correct": 1,
+      "explain": "<b>O número da gaveta:</b> numeros[0] é a primeira, numeros[1] é a segunda."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Qual é a vantagem do array sobre várias variáveis separadas?",
+      "options": [
+        "Um tamanho que cresce sozinho",
+        "Um nome só para o conjunto de valores",
+        "Valores de tipos variados juntos",
+        "Um nome diferente para cada valor do grupo"
+      ],
+      "correct": 1,
+      "explain": "<b>Um nome, várias posições:</b> em vez de nota1, nota2, nota3... existe notas[0], notas[1], notas[2]."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Com int[] numeros = {1, 2, 3, 4, 5};, quanto vale numeros[2]?",
+      "code": "int[] numeros = {1, 2, 3, 4, 5};",
+      "options": [
+        "Vale 1",
+        "Vale 3",
+        "Vale 4",
+        "Vale 2"
+      ],
+      "correct": 1,
+      "explain": "<b>Índice 2 = terceira posição:</b> 0 é o 1, 1 é o 2, 2 é o 3."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "O que é um array multidimensional?",
+      "options": [
+        "Estrutura que guarda dados em mais de uma dimensão",
+        "Estrutura que guarda um único dado em cada variável",
+        "Método que repete um bloco em mais de um laço",
+        "Variável que muda de tipo durante a execução"
+      ],
+      "correct": 0,
+      "explain": "<b>Mais de uma direção:</b> em vez de uma fileira, há linhas e colunas."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é o tipo mais comum de array multidimensional?",
+      "options": [
+        "O tridimensional (cubo)",
+        "O unidimensional (vetor)",
+        "O bidimensional (matriz)",
+        "O sem dimensão (simples)"
+      ],
+      "correct": 2,
+      "explain": "<b>Matriz:</b> duas dimensões, linha e coluna."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Como uma matriz pode ser visualizada?",
+      "options": [
+        "Como uma fila de uma só direção",
+        "Como lista de métodos e classes",
+        "Como texto dividido em letras",
+        "Como tabela com linhas e colunas"
+      ],
+      "correct": 3,
+      "explain": "<b>Tabela:</b> igual a uma planilha ou a uma batalha naval."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Com a matriz do slide, o que este programa mostra?",
+      "code": "int[][] matriz = {\n  {1, 2, 3},\n  {4, 5, 6},\n  {7, 8, 9}\n};\nint valor = matriz[1][2];\nSystem.out.println(\"valor recebe \" + valor);",
+      "options": [
+        "valor recebe 6",
+        "valor recebe 8",
+        "valor recebe 5",
+        "valor recebe 2"
+      ],
+      "correct": 0,
+      "explain": "<b>Linha 1, coluna 2:</b> a linha 1 é {4, 5, 6}, e a coluna 2 dela é o 6."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Em matriz[1][2], o que representa cada índice?",
+      "options": [
+        "1 é o total e 2 é o valor",
+        "1 é a linha e 2 é a coluna",
+        "1 é o valor e 2 é a linha",
+        "1 é a coluna e 2 é a linha"
+      ],
+      "correct": 1,
+      "explain": "<b>Linha primeiro:</b> matriz[linha][coluna]."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "A instrução matriz[0][2] = 3; coloca o 3 em que lugar?",
+      "options": [
+        "3ª linha, 1ª coluna",
+        "1ª linha, 2ª coluna",
+        "1ª linha, 3ª coluna",
+        "2ª linha, 3ª coluna"
+      ],
+      "correct": 2,
+      "explain": "<b>Começa no 0:</b> linha 0 é a 1ª; coluna 2 é a 3ª."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Como são os laços que percorrem uma matriz inteira?",
+      "options": [
+        "Dois laços, um dentro do outro",
+        "Dois laços, um depois do outro",
+        "Um laço só, com um contador",
+        "Três laços, um para cada linha"
+      ],
+      "correct": 0,
+      "explain": "<b>Laços aninhados:</b> cada um percorre uma dimensão."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "No código da aula, para que serve o System.out.println() vazio?",
+      "options": [
+        "Encerrar o laço de dentro antes da hora",
+        "Imprimir o total de cada coluna",
+        "Apagar a linha que já foi impressa",
+        "Pular para a próxima linha da tabela"
+      ],
+      "correct": 3,
+      "explain": "<b>Quebra de linha:</b> depois de imprimir todas as colunas de uma linha, ele desce para a seguinte."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Em j < matriz[i].length, o que é matriz[i].length?",
+      "options": [
+        "A quantidade de colunas da linha i",
+        "A soma dos valores da linha i",
+        "O valor que está na linha i",
+        "A quantidade de linhas da matriz"
+      ],
+      "correct": 0,
+      "explain": "<b>matriz.length</b> conta linhas; <b>matriz[i].length</b> conta as colunas daquela linha."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Segundo a aula, o que os arrays multidimensionais costumam representar?",
+      "options": [
+        "Classes, objetos e métodos void",
+        "Tabelas, mapas e matrizes da matemática",
+        "Textos, laços e condições de parada",
+        "Senhas, menus e mensagens de erro do app"
+      ],
+      "correct": 1,
+      "explain": "<b>Tudo que tem linha e coluna:</b> tabelas de dados, mapas e matrizes matemáticas."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Quantas posições tem new int[3][3]?",
+      "options": [
+        "Nove posições",
+        "Seis posições",
+        "Doze posições",
+        "Três posições"
+      ],
+      "correct": 0,
+      "explain": "<b>Linhas × colunas:</b> 3 × 3 = 9."
+    },
+    {
+      "topic": "classes",
+      "statement": "A POO organiza o código em torno de quê?",
+      "options": [
+        "laços",
+        "vetores",
+        "objetos",
+        "textos"
+      ],
+      "correct": 2,
+      "explain": "<b>Objetos:</b> é a primeira frase da aula. Cada objeto junta dados e ações."
+    },
+    {
+      "topic": "classes",
+      "statement": "No desenho da classe, o retângulo tem três seções. Qual é a ordem, de cima para baixo?",
+      "options": [
+        "Nome, atributos e métodos",
+        "Atributos, nome e métodos",
+        "Nome, métodos e atributos",
+        "Métodos, nome e atributos"
+      ],
+      "correct": 0,
+      "explain": "<b>Carro / marca, modelo, ano / acelerar(), frear():</b> nome em cima, atributos no meio, métodos embaixo."
+    },
+    {
+      "topic": "classes",
+      "statement": "Dois objetos da mesma classe podem ter valores diferentes?",
+      "options": [
+        "Não, todos dividem os mesmos valores",
+        "Só se um deles for apagado antes",
+        "Sim, cada um tem os seus valores",
+        "Só se a classe não tiver métodos"
+      ],
+      "correct": 2,
+      "explain": "<b>Mesma forma, bolos diferentes:</b> um Carro pode ser Toyota e o outro, Fiat."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual par está correto?",
+      "options": [
+        "Atributo: característica. Método: comportamento",
+        "Atributo: instância. Método: classe",
+        "Atributo: repetição. Método: variável",
+        "Atributo: comportamento. Método: característica"
+      ],
+      "correct": 0,
+      "explain": "<b>O que tem e o que faz:</b> marca e ano são características; acelerar e frear são comportamentos."
+    },
+    {
+      "topic": "classes",
+      "statement": "O TestaCarro da aula chama acelerar() e depois frear(). O que aparece?",
+      "code": "class Carro {\n  String marca;\n  String modelo;\n  int ano;\n  public void acelerar() {\n    System.out.println(\"O carro está acelerando.\");\n  }\n  public void frear() {\n    System.out.println(\"O carro está freando.\");\n  }\n}\n// no main:\nCarro meuCarro = new Carro();\nmeuCarro.marca = \"Toyota\";\nmeuCarro.modelo = \"Corolla\";\nmeuCarro.ano = 2020;\nmeuCarro.acelerar();\nmeuCarro.frear();",
+      "options": [
+        "O carro está acelerando. / O carro está freando.",
+        "O carro está freando. / O carro está acelerando.",
+        "O carro está acelerando.",
+        "Toyota / Corolla / 2020"
+      ],
+      "correct": 0,
+      "explain": "<b>Na ordem das chamadas:</b> dar valor aos atributos não imprime nada; só os métodos imprimem."
+    },
+    {
+      "topic": "classes",
+      "statement": "O que faz a linha meuCarro.marca = \"Toyota\";?",
+      "options": [
+        "Cria uma nova classe chamada Toyota",
+        "Chama um método do objeto Carro",
+        "Compara a marca com Toyota",
+        "Dá valor a um atributo do objeto"
+      ],
+      "correct": 3,
+      "explain": "<b>Objeto, ponto, atributo:</b> a marca daquele carro passa a ser Toyota."
+    },
+    {
+      "topic": "classes",
+      "statement": "Em Carro meuCarro = new Carro();, qual é o papel do new?",
+      "options": [
+        "Criar o objeto a partir da classe",
+        "Copiar a classe para outro arquivo",
+        "Apagar o objeto antigo da classe",
+        "Chamar o método principal dela"
+      ],
+      "correct": 0,
+      "explain": "<b>new = novo:</b> é ele que usa o molde e cria o objeto na memória."
+    },
+    {
+      "topic": "classes",
+      "statement": "Na linha meuCarro.acelerar();, o que está acontecendo?",
+      "options": [
+        "A criação de um atributo do objeto",
+        "A declaração de uma classe nova",
+        "A chamada de um método do objeto",
+        "A comparação entre dois carros"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto, ponto, método e parênteses:</b> é assim que se manda o objeto fazer algo."
+    },
+    {
+      "topic": "classes",
+      "statement": "A aula compara a classe com o quê?",
+      "options": [
+        "um laço",
+        "um molde",
+        "um índice",
+        "um texto"
+      ],
+      "correct": 1,
+      "explain": "<b>Molde:</b> define como todos os objetos daquele tipo vão ser."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual é um ganho de dividir o programa em classes, segundo a aula?",
+      "options": [
+        "Elimina a necessidade de usar métodos",
+        "Faz o programa rodar sem compilar",
+        "Impede que o código seja alterado",
+        "Facilita a manutenção e a expansão"
+      ],
+      "correct": 3,
+      "explain": "<b>Partes pequenas:</b> cada classe cuida de um pedaço, e fica mais fácil consertar e crescer."
+    },
+    {
+      "topic": "classes",
+      "statement": "Na classe Pessoa do exercício, o que fazerAniversario() deve fazer?",
+      "options": [
+        "Zerar a idade da pessoa",
+        "Criar outra pessoa na lista",
+        "Somar 1 na idade da pessoa",
+        "Mostrar o nome da pessoa"
+      ],
+      "correct": 2,
+      "explain": "<b>Incrementar a idade:</b> idade++ dentro do método."
+    },
+    {
+      "topic": "metodos",
+      "statement": "No contexto do Java, como a aula também chama os métodos sem retorno?",
+      "options": [
+        "Parâmetros",
+        "Instâncias",
+        "Procedimentos",
+        "Modificadores"
+      ],
+      "correct": 2,
+      "explain": "<b>Procedimento:</b> faz a tarefa e não devolve valor. O nome técnico é método void."
+    },
+    {
+      "topic": "metodos",
+      "statement": "E o método COM retorno, que outro nome recebe na aula?",
+      "options": [
+        "Laço",
+        "Objeto",
+        "Função",
+        "Atributo"
+      ],
+      "correct": 2,
+      "explain": "<b>Função:</b> executa a tarefa e devolve um valor para quem chamou."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Para que os métodos void são usados?",
+      "options": [
+        "Criar tipos, como int, double e String",
+        "Realizar ações, como imprimir uma mensagem",
+        "Devolver números, como o total de uma soma",
+        "Guardar valores, como um vetor de notas"
+      ],
+      "correct": 1,
+      "explain": "<b>Ações:</b> imprimir, alterar o estado de um objeto ou fazer cálculos internos."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Segundo a aula, como deve ser o nome de um método?",
+      "options": [
+        "Sempre escrito em letras maiúsculas",
+        "Descritivo da ação que ele realiza",
+        "Igual ao nome da classe em que está",
+        "Formado por uma letra e um número"
+      ],
+      "correct": 1,
+      "explain": "<b>O nome conta o que faz:</b> imprimirMensagem, somar, acelerar."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Para que servem os parênteses depois do nome do método?",
+      "options": [
+        "Definir o método e receber parâmetros",
+        "Mostrar que o método não tem retorno",
+        "Marcar o começo e o fim do programa",
+        "Indicar o tipo de valor devolvido"
+      ],
+      "correct": 0,
+      "explain": "<b>Mesmo vazios, são obrigatórios:</b> é ali que entram os parâmetros, quando existem."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Como um método com retorno deve terminar?",
+      "options": [
+        "Com return e o valor a devolver",
+        "Com void e o nome do método",
+        "Com break e a condição do laço",
+        "Com println e o texto final"
+      ],
+      "correct": 0,
+      "explain": "<b>return valor;</b> entrega a resposta para quem chamou."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que a classe Main da aula imprime?",
+      "code": "class Impressora {\n  public void imprimirMensagem() {\n    System.out.println(\"Esta é uma mensagem de teste.\");\n  }\n}\n// no main:\nImpressora impressora = new Impressora();\nimpressora.imprimirMensagem(); // Chama o método para exibir a mensagem",
+      "options": [
+        "Chama o método para exibir",
+        "impressora.imprimirMensagem()",
+        "Esta é uma mensagem de teste.",
+        "Este é o retorno do método."
+      ],
+      "correct": 2,
+      "explain": "<b>O método void imprime sozinho:</b> o texto depois de // é comentário e não aparece."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que o exemplo somar() da aula imprime?",
+      "code": "public int somar() {\n  int a = 5;\n  int b = 3;\n  int resultado = a + b;\n  return resultado;\n}\n// no main:\nExemplo exemplo = new Exemplo();\nint resultado = exemplo.somar();\nSystem.out.println(\"O resultado da soma é: \" + resultado);",
+      "options": [
+        "O resultado da soma é: 53",
+        "O resultado da soma é: 15",
+        "O resultado da soma é: 0",
+        "O resultado da soma é: 8"
+      ],
+      "correct": 3,
+      "explain": "<b>5 + 3 = 8:</b> somar() devolve 8, que é guardado em resultado e colado no texto."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Quais são exemplos de tipo de retorno, segundo a aula?",
+      "options": [
+        "public, static, main e args",
+        "class, new, void e return",
+        "while, for, if, do e switch",
+        "int, double, String e boolean"
+      ],
+      "correct": 3,
+      "explain": "<b>O tipo do valor devolvido:</b> inteiro, com vírgula, texto ou verdadeiro/falso."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Na classe Calc, qual declaração faz sum() devolver a soma de dois inteiros?",
+      "options": [
+        "public void sum(int a, int b)",
+        "public sum int(int a, int b)",
+        "int public sum(int a, int b)",
+        "public int sum(int a, int b)"
+      ],
+      "correct": 3,
+      "explain": "<b>public, tipo, nome, parâmetros:</b> com void ele não devolveria nada."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que este programa imprime?",
+      "code": "class Calc {\n  public int div(int a, int b) {\n    return a / b;\n  }\n}\n// no main:\nCalc c = new Calc();\nSystem.out.println(\"Divisão: \" + c.div(7, 2));",
+      "options": [
+        "Divisão: 3.5",
+        "Divisão: 4",
+        "Divisão: 1",
+        "Divisão: 3"
+      ],
+      "correct": 3,
+      "explain": "<b>int dividido por int dá int:</b> 7 / 2 = 3, sem a parte decimal."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Segundo a aula, o que muda no código quando se usam métodos?",
+      "options": [
+        "Fica mais fácil de ler, manter e depurar",
+        "Passa a rodar sem precisar do método main",
+        "Gasta menos espaço na memória de vídeo",
+        "Deixa de precisar de variáveis e tipos"
+      ],
+      "correct": 0,
+      "explain": "<b>Modularização:</b> partes menores e independentes, cada uma com sua tarefa."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Um método declarado como public int não tem nenhum return. O que acontece?",
+      "code": "public int somar() {\n  int a = 5;\n}",
+      "options": [
+        "Roda normal, mas sem imprimir nada",
+        "Compila e devolve um texto vazio",
+        "Compila e devolve o número zero",
+        "Não compila: falta devolver um valor"
+      ],
+      "correct": 3,
+      "explain": "<b>Prometeu int, tem que entregar int:</b> sem o return o Java nem compila."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O que é a passagem de parâmetros?",
+      "options": [
+        "O valor que o método devolve no final",
+        "A conversão de números inteiros em textos",
+        "A ordem em que os métodos ficam no arquivo",
+        "A forma como os argumentos chegam ao método"
+      ],
+      "correct": 3,
+      "explain": "<b>O jeito de entregar:</b> pode ser uma cópia (valor) ou o endereço (referência)."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No exemplo da aula, qual é a PRIMEIRA linha impressa?",
+      "code": "class VerificadorParImpar {\n  public boolean ehPar(int numero) {\n    return numero % 2 == 0;\n  }\n}\n// no main:\nVerificadorParImpar verificador = new VerificadorParImpar();\nint numero = 5;\nboolean resultado = verificador.ehPar(numero);\nif (resultado) {\n  System.out.println(\"O número \" + numero + \" é par.\");\n} else {\n  System.out.println(\"O número \" + numero + \" é ímpar.\");\n}\nSystem.out.println(\"O valor original de 'numero' ainda é: \" + numero);",
+      "options": [
+        "O número 1 é ímpar.",
+        "O número 5 é par.",
+        "O número 5 é true.",
+        "O número 5 é ímpar."
+      ],
+      "correct": 3,
+      "explain": "<b>5 % 2 = 1:</b> o resto não é zero, ehPar devolve false e o programa cai no else."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No mesmo exemplo, qual é a ÚLTIMA linha impressa?",
+      "code": "class VerificadorParImpar {\n  public boolean ehPar(int numero) {\n    return numero % 2 == 0;\n  }\n}\n// no main:\nVerificadorParImpar verificador = new VerificadorParImpar();\nint numero = 5;\nboolean resultado = verificador.ehPar(numero);\nif (resultado) {\n  System.out.println(\"O número \" + numero + \" é par.\");\n} else {\n  System.out.println(\"O número \" + numero + \" é ímpar.\");\n}\nSystem.out.println(\"O valor original de 'numero' ainda é: \" + numero);",
+      "options": [
+        "O valor original de 'numero' ainda é: 1",
+        "O valor original de 'numero' ainda é: 5",
+        "O valor original de 'numero' ainda é: 0",
+        "O valor original de 'numero' ainda é: 2"
+      ],
+      "correct": 1,
+      "explain": "<b>Por valor:</b> ehPar recebeu uma cópia. O numero do main continua 5."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O que ehPar(8) devolve, e por quê?",
+      "code": "class VerificadorParImpar {\n  public boolean ehPar(int numero) {\n    return numero % 2 == 0;\n  }\n}",
+      "options": [
+        "false, porque o resto é zero",
+        "true, porque o resto é zero",
+        "true, porque o resto é um",
+        "false, porque 8 é maior que 2"
+      ],
+      "correct": 1,
+      "explain": "<b>8 % 2 = 0:</b> a comparação 0 == 0 é verdadeira."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O que ordenarVetor(numeros) imprime?",
+      "code": "class ManipulandoVetores {\n  public void ordenarVetor(int[] vetor) {\n    Arrays.sort(vetor);\n    System.out.print(\"Vetor ordenado: \");\n    for (int num : vetor) {\n      System.out.print(num + \" \");\n    }\n    System.out.println();\n  }\n  public void mostrarMaiorElemento(int[] vetor) {\n    int maior = vetor[vetor.length - 1];\n    System.out.println(\"Maior elemento do vetor: \" + maior);\n  }\n}\n// no main:\nint[] numeros = {42, 15, 8, 23};\nnew ManipulandoVetores().ordenarVetor(numeros);",
+      "options": [
+        "Vetor ordenado: 8 15 23 42",
+        "Vetor ordenado: 42 23 15 8",
+        "Vetor ordenado: 15 23 42 8",
+        "Vetor ordenado: 42 15 8 23"
+      ],
+      "correct": 0,
+      "explain": "<b>Arrays.sort:</b> coloca do menor para o maior."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Depois de ordenar, o que mostrarMaiorElemento(numeros) imprime?",
+      "code": "class ManipulandoVetores {\n  public void ordenarVetor(int[] vetor) {\n    Arrays.sort(vetor);\n    System.out.print(\"Vetor ordenado: \");\n    for (int num : vetor) {\n      System.out.print(num + \" \");\n    }\n    System.out.println();\n  }\n  public void mostrarMaiorElemento(int[] vetor) {\n    int maior = vetor[vetor.length - 1];\n    System.out.println(\"Maior elemento do vetor: \" + maior);\n  }\n}\n// no main:\nint[] numeros = {42, 15, 8, 23};\nManipulandoVetores m = new ManipulandoVetores();\nm.ordenarVetor(numeros);\nm.mostrarMaiorElemento(numeros);",
+      "options": [
+        "Maior elemento do vetor: 15",
+        "Maior elemento do vetor: 8",
+        "Maior elemento do vetor: 4",
+        "Maior elemento do vetor: 42"
+      ],
+      "correct": 3,
+      "explain": "<b>O último do vetor ordenado é o maior:</b> {8, 15, 23, 42}."
+    },
+    {
+      "topic": "parametros",
+      "statement": "E se o main chamar só mostrarMaiorElemento, SEM ordenar antes?",
+      "code": "class ManipulandoVetores {\n  public void ordenarVetor(int[] vetor) {\n    Arrays.sort(vetor);\n    System.out.print(\"Vetor ordenado: \");\n    for (int num : vetor) {\n      System.out.print(num + \" \");\n    }\n    System.out.println();\n  }\n  public void mostrarMaiorElemento(int[] vetor) {\n    int maior = vetor[vetor.length - 1];\n    System.out.println(\"Maior elemento do vetor: \" + maior);\n  }\n}\n// no main:\nint[] numeros = {42, 15, 8, 23};\nnew ManipulandoVetores().mostrarMaiorElemento(numeros);",
+      "options": [
+        "Maior elemento do vetor: 23",
+        "Maior elemento do vetor: 3",
+        "Maior elemento do vetor: 8",
+        "Maior elemento do vetor: 42"
+      ],
+      "correct": 0,
+      "explain": "<b>O método só pega a última posição:</b> sem ordenar, a última é o 23, e o resultado sai errado."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Depois de ordenarVetor(numeros), como fica o vetor lá no main?",
+      "options": [
+        "Com zeros, pois foi recriado",
+        "Ordenado, pois foi a referência",
+        "Vazio, pois o método terminou",
+        "Igual, pois foi só uma cópia"
+      ],
+      "correct": 1,
+      "explain": "<b>Vetor é objeto:</b> o método mexe no mesmo vetor do main, não numa cópia."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na passagem por valor, o que as mudanças no parâmetro causam na variável de fora?",
+      "options": [
+        "Mudam também o valor original",
+        "Apagam o valor original",
+        "Dobram o valor original",
+        "Não afetam o valor original"
+      ],
+      "correct": 3,
+      "explain": "<b>É uma xerox:</b> riscar a cópia não risca o documento."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na passagem por referência, o que o método recebe?",
+      "options": [
+        "Uma cópia do valor da variável",
+        "O tipo da variável, sem valor",
+        "O nome da variável em texto",
+        "O endereço da variável original"
+      ],
+      "correct": 3,
+      "explain": "<b>O endereço:</b> quem tem o endereço da casa mexe na casa de verdade."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Quais são as maneiras principais de passar parâmetros?",
+      "options": [
+        "Duas: por índice e por coluna",
+        "Três: por valor, tipo e nome",
+        "Duas: por valor e por referência",
+        "Uma só: sempre por referência"
+      ],
+      "correct": 2,
+      "explain": "<b>Valor e referência:</b> cópia ou endereço."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O método multiplica por 2 cada elemento do vetor. O que o main imprime?",
+      "code": "static void dobrar(int[] v) {\n  for (int i = 0; i < v.length; i++) {\n    v[i] = v[i] * 2;\n  }\n}\n// no main:\nint[] numeros = {3, 5, 7};\ndobrar(numeros);\nSystem.out.println(\"numeros: \" + numeros[0] + \" \" + numeros[1] + \" \" + numeros[2]);",
+      "options": [
+        "numeros: 5 7 9",
+        "numeros: 9 15 21",
+        "numeros: 3 5 7",
+        "numeros: 6 10 14"
+      ],
+      "correct": 3,
+      "explain": "<b>Por referência:</b> o vetor do main foi alterado de verdade: 3×2, 5×2, 7×2."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No código da aula, o que faz for (int num : vetor)?",
+      "options": [
+        "Cria um vetor novo a cada volta",
+        "Soma todos os valores de uma vez",
+        "Pega um valor do vetor por volta",
+        "Pega o índice de cada posição"
+      ],
+      "correct": 2,
+      "explain": "<b>“Para cada num do vetor”:</b> a cada volta, num recebe o próximo valor, e não a posição."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O que o comando Arrays.sort(vetor) faz?",
+      "options": [
+        "Coloca os valores em ordem decrescente",
+        "Coloca os valores em ordem crescente",
+        "Soma os valores e devolve o total",
+        "Cria uma cópia vazia do vetor"
+      ],
+      "correct": 1,
+      "explain": "<b>sort = ordenar:</b> do menor para o maior."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No exemplo, por que vetor[vetor.length - 1] é o maior elemento?",
+      "options": [
+        "Porque o índice vale o valor",
+        "Porque length guarda o maior",
+        "Porque o último é sempre o maior",
+        "Porque o vetor já foi ordenado"
+      ],
+      "correct": 3,
+      "explain": "<b>Só vale depois do sort:</b> em ordem crescente, o maior fica no fim."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Quais são os três elementos de todo while?",
+      "options": [
+        "Inicialização, retorno e atualização",
+        "Condição, índice e tamanho do vetor",
+        "Inicialização, condição e atualização",
+        "Classe, objeto e chamada do método"
+      ],
+      "correct": 2,
+      "explain": "<b>Antes, nos parênteses e dentro do bloco:</b> int i = 1; while (i &lt;= 10) { ... i++; }"
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Onde fica a atualização da variável no while?",
+      "options": [
+        "Dentro do bloco, antes de ele fechar",
+        "Nos parênteses, junto com a condição",
+        "Depois do while, fora das chaves",
+        "Antes do while, com a inicialização"
+      ],
+      "correct": 0,
+      "explain": "<b>Dentro do bloco:</b> sem ela, o laço nunca termina."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Você não sabe quantas vezes vai repetir, e pode ser nenhuma. Qual laço combina?",
+      "options": [
+        "O do-while",
+        "O for",
+        "O while",
+        "O switch"
+      ],
+      "correct": 2,
+      "explain": "<b>Desconhecido → while.</b> Conhecido → for. Ao menos uma vez → do-while."
+    },
+    {
+      "topic": "repeticao",
+      "statement": "Qual é o MÍNIMO de execuções do bloco em cada laço?",
+      "options": [
+        "while 0, do-while 1, for 0",
+        "while 1, do-while 1, for 0",
+        "while 0, do-while 0, for 1",
+        "while 1, do-while 0, for 1"
+      ],
+      "correct": 0,
+      "explain": "<b>Quem testa antes pode nem rodar:</b> while e for testam antes; o do-while testa depois."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Na validação com do-while, o que a condição deve descrever?",
+      "options": [
+        "O total de tentativas já feitas",
+        "O valor certo que se quer receber",
+        "A mensagem mostrada no final",
+        "O erro que faz pedir de novo"
+      ],
+      "correct": 3,
+      "explain": "<b>O contrário do que se quer:</b> quero positivo, então repito enquanto numero &lt;= 0."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Por que a variável numero é declarada fora do do-while?",
+      "options": [
+        "Para poder ser usada na condição",
+        "Para o Scanner conseguir ler texto",
+        "Para receber o valor zero sozinha",
+        "Para gastar menos memória no laço"
+      ],
+      "correct": 0,
+      "explain": "<b>A condição fica fora das chaves:</b> o que nasce dentro do bloco não existe lá."
+    },
+    {
+      "topic": "dowhile",
+      "statement": "Qual dos três laços leva ponto e vírgula depois dos parênteses da condição?",
+      "options": [
+        "Só o while comum",
+        "Só o for comum",
+        "O while e o for",
+        "Só o do-while"
+      ],
+      "correct": 3,
+      "explain": "<b>} while (condição);</b> No while e no for, pôr ; ali é um erro clássico."
+    },
+    {
+      "topic": "for",
+      "statement": "Depois de rodar o bloco, qual é o próximo passo do for?",
+      "options": [
+        "Imprimir a variável de controle",
+        "Sair do laço sem testar mais nada",
+        "Fazer de novo a inicialização toda",
+        "Fazer o incremento ou decremento"
+      ],
+      "correct": 3,
+      "explain": "<b>Ordem:</b> inicializa, testa, executa, incrementa e volta a testar."
+    },
+    {
+      "topic": "for",
+      "statement": "Onde ficam a inicialização e a atualização no for?",
+      "options": [
+        "Juntas, no cabeçalho do laço",
+        "Separadas, fora e dentro do bloco",
+        "Juntas, depois do fim do bloco",
+        "Separadas, em duas classes"
+      ],
+      "correct": 0,
+      "explain": "<b>Tudo numa linha:</b> essa é a diferença visual para o while."
+    },
+    {
+      "topic": "for",
+      "statement": "Qual for faz o mesmo que o contador while de 1 a 10?",
+      "options": [
+        "for (int i = 0; i <= 10; i++)",
+        "for (int i = 1; i <= 10; i++)",
+        "for (int i = 1; i < 10; i++)",
+        "for (int i = 10; i <= 1; i--)"
+      ],
+      "correct": 1,
+      "explain": "<b>Converter laços cai em prova:</b> mesmo começo, mesma condição, mesmo passo."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é a diferença entre texto.length() e vetor.length?",
+      "options": [
+        "Na String tem parênteses; no array, não",
+        "Os dois têm parênteses obrigatórios",
+        "No array tem parênteses; na String, não",
+        "Nenhum dos dois usa parênteses"
+      ],
+      "correct": 0,
+      "explain": "<b>Pegadinha:</b> String é método, length(); array é length, sem parênteses."
+    },
+    {
+      "topic": "strings",
+      "statement": "O que significa dizer que as strings são imutáveis?",
+      "options": [
+        "A string só aceita letras minúsculas",
+        "A string não pode ser impressa",
+        "Os métodos devolvem uma nova string",
+        "Os métodos mudam a string original"
+      ],
+      "correct": 2,
+      "explain": "<b>Para guardar, atribua:</b> String novo = texto.trim();"
+    },
+    {
+      "topic": "strings",
+      "statement": "O que o for imprime ao percorrer a string?",
+      "code": "String texto = \"Java\";\nfor (int i = 0; i < texto.length(); i++) {\n  System.out.print(texto.charAt(i) + \"-\");\n}",
+      "options": [
+        "a-v-a-J-",
+        "J-a-v-",
+        "Java-",
+        "J-a-v-a-"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma letra por volta:</b> do índice 0 até length() − 1."
+    },
+    {
+      "topic": "strings",
+      "statement": "Qual é o índice do último caractere de uma string?",
+      "options": [
+        "length() * 1",
+        "length()",
+        "length() - 1",
+        "length() + 1"
+      ],
+      "correct": 2,
+      "explain": "<b>Começa em 0, acaba um antes:</b> “Java” tem 4 letras e o último índice é 3."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Que erro acontece ao acessar numeros[5] num array de 5 posições?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "ArrayIsAlwaysFullException",
+        "ArrayNotDeclaredException",
+        "ArrayLengthNotMatchedException"
+      ],
+      "correct": 0,
+      "explain": "<b>Índice fora dos limites:</b> 5 posições vão de 0 a 4."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Você já sabe os valores do array. Qual forma dispensa o new e o tamanho?",
+      "options": [
+        "int[] numeros = {1, 2, 3, 4, 5};",
+        "int[] numeros = new int[5] {};",
+        "int[] numeros = int[5];",
+        "int[] numeros = (1, 2, 3, 4, 5);"
+      ],
+      "correct": 0,
+      "explain": "<b>Valores predefinidos:</b> o Java conta os valores e define o tamanho."
+    },
+    {
+      "topic": "arrays",
+      "statement": "Depois das duas primeiras linhas, o que o programa imprime?",
+      "code": "int[] numeros = {10, 20, 30};\nnumeros[0] = 15;\nSystem.out.println(numeros[0] + \" e \" + numeros[1]);",
+      "options": [
+        "10 e 20",
+        "15 e 20",
+        "15 e 30",
+        "20 e 30"
+      ],
+      "correct": 1,
+      "explain": "<b>numeros[0] virou 15;</b> numeros[1] continua 20."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Numa matriz 3x3, qual é o último elemento?",
+      "options": [
+        "matriz[3][3]",
+        "matriz[0][2]",
+        "matriz[2][2]",
+        "matriz[2][3]"
+      ],
+      "correct": 2,
+      "explain": "<b>De 0 a 2 nos dois índices:</b> matriz[3][3] dá erro."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "O que acontece se o println() vazio for para DENTRO do laço interno?",
+      "options": [
+        "Nenhum número é impresso",
+        "Cada número sai em uma linha",
+        "Todos saem numa linha só mesmo",
+        "O programa não compila"
+      ],
+      "correct": 1,
+      "explain": "<b>Quebra a cada coluna:</b> por isso ele fica no laço externo, depois do interno."
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Na inicialização direta da matriz, o que é cada par de chaves interno?",
+      "options": [
+        "Uma coluna",
+        "Uma linha",
+        "Um índice",
+        "Um método"
+      ],
+      "correct": 1,
+      "explain": "<b>{1, 2, 3} é a linha 0,</b> {4, 5, 6} é a linha 1 e {7, 8, 9} é a linha 2."
+    },
+    {
+      "topic": "classes",
+      "statement": "Em Carro meuCarro = new Carro();, o que é meuCarro?",
+      "options": [
+        "O valor da marca",
+        "O nome do objeto",
+        "O nome do método",
+        "O tipo da classe"
+      ],
+      "correct": 1,
+      "explain": "<b>Carro é o tipo, meuCarro é o nome</b> e new Carro() cria a instância."
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual classe costuma ter o método main?",
+      "options": [
+        "Todas as classes",
+        "A classe do modelo",
+        "A classe String",
+        "A classe de teste"
+      ],
+      "correct": 3,
+      "explain": "<b>TestaCarro tem o main;</b> Carro e Pessoa normalmente não têm."
+    },
+    {
+      "topic": "classes",
+      "statement": "Como se acessa um atributo ou método de um objeto?",
+      "options": [
+        "Com dois pontos: objeto:membro",
+        "Com uma seta: objeto->membro",
+        "Com um ponto: objeto.membro",
+        "Com barra: objeto/membro"
+      ],
+      "correct": 2,
+      "explain": "<b>Ponto:</b> meuCarro.ano e meuCarro.frear()."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que acontece com o código escrito depois do return, no mesmo método?",
+      "options": [
+        "É executado antes do return do método",
+        "É executado só na segunda chamada",
+        "Não é executado: o método já acabou",
+        "É executado se o método for void"
+      ],
+      "correct": 2,
+      "explain": "<b>return encerra:</b> devolve o valor e sai do método."
+    },
+    {
+      "topic": "metodos",
+      "statement": "O que 10 / 4 com inteiros e (double) 10 / 4 imprimem?",
+      "code": "int a = 10;\nint b = 4;\nSystem.out.println(a / b + \" e \" + (double) a / b);",
+      "options": [
+        "2.5 e 2.5",
+        "2 e 2",
+        "2.5 e 2",
+        "2 e 2.5"
+      ],
+      "correct": 3,
+      "explain": "<b>int com int dá int:</b> a conversão (double) faz a divisão com casas decimais."
+    },
+    {
+      "topic": "metodos",
+      "statement": "Como se chama um método com retorno e se guarda o resultado?",
+      "options": [
+        "int x = obj.metodo();",
+        "void x = obj.metodo();",
+        "obj.metodo() = int x;",
+        "return obj.metodo(x);"
+      ],
+      "correct": 0,
+      "explain": "<b>Guarde numa variável do mesmo tipo.</b> Um void só é chamado: obj.metodo();"
+    },
+    {
+      "topic": "metodos",
+      "statement": "O método foi declarado public int e faz return \"oi\";. O que acontece?",
+      "code": "public int teste() {\n  return \"oi\";\n}",
+      "options": [
+        "Compila e devolve o número 0",
+        "Não compila: o tipo não bate",
+        "Compila e devolve o texto oi",
+        "Roda, mas devolve null"
+      ],
+      "correct": 1,
+      "explain": "<b>O tipo do return deve bater</b> com o tipo declarado."
+    },
+    {
+      "topic": "parametros",
+      "statement": "Na chamada do método, como se passa o array numeros?",
+      "options": [
+        "ordenarVetor(int[] numeros)",
+        "ordenarVetor(int numeros)",
+        "ordenarVetor(numeros[])",
+        "ordenarVetor(numeros)"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem colchetes:</b> o int[] só aparece na declaração do parâmetro."
+    },
+    {
+      "topic": "parametros",
+      "statement": "O que Arrays.sort precisa no começo do arquivo?",
+      "options": [
+        "import java.util.Arrays;",
+        "new java.util.Arrays();",
+        "import Arrays.sort.java;",
+        "import java.sort.Arrays;"
+      ],
+      "correct": 0,
+      "explain": "<b>A classe Arrays fica em java.util.</b>"
+    },
+    {
+      "topic": "parametros",
+      "statement": "O método troca o parâmetro por um vetor NOVO. O que o main imprime?",
+      "code": "class Troca {\n  public void trocar(int[] vetor) {\n    vetor = new int[3];\n    vetor[0] = 99;\n  }\n}\n// no main:\nint[] numeros = {7, 8, 9};\nnew Troca().trocar(numeros);\nSystem.out.println(\"Primeiro: \" + numeros[0]);",
+      "options": [
+        "Primeiro: 3",
+        "Primeiro: 0",
+        "Primeiro: 7",
+        "Primeiro: 99"
+      ],
+      "correct": 2,
+      "explain": "<b>Mexer no conteúdo muda o original; trocar o vetor inteiro, não:</b> vetor = new int[3] só muda a variável de dentro."
+    },
+    {
+      "topic": "parametros",
+      "statement": "No enfoque da aula, quais tipos se comportam como “por valor”?",
+      "options": [
+        "Classes, como Calc e Main",
+        "Objetos, como Carro e Pessoa",
+        "Arrays, como int[] e String[]",
+        "Primitivos, como int e double"
+      ],
+      "correct": 3,
+      "explain": "<b>Primitivo = cópia.</b> Arrays e objetos agem como “por referência”."
     }
   ],
   "historias": [
@@ -7336,6 +8892,203 @@
         "Colocar a água do balde no aquário B"
       ],
       "explicacao": "É a mesma lógica de trocar o valor de duas variáveis: você precisa de uma auxiliar. Essa questão valia 3 pontos na prova."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "while, do-while ou for?",
+      "instrucao": "Encaixe cada frase no laço certo.",
+      "categorias": [
+        "while",
+        "do-while",
+        "for"
+      ],
+      "itens": [
+        {
+          "texto": "Testa antes e pode rodar zero vezes, com a variável criada fora",
+          "categoria": "while",
+          "porque": "Confere antes, e o começo fica fora do laço."
+        },
+        {
+          "texto": "Roda pelo menos uma vez",
+          "categoria": "do-while",
+          "porque": "A condição só é testada depois do bloco."
+        },
+        {
+          "texto": "Sei o número exato de repetições",
+          "categoria": "for",
+          "porque": "Contagem com hora marcada."
+        },
+        {
+          "texto": "Termina com ; depois da condição",
+          "categoria": "do-while",
+          "porque": "} while (condição);"
+        },
+        {
+          "texto": "Início, condição e passo juntos no cabeçalho",
+          "categoria": "for",
+          "porque": "for (int i = 1; i <= 10; i++)"
+        },
+        {
+          "texto": "Menu que precisa aparecer antes da escolha",
+          "categoria": "do-while",
+          "porque": "Precisa mostrar ao menos uma vez."
+        },
+        {
+          "texto": "Repete um número desconhecido de vezes, talvez nenhuma",
+          "categoria": "while",
+          "porque": "Enquanto a condição for verdadeira."
+        },
+        {
+          "texto": "Contagem regressiva de 10 até 1",
+          "categoria": "for",
+          "porque": "for (int i = 10; i >= 1; i--)"
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "void ou com retorno?",
+      "instrucao": "Que tipo de método é?",
+      "categorias": [
+        "Sem retorno (void)",
+        "Com retorno"
+      ],
+      "itens": [
+        {
+          "texto": "public void acelerar()",
+          "categoria": "Sem retorno (void)",
+          "porque": "void não devolve nada."
+        },
+        {
+          "texto": "public int somar()",
+          "categoria": "Com retorno",
+          "porque": "Devolve um int."
+        },
+        {
+          "texto": "Usa return com um valor",
+          "categoria": "Com retorno",
+          "porque": "Precisa entregar a resposta."
+        },
+        {
+          "texto": "Também chamado de procedimento",
+          "categoria": "Sem retorno (void)",
+          "porque": "É o outro nome do método void."
+        },
+        {
+          "texto": "Também chamado de função",
+          "categoria": "Com retorno",
+          "porque": "É o outro nome do método com retorno."
+        },
+        {
+          "texto": "Só imprime uma mensagem",
+          "categoria": "Sem retorno (void)",
+          "porque": "Faz a ação e acaba."
+        },
+        {
+          "texto": "public boolean ehPar(int numero)",
+          "categoria": "Com retorno",
+          "porque": "Devolve true ou false."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Por valor ou por referência?",
+      "instrucao": "O que acontece com o original?",
+      "categorias": [
+        "Por valor",
+        "Por referência"
+      ],
+      "itens": [
+        {
+          "texto": "O método recebe uma cópia",
+          "categoria": "Por valor",
+          "porque": "Cópia do valor."
+        },
+        {
+          "texto": "O método recebe o endereço",
+          "categoria": "Por referência",
+          "porque": "Endereço do original."
+        },
+        {
+          "texto": "ehPar(int numero)",
+          "categoria": "Por valor",
+          "porque": "int é primitivo."
+        },
+        {
+          "texto": "ordenarVetor(int[] vetor)",
+          "categoria": "Por referência",
+          "porque": "Array age como referência."
+        },
+        {
+          "texto": "A variável de fora não muda",
+          "categoria": "Por valor",
+          "porque": "Só a cópia muda."
+        },
+        {
+          "texto": "O conteúdo de fora muda",
+          "categoria": "Por referência",
+          "porque": "É o mesmo vetor."
+        }
+      ]
+    },
+    {
+      "tipo": "classificar",
+      "nome": "Qual método da String?",
+      "instrucao": "Escolha o método que faz a tarefa.",
+      "categorias": [
+        "length()",
+        "charAt()",
+        "substring()",
+        "replace()",
+        "trim()",
+        "equals()"
+      ],
+      "itens": [
+        {
+          "texto": "Contar os caracteres",
+          "categoria": "length()",
+          "porque": "\"Programação\" tem 11."
+        },
+        {
+          "texto": "Pegar a primeira letra",
+          "categoria": "charAt()",
+          "porque": "charAt(0)."
+        },
+        {
+          "texto": "Recortar as 5 primeiras letras",
+          "categoria": "substring()",
+          "porque": "substring(0, 5): o 5 não entra."
+        },
+        {
+          "texto": "banana virar bonono",
+          "categoria": "replace()",
+          "porque": "Troca todas as letras."
+        },
+        {
+          "texto": "Tirar os espaços das pontas",
+          "categoria": "trim()",
+          "porque": "Apara o começo e o fim."
+        },
+        {
+          "texto": "Ver se dois textos são iguais",
+          "categoria": "equals()",
+          "porque": "Compara o conteúdo."
+        }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "A ordem do for",
+      "instrucao": "Toque nos passos na ordem em que o for trabalha.",
+      "sequencia": [
+        "Inicializa a variável, uma vez só",
+        "Testa a condição",
+        "Executa o bloco",
+        "Faz o incremento ou decremento",
+        "Volta a testar a condição"
+      ],
+      "explicacao": "Depois da inicialização, o for repete: testa, executa e incrementa. Quando o teste dá falso, ele sai."
     }
   ],
   "livro": [
@@ -7463,6 +9216,23 @@
         "Por valor: o método recebe uma cópia; o original não muda",
         "Por referência: o método mexe no original",
         "Tipos simples vão por valor; vetores e objetos são alterados"
+      ]
+    },
+    {
+      "titulo": "Revisão da prova: as pegadinhas",
+      "resumo": "Resumo das Aulas 8 a 16, do jeito que costuma cair.",
+      "paginas": [
+        "Os três laços. O while testa ANTES: pode rodar zero vezes. O do-while testa DEPOIS: roda pelo menos uma vez e termina com ponto e vírgula. O for testa antes e junta tudo no cabeçalho. Sabe quantas vezes? for. Não sabe? while. Precisa rodar ao menos uma? do-while. Cuidado: i < 10 para no 9; i <= 10 vai até o 10. Sem atualizar a variável, o laço nunca acaba.",
+        "Textos e vetores. Todo índice começa em 0, e o último é o tamanho menos 1. Em substring(inicio, fim), o fim não entra. String não muda: guarde o resultado numa variável. Compare textos com equals(). texto.length() tem parênteses; vetor.length não tem. Vetor tem tamanho fixo e um tipo só.",
+        "Matrizes. É [linha][coluna]. matriz.length conta as linhas; matriz[i].length conta as colunas. O laço de fora anda nas linhas e o de dentro, nas colunas. O println() vazio fica no laço de fora, depois do de dentro. Numa matriz 3x3, o último é matriz[2][2].",
+        "Classes e métodos. Classe é o molde; objeto é a instância criada com new. Use o ponto: objeto.atributo e objeto.metodo(). void só faz a ação. Método com retorno precisa de return do tipo declarado, e nada roda depois do return. 10 / 4 com inteiros dá 2; (double) 10 / 4 dá 2.5.",
+        "Parâmetros. Primitivo (int, double, boolean) vai como cópia: mudar dentro do método não muda fora. Conteúdo de array ou objeto muda de verdade. Pegadinha: fazer vetor = new int[3] dentro do método não troca o vetor de fora. Na chamada, passe numeros, sem colchetes."
+      ],
+      "guardar": [
+        "while testa antes; do-while testa depois e leva ;",
+        "Índice começa em 0 e termina em tamanho − 1",
+        "length() na String; length no array",
+        "Primitivo não muda fora; conteúdo de array muda"
       ]
     }
   ],
@@ -7759,6 +9529,76 @@
       ],
       "dica": "int é passado por valor.",
       "explicacao": "O método dobrou uma cópia. O x continua 4."
+    },
+    {
+      "enunciado": "Quanto vale \"Programação\".length()? (só o número)",
+      "aceitas": [
+        "11"
+      ],
+      "dica": "Letra com acento conta como uma.",
+      "explicacao": "P-r-o-g-r-a-m-a-ç-ã-o: 11 caracteres."
+    },
+    {
+      "enunciado": "Na matriz {{1,2,3},{4,5,6},{7,8,9}}, quanto vale matriz[1][2]? (só o número)",
+      "aceitas": [
+        "6"
+      ],
+      "dica": "Linha 1, coluna 2, contando do 0.",
+      "explicacao": "A linha 1 é {4, 5, 6}; a coluna 2 é o 6."
+    },
+    {
+      "enunciado": "Qual é o resultado de 10 / 4 com dois int? (só o número)",
+      "aceitas": [
+        "2"
+      ],
+      "dica": "int com int não tem casa decimal.",
+      "explicacao": "10 / 4 = 2; o resto é jogado fora."
+    },
+    {
+      "enunciado": "Quantas posições tem new int[3][4]? (só o número)",
+      "aceitas": [
+        "12",
+        "doze"
+      ],
+      "dica": "Linhas vezes colunas.",
+      "explicacao": "3 × 4 = 12."
+    },
+    {
+      "enunciado": "Um while que começa com a condição falsa roda o bloco quantas vezes? (só o número)",
+      "aceitas": [
+        "0",
+        "zero",
+        "nenhuma"
+      ],
+      "texto": true,
+      "dica": "Ele testa antes.",
+      "explicacao": "Zero: a condição é testada antes."
+    },
+    {
+      "enunciado": "O vetor {42, 15, 8, 23} passou por Arrays.sort. Qual número fica em primeiro? (só o número)",
+      "aceitas": [
+        "8"
+      ],
+      "dica": "sort coloca do menor para o maior.",
+      "explicacao": "Fica {8, 15, 23, 42}."
+    },
+    {
+      "enunciado": "Como se chama, em uma palavra, o molde que define os objetos?",
+      "aceitas": [
+        "classe"
+      ],
+      "texto": true,
+      "dica": "Começa com C.",
+      "explicacao": "Classe é o molde; objeto é a instância."
+    },
+    {
+      "enunciado": "Que classe do Java lê o que a pessoa digita no teclado, nos exemplos da aula?",
+      "aceitas": [
+        "scanner"
+      ],
+      "texto": true,
+      "dica": "Aparece no import java.util.",
+      "explicacao": "Scanner scanner = new Scanner(System.in);"
     }
   ]
 }

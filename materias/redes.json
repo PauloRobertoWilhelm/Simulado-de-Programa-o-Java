@@ -5999,6 +5999,606 @@
       ],
       "correct": 1,
       "explain": "<b>Salto:</b> /26 tem máscara final 192, então o salto é 256 − 192 = 64. O 185 cai no bloco de 128 a 191. Rede = 10.209.22.128, broadcast = 10.209.22.191, hosts de 10.209.22.129 a 10.209.22.190."
+    },
+    {
+      "topic": "status",
+      "statement": "Os códigos de status do HTTP se dividem em quantos grupos?",
+      "options": [
+        "Três grupos, de 1xx a 3xx",
+        "Quatro grupos, de 2xx a 5xx",
+        "Cinco grupos, de 1xx a 5xx",
+        "Nove grupos, de 1xx a 9xx"
+      ],
+      "correct": 2,
+      "explain": "<b>5 famílias:</b> 1xx informação, 2xx sucesso, 3xx redirecionamento, 4xx erro do cliente, 5xx erro do servidor."
+    },
+    {
+      "topic": "status",
+      "statement": "Para que serve o grupo 1xx?",
+      "options": [
+        "Dar uma informação ao cliente",
+        "Confirmar que tudo deu certo",
+        "Mandar para outro endereço",
+        "Culpar o servidor pela falha"
+      ],
+      "correct": 0,
+      "explain": "<b>1xx = informação:</b> não é sucesso nem erro. É só um aviso no meio da conversa."
+    },
+    {
+      "topic": "status",
+      "statement": "Para que serve o grupo 2xx?",
+      "options": [
+        "Dizer que mudou de endereço",
+        "Dizer que o pedido deu certo",
+        "Dizer que o servidor falhou",
+        "Dizer que o pedido está errado"
+      ],
+      "correct": 1,
+      "explain": "<b>2xx = sucesso:</b> o servidor entendeu o pedido e conseguiu atender."
+    },
+    {
+      "topic": "status",
+      "statement": "Para que serve o grupo 3xx?",
+      "options": [
+        "Redirecionar para outro lugar",
+        "Avisar que o servidor falhou",
+        "Confirmar que tudo deu certo",
+        "Recusar o pedido do cliente"
+      ],
+      "correct": 0,
+      "explain": "<b>3xx = redirecionamento:</b> “não é aqui, vá para lá”. Não é erro."
+    },
+    {
+      "topic": "status",
+      "statement": "Para que serve o grupo 4xx?",
+      "options": [
+        "Avisar que o erro é do servidor",
+        "Avisar que a página mudou",
+        "Avisar que o erro é do cliente",
+        "Avisar que o pedido deu certo"
+      ],
+      "correct": 2,
+      "explain": "<b>4xx = erro do cliente:</b> o pedido está errado. O servidor está funcionando."
+    },
+    {
+      "topic": "status",
+      "statement": "Para que serve o grupo 5xx?",
+      "options": [
+        "Avisar que o pedido foi um sucesso",
+        "Avisar que a página foi para outro lugar",
+        "Avisar que o pedido do cliente está errado",
+        "Avisar que o servidor falhou ao atender"
+      ],
+      "correct": 3,
+      "explain": "<b>5xx = erro do servidor:</b> o pedido estava certo, mas o servidor não deu conta."
+    },
+    {
+      "topic": "status",
+      "statement": "O que o PRIMEIRO número do código de status conta?",
+      "options": [
+        "O total: quantos arquivos vieram",
+        "A porta: por onde veio o pedido",
+        "O tempo: quanto a página demorou",
+        "O grupo: que tipo de resposta é"
+      ],
+      "correct": 3,
+      "explain": "<b>Olhe só o primeiro número:</b> 1 informa, 2 deu certo, 3 redireciona, 4 cliente errou, 5 servidor falhou."
+    },
+    {
+      "topic": "status",
+      "statement": "Qual é a diferença entre o 4xx e o 5xx?",
+      "options": [
+        "4xx: pedido errado; 5xx: servidor falhou",
+        "4xx: servidor falhou; 5xx: pedido errado",
+        "4xx: deu tudo certo; 5xx: mudou de lugar",
+        "4xx: só informação; 5xx: deu tudo certo"
+      ],
+      "correct": 0,
+      "explain": "<b>A dica do professor:</b> 4xx = o pedido está errado; 5xx = o servidor falhou."
+    },
+    {
+      "topic": "status",
+      "statement": "Qual é a diferença entre o 2xx e o 3xx?",
+      "options": [
+        "2xx deu certo; 3xx manda a outro lugar",
+        "2xx é falha de um; 3xx é falha de outro",
+        "2xx manda a outro lugar; 3xx deu certo",
+        "2xx só informa; 3xx confirma o sucesso"
+      ],
+      "correct": 0,
+      "explain": "<b>Entregou × encaminhou:</b> no 2xx a resposta veio; no 3xx o navegador precisa ir a outro endereço."
+    },
+    {
+      "topic": "status",
+      "statement": "Qual é a diferença entre o 1xx e o 2xx?",
+      "options": [
+        "1xx confirma o sucesso; 2xx só informa",
+        "1xx redireciona; 2xx avisa uma falha",
+        "1xx só informa; 2xx confirma o sucesso",
+        "1xx é erro do cliente; 2xx é do servidor"
+      ],
+      "correct": 2,
+      "explain": "<b>Aviso × resultado:</b> o 1xx é um recado; o 2xx é “pronto, deu certo”."
+    },
+    {
+      "topic": "status",
+      "statement": "O 404 é de qual grupo, e o que esse grupo diz?",
+      "options": [
+        "3xx: a página está em outro endereço",
+        "5xx: o problema está no servidor web",
+        "2xx: a página foi entregue com sucesso",
+        "4xx: o problema está no pedido feito"
+      ],
+      "correct": 3,
+      "explain": "<b>Começa com 4:</b> erro do cliente. O servidor está no ar, mas o que foi pedido não existe."
+    },
+    {
+      "topic": "status",
+      "statement": "O 500 é de qual grupo, e o que esse grupo diz?",
+      "options": [
+        "3xx: o endereço foi trocado",
+        "4xx: quem errou foi o cliente",
+        "1xx: é apenas uma informação",
+        "5xx: quem falhou foi o servidor"
+      ],
+      "correct": 3,
+      "explain": "<b>Começa com 5:</b> o pedido estava certo, quem quebrou foi o servidor."
+    },
+    {
+      "topic": "status",
+      "statement": "301 e 302 são do mesmo grupo. O que eles têm em comum?",
+      "options": [
+        "Mostram que o servidor está quebrado",
+        "Mostram que faltou fazer o login",
+        "Confirmam que a página foi entregue",
+        "Levam o navegador a outro endereço"
+      ],
+      "correct": 3,
+      "explain": "<b>Grupo 3xx:</b> os dois são redirecionamentos."
+    },
+    {
+      "topic": "status",
+      "statement": "200 e 201 são do mesmo grupo. O que eles têm em comum?",
+      "options": [
+        "Nos dois, o servidor falhou",
+        "Nos dois, o endereço mudou",
+        "Nos dois, o pedido deu certo",
+        "Nos dois, o pedido foi recusado"
+      ],
+      "correct": 2,
+      "explain": "<b>Grupo 2xx:</b> sucesso. O detalhe de cada um muda, o sentido do grupo é o mesmo."
+    },
+    {
+      "topic": "status",
+      "statement": "401, 403 e 404 são do mesmo grupo. O que eles têm em comum?",
+      "options": [
+        "Nos três, a página foi entregue normal",
+        "Nos três, o erro está do lado do cliente",
+        "Nos três, o navegador muda de endereço",
+        "Nos três, o erro está do lado do servidor"
+      ],
+      "correct": 1,
+      "explain": "<b>Grupo 4xx:</b> o servidor entendeu, mas o pedido não pode ser atendido do jeito que foi feito."
+    },
+    {
+      "topic": "status",
+      "statement": "500, 502 e 503 são do mesmo grupo. O que eles têm em comum?",
+      "options": [
+        "Nos três, o servidor não conseguiu atender",
+        "Nos três, a resposta foi um sucesso",
+        "Nos três, o cliente esqueceu de fazer login",
+        "Nos três, o cliente digitou o endereço errado"
+      ],
+      "correct": 0,
+      "explain": "<b>Grupo 5xx:</b> o problema está do lado de quem deveria responder."
+    },
+    {
+      "topic": "status",
+      "statement": "Um site devolve 5xx para todos os visitantes. Onde o suporte procura primeiro?",
+      "options": [
+        "No teclado do cliente",
+        "No cabo de cada um",
+        "No link que foi digitado",
+        "No servidor do site"
+      ],
+      "correct": 3,
+      "explain": "<b>5xx aponta para o servidor:</b> não adianta mexer no computador de quem está acessando."
+    },
+    {
+      "topic": "status",
+      "statement": "Você digitou o endereço com uma letra errada e veio um erro. Qual é o grupo?",
+      "options": [
+        "Grupo 2xx",
+        "Grupo 5xx",
+        "Grupo 4xx",
+        "Grupo 3xx"
+      ],
+      "correct": 2,
+      "explain": "<b>O pedido estava errado:</b> quem errou foi o cliente, então é 4xx."
+    },
+    {
+      "topic": "status",
+      "statement": "A página abriu normalmente. Qual é o grupo da resposta?",
+      "options": [
+        "Grupo 2xx",
+        "Grupo 4xx",
+        "Grupo 1xx",
+        "Grupo 5xx"
+      ],
+      "correct": 0,
+      "explain": "<b>Deu certo:</b> sucesso é 2xx."
+    },
+    {
+      "topic": "status",
+      "statement": "O site mudou de http para https e o navegador foi sozinho para o novo. Qual é o grupo?",
+      "options": [
+        "Grupo 4xx",
+        "Grupo 2xx",
+        "Grupo 3xx",
+        "Grupo 1xx"
+      ],
+      "correct": 2,
+      "explain": "<b>Foi encaminhado:</b> redirecionamento é 3xx."
+    },
+    {
+      "topic": "status",
+      "statement": "O programa do servidor travou no meio do atendimento. Qual é o grupo?",
+      "options": [
+        "Grupo 4xx",
+        "Grupo 3xx",
+        "Grupo 5xx",
+        "Grupo 1xx"
+      ],
+      "correct": 2,
+      "explain": "<b>A falha foi do servidor:</b> 5xx."
+    },
+    {
+      "topic": "status",
+      "statement": "Qual grupo não é sucesso nem erro, só um aviso?",
+      "options": [
+        "Grupo 5xx",
+        "Grupo 3xx",
+        "Grupo 1xx",
+        "Grupo 2xx"
+      ],
+      "correct": 2,
+      "explain": "<b>1xx = informação.</b>"
+    },
+    {
+      "topic": "status",
+      "statement": "Aparece um código que começa com 4 e que você nunca viu. O que já dá para saber?",
+      "options": [
+        "Que o erro é do pedido, não do servidor",
+        "Que a página carregou sem problemas",
+        "Que o servidor caiu e precisa reiniciar",
+        "Nada, porque cada código é diferente"
+      ],
+      "correct": 0,
+      "explain": "<b>É por isso que o grupo importa:</b> o primeiro número já conta de que lado está o problema."
+    },
+    {
+      "topic": "status",
+      "statement": "Qual lista segue a ordem de 1xx até 5xx?",
+      "options": [
+        "Informação, sucesso, redirecionamento, cliente, servidor",
+        "Sucesso, informação, redirecionamento, servidor, cliente",
+        "Informação, redirecionamento, sucesso, cliente, servidor",
+        "Informação, sucesso, redirecionamento, servidor, cliente"
+      ],
+      "correct": 0,
+      "explain": "<b>1 informa, 2 deu certo, 3 manda a outro lugar, 4 cliente errou, 5 servidor falhou.</b>"
+    },
+    {
+      "topic": "status",
+      "statement": "Qual destas frases sobre os grupos está ERRADA?",
+      "options": [
+        "4xx quer dizer que o cliente errou",
+        "5xx quer dizer que o cliente errou",
+        "2xx quer dizer que tudo deu certo",
+        "3xx quer dizer redirecionamento"
+      ],
+      "correct": 1,
+      "explain": "<b>5xx é erro do servidor.</b> O do cliente é o 4xx."
+    },
+    {
+      "topic": "status",
+      "statement": "Que grupos indicam ERRO na resposta?",
+      "options": [
+        "Só o 4xx e o 5xx",
+        "Só o 3xx e o 4xx",
+        "Só o 1xx e o 5xx",
+        "Só o 2xx e o 3xx"
+      ],
+      "correct": 0,
+      "explain": "<b>4 e 5 são erros:</b> o 4 do cliente, o 5 do servidor. O 3xx não é erro, é um encaminhamento."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Dos seis serviços da camada de transporte, quais dois o UDP também oferece?",
+      "options": [
+        "Ordem e controle de congestionamento",
+        "Multiplexação e detecção de erros",
+        "Controle de fluxo e retransmissão",
+        "Entrega confiável e segmentação"
+      ],
+      "correct": 1,
+      "explain": "<b>O básico:</b> o UDP só separa por portas e confere o checksum. O TCP oferece os seis."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O que é a segmentação?",
+      "options": [
+        "Cifrar os dados e abrir no destino",
+        "Copiar os dados e apagar na origem",
+        "Contar os dados e avisar o switch",
+        "Fatiar os dados e juntar no destino"
+      ],
+      "correct": 3,
+      "explain": "<b>Pedaços que cabem na rede:</b> cada segmento leva a porta e o número de sequência para ser remontado."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O que a multiplexação permite?",
+      "options": [
+        "Um programa usar várias redes juntas",
+        "O roteador trocar o IP dos pacotes",
+        "O switch aprender os endereços MAC",
+        "Vários programas usarem a mesma rede"
+      ],
+      "correct": 3,
+      "explain": "<b>Na saída, todos dividem o mesmo canal:</b> cada segmento leva a sua porta."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Como se chama a unidade de dados (PDU) do UDP?",
+      "options": [
+        "Pacote",
+        "Datagrama",
+        "Quadro",
+        "Segmento"
+      ],
+      "correct": 1,
+      "explain": "<b>Segmento é do TCP; datagrama é do UDP.</b>"
+    },
+    {
+      "topic": "transporte",
+      "statement": "Como se chama a faixa de portas de 0 a 1023?",
+      "options": [
+        "Portas registradas",
+        "Portas bem conhecidas",
+        "Portas dinâmicas",
+        "Portas temporárias"
+      ],
+      "correct": 1,
+      "explain": "<b>Serviços padrão:</b> HTTP, SSH, DNS..."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Como se chama a faixa de portas de 1024 a 49151?",
+      "options": [
+        "Portas registradas",
+        "Portas reservadas",
+        "Portas efêmeras",
+        "Portas bem conhecidas"
+      ],
+      "correct": 0,
+      "explain": "<b>Aplicações específicas:</b> por exemplo, 3306 do MySQL e 3389 do RDP."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Duas abas abrem o mesmo site. Por que as respostas não se misturam?",
+      "options": [
+        "Cada aba recebe um IP público diferente",
+        "O site abre uma porta 443 para cada aba",
+        "O navegador espera uma aba terminar",
+        "Cada aba usa uma porta de origem própria"
+      ],
+      "correct": 3,
+      "explain": "<b>Porta efêmera:</b> o destino é igual (porta 443), mas a origem muda, como 50123 e 50124."
+    },
+    {
+      "topic": "transporte",
+      "statement": "O checksum mostra que chegou dado corrompido. O que cada protocolo faz?",
+      "options": [
+        "UDP conserta; TCP avisa o usuário na tela",
+        "UDP descarta; TCP descarta e espera reenvio",
+        "UDP e TCP entregam o dado corrompido",
+        "UDP reenvia; TCP entrega assim mesmo"
+      ],
+      "correct": 1,
+      "explain": "<b>Só o TCP recupera:</b> o dado será retransmitido. No UDP ele simplesmente some."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Por que um jogo online não precisa que o dado perdido seja reenviado?",
+      "options": [
+        "O switch reenvia o dado sozinho",
+        "Uma posição antiga já não serve mais",
+        "O dado do jogo nunca se perde",
+        "O jogo guarda tudo no servidor DNS"
+      ],
+      "correct": 1,
+      "explain": "<b>Tempo real:</b> quando o reenvio chegasse, o jogador já estaria em outro lugar."
+    },
+    {
+      "topic": "transporte",
+      "statement": "Para que o SNMP (porta 161, UDP) é usado?",
+      "options": [
+        "Acesso remoto com criptografia",
+        "Gerência de equipamentos de rede",
+        "Tradução de nomes em endereços",
+        "Envio de e-mails entre servidores"
+      ],
+      "correct": 1,
+      "explain": "<b>Gerência:</b> acompanhar switches e roteadores."
+    },
+    {
+      "topic": "rede",
+      "statement": "O que é uma entrega unicast?",
+      "options": [
+        "Para todos os da rede",
+        "Para a própria máquina",
+        "Para um grupo de hosts",
+        "Para um único destino"
+      ],
+      "correct": 3,
+      "explain": "<b>Uni = um.</b> Broadcast é para todos; multicast é para um grupo."
+    },
+    {
+      "topic": "rede",
+      "statement": "O que é uma entrega multicast?",
+      "options": [
+        "Para um único host da rede",
+        "Para todos os hosts da rede",
+        "Para o roteador da casa",
+        "Para um grupo de interessados"
+      ],
+      "correct": 3,
+      "explain": "<b>Multi = vários:</b> só quem faz parte daquele grupo recebe."
+    },
+    {
+      "topic": "rede",
+      "statement": "Em que faixa fica o 1º octeto da antiga classe A?",
+      "options": [
+        "128 a 191",
+        "1 a 126",
+        "192 a 223",
+        "224 a 255"
+      ],
+      "correct": 1,
+      "explain": "<b>Classe A:</b> poucas redes com milhões de hosts, máscara /8."
+    },
+    {
+      "topic": "rede",
+      "statement": "Em que faixa fica o 1º octeto da antiga classe B?",
+      "options": [
+        "224 a 255",
+        "192 a 223",
+        "128 a 191",
+        "1 a 126"
+      ],
+      "correct": 2,
+      "explain": "<b>Classe B:</b> redes de porte médio ou grande, máscara /16."
+    },
+    {
+      "topic": "rede",
+      "statement": "Em que faixa fica o 1º octeto da antiga classe C?",
+      "options": [
+        "128 a 191",
+        "1 a 126",
+        "192 a 223",
+        "224 a 255"
+      ],
+      "correct": 2,
+      "explain": "<b>Classe C:</b> muitas redes pequenas, máscara /24."
+    },
+    {
+      "topic": "rede",
+      "statement": "Qual era o problema das classes fixas A, B e C?",
+      "options": [
+        "Desperdiçavam muitos endereços",
+        "Exigiam endereços de 128 bits",
+        "Só funcionavam dentro de casa",
+        "Não permitiam o uso de roteador"
+      ],
+      "correct": 0,
+      "explain": "<b>Blocos grandes demais:</b> quem ganhava uma classe A recebia 16 milhões de endereços, usando ou não."
+    },
+    {
+      "topic": "rede",
+      "statement": "Em 1993, o que substituiu as classes fixas?",
+      "options": [
+        "O CIDR, com máscaras flexíveis",
+        "O NAT, com uma tabela de portas",
+        "O DHCP, com IPs emprestados",
+        "O IPv6, com 128 bits por host"
+      ],
+      "correct": 0,
+      "explain": "<b>CIDR (classless):</b> a máscara passou a ter o tamanho que a rede precisa."
+    },
+    {
+      "topic": "rede",
+      "statement": "Quais são as três regras dos endereços privados?",
+      "options": [
+        "Sorteados, secretos e trocados por hora",
+        "Reservados, não roteáveis e reutilizáveis",
+        "Pagos, roteáveis e únicos em todo o mundo",
+        "Fixos, públicos e vendidos por provedor"
+      ],
+      "correct": 1,
+      "explain": "<b>RFC 1918:</b> separados para uso interno, descartados na internet e repetidos em milhões de casas."
+    },
+    {
+      "topic": "rede",
+      "statement": "O que o comando ping 127.0.0.1 testa?",
+      "options": [
+        "O cabo até o roteador da casa",
+        "A pilha de rede da própria máquina",
+        "O servidor DNS do provedor de internet",
+        "A velocidade da internet"
+      ],
+      "correct": 1,
+      "explain": "<b>Loopback:</b> 127.0.0.1 sempre aponta para o próprio computador."
+    },
+    {
+      "topic": "rede",
+      "statement": "Na tabela NAT, o que é o Inside Global?",
+      "options": [
+        "O IP de loopback da própria máquina",
+        "O IP privado do computador da sua rede",
+        "O IP público do roteador, com uma porta",
+        "O IP do servidor fora da sua rede"
+      ],
+      "correct": 2,
+      "explain": "<b>Como o aparelho aparece para o mundo:</b> IP público + porta."
+    },
+    {
+      "topic": "rede",
+      "statement": "E o Outside Global, na tabela NAT, é o quê?",
+      "options": [
+        "O endereço do servidor de destino",
+        "O endereço do roteador da casa",
+        "O endereço de broadcast da LAN",
+        "O endereço interno do notebook"
+      ],
+      "correct": 0,
+      "explain": "<b>Quem está lá fora:</b> o servidor de destino. Esse não é traduzido."
+    },
+    {
+      "topic": "aplicacao",
+      "statement": "No P2P, qual é o papel de cada participante?",
+      "options": [
+        "É apenas o roteador dos outros",
+        "É só servidor, e nunca pede nada",
+        "É cliente e servidor ao mesmo tempo",
+        "É só cliente, e nunca fornece nada"
+      ],
+      "correct": 2,
+      "explain": "<b>Pede e fornece:</b> por isso, quanto mais gente, mais capacidade."
+    },
+    {
+      "topic": "aplicacao",
+      "statement": "Quais três perguntas ajudam a escolher entre TCP e UDP?",
+      "options": [
+        "É GET? É POST? É HEAD?",
+        "Qual é o IP? Qual é a porta? Qual é o MAC?",
+        "Posso perder? Preciso de banda? Tenho pressa?",
+        "Tem cookie? Tem login? Tem certificado?"
+      ],
+      "correct": 2,
+      "explain": "<b>Perda, banda e atraso:</b> arquivo não pode perder (TCP); chamada ao vivo não pode atrasar (UDP)."
+    },
+    {
+      "topic": "aplicacao",
+      "statement": "Uma chamada de vídeo em que um servidor só apresenta os participantes é de que tipo?",
+      "options": [
+        "Só cliente-servidor, do início ao fim",
+        "Só DNS, com consulta a cada imagem",
+        "Só P2P, sem servidor em momento algum",
+        "Híbrida, mistura dos dois modelos"
+      ],
+      "correct": 3,
+      "explain": "<b>Na prática, muita coisa é híbrida:</b> o servidor ajuda no encontro, e o vídeo pode ir direto entre as pessoas."
     }
   ],
   "historias": [
@@ -7489,6 +8089,73 @@
         "Autoritativo responde o IP"
       ],
       "explicacao": "Recursiva do PC ao resolvedor; iterativa do resolvedor até o autoritativo."
+    },
+    {
+      "tipo": "classificar",
+      "nome": "De que grupo é a resposta?",
+      "instrucao": "Sem decorar código: qual grupo explica a situação?",
+      "categorias": [
+        "1xx informação",
+        "2xx sucesso",
+        "3xx redirecionamento",
+        "4xx erro do cliente",
+        "5xx erro do servidor"
+      ],
+      "itens": [
+        {
+          "texto": "O servidor só mandou um aviso intermediário",
+          "categoria": "1xx informação",
+          "porque": "Nem sucesso nem erro."
+        },
+        {
+          "texto": "A página abriu normalmente",
+          "categoria": "2xx sucesso",
+          "porque": "Pedido atendido."
+        },
+        {
+          "texto": "O cadastro foi criado",
+          "categoria": "2xx sucesso",
+          "porque": "Também deu certo."
+        },
+        {
+          "texto": "O site mandou o navegador para outro endereço",
+          "categoria": "3xx redirecionamento",
+          "porque": "Não é erro, é encaminhamento."
+        },
+        {
+          "texto": "A página pedida não existe",
+          "categoria": "4xx erro do cliente",
+          "porque": "O pedido está errado."
+        },
+        {
+          "texto": "Você tentou entrar sem permissão",
+          "categoria": "4xx erro do cliente",
+          "porque": "O problema está do lado de quem pediu."
+        },
+        {
+          "texto": "O programa do servidor quebrou",
+          "categoria": "5xx erro do servidor",
+          "porque": "O servidor falhou."
+        },
+        {
+          "texto": "O servidor está sobrecarregado",
+          "categoria": "5xx erro do servidor",
+          "porque": "O pedido estava certo."
+        }
+      ]
+    },
+    {
+      "tipo": "ordenar",
+      "nome": "De 1xx a 5xx",
+      "instrucao": "Coloque os grupos na ordem, do 1xx ao 5xx.",
+      "sequencia": [
+        "Informação",
+        "Sucesso",
+        "Redirecionamento",
+        "Erro do cliente",
+        "Erro do servidor"
+      ],
+      "explicacao": "1 informa, 2 deu certo, 3 manda para outro lugar, 4 é erro do cliente e 5 é erro do servidor."
     }
   ],
   "livro": [
@@ -7689,6 +8356,22 @@
         "DHCP, DNS, TCP 443, TLS, GET, recursos extras",
         "O servidor vê o IP público (NAT)",
         "O primeiro quadro vai ao MAC do gateway"
+      ]
+    },
+    {
+      "titulo": "O primeiro número conta tudo",
+      "resumo": "Os grupos 1xx, 2xx, 3xx, 4xx e 5xx do HTTP.",
+      "paginas": [
+        "Toda resposta do HTTP traz um número de três dígitos. Não precisa decorar um por um: o PRIMEIRO dígito diz o grupo, e o grupo diz o que aconteceu. São cinco famílias, de 1xx a 5xx. O “xx” quer dizer “qualquer número aqui”.",
+        "Pense numa lanchonete. 1xx, informação: “já anotei, aguarde”. 2xx, sucesso: “aqui está o seu lanche”. 3xx, redirecionamento: “isso é no balcão do lado, vá para lá”. 4xx, erro do cliente: “você pediu algo que não existe no cardápio”. 5xx, erro do servidor: “você pediu certo, mas a nossa chapa quebrou”.",
+        "A diferença que mais cai: 4xx e 5xx. No 4xx, o pedido está errado e o servidor está funcionando; o 404 é desse grupo. No 5xx, o pedido estava certo e quem falhou foi o servidor; o 500 é desse grupo. E o 3xx não é erro: é só um encaminhamento."
+      ],
+      "guardar": [
+        "1xx informa",
+        "2xx deu certo",
+        "3xx manda para outro lugar",
+        "4xx: o pedido está errado",
+        "5xx: o servidor falhou"
       ]
     }
   ],
@@ -8154,6 +8837,66 @@
       ],
       "dica": "Sem TLS, o IMAP usa a 143.",
       "explicacao": "IMAPS usa a 993; o POP3S usa a 995."
+    },
+    {
+      "enunciado": "Qual grupo de status indica SUCESSO? (ex.: 1xx)",
+      "aceitas": [
+        "2xx",
+        "2 xx",
+        "2",
+        "grupo 2xx"
+      ],
+      "texto": true,
+      "dica": "Vem logo depois da informação.",
+      "explicacao": "2xx: o pedido deu certo."
+    },
+    {
+      "enunciado": "Qual grupo de status indica REDIRECIONAMENTO?",
+      "aceitas": [
+        "3xx",
+        "3 xx",
+        "3",
+        "grupo 3xx"
+      ],
+      "texto": true,
+      "dica": "Fica no meio dos cinco.",
+      "explicacao": "3xx: vá para outro endereço."
+    },
+    {
+      "enunciado": "Qual grupo de status indica erro do CLIENTE?",
+      "aceitas": [
+        "4xx",
+        "4 xx",
+        "4",
+        "grupo 4xx"
+      ],
+      "texto": true,
+      "dica": "O do famoso 404.",
+      "explicacao": "4xx: o pedido está errado."
+    },
+    {
+      "enunciado": "Qual grupo de status indica erro do SERVIDOR?",
+      "aceitas": [
+        "5xx",
+        "5 xx",
+        "5",
+        "grupo 5xx"
+      ],
+      "texto": true,
+      "dica": "É o último grupo.",
+      "explicacao": "5xx: o servidor falhou."
+    },
+    {
+      "enunciado": "Qual grupo de status é só INFORMAÇÃO?",
+      "aceitas": [
+        "1xx",
+        "1 xx",
+        "1",
+        "grupo 1xx"
+      ],
+      "texto": true,
+      "dica": "É o primeiro.",
+      "explicacao": "1xx: só informa."
     }
   ]
 }

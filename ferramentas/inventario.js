@@ -14,7 +14,8 @@
   - nenhum tema sumiu;
   - nenhum elemento da tela (id no index.html) sumiu;
   - nenhum arquivo de js/, css/, materias/ ou ferramentas/ sumiu;
-  - a quantidade de arquivos em material/ (PDFs e .md do Paulo, fora do GitHub) não caiu.
+  - a quantidade de arquivos em material/ (PDFs e .md do Paulo, fora do GitHub) não caiu;
+  - nenhum arquivo de material/ está vazio (0 byte).
 
   Para TIRAR uma pergunta do simulado sem perder: mova-a para materias/arquivo/<matéria>.json.
   Ela sai da prova, mas continua contando aqui.
@@ -103,9 +104,13 @@ function contar() {
   const arquivos = ['js', 'css', 'materias', 'ferramentas'].flatMap(listarArquivos).sort();
   // Quantos arquivos há em material/ (PDFs e .md do Paulo). A pasta fica fora do GitHub,
   // então só a quantidade vai para a base, nunca os nomes.
-  const material = listarArquivos('material').length;
+  const arquivosMaterial = listarArquivos('material');
+  const material = arquivosMaterial.length;
+  // Quantos desses arquivos estão vazios. Em 20/11/2026, 43 PDFs foram gravados com 0 byte e
+  // ninguém percebeu, porque só a quantidade era conferida. statSync().size é o tamanho em bytes.
+  const materialVazio = arquivosMaterial.filter((a) => fs.statSync(path.join(raiz, a)).size === 0).length;
   // Devolve tudo junto.
-  return { materias, ids, arquivos, material };
+  return { materias, ids, arquivos, material, materialVazio };
 }
 
 // conferir() compara a contagem atual com a base e devolve a lista de problemas.
@@ -134,6 +139,8 @@ function conferir(atual, base) {
   (base.arquivos || []).filter((a) => !atual.arquivos.includes(a)).forEach((a) => problemas.push(`o arquivo ${a} sumiu`));
   // Material do Paulo (PDFs e .md em material/): a quantidade não pode cair.
   if ((base.material || 0) > atual.material) problemas.push(`material/: havia ${base.material} arquivos e agora há ${atual.material} (PDF ou .md do Paulo sumiu)`);
+  // Arquivo vazio em material/ é o mesmo que arquivo perdido.
+  if (atual.materialVazio) problemas.push(`material/: ${atual.materialVazio} arquivo(s) com 0 byte (conteúdo perdido)`);
   // Devolve a lista (vazia = tudo certo).
   return problemas;
 }

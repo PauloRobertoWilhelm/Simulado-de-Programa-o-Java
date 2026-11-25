@@ -200,3 +200,50 @@ pre.code { font-size: 0.93rem; line-height: 1.7; padding: 16px 18px; background:
 @media (prefers-reduced-motion: reduce) {
   .painel-barra i, .subject-tab::before, .activity-card { transition: none; }
 }
+
+/* ===== ABA REVISÃO ===== */
+/* Texto de abertura. */
+.rev-intro { max-width: 68ch; margin-bottom: 14px; color: var(--muted); line-height: 1.6; text-align: left; }
+/* Contagem e barra. */
+.rev-progresso { margin-bottom: 14px; text-align: left; }
+#panel-revisao > .btn { margin-bottom: 16px; }
+/* Cada assunto: um cartão que abre e fecha. */
+.rev-secao { margin-bottom: 8px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); text-align: left; }
+.rev-secao[open] { border-color: var(--border-soft); }
+.rev-secao > summary { padding: 16px 18px; font-weight: 600; cursor: pointer; transition: background 0.2s var(--ease); }
+.rev-secao > summary:hover { background: var(--surface-2); border-radius: var(--r-md); }
+.rev-secao > summary::marker { color: var(--primary); }
+/* Assunto marcado com "Já sei": um certo verde ao lado do título. */
+.rev-secao.feito > summary::after { content: " ✓"; color: var(--success); }
+/* Miolo do assunto. */
+.rev-miolo { display: grid; gap: 14px; padding: 4px 18px 18px; }
+.rev-miolo > * { min-width: 0; }
+.rev-texto { max-width: 70ch; line-height: 1.65; }
+.rev-lista { display: grid; gap: 6px; padding-left: 22px; line-height: 1.55; }
+.rev-lista li::marker { color: var(--primary); }
+.rev-miolo pre.code { margin: 0; }
+/* Tabela: rola de lado dentro da própria moldura, sem mexer na página. */
+.rev-tabela { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--r-sm); }
+.rev-tabela table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+.rev-tabela th, .rev-tabela td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; min-width: 92px; }
+.rev-tabela tr:last-child td { border-bottom: none; }
+.rev-tabela th { background: var(--surface-2); color: var(--muted); font-weight: 600; }
+/* Primeira coluna em destaque: é o nome da linha. */
+.rev-tabela td:first-child { color: var(--text); font-weight: 600; }
+/* Pegadinhas: fundo suave na cor da matéria. */
+.rev-pegadinhas { display: grid; gap: 8px; padding: 14px 16px; border-radius: var(--r-sm); background: var(--accent-soft); }
+.rev-pegadinhas > strong { color: var(--primary); }
+/* Pergunta rápida: a resposta só aparece ao tocar. */
+.rev-pergunta { border: 1px dashed var(--border-soft); border-radius: var(--r-sm); }
+.rev-pergunta > summary { padding: 12px 14px; cursor: pointer; }
+.rev-pergunta > p { padding: 0 14px 12px 30px; color: var(--success); line-height: 1.55; }
+/* Treinar e "Já sei". */
+.rev-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.rev-acoes .btn { width: auto; min-height: 46px; padding: 10px 18px; margin: 0; }
+.rev-ja-sei { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
+.rev-ja-sei input { width: 20px; height: 20px; accent-color: var(--primary); }
+/* Contorno para quem usa o teclado. */
+.rev-secao > summary:focus-visible, .rev-pergunta > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: var(--r-sm); }
+/* Endereços compridos (URL, IPv6) quebram de linha em vez de alargar a tela do celular. */
+.rev-miolo { grid-template-columns: minmax(0, 1fr); }
+.rev-miolo, .rev-secao summary { overflow-wrap: anywhere; }

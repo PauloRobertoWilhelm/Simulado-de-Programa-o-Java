@@ -8161,5 +8161,335 @@
       "dica": "Um círculo achatado.",
       "explicacao": "Elipse com o nome da funcionalidade."
     }
-  ]
+  ],
+  "revisao": {
+    "intro": "Slides 05 e 06 e o seu resumão de 24/11. O professor disse que a prova é só sobre esses dois slides.",
+    "secoes": [
+      {
+        "titulo": "1. Caso de uso",
+        "tema": "casosdeuso",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Descreve a interação entre um ator e o sistema para atingir um objetivo."
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "Ator: quem interage.",
+              "Cenário principal: os passos.",
+              "Exceções: o que pode dar errado."
+            ]
+          },
+          {
+            "tipo": "passos",
+            "itens": [
+              "Identificar os atores.",
+              "Definir os casos de uso.",
+              "Especificar os cenários.",
+              "Definir as exceções."
+            ]
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Campo",
+              "Login no Sistema"
+            ],
+            "linhas": [
+              [
+                "Ator",
+                "Usuário"
+              ],
+              [
+                "Cenário",
+                "Acessa a tela, insere usuário e senha, o sistema valida e concede acesso"
+              ],
+              [
+                "Exceção",
+                "Mensagem de erro com credenciais inválidas"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Exceção não é passo do cenário principal."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Quais são os 4 passos, na ordem?",
+            "resposta": "Atores, casos de uso, cenários, exceções."
+          }
+        ]
+      },
+      {
+        "titulo": "2. Diagrama de casos de uso",
+        "tema": "casosdeuso",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Desenho",
+              "Significa"
+            ],
+            "linhas": [
+              [
+                "Bonequinho",
+                "Ator"
+              ],
+              [
+                "Elipse",
+                "Caso de uso"
+              ],
+              [
+                "Linha",
+                "Liga o ator ao caso"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O ator é um papel: pode ser pessoa, outro sistema, máquina ou sensor."
+          },
+          {
+            "tipo": "texto",
+            "texto": "No banco: o Cliente faz saque e consulta saldo; o Gerente abre conta e vende seguro."
+          }
+        ],
+        "pegadinhas": [
+          "Ator não é só gente.",
+          "O diagrama representa um requisito do sistema."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Um sensor de temperatura pode ser ator?",
+            "resposta": "Pode: é externo e interage com o sistema."
+          }
+        ]
+      },
+      {
+        "titulo": "3. Include, extend e generalização",
+        "tema": "casosdeuso",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "Quando executa",
+              "Seta"
+            ],
+            "linhas": [
+              [
+                "include",
+                "SEMPRE",
+                "Tracejada, do caso base ao incluído"
+              ],
+              [
+                "extend",
+                "ÀS VEZES",
+                "Tracejada, da extensão ao caso base"
+              ],
+              [
+                "Generalização",
+                "O filho herda do pai",
+                "Contínua, triângulo vazado para o ator mais geral"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Processar Pedido inclui Emitir Nota Fiscal. Consultar Serasa e Solicitar Entrega estendem Processar Pedido."
+          }
+        ],
+        "pegadinhas": [
+          "As setas de include e extend têm sentidos contrários.",
+          "Cliente herda de Usuário: faz login e também saque."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Pagar sempre exige validar o cartão. Include ou extend?",
+            "resposta": "Include: é obrigatório."
+          },
+          {
+            "pergunta": "Aplicar cupom, só se houver. Include ou extend?",
+            "resposta": "Extend: é opcional."
+          }
+        ]
+      },
+      {
+        "titulo": "4. Validar e gerenciar",
+        "tema": "validacao",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "Garante que os requisitos estejam"
+            ],
+            "linhas": [
+              [
+                "Validação",
+                "Corretos e completos"
+              ],
+              [
+                "Gerenciamento",
+                "Mantidos e organizados"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Não troque um pelo outro: é pegadinha."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Guardar as versões dos requisitos é validar ou gerenciar?",
+            "resposta": "Gerenciar."
+          }
+        ]
+      },
+      {
+        "titulo": "5. Histórias de usuário",
+        "tema": "historias",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Como [tipo de usuário], eu quero [ação] para que [benefício]."
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "Ponto de vista do usuário final.",
+              "Requisitos compreensíveis e rastreáveis.",
+              "Critérios de aceite dizem quando a história está pronta."
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Na figura: post-it com número, título, frase e critérios."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "O que falta em “Como aluno, quero ver minhas notas”?",
+            "resposta": "O benefício: para que..."
+          }
+        ]
+      },
+      {
+        "titulo": "6. As técnicas, uma ideia para cada",
+        "tema": "validacao",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Técnica",
+              "Ideia",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "História de usuário",
+                "Ponto de vista do usuário",
+                "Itens no carrinho"
+              ],
+              [
+                "Modelagem de processos",
+                "Fluxo de atividades",
+                "Atendimento ao cliente"
+              ],
+              [
+                "Decomposição funcional",
+                "Partes menores em níveis",
+                "Gerenciamento de Conta"
+              ],
+              [
+                "Modelagem de domínio",
+                "Entidades e relacionamentos",
+                "Cliente, Produto, Pedido"
+              ],
+              [
+                "Modelagem de casos de uso",
+                "Interação usuário e sistema",
+                "Realizar Pagamento"
+              ],
+              [
+                "Checklist",
+                "O que está faltando",
+                "Verificou segurança?"
+              ],
+              [
+                "Prototipação",
+                "Versão preliminar",
+                "Sem exemplo no slide"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Processo é atividade; domínio é coisa.",
+          "Decomposição quebra função; domínio liga entidades."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "“Um Pedido contém Produtos” é de qual técnica?",
+            "resposta": "Modelagem de domínio."
+          },
+          {
+            "pergunta": "Mostrar uma tela para o usuário mexer é qual técnica?",
+            "resposta": "Prototipação."
+          }
+        ]
+      },
+      {
+        "titulo": "7. As figuras dos slides",
+        "tema": "validacao",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Figura",
+              "O que reparar"
+            ],
+            "linhas": [
+              [
+                "Post-it",
+                "Número, título, frase e critérios de aceite"
+              ],
+              [
+                "Receber Pagamento",
+                "Raias Atendente de Caixa e Cliente; verde é início, vermelho é fim"
+              ],
+              [
+                "Pintar uma sala",
+                "Nível 1 o todo, nível 2 as partes, nível 3 as tarefas"
+              ],
+              [
+                "Hospedagem",
+                "Grupos Contas, Hotéis e Estadia; setas com quantidades"
+              ]
+            ]
+          },
+          {
+            "tipo": "passos",
+            "itens": [
+              "Receber Comanda",
+              "Calcular Valor Total",
+              "Cobrar Pagamento",
+              "Entregar Comprovante"
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Pagar Comanda fica na raia do Cliente.",
+          "“Comprar tinta” é nível 3."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Hóspede e Avaliação são de que grupo?",
+            "resposta": "Estadia."
+          }
+        ]
+      }
+    ]
+  }
 }

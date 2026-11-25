@@ -80,6 +80,8 @@
 
       <!-- Cada matéria tem cinco partes. Os números são preenchidos pelo JavaScript. -->
       <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="O que estudar">
+        <!-- Revisão: resumo da prova. Só aparece nas matérias que têm o campo "revisao". -->
+        <button type="button" class="mode-tab hidden" role="tab" data-mode="revisao" id="tab-revisao" aria-selected="false">Revisão <span class="mode-count" id="count-revisao"></span></button>
         <!-- Livro: capítulos explicados de um jeito simples. -->
         <button type="button" class="mode-tab" role="tab" data-mode="livro" aria-selected="false">Livro <span class="mode-count" id="count-livro"></span></button>
         <!-- Perguntas: o simulado com cronômetro e nota. -->
@@ -132,6 +134,7 @@
       <p class="activity-empty hidden" id="perguntas-vazio">Esta matéria ainda não tem perguntas.</p>
 
       <!-- As outras partes são preenchidas por js/livro.js, js/historias.js, js/jogos.js e js/pratica.js -->
+      <div id="panel-revisao" class="hidden"></div>
       <div id="panel-livro" class="hidden"></div>
       <div id="panel-historias" class="hidden"></div>
       <div id="panel-jogos" class="hidden"></div>
@@ -242,6 +245,7 @@
 <script src="js/voz.js"></script>
 <!-- visual.js cuida só da aparência: código colorido e painel de progresso. -->
 <script src="js/visual.js"></script>
+<script src="js/revisao.js"></script>
 <script src="js/livro.js"></script>
 <script src="js/historias.js"></script>
 <script src="js/jogos.js"></script>
@@ -513,6 +517,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("count-praticar").textContent = termos.length + praticas.length;
 
       // Cada arquivo js/ desenha a sua parte dentro do painel dela.
+      // Revisão da prova: mostra a aba só quando a matéria tem esse conteúdo.
+      const revisao = conteudo.revisao;
+      // Liga ou desliga a aba.
+      document.getElementById("tab-revisao").classList.toggle("hidden", !revisao);
+      // Quantos assuntos a revisão tem.
+      document.getElementById("count-revisao").textContent = revisao ? revisao.secoes.length : "";
+      // Desenha a revisão (js/revisao.js). treinarRevisao abre a prova do assunto.
+      window.Revisao.montar(document.getElementById("panel-revisao"), revisao, materia.id, (tema, quantas) => treinarRevisao(revisao, tema, quantas));
       window.Livro.montar(document.getElementById("panel-livro"), livro, materia.id);
       window.Historias.montar(document.getElementById("panel-historias"), conteudo.historias);
       // Os jogos recebem também as perguntas (para o "Certo ou errado?") e o id da matéria (para as contas).
@@ -598,8 +610,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const semPerguntas = modo === "perguntas" && bank.length === 0;
     document.getElementById("panel-perguntas").classList.toggle("hidden", modo !== "perguntas" || semPerguntas);
     document.getElementById("perguntas-vazio").classList.toggle("hidden", !semPerguntas);
-    // Os outros quatro painéis: aparece só o do modo escolhido.
-    ["livro", "historias", "jogos", "praticar"].forEach(nome => {
+    // Os outros cinco painéis: aparece só o do modo escolhido.
+    ["revisao", "livro", "historias", "jogos", "praticar"].forEach(nome => {
       document.getElementById(`panel-${nome}`).classList.toggle("hidden", modo !== nome);
     });
   }
@@ -812,6 +824,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mostra a nova quantidade na barra de iniciar.
     atualizarResumo();
   });
+
+  // treinarRevisao() começa uma prova a partir da aba Revisão.
+  // Parâmetros: revisao (conteúdo da matéria), tema (id, ou null para o simulado geral) e quantas perguntas.
+  function treinarRevisao(revisao, tema, quantas) {
+    // Perguntas da rodada.
+    let perguntas;
+    if (tema) {
+      // Um assunto: usa o mesmo sorteio da parte Perguntas, com as menos vistas primeiro.
+      perguntas = buildFilteredQuestions(tema, quantas);
+    } else {
+      // Simulado geral: lista os temas da revisão sem repetir (bim2 já é a soma de todos).
+      const temas = [...new Set(revisao.secoes.map(secao => secao.tema))].filter(id => id !== "bim2");
+      // Quantas de cada tema, arredondando para cima.
+      const porTema = Math.ceil(quantas / temas.length);
+      // Junta as perguntas de todos os temas, embaralha e corta no total pedido.
+      const juntas = shuffleArray(temas.flatMap(id => buildFilteredQuestions(id, porTema))).slice(0, quantas);
+      // Sorteia de novo a letra certa, para não repetir em seguida.
+      perguntas = sortearPosicoes(juntas);
+    }
+    // Marca na parte Perguntas o tema treinado, para o resultado mostrar o nome certo.
+    selectedTopic = tema || "bim2";
+    montarTemas(true);
+    // Guarda a rodada para o botão "Repetir mesma prova".
+    lastQuizConfig = { topic: selectedTopic, length: perguntas.length };
+    lastQuizQuestions = perguntas.slice();
+    // Começa.
+    startQuizWithQuestions(perguntas);
+  }
 
   // mostrarAbas() esconde as abas durante a prova, para ninguém trocar de matéria sem querer.
   function mostrarAbas(visivel) {

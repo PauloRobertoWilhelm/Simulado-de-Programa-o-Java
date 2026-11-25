@@ -88,6 +88,8 @@ function contar() {
       aba: m.aba,
       perguntas: (dados.questoes || []).length,
       guardadas: (guardado.questoes || []).length,
+      // Assuntos da aba Revisão (0 quando a matéria não tem).
+      revisao: ((dados.revisao || {}).secoes || []).length,
       livro: (dados.livro || []).length,
       historias: (dados.historias || []).length,
       jogos: (dados.jogos || []).length,
@@ -119,7 +121,7 @@ function conferir(atual, base) {
   // Lista de problemas encontrados.
   const problemas = [];
   // Campos que não podem diminuir.
-  const campos = ['livro', 'historias', 'jogos', 'termos', 'praticas'];
+  const campos = ['revisao', 'livro', 'historias', 'jogos', 'termos', 'praticas'];
   for (const [id, antes] of Object.entries(base.materias || {})) {
     // Matéria inteira sumiu.
     const agora = atual.materias[id];
@@ -150,12 +152,12 @@ function conferir(atual, base) {
 function tabela(atual) {
   // Cabeçalho da tabela.
   const linhas = [
-    '| Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Livro | Histórias | Jogos | Termos | Práticas |',
-    '|---|---|---|---|---|---|---|---|'
+    '| Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Revisão | Livro | Histórias | Jogos | Termos | Práticas |',
+    '|---|---|---|---|---|---|---|---|---|'
   ];
   // Uma linha por matéria.
   Object.values(atual.materias).forEach((m) => {
-    linhas.push(`| ${m.aba} | ${m.perguntas} | ${m.guardadas} | ${m.livro} | ${m.historias} | ${m.jogos} | ${m.termos} | ${m.praticas} |`);
+    linhas.push(`| ${m.aba} | ${m.perguntas} | ${m.guardadas} | ${m.revisao} | ${m.livro} | ${m.historias} | ${m.jogos} | ${m.termos} | ${m.praticas} |`);
   });
   // Perguntas por tema, uma linha por matéria.
   linhas.push('', 'Perguntas por tema:', '');

@@ -16,14 +16,14 @@ Tudo o que o app tem. Nada desta lista pode sumir sem o Paulo pedir.
 <!-- inventario:inicio -->
 _Contagem de 25/11/2026, gerada por `node ferramentas/inventario.js --atualizar`._
 
-| Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Livro | Histórias | Jogos | Termos | Práticas |
-|---|---|---|---|---|---|---|---|
-| Design Front End | 103 | 0 | 0 | 2 | 3 | 0 | 0 |
-| Programação de Computadores | 627 | 0 | 10 | 7 | 8 | 14 | 20 |
-| Engenharia de Requisitos | 531 | 0 | 9 | 10 | 8 | 16 | 11 |
-| Fundamentos de Redes | 550 | 0 | 15 | 11 | 9 | 25 | 25 |
-| Testing, Compliance e QA | 107 | 0 | 0 | 2 | 3 | 0 | 0 |
-| Pensamento Computacional | 582 | 0 | 2 | 0 | 0 | 0 | 0 |
+| Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Revisão | Livro | Histórias | Jogos | Termos | Práticas |
+|---|---|---|---|---|---|---|---|---|
+| Design Front End | 103 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
+| Programação de Computadores | 627 | 0 | 10 | 10 | 7 | 8 | 14 | 20 |
+| Engenharia de Requisitos | 531 | 0 | 7 | 9 | 10 | 8 | 16 | 11 |
+| Fundamentos de Redes | 550 | 0 | 16 | 15 | 11 | 9 | 25 | 25 |
+| Testing, Compliance e QA | 107 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
+| Pensamento Computacional | 582 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 
 Perguntas por tema:
 
@@ -50,7 +50,7 @@ Perguntas por tema:
   - painel de estudo (perguntas já vistas, para revisar e melhor nota);
   - caixa "O que estudar para a próxima prova";
   - botão "Ler em voz alta";
-  - as cinco partes: Livro, Perguntas, Histórias, Jogos e Praticar.
+  - as partes: Revisão (Programação, Requisitos e Redes), Livro, Perguntas, Histórias, Jogos e Praticar.
 - **Perguntas:**
   - chips "Com Cronômetro", "Dashboard de Notas" e "Sons Interativos";
   - temas especiais: Tudo misturado, Só as que errei (aparece quando há erros) e Contas novas (só em Redes);
@@ -67,6 +67,7 @@ Perguntas por tema:
   - nota, acertos, erros e tempo;
   - gráfico da evolução, progresso por tema e revisão dos erros;
   - botões Compartilhar, Revisar erros, Repetir mesma prova, Nova rodada e Voltar ao menu.
+- **Revisão:** assuntos da prova que abrem e fecham, com tabelas, códigos, "Cuidado na prova", perguntas rápidas com resposta escondida, botão "Treinar 10 perguntas", caixinha "Já sei" e "Simulado da revisão" de 20 questões.
 - **Jogos:** "Certo ou errado?", montado sozinho a partir das perguntas, mais os jogos de classificar e de ordenar de cada matéria.
 - **Praticar:** "Falar os termos" (com voz) e "Digitar a resposta".
 - **Sem internet:** o app funciona offline e se atualiza sozinho quando sai versão nova.
@@ -87,5 +88,6 @@ Perguntas por tema:
 | 05/11/2026 | Aba "Engenharia de Software" (vazia, sem perguntas: é o nome do curso, não uma matéria) | Apagada a pedido do Paulo |
 | 20/11/2026 | 18 perguntas de Programação que cobravam assuntos fora dos slides | Voltaram para o simulado no mesmo dia, a pedido do Paulo ("era criar mais, não deletar o que já tinha") |
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
+| 25/11/2026 | (nada saiu) Entrou a aba Revisão em Programação (10 assuntos), Requisitos (7) e Redes (16, com números diferentes dos do trabalho) | campo `revisao` em `materias/*.json` |
 | 25/11/2026 | (nada saiu) Entraram 208 perguntas, 3 capítulos, 8 jogos e 16 práticas em Programação, Redes e Requisitos | `materias/programacao.json`, `materias/redes.json` e `materias/requisitos.json` |
 | 21/11/2026 | (nada saiu) Entraram 332 perguntas em Programação, 319 em Redes e 376 em Requisitos (variações; cada uma chegou a 500) | `materias/programacao.json`, `materias/redes.json` e `materias/requisitos.json` |

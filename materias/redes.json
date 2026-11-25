@@ -8898,5 +8898,898 @@
       "dica": "É o primeiro.",
       "explicacao": "1xx: só informa."
     }
-  ]
+  ],
+  "revisao": {
+    "intro": "Os assuntos do trabalho do 2º bimestre, que o professor diz ser a lista de revisão da prova. Os números daqui são outros: use para entender a conta e depois refaça a do trabalho sozinho.",
+    "secoes": [
+      {
+        "titulo": "1. Encapsulamento, IP e MAC",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "A mensagem desce as camadas e vai ganhando cabeçalhos, até virar sinal no cabo."
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Camada",
+              "Nome do pedaço",
+              "Endereço que usa"
+            ],
+            "linhas": [
+              [
+                "Aplicação",
+                "Dados",
+                "Nome (URL)"
+              ],
+              [
+                "Transporte",
+                "Segmento (TCP) ou datagrama (UDP)",
+                "Porta"
+              ],
+              [
+                "Rede",
+                "Pacote",
+                "IP"
+              ],
+              [
+                "Enlace",
+                "Quadro",
+                "MAC"
+              ],
+              [
+                "Física",
+                "Bits",
+                "Nenhum"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O IP mostra o destino final e fica igual no caminho. O MAC só vale até o próximo aparelho, por isso é trocado a cada salto."
+          }
+        ],
+        "pegadinhas": [
+          "O IP de destino não muda; o MAC muda a cada salto.",
+          "O pacote é quem leva o IP; o quadro é quem leva o MAC."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Para que serve o ARP?",
+            "resposta": "Descobrir o MAC de um IP da rede local."
+          },
+          {
+            "pergunta": "Numa viagem com 4 roteadores, o IP de destino muda quantas vezes?",
+            "resposta": "Nenhuma. Só o MAC é trocado a cada salto."
+          }
+        ]
+      },
+      {
+        "titulo": "2. TTL",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "TTL é quantas “vidas” o pacote tem. Cada roteador tira 1."
+          },
+          {
+            "tipo": "passos",
+            "itens": [
+              "Anote o TTL de saída, por exemplo 128.",
+              "Conte os roteadores do caminho, por exemplo 9.",
+              "Subtraia: 128 − 9 = 119."
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Se chegar a 0, o roteador descarta o pacote e avisa a origem (Time Exceeded). É isso que impede um pacote de girar para sempre."
+          }
+        ],
+        "pegadinhas": [
+          "Switch não tira TTL; só roteador.",
+          "Mostre a conta: só o resultado vale metade."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Sai com TTL 255 e passa por 12 roteadores. Com quanto chega?",
+            "resposta": "255 − 12 = 243."
+          },
+          {
+            "pergunta": "Que programa usa o TTL de propósito para achar o caminho?",
+            "resposta": "O traceroute."
+          }
+        ]
+      },
+      {
+        "titulo": "3. Público, privado e especial",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Faixa privada",
+              "Vai de",
+              "Até"
+            ],
+            "linhas": [
+              [
+                "10.0.0.0/8",
+                "10.0.0.0",
+                "10.255.255.255"
+              ],
+              [
+                "172.16.0.0/12",
+                "172.16.0.0",
+                "172.31.255.255"
+              ],
+              [
+                "192.168.0.0/16",
+                "192.168.0.0",
+                "192.168.255.255"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Especial: 127.x.x.x é o loopback, o próprio computador."
+          },
+          {
+            "tipo": "texto",
+            "texto": "No 172, olhe o segundo número: de 16 a 31 é privado; fora disso é público."
+          }
+        ],
+        "pegadinhas": [
+          "172.15.x.x e 172.40.x.x são públicos.",
+          "Privado não anda na internet: precisa de NAT."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "172.31.9.9 é público ou privado? Por quê?",
+            "resposta": "Privado: 31 ainda está entre 16 e 31."
+          },
+          {
+            "pergunta": "172.50.1.1 é público ou privado?",
+            "resposta": "Público: 50 passa de 31."
+          },
+          {
+            "pergunta": "192.169.0.1 é privado?",
+            "resposta": "Não. Só 192.168 é privado."
+          }
+        ]
+      },
+      {
+        "titulo": "4. NAT",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Vários aparelhos da casa saem para a internet com um único IP público, o do roteador."
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Nome na tabela",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "Inside Local",
+                "IP privado do aparelho"
+              ],
+              [
+                "Inside Global",
+                "IP público do roteador + porta"
+              ],
+              [
+                "Outside Global",
+                "Endereço do servidor lá fora"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O roteador guarda numa tabela qual IP e qual porta fez cada pedido. A porta diz a quem devolver a resposta."
+          }
+        ],
+        "pegadinhas": [
+          "O site enxerga o IP público, nunca o privado.",
+          "Quem separa os aparelhos na volta é a porta."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Por que o NAT ajudou o IPv4 a durar mais?",
+            "resposta": "Porque muitos aparelhos dividem um só IP público."
+          }
+        ]
+      },
+      {
+        "titulo": "5. Sub-redes",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "passos",
+            "itens": [
+              "Último número da máscara: 256 − 2 elevado aos bits de host. Para /27 sobram 5 bits: 256 − 32 = 224.",
+              "Salto: 256 − 224 = 32. As sub-redes começam em 0, 32, 64, 96...",
+              "Hosts utilizáveis: 2⁵ − 2 = 30. Tiram-se 2: a rede e o broadcast.",
+              "Broadcast: um antes da próxima sub-rede."
+            ]
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Prefixo",
+              "Máscara (fim)",
+              "Salto",
+              "Hosts"
+            ],
+            "linhas": [
+              [
+                "/25",
+                "128",
+                "128",
+                "126"
+              ],
+              [
+                "/26",
+                "192",
+                "64",
+                "62"
+              ],
+              [
+                "/27",
+                "224",
+                "32",
+                "30"
+              ],
+              [
+                "/28",
+                "240",
+                "16",
+                "14"
+              ],
+              [
+                "/29",
+                "248",
+                "8",
+                "6"
+              ],
+              [
+                "/30",
+                "252",
+                "4",
+                "2"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Exemplo: 172.20.8.77/26. O salto é 64 e o 77 cai no bloco 64 a 127. Rede 172.20.8.64, primeiro host .65, último .126, broadcast .127."
+          }
+        ],
+        "pegadinhas": [
+          "O primeiro endereço é a rede e o último é o broadcast: nenhum dos dois é de host.",
+          "4 sub-redes pedem 2 bits a mais no prefixo (2² = 4)."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "10.0.4.100/27: qual é a rede?",
+            "resposta": "Salto 32; o 100 cai em 96 a 127. Rede 10.0.4.96."
+          },
+          {
+            "pergunta": "E o broadcast dela?",
+            "resposta": "10.0.4.127."
+          },
+          {
+            "pergunta": "Quantas sub-redes /28 cabem numa /24?",
+            "resposta": "2⁴ = 16."
+          }
+        ]
+      },
+      {
+        "titulo": "6. IPv6, DHCP e gateway",
+        "tema": "rede",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "IPv6 tem 128 bits e foi criado porque os endereços IPv4 estavam acabando. Para encurtar: tire os zeros à esquerda de cada grupo e troque UMA sequência de zeros por ::"
+          },
+          {
+            "tipo": "texto",
+            "texto": "Exemplo: 2001:0db8:00a0:0000:0000:0000:0000:0007 vira 2001:db8:a0::7"
+          },
+          {
+            "tipo": "passos",
+            "itens": [
+              "Discover: o computador grita “tem servidor aí?”",
+              "Offer: o servidor oferece um IP.",
+              "Request: o computador pede aquele IP.",
+              "Ack: o servidor confirma."
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O DHCP entrega IP, máscara, gateway, DNS e o tempo de empréstimo. O gateway padrão é a porta de saída: leva o que vai para outra rede."
+          }
+        ],
+        "pegadinhas": [
+          "O :: só pode aparecer uma vez.",
+          "Zero à direita não se tira: 00a0 vira a0, não a.",
+          "DORA: Discover, Offer, Request, Ack."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Encurte fe80:0000:0000:0000:0000:0000:0000:00c1",
+            "resposta": "fe80::c1"
+          },
+          {
+            "pergunta": "Quando o computador usa o gateway?",
+            "resposta": "Quando o destino está em outra rede."
+          }
+        ]
+      },
+      {
+        "titulo": "7. Portas, sockets e faixas",
+        "tema": "transporte",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "A camada de rede liga host a host (IP). A de transporte liga processo a processo (porta)."
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Faixa",
+              "Nome",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "0 a 1023",
+                "Bem conhecidas",
+                "80 HTTP"
+              ],
+              [
+                "1024 a 49151",
+                "Registradas",
+                "3389 RDP"
+              ],
+              [
+                "49152 a 65535",
+                "Dinâmicas ou efêmeras",
+                "porta de origem do navegador"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Socket é IP + porta. Uma conexão TCP tem 4 valores: IP e porta de origem, IP e porta de destino."
+          }
+        ],
+        "pegadinhas": [
+          "Acima de 65535 a porta é inválida.",
+          "Duas abas no mesmo site: muda a porta de origem."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "A porta 65536 existe?",
+            "resposta": "Não. A maior é 65535."
+          },
+          {
+            "pergunta": "A porta 1023 é de que faixa?",
+            "resposta": "Bem conhecidas: a faixa vai até 1023."
+          }
+        ]
+      },
+      {
+        "titulo": "8. TCP ou UDP",
+        "tema": "transporte",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "TCP",
+              "UDP"
+            ],
+            "linhas": [
+              [
+                "Conexão",
+                "Abre com handshake",
+                "Não abre"
+              ],
+              [
+                "Perdeu um pedaço",
+                "Reenvia",
+                "Não reenvia"
+              ],
+              [
+                "Ordem",
+                "Garante",
+                "Não garante"
+              ],
+              [
+                "Cabeçalho",
+                "A partir de 20 bytes",
+                "8 bytes"
+              ],
+              [
+                "Serve para",
+                "Arquivo, e-mail, web, SSH",
+                "Voz, jogo, DNS, DHCP"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Os 4 campos do UDP: porta de origem, porta de destino, tamanho e checksum."
+          },
+          {
+            "tipo": "texto",
+            "texto": "O DHCP usa UDP porque o computador ainda não tem IP para abrir conexão e precisa falar com todos (broadcast)."
+          }
+        ],
+        "pegadinhas": [
+          "Pergunta-chave: é pior perder ou atrasar?",
+          "HTTP/3 usa UDP, com o QUIC."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Transmissão ao vivo de um show: TCP ou UDP?",
+            "resposta": "UDP: melhor perder um pedaço do que atrasar."
+          },
+          {
+            "pergunta": "Baixar um instalador: TCP ou UDP?",
+            "resposta": "TCP: não pode faltar nenhum byte."
+          }
+        ]
+      },
+      {
+        "titulo": "9. Handshake, seq, ACK e retransmissão",
+        "tema": "transporte",
+        "blocos": [
+          {
+            "tipo": "passos",
+            "itens": [
+              "Cliente: SYN, seq = 300.",
+              "Servidor: SYN+ACK, seq = 700, ack = 301 (300 + 1).",
+              "Cliente: ACK, ack = 701 (700 + 1)."
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O SYN gasta 1 número. Dados gastam 1 número por byte: 120 bytes com seq 301 recebem ack 421 (301 + 120)."
+          },
+          {
+            "tipo": "texto",
+            "texto": "O ACK diz o PRÓXIMO byte esperado. Se um segmento se perde, o receptor repete o mesmo ACK."
+          },
+          {
+            "tipo": "texto",
+            "texto": "Exemplo: 5 segmentos de 500 bytes (seq 1, 501, 1001, 1501, 2001) e o 2º se perde. O 1º gera ACK 501; o 3º, o 4º e o 5º repetem ACK 501. São 3 repetidos: há retransmissão rápida. Quando o 2º chega, o ACK pula para 2501."
+          }
+        ],
+        "pegadinhas": [
+          "ACK é o próximo byte esperado, não o último recebido.",
+          "Retransmissão rápida: 3 ACKs REPETIDOS (o primeiro não conta)."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Chegaram só 2 ACKs repetidos. Há retransmissão rápida?",
+            "resposta": "Não. Precisa de 3; aí só o tempo esgotado faz reenviar."
+          },
+          {
+            "pergunta": "seq 2000 com 250 bytes: qual ack volta?",
+            "resposta": "2000 + 250 = 2250."
+          }
+        ]
+      },
+      {
+        "titulo": "10. Fluxo, congestionamento e fim da conexão",
+        "tema": "transporte",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Assunto",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "Controle de fluxo",
+                "Não afogar o RECEPTOR (janela)"
+              ],
+              [
+                "Controle de congestionamento",
+                "Não afogar a REDE"
+              ],
+              [
+                "FIN",
+                "Fecha com educação"
+              ],
+              [
+                "RST",
+                "Corta na hora"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Janela = 0: o receptor está cheio e o emissor para até ela abrir."
+          },
+          {
+            "tipo": "texto",
+            "texto": "O ping testa o host (camada de rede). O site depende da porta 80 ou 443 aberta. Um pode funcionar sem o outro."
+          }
+        ],
+        "pegadinhas": [
+          "Ping respondendo não prova que o site está no ar.",
+          "Site fora do ar não prova que a máquina está desligada."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "O que “Connection refused” costuma ser?",
+            "resposta": "O destino mandou RST: não há serviço naquela porta."
+          }
+        ]
+      },
+      {
+        "titulo": "11. Arquiteturas e URL",
+        "tema": "aplicacao",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "Cliente-servidor",
+              "P2P"
+            ],
+            "linhas": [
+              [
+                "Quem atende",
+                "O servidor, sempre ligado",
+                "Todos pedem e fornecem"
+              ],
+              [
+                "Exemplo",
+                "Portal do aluno, e-mail",
+                "BitTorrent"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "O e-mail usa servidor porque quem recebe pode estar com o computador desligado."
+          },
+          {
+            "tipo": "texto",
+            "texto": "URL: https://loja.exemplo.com:8443/produtos?cor=azul#fotos"
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Parte",
+              "No exemplo"
+            ],
+            "linhas": [
+              [
+                "Esquema",
+                "https"
+              ],
+              [
+                "Host",
+                "loja.exemplo.com"
+              ],
+              [
+                "Porta",
+                "8443"
+              ],
+              [
+                "Caminho",
+                "/produtos"
+              ],
+              [
+                "Consulta",
+                "?cor=azul"
+              ],
+              [
+                "Fragmento",
+                "#fotos"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "O fragmento (#) não é enviado ao servidor.",
+          "Sem porta escrita: http usa 80 e https usa 443."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Qual parte da URL vai para o DNS?",
+            "resposta": "O host."
+          }
+        ]
+      },
+      {
+        "titulo": "12. Grupos de status HTTP",
+        "tema": "status",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Grupo",
+              "Quer dizer",
+              "De quem é o problema"
+            ],
+            "linhas": [
+              [
+                "1xx",
+                "Informação",
+                "Ninguém errou"
+              ],
+              [
+                "2xx",
+                "Sucesso",
+                "Ninguém errou"
+              ],
+              [
+                "3xx",
+                "Redirecionamento",
+                "Ninguém errou: só mudou o endereço"
+              ],
+              [
+                "4xx",
+                "Erro do cliente: o pedido está errado",
+                "Cliente"
+              ],
+              [
+                "5xx",
+                "Erro do servidor: ele falhou ao atender",
+                "Servidor"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "Não decore um por um: olhe o primeiro número."
+          }
+        ],
+        "pegadinhas": [
+          "3xx não é erro.",
+          "4xx × 5xx: pedido errado × servidor falhou."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Pediram uma área sem permissão. Que grupo?",
+            "resposta": "4xx: o problema está em quem pediu."
+          },
+          {
+            "pergunta": "O banco de dados do site caiu. Que grupo?",
+            "resposta": "5xx: quem falhou foi o servidor."
+          },
+          {
+            "pergunta": "O 1xx é erro?",
+            "resposta": "Não, é só uma informação."
+          }
+        ]
+      },
+      {
+        "titulo": "13. Lendo o HTTP e cookies",
+        "tema": "aplicacao",
+        "blocos": [
+          {
+            "tipo": "codigo",
+            "texto": "POST /carrinho HTTP/1.1\nHost: loja.exemplo.com\nCookie: sessao=c41d\n\nHTTP/1.1 301 Moved Permanently\nLocation: /novo-carrinho"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "POST é o método e /carrinho é o recurso.",
+              "Host diz para qual site vai o pedido.",
+              "Cookie mostra quem é você.",
+              "Location diz para onde o navegador vai."
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "HTTP é sem estado: cada pedido é atendido sem lembrar dos anteriores. O servidor manda Set-Cookie, e o navegador devolve o cookie em todo pedido."
+          }
+        ],
+        "pegadinhas": [
+          "Quem rouba o cookie de sessão entra sem senha.",
+          "301 é mudança definitiva; 302 é temporária."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Por que a linha Host existe, se já há o IP?",
+            "resposta": "Porque um mesmo IP pode hospedar vários sites."
+          }
+        ]
+      },
+      {
+        "titulo": "14. DNS e e-mail",
+        "tema": "aplicacao",
+        "blocos": [
+          {
+            "tipo": "passos",
+            "itens": [
+              "Raiz: “quem cuida do .br?”",
+              "TLD (.br): “quem cuida desse domínio?”",
+              "Autoritativo: dá o IP."
+            ]
+          },
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Registro",
+              "Guarda"
+            ],
+            "linhas": [
+              [
+                "A",
+                "Nome → IPv4"
+              ],
+              [
+                "AAAA",
+                "Nome → IPv6"
+              ],
+              [
+                "CNAME",
+                "Apelido → outro nome"
+              ],
+              [
+                "MX",
+                "Servidor de e-mail"
+              ],
+              [
+                "NS",
+                "Servidores autoritativos"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "TTL do DNS: quanto tempo a resposta pode ficar em cache."
+          },
+          {
+            "tipo": "texto",
+            "texto": "E-mail: SMTP envia e leva de um servidor ao outro; IMAP ou POP3 leem. IMAP deixa tudo sincronizado no servidor, bom para quem usa vários aparelhos. POP3 baixa para um aparelho."
+          }
+        ],
+        "pegadinhas": [
+          "TTL do IP conta saltos; TTL do DNS conta tempo.",
+          "SMTP manda; IMAP e POP3 leem."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Qual registro o servidor consulta antes de entregar um e-mail?",
+            "resposta": "O MX do domínio de quem recebe."
+          }
+        ]
+      },
+      {
+        "titulo": "15. Protocolos, portas e segurança",
+        "tema": "aplicacao",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Protocolo",
+              "Para quê",
+              "Transporte",
+              "Porta"
+            ],
+            "linhas": [
+              [
+                "HTTP",
+                "Páginas web",
+                "TCP",
+                "80"
+              ],
+              [
+                "HTTPS",
+                "Web com TLS",
+                "TCP (UDP no HTTP/3)",
+                "443"
+              ],
+              [
+                "DNS",
+                "Nome → IP",
+                "UDP (e TCP)",
+                "53"
+              ],
+              [
+                "DHCP",
+                "Dar IP",
+                "UDP",
+                "67 e 68"
+              ],
+              [
+                "SMTP",
+                "Enviar e-mail",
+                "TCP",
+                "25 (587 do usuário)"
+              ],
+              [
+                "POP3",
+                "Baixar e-mail",
+                "TCP",
+                "110"
+              ],
+              [
+                "IMAP",
+                "Ler e sincronizar",
+                "TCP",
+                "143 (993 com TLS)"
+              ],
+              [
+                "FTP",
+                "Arquivos",
+                "TCP",
+                "21 e 20"
+              ],
+              [
+                "SSH",
+                "Terminal seguro",
+                "TCP",
+                "22"
+              ],
+              [
+                "Telnet",
+                "Terminal sem cifra",
+                "TCP",
+                "23"
+              ]
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "HTTPS garante confidencialidade, integridade e autenticidade. O cadeado diz que a conexão é cifrada com aquele site, não que o site é honesto."
+          }
+        ],
+        "pegadinhas": [
+          "Telnet e FTP mandam tudo em texto puro, até a senha.",
+          "SFTP roda por dentro do SSH."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Um site de golpe pode ter cadeado?",
+            "resposta": "Pode. O cadeado só protege o caminho até ele."
+          }
+        ]
+      },
+      {
+        "titulo": "16. Do Enter à página",
+        "tema": "integradora",
+        "blocos": [
+          {
+            "tipo": "passos",
+            "itens": [
+              "DHCP: o notebook ganha IP, máscara, gateway e DNS. (UDP 67/68)",
+              "ARP: descobre o MAC do gateway.",
+              "DNS: descobre o IP do site. (UDP 53)",
+              "TCP: handshake com o servidor. (porta 443)",
+              "TLS: cria o túnel seguro.",
+              "HTTP: GET da página e resposta 200."
+            ]
+          },
+          {
+            "tipo": "texto",
+            "texto": "No caminho, o NAT troca o IP privado pelo público do roteador. O primeiro quadro leva o MAC do roteador de casa, porque o site está em outra rede."
+          }
+        ],
+        "pegadinhas": [
+          "O site vê o IP público.",
+          "O MAC do servidor do site nunca aparece na sua rede."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "O que vem primeiro: DNS ou handshake TCP?",
+            "resposta": "DNS: é preciso saber o IP antes de conectar."
+          }
+        ]
+      }
+    ]
+  }
 }

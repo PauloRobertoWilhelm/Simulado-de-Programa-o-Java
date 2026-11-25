@@ -9600,5 +9600,441 @@
       "dica": "Aparece no import java.util.",
       "explicacao": "Scanner scanner = new Scanner(System.in);"
     }
-  ]
+  ],
+  "revisao": {
+    "intro": "Aulas 8 a 16 e o seu resumo de 24/11, na ordem da matéria. Abra, leia, responda de cabeça e só depois mostre a resposta.",
+    "secoes": [
+      {
+        "titulo": "1. while (Aula 8)",
+        "tema": "repeticao",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Testa ANTES de cada volta. Pode rodar zero vezes."
+          },
+          {
+            "tipo": "codigo",
+            "texto": "int i = 1;            // início\nwhile (i <= 10) {     // condição\n  System.out.println(i);\n  i++;                // atualização\n}"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "Três partes: inicialização, condição e atualização."
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Sem i++ o laço nunca acaba.",
+          "i < 10 para no 9; i <= 10 vai até o 10."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Se i começar em 11, o que aparece?",
+            "resposta": "Nada: 11 <= 10 já é falso."
+          }
+        ]
+      },
+      {
+        "titulo": "2. do-while (Aula 9)",
+        "tema": "dowhile",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Executa primeiro e testa DEPOIS. Roda pelo menos uma vez."
+          },
+          {
+            "tipo": "codigo",
+            "texto": "int numero;\ndo {\n  System.out.print(\"Digite um número positivo: \");\n  numero = scanner.nextInt();\n} while (numero <= 0);"
+          },
+          {
+            "tipo": "texto",
+            "texto": "Bom para menus e para validar o que a pessoa digita."
+          }
+        ],
+        "pegadinhas": [
+          "Leva ; depois da condição.",
+          "A condição é a do ERRO, a que faz repetir.",
+          "A variável é declarada fora do do."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Para aceitar só notas de 0 a 10, que condição faz repetir?",
+            "resposta": "nota < 0 || nota > 10"
+          }
+        ]
+      },
+      {
+        "titulo": "3. for (Aula 10)",
+        "tema": "for",
+        "blocos": [
+          {
+            "tipo": "passos",
+            "itens": [
+              "Inicializa, uma vez só.",
+              "Testa a condição.",
+              "Executa o bloco.",
+              "Incrementa ou decrementa.",
+              "Volta a testar."
+            ]
+          },
+          {
+            "tipo": "codigo",
+            "texto": "for (int i = 10; i >= 1; i--) {\n  System.out.println(i);\n}"
+          }
+        ],
+        "pegadinhas": [
+          "As partes são separadas por ponto e vírgula.",
+          "A variável do for só existe dentro dele.",
+          "Regressiva: >= com i--."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "for (int i = 0; i < 5; i++): quantas voltas?",
+            "resposta": "5 voltas: 0, 1, 2, 3 e 4."
+          }
+        ]
+      },
+      {
+        "titulo": "4. Qual laço usar?",
+        "tema": "bim2",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "while",
+              "do-while",
+              "for"
+            ],
+            "linhas": [
+              [
+                "Testa",
+                "Antes",
+                "Depois",
+                "Antes"
+              ],
+              [
+                "Mínimo de voltas",
+                "0",
+                "1",
+                "0"
+              ],
+              [
+                "Início e passo",
+                "Separados",
+                "Separados",
+                "No cabeçalho"
+              ],
+              [
+                "; no fim",
+                "Não",
+                "Sim",
+                "Não"
+              ],
+              [
+                "Use quando",
+                "Não sabe quantas",
+                "Menu e validação",
+                "Sabe quantas"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Trocar um laço pelo outro cai bastante."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Tabuada do 7, de 1 a 10: qual laço?",
+            "resposta": "for: o número de voltas é conhecido."
+          }
+        ]
+      },
+      {
+        "titulo": "5. Strings (Aula 11)",
+        "tema": "strings",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Método",
+              "Faz",
+              "Exemplo",
+              "Dá"
+            ],
+            "linhas": [
+              [
+                "+",
+                "Une",
+                "\"Olá, \" + \"João\"",
+                "Olá, João"
+              ],
+              [
+                "equals()",
+                "Compara o conteúdo",
+                "\"abc\".equals(\"abc\")",
+                "true"
+              ],
+              [
+                "length()",
+                "Conta",
+                "\"Java\".length()",
+                "4"
+              ],
+              [
+                "charAt(i)",
+                "Pega uma letra",
+                "\"Java\".charAt(0)",
+                "J"
+              ],
+              [
+                "substring(a, b)",
+                "Recorta, sem o b",
+                "\"Programação\".substring(0, 5)",
+                "Progr"
+              ],
+              [
+                "replace()",
+                "Troca todas",
+                "\"banana\" a por o",
+                "bonono"
+              ],
+              [
+                "trim()",
+                "Tira as pontas",
+                "\"  Olá  \"",
+                "Olá"
+              ],
+              [
+                "toUpperCase()",
+                "Maiúsculas",
+                "\"Java\"",
+                "JAVA"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Compare textos com equals(), não com ==.",
+          "A String original não muda: guarde o resultado.",
+          "length() na String tem parênteses."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "\"Cascavel\".substring(0, 4)?",
+            "resposta": "Casc"
+          },
+          {
+            "pergunta": "Último índice de \"Redes\"?",
+            "resposta": "4 (são 5 letras)."
+          }
+        ]
+      },
+      {
+        "titulo": "6. Vetores (Aula 12)",
+        "tema": "arrays",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "Forma",
+              "Código"
+            ],
+            "linhas": [
+              [
+                "Declarar",
+                "int[] numeros;"
+              ],
+              [
+                "Criar com tamanho",
+                "numeros = new int[5];"
+              ],
+              [
+                "Tudo junto",
+                "int[] numeros = new int[5];"
+              ],
+              [
+                "Com valores",
+                "int[] numeros = {1, 2, 3, 4, 5};"
+              ]
+            ]
+          },
+          {
+            "tipo": "codigo",
+            "texto": "for (int i = 0; i < numeros.length; i++) {\n  System.out.println(numeros[i]);\n}"
+          }
+        ],
+        "pegadinhas": [
+          "Tamanho fixo e um tipo só.",
+          "numeros[5] num vetor de 5 dá ArrayIndexOutOfBoundsException.",
+          "length no vetor não tem parênteses."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Com new int[8], qual é o último índice?",
+            "resposta": "7."
+          }
+        ]
+      },
+      {
+        "titulo": "7. Matrizes (Aula 13)",
+        "tema": "matrizes",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Tabela com [linha][coluna]."
+          },
+          {
+            "tipo": "codigo",
+            "texto": "for (int i = 0; i < matriz.length; i++) {\n  for (int j = 0; j < matriz[i].length; j++) {\n    System.out.print(matriz[i][j] + \" \");\n  }\n  System.out.println();\n}"
+          }
+        ],
+        "pegadinhas": [
+          "matriz.length são linhas; matriz[i].length são colunas.",
+          "O println() vazio fica no laço de FORA.",
+          "Na 3x3 o último é matriz[2][2]."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Em {{1,2,3},{4,5,6}}, quanto vale [1][0]?",
+            "resposta": "4: linha 1, coluna 0."
+          }
+        ]
+      },
+      {
+        "titulo": "8. Classes e objetos (Aula 14)",
+        "tema": "classes",
+        "blocos": [
+          {
+            "tipo": "texto",
+            "texto": "Classe é o molde; objeto é a instância criada com new."
+          },
+          {
+            "tipo": "codigo",
+            "texto": "Carro meuCarro = new Carro();\nmeuCarro.marca = \"Toyota\";\nmeuCarro.acelerar();"
+          },
+          {
+            "tipo": "lista",
+            "itens": [
+              "Atributos: o que o objeto TEM.",
+              "Métodos: o que o objeto FAZ.",
+              "No desenho: nome, atributos, métodos."
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Dois objetos da mesma classe podem ter valores diferentes.",
+          "O main fica na classe de teste."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Em Pessoa p = new Pessoa();, qual é o tipo e qual é o nome?",
+            "resposta": "Pessoa é o tipo; p é o nome do objeto."
+          }
+        ]
+      },
+      {
+        "titulo": "9. Métodos (Aula 15)",
+        "tema": "metodos",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "void",
+              "Com retorno"
+            ],
+            "linhas": [
+              [
+                "Também chamado",
+                "Procedimento",
+                "Função"
+              ],
+              [
+                "return valor",
+                "Não",
+                "Obrigatório"
+              ],
+              [
+                "Faz",
+                "Uma ação",
+                "Calcula e devolve"
+              ],
+              [
+                "Chamada",
+                "obj.metodo();",
+                "int x = obj.metodo();"
+              ]
+            ]
+          },
+          {
+            "tipo": "codigo",
+            "texto": "public int somar() {\n  int a = 5;\n  int b = 3;\n  return a + b;\n}"
+          }
+        ],
+        "pegadinhas": [
+          "int x = metodoVoid(); não compila.",
+          "Nada roda depois do return.",
+          "10 / 4 com inteiros dá 2; com (double) dá 2.5."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "Como declarar um método que devolve um texto?",
+            "resposta": "public String nome() { return \"...\"; }"
+          }
+        ]
+      },
+      {
+        "titulo": "10. Parâmetros (Aula 16)",
+        "tema": "parametros",
+        "blocos": [
+          {
+            "tipo": "tabela",
+            "cabecalho": [
+              "",
+              "Por valor",
+              "Por referência"
+            ],
+            "linhas": [
+              [
+                "Recebe",
+                "Cópia",
+                "Endereço"
+              ],
+              [
+                "Muda o original",
+                "Não",
+                "Sim"
+              ],
+              [
+                "Tipos",
+                "int, double, boolean",
+                "Arrays e objetos"
+              ],
+              [
+                "Exemplo",
+                "ehPar(int numero)",
+                "ordenarVetor(int[] vetor)"
+              ]
+            ]
+          }
+        ],
+        "pegadinhas": [
+          "Na chamada passe numeros, sem colchetes.",
+          "vetor = new int[3] dentro do método não troca o de fora.",
+          "Arrays.sort pede import java.util.Arrays."
+        ],
+        "perguntas": [
+          {
+            "pergunta": "int x = 6; dobrar(x) faz n = n * 2. Quanto vale x depois?",
+            "resposta": "6: foi uma cópia."
+          },
+          {
+            "pergunta": "Um método soma 1 em cada posição de {1, 2}. Como fica o vetor do main?",
+            "resposta": "{2, 3}: o conteúdo do array muda de verdade."
+          }
+        ]
+      }
+    ]
+  }
 }

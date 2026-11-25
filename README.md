@@ -15,6 +15,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 ## Como cada matéria funciona
 
+- **Revisão:** resumo da prova por assunto, com pegadinhas, perguntas rápidas e treino. Só nas matérias com o campo `revisao`.
 - **Livro:** capítulos curtos, explicados com comparações do dia a dia. O botão "Ouvir o capítulo" lê as páginas em voz alta e vira sozinho. Os capítulos lidos ficam marcados.
 - **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
   - **Rodízio:** cada rodada traz primeiro as perguntas que você viu menos vezes.
@@ -61,6 +62,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `materias/index.json`: lista de abas, com título, cores, temas (com bimestre) e o que estudar para a próxima prova
 - `materias/<id>.json`: perguntas, livro, histórias, jogos, termos e práticas de uma matéria
 - `js/voz.js`: fala e escuta (leitura em voz alta e microfone)
+- `js/revisao.js`: tela da revisão
 - `js/livro.js`: tela do livro
 - `js/historias.js`: tela de histórias
 - `js/jogos.js`: tela de jogos

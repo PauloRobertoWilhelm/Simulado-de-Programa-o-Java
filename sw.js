@@ -17,7 +17,7 @@
 
 // CACHE_NAME identifica o armazenamento local do navegador.
 // Trocar esse valor cria um cache novo, e o evento activate apaga os antigos.
-const CACHE_NAME = 'simulados-unipar-v11';
+const CACHE_NAME = 'simulados-unipar-v12';
 
 // urlsToCache guarda os arquivos necessários para abrir o app sem internet.
 // Se um arquivo da lista não existir, a instalação falha. Ao criar uma matéria
@@ -31,6 +31,7 @@ const urlsToCache = [
   './css/estudo.css',
   './js/voz.js',
   './js/visual.js',
+  './js/revisao.js',
   './js/livro.js',
   './js/historias.js',
   './js/jogos.js',

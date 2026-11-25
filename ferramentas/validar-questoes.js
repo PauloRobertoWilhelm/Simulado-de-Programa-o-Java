@@ -202,6 +202,19 @@ for (const materia of lista) {
     if (!cap.titulo || !(cap.paginas || []).length || !(cap.guardar || []).length) erros.push(`${materia.id} capítulo "${cap.titulo}": campo faltando`);
   });
 
+  // Confere a aba Revisão: tema existente, blocos conhecidos e perguntas com resposta.
+  ((dados.revisao || {}).secoes || []).forEach((secao) => {
+    // "bim2" junta o bimestre inteiro, então também vale como tema.
+    if (secao.tema !== 'bim2' && !temas.has(secao.tema)) erros.push(`${materia.id} revisão "${secao.titulo}": tema "${secao.tema}" não existe`);
+    // Cada bloco precisa ser de um tipo que js/revisao.js sabe desenhar; tabela com o mesmo número de colunas em todas as linhas.
+    secao.blocos.forEach((b) => {
+      if (!['texto', 'lista', 'passos', 'tabela', 'codigo'].includes(b.tipo)) erros.push(`${materia.id} revisão "${secao.titulo}": bloco "${b.tipo}" desconhecido`);
+      if (b.tipo === 'tabela' && b.linhas.some((linha) => linha.length !== b.cabecalho.length)) erros.push(`${materia.id} revisão "${secao.titulo}": tabela com colunas diferentes`);
+    });
+    // Pergunta sem resposta não ajuda ninguém.
+    if (!(secao.perguntas || []).length || secao.perguntas.some((q) => !q.pergunta || !q.resposta)) erros.push(`${materia.id} revisão "${secao.titulo}": pergunta ou resposta faltando`);
+  });
+
   // Resumo da matéria.
   const total = (dados.questoes || []).length;
   const pct = total ? Math.round((certaMaisLonga / total) * 100) : 0;

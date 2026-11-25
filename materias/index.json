@@ -22,23 +22,93 @@
     "temas": [
       {
         "id": "ihc",
-        "rotulo": "🧠 IHC e qualidade"
+        "rotulo": "🧠 IHC e qualidade",
+        "assuntos": [
+          {
+            "id": "psico",
+            "rotulo": "Memória, atenção e leis"
+          },
+          {
+            "id": "comunic",
+            "rotulo": "Comunicabilidade"
+          },
+          {
+            "id": "qualidade",
+            "rotulo": "Usabilidade, UX e acessibilidade"
+          }
+        ]
       },
       {
         "id": "heuristicas",
-        "rotulo": "🔎 Nielsen e Krug"
+        "rotulo": "🔎 Nielsen e Krug",
+        "assuntos": [
+          {
+            "id": "krug",
+            "rotulo": "Steve Krug"
+          },
+          {
+            "id": "nielsen",
+            "rotulo": "Heurísticas de Nielsen"
+          }
+        ]
       },
       {
         "id": "norman",
-        "rotulo": "🚪 Norman e cognição"
+        "rotulo": "🚪 Norman e cognição",
+        "assuntos": [
+          {
+            "id": "golfos",
+            "rotulo": "Golfos, lapsos e modelo mental"
+          },
+          {
+            "id": "afford",
+            "rotulo": "Affordance e significante"
+          },
+          {
+            "id": "principios",
+            "rotulo": "Feedback, mapeamento e restrições"
+          }
+        ]
       },
       {
         "id": "visual",
-        "rotulo": "🎨 Cores, protótipos e guias"
+        "rotulo": "🎨 Cores, protótipos e guias",
+        "assuntos": [
+          {
+            "id": "cores",
+            "rotulo": "Cores"
+          },
+          {
+            "id": "figma",
+            "rotulo": "Figma"
+          },
+          {
+            "id": "proto",
+            "rotulo": "Wireframe e protótipo"
+          },
+          {
+            "id": "guia",
+            "rotulo": "Style guide e tipografia"
+          }
+        ]
       },
       {
         "id": "avaliacao",
-        "rotulo": "♿ Avaliação e acessibilidade"
+        "rotulo": "♿ Avaliação e acessibilidade",
+        "assuntos": [
+          {
+            "id": "acess",
+            "rotulo": "Acessibilidade e WCAG"
+          },
+          {
+            "id": "teste",
+            "rotulo": "Teste de usabilidade"
+          },
+          {
+            "id": "heur",
+            "rotulo": "Avaliação heurística e percurso"
+          }
+        ]
       }
     ]
   },
@@ -66,62 +136,302 @@
       {
         "id": "logica",
         "rotulo": "🧠 Lógica Básica",
-        "bimestre": 1
+        "bimestre": 1,
+        "assuntos": [
+          {
+            "id": "entrada",
+            "rotulo": "Ler do teclado (Scanner)"
+          },
+          {
+            "id": "tipos",
+            "rotulo": "Tipos e variáveis"
+          },
+          {
+            "id": "contas",
+            "rotulo": "Contas e decisão"
+          },
+          {
+            "id": "saida",
+            "rotulo": "Mostrar e juntar texto"
+          }
+        ]
       },
       {
         "id": "operadores",
         "rotulo": "➕ Operadores",
-        "bimestre": 1
+        "bimestre": 1,
+        "assuntos": [
+          {
+            "id": "logicos",
+            "rotulo": "Comparação e lógicos"
+          },
+          {
+            "id": "resto",
+            "rotulo": "Divisão e resto"
+          },
+          {
+            "id": "composta",
+            "rotulo": "Atribuição e ++"
+          },
+          {
+            "id": "ordem",
+            "rotulo": "Ordem das contas"
+          }
+        ]
       },
       {
         "id": "selecao",
         "rotulo": "🔀 If / Switch",
-        "bimestre": 1
+        "bimestre": 1,
+        "assuntos": [
+          {
+            "id": "switch",
+            "rotulo": "Switch"
+          },
+          {
+            "id": "if",
+            "rotulo": "If e else"
+          }
+        ]
       },
       {
         "id": "repeticao",
         "rotulo": "🔁 Aula 8 · While",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "conceito",
+            "rotulo": "Conceito e sintaxe"
+          },
+          {
+            "id": "acum",
+            "rotulo": "Soma e acumulador"
+          },
+          {
+            "id": "pares",
+            "rotulo": "Contar pares e divisões"
+          },
+          {
+            "id": "seq",
+            "rotulo": "Que sequência aparece"
+          },
+          {
+            "id": "voltas",
+            "rotulo": "Quantas voltas e valor final"
+          }
+        ]
       },
       {
         "id": "dowhile",
         "rotulo": "🔄 Aula 9 · Do-while",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "conceito",
+            "rotulo": "Conceito e sintaxe"
+          },
+          {
+            "id": "valid",
+            "rotulo": "Menu e validação com Scanner"
+          },
+          {
+            "id": "acum",
+            "rotulo": "Soma, saldo e dígitos"
+          },
+          {
+            "id": "seq",
+            "rotulo": "Que sequência aparece"
+          },
+          {
+            "id": "voltas",
+            "rotulo": "Voltas e valor final"
+          }
+        ]
       },
       {
         "id": "for",
         "rotulo": "🔂 Aula 10 · For",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "conceito",
+            "rotulo": "Conceito e sintaxe"
+          },
+          {
+            "id": "tabuada",
+            "rotulo": "Tabuada"
+          },
+          {
+            "id": "soma",
+            "rotulo": "Soma"
+          },
+          {
+            "id": "voltas",
+            "rotulo": "Quantas voltas"
+          },
+          {
+            "id": "seq",
+            "rotulo": "Que sequência aparece"
+          }
+        ]
       },
       {
         "id": "strings",
         "rotulo": "🔤 Aula 11 · Strings",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "equals",
+            "rotulo": "Comparar: equals"
+          },
+          {
+            "id": "substring",
+            "rotulo": "Recortar: substring"
+          },
+          {
+            "id": "replace",
+            "rotulo": "Trocar: replace"
+          },
+          {
+            "id": "trim",
+            "rotulo": "Tirar espaços: trim"
+          },
+          {
+            "id": "charat",
+            "rotulo": "Pegar letra: charAt"
+          },
+          {
+            "id": "caixa",
+            "rotulo": "Maiúsculas e minúsculas"
+          },
+          {
+            "id": "length",
+            "rotulo": "Tamanho: length"
+          },
+          {
+            "id": "concat",
+            "rotulo": "Juntar textos (+)"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "O que é String e outros"
+          }
+        ]
       },
       {
         "id": "arrays",
         "rotulo": "🧮 Aula 12 · Vetores",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "percorrer",
+            "rotulo": "Percorrer e somar"
+          },
+          {
+            "id": "maior",
+            "rotulo": "Maior, menor e contar"
+          },
+          {
+            "id": "tamanho",
+            "rotulo": "Tamanho e índice fora"
+          },
+          {
+            "id": "acesso",
+            "rotulo": "Índice: ler e mudar valores"
+          },
+          {
+            "id": "criar",
+            "rotulo": "Conceito e criação"
+          }
+        ]
       },
       {
         "id": "matrizes",
         "rotulo": "🔲 Aula 13 · Matrizes",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "diagonal",
+            "rotulo": "Diagonal"
+          },
+          {
+            "id": "soma",
+            "rotulo": "Soma"
+          },
+          {
+            "id": "tamanho",
+            "rotulo": "Linhas e colunas (length)"
+          },
+          {
+            "id": "percorrer",
+            "rotulo": "Percorrer com laços"
+          },
+          {
+            "id": "acesso",
+            "rotulo": "Acessar e mudar [linha][coluna]"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Conceito e declaração"
+          }
+        ]
       },
       {
         "id": "classes",
         "rotulo": "🏗️ Aula 14 · Classes e objetos",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "metodos",
+            "rotulo": "Chamar métodos do objeto"
+          },
+          {
+            "id": "objetos",
+            "rotulo": "Criar objeto e usar atributos"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Classe, objeto e POO"
+          }
+        ]
       },
       {
         "id": "metodos",
         "rotulo": "⚙️ Aula 15 · Métodos",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "void",
+            "rotulo": "Método sem retorno (void)"
+          },
+          {
+            "id": "retorno",
+            "rotulo": "Método com retorno"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Partes do método e vantagens"
+          }
+        ]
       },
       {
         "id": "parametros",
         "rotulo": "📦 Aula 16 · Parâmetros",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "ref",
+            "rotulo": "Por referência (arrays e objetos)"
+          },
+          {
+            "id": "valor",
+            "rotulo": "Por valor (primitivos)"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Conceito"
+          }
+        ]
       }
     ],
     "temaPadrao": "bim2"
@@ -166,17 +476,91 @@
       {
         "id": "casosdeuso",
         "rotulo": "📐 Casos de uso e diagrama",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "conceito",
+            "rotulo": "Conceito e partes"
+          },
+          {
+            "id": "incext",
+            "rotulo": "Include e extend"
+          },
+          {
+            "id": "excecao",
+            "rotulo": "Exceções"
+          },
+          {
+            "id": "cenario",
+            "rotulo": "Cenário principal"
+          },
+          {
+            "id": "passos",
+            "rotulo": "Os 4 passos"
+          },
+          {
+            "id": "atores",
+            "rotulo": "Atores e generalização"
+          },
+          {
+            "id": "diagrama",
+            "rotulo": "Diagrama e notação"
+          }
+        ]
       },
       {
         "id": "historias",
         "rotulo": "📝 Histórias de usuário",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "exemplos",
+            "rotulo": "Reconhecer uma história"
+          },
+          {
+            "id": "aceite",
+            "rotulo": "Critérios de aceite e cartão"
+          },
+          {
+            "id": "formato",
+            "rotulo": "Formato: como, quero, para que"
+          }
+        ]
       },
       {
         "id": "validacao",
         "rotulo": "🔍 Técnicas de validação",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "dominio",
+            "rotulo": "Modelagem de domínio"
+          },
+          {
+            "id": "decomp",
+            "rotulo": "Decomposição funcional"
+          },
+          {
+            "id": "processo",
+            "rotulo": "Modelagem de processos"
+          },
+          {
+            "id": "check",
+            "rotulo": "Checklist"
+          },
+          {
+            "id": "proto",
+            "rotulo": "Prototipação"
+          },
+          {
+            "id": "casos",
+            "rotulo": "Casos de uso e histórias como técnica"
+          },
+          {
+            "id": "validar",
+            "rotulo": "Validar × gerenciar"
+          }
+        ]
       }
     ],
     "temaPadrao": "bim2"
@@ -226,22 +610,182 @@
       {
         "id": "rede",
         "rotulo": "🌐 Aula 06 · Camada de rede",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "ttl",
+            "rotulo": "TTL e traceroute"
+          },
+          {
+            "id": "sub-rede",
+            "rotulo": "Sub-rede: endereço de rede"
+          },
+          {
+            "id": "sub-broad",
+            "rotulo": "Sub-rede: broadcast"
+          },
+          {
+            "id": "sub-host",
+            "rotulo": "Sub-rede: primeiro e último host"
+          },
+          {
+            "id": "sub-masc",
+            "rotulo": "Máscara e prefixo CIDR"
+          },
+          {
+            "id": "classes",
+            "rotulo": "Classes A, B e C"
+          },
+          {
+            "id": "sub-qtd",
+            "rotulo": "Quantos hosts e quantas sub-redes"
+          },
+          {
+            "id": "ipv6",
+            "rotulo": "IPv6"
+          },
+          {
+            "id": "dhcp",
+            "rotulo": "DHCP e DORA"
+          },
+          {
+            "id": "nat",
+            "rotulo": "NAT"
+          },
+          {
+            "id": "mac",
+            "rotulo": "IP × MAC, ARP e gateway"
+          },
+          {
+            "id": "privado",
+            "rotulo": "IP público e privado"
+          },
+          {
+            "id": "encap",
+            "rotulo": "Encapsulamento e cabeçalho"
+          },
+          {
+            "id": "tipos",
+            "rotulo": "Tipos de endereço e loopback"
+          }
+        ]
       },
       {
         "id": "transporte",
         "rotulo": "🚚 Aula 07 · Camada de transporte",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "tcpudp",
+            "rotulo": "TCP ou UDP"
+          },
+          {
+            "id": "handshake",
+            "rotulo": "Handshake (SYN e ACK)"
+          },
+          {
+            "id": "seqack",
+            "rotulo": "Número de sequência e ACK"
+          },
+          {
+            "id": "retrans",
+            "rotulo": "Retransmissão"
+          },
+          {
+            "id": "fluxo",
+            "rotulo": "Fluxo, janela e congestionamento"
+          },
+          {
+            "id": "fim",
+            "rotulo": "FIN, RST e diagnóstico"
+          },
+          {
+            "id": "udp",
+            "rotulo": "UDP e datagrama"
+          },
+          {
+            "id": "segm",
+            "rotulo": "Segmentação e cabeçalho TCP"
+          },
+          {
+            "id": "sockets",
+            "rotulo": "Sockets e multiplexação"
+          },
+          {
+            "id": "portas",
+            "rotulo": "Portas e faixas"
+          }
+        ]
       },
       {
         "id": "aplicacao",
         "rotulo": "📨 Aula 08 · Camada de aplicação",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "url",
+            "rotulo": "URL"
+          },
+          {
+            "id": "dns",
+            "rotulo": "DNS e registros"
+          },
+          {
+            "id": "cookies",
+            "rotulo": "Cookies e sessão"
+          },
+          {
+            "id": "codigos",
+            "rotulo": "Códigos HTTP"
+          },
+          {
+            "id": "email",
+            "rotulo": "E-mail: SMTP, POP3 e IMAP"
+          },
+          {
+            "id": "https",
+            "rotulo": "HTTPS e cadeado"
+          },
+          {
+            "id": "ftp",
+            "rotulo": "FTP, Telnet e SSH"
+          },
+          {
+            "id": "arq",
+            "rotulo": "Cliente-servidor e P2P"
+          },
+          {
+            "id": "http",
+            "rotulo": "Mensagens e métodos HTTP"
+          },
+          {
+            "id": "geral",
+            "rotulo": "Protocolos e escolha TCP/UDP"
+          }
+        ]
       },
       {
         "id": "status",
         "rotulo": "🚦 Grupos HTTP · 1xx a 5xx",
-        "bimestre": 2
+        "bimestre": 2,
+        "assuntos": [
+          {
+            "id": "dif",
+            "rotulo": "Diferença entre os grupos"
+          },
+          {
+            "id": "mesmo",
+            "rotulo": "O que os códigos do grupo têm em comum"
+          },
+          {
+            "id": "sit",
+            "rotulo": "Qual é o grupo da situação"
+          },
+          {
+            "id": "serve",
+            "rotulo": "Para que serve cada grupo"
+          }
+        ]
       },
       {
         "id": "integradora",
@@ -274,27 +818,131 @@
     "temas": [
       {
         "id": "tipos",
-        "rotulo": "🧪 Tipos de teste"
+        "rotulo": "🧪 Tipos de teste",
+        "assuntos": [
+          {
+            "id": "nivel",
+            "rotulo": "Unidade, integração e ponta a ponta"
+          },
+          {
+            "id": "reg",
+            "rotulo": "Fumaça, regressão e reteste"
+          },
+          {
+            "id": "nfunc",
+            "rotulo": "Carga, estresse, segurança e usabilidade"
+          },
+          {
+            "id": "aceite",
+            "rotulo": "Aceite, alfa, beta e estático"
+          }
+        ]
       },
       {
         "id": "tecnicas",
-        "rotulo": "📦 Caixa preta e técnicas"
+        "rotulo": "📦 Caixa preta e técnicas",
+        "assuntos": [
+          {
+            "id": "limite",
+            "rotulo": "Partição e valor limite"
+          },
+          {
+            "id": "tabela",
+            "rotulo": "Tabela de decisão"
+          },
+          {
+            "id": "estado",
+            "rotulo": "Transição de estados"
+          },
+          {
+            "id": "branca",
+            "rotulo": "Caixa preta × caixa branca"
+          },
+          {
+            "id": "exp",
+            "rotulo": "Exploratório, checklist e suposição de erro"
+          }
+        ]
       },
       {
         "id": "praticas",
-        "rotulo": "🤝 Práticas de QA"
+        "rotulo": "🤝 Práticas de QA",
+        "assuntos": [
+          {
+            "id": "tdd",
+            "rotulo": "TDD, BDD e Gherkin"
+          },
+          {
+            "id": "bug",
+            "rotulo": "Relatar e tratar defeitos"
+          },
+          {
+            "id": "auto",
+            "rotulo": "Automação e ferramentas"
+          },
+          {
+            "id": "qa",
+            "rotulo": "Papel do QA e shift left"
+          }
+        ]
       },
       {
         "id": "qualidade",
-        "rotulo": "🏅 Qualidade e impacto"
+        "rotulo": "🏅 Qualidade e impacto",
+        "assuntos": [
+          {
+            "id": "iso",
+            "rotulo": "Características da ISO 25010"
+          },
+          {
+            "id": "defeito",
+            "rotulo": "Engano, defeito e falha"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Qualidade, QA e verificação"
+          }
+        ]
       },
       {
         "id": "principios",
-        "rotulo": "📜 Princípios e níveis"
+        "rotulo": "📜 Princípios e níveis",
+        "assuntos": [
+          {
+            "id": "sete",
+            "rotulo": "Os sete princípios"
+          },
+          {
+            "id": "niveis",
+            "rotulo": "Níveis de teste"
+          },
+          {
+            "id": "geral",
+            "rotulo": "Papéis e casos de teste"
+          }
+        ]
       },
       {
         "id": "compliance",
-        "rotulo": "⚖️ Compliance"
+        "rotulo": "⚖️ Compliance",
+        "assuntos": [
+          {
+            "id": "normas",
+            "rotulo": "ISO, PCI e auditoria"
+          },
+          {
+            "id": "lgpdp",
+            "rotulo": "LGPD: papéis e dados"
+          },
+          {
+            "id": "lgpdr",
+            "rotulo": "LGPD: regras, direitos e multas"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "O que é compliance"
+          }
+        ]
       }
     ]
   },
@@ -321,19 +969,111 @@
     "temas": [
       {
         "id": "portugol",
-        "rotulo": "🧩 Portugol"
+        "rotulo": "🧩 Portugol",
+        "assuntos": [
+          {
+            "id": "tipos",
+            "rotulo": "Tipos de dados"
+          },
+          {
+            "id": "logicas",
+            "rotulo": "Expressões lógicas"
+          },
+          {
+            "id": "lacos",
+            "rotulo": "Laços de repetição"
+          },
+          {
+            "id": "se",
+            "rotulo": "Se e escolha"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Comandos e conceitos"
+          },
+          {
+            "id": "contas",
+            "rotulo": "Variáveis e contas"
+          }
+        ]
       },
       {
         "id": "logica",
-        "rotulo": "🧠 Lógica"
+        "rotulo": "🧠 Lógica",
+        "assuntos": [
+          {
+            "id": "tabela",
+            "rotulo": "Tabela-verdade"
+          },
+          {
+            "id": "neg",
+            "rotulo": "Negação e De Morgan"
+          },
+          {
+            "id": "equiv",
+            "rotulo": "Equivalência"
+          },
+          {
+            "id": "rel",
+            "rotulo": "Comparações (>, <, ==)"
+          },
+          {
+            "id": "simb",
+            "rotulo": "Símbolos e conectivos"
+          },
+          {
+            "id": "classif",
+            "rotulo": "Tautologia e contradição"
+          },
+          {
+            "id": "valor",
+            "rotulo": "Valor de P e Q"
+          }
+        ]
       },
       {
         "id": "fluxo",
-        "rotulo": "🔀 Fluxogramas"
+        "rotulo": "🔀 Fluxogramas",
+        "assuntos": [
+          {
+            "id": "simbolos",
+            "rotulo": "Símbolos"
+          },
+          {
+            "id": "media",
+            "rotulo": "Média e aprovação"
+          },
+          {
+            "id": "maior",
+            "rotulo": "Maior número e ordem"
+          },
+          {
+            "id": "outros",
+            "rotulo": "Seguir o fluxograma"
+          }
+        ]
       },
       {
         "id": "pc",
-        "rotulo": "💡 Pensamento computacional"
+        "rotulo": "💡 Pensamento computacional",
+        "assuntos": [
+          {
+            "id": "pilar",
+            "rotulo": "Reconhecer o pilar"
+          },
+          {
+            "id": "ativ",
+            "rotulo": "Atividades de fixação"
+          },
+          {
+            "id": "algo",
+            "rotulo": "Algoritmo"
+          },
+          {
+            "id": "conceito",
+            "rotulo": "Conceito dos pilares"
+          }
+        ]
       }
     ]
   }

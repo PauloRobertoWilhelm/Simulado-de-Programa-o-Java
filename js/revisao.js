@@ -182,8 +182,8 @@ window.Revisao = (() => {
 
       // Linha de ações: treinar e marcar.
       const acoes = criar('div', 'rev-acoes');
-      // Abre uma prova de 10 perguntas do tema do assunto.
-      acoes.append(botao('btn btn-ghost', 'Treinar 10 perguntas', () => treinar(secao.tema, 10)));
+      // Abre uma prova de até 10 perguntas só deste assunto.
+      acoes.append(botao('btn btn-ghost', 'Treinar este assunto', () => treinar(secao.tema, 10)));
       // Rótulo com a caixinha "Já sei".
       const rotulo = criar('label', 'rev-ja-sei');
       // A caixinha.

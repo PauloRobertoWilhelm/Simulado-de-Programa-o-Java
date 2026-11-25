@@ -10,7 +10,8 @@
         "Teste de regressão"
       ],
       "correct": 1,
-      "explain": "<b>End-to-End:</b> percorre o fluxo inteiro, de ponta a ponta, como um usuário real."
+      "explain": "<b>End-to-End:</b> percorre o fluxo inteiro, de ponta a ponta, como um usuário real.",
+      "assunto": "nivel"
     },
     {
       "topic": "tipos",
@@ -22,7 +23,8 @@
         "Teste de regressão"
       ],
       "correct": 2,
-      "explain": "<b>Integração:</b> verifica se módulos diferentes funcionam juntos."
+      "explain": "<b>Integração:</b> verifica se módulos diferentes funcionam juntos.",
+      "assunto": "nivel"
     },
     {
       "topic": "tipos",
@@ -34,7 +36,8 @@
         "Teste de integração"
       ],
       "correct": 0,
-      "explain": "<b>Unidade:</b> testa uma parte pequena da lógica de forma isolada."
+      "explain": "<b>Unidade:</b> testa uma parte pequena da lógica de forma isolada.",
+      "assunto": "nivel"
     },
     {
       "topic": "tipos",
@@ -46,7 +49,8 @@
         "Teste de fumaça"
       ],
       "correct": 3,
-      "explain": "<b>Fumaça (smoke):</b> checagem rápida do essencial. Se falhar, nem vale começar o resto."
+      "explain": "<b>Fumaça (smoke):</b> checagem rápida do essencial. Se falhar, nem vale começar o resto.",
+      "assunto": "reg"
     },
     {
       "topic": "tipos",
@@ -58,7 +62,8 @@
         "Teste unitário"
       ],
       "correct": 1,
-      "explain": "<b>Regressão:</b> confere se o que já funcionava continua funcionando depois de uma mudança."
+      "explain": "<b>Regressão:</b> confere se o que já funcionava continua funcionando depois de uma mudança.",
+      "assunto": "reg"
     },
     {
       "topic": "tipos",
@@ -70,7 +75,8 @@
         "Smoke e Integração"
       ],
       "correct": 0,
-      "explain": "<b>Funcional x não funcional:</b> o primeiro olha o que o sistema faz, o segundo olha quão bem ele se comporta."
+      "explain": "<b>Funcional x não funcional:</b> o primeiro olha o que o sistema faz, o segundo olha quão bem ele se comporta.",
+      "assunto": "nfunc"
     },
     {
       "topic": "tecnicas",
@@ -82,7 +88,8 @@
         "Preta só roda em produção; branca só roda em homologação"
       ],
       "correct": 2,
-      "explain": "<b>Caixa preta:</b> você não vê o interior. <b>Caixa branca:</b> você testa a lógica interna."
+      "explain": "<b>Caixa preta:</b> você não vê o interior. <b>Caixa branca:</b> você testa a lógica interna.",
+      "assunto": "branca"
     },
     {
       "topic": "tecnicas",
@@ -94,7 +101,8 @@
         "Cruza condições e ações numa tabela para cobrir as regras"
       ],
       "correct": 3,
-      "explain": "<b>Tabela de Decisão:</b> cada coluna é uma combinação de condições com o resultado esperado."
+      "explain": "<b>Tabela de Decisão:</b> cada coluna é uma combinação de condições com o resultado esperado.",
+      "assunto": "tabela"
     },
     {
       "topic": "tecnicas",
@@ -106,7 +114,8 @@
         "Teste de regressão"
       ],
       "correct": 0,
-      "explain": "<b>Exploratório:</b> é baseado em experiência. Aprender e testar acontecem ao mesmo tempo."
+      "explain": "<b>Exploratório:</b> é baseado em experiência. Aprender e testar acontecem ao mesmo tempo.",
+      "assunto": "exp"
     },
     {
       "topic": "tecnicas",
@@ -118,7 +127,8 @@
         "R$ 1,00; R$ 5,00; R$ 9,00; R$ 50,00; R$ 210,00; R$ 250,00; R$ 300,00"
       ],
       "correct": 2,
-      "explain": "<b>Valor limite:</b> os defeitos se escondem nas fronteiras. Por isso teste um pouco abaixo, exatamente em cima e um pouco acima de cada limite."
+      "explain": "<b>Valor limite:</b> os defeitos se escondem nas fronteiras. Por isso teste um pouco abaixo, exatamente em cima e um pouco acima de cada limite.",
+      "assunto": "limite"
     },
     {
       "topic": "tecnicas",
@@ -130,7 +140,8 @@
         "Teste de integração"
       ],
       "correct": 1,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde o sistema costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde o sistema costuma quebrar.",
+      "assunto": "exp"
     },
     {
       "topic": "praticas",
@@ -142,7 +153,8 @@
         "Testar desde as primeiras fases, e não só no fim"
       ],
       "correct": 3,
-      "explain": "<b>Shift Left:</b> “mover para a esquerda” da linha do tempo, ou seja, testar mais cedo."
+      "explain": "<b>Shift Left:</b> “mover para a esquerda” da linha do tempo, ou seja, testar mais cedo.",
+      "assunto": "qa"
     },
     {
       "topic": "praticas",
@@ -154,7 +166,8 @@
         "Os dois só funcionam em equipes pequenas, com até 3 pessoas"
       ],
       "correct": 0,
-      "explain": "<b>Em dupla:</b> as duas práticas compartilham conhecimento. Uma foca o código, a outra foca os testes."
+      "explain": "<b>Em dupla:</b> as duas práticas compartilham conhecimento. Uma foca o código, a outra foca os testes.",
+      "assunto": "qa"
     },
     {
       "topic": "praticas",
@@ -166,7 +179,8 @@
         "de prototipação do comportamento do usuário na tela"
       ],
       "correct": 2,
-      "explain": "<b>Gherkin:</b> escreve cenários em linguagem próxima da natural, como “Dado, Quando, Então”."
+      "explain": "<b>Gherkin:</b> escreve cenários em linguagem próxima da natural, como “Dado, Quando, Então”.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -178,7 +192,8 @@
         "Garantir que não exista nenhum defeito"
       ],
       "correct": 1,
-      "explain": "<b>QA:</b> participa do desenvolvimento inteiro. Testar reduz riscos, mas nunca garante ausência total de defeitos."
+      "explain": "<b>QA:</b> participa do desenvolvimento inteiro. Testar reduz riscos, mas nunca garante ausência total de defeitos.",
+      "assunto": "qa"
     },
     {
       "topic": "praticas",
@@ -190,7 +205,8 @@
         "Não trazem resultado em sistemas grandes e complexos"
       ],
       "correct": 0,
-      "explain": "<b>Automação:</b> repete o trabalho sem cansar, mas alguém ainda precisa planejar os casos."
+      "explain": "<b>Automação:</b> repete o trabalho sem cansar, mas alguém ainda precisa planejar os casos.",
+      "assunto": "auto"
     },
     {
       "topic": "qualidade",
@@ -202,7 +218,8 @@
         "Os requisitos precisam atender às partes interessadas"
       ],
       "correct": 3,
-      "explain": "<b>Qualidade:</b> não basta cumprir o requisito. O requisito precisa ser o que as pessoas realmente precisam."
+      "explain": "<b>Qualidade:</b> não basta cumprir o requisito. O requisito precisa ser o que as pessoas realmente precisam.",
+      "assunto": "conceito"
     },
     {
       "topic": "qualidade",
@@ -214,7 +231,8 @@
         "Prazo mal estimado"
       ],
       "correct": 2,
-      "explain": "<b>Comunicação:</b> cada um entendeu “exatamente igual” de um jeito. Nenhum deles confirmou o que o outro quis dizer."
+      "explain": "<b>Comunicação:</b> cada um entendeu “exatamente igual” de um jeito. Nenhum deles confirmou o que o outro quis dizer.",
+      "assunto": "defeito"
     },
     {
       "topic": "qualidade",
@@ -226,7 +244,8 @@
         "Em geral, empresas ganham competitividade com falhas recorrentes."
       ],
       "correct": 1,
-      "explain": "<b>Impactos:</b> perda de confiança e reputação, equipes sobrecarregadas e desmotivadas, além de ações judiciais e prejuízos financeiros."
+      "explain": "<b>Impactos:</b> perda de confiança e reputação, equipes sobrecarregadas e desmotivadas, além de ações judiciais e prejuízos financeiros.",
+      "assunto": "defeito"
     },
     {
       "topic": "qualidade",
@@ -238,7 +257,8 @@
         "É possível garantir ausência total de defeitos em produção."
       ],
       "correct": 2,
-      "explain": "<b>Princípios:</b> teste exaustivo é impossível, e o objetivo é reduzir riscos. Quanto mais cedo o teste, mais barato é corrigir."
+      "explain": "<b>Princípios:</b> teste exaustivo é impossível, e o objetivo é reduzir riscos. Quanto mais cedo o teste, mais barato é corrigir.",
+      "assunto": "conceito"
     },
     {
       "topic": "tipos",
@@ -250,7 +270,8 @@
         "Teste de fumaça"
       ],
       "correct": 1,
-      "explain": "<b>Carga = volume esperado:</b> simula muitos usuários ao mesmo tempo para ver se o sistema aguenta o movimento previsto."
+      "explain": "<b>Carga = volume esperado:</b> simula muitos usuários ao mesmo tempo para ver se o sistema aguenta o movimento previsto.",
+      "assunto": "nfunc"
     },
     {
       "topic": "tipos",
@@ -262,7 +283,8 @@
         "Teste de aceite"
       ],
       "correct": 1,
-      "explain": "<b>Estresse = passar do limite:</b> a carga testa o esperado; o estresse empurra além, até quebrar, para conhecer o limite e a recuperação."
+      "explain": "<b>Estresse = passar do limite:</b> a carga testa o esperado; o estresse empurra além, até quebrar, para conhecer o limite e a recuperação.",
+      "assunto": "nfunc"
     },
     {
       "topic": "tipos",
@@ -274,7 +296,8 @@
         "Teste exploratório livre"
       ],
       "correct": 1,
-      "explain": "<b>Reteste:</b> confere se AQUELE defeito foi mesmo corrigido, repetindo o teste que tinha falhado."
+      "explain": "<b>Reteste:</b> confere se AQUELE defeito foi mesmo corrigido, repetindo o teste que tinha falhado.",
+      "assunto": "reg"
     },
     {
       "topic": "tipos",
@@ -286,7 +309,8 @@
         "Reteste é automático; regressão é sempre manual"
       ],
       "correct": 1,
-      "explain": "<b>Dois objetivos:</b> o reteste olha o bug corrigido. A regressão olha o resto, para ver se a correção quebrou algo que funcionava."
+      "explain": "<b>Dois objetivos:</b> o reteste olha o bug corrigido. A regressão olha o resto, para ver se a correção quebrou algo que funcionava.",
+      "assunto": "reg"
     },
     {
       "topic": "tipos",
@@ -298,7 +322,8 @@
         "Teste de unidade"
       ],
       "correct": 1,
-      "explain": "<b>Segurança:</b> procura falhas que deixam alguém ver ou mexer no que não devia. Trocar o id na URL é um teste clássico de controle de acesso."
+      "explain": "<b>Segurança:</b> procura falhas que deixam alguém ver ou mexer no que não devia. Trocar o id na URL é um teste clássico de controle de acesso.",
+      "assunto": "nfunc"
     },
     {
       "topic": "tipos",
@@ -310,7 +335,8 @@
         "Teste de segurança"
       ],
       "correct": 1,
-      "explain": "<b>Usabilidade:</b> mede se pessoas reais conseguem usar o sistema com facilidade. É um teste não funcional."
+      "explain": "<b>Usabilidade:</b> mede se pessoas reais conseguem usar o sistema com facilidade. É um teste não funcional.",
+      "assunto": "nfunc"
     },
     {
       "topic": "tipos",
@@ -322,7 +348,8 @@
         "Teste de carga do servidor"
       ],
       "correct": 1,
-      "explain": "<b>Aceite (UAT):</b> é o cliente ou usuário dizendo “aceito” ou “não aceito”, com base no que foi combinado."
+      "explain": "<b>Aceite (UAT):</b> é o cliente ou usuário dizendo “aceito” ou “não aceito”, com base no que foi combinado.",
+      "assunto": "aceite"
     },
     {
       "topic": "tipos",
@@ -334,7 +361,8 @@
         "Alfa é depois do lançamento; beta é antes de programar"
       ],
       "correct": 1,
-      "explain": "<b>Onde acontece:</b> no alfa, usuários testam no ambiente de quem desenvolveu. No beta, usuários testam no ambiente deles, antes do lançamento oficial."
+      "explain": "<b>Onde acontece:</b> no alfa, usuários testam no ambiente de quem desenvolveu. No beta, usuários testam no ambiente deles, antes do lançamento oficial.",
+      "assunto": "aceite"
     },
     {
       "topic": "tipos",
@@ -346,7 +374,8 @@
         "Testes de interface gráfica"
       ],
       "correct": 1,
-      "explain": "<b>Base larga:</b> testes de unidade são rápidos e baratos, então são muitos. Quanto mais para o topo, mais lentos e caros, e por isso menos."
+      "explain": "<b>Base larga:</b> testes de unidade são rápidos e baratos, então são muitos. Quanto mais para o topo, mais lentos e caros, e por isso menos.",
+      "assunto": "nivel"
     },
     {
       "topic": "tipos",
@@ -358,7 +387,8 @@
         "Só funcionam em sistemas sem banco de dados"
       ],
       "correct": 1,
-      "explain": "<b>Custo alto:</b> o E2E passa pelo sistema inteiro, demora e qualquer mudança na tela pode quebrá-lo. É útil, mas em pouca quantidade."
+      "explain": "<b>Custo alto:</b> o E2E passa pelo sistema inteiro, demora e qualquer mudança na tela pode quebrá-lo. É útil, mas em pouca quantidade.",
+      "assunto": "nivel"
     },
     {
       "topic": "tipos",
@@ -370,7 +400,8 @@
         "Teste de aceite"
       ],
       "correct": 1,
-      "explain": "<b>Estático = sem rodar:</b> revisões, inspeções e análise de código acham defeitos cedo. O dinâmico executa o programa."
+      "explain": "<b>Estático = sem rodar:</b> revisões, inspeções e análise de código acham defeitos cedo. O dinâmico executa o programa.",
+      "assunto": "aceite"
     },
     {
       "topic": "tipos",
@@ -382,7 +413,8 @@
         "O banco de dados"
       ],
       "correct": 1,
-      "explain": "<b>Teste de API:</b> confere se o back-end responde certo (status, dados, erros) sem depender da interface."
+      "explain": "<b>Teste de API:</b> confere se o back-end responde certo (status, dados, erros) sem depender da interface.",
+      "assunto": "nivel"
     },
     {
       "topic": "tecnicas",
@@ -394,7 +426,8 @@
         "43: uma para cada idade de 18 até 60"
       ],
       "correct": 1,
-      "explain": "<b>Grupos que se comportam igual:</b> abaixo de 18 (inválida), de 18 a 60 (válida) e acima de 60 (inválida). Basta um valor de cada grupo."
+      "explain": "<b>Grupos que se comportam igual:</b> abaixo de 18 (inválida), de 18 a 60 (válida) e acima de 60 (inválida). Basta um valor de cada grupo.",
+      "assunto": "limite"
     },
     {
       "topic": "tecnicas",
@@ -406,7 +439,8 @@
         "19, 20, 58 e 59"
       ],
       "correct": 1,
-      "explain": "<b>Nas bordas:</b> os erros moram nas fronteiras (um &gt; no lugar de &gt;=). Testa-se cada limite e o vizinho de fora: 17 e 18; 60 e 61."
+      "explain": "<b>Nas bordas:</b> os erros moram nas fronteiras (um &gt; no lugar de &gt;=). Testa-se cada limite e o vizinho de fora: 17 e 18; 60 e 61.",
+      "assunto": "limite"
     },
     {
       "topic": "tecnicas",
@@ -418,7 +452,8 @@
         "9"
       ],
       "correct": 1,
-      "explain": "<b>2 elevado ao número de condições:</b> 2 × 2 × 2 = 8 combinações possíveis."
+      "explain": "<b>2 elevado ao número de condições:</b> 2 × 2 × 2 = 8 combinações possíveis.",
+      "assunto": "tabela"
     },
     {
       "topic": "tecnicas",
@@ -430,7 +465,8 @@
         "Teste de fumaça"
       ],
       "correct": 1,
-      "explain": "<b>O sistema “lembra”:</b> o resultado depende do que aconteceu antes (1ª, 2ª, 3ª tentativa). Estados e transições mostram isso."
+      "explain": "<b>O sistema “lembra”:</b> o resultado depende do que aconteceu antes (1ª, 2ª, 3ª tentativa). Estados e transições mostram isso.",
+      "assunto": "estado"
     },
     {
       "topic": "tecnicas",
@@ -442,7 +478,8 @@
         "Uma linha da tabela de decisão"
       ],
       "correct": 1,
-      "explain": "<b>Evento:</b> algo acontece (senha errada, pagamento aprovado) e o sistema passa de um estado (ativo) para outro (bloqueado)."
+      "explain": "<b>Evento:</b> algo acontece (senha errada, pagamento aprovado) e o sistema passa de um estado (ativo) para outro (bloqueado).",
+      "assunto": "estado"
     },
     {
       "topic": "tecnicas",
@@ -454,7 +491,8 @@
         "Quantos requisitos o cliente escreveu no total"
       ],
       "correct": 1,
-      "explain": "<b>Os dois lados:</b> cada if tem o caminho verdadeiro e o falso. A cobertura de decisão mede quantos desses caminhos os testes passaram."
+      "explain": "<b>Os dois lados:</b> cada if tem o caminho verdadeiro e o falso. A cobertura de decisão mede quantos desses caminhos os testes passaram.",
+      "assunto": "branca"
     },
     {
       "topic": "tecnicas",
@@ -466,7 +504,8 @@
         "Não dá para saber"
       ],
       "correct": 1,
-      "explain": "<b>Decisão inclui instrução:</b> passando por todos os caminhos de todos os ifs, todas as linhas foram executadas. O contrário não vale."
+      "explain": "<b>Decisão inclui instrução:</b> passando por todos os caminhos de todos os ifs, todas as linhas foram executadas. O contrário não vale.",
+      "assunto": "branca"
     },
     {
       "topic": "tecnicas",
@@ -478,7 +517,8 @@
         "R$ 99,00 e R$ 101,00"
       ],
       "correct": 1,
-      "explain": "<b>“Acima” é a pegadinha:</b> R$ 100,00 ainda paga frete; R$ 100,01 já é grátis. Esses dois valores pegam um &gt;= escrito no lugar de &gt;."
+      "explain": "<b>“Acima” é a pegadinha:</b> R$ 100,00 ainda paga frete; R$ 100,01 já é grátis. Esses dois valores pegam um &gt;= escrito no lugar de &gt;.",
+      "assunto": "limite"
     },
     {
       "topic": "tecnicas",
@@ -490,7 +530,8 @@
         "Teste de estresse"
       ],
       "correct": 1,
-      "explain": "<b>Checklist:</b> técnica baseada em experiência, em que uma lista de verificação guia o teste e garante que nada importante é esquecido."
+      "explain": "<b>Checklist:</b> técnica baseada em experiência, em que uma lista de verificação guia o teste e garante que nada importante é esquecido.",
+      "assunto": "exp"
     },
     {
       "topic": "tecnicas",
@@ -502,7 +543,8 @@
         "Só o gerente comercial do projeto"
       ],
       "correct": 1,
-      "explain": "<b>Precisa ver por dentro:</b> caixa branca exige conhecer a estrutura do código, por isso costuma ser feita por desenvolvedores ou QAs técnicos."
+      "explain": "<b>Precisa ver por dentro:</b> caixa branca exige conhecer a estrutura do código, por isso costuma ser feita por desenvolvedores ou QAs técnicos.",
+      "assunto": "branca"
     },
     {
       "topic": "tecnicas",
@@ -514,7 +556,8 @@
         "Erro: a tabela não cobre esse caso"
       ],
       "correct": 1,
-      "explain": "<b>“E” exige as duas:</b> VIP sim, mas a compra não passa de R$ 200. Na tabela de decisão, essa combinação leva a 0%."
+      "explain": "<b>“E” exige as duas:</b> VIP sim, mas a compra não passa de R$ 200. Na tabela de decisão, essa combinação leva a 0%.",
+      "assunto": "tabela"
     },
     {
       "topic": "tecnicas",
@@ -526,7 +569,8 @@
         "10"
       ],
       "correct": 1,
-      "explain": "<b>Fora da faixa:</b> 1, 5 e 10 estão entre 1 e 10 (válidos). O 0 fica abaixo do mínimo: partição inválida."
+      "explain": "<b>Fora da faixa:</b> 1, 5 e 10 estão entre 1 e 10 (válidos). O 0 fica abaixo do mínimo: partição inválida.",
+      "assunto": "limite"
     },
     {
       "topic": "tecnicas",
@@ -538,7 +582,8 @@
         "O relatório de bugs entregue no fim"
       ],
       "correct": 1,
-      "explain": "<b>Missão da sessão:</b> por exemplo, “explorar o carrinho com cupons por 60 minutos”. Dá foco sem engessar o teste."
+      "explain": "<b>Missão da sessão:</b> por exemplo, “explorar o carrinho com cupons por 60 minutos”. Dá foco sem engessar o teste.",
+      "assunto": "exp"
     },
     {
       "topic": "praticas",
@@ -550,7 +595,8 @@
         "Planejar, codar e documentar"
       ],
       "correct": 1,
-      "explain": "<b>Vermelho, verde, refatorar:</b> escreve um teste que falha (vermelho), faz o mínimo para passar (verde) e depois melhora o código sem quebrar o teste."
+      "explain": "<b>Vermelho, verde, refatorar:</b> escreve um teste que falha (vermelho), faz o mínimo para passar (verde) e depois melhora o código sem quebrar o teste.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -562,7 +608,8 @@
         "O teste de carga"
       ],
       "correct": 1,
-      "explain": "<b>Teste antes do código:</b> o teste falhando mostra o que falta fazer. O código só é escrito para fazê-lo passar."
+      "explain": "<b>Teste antes do código:</b> o teste falhando mostra o que falta fazer. O código só é escrito para fazê-lo passar.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -574,7 +621,8 @@
         "Quando, Então, Dado"
       ],
       "correct": 1,
-      "explain": "<b>Dado (contexto), Quando (ação), Então (resultado).</b> Em inglês: Given, When, Then."
+      "explain": "<b>Dado (contexto), Quando (ação), Então (resultado).</b> Em inglês: Given, When, Then.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -586,7 +634,8 @@
         "O nome do teste"
       ],
       "correct": 1,
-      "explain": "<b>Então = o que deve acontecer:</b> é o resultado que o teste confere. O “Dado” é o começo e o “Quando” é a ação."
+      "explain": "<b>Então = o que deve acontecer:</b> é o resultado que o teste confere. O “Dado” é o começo e o “Quando” é a ação.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -598,7 +647,8 @@
         "Medir a velocidade do servidor em cada funcionalidade"
       ],
       "correct": 1,
-      "explain": "<b>Todos falam a mesma língua:</b> negócio, dev e QA escrevem juntos exemplos de comportamento, que viram testes automáticos."
+      "explain": "<b>Todos falam a mesma língua:</b> negócio, dev e QA escrevem juntos exemplos de comportamento, que viram testes automáticos.",
+      "assunto": "tdd"
     },
     {
       "topic": "praticas",
@@ -610,7 +660,8 @@
         "O código é apagado se tiver algum aviso"
       ],
       "correct": 1,
-      "explain": "<b>Alarme cedo:</b> a cada mudança, o servidor de CI compila e roda os testes. Se algo quebrou, a equipe sabe em minutos."
+      "explain": "<b>Alarme cedo:</b> a cada mudança, o servidor de CI compila e roda os testes. Se algo quebrou, a equipe sabe em minutos.",
+      "assunto": "auto"
     },
     {
       "topic": "praticas",
@@ -622,7 +673,8 @@
         "A data de nascimento do usuário do teste"
       ],
       "correct": 1,
-      "explain": "<b>Reproduzir é tudo:</b> título claro, passos, resultado esperado, resultado obtido, ambiente e evidências (print, log). Sem culpar ninguém."
+      "explain": "<b>Reproduzir é tudo:</b> título claro, passos, resultado esperado, resultado obtido, ambiente e evidências (print, log). Sem culpar ninguém.",
+      "assunto": "bug"
     },
     {
       "topic": "praticas",
@@ -634,7 +686,8 @@
         "Severidade baixa e prioridade baixa"
       ],
       "correct": 1,
-      "explain": "<b>Severidade x prioridade:</b> severidade é o impacto técnico (baixo: nada quebrou). Prioridade é a urgência para o negócio (alta: o diretor quer hoje)."
+      "explain": "<b>Severidade x prioridade:</b> severidade é o impacto técnico (baixo: nada quebrou). Prioridade é a urgência para o negócio (alta: o diretor quer hoje).",
+      "assunto": "bug"
     },
     {
       "topic": "praticas",
@@ -646,7 +699,8 @@
         "O bug volta para o estado “novo”"
       ],
       "correct": 1,
-      "explain": "<b>Corrigido não é fechado:</b> o QA retesta. Se passou, fecha; se não, reabre e o bug volta para o dev."
+      "explain": "<b>Corrigido não é fechado:</b> o QA retesta. Se passou, fecha; se não, reabre e o bug volta para o dev.",
+      "assunto": "bug"
     },
     {
       "topic": "praticas",
@@ -658,7 +712,8 @@
         "Git ou GitHub"
       ],
       "correct": 1,
-      "explain": "<b>Robô no navegador:</b> Selenium e Cypress clicam e digitam como um usuário. JMeter é para carga; Postman é para API."
+      "explain": "<b>Robô no navegador:</b> Selenium e Cypress clicam e digitam como um usuário. JMeter é para carga; Postman é para API.",
+      "assunto": "auto"
     },
     {
       "topic": "praticas",
@@ -670,7 +725,8 @@
         "Ela serve só para corrigir a indentação"
       ],
       "correct": 1,
-      "explain": "<b>Teste estático em dupla:</b> outro par de olhos acha erros, riscos e confusões antes mesmo de o código ser executado."
+      "explain": "<b>Teste estático em dupla:</b> outro par de olhos acha erros, riscos e confusões antes mesmo de o código ser executado.",
+      "assunto": "qa"
     },
     {
       "topic": "praticas",
@@ -682,7 +738,8 @@
         "Postman"
       ],
       "correct": 1,
-      "explain": "<b>JUnit:</b> o framework clássico de testes de unidade em Java, com anotações como @Test e verificações como assertEquals."
+      "explain": "<b>JUnit:</b> o framework clássico de testes de unidade em Java, com anotações como @Test e verificações como assertEquals.",
+      "assunto": "auto"
     },
     {
       "topic": "qualidade",
@@ -694,7 +751,8 @@
         "QA é feito pelo cliente; QC pelo gerente"
       ],
       "correct": 1,
-      "explain": "<b>Prevenir x detectar:</b> QA melhora o processo para os defeitos nem nascerem. QC inspeciona e testa o produto para achar os que nasceram."
+      "explain": "<b>Prevenir x detectar:</b> QA melhora o processo para os defeitos nem nascerem. QC inspeciona e testa o produto para achar os que nasceram.",
+      "assunto": "conceito"
     },
     {
       "topic": "qualidade",
@@ -706,7 +764,8 @@
         "Defeito, engano e falha"
       ],
       "correct": 1,
-      "explain": "<b>Cadeia:</b> a pessoa comete um engano (erro humano), que deixa um defeito no código, que causa uma falha quando o programa roda."
+      "explain": "<b>Cadeia:</b> a pessoa comete um engano (erro humano), que deixa um defeito no código, que causa uma falha quando o programa roda.",
+      "assunto": "defeito"
     },
     {
       "topic": "qualidade",
@@ -718,7 +777,8 @@
         "O documento que descreve os requisitos"
       ],
       "correct": 1,
-      "explain": "<b>Falha é o que se vê:</b> o sistema fazendo algo errado durante a execução. A linha errada é o defeito; o deslize da pessoa é o engano."
+      "explain": "<b>Falha é o que se vê:</b> o sistema fazendo algo errado durante a execução. A linha errada é o defeito; o deslize da pessoa é o engano.",
+      "assunto": "defeito"
     },
     {
       "topic": "qualidade",
@@ -730,7 +790,8 @@
         "Em produção não existe ferramenta de teste"
       ],
       "correct": 1,
-      "explain": "<b>Bola de neve:</b> um erro no requisito vira código, testes, manuais e clientes afetados. Quanto mais tarde, mais coisa para refazer."
+      "explain": "<b>Bola de neve:</b> um erro no requisito vira código, testes, manuais e clientes afetados. Quanto mais tarde, mais coisa para refazer.",
+      "assunto": "defeito"
     },
     {
       "topic": "qualidade",
@@ -742,7 +803,8 @@
         "Originalidade"
       ],
       "correct": 1,
-      "explain": "<b>As 8 da ISO/IEC 25010 (versão 2011):</b> adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade."
+      "explain": "<b>As 8 da ISO/IEC 25010 (versão 2011):</b> adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade.",
+      "assunto": "iso"
     },
     {
       "topic": "qualidade",
@@ -754,7 +816,8 @@
         "Compatibilidade"
       ],
       "correct": 1,
-      "explain": "<b>Confiabilidade:</b> o sistema precisa funcionar quando é preciso, sem cair. Ficar fora do ar com frequência é falta de confiabilidade."
+      "explain": "<b>Confiabilidade:</b> o sistema precisa funcionar quando é preciso, sem cair. Ficar fora do ar com frequência é falta de confiabilidade.",
+      "assunto": "iso"
     },
     {
       "topic": "qualidade",
@@ -766,7 +829,8 @@
         "Usabilidade"
       ],
       "correct": 1,
-      "explain": "<b>Portabilidade:</b> é a facilidade de levar o sistema para outro ambiente (sistema operacional, hardware, nuvem) e instalá-lo lá."
+      "explain": "<b>Portabilidade:</b> é a facilidade de levar o sistema para outro ambiente (sistema operacional, hardware, nuvem) e instalá-lo lá.",
+      "assunto": "iso"
     },
     {
       "topic": "qualidade",
@@ -778,7 +842,8 @@
         "Portabilidade entre sistemas"
       ],
       "correct": 1,
-      "explain": "<b>Eficiência de desempenho:</b> tempo de resposta e uso de recursos (memória, CPU). A busca até funciona, mas gasta demais."
+      "explain": "<b>Eficiência de desempenho:</b> tempo de resposta e uso de recursos (memória, CPU). A busca até funciona, mas gasta demais.",
+      "assunto": "iso"
     },
     {
       "topic": "qualidade",
@@ -790,7 +855,8 @@
         "Usabilidade"
       ],
       "correct": 1,
-      "explain": "<b>Adequação funcional:</b> o sistema faz o que deveria, do jeito certo? Uma conta errada falha nisso."
+      "explain": "<b>Adequação funcional:</b> o sistema faz o que deveria, do jeito certo? Uma conta errada falha nisso.",
+      "assunto": "iso"
     },
     {
       "topic": "qualidade",
@@ -802,7 +868,8 @@
         "São sinônimos usados pela norma ISO"
       ],
       "correct": 1,
-      "explain": "<b>Duas perguntas:</b> verificação = construímos o produto corretamente (segue a especificação)? Validação = construímos o produto certo (atende o usuário)?"
+      "explain": "<b>Duas perguntas:</b> verificação = construímos o produto corretamente (segue a especificação)? Validação = construímos o produto certo (atende o usuário)?",
+      "assunto": "conceito"
     },
     {
       "topic": "qualidade",
@@ -814,7 +881,8 @@
         "Revisão de layout"
       ],
       "correct": 1,
-      "explain": "<b>Causa raiz:</b> corrigir só o sintoma faz o bug voltar. Perguntar “por quê?” várias vezes (os 5 porquês) leva à origem."
+      "explain": "<b>Causa raiz:</b> corrigir só o sintoma faz o bug voltar. Perguntar “por quê?” várias vezes (os 5 porquês) leva à origem.",
+      "assunto": "defeito"
     },
     {
       "topic": "principios",
@@ -826,7 +894,8 @@
         "Um teste que não acha bug foi um teste inútil"
       ],
       "correct": 1,
-      "explain": "<b>1º princípio:</b> o teste pode provar que um defeito existe, mas nunca que não existe nenhum. Ele diminui o risco."
+      "explain": "<b>1º princípio:</b> o teste pode provar que um defeito existe, mas nunca que não existe nenhum. Ele diminui o risco.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -838,7 +907,8 @@
         "Porque combinações nunca causam nenhum defeito"
       ],
       "correct": 1,
-      "explain": "<b>2º princípio:</b> as combinações seriam bilhões. Usa-se técnicas (partições, limites) e prioridade por risco para escolher o que testar."
+      "explain": "<b>2º princípio:</b> as combinações seriam bilhões. Usa-se técnicas (partições, limites) e prioridade por risco para escolher o que testar.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -850,7 +920,8 @@
         "Dependência do contexto"
       ],
       "correct": 1,
-      "explain": "<b>3º princípio:</b> achar o erro no requisito custa pouco; achar em produção custa muito. É a ideia do shift left."
+      "explain": "<b>3º princípio:</b> achar o erro no requisito custa pouco; achar em produção custa muito. É a ideia do shift left.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -862,7 +933,8 @@
         "Ausência de erros"
       ],
       "correct": 1,
-      "explain": "<b>4º princípio:</b> os defeitos se concentram em poucos módulos (a ideia do 80/20). Onde já apareceram bugs, procure mais."
+      "explain": "<b>4º princípio:</b> os defeitos se concentram em poucos módulos (a ideia do 80/20). Onde já apareceram bugs, procure mais.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -874,7 +946,8 @@
         "Teste antecipado"
       ],
       "correct": 1,
-      "explain": "<b>5º princípio:</b> como a praga que fica resistente ao veneno, o sistema fica “resistente” aos mesmos testes. Eles só acham o que já achavam."
+      "explain": "<b>5º princípio:</b> como a praga que fica resistente ao veneno, o sistema fica “resistente” aos mesmos testes. Eles só acham o que já achavam.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -886,7 +959,8 @@
         "Testar só no fim, quando tudo estiver pronto"
       ],
       "correct": 1,
-      "explain": "<b>Renovar o veneno:</b> revisar os testes, criar novos casos e variar os dados para continuar achando defeitos."
+      "explain": "<b>Renovar o veneno:</b> revisar os testes, criar novos casos e variar os dados para continuar achando defeitos.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -898,7 +972,8 @@
         "O pesticida perde efeito"
       ],
       "correct": 1,
-      "explain": "<b>6º princípio:</b> o rigor, as técnicas e a documentação mudam conforme o risco. Uma vida em jogo pede muito mais teste."
+      "explain": "<b>6º princípio:</b> o rigor, as técnicas e a documentação mudam conforme o risco. Uma vida em jogo pede muito mais teste.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -910,7 +985,8 @@
         "Testes antecipados nos requisitos"
       ],
       "correct": 1,
-      "explain": "<b>7º princípio:</b> não ter bugs não basta. Um sistema sem defeitos, mas que não atende à necessidade do usuário, é inútil."
+      "explain": "<b>7º princípio:</b> não ter bugs não basta. Um sistema sem defeitos, mas que não atende à necessidade do usuário, é inútil.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -922,7 +998,8 @@
         "Três"
       ],
       "correct": 1,
-      "explain": "<b>Sete princípios:</b> presença de defeitos, exaustivo impossível, testes antecipados, agrupamento, pesticida, contexto e falácia da ausência de erros."
+      "explain": "<b>Sete princípios:</b> presença de defeitos, exaustivo impossível, testes antecipados, agrupamento, pesticida, contexto e falácia da ausência de erros.",
+      "assunto": "sete"
     },
     {
       "topic": "principios",
@@ -934,7 +1011,8 @@
         "Integração, aceite, componente e sistema"
       ],
       "correct": 1,
-      "explain": "<b>Do pequeno ao grande:</b> testa a peça (componente), depois as peças juntas (integração), depois o sistema todo e, por fim, o aceite do cliente."
+      "explain": "<b>Do pequeno ao grande:</b> testa a peça (componente), depois as peças juntas (integração), depois o sistema todo e, por fim, o aceite do cliente.",
+      "assunto": "niveis"
     },
     {
       "topic": "principios",
@@ -946,7 +1024,8 @@
         "Teste de unidade"
       ],
       "correct": 1,
-      "explain": "<b>Teste de sistema:</b> olha o produto completo, de ponta a ponta, pela visão dos requisitos. Ainda é a equipe testando, antes do cliente."
+      "explain": "<b>Teste de sistema:</b> olha o produto completo, de ponta a ponta, pela visão dos requisitos. Ainda é a equipe testando, antes do cliente.",
+      "assunto": "niveis"
     },
     {
       "topic": "principios",
@@ -958,7 +1037,8 @@
         "Teste estático do requisito"
       ],
       "correct": 1,
-      "explain": "<b>Integração de sistemas:</b> testa a troca entre o seu sistema e sistemas de fora (APIs, serviços de terceiros)."
+      "explain": "<b>Integração de sistemas:</b> testa a troca entre o seu sistema e sistemas de fora (APIs, serviços de terceiros).",
+      "assunto": "niveis"
     },
     {
       "topic": "principios",
@@ -970,7 +1050,8 @@
         "Teste unitário"
       ],
       "correct": 1,
-      "explain": "<b>Aceite regulatório:</b> confere se o sistema cumpre leis e normas do governo ou do setor. É parte do compliance."
+      "explain": "<b>Aceite regulatório:</b> confere se o sistema cumpre leis e normas do governo ou do setor. É parte do compliance.",
+      "assunto": "niveis"
     },
     {
       "topic": "principios",
@@ -982,7 +1063,8 @@
         "Depurar é feito só pelo cliente, em produção"
       ],
       "correct": 1,
-      "explain": "<b>Duas etapas:</b> o teste mostra que algo está errado. A depuração investiga o código, encontra o defeito e o corrige."
+      "explain": "<b>Duas etapas:</b> o teste mostra que algo está errado. A depuração investiga o código, encontra o defeito e o corrige.",
+      "assunto": "geral"
     },
     {
       "topic": "principios",
@@ -994,7 +1076,8 @@
         "Porque o autor do código sempre esconde os bugs"
       ],
       "correct": 1,
-      "explain": "<b>Independência:</b> o autor tende a testar do jeito que pensou ao programar. Outra pessoa traz outras suposições e acha outros erros."
+      "explain": "<b>Independência:</b> o autor tende a testar do jeito que pensou ao programar. Outra pessoa traz outras suposições e acha outros erros.",
+      "assunto": "geral"
     },
     {
       "topic": "principios",
@@ -1006,7 +1089,8 @@
         "Substituir a revisão dos requisitos"
       ],
       "correct": 1,
-      "explain": "<b>Reduzir risco e dar informação:</b> o teste acha defeitos, gera confiança e ajuda a decidir se dá para lançar. Provar “zero defeitos” é impossível."
+      "explain": "<b>Reduzir risco e dar informação:</b> o teste acha defeitos, gera confiança e ajuda a decidir se dá para lançar. Provar “zero defeitos” é impossível.",
+      "assunto": "geral"
     },
     {
       "topic": "principios",
@@ -1018,7 +1102,8 @@
         "O desenvolvedor que corrige os defeitos"
       ],
       "correct": 1,
-      "explain": "<b>Quem diz o certo:</b> o oráculo pode ser o requisito, uma planilha, a versão antiga ou um especialista. Sem ele, não dá para dizer se o resultado está certo."
+      "explain": "<b>Quem diz o certo:</b> o oráculo pode ser o requisito, uma planilha, a versão antiga ou um especialista. Sem ele, não dá para dizer se o resultado está certo.",
+      "assunto": "geral"
     },
     {
       "topic": "principios",
@@ -1030,7 +1115,8 @@
         "Só o título, para dar liberdade a quem executa"
       ],
       "correct": 1,
-      "explain": "<b>Receita completa:</b> como deixar o sistema antes (pré-condições), o que fazer (passos), com quais dados e o que deve acontecer (resultado esperado)."
+      "explain": "<b>Receita completa:</b> como deixar o sistema antes (pré-condições), o que fazer (passos), com quais dados e o que deve acontecer (resultado esperado).",
+      "assunto": "geral"
     },
     {
       "topic": "compliance",
@@ -1042,7 +1128,8 @@
         "Reduzir o número de pessoas da equipe de testes"
       ],
       "correct": 1,
-      "explain": "<b>Estar de acordo:</b> compliance é cumprir leis (como a LGPD), normas (como as ISO) e regras internas, e conseguir provar isso."
+      "explain": "<b>Estar de acordo:</b> compliance é cumprir leis (como a LGPD), normas (como as ISO) e regras internas, e conseguir provar isso.",
+      "assunto": "conceito"
     },
     {
       "topic": "compliance",
@@ -1054,7 +1141,8 @@
         "CDC, Lei 8.078/1990"
       ],
       "correct": 1,
-      "explain": "<b>LGPD:</b> a Lei Geral de Proteção de Dados, de 2018, regula como empresas e governo coletam, usam, guardam e apagam dados pessoais."
+      "explain": "<b>LGPD:</b> a Lei Geral de Proteção de Dados, de 2018, regula como empresas e governo coletam, usam, guardam e apagam dados pessoais.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1066,7 +1154,8 @@
         "Apenas os dados bancários e o salário da pessoa"
       ],
       "correct": 1,
-      "explain": "<b>Identifica alguém:</b> nome, CPF, e-mail, telefone, endereço, IP, localização... Tudo o que aponta para uma pessoa, direta ou indiretamente."
+      "explain": "<b>Identifica alguém:</b> nome, CPF, e-mail, telefone, endereço, IP, localização... Tudo o que aponta para uma pessoa, direta ou indiretamente.",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1078,7 +1167,8 @@
         "Nome completo do cliente"
       ],
       "correct": 1,
-      "explain": "<b>Sensível = pode discriminar:</b> saúde, origem racial, religião, opinião política, vida sexual, dados genéticos e biométricos, filiação sindical. Pedem proteção maior."
+      "explain": "<b>Sensível = pode discriminar:</b> saúde, origem racial, religião, opinião política, vida sexual, dados genéticos e biométricos, filiação sindical. Pedem proteção maior.",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1090,7 +1180,8 @@
         "O programador que guarda os dados"
       ],
       "correct": 1,
-      "explain": "<b>O dono dos dados:</b> o titular é a pessoa. A empresa que decide é o controlador; quem trata em nome dela é o operador."
+      "explain": "<b>O dono dos dados:</b> o titular é a pessoa. A empresa que decide é o controlador; quem trata em nome dela é o operador.",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1102,7 +1193,8 @@
         "A ANPD, que fiscaliza"
       ],
       "correct": 1,
-      "explain": "<b>Operador executa:</b> a loja decide o que fazer com os dados (controladora). A nuvem trata os dados em nome dela (operadora)."
+      "explain": "<b>Operador executa:</b> a loja decide o que fazer com os dados (controladora). A nuvem trata os dados em nome dela (operadora).",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1114,7 +1206,8 @@
         "ANVISA"
       ],
       "correct": 1,
-      "explain": "<b>ANPD:</b> Autoridade Nacional de Proteção de Dados. Orienta, fiscaliza e aplica as sanções da LGPD."
+      "explain": "<b>ANPD:</b> Autoridade Nacional de Proteção de Dados. Orienta, fiscaliza e aplica as sanções da LGPD.",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1126,7 +1219,8 @@
         "O cliente que pede para apagar seus dados"
       ],
       "correct": 1,
-      "explain": "<b>Ponte de comunicação:</b> o encarregado recebe as reclamações dos titulares, fala com a ANPD e orienta a empresa sobre proteção de dados."
+      "explain": "<b>Ponte de comunicação:</b> o encarregado recebe as reclamações dos titulares, fala com a ANPD e orienta a empresa sobre proteção de dados.",
+      "assunto": "lgpdp"
     },
     {
       "topic": "compliance",
@@ -1138,7 +1232,8 @@
         "Proteção do crédito"
       ],
       "correct": 1,
-      "explain": "<b>Consentimento:</b> a pessoa concorda claramente, sabendo para quê. Não vale caixinha já marcada nem texto escondido."
+      "explain": "<b>Consentimento:</b> a pessoa concorda claramente, sabendo para quê. Não vale caixinha já marcada nem texto escondido.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1150,7 +1245,8 @@
         "Qualidade: os dados precisam estar certos"
       ],
       "correct": 1,
-      "explain": "<b>Minimização:</b> para mandar uma newsletter basta o e-mail. Pedir mais do que o necessário viola o princípio da necessidade."
+      "explain": "<b>Minimização:</b> para mandar uma newsletter basta o e-mail. Pedir mais do que o necessário viola o princípio da necessidade.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1162,7 +1258,8 @@
         "Escolher o banco de dados usado pela empresa"
       ],
       "correct": 1,
-      "explain": "<b>Direitos do titular:</b> confirmar e acessar os dados, corrigir, pedir anonimização ou eliminação, portabilidade e revogar o consentimento."
+      "explain": "<b>Direitos do titular:</b> confirmar e acessar os dados, corrigir, pedir anonimização ou eliminação, portabilidade e revogar o consentimento.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1174,7 +1271,8 @@
         "Publicar os dados para os testadores"
       ],
       "correct": 1,
-      "explain": "<b>Teste também é tratamento:</b> dado real em teste é risco de vazamento. O certo é anonimizar, mascarar ou gerar dados fictícios."
+      "explain": "<b>Teste também é tratamento:</b> dado real em teste é risco de vazamento. O certo é anonimizar, mascarar ou gerar dados fictícios.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1186,7 +1284,8 @@
         "Pseudonimizar é criptografar; anonimizar é só fazer backup"
       ],
       "correct": 1,
-      "explain": "<b>Tem volta ou não:</b> o dado anonimizado não identifica mais ninguém (e sai da LGPD). O pseudonimizado troca o nome por um código, mas com a chave dá para voltar."
+      "explain": "<b>Tem volta ou não:</b> o dado anonimizado não identifica mais ninguém (e sai da LGPD). O pseudonimizado troca o nome por um código, mas com a chave dá para voltar.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1198,7 +1297,8 @@
         "Esperar o cliente reclamar no PROCON"
       ],
       "correct": 1,
-      "explain": "<b>Incidente se comunica:</b> incidentes de segurança com risco aos titulares devem ser informados à ANPD e às pessoas afetadas, em prazo razoável."
+      "explain": "<b>Incidente se comunica:</b> incidentes de segurança com risco aos titulares devem ser informados à ANPD e às pessoas afetadas, em prazo razoável.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1210,7 +1310,8 @@
         "Não existe multa, só advertência"
       ],
       "correct": 1,
-      "explain": "<b>Multa simples:</b> até 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração. Também existem advertência e bloqueio dos dados."
+      "explain": "<b>Multa simples:</b> até 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração. Também existem advertência e bloqueio dos dados.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1222,7 +1323,8 @@
         "Esconder o design do sistema dos concorrentes"
       ],
       "correct": 1,
-      "explain": "<b>Desde o primeiro rascunho:</b> coletar o mínimo, proteger por padrão e pensar nos riscos já nos requisitos, e não remendar depois."
+      "explain": "<b>Desde o primeiro rascunho:</b> coletar o mínimo, proteger por padrão e pensar nos riscos já nos requisitos, e não remendar depois.",
+      "assunto": "lgpdr"
     },
     {
       "topic": "compliance",
@@ -1234,7 +1336,8 @@
         "IEEE 730"
       ],
       "correct": 1,
-      "explain": "<b>ISO/IEC 27001:</b> define como montar e manter um sistema de gestão de segurança da informação (SGSI), e permite certificação."
+      "explain": "<b>ISO/IEC 27001:</b> define como montar e manter um sistema de gestão de segurança da informação (SGSI), e permite certificação.",
+      "assunto": "normas"
     },
     {
       "topic": "compliance",
@@ -1246,7 +1349,8 @@
         "Proteção de dados pessoais no Brasil"
       ],
       "correct": 1,
-      "explain": "<b>ISO 9001:</b> é a norma de sistema de gestão da qualidade. Foca em processos, cliente e melhoria contínua, em qualquer tipo de empresa."
+      "explain": "<b>ISO 9001:</b> é a norma de sistema de gestão da qualidade. Foca em processos, cliente e melhoria contínua, em qualquer tipo de empresa.",
+      "assunto": "normas"
     },
     {
       "topic": "compliance",
@@ -1258,7 +1362,8 @@
         "HTTP/2"
       ],
       "correct": 1,
-      "explain": "<b>PCI DSS:</b> é o padrão de segurança das bandeiras de cartão para quem processa, guarda ou transmite dados de cartão."
+      "explain": "<b>PCI DSS:</b> é o padrão de segurança das bandeiras de cartão para quem processa, guarda ou transmite dados de cartão.",
+      "assunto": "normas"
     },
     {
       "topic": "compliance",
@@ -1270,7 +1375,8 @@
         "Para substituir o backup diário do banco de dados"
       ],
       "correct": 1,
-      "explain": "<b>Trilha de auditoria:</b> mostra quem fez o quê e quando. Na auditoria, é a prova de que as regras foram seguidas."
+      "explain": "<b>Trilha de auditoria:</b> mostra quem fez o quê e quando. Na auditoria, é a prova de que as regras foram seguidas.",
+      "assunto": "normas"
     },
     {
       "topic": "compliance",
@@ -1282,7 +1388,8 @@
         "Apagar os casos de teste que falharam antes"
       ],
       "correct": 1,
-      "explain": "<b>Ligar as pontas:</b> a rastreabilidade liga cada requisito aos testes e às evidências (resultados, prints, logs). Auditor não aceita “confia em mim”."
+      "explain": "<b>Ligar as pontas:</b> a rastreabilidade liga cada requisito aos testes e às evidências (resultados, prints, logs). Auditor não aceita “confia em mim”.",
+      "assunto": "normas"
     }
   ],
   "historias": [

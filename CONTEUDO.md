@@ -55,6 +55,7 @@ Perguntas por tema:
   - chips "Com Cronômetro", "Dashboard de Notas" e "Sons Interativos";
   - temas especiais: Tudo misturado, Só as que errei (aparece quando há erros) e Contas novas (só em Redes);
   - temas por bimestre;
+  - caixa "Qual conteúdo?", com as partes de cada tema (168 no total), como TTL, NAT, substring ou Include e extend;
   - rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas;
   - barra com o resumo da rodada e o botão "Iniciar prova";
   - quantidade de perguntas e barrinha do já visto em cada tema.
@@ -67,7 +68,7 @@ Perguntas por tema:
   - nota, acertos, erros e tempo;
   - gráfico da evolução, progresso por tema e revisão dos erros;
   - botões Compartilhar, Revisar erros, Repetir mesma prova, Nova rodada e Voltar ao menu.
-- **Revisão:** assuntos da prova que abrem e fecham, com tabelas, códigos, "Cuidado na prova", perguntas rápidas com resposta escondida, botão "Treinar 10 perguntas", caixinha "Já sei" e "Simulado da revisão" de 20 questões.
+- **Revisão:** assuntos da prova que abrem e fecham, com tabelas, códigos, "Cuidado na prova", perguntas rápidas com resposta escondida, botão "Treinar este assunto" (até 10 perguntas), caixinha "Já sei" e "Simulado da revisão" de 20 questões.
 - **Jogos:** "Certo ou errado?", montado sozinho a partir das perguntas, mais os jogos de classificar e de ordenar de cada matéria.
 - **Praticar:** "Falar os termos" (com voz) e "Digitar a resposta".
 - **Sem internet:** o app funciona offline e se atualiza sozinho quando sai versão nova.
@@ -88,6 +89,7 @@ Perguntas por tema:
 | 05/11/2026 | Aba "Engenharia de Software" (vazia, sem perguntas: é o nome do curso, não uma matéria) | Apagada a pedido do Paulo |
 | 20/11/2026 | 18 perguntas de Programação que cobravam assuntos fora dos slides | Voltaram para o simulado no mesmo dia, a pedido do Paulo ("era criar mais, não deletar o que já tinha") |
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
+| 25/11/2026 | (nada saiu) Cada pergunta ganhou o campo `assunto` (168 conteúdos) e o app ganhou o visual dourado | `materias/*.json`, `css/ouro.css` |
 | 25/11/2026 | (nada saiu) Entrou a aba Revisão em Programação (10 assuntos), Requisitos (7) e Redes (16, com números diferentes dos do trabalho) | campo `revisao` em `materias/*.json` |
 | 25/11/2026 | (nada saiu) Entraram 208 perguntas, 3 capítulos, 8 jogos e 16 práticas em Programação, Redes e Requisitos | `materias/programacao.json`, `materias/redes.json` e `materias/requisitos.json` |
 | 21/11/2026 | (nada saiu) Entraram 332 perguntas em Programação, 319 em Redes e 376 em Requisitos (variações; cada uma chegou a 500) | `materias/programacao.json`, `materias/redes.json` e `materias/requisitos.json` |

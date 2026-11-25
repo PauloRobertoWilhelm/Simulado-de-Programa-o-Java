@@ -26,14 +26,14 @@
 <title>Simulados UNIPAR</title>
 
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0b0e13">
+<meta name="theme-color" content="#0b0a08">
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <!-- Geist: fonte do visual novo (texto e títulos). Geist Mono: códigos e números. -->
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <!-- Ícone da aba do navegador: quadrado azul com a letra U (desenhado em SVG, sem arquivo extra). -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235ea6f0'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='36' font-weight='700' text-anchor='middle' fill='%230b0e13'%3EU%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8b94a'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='36' font-weight='700' text-anchor='middle' fill='%231a1203'%3EU%3C/text%3E%3C/svg%3E" />
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="css/styles.css" />
@@ -42,6 +42,8 @@
 <link rel="stylesheet" href="css/moderno.css" />
 <!-- Acabamento: painel de progresso, temas, código colorido e resultado. -->
 <link rel="stylesheet" href="css/estudo.css" />
+<!-- Visual "tecnologia em ouro": vem por último para valer por cima de todos. -->
+<link rel="stylesheet" href="css/ouro.css" />
 </head>
 <body>
 <div class="app">
@@ -114,6 +116,18 @@
         <div class="picker">
           <h3>Qual tema você quer treinar?</h3>
           <div class="topic-grid" id="topic-grid"></div>
+        </div>
+
+        <!--
+          BLOCO: seletor de conteúdo
+          - mostra as partes do tema escolhido, como TTL, NAT e Sub-redes em Camada de rede;
+          - #conteudo-grid recebe um botão .cpick para cada conteúdo, criado por montarConteudos();
+          - some sozinho quando o tema escolhido não tem partes.
+        -->
+        <div class="picker" id="picker-conteudo">
+          <h3>Qual conteúdo?</h3>
+          <p class="picker-dica">Escolha uma parte só para treinar, ou deixe em “Tudo”.</p>
+          <div id="conteudo-grid"></div>
         </div>
 
         <!-- As opções mudam conforme a quantidade de questões do tema escolhido. -->
@@ -423,6 +437,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.tocarSom = playSound;
 
   let selectedTopic = "all";
+  // Tema aberto na tela. selectedTopic pode ser um conteúdo dentro dele, como "c:rede.ttl".
+  let temaAberto = "all";
   let selectedLen = 0;
 
   // Carrega a lista de matérias e abre a aba indicada no endereço (#redes, por exemplo).
@@ -634,6 +650,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // "contas": perguntas sorteadas na hora; aqui não há lista fixa.
     if (topic === "contas") return [];
+    // "c:tema.assunto": um conteúdo só. Com "+", vários juntos ("c:rede.nat+rede.privado").
+    if (topic.startsWith("c:")) {
+      // Lista dos conteúdos pedidos.
+      const pedidos = topic.slice(2).split("+");
+      // Fica com as perguntas cujo tema e assunto estão na lista.
+      return bank.filter(q => pedidos.includes(`${q.topic}.${q.assunto}`));
+    }
     // "bim1" ou "bim2": junta todos os temas daquele bimestre.
     if (topic === "bim1" || topic === "bim2") {
       // Tira o número do fim do texto: "bim2" vira 2.
@@ -693,10 +716,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!(manter && atualValido)) selectedTopic = padrao && questoesDoTema(padrao).length ? padrao : "all";
     // Só entram temas que têm pelo menos uma pergunta, para não aparecer botão vazio.
     const temas = materiaAtual.temas.filter(tema => bank.some(q => q.topic === tema.id));
+    // O tema aberto: num conteúdo ("c:rede.ttl") é o tema de antes do ponto; senão é o próprio.
+    temaAberto = selectedTopic.startsWith("c:") ? selectedTopic.slice(2).split(".")[0] : selectedTopic;
     // A matéria é separada por bimestre se algum tema tiver o campo "bimestre".
     const usaBimestre = temas.some(tema => tema.bimestre);
     // marcado() diz se um botão deve aparecer selecionado: só o do tema escolhido.
-    const marcado = (id) => id === selectedTopic;
+    const marcado = (id) => id === temaAberto;
     // Primeiro botão de todos: "Tudo misturado".
     const itens = [criarBotaoTema({ id: "all", rotulo: "🎯 Tudo misturado" }, marcado("all"))];
     // Quantas perguntas estão na lista de erros desta matéria.
@@ -729,10 +754,98 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Troca tudo o que havia na grade pelos botões novos.
     topicGrid.replaceChildren(...itens);
-    // As quantidades dependem do tema escolhido, então são refeitas.
-    montarQuantidades();
+    // Mostra os conteúdos do tema e refaz as quantidades.
+    montarConteudos();
     // O painel de progresso acompanha: muda depois de cada rodada.
     atualizarPainel();
+  }
+
+  // montarConteudos() cria os botões de conteúdo do tema aberto.
+  // Em "Tudo misturado" e "Tudo do bimestre" mostra os conteúdos de todos os temas, separados por tema.
+  function montarConteudos() {
+    // Caixa inteira e a grade dos botões.
+    const caixa = document.getElementById("picker-conteudo");
+    const grade = document.getElementById("conteudo-grid");
+    // Quais temas entram: todos, os de um bimestre ou só o aberto. "Erros" e "contas" não têm conteúdos.
+    const temas = materiaAtual.temas.filter(tema => {
+      // Tema sem partes não entra.
+      if (!tema.assuntos || tema.assuntos.length < 2) return false;
+      // Tudo misturado: entram todos.
+      if (temaAberto === "all") return true;
+      // Bimestre: entram os dele.
+      if (temaAberto === "bim1" || temaAberto === "bim2") return tema.bimestre === Number(temaAberto.slice(3));
+      // Um tema só.
+      return tema.id === temaAberto;
+    });
+    // Sem partes para mostrar: esconde a caixa.
+    caixa.classList.toggle("hidden", !temas.length);
+    // Lista das perguntas já vistas, para a barrinha.
+    const vistas = lerMapa("vistas");
+    // criarBotao() faz um botão de conteúdo. Parâmetros: id (o que será treinado) e rotulo (texto).
+    const criarBotao = (id, rotulo) => {
+      // Perguntas desse conteúdo.
+      const perguntas = questoesDoTema(id);
+      // Botão.
+      const botao = document.createElement("button");
+      // Não envia formulário.
+      botao.type = "button";
+      // "on" marca o escolhido.
+      botao.className = `cpick${id === selectedTopic ? " on" : ""}`;
+      // Guarda o que será treinado.
+      botao.dataset.conteudo = id;
+      // Leitor de tela sabe se está marcado.
+      botao.setAttribute("aria-pressed", id === selectedTopic);
+      // Nome do conteúdo.
+      const nome = document.createElement("span");
+      // Classe lida por atualizarResumo().
+      nome.className = "cpick-nome";
+      // Texto.
+      nome.textContent = rotulo;
+      // Coloca no botão.
+      botao.append(nome);
+      // Quantidade e barrinha.
+      window.Visual.marcarTema(botao, perguntas.length, perguntas.filter(q => vistas[idDaPergunta(q)]).length);
+      // Devolve pronto.
+      return botao;
+    };
+    // Primeiro botão: o tema inteiro.
+    const itens = [criarBotao(temaAberto, "Tudo")];
+    // Depois, os conteúdos de cada tema.
+    temas.forEach(tema => {
+      // Com vários temas, escreve o nome de cada um antes.
+      if (temas.length > 1) {
+        // Título do grupo.
+        const titulo = document.createElement("p");
+        // Mesmo estilo do título de bimestre.
+        titulo.className = "topic-group";
+        // Nome do tema.
+        titulo.textContent = tema.rotulo;
+        // Coloca na lista.
+        itens.push(titulo);
+      }
+      // Um botão por conteúdo.
+      tema.assuntos.forEach(assunto => itens.push(criarBotao(`c:${tema.id}.${assunto.id}`, assunto.rotulo)));
+    });
+    // Troca os botões antigos pelos novos.
+    grade.replaceChildren(...itens);
+    // A quantidade de perguntas depende do que foi escolhido.
+    montarQuantidades();
+  }
+
+  // rotuloDoConteudo() devolve o nome de um conteúdo, como "TTL e traceroute".
+  // Parâmetro: topic no formato "c:tema.assunto" (ou vários, com "+").
+  function rotuloDoConteudo(topic) {
+    // Procura cada pedido na lista de temas da matéria.
+    return topic.slice(2).split("+").map(pedido => {
+      // Separa o tema e o assunto.
+      const [idTema, idAssunto] = pedido.split(".");
+      // Acha o tema.
+      const tema = materiaAtual.temas.find(item => item.id === idTema);
+      // Acha o assunto dentro dele.
+      const assunto = tema && (tema.assuntos || []).find(item => item.id === idAssunto);
+      // Nome, ou o próprio id se não achar.
+      return assunto ? assunto.rotulo : pedido;
+    }).join(" + ");
   }
 
   // atualizarPainel() manda os números da matéria para o painel de estudo.
@@ -760,8 +873,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const numero = document.createElement("b");
     // Escreve a quantidade.
     numero.textContent = `${selectedLen} questões`;
-    // Junta a quantidade e o nome do tema na caixa do resumo.
-    document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${marcado ? marcado.textContent : "Tudo misturado"}`);
+    // Nome do que vai ser treinado: o conteúdo, quando escolhido; senão, o tema.
+    const nome = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : (marcado ? marcado.textContent : "Tudo misturado");
+    // Junta a quantidade e o nome na caixa do resumo.
+    document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${nome}`);
   }
 
   // TAMANHOS: rodadas oferecidas. Acrescentar um número aqui cria um botão novo.
@@ -812,6 +927,29 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".tpick").forEach(b => b.classList.remove("on"));
     botao.classList.add("on");
     selectedTopic = botao.dataset.topic;
+    // O tema escolhido passa a ser o aberto, e os conteúdos dele aparecem.
+    temaAberto = selectedTopic;
+    montarConteudos();
+  });
+
+  // Toque num conteúdo: troca o que será treinado, sem mudar o tema aberto.
+  document.getElementById("conteudo-grid").addEventListener("click", (e) => {
+    // Acha o botão tocado.
+    const botao = e.target.closest(".cpick");
+    // Tocou no vão entre botões: não faz nada.
+    if (!botao) return;
+    // Guarda a escolha.
+    selectedTopic = botao.dataset.conteudo;
+    // Marca só o botão escolhido.
+    document.querySelectorAll(".cpick").forEach(item => {
+      // Este é o escolhido?
+      const ligado = item === botao;
+      // Visual.
+      item.classList.toggle("on", ligado);
+      // Leitor de tela.
+      item.setAttribute("aria-pressed", ligado);
+    });
+    // Refaz as quantidades para esse conteúdo.
     montarQuantidades();
   });
 
@@ -839,7 +977,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Quantas de cada tema, arredondando para cima.
       const porTema = Math.ceil(quantas / temas.length);
       // Junta as perguntas de todos os temas, embaralha e corta no total pedido.
-      const juntas = shuffleArray(temas.flatMap(id => buildFilteredQuestions(id, porTema))).slice(0, quantas);
+      const sorteadas = temas.flatMap(id => buildFilteredQuestions(id, porTema));
+      // Dois assuntos podem ter a mesma pergunta: guarda uma de cada, pelo RG.
+      const unicas = new Map(sorteadas.map(q => [idDaPergunta(q), q]));
+      // Se faltar para completar, usa outras do bimestre.
+      buildFilteredQuestions("bim2", quantas * 3).forEach(q => { if (unicas.size < quantas) unicas.set(idDaPergunta(q), q); });
+      // Embaralha e corta no total pedido.
+      const juntas = shuffleArray([...unicas.values()]).slice(0, quantas);
       // Sorteia de novo a letra certa, para não repetir em seguida.
       perguntas = sortearPosicoes(juntas);
     }
@@ -1445,7 +1589,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Nomes das escolhas que não são um tema só.
     const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas" };
     // Mostra o nome do tema, ou o nome especial, no painel de progresso.
-    document.getElementById("current-theme-label").textContent = temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
+    document.getElementById("current-theme-label").textContent = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
 
     recordProgressSnapshot(pct, totalQuestions, score, selectedTopic);
     renderReviewPanel(getWrongQuestionsFromCurrentRound());
@@ -1478,10 +1622,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       : isMedium
         ? {
-            // Nota do meio: usa a cor da matéria aberta, em vez do roxo antigo.
-            border: materiaAtual.cores[0],
-            fill: `${materiaAtual.cores[0]}26`,
-            point: materiaAtual.cores[1],
+            // Nota do meio: ouro, a cor do app.
+            border: '#e8b94a',
+            fill: 'rgba(232, 185, 74, 0.15)',
+            point: '#ffe7a3',
             glow: 'rgba(154, 139, 255, 0.22)'
           }
         : {
@@ -1611,9 +1755,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     selectedTopic = lastQuizConfig.topic;
     selectedLen = lastQuizConfig.length;
-    document.querySelectorAll(".tpick").forEach((item) => {
-      item.classList.toggle("on", item.dataset.topic === selectedTopic);
-    });
+    // Refaz os botões de tema e de conteúdo já marcados na rodada que vai repetir.
+    montarTemas(true);
+    // montarTemas volta a quantidade para 20; aqui volta a da rodada.
+    selectedLen = lastQuizConfig.length;
     document.querySelectorAll(".len").forEach((item) => {
       item.classList.toggle("on", parseInt(item.dataset.len) === selectedLen);
     });

@@ -117,6 +117,10 @@ for (const materia of lista) {
     if (!(q.correct >= 0 && q.correct < (q.options || []).length)) erros.push(`${rotulo}: "correct" fora das opções`);
     // O tema precisa existir em index.json.
     if (!temas.has(q.topic)) erros.push(`${rotulo}: tema "${q.topic}" não existe em index.json`);
+    // Tema com conteúdos ("assuntos"): a pergunta precisa dizer de qual é, senão ela some da escolha.
+    const temaDela = materia.temas.find((tema) => tema.id === q.topic);
+    if (temaDela && temaDela.assuntos && !temaDela.assuntos.some((a) => a.id === q.assunto)) erros.push(`${rotulo}: sem "assunto" válido do tema ${q.topic}`);
+
     // As 4 opções precisam ser diferentes entre si.
     if (new Set((q.options || []).map(exato)).size !== (q.options || []).length) falha('opções repetidas', `${rotulo}: opções repetidas`);
     // Toda pergunta precisa de explicação.
@@ -205,7 +209,10 @@ for (const materia of lista) {
   // Confere a aba Revisão: tema existente, blocos conhecidos e perguntas com resposta.
   ((dados.revisao || {}).secoes || []).forEach((secao) => {
     // "bim2" junta o bimestre inteiro, então também vale como tema.
-    if (secao.tema !== 'bim2' && !temas.has(secao.tema)) erros.push(`${materia.id} revisão "${secao.titulo}": tema "${secao.tema}" não existe`);
+    // "c:tema.assunto" aponta para conteúdos: cada um precisa ter pergunta.
+    if (secao.tema.startsWith('c:')) {
+      secao.tema.slice(2).split('+').forEach((c) => { if (!(dados.questoes || []).some((q) => `${q.topic}.${q.assunto}` === c)) erros.push(`${materia.id} revisão "${secao.titulo}": conteúdo "${c}" sem perguntas`); });
+    } else if (secao.tema !== 'bim2' && !temas.has(secao.tema)) erros.push(`${materia.id} revisão "${secao.titulo}": tema "${secao.tema}" não existe`);
     // Cada bloco precisa ser de um tipo que js/revisao.js sabe desenhar; tabela com o mesmo número de colunas em todas as linhas.
     secao.blocos.forEach((b) => {
       if (!['texto', 'lista', 'passos', 'tabela', 'codigo'].includes(b.tipo)) erros.push(`${materia.id} revisão "${secao.titulo}": bloco "${b.tipo}" desconhecido`);

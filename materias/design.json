@@ -10,7 +10,8 @@
         "A acessibilidade técnica."
       ],
       "correct": 1,
-      "explain": "<b>Comunicabilidade:</b> vem da Engenharia Semiótica. O problema é a mensagem que a interface passa, e não a tecnologia."
+      "explain": "<b>Comunicabilidade:</b> vem da Engenharia Semiótica. O problema é a mensagem que a interface passa, e não a tecnologia.",
+      "assunto": "comunic"
     },
     {
       "topic": "ihc",
@@ -22,7 +23,8 @@
         "Segurança, Backup, Rede e Servidor da aplicação"
       ],
       "correct": 1,
-      "explain": "<b>Qualidade em IHC:</b> reúne usabilidade, experiência do usuário (UX), acessibilidade e comunicabilidade."
+      "explain": "<b>Qualidade em IHC:</b> reúne usabilidade, experiência do usuário (UX), acessibilidade e comunicabilidade.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -34,7 +36,8 @@
         "Explicam a memória, a atenção, a percepção e a carga mental"
       ],
       "correct": 3,
-      "explain": "<b>Multidisciplinaridade:</b> IHC une humanos, design e tecnologia. A Psicologia explica como a pessoa percebe e lembra."
+      "explain": "<b>Multidisciplinaridade:</b> IHC une humanos, design e tecnologia. A Psicologia explica como a pessoa percebe e lembra.",
+      "assunto": "psico"
     },
     {
       "topic": "heuristicas",
@@ -46,7 +49,8 @@
         "Ajuda e Documentação"
       ],
       "correct": 2,
-      "explain": "<b>Visibilidade do status:</b> o sistema sempre conta ao usuário o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema sempre conta ao usuário o que está acontecendo.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -58,7 +62,8 @@
         "Estética e Design Minimalista"
       ],
       "correct": 0,
-      "explain": "<b>Prevenção de erros:</b> uma máscara impediria o erro antes que ele acontecesse."
+      "explain": "<b>Prevenção de erros:</b> uma máscara impediria o erro antes que ele acontecesse.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -70,7 +75,8 @@
         "Reconhecimento em vez de Memorização"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> fechar costuma ser um X no canto superior. Fugir do padrão confunde."
+      "explain": "<b>Consistência e padrões:</b> fechar costuma ser um X no canto superior. Fugir do padrão confunde.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -82,7 +88,8 @@
         "“Não me faça pensar!”"
       ],
       "correct": 3,
-      "explain": "<b>Krug:</b> as páginas devem ser autoexplicativas, sem esforço cognitivo desnecessário."
+      "explain": "<b>Krug:</b> as páginas devem ser autoexplicativas, sem esforço cognitivo desnecessário.",
+      "assunto": "krug"
     },
     {
       "topic": "heuristicas",
@@ -94,7 +101,8 @@
         "Ajuda e Documentação"
       ],
       "correct": 0,
-      "explain": "<b>Controle e liberdade:</b> o usuário precisa de uma saída clara quando faz algo sem querer."
+      "explain": "<b>Controle e liberdade:</b> o usuário precisa de uma saída clara quando faz algo sem querer.",
+      "assunto": "nielsen"
     },
     {
       "topic": "norman",
@@ -106,7 +114,8 @@
         "Um erro no modelo de cores HSL"
       ],
       "correct": 2,
-      "explain": "<b>Affordance:</b> a aparência sugere uma ação. Se a ação não existe, a affordance é falsa."
+      "explain": "<b>Affordance:</b> a aparência sugere uma ação. Se a ação não existe, a affordance é falsa.",
+      "assunto": "afford"
     },
     {
       "topic": "norman",
@@ -118,7 +127,8 @@
         "Modelo mental correto"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de Avaliação:</b> é a distância entre o que o sistema fez e o que a pessoa consegue interpretar dele."
+      "explain": "<b>Golfo de Avaliação:</b> é a distância entre o que o sistema fez e o que a pessoa consegue interpretar dele.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -130,7 +140,8 @@
         "Teoria das cores aplicada ao indicador"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de Execução:</b> a interface não guiou nem limitou a ação. Restrições (constraints) evitam as repetições."
+      "explain": "<b>Golfo de Execução:</b> a interface não guiou nem limitou a ação. Restrições (constraints) evitam as repetições.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -142,7 +153,8 @@
         "Porque telas cheias de texto são lidas mais rápido"
       ],
       "correct": 2,
-      "explain": "<b>Conhecimento no mundo:</b> a mente tem memória de curto prazo limitada. O que está na tela não precisa ser lembrado."
+      "explain": "<b>Conhecimento no mundo:</b> a mente tem memória de curto prazo limitada. O que está na tela não precisa ser lembrado.",
+      "assunto": "principios"
     },
     {
       "topic": "visual",
@@ -154,7 +166,8 @@
         "O HSL segue a percepção humana e facilita ajustar o brilho"
       ],
       "correct": 3,
-      "explain": "<b>HSL:</b> matiz, saturação e luminosidade. É mais intuitivo de ajustar do que o código hexadecimal."
+      "explain": "<b>HSL:</b> matiz, saturação e luminosidade. É mais intuitivo de ajustar do que o código hexadecimal.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -166,7 +179,8 @@
         "Preto e branco, um modelo binário"
       ],
       "correct": 0,
-      "explain": "<b>RGB:</b> soma luz vermelha, verde e azul. O CMYK é para impressão, em que a cor vem da reflexão nos pigmentos."
+      "explain": "<b>RGB:</b> soma luz vermelha, verde e azul. O CMYK é para impressão, em que a cor vem da reflexão nos pigmentos.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -178,7 +192,8 @@
         "Dispensar os testes com usuários reais do sistema"
       ],
       "correct": 1,
-      "explain": "<b>Low-Fi:</b> um esboço em papel é barato. Por isso dá para jogar fora e testar outra ideia sem dó."
+      "explain": "<b>Low-Fi:</b> um esboço em papel é barato. Por isso dá para jogar fora e testar outra ideia sem dó.",
+      "assunto": "proto"
     },
     {
       "topic": "visual",
@@ -190,7 +205,8 @@
         "Mudar um token muda a cor em todo o projeto de uma vez"
       ],
       "correct": 3,
-      "explain": "<b>Tokens:</b> você muda a cor primária em um lugar e o projeto inteiro acompanha."
+      "explain": "<b>Tokens:</b> você muda a cor primária em um lugar e o projeto inteiro acompanha.",
+      "assunto": "figma"
     },
     {
       "topic": "ihc",
@@ -202,7 +218,8 @@
         "O usuário conseguir conversar com outros usuários"
       ],
       "correct": 1,
-      "explain": "<b>Comunicar a ideia:</b> a interface “fala” pelo designer. Se o usuário entende para que serve cada coisa e como usar, a comunicabilidade é boa."
+      "explain": "<b>Comunicar a ideia:</b> a interface “fala” pelo designer. Se o usuário entende para que serve cada coisa e como usar, a comunicabilidade é boa.",
+      "assunto": "comunic"
     },
     {
       "topic": "ihc",
@@ -214,7 +231,8 @@
         "Interface é o usuário; interação é o computador"
       ],
       "correct": 2,
-      "explain": "<b>Meio e conversa:</b> a interface é o que você vê e toca (tela, botões). A interação é a troca entre você e o sistema: você age, ele responde."
+      "explain": "<b>Meio e conversa:</b> a interface é o que você vê e toca (tela, botões). A interação é a troca entre você e o sistema: você age, ele responde.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -226,7 +244,8 @@
         "Código limpo, testes automáticos e boa documentação"
       ],
       "correct": 1,
-      "explain": "<b>Três medidas:</b> eficácia (consegue fazer?), eficiência (com quanto esforço?) e satisfação (gostou?), sempre num contexto de uso."
+      "explain": "<b>Três medidas:</b> eficácia (consegue fazer?), eficiência (com quanto esforço?) e satisfação (gostou?), sempre num contexto de uso.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -238,7 +257,8 @@
         "Poucos erros e fácil recuperação"
       ],
       "correct": 1,
-      "explain": "<b>Cor não é componente:</b> os cinco são facilidade de aprendizado, eficiência, facilidade de memorização, poucos erros e satisfação."
+      "explain": "<b>Cor não é componente:</b> os cinco são facilidade de aprendizado, eficiência, facilidade de memorização, poucos erros e satisfação.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -250,7 +270,8 @@
         "UX inclui emoções; usabilidade foca no uso eficiente"
       ],
       "correct": 3,
-      "explain": "<b>UX é mais ampla:</b> inclui o que a pessoa sente antes, durante e depois do uso. Usabilidade é a parte de conseguir usar bem."
+      "explain": "<b>UX é mais ampla:</b> inclui o que a pessoa sente antes, durante e depois do uso. Usabilidade é a parte de conseguir usar bem.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -262,7 +283,8 @@
         "O usuário acessar o sistema sem precisar de senha"
       ],
       "correct": 1,
-      "explain": "<b>Todo mundo usa:</b> acessibilidade é remover barreiras para pessoas com deficiência visual, auditiva, motora ou cognitiva."
+      "explain": "<b>Todo mundo usa:</b> acessibilidade é remover barreiras para pessoas com deficiência visual, auditiva, motora ou cognitiva.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -274,7 +296,8 @@
         "Copiar a interface do concorrente que mais vende"
       ],
       "correct": 2,
-      "explain": "<b>Usuário no centro:</b> pesquisar, desenhar, testar com quem vai usar e repetir. Não é só no fim."
+      "explain": "<b>Usuário no centro:</b> pesquisar, desenhar, testar com quem vai usar e repetir. Não é só no fim.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -286,7 +309,8 @@
         "Uma lista de comandos que o usuário decora"
       ],
       "correct": 0,
-      "explain": "<b>Recado do designer:</b> a interface é uma mensagem que diz “isto é para você, e é assim que se usa”."
+      "explain": "<b>Recado do designer:</b> a interface é uma mensagem que diz “isto é para você, e é assim que se usa”.",
+      "assunto": "comunic"
     },
     {
       "topic": "ihc",
@@ -298,7 +322,8 @@
         "O tamanho do banco de dados"
       ],
       "correct": 1,
-      "explain": "<b>Onde e como se usa:</b> contexto de uso é o ambiente, o equipamento e a situação. Luva e sol mudam tudo: botões maiores e alto contraste."
+      "explain": "<b>Onde e como se usa:</b> contexto de uso é o ambiente, o equipamento e a situação. Luva e sol mudam tudo: botões maiores e alto contraste.",
+      "assunto": "qualidade"
     },
     {
       "topic": "ihc",
@@ -310,7 +335,8 @@
         "Usuários preferem ler textos longos antes de clicar"
       ],
       "correct": 1,
-      "explain": "<b>Memória curta:</b> a memória de trabalho segura poucos itens ao mesmo tempo (o famoso “7 mais ou menos 2”). Tela lotada cansa e confunde."
+      "explain": "<b>Memória curta:</b> a memória de trabalho segura poucos itens ao mesmo tempo (o famoso “7 mais ou menos 2”). Tela lotada cansa e confunde.",
+      "assunto": "psico"
     },
     {
       "topic": "ihc",
@@ -322,7 +348,8 @@
         "Lei de Murphy"
       ],
       "correct": 2,
-      "explain": "<b>Lei de Hick:</b> quanto mais opções, mais tempo para decidir. Agrupe e reduza as escolhas."
+      "explain": "<b>Lei de Hick:</b> quanto mais opções, mais tempo para decidir. Agrupe e reduza as escolhas.",
+      "assunto": "psico"
     },
     {
       "topic": "ihc",
@@ -334,7 +361,8 @@
         "Lei de Krug: o usuário lê a página inteira antes"
       ],
       "correct": 2,
-      "explain": "<b>Lei de Fitts:</b> o tempo para acertar um alvo depende da distância e do tamanho. Grande e perto = rápido e com menos erro."
+      "explain": "<b>Lei de Fitts:</b> o tempo para acertar um alvo depende da distância e do tamanho. Grande e perto = rápido e com menos erro.",
+      "assunto": "psico"
     },
     {
       "topic": "ihc",
@@ -346,7 +374,8 @@
         "Figura e fundo"
       ],
       "correct": 1,
-      "explain": "<b>Proximidade:</b> o que está perto parece ser do mesmo grupo. Por isso cada rótulo “gruda” no seu campo."
+      "explain": "<b>Proximidade:</b> o que está perto parece ser do mesmo grupo. Por isso cada rótulo “gruda” no seu campo.",
+      "assunto": "psico"
     },
     {
       "topic": "ihc",
@@ -358,7 +387,8 @@
         "Continuidade"
       ],
       "correct": 2,
-      "explain": "<b>Semelhança:</b> coisas parecidas (mesma cor, forma ou estilo) são vistas como da mesma família."
+      "explain": "<b>Semelhança:</b> coisas parecidas (mesma cor, forma ou estilo) são vistas como da mesma família.",
+      "assunto": "psico"
     },
     {
       "topic": "ihc",
@@ -370,7 +400,8 @@
         "A coordenação motora do usuário"
       ],
       "correct": 2,
-      "explain": "<b>Atenção:</b> o olho vai ao que contrasta e está onde se olha. Erro importante precisa de destaque e ficar perto do problema."
+      "explain": "<b>Atenção:</b> o olho vai ao que contrasta e está onde se olha. Erro importante precisa de destaque e ficar perto do problema.",
+      "assunto": "psico"
     },
     {
       "topic": "heuristicas",
@@ -382,7 +413,8 @@
         "Reconhecimento em vez de memorização"
       ],
       "correct": 1,
-      "explain": "<b>Mensagem de erro útil:</b> deve dizer, em linguagem simples, o que aconteceu e como resolver. Um código hexadecimal não ajuda ninguém."
+      "explain": "<b>Mensagem de erro útil:</b> deve dizer, em linguagem simples, o que aconteceu e como resolver. Um código hexadecimal não ajuda ninguém.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -394,7 +426,8 @@
         "Visibilidade do status do sistema"
       ],
       "correct": 1,
-      "explain": "<b>Falar a língua do usuário:</b> palavras, ícones e ordem iguais aos do mundo real deixam tudo familiar."
+      "explain": "<b>Falar a língua do usuário:</b> palavras, ícones e ordem iguais aos do mundo real deixam tudo familiar.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -406,7 +439,8 @@
         "Correspondência com o mundo real"
       ],
       "correct": 2,
-      "explain": "<b>Serve aos dois:</b> o iniciante usa o menu; o experiente ganha tempo com atalhos. Isso é flexibilidade e eficiência."
+      "explain": "<b>Serve aos dois:</b> o iniciante usa o menu; o experiente ganha tempo com atalhos. Isso é flexibilidade e eficiência.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -418,7 +452,8 @@
         "Ajuda e documentação"
       ],
       "correct": 1,
-      "explain": "<b>Menos é mais:</b> cada informação extra compete com o que importa. O minimalista mostra só o necessário."
+      "explain": "<b>Menos é mais:</b> cada informação extra compete com o que importa. O minimalista mostra só o necessário.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -430,7 +465,8 @@
         "Correspondência com o mundo real"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecer é mais fácil que lembrar:</b> a lista na tela poupa a memória do usuário."
+      "explain": "<b>Reconhecer é mais fácil que lembrar:</b> a lista na tela poupa a memória do usuário.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -442,7 +478,8 @@
         "Estética e design minimalista"
       ],
       "correct": 1,
-      "explain": "<b>Ajuda fácil de achar:</b> o ideal é nem precisar dela, mas, quando precisar, ela deve ser curta, pesquisável e voltada para tarefas."
+      "explain": "<b>Ajuda fácil de achar:</b> o ideal é nem precisar dela, mas, quando precisar, ela deve ser curta, pesquisável e voltada para tarefas.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -454,7 +491,8 @@
         "Consistência e padrões da plataforma"
       ],
       "correct": 1,
-      "explain": "<b>Barrar antes:</b> em ações graves e sem volta, uma confirmação evita o erro antes que ele aconteça."
+      "explain": "<b>Barrar antes:</b> em ações graves e sem volta, uma confirmação evita o erro antes que ele aconteça.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -466,7 +504,8 @@
         "Ajuda e documentação"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> a mesma ação deve ter a mesma aparência e o mesmo lugar em todo o sistema. Senão o usuário reaprende a cada tela."
+      "explain": "<b>Consistência e padrões:</b> a mesma ação deve ter a mesma aparência e o mesmo lugar em todo o sistema. Senão o usuário reaprende a cada tela.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -478,7 +517,8 @@
         "12"
       ],
       "correct": 2,
-      "explain": "<b>Dez heurísticas:</b> status, mundo real, controle, consistência, prevenção de erros, reconhecimento, flexibilidade, minimalismo, recuperação de erros e ajuda."
+      "explain": "<b>Dez heurísticas:</b> status, mundo real, controle, consistência, prevenção de erros, reconhecimento, flexibilidade, minimalismo, recuperação de erros e ajuda.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -490,7 +530,8 @@
         "Flexibilidade e eficiência"
       ],
       "correct": 2,
-      "explain": "<b>Mostrar o que está acontecendo:</b> o usuário precisa saber, a tempo, que o sistema recebeu a ação e está trabalhando."
+      "explain": "<b>Mostrar o que está acontecendo:</b> o usuário precisa saber, a tempo, que o sistema recebeu a ação e está trabalhando.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -502,7 +543,8 @@
         "Estética e design minimalista"
       ],
       "correct": 1,
-      "explain": "<b>Saída de emergência:</b> o usuário erra e muda de ideia. Poder voltar, cancelar e desfazer sem perder tudo é controle e liberdade."
+      "explain": "<b>Saída de emergência:</b> o usuário erra e muda de ideia. Poder voltar, cancelar e desfazer sem perder tudo é controle e liberdade.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -514,7 +556,8 @@
         "Comparam todas as opções até achar a melhor"
       ],
       "correct": 1,
-      "explain": "<b>Escaneiam:</b> para Krug, ninguém lê tudo. As pessoas passam os olhos e escolhem a primeira opção que parece boa o bastante."
+      "explain": "<b>Escaneiam:</b> para Krug, ninguém lê tudo. As pessoas passam os olhos e escolhem a primeira opção que parece boa o bastante.",
+      "assunto": "krug"
     },
     {
       "topic": "heuristicas",
@@ -526,7 +569,8 @@
         "Colocar todos os textos num manual em PDF"
       ],
       "correct": 1,
-      "explain": "<b>Corte sem dó:</b> “livre-se de metade das palavras e depois de metade do que sobrou”. Texto curto é lido; texto longo é pulado."
+      "explain": "<b>Corte sem dó:</b> “livre-se de metade das palavras e depois de metade do que sobrou”. Texto curto é lido; texto longo é pulado.",
+      "assunto": "krug"
     },
     {
       "topic": "heuristicas",
@@ -538,7 +582,8 @@
         "Assim o usuário lê todos os textos da página"
       ],
       "correct": 1,
-      "explain": "<b>Não me faça pensar:</b> convenção é algo que o usuário já aprendeu em outros sites. Usar o que ele já sabe é de graça."
+      "explain": "<b>Não me faça pensar:</b> convenção é algo que o usuário já aprendeu em outros sites. Usar o que ele já sabe é de graça.",
+      "assunto": "krug"
     },
     {
       "topic": "heuristicas",
@@ -550,7 +595,8 @@
         "Cada clique a mais dobra a satisfação do usuário"
       ],
       "correct": 1,
-      "explain": "<b>Cliques sem dúvida:</b> para Krug, vários cliques óbvios são melhores que um clique em que é preciso pensar."
+      "explain": "<b>Cliques sem dúvida:</b> para Krug, vários cliques óbvios são melhores que um clique em que é preciso pensar.",
+      "assunto": "krug"
     },
     {
       "topic": "heuristicas",
@@ -562,7 +608,8 @@
         "Usar termos técnicos do banco de dados"
       ],
       "correct": 1,
-      "explain": "<b>Metáfora do dia a dia:</b> todo mundo sabe o que se faz com uma lixeira. O sistema usa a ideia do mundo real."
+      "explain": "<b>Metáfora do dia a dia:</b> todo mundo sabe o que se faz com uma lixeira. O sistema usa a ideia do mundo real.",
+      "assunto": "nielsen"
     },
     {
       "topic": "heuristicas",
@@ -574,7 +621,8 @@
         "Um editor com Ctrl+Z para voltar atrás"
       ],
       "correct": 1,
-      "explain": "<b>Sem saída:</b> se o usuário entrou por engano, precisa poder sair. Sem voltar nem cancelar, ele fica preso."
+      "explain": "<b>Sem saída:</b> se o usuário entrou por engano, precisa poder sair. Sem voltar nem cancelar, ele fica preso.",
+      "assunto": "nielsen"
     },
     {
       "topic": "norman",
@@ -586,7 +634,8 @@
         "O manual que acompanha o produto"
       ],
       "correct": 1,
-      "explain": "<b>O que dá para fazer:</b> uma cadeira permite sentar; um botão permite apertar. Affordance é a relação entre o objeto e quem usa."
+      "explain": "<b>O que dá para fazer:</b> uma cadeira permite sentar; um botão permite apertar. Affordance é a relação entre o objeto e quem usa.",
+      "assunto": "afford"
     },
     {
       "topic": "norman",
@@ -598,7 +647,8 @@
         "A memória que o usuário tem do produto"
       ],
       "correct": 1,
-      "explain": "<b>A plaquinha:</b> o significante é o sinal visível (um puxador, um rótulo, uma seta) que mostra onde e como agir."
+      "explain": "<b>A plaquinha:</b> o significante é o sinal visível (um puxador, um rótulo, uma seta) que mostra onde e como agir.",
+      "assunto": "afford"
     },
     {
       "topic": "norman",
@@ -610,7 +660,8 @@
         "Mapeamento natural entre puxador e porta"
       ],
       "correct": 1,
-      "explain": "<b>Porta de Norman:</b> o puxador “diz” puxe, mas a porta pede empurre. O sinal engana, e a culpa é do design, não da pessoa."
+      "explain": "<b>Porta de Norman:</b> o puxador “diz” puxe, mas a porta pede empurre. O sinal engana, e a culpa é do design, não da pessoa.",
+      "assunto": "afford"
     },
     {
       "topic": "norman",
@@ -622,7 +673,8 @@
         "Feedback"
       ],
       "correct": 1,
-      "explain": "<b>Mapeamento:</b> é a relação entre o controle e o efeito. Botões dispostos como as bocas deixariam óbvio."
+      "explain": "<b>Mapeamento:</b> é a relação entre o controle e o efeito. Botões dispostos como as bocas deixariam óbvio.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -634,7 +686,8 @@
         "Modelo conceitual"
       ],
       "correct": 2,
-      "explain": "<b>Feedback:</b> o sistema responde à ação, na hora e de forma visível. Assim o usuário sabe que funcionou."
+      "explain": "<b>Feedback:</b> o sistema responde à ação, na hora e de forma visível. Assim o usuário sabe que funcionou.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -646,7 +699,8 @@
         "Falha de feedback"
       ],
       "correct": 1,
-      "explain": "<b>Restrição física:</b> o próprio formato impede a ação errada. É a forma mais forte de prevenir erro."
+      "explain": "<b>Restrição física:</b> o próprio formato impede a ação errada. É a forma mais forte de prevenir erro.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -658,7 +712,8 @@
         "Semântica"
       ],
       "correct": 2,
-      "explain": "<b>Restrição cultural:</b> vem de convenções que a pessoa aprendeu na sua cultura. Em outros países, as cores podem significar outra coisa."
+      "explain": "<b>Restrição cultural:</b> vem de convenções que a pessoa aprendeu na sua cultura. Em outros países, as cores podem significar outra coisa.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -670,7 +725,8 @@
         "O sistema dá feedback rápido demais na tela"
       ],
       "correct": 1,
-      "explain": "<b>Modelos diferentes:</b> o usuário imagina um funcionamento (modelo mental) e o sistema faz outro. O design precisa deixar o funcionamento claro."
+      "explain": "<b>Modelos diferentes:</b> o usuário imagina um funcionamento (modelo mental) e o sistema faz outro. O design precisa deixar o funcionamento claro.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -682,7 +738,8 @@
         "Golfo de memória"
       ],
       "correct": 1,
-      "explain": "<b>Execução = como faço?</b> O golfo de execução é a distância entre o que a pessoa quer fazer e descobrir como fazer no sistema."
+      "explain": "<b>Execução = como faço?</b> O golfo de execução é a distância entre o que a pessoa quer fazer e descobrir como fazer no sistema.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -694,7 +751,8 @@
         "Memória curta e memória longa do usuário"
       ],
       "correct": 1,
-      "explain": "<b>Ida e volta:</b> execução é fazer a ação; avaliação é entender o que aconteceu depois. Bons significantes e bom feedback encurtam as duas."
+      "explain": "<b>Ida e volta:</b> execução é fazer a ação; avaliação é entender o que aconteceu depois. Bons significantes e bom feedback encurtam as duas.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -706,7 +764,8 @@
         "Uma affordance perfeita do botão"
       ],
       "correct": 1,
-      "explain": "<b>Lapso:</b> a pessoa queria a coisa certa, mas a mão foi para o lugar errado. Botões perigosos longe dos comuns ajudam."
+      "explain": "<b>Lapso:</b> a pessoa queria a coisa certa, mas a mão foi para o lugar errado. Botões perigosos longe dos comuns ajudam.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -718,7 +777,8 @@
         "Um feedback rápido do sistema"
       ],
       "correct": 1,
-      "explain": "<b>Engano:</b> o plano já nasce errado, porque a ideia que ele tem do sistema está errada. A solução é explicar melhor o que o botão faz."
+      "explain": "<b>Engano:</b> o plano já nasce errado, porque a ideia que ele tem do sistema está errada. A solução é explicar melhor o que o botão faz.",
+      "assunto": "golfos"
     },
     {
       "topic": "norman",
@@ -730,7 +790,8 @@
         "Esconder funções aumenta a curiosidade"
       ],
       "correct": 1,
-      "explain": "<b>Visibilidade:</b> se a pessoa não vê a opção, ela nem sabe que existe. O importante precisa estar à vista."
+      "explain": "<b>Visibilidade:</b> se a pessoa não vê a opção, ela nem sabe que existe. O importante precisa estar à vista.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -742,7 +803,8 @@
         "Um título grande no topo da tela"
       ],
       "correct": 1,
-      "explain": "<b>Significante claro:</b> contorno, sombra e rótulo dizem “aperte aqui”. Texto igual ao resto não chama para a ação."
+      "explain": "<b>Significante claro:</b> contorno, sombra e rótulo dizem “aperte aqui”. Texto igual ao resto não chama para a ação.",
+      "assunto": "afford"
     },
     {
       "topic": "norman",
@@ -754,7 +816,8 @@
         "Tocar um som apenas se der algum erro"
       ],
       "correct": 1,
-      "explain": "<b>Mostrar que está andando:</b> com uma barra ou um aviso de progresso, o usuário entende que o sistema está trabalhando e não clica de novo."
+      "explain": "<b>Mostrar que está andando:</b> com uma barra ou um aviso de progresso, o usuário entende que o sistema está trabalhando e não clica de novo.",
+      "assunto": "principios"
     },
     {
       "topic": "norman",
@@ -766,7 +829,8 @@
         "Um golfo de execução proposital"
       ],
       "correct": 1,
-      "explain": "<b>Restrição lógica:</b> o sistema impede uma escolha que não faz sentido naquele momento, e assim previne o erro."
+      "explain": "<b>Restrição lógica:</b> o sistema impede uma escolha que não faz sentido naquele momento, e assim previne o erro.",
+      "assunto": "principios"
     },
     {
       "topic": "visual",
@@ -778,7 +842,8 @@
         "HEX, o código do CSS"
       ],
       "correct": 1,
-      "explain": "<b>Tinta subtrai luz:</b> na impressão, as tintas ciano, magenta, amarelo e preto (CMYK) se misturam. RGB é para telas, que emitem luz."
+      "explain": "<b>Tinta subtrai luz:</b> na impressão, as tintas ciano, magenta, amarelo e preto (CMYK) se misturam. RGB é para telas, que emitem luz.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -790,7 +855,8 @@
         "Branco"
       ],
       "correct": 1,
-      "explain": "<b>HEX = RR GG BB:</b> FF é o máximo (255) no vermelho, e 00 no verde e no azul. Resultado: vermelho puro."
+      "explain": "<b>HEX = RR GG BB:</b> FF é o máximo (255) no vermelho, e 00 no verde e no azul. Resultado: vermelho puro.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -802,7 +868,8 @@
         "Amarelo"
       ],
       "correct": 1,
-      "explain": "<b>Luz no máximo:</b> RGB é aditivo. Somando vermelho, verde e azul no máximo, sai branco. rgb(0, 0, 0) é preto."
+      "explain": "<b>Luz no máximo:</b> RGB é aditivo. Somando vermelho, verde e azul no máximo, sai branco. rgb(0, 0, 0) é preto.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -814,7 +881,8 @@
         "Primárias"
       ],
       "correct": 1,
-      "explain": "<b>Opostas se destacam:</b> complementares dão muito contraste. São boas para chamar atenção, como um botão laranja num fundo azul."
+      "explain": "<b>Opostas se destacam:</b> complementares dão muito contraste. São boas para chamar atenção, como um botão laranja num fundo azul.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -826,7 +894,8 @@
         "Neutro"
       ],
       "correct": 1,
-      "explain": "<b>Vizinhas combinam:</b> o esquema análogo usa cores lado a lado no círculo e dá uma sensação calma e harmônica."
+      "explain": "<b>Vizinhas combinam:</b> o esquema análogo usa cores lado a lado no círculo e dá uma sensação calma e harmônica.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -838,7 +907,8 @@
         "O texto do corpo e os parágrafos"
       ],
       "correct": 1,
-      "explain": "<b>Pouca, mas chamativa:</b> 60% para a cor base, 30% para a secundária e 10% para o destaque, que guia o olho para a ação."
+      "explain": "<b>Pouca, mas chamativa:</b> 60% para a cor base, 30% para a secundária e 10% para o destaque, que guia o olho para a ação.",
+      "assunto": "cores"
     },
     {
       "topic": "visual",
@@ -850,7 +920,8 @@
         "Cinco famílias de fonte na mesma página"
       ],
       "correct": 1,
-      "explain": "<b>Respiro para o olho:</b> 16px é o tamanho base comum na web, e a entrelinha perto de 1,5 evita que as linhas se embolem."
+      "explain": "<b>Respiro para o olho:</b> 16px é o tamanho base comum na web, e a entrelinha perto de 1,5 evita que as linhas se embolem.",
+      "assunto": "guia"
     },
     {
       "topic": "visual",
@@ -862,7 +933,8 @@
         "Serifadas só funcionam em telas de celular"
       ],
       "correct": 1,
-      "explain": "<b>Serifa = pezinho:</b> Times tem serifa; Arial não tem. Na tela, a sem serifa costuma ser mais limpa para textos de interface."
+      "explain": "<b>Serifa = pezinho:</b> Times tem serifa; Arial não tem. Na tela, a sem serifa costuma ser mais limpa para textos de interface.",
+      "assunto": "guia"
     },
     {
       "topic": "visual",
@@ -874,7 +946,8 @@
         "Escolher uma cor diferente para cada palavra"
       ],
       "correct": 1,
-      "explain": "<b>O mais importante grita mais:</b> nome e preço maiores e em negrito; detalhes menores e mais claros. O olho segue essa ordem."
+      "explain": "<b>O mais importante grita mais:</b> nome e preço maiores e em negrito; detalhes menores e mais claros. O olho segue essa ordem.",
+      "assunto": "guia"
     },
     {
       "topic": "visual",
@@ -886,7 +959,8 @@
         "Para deixar o arquivo do projeto menor"
       ],
       "correct": 1,
-      "explain": "<b>Régua única:</b> com todos os espaços na mesma escala, a interface fica alinhada e previsível, e a equipe decide mais rápido."
+      "explain": "<b>Régua única:</b> com todos os espaços na mesma escala, a interface fica alinhada e previsível, e a equipe decide mais rápido.",
+      "assunto": "guia"
     },
     {
       "topic": "visual",
@@ -898,7 +972,8 @@
         "Os bugs encontrados nos testes da versão"
       ],
       "correct": 1,
-      "explain": "<b>O manual visual:</b> o Style Guide junta as regras de cor, fonte, componentes e espaço para todos desenharem igual."
+      "explain": "<b>O manual visual:</b> o Style Guide junta as regras de cor, fonte, componentes e espaço para todos desenharem igual.",
+      "assunto": "guia"
     },
     {
       "topic": "visual",
@@ -910,7 +985,8 @@
         "O Figma cria um arquivo novo separado"
       ],
       "correct": 1,
-      "explain": "<b>Molde e cópias:</b> o componente principal é o molde; as instâncias são as cópias. Mudou o molde, mudam todas as cópias."
+      "explain": "<b>Molde e cópias:</b> o componente principal é o molde; as instâncias são as cópias. Mudou o molde, mudam todas as cópias.",
+      "assunto": "figma"
     },
     {
       "topic": "visual",
@@ -922,7 +998,8 @@
         "Trocar o modelo de cor de RGB para CMYK"
       ],
       "correct": 1,
-      "explain": "<b>Um componente, vários estados:</b> o botão normal, com o mouse em cima e desativado ficam juntos, como versões do mesmo componente."
+      "explain": "<b>Um componente, vários estados:</b> o botão normal, com o mouse em cima e desativado ficam juntos, como versões do mesmo componente.",
+      "assunto": "figma"
     },
     {
       "topic": "visual",
@@ -934,7 +1011,8 @@
         "Grade de colunas"
       ],
       "correct": 1,
-      "explain": "<b>Auto layout:</b> o frame cresce e encolhe com o conteúdo, mantendo as margens. Parecido com o flexbox do CSS."
+      "explain": "<b>Auto layout:</b> o frame cresce e encolhe com o conteúdo, mantendo as margens. Parecido com o flexbox do CSS.",
+      "assunto": "figma"
     },
     {
       "topic": "visual",
@@ -946,7 +1024,8 @@
         "Protótipo, wireframe e mockup"
       ],
       "correct": 1,
-      "explain": "<b>Do rascunho ao clicável:</b> wireframe (estrutura), mockup (visual estático) e protótipo (interativo)."
+      "explain": "<b>Do rascunho ao clicável:</b> wireframe (estrutura), mockup (visual estático) e protótipo (interativo).",
+      "assunto": "proto"
     },
     {
       "topic": "visual",
@@ -958,7 +1037,8 @@
         "As animações entre todas as telas"
       ],
       "correct": 1,
-      "explain": "<b>Esqueleto da tela:</b> caixas e linhas mostram onde vai cada coisa, sem cor nem foto. É rápido de fazer e de mudar."
+      "explain": "<b>Esqueleto da tela:</b> caixas e linhas mostram onde vai cada coisa, sem cor nem foto. É rápido de fazer e de mudar.",
+      "assunto": "proto"
     },
     {
       "topic": "visual",
@@ -970,7 +1050,8 @@
         "Para evitar que usuários vejam o design"
       ],
       "correct": 1,
-      "explain": "<b>Fase de detalhe:</b> no começo, o papel (baixa fidelidade) é melhor. A alta fidelidade serve para testar o visual e as interações quase finais."
+      "explain": "<b>Fase de detalhe:</b> no começo, o papel (baixa fidelidade) é melhor. A alta fidelidade serve para testar o visual e as interações quase finais.",
+      "assunto": "proto"
     },
     {
       "topic": "visual",
@@ -982,7 +1063,8 @@
         "É a cor padrão de todos os botões do HTML"
       ],
       "correct": 1,
-      "explain": "<b>Cor com significado:</b> vermelho avisa “cuidado, ação séria”. Mas nunca use só a cor: o texto também precisa deixar claro."
+      "explain": "<b>Cor com significado:</b> vermelho avisa “cuidado, ação séria”. Mas nunca use só a cor: o texto também precisa deixar claro.",
+      "assunto": "cores"
     },
     {
       "topic": "avaliacao",
@@ -994,7 +1076,8 @@
         "Teste A/B em produção"
       ],
       "correct": 1,
-      "explain": "<b>Inspeção por especialistas:</b> na avaliação heurística, avaliadores percorrem a interface com a lista de heurísticas na mão e anotam os problemas."
+      "explain": "<b>Inspeção por especialistas:</b> na avaliação heurística, avaliadores percorrem a interface com a lista de heurísticas na mão e anotam os problemas.",
+      "assunto": "heur"
     },
     {
       "topic": "avaliacao",
@@ -1006,7 +1089,8 @@
         "Só o designer que criou a interface"
       ],
       "correct": 1,
-      "explain": "<b>Vários olhos, separados:</b> cada avaliador acha problemas diferentes. Eles avaliam sozinhos e só depois juntam as listas."
+      "explain": "<b>Vários olhos, separados:</b> cada avaliador acha problemas diferentes. Eles avaliam sozinhos e só depois juntam as listas.",
+      "assunto": "heur"
     },
     {
       "topic": "avaliacao",
@@ -1018,7 +1102,8 @@
         "Problema pequeno, de baixa prioridade"
       ],
       "correct": 1,
-      "explain": "<b>Escala de 0 a 4:</b> 0 = não é problema; 1 = cosmético; 2 = pequeno; 3 = grande; 4 = catástrofe, que impede o lançamento."
+      "explain": "<b>Escala de 0 a 4:</b> 0 = não é problema; 1 = cosmético; 2 = pequeno; 3 = grande; 4 = catástrofe, que impede o lançamento.",
+      "assunto": "heur"
     },
     {
       "topic": "avaliacao",
@@ -1030,7 +1115,8 @@
         "Na quantidade de usuários ao mesmo tempo"
       ],
       "correct": 1,
-      "explain": "<b>Aprender usando:</b> o avaliador se coloca no lugar de um usuário novo e percorre a tarefa passo a passo, conferindo se ele conseguiria aprender sozinho."
+      "explain": "<b>Aprender usando:</b> o avaliador se coloca no lugar de um usuário novo e percorre a tarefa passo a passo, conferindo se ele conseguiria aprender sozinho.",
+      "assunto": "heur"
     },
     {
       "topic": "avaliacao",
@@ -1042,7 +1128,8 @@
         "O código da tela segue o padrão de nomes da equipe?"
       ],
       "correct": 1,
-      "explain": "<b>Perguntas a cada passo:</b> o usuário vai tentar fazer a coisa certa? Vai ver que a ação existe? Vai ligar a ação ao objetivo? Vai perceber que avançou?"
+      "explain": "<b>Perguntas a cada passo:</b> o usuário vai tentar fazer a coisa certa? Vai ver que a ação existe? Vai ligar a ação ao objetivo? Vai perceber que avançou?",
+      "assunto": "heur"
     },
     {
       "topic": "avaliacao",
@@ -1054,7 +1141,8 @@
         "Ninguém usa o sistema; só se lê o código"
       ],
       "correct": 1,
-      "explain": "<b>Gente de verdade:</b> no teste de usabilidade, quem vai usar tenta fazer tarefas reais enquanto a equipe observa onde a pessoa trava."
+      "explain": "<b>Gente de verdade:</b> no teste de usabilidade, quem vai usar tenta fazer tarefas reais enquanto a equipe observa onde a pessoa trava.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1066,7 +1154,8 @@
         "Explique o código da tela ao avaliador"
       ],
       "correct": 1,
-      "explain": "<b>Narrar o pensamento:</b> “estou procurando o botão de pagar... achei que fosse aqui”. Isso mostra onde a interface confunde."
+      "explain": "<b>Narrar o pensamento:</b> “estou procurando o botão de pagar... achei que fosse aqui”. Isso mostra onde a interface confunde.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1078,7 +1167,8 @@
         "Corrigir a tela na hora, na frente dele"
       ],
       "correct": 1,
-      "explain": "<b>Não ajudar:</b> “onde você acha que seria?”. Se o facilitador mostra, o teste deixa de revelar o problema."
+      "explain": "<b>Não ajudar:</b> “onde você acha que seria?”. Se o facilitador mostra, o teste deixa de revelar o problema.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1090,7 +1180,8 @@
         "Só 1 usuário basta"
       ],
       "correct": 1,
-      "explain": "<b>Poucos e várias vezes:</b> cerca de 5 usuários acham a maior parte dos problemas. Melhor fazer várias rodadas pequenas do que uma enorme."
+      "explain": "<b>Poucos e várias vezes:</b> cerca de 5 usuários acham a maior parte dos problemas. Melhor fazer várias rodadas pequenas do que uma enorme.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1102,7 +1193,8 @@
         "Número de commits no Git"
       ],
       "correct": 1,
-      "explain": "<b>Medidas de uso:</b> taxa de sucesso, tempo na tarefa, número de erros e satisfação. Tudo sobre a pessoa usando, não sobre o código."
+      "explain": "<b>Medidas de uso:</b> taxa de sucesso, tempo na tarefa, número de erros e satisfação. Tudo sobre a pessoa usando, não sobre o código.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1114,7 +1206,8 @@
         "Quantos usuários acessam por dia, de 0 a 100"
       ],
       "correct": 1,
-      "explain": "<b>Opinião em número:</b> são 10 afirmações respondidas de 1 a 5, que viram uma nota de 0 a 100. Por volta de 68 é a média."
+      "explain": "<b>Opinião em número:</b> são 10 afirmações respondidas de 1 a 5, que viram uma nota de 0 a 100. Por volta de 68 é a média.",
+      "assunto": "teste"
     },
     {
       "topic": "avaliacao",
@@ -1126,7 +1219,8 @@
         "Simples, curto, moderno e minimalista"
       ],
       "correct": 1,
-      "explain": "<b>POUR:</b> Perceptível (dá para perceber), Operável (dá para usar), Compreensível (dá para entender) e Robusto (funciona em tecnologias assistivas)."
+      "explain": "<b>POUR:</b> Perceptível (dá para perceber), Operável (dá para usar), Compreensível (dá para entender) e Robusto (funciona em tecnologias assistivas).",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1138,7 +1232,8 @@
         "1,5:1"
       ],
       "correct": 1,
-      "explain": "<b>4,5 para 1:</b> o texto precisa ser 4,5 vezes mais “forte” que o fundo. No nível AAA, o mínimo sobe para 7:1."
+      "explain": "<b>4,5 para 1:</b> o texto precisa ser 4,5 vezes mais “forte” que o fundo. No nível AAA, o mínimo sobe para 7:1.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1150,7 +1245,8 @@
         "1:1"
       ],
       "correct": 1,
-      "explain": "<b>Letra grande pede menos:</b> texto grande já é mais fácil de ler, então o mínimo no AA cai para 3:1."
+      "explain": "<b>Letra grande pede menos:</b> texto grande já é mais fácil de ler, então o mínimo no AA cai para 3:1.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1162,7 +1258,8 @@
         "Guardar os direitos autorais de quem fez a foto"
       ],
       "correct": 1,
-      "explain": "<b>Imagem em palavras:</b> o leitor de tela lê o alt para quem não enxerga. Imagem só decorativa leva alt vazio."
+      "explain": "<b>Imagem em palavras:</b> o leitor de tela lê o alt para quem não enxerga. Imagem só decorativa leva alt vazio.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1174,7 +1271,8 @@
         "Leitores de tela leem rápido demais"
       ],
       "correct": 1,
-      "explain": "<b>Nunca só a cor:</b> acrescente um ícone e um texto (“Informe o CPF”). Quem não distingue cores também precisa entender."
+      "explain": "<b>Nunca só a cor:</b> acrescente um ícone e um texto (“Informe o CPF”). Quem não distingue cores também precisa entender.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1186,7 +1284,8 @@
         "A WCAG proíbe o uso do mouse no site"
       ],
       "correct": 1,
-      "explain": "<b>Operável:</b> pessoas com deficiência motora ou que usam leitor de tela navegam pelo teclado. Se só funciona com mouse, elas ficam de fora."
+      "explain": "<b>Operável:</b> pessoas com deficiência motora ou que usam leitor de tela navegam pelo teclado. Se só funciona com mouse, elas ficam de fora.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1198,7 +1297,8 @@
         "Quem usa celular com a tela bem grande"
       ],
       "correct": 1,
-      "explain": "<b>Foco visível:</b> o contorno mostra onde o Tab está. Sem ele, quem usa teclado fica “no escuro”. Dá para estilizar, mas não para remover."
+      "explain": "<b>Foco visível:</b> o contorno mostra onde o Tab está. Sem ele, quem usa teclado fica “no escuro”. Dá para estilizar, mas não para remover.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1210,7 +1310,8 @@
         "Bronze, prata e ouro"
       ],
       "correct": 1,
-      "explain": "<b>Mais letras, mais exigente:</b> A é o mínimo, AA é o mais pedido em leis e contratos, e AAA é o máximo."
+      "explain": "<b>Mais letras, mais exigente:</b> A é o mínimo, AA é o mais pedido em leis e contratos, e AAA é o máximo.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1222,7 +1323,8 @@
         "Código de Defesa do Consumidor (8.078/1990)"
       ],
       "correct": 1,
-      "explain": "<b>LBI:</b> a Lei Brasileira de Inclusão obriga sites de empresas e do governo a serem acessíveis. O governo também segue o eMAG."
+      "explain": "<b>LBI:</b> a Lei Brasileira de Inclusão obriga sites de empresas e do governo a serem acessíveis. O governo também segue o eMAG.",
+      "assunto": "acess"
     },
     {
       "topic": "avaliacao",
@@ -1234,7 +1336,8 @@
         "Um botão para baixar o vídeo em MP3"
       ],
       "correct": 1,
-      "explain": "<b>Perceptível:</b> o som precisa de alternativa visual. Legendas atendem a todos; a janela de Libras atende quem tem a Libras como primeira língua."
+      "explain": "<b>Perceptível:</b> o som precisa de alternativa visual. Legendas atendem a todos; a janela de Libras atende quem tem a Libras como primeira língua.",
+      "assunto": "acess"
     }
   ],
   "historias": [

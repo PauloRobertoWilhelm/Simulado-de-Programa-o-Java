@@ -17,7 +17,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 
 - **Revisão:** resumo da prova por assunto, com pegadinhas, perguntas rápidas e treino. Só nas matérias com o campo `revisao`.
 - **Livro:** capítulos curtos, explicados com comparações do dia a dia. O botão "Ouvir o capítulo" lê as páginas em voz alta e vira sozinho. Os capítulos lidos ficam marcados.
-- **Perguntas:** simulado com temas separados por bimestre, rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
+- **Perguntas:** simulado com temas separados por bimestre e por conteúdo (como TTL ou substring), rodadas de 5, 10, 15, 20, 30, 50, 100 ou todas, cronômetro, explicação de cada resposta, nota e gráfico. Uma rodada nunca repete questão, e a letra certa é sorteada sem se repetir em seguida.
   - **Rodízio:** cada rodada traz primeiro as perguntas que você viu menos vezes.
   - **Repetir mesma prova:** as mesmas perguntas, em outra ordem e com as letras certas sorteadas de novo.
   - **🔁 Só as que errei:** treina só as perguntas erradas ou puladas; cada uma sai da lista quando você acerta.
@@ -72,6 +72,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 - `css/styles.css`: visual geral
 - `css/materias.css`: visual das abas, histórias e jogos
 - `css/moderno.css`: visual atual (fundo neutro, uma cor por matéria, fonte Geist); apagar a linha dele no index.html volta ao visual antigo
+- `css/ouro.css`: visual "tecnologia em ouro"; apagar a linha dele no index.html volta ao visual anterior
 - `css/estudo.css`: acabamento (painel de progresso, temas, código colorido, resultado); apagar a linha dele no index.html volta ao visual anterior
 - `js/visual.js`: código Java colorido e painel de progresso
 - `sw.js`: service worker, que permite usar o app sem internet
@@ -80,7 +81,7 @@ Sem o Live Server, rode `python -m http.server 8080` na pasta do projeto e abra 
 
 ## Como adicionar conteúdo
 
-**Nova pergunta:** adicione um item em `questoes`, no arquivo da matéria. O campo `topic` precisa ser o `id` de um tema da matéria em `materias/index.json`. O campo `code` é opcional. Use 4 opções. O campo `correct` é a posição da resposta certa, começando em 0.
+**Nova pergunta:** adicione um item em `questoes`, no arquivo da matéria. O campo `topic` precisa ser o `id` de um tema da matéria em `materias/index.json`. Se o tema tiver `assuntos`, o campo `assunto` precisa ser o `id` de um deles. O campo `code` é opcional. Use 4 opções. O campo `correct` é a posição da resposta certa, começando em 0.
 
 ```json
 {

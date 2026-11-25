@@ -1,0 +1,240 @@
+/*
+  Arquivo: css/ouro.css
+  Papel no sistema: visual "tecnologia em ouro". É o último CSS carregado e vale por cima dos outros.
+  Ideia: painel de equipamento de alta tecnologia em preto quente, com metal dourado só onde importa
+  (título, seleção, botão principal, números), cantos marcados como uma mira e malha fina no fundo.
+  Para voltar ao visual anterior: apague a linha de ouro.css no index.html.
+*/
+
+/* ===== CORES, FONTES E FORMAS ===== */
+/* !important é necessário porque o JavaScript escreve a cor de cada matéria direto na página. */
+:root {
+  /* Ouro principal: seleção, números, bordas ativas. */
+  --primary: #e8b94a !important;
+  --primary-2: #e8b94a !important;
+  /* Ouro claro: brilho do metal. */
+  --teal: #ffe7a3 !important;
+  /* Ouro escuro: sombra do metal. */
+  --ouro-escuro: #a87516;
+  /* Metal: do claro ao escuro, como uma barra com a luz vindo de cima. */
+  --metal: linear-gradient(180deg, #fff0bf 0%, #f0c75e 38%, #d9a432 62%, #b5801c 100%);
+  /* Fundo: preto quente, nunca preto puro. */
+  --bg: #0b0a08;
+  /* Painéis, botões e botões com o mouse em cima. */
+  --surface: #14120d;
+  --surface-2: #1c1912;
+  --surface-3: #282317;
+  /* Linhas finas douradas, quase apagadas. */
+  --border: rgba(232, 185, 74, 0.16);
+  --border-soft: rgba(232, 185, 74, 0.32);
+  /* Textos: branco quente, areia e areia apagada. */
+  --text: #f8f3e6;
+  --muted: #cdc3aa;
+  --muted-2: #a2977c;
+  /* Cantos quase retos: cara de equipamento. */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  /* Letra de título com recortes retos, para combinar com a forma dos painéis. */
+  --font-display: "Chakra Petch", "Geist", "Segoe UI", sans-serif;
+  /* Sombra quente. */
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+  /* Desenho dos quatro cantos: oito risquinhos dourados, dois por canto. */
+  --cantos:
+    linear-gradient(var(--primary), var(--primary)) 0 0 / 16px 2px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 0 0 / 2px 16px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 100% 0 / 16px 2px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 100% 0 / 2px 16px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 0 100% / 16px 2px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 0 100% / 2px 16px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 100% 100% / 16px 2px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) 100% 100% / 2px 16px no-repeat;
+}
+
+/* ===== FUNDO ===== */
+body {
+  background-color: var(--bg);
+  /* Luz dourada no alto da página. */
+  background-image: radial-gradient(1000px 460px at 50% -180px, rgba(232, 185, 74, 0.2), transparent 70%);
+}
+/* Malha fina, como papel técnico, que some em direção ao rodapé. Substitui o granulado. */
+body::after {
+  background:
+    linear-gradient(rgba(232, 185, 74, 0.07) 1px, transparent 1px) 0 0 / 100% 44px,
+    linear-gradient(90deg, rgba(232, 185, 74, 0.07) 1px, transparent 1px) 0 0 / 44px 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+  z-index: 0;
+}
+/* O app fica acima da malha. */
+.app { position: relative; z-index: 1; }
+/* Texto selecionado com o mouse. */
+::selection { background: var(--primary); color: #1a1203; }
+
+/* ===== ABAS DAS MATÉRIAS ===== */
+.subject-tabs { background: var(--cantos), var(--surface); border-color: var(--border); border-radius: 0; }
+.subject-tab { font-family: var(--font-display); border-radius: var(--r-sm); color: var(--muted); }
+.subject-tab:hover { background: var(--surface-2); }
+/* Aba aberta: fundo em ouro apagado e linha de ouro embaixo. */
+.subject-tab[aria-selected="true"] { color: var(--teal); background: linear-gradient(180deg, rgba(232, 185, 74, 0.04), rgba(232, 185, 74, 0.2)); box-shadow: inset 0 -2px 0 var(--primary); }
+
+/* ===== CABEÇALHO ===== */
+/* Nome do professor em letra de terminal. */
+.badge-top { font-family: var(--font-mono); font-size: 0.78rem; color: var(--primary); }
+/* Pontinho com um brilho que respira devagar. */
+.badge-top .pulse { border-radius: 1px; animation: ouro-pulso 2.4s ease-in-out infinite; }
+@keyframes ouro-pulso { 50% { opacity: 0.35; } }
+/* "Simulado de". */
+.intro h1 { font-family: var(--font-display); font-weight: 500; color: var(--muted-2); }
+/* Nome da matéria em metal dourado. */
+.intro h1 .grad {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+  background: var(--metal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Espaço para a perna do "ç" e do "g" não ser cortada. */
+  padding-bottom: 0.12em;
+}
+
+/* ===== PAINÉIS ===== */
+/* Todos os painéis grandes ganham os cantos marcados. */
+.picker, .q-card, .result-shell, .activity-panel, .barra-iniciar, .progress-panel, .review-panel, .chart-container { background: var(--cantos), var(--surface); border: 1px solid var(--border); border-radius: 0; }
+/* Painel de estudo: três mostradores. */
+.painel-estudo { border-radius: 0; border-color: var(--border); background: var(--border); }
+.painel-item { position: relative; }
+/* Nome do mostrador em letra de terminal. */
+.painel-item span { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted-2); }
+/* Número do mostrador em ouro. */
+.painel-item strong { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; color: var(--primary); }
+/* Barras em segmentos, como medidor de aparelho. A máscara recorta os vãos. */
+.painel-barra, .bar { height: 8px; border-radius: 0; background: var(--surface-3); -webkit-mask: repeating-linear-gradient(90deg, #000 0 9px, transparent 9px 12px); mask: repeating-linear-gradient(90deg, #000 0 9px, transparent 9px 12px); }
+.painel-barra i, .bar > i { border-radius: 0; background: linear-gradient(90deg, var(--ouro-escuro), var(--primary) 60%, var(--teal)); }
+
+/* Caixa do que estudar, voz e os três chips. */
+.focus-box, .voice-toggle, .chip { border-radius: var(--r-sm); border-color: var(--border); background: var(--surface); }
+.focus-box { border-left: 3px solid var(--primary); }
+.focus-box summary { font-family: var(--font-display); font-weight: 600; }
+
+/* ===== REVISÃO, LIVRO, PERGUNTAS... ===== */
+.mode-tabs { background: var(--surface); border-radius: 0; border-color: var(--border); }
+.mode-tab { font-family: var(--font-display); border-radius: var(--r-sm); font-size: 1rem; }
+/* Parte aberta: placa de ouro com letra escura. */
+.mode-tab[aria-selected="true"] { background: var(--metal); color: #1a1203; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5), 0 0 22px rgba(232, 185, 74, 0.22); }
+.mode-count { font-family: var(--font-mono); font-size: 0.78rem; }
+.mode-tab[aria-selected="true"] .mode-count { color: #4a3508; }
+
+/* ===== TEMAS, CONTEÚDOS E QUANTIDADES ===== */
+.picker h3 { font-family: var(--font-display); font-size: 1.08rem; }
+.topic-group { font-family: var(--font-mono); font-size: 0.78rem; color: var(--primary); }
+.tpick, .cpick, .len { border-radius: var(--r-sm); background: var(--surface-2); border-color: var(--border); }
+.tpick:hover, .cpick:hover, .len:hover { border-color: var(--border-soft); background: var(--surface-3); }
+/* Escolhido: linha de ouro na lateral e fundo em ouro apagado. */
+.tpick.on, .cpick.on, .len.on { background: linear-gradient(90deg, rgba(232, 185, 74, 0.26), rgba(232, 185, 74, 0.07)); border-color: var(--primary); box-shadow: inset 3px 0 0 var(--primary); color: var(--text); }
+.tpick-n { font-family: var(--font-mono); }
+.len .n { font-family: var(--font-display); }
+.len.on .n { color: var(--teal); }
+
+/* ===== BOTÕES ===== */
+/* Botão principal: barra de ouro com dois cantos cortados. */
+.btn {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 1.04rem;
+  background: var(--metal);
+  color: #1a1203;
+  border: none;
+  border-radius: 0;
+  /* Corta o canto de cima à esquerda e o de baixo à direita. */
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  box-shadow: none;
+}
+/* Reflexo que atravessa o metal quando o mouse passa. */
+.btn::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.6) 50%, transparent 65%); transform: translateX(-110%); pointer-events: none; }
+.btn:hover::after { transform: translateX(110%); transition: transform 0.7s var(--ease); }
+.btn:hover { box-shadow: none; }
+/* Botão ainda desligado: metal apagado. */
+.btn:disabled { background: var(--surface-3); color: var(--muted-2); }
+.btn:disabled::after { display: none; }
+/* Botões secundários: só a moldura dourada. */
+.btn-ghost, #btn-back, #btn-home, #btn-quit { background: var(--surface-2); color: var(--teal); border: 1px solid var(--border-soft); clip-path: none; border-radius: var(--r-sm); }
+.btn-ghost:hover, #btn-back:hover, #btn-home:hover, #btn-quit:hover { background: var(--surface-3); border-color: var(--primary); }
+.btn-ghost::after { display: none; }
+#btn-quit { color: var(--error); }
+.mini-btn { border-radius: var(--r-sm); color: var(--muted); }
+
+/* ===== PERGUNTA ===== */
+.progress-meta .count, .timer { font-family: var(--font-mono); }
+.timer { border-radius: var(--r-sm); color: var(--primary); border-color: var(--border-soft); }
+.q-statement { font-size: 1.18rem; }
+/* Alternativa: borda fina; com o mouse, acende a lateral. */
+.option, .activity-option { border-radius: var(--r-sm); background: var(--surface-2); border-color: var(--border); }
+.option:hover, .activity-option:hover:not(:disabled) { background: var(--surface-3); border-color: var(--border-soft); box-shadow: inset 3px 0 0 var(--primary); }
+/* Letra da alternativa: quadrado com contorno dourado. */
+.option .key { background: transparent; color: var(--primary); border: 1px solid var(--border-soft); border-radius: 2px; }
+.option.correct, .option.correct:hover { box-shadow: inset 3px 0 0 var(--success); background: var(--success-bg); border-color: color-mix(in srgb, var(--success) 60%, transparent); }
+.option.wrong, .option.wrong:hover { box-shadow: inset 3px 0 0 var(--error); background: var(--error-bg); border-color: color-mix(in srgb, var(--error) 60%, transparent); }
+.feedback { border-radius: var(--r-sm); }
+/* Explicação: texto claro e quente. */
+.feedback .why { color: var(--muted); }
+.feedback .why b { color: var(--text); }
+/* Código em tons que conversam com o ouro. */
+pre.code { background: #0d0b07; border-radius: 0; border-color: var(--border); border-left: 3px solid var(--primary); color: #e9e1cd; }
+.cod-pal { color: #f3c65a; }
+.cod-txt { color: #a5d28f; }
+.cod-num { color: #ee9f63; }
+.cod-com { color: #968b70; }
+.cod-cla { color: #ffe3a1; }
+.cod-met { color: #8fc7e6; }
+
+/* ===== RESULTADO ===== */
+.score-ring { box-shadow: 0 0 46px rgba(232, 185, 74, 0.18); background: conic-gradient(var(--teal), var(--primary) calc(var(--pct, 0) * 1turn), var(--surface-3) 0); }
+.score-ring .pct, .result-stat .value, .metric-pill strong { font-family: var(--font-display); color: var(--primary); }
+.result-stat, .metric-pill, .performance-message, .review-card.bad, .badge-status { border-radius: var(--r-sm); }
+
+/* ===== LIVRO, HISTÓRIAS, JOGOS, REVISÃO ===== */
+.activity-card { border-radius: var(--r-sm); border-color: var(--border); background: var(--surface); }
+.activity-card strong, .activity-title, .rev-secao > summary { font-family: var(--font-display); }
+.activity-card:hover { border-color: var(--primary); background: var(--surface-2); }
+.activity-title { color: var(--primary); }
+.rev-secao, .rev-pegadinhas, .rev-pergunta, .rev-tabela { border-radius: var(--r-sm); }
+.rev-secao[open] { border-color: var(--primary); }
+.rev-pegadinhas { border-left: 3px solid var(--primary); }
+.rev-tabela th { font-family: var(--font-mono); font-size: 0.82rem; color: var(--primary); }
+
+/* ===== ESCOLHA DO CONTEÚDO ===== */
+/* Botões menores que os de tema, porque são muitos. */
+#conteudo-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Nome do tema antes dos conteúdos dele: ocupa a linha inteira. */
+#conteudo-grid .topic-group { flex: 1 0 100%; margin: 8px 0 0; }
+.cpick { position: relative; overflow: hidden; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--border); color: var(--text); font: inherit; font-size: 0.93rem; text-align: left; cursor: pointer; transition: background 0.18s var(--ease), border-color 0.18s var(--ease); }
+.cpick:active { transform: scale(0.98); }
+/* Barrinha do que já foi visto. */
+.cpick::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--primary); transform-origin: left; transform: scaleX(var(--pct, 0)); }
+/* Explicação curta embaixo do título. */
+.picker-dica { margin: -4px 0 12px; color: var(--muted-2); font-size: 0.9rem; text-align: left; }
+
+/* ===== FOCO DO TECLADO E CELULAR ===== */
+.cpick:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (max-width: 640px) {
+  /* No celular a malha fica mais fechada e as letras de aba, menores. */
+  body::after { background-size: 100% 32px, 32px 100%; }
+  .mode-tab { font-size: 0.92rem; padding: 10px 4px; }
+  .cpick { flex: 1 1 auto; justify-content: space-between; }
+}
+/* Quem pede menos movimento não vê o brilho nem o reflexo. */
+@media (prefers-reduced-motion: reduce) {
+  .badge-top .pulse { animation: none; }
+  .btn:hover::after { transform: translateX(-110%); transition: none; }
+}
+/* Textos da revisão de erros e das explicações: sem o tom azulado antigo. */
+.review-answer, .review-question, .story-text, .rev-texto { color: var(--text); }
+.review-answer { color: var(--muted); }
+.review-answer strong { color: var(--text); }
+@media (max-width: 420px) {
+  /* Celular estreito: o número desce um pouco de tamanho para "Perguntas 627" caber na placa dourada. */
+  .mode-tab { font-size: 0.84rem; }
+  .mode-count { margin-left: 2px; font-size: 0.7rem; }
+}

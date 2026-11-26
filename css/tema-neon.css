@@ -1,0 +1,81 @@
+/*
+  Arquivo: css/tema-neon.css
+  Papel no sistema: visual "Neon", homenagem ao primeiro visual do app (rosa e ciano sobre roxo escuro).
+  Só fica ligado quando a pessoa escolhe Neon em "Visual, pug e animações" (js/temas.js).
+  Usa a forma do visual Grafite (css/moderno.css) e troca as cores, com brilho de letreiro.
+*/
+
+:root {
+  /* Rosa neon: seleção, botões e bordas acesas. !important vence a cor da matéria. */
+  --primary: #ff4fd8 !important;
+  --primary-2: #a98bff !important;
+  /* Ciano neon: números e detalhes claros. */
+  --teal: #57f4ff !important;
+  /* Fundo roxo quase preto. */
+  --bg: #0b0716;
+  /* Cartões, botões e botões com o mouse em cima: roxos, do mais escuro ao mais claro. */
+  --surface: #150e26;
+  --surface-2: #1d1433;
+  --surface-3: #2a1d49;
+  /* Bordas finas em rosa e, no hover, em ciano. */
+  --border: rgba(255, 79, 216, 0.18);
+  --border-soft: rgba(87, 244, 255, 0.32);
+  /* Textos: branco lilás, lilás e lilás apagado. */
+  --text: #f7f1ff;
+  --muted: #cdbfef;
+  --muted-2: #9d8fc7;
+  /* Acerto e erro mais vivos, combinando com o neon. */
+  --success: #4ef0b0;
+  --success-bg: rgba(78, 240, 176, 0.12);
+  --error: #ff668c;
+  --error-bg: rgba(255, 102, 140, 0.13);
+  /* Brilho de letreiro, usado nos botões e na aba escolhida. */
+  --neon: 0 0 10px rgba(255, 79, 216, 0.55), 0 0 26px rgba(255, 79, 216, 0.25);
+}
+
+/* ===== FUNDO ===== */
+/* Duas luzes: rosa no alto à esquerda e ciano embaixo à direita. Ficam paradas ao rolar. */
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 560px at 8% -12%, rgba(255, 79, 216, 0.24), transparent 62%),
+    radial-gradient(900px 640px at 108% 108%, rgba(87, 244, 255, 0.16), transparent 60%);
+  background-attachment: fixed;
+}
+/* Malha roxa bem fraca, como uma pista de corrida dos anos 80, sumindo para baixo. */
+body::after {
+  background:
+    linear-gradient(rgba(169, 139, 255, 0.08) 1px, transparent 1px) 0 0 / 100% 40px,
+    linear-gradient(90deg, rgba(169, 139, 255, 0.08) 1px, transparent 1px) 0 0 / 40px 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 75%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 75%);
+}
+
+/* ===== TÍTULO ===== */
+/* Nome da matéria: degradê rosa, lilás e ciano, com brilho. */
+.intro h1 .grad {
+  background: linear-gradient(90deg, #ff4fd8, #a98bff 50%, #57f4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 14px rgba(255, 79, 216, 0.35));
+}
+
+/* ===== PAINÉIS ===== */
+/* Cartões com borda rosa bem fraca e um brilho interno. */
+.picker, .q-card, .result-shell, .activity-panel, .progress-panel, .review-panel, .chart-container, .painel-item { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 14px 36px rgba(5, 2, 14, 0.55); }
+
+/* ===== BOTÕES ===== */
+/* Botão principal: rosa sólido com brilho de letreiro e texto escuro (contraste alto). */
+.btn { background: linear-gradient(90deg, #ff4fd8, #c56bff); color: #14061f; box-shadow: var(--neon); }
+.btn:hover { box-shadow: 0 0 14px rgba(255, 79, 216, 0.75), 0 0 34px rgba(87, 244, 255, 0.25); }
+/* Escolhidos (tema, conteúdo, quantidade, nível): borda ciano acesa. */
+.tpick.on, .cpick.on, .len.on, .npick.on { border-color: var(--teal); box-shadow: 0 0 12px rgba(87, 244, 255, 0.28); }
+/* Aba da matéria aberta: brilho rosa. */
+.subject-tab[aria-selected="true"] { box-shadow: inset 0 0 0 1px var(--accent-line), var(--neon); }
+/* Aba da parte escolhida (Perguntas, Livro...): sublinhado ciano. */
+.mode-tab[aria-selected="true"] { box-shadow: inset 0 -2px 0 var(--teal); }
+/* Letra da alternativa: rosa sobre roxo. */
+.option .key { background: rgba(255, 79, 216, 0.16); color: #ffd3f5; }
+/* Texto selecionado com o mouse. */
+::selection { background: #ff4fd8; color: #14061f; }

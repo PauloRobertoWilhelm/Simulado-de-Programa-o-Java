@@ -10,7 +10,8 @@
         "A senha que cada usuário usa no sistema"
       ],
       "correct": 2,
-      "explain": "<b>Porteiro entre redes:</b> aplica regras objetivas de IP, porta e protocolo."
+      "explain": "<b>Porteiro entre redes:</b> aplica regras objetivas de IP, porta e protocolo.",
+      "nivel": 2
     },
     {
       "topic": "firewall",
@@ -22,7 +23,8 @@
         "Qual usuário está digitando"
       ],
       "correct": 2,
-      "explain": "<b>Se a conversa pode existir,</b> e não o que é falado nela."
+      "explain": "<b>Se a conversa pode existir,</b> e não o que é falado nela.",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -34,7 +36,8 @@
         "No banco de dados"
       ],
       "correct": 0,
-      "explain": "<b>Na borda,</b> mas também pode separar partes internas da rede."
+      "explain": "<b>Na borda,</b> mas também pode separar partes internas da rede.",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -46,7 +49,8 @@
         "Liberar somente a porta do site"
       ],
       "correct": 1,
-      "explain": "<b>Nega por padrão:</b> o que nenhuma regra liberou é descartado."
+      "explain": "<b>Nega por padrão:</b> o que nenhuma regra liberou é descartado.",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -58,7 +62,8 @@
         "O texto completo de cada requisição web"
       ],
       "correct": 2,
-      "explain": "<b>IP, porta e protocolo,</b> pacote por pacote, sem memória."
+      "explain": "<b>IP, porta e protocolo,</b> pacote por pacote, sem memória.",
+      "nivel": 2
     },
     {
       "topic": "firewall",
@@ -70,7 +75,8 @@
         "Não lê o IP de origem"
       ],
       "correct": 0,
-      "explain": "<b>Sem memória:</b> a resposta de uma conexão legítima também precisaria de regra própria."
+      "explain": "<b>Sem memória:</b> a resposta de uma conexão legítima também precisaria de regra própria.",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -82,7 +88,8 @@
         "Um antivírus para cada computador"
       ],
       "correct": 1,
-      "explain": "<b>Ele lembra da conversa:</b> a resposta de quem começou por dentro entra sem regra extra."
+      "explain": "<b>Ele lembra da conversa:</b> a resposta de quem começou por dentro entra sem regra extra.",
+      "nivel": 3
     },
     {
       "topic": "firewall",
@@ -94,7 +101,8 @@
         "Entrega o pacote"
       ],
       "correct": 2,
-      "explain": "<b>Sem registro, sem entrada.</b>"
+      "explain": "<b>Sem registro, sem entrada.</b>",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -106,7 +114,8 @@
         "Stateful, libera a resposta sozinho"
       ],
       "correct": 3,
-      "explain": "<b>Stateful.</b> Já a NACL da AWS é sem estado: precisa liberar ida e volta."
+      "explain": "<b>Stateful.</b> Já a NACL da AWS é sem estado: precisa liberar ida e volta.",
+      "nivel": 2
     },
     {
       "topic": "firewall",
@@ -118,7 +127,8 @@
         "Termina a conexão do cliente e abre outra"
       ],
       "correct": 3,
-      "explain": "<b>São duas conexões:</b> o servidor só vê o IP do proxy."
+      "explain": "<b>São duas conexões:</b> o servidor só vê o IP do proxy.",
+      "nivel": 2
     },
     {
       "topic": "firewall",
@@ -130,7 +140,8 @@
         "Saída protege a aplicação; reverso, o usuário"
       ],
       "correct": 0,
-      "explain": "<b>Sentidos opostos.</b> O WAF é um proxy reverso."
+      "explain": "<b>Sentidos opostos.</b> O WAF é um proxy reverso.",
+      "nivel": 3
     },
     {
       "topic": "firewall",
@@ -142,7 +153,8 @@
         "Tradução de nomes em endereços"
       ],
       "correct": 0,
-      "explain": "<b>Próxima geração:</b> a mesma porta 443 pode ser liberada para o Teams e negada para o BitTorrent."
+      "explain": "<b>Próxima geração:</b> a mesma porta 443 pode ser liberada para o Teams e negada para o BitTorrent.",
+      "nivel": 2
     },
     {
       "topic": "firewall",
@@ -154,7 +166,8 @@
         "O filtro de pacotes"
       ],
       "correct": 2,
-      "explain": "<b>Ele identifica a aplicação,</b> não só a porta."
+      "explain": "<b>Ele identifica a aplicação,</b> não só a porta.",
+      "nivel": 1
     },
     {
       "topic": "firewall",
@@ -166,7 +179,8 @@
         "Filtro de pacotes, stateful, proxy, NGFW"
       ],
       "correct": 3,
-      "explain": "<b>Cada geração soma visibilidade.</b>"
+      "explain": "<b>Cada geração soma visibilidade.</b>",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -178,7 +192,8 @@
         "Usuário, senha e nome da máquina"
       ],
       "correct": 0,
-      "explain": "<b>Quem, o quê e para onde.</b> Nada sobre o conteúdo."
+      "explain": "<b>Quem, o quê e para onde.</b> Nada sobre o conteúdo.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -190,7 +205,8 @@
         "A que tiver porta maior"
       ],
       "correct": 0,
-      "explain": "<b>Primeiro casamento decide;</b> se nenhuma casar, vale a política padrão."
+      "explain": "<b>Primeiro casamento decide;</b> se nenhuma casar, vale a política padrão.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -203,7 +219,8 @@
         "Descarta o que nenhuma regra liberou"
       ],
       "correct": 3,
-      "explain": "<b>-P INPUT DROP</b> é a política padrão: default deny."
+      "explain": "<b>-P INPUT DROP</b> é a política padrão: default deny.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -216,7 +233,8 @@
         "É desviado para a rede 10.0.0.0"
       ],
       "correct": 2,
-      "explain": "<b>A porta 22 só aceita 10.0.0.0/24.</b> Ele não está nessa rede."
+      "explain": "<b>A porta 22 só aceita 10.0.0.0/24.</b> Ele não está nessa rede.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -229,7 +247,8 @@
         "A rede de apps acessar o Postgres"
       ],
       "correct": 3,
-      "explain": "<b>Origem 10.0.2.0/24, porta 5432.</b> O resto que entra é negado."
+      "explain": "<b>Origem 10.0.2.0/24, porta 5432.</b> O resto que entra é negado.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -241,7 +260,8 @@
         "Ninguém leu o conteúdo da requisição"
       ],
       "correct": 3,
-      "explain": "<b>Porta certa, conteúdo malicioso:</b> o firewall só olhou o envelope."
+      "explain": "<b>Porta certa, conteúdo malicioso:</b> o firewall só olhou o envelope.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -253,7 +273,8 @@
         "Na camada 7, da aplicação"
       ],
       "correct": 3,
-      "explain": "<b>L7:</b> ele entende HTTP, JSON e GraphQL."
+      "explain": "<b>L7:</b> ele entende HTTP, JSON e GraphQL.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -265,7 +286,8 @@
         "Lê a carta que está dentro dele"
       ],
       "correct": 3,
-      "explain": "<b>WAF lê o conteúdo:</b> por isso acha SQL Injection e XSS."
+      "explain": "<b>WAF lê o conteúdo:</b> por isso acha SQL Injection e XSS.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -277,7 +299,8 @@
         "Um tipo de senha com dois fatores"
       ],
       "correct": 0,
-      "explain": "<b>Core Rule Set:</b> regras prontas que o WAF compara com o payload."
+      "explain": "<b>Core Rule Set:</b> regras prontas que o WAF compara com o payload.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -289,7 +312,8 @@
         "SQL Injection, XSS e Command Injection"
       ],
       "correct": 3,
-      "explain": "<b>Ataques no conteúdo da requisição.</b>"
+      "explain": "<b>Ataques no conteúdo da requisição.</b>",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -301,7 +325,8 @@
         "Ele desliga o site quando há visita"
       ],
       "correct": 1,
-      "explain": "<b>Payload, não reputação.</b>"
+      "explain": "<b>Payload, não reputação.</b>",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -313,7 +338,8 @@
         "Na subnet mais isolada"
       ],
       "correct": 0,
-      "explain": "<b>Na subnet pública, junto ou antes do balanceador.</b>"
+      "explain": "<b>Na subnet pública, junto ou antes do balanceador.</b>",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -325,7 +351,8 @@
         "Ele só funciona em redes sem fio"
       ],
       "correct": 1,
-      "explain": "<b>Direções opostas.</b>"
+      "explain": "<b>Direções opostas.</b>",
+      "nivel": 1
     },
     {
       "topic": "dmz",
@@ -337,7 +364,8 @@
         "Uma rede sem fio aberta para os visitantes"
       ],
       "correct": 1,
-      "explain": "<b>Zona desmilitarizada:</b> abriga o que precisa ser acessado pela internet."
+      "explain": "<b>Zona desmilitarizada:</b> abriga o que precisa ser acessado pela internet.",
+      "nivel": 1
     },
     {
       "topic": "dmz",
@@ -349,7 +377,8 @@
         "A rede interna fica toda desligada"
       ],
       "correct": 1,
-      "explain": "<b>DMZ contém o dano:</b> ela nega DMZ para LAN."
+      "explain": "<b>DMZ contém o dano:</b> ela nega DMZ para LAN.",
+      "nivel": 3
     },
     {
       "topic": "dmz",
@@ -361,7 +390,8 @@
         "Site, e-mail e DNS público"
       ],
       "correct": 3,
-      "explain": "<b>O que a internet precisa alcançar.</b> O crítico fica na LAN."
+      "explain": "<b>O que a internet precisa alcançar.</b> O crítico fica na LAN.",
+      "nivel": 2
     },
     {
       "topic": "dmz",
@@ -373,7 +403,8 @@
         "Fora da nuvem toda"
       ],
       "correct": 1,
-      "explain": "<b>Isolada:</b> sem nenhuma rota para a internet."
+      "explain": "<b>Isolada:</b> sem nenhuma rota para a internet.",
+      "nivel": 1
     },
     {
       "topic": "dmz",
@@ -385,7 +416,8 @@
         "O banco de dados"
       ],
       "correct": 2,
-      "explain": "<b>Só o ALB/Ingress.</b>"
+      "explain": "<b>Só o ALB/Ingress.</b>",
+      "nivel": 1
     },
     {
       "topic": "dmz",
@@ -397,7 +429,8 @@
         "Pelo NAT, sem ter IP público"
       ],
       "correct": 3,
-      "explain": "<b>Sai, mas não entra.</b>"
+      "explain": "<b>Sai, mas não entra.</b>",
+      "nivel": 2
     },
     {
       "topic": "dmz",
@@ -409,7 +442,8 @@
         "O firewall pede a senha do banco"
       ],
       "correct": 2,
-      "explain": "<b>Segurança por arquitetura,</b> antes de qualquer regra."
+      "explain": "<b>Segurança por arquitetura,</b> antes de qualquer regra.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -421,7 +455,8 @@
         "O que entra e sai pelo perímetro"
       ],
       "correct": 3,
-      "explain": "<b>Borda ↔ cliente.</b> É o que NGFW e WAF protegem."
+      "explain": "<b>Borda ↔ cliente.</b> É o que NGFW e WAF protegem.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -433,7 +468,8 @@
         "O que circula entre os serviços de dentro"
       ],
       "correct": 3,
-      "explain": "<b>Microsserviço ↔ microsserviço.</b>"
+      "explain": "<b>Microsserviço ↔ microsserviço.</b>",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -445,7 +481,8 @@
         "O servidor mudar de prédio na manutenção"
       ],
       "correct": 2,
-      "explain": "<b>Já dentro, ele tenta alcançar outros serviços.</b>"
+      "explain": "<b>Já dentro, ele tenta alcançar outros serviços.</b>",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -457,7 +494,8 @@
         "Traduz nomes de sites em endereços IP"
       ],
       "correct": 0,
-      "explain": "<b>Nega por padrão</b> e libera por rótulo ou namespace."
+      "explain": "<b>Nega por padrão</b> e libera por rótulo ou namespace.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -469,7 +507,8 @@
         "Cada um guarda uma cópia do banco de dados"
       ],
       "correct": 0,
-      "explain": "<b>Certificado dos dois lados:</b> base do Zero Trust."
+      "explain": "<b>Certificado dos dois lados:</b> base do Zero Trust.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -481,7 +520,8 @@
         "O firewall estava sem luz"
       ],
       "correct": 1,
-      "explain": "<b>Credencial válida:</b> quem percebe é o controle interno."
+      "explain": "<b>Credencial válida:</b> quem percebe é o controle interno.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -493,7 +533,8 @@
         "Confiar em todos que entraram pela VPN"
       ],
       "correct": 0,
-      "explain": "<b>Toda chamada precisa provar quem é.</b>"
+      "explain": "<b>Toda chamada precisa provar quem é.</b>",
+      "nivel": 1
     },
     {
       "topic": "ids",
@@ -505,7 +546,8 @@
         "IDS é para Wi-Fi; IPS é para rede cabeada"
       ],
       "correct": 0,
-      "explain": "<b>Câmera × segurança.</b>"
+      "explain": "<b>Câmera × segurança.</b>",
+      "nivel": 2
     },
     {
       "topic": "ids",
@@ -517,7 +559,8 @@
         "Depois do fim da conexão"
       ],
       "correct": 1,
-      "explain": "<b>Passivo:</b> escuta uma cópia."
+      "explain": "<b>Passivo:</b> escuta uma cópia.",
+      "nivel": 1
     },
     {
       "topic": "ids",
@@ -529,7 +572,8 @@
         "Numa cópia separada do tráfego"
       ],
       "correct": 0,
-      "explain": "<b>Inline:</b> por isso consegue derrubar a conexão."
+      "explain": "<b>Inline:</b> por isso consegue derrubar a conexão.",
+      "nivel": 1
     },
     {
       "topic": "ids",
@@ -541,7 +585,8 @@
         "O IDS só existe na teoria"
       ],
       "correct": 0,
-      "explain": "<b>O que muda é o modo de operação.</b>"
+      "explain": "<b>O que muda é o modo de operação.</b>",
+      "nivel": 1
     },
     {
       "topic": "ids",
@@ -553,7 +598,8 @@
         "Detecção que olha a rede"
       ],
       "correct": 3,
-      "explain": "<b>N de network.</b> O HIDS fica no host."
+      "explain": "<b>N de network.</b> O HIDS fica no host.",
+      "nivel": 1
     },
     {
       "topic": "ids",
@@ -565,7 +611,8 @@
         "Cabos ligados atrás do servidor"
       ],
       "correct": 1,
-      "explain": "<b>H de host.</b> O EDR é a evolução dele."
+      "explain": "<b>H de host.</b> O EDR é a evolução dele.",
+      "nivel": 2
     },
     {
       "topic": "ids",
@@ -577,7 +624,8 @@
         "Descobre qualquer ataque nunca visto"
       ],
       "correct": 2,
-      "explain": "<b>Como antivírus clássico:</b> não pega ataque novo."
+      "explain": "<b>Como antivírus clássico:</b> não pega ataque novo.",
+      "nivel": 2
     },
     {
       "topic": "ids",
@@ -589,7 +637,8 @@
         "Só precisa de uma lista de vírus"
       ],
       "correct": 1,
-      "explain": "<b>Compara com o normal;</b> em troca, erra mais."
+      "explain": "<b>Compara com o normal;</b> em troca, erra mais.",
+      "nivel": 2
     },
     {
       "topic": "ids",
@@ -602,7 +651,8 @@
         "Vinte pacotes SYN em três segundos"
       ],
       "correct": 2,
-      "explain": "<b>content + http_uri:</b> olha dentro da requisição."
+      "explain": "<b>content + http_uri:</b> olha dentro da requisição.",
+      "nivel": 3
     },
     {
       "topic": "ids",
@@ -615,7 +665,8 @@
         "Uma injeção de SQL no formulário"
       ],
       "correct": 1,
-      "explain": "<b>20 SYN em 3 segundos</b> da mesma origem: comportamento de varredura."
+      "explain": "<b>20 SYN em 3 segundos</b> da mesma origem: comportamento de varredura.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -627,7 +678,8 @@
         "Um ataque real que não foi visto"
       ],
       "correct": 1,
-      "explain": "<b>Alarme errado.</b> Em modo IPS pode derrubar uma venda."
+      "explain": "<b>Alarme errado.</b> Em modo IPS pode derrubar uma venda.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -639,7 +691,8 @@
         "Um alerta que chegou duas vezes"
       ],
       "correct": 1,
-      "explain": "<b>A violação acontece em silêncio.</b>"
+      "explain": "<b>A violação acontece em silêncio.</b>",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -651,7 +704,8 @@
         "Porque o IPS não funciona em rede cabeada"
       ],
       "correct": 2,
-      "explain": "<b>Calibrar primeiro, bloquear depois.</b>"
+      "explain": "<b>Calibrar primeiro, bloquear depois.</b>",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -663,7 +717,8 @@
         "A senha e o texto da mensagem"
       ],
       "correct": 0,
-      "explain": "<b>Cifrado:</b> sem decifrar, não há o que inspecionar."
+      "explain": "<b>Cifrado:</b> sem decifrar, não há o que inspecionar.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -675,7 +730,8 @@
         "Guardar as senhas decifradas dentro do log"
       ],
       "correct": 2,
-      "explain": "<b>Ponto natural de inspeção:</b> decifra, inspeciona e recifra."
+      "explain": "<b>Ponto natural de inspeção:</b> decifra, inspeciona e recifra.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -687,7 +743,8 @@
         "Restringir o tráfego de entrada"
       ],
       "correct": 0,
-      "explain": "<b>Egress = saída.</b>"
+      "explain": "<b>Egress = saída.</b>",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -699,7 +756,8 @@
         "O servidor esquece o próprio endereço na rede"
       ],
       "correct": 1,
-      "explain": "<b>Reverse shell e vazamento de dados</b> usam a saída."
+      "explain": "<b>Reverse shell e vazamento de dados</b> usam a saída.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -711,7 +769,8 @@
         "com duas trancas bem iguais"
       ],
       "correct": 1,
-      "explain": "<b>Quem já está dentro sai livremente.</b>"
+      "explain": "<b>Quem já está dentro sai livremente.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -723,7 +782,8 @@
         "Camadas iguais repetidas no mesmo lugar"
       ],
       "correct": 2,
-      "explain": "<b>Redundância assumindo falha.</b>"
+      "explain": "<b>Redundância assumindo falha.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -735,7 +795,8 @@
         "Dados, host e aplicação, rede, perímetro"
       ],
       "correct": 2,
-      "explain": "<b>Do portão até o cofre.</b>"
+      "explain": "<b>Do portão até o cofre.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -747,7 +808,8 @@
         "Rede interna"
       ],
       "correct": 1,
-      "explain": "<b>São o portão.</b>"
+      "explain": "<b>São o portão.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -759,7 +821,8 @@
         "A dos dados"
       ],
       "correct": 3,
-      "explain": "<b>Última linha:</b> dados cifrados não têm valor para o atacante."
+      "explain": "<b>Última linha:</b> dados cifrados não têm valor para o atacante.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -771,7 +834,8 @@
         "Host e aplicação"
       ],
       "correct": 3,
-      "explain": "<b>Junto da máquina e do programa.</b>"
+      "explain": "<b>Junto da máquina e do programa.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -783,7 +847,8 @@
         "Garantir que nunca haverá uma invasão"
       ],
       "correct": 0,
-      "explain": "<b>Não é “se”, é “quando”.</b>"
+      "explain": "<b>Não é “se”, é “quando”.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -795,7 +860,8 @@
         "Monitora os alertas o tempo todo"
       ],
       "correct": 3,
-      "explain": "<b>Equipe 24 horas por dia.</b>"
+      "explain": "<b>Equipe 24 horas por dia.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -807,7 +873,8 @@
         "NetworkPolicy ou mTLS"
       ],
       "correct": 3,
-      "explain": "<b>Segmentação Leste-Oeste.</b>"
+      "explain": "<b>Segmentação Leste-Oeste.</b>",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -819,7 +886,8 @@
         "O certificado do site"
       ],
       "correct": 2,
-      "explain": "<b>Saída restrita:</b> destino desconhecido não passa."
+      "explain": "<b>Saída restrita:</b> destino desconhecido não passa.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -831,7 +899,8 @@
         "Controles, depois riscos, depois pentest"
       ],
       "correct": 2,
-      "explain": "<b>Aula 06, 07 e 08:</b> conhecer o risco, achar a falha e impedir."
+      "explain": "<b>Aula 06, 07 e 08:</b> conhecer o risco, achar a falha e impedir.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -843,7 +912,8 @@
         "Cifrar o saldo e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -856,7 +926,8 @@
         "203.0.102.42 passa pela regra 2"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -868,7 +939,8 @@
         "Cifrar a lista de faixas e guardar um backup fora"
       ],
       "correct": 3,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -881,7 +953,8 @@
         "10.0.25.16 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -894,7 +967,8 @@
         "10.0.129.161 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 3
     },
     {
       "topic": "waf",
@@ -906,7 +980,8 @@
         "Pular de um serviço até o lote do remédio, por dentro"
       ],
       "correct": 2,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 3
     },
     {
       "topic": "profundidade",
@@ -918,7 +993,8 @@
         "Achar SQL Injection no campo código do livro"
       ],
       "correct": 1,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -931,7 +1007,8 @@
         "10.0.42.226 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -943,7 +1020,8 @@
         "Só a rede interna acessa a porta que guarda o acervo"
       ],
       "correct": 2,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -955,7 +1033,8 @@
         "Achar SQL Injection no campo data da aula"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -967,7 +1046,8 @@
         "Só a rede interna acessa a porta que guarda a rota do dia"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -979,7 +1059,8 @@
         "Só a rede interna acessa a porta que guarda o estoque"
       ],
       "correct": 0,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -992,7 +1073,8 @@
         "203.0.6.94 passa pela regra 2"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1004,7 +1086,8 @@
         "Pular de um serviço até a ocupação, por dentro"
       ],
       "correct": 2,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1017,7 +1100,8 @@
         "10.0.131.100 é barrado pela regra 3"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1030,7 +1114,8 @@
         "10.0.224.109 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1043,7 +1128,8 @@
         "10.0.172.33 é barrado pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -1055,7 +1141,8 @@
         "Só a rede interna acessa a porta que guarda o boletim"
       ],
       "correct": 1,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1068,7 +1155,8 @@
         "10.0.137.54 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1081,7 +1169,8 @@
         "10.0.46.187 é barrado pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -1093,7 +1182,8 @@
         "Só a rede interna acessa a porta que guarda a rota do dia"
       ],
       "correct": 2,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -1105,7 +1195,8 @@
         "O cliente, de casa, vai criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1118,7 +1209,8 @@
         "203.0.26.202 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "profundidade",
@@ -1130,7 +1222,8 @@
         "Impedir o servidor de enviar a ficha do animal para fora"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1143,7 +1236,8 @@
         "203.0.160.208 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1155,7 +1249,8 @@
         "Não notar uma injeção ao fazer um Pix"
       ],
       "correct": 3,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -1167,7 +1262,8 @@
         "Impedir o servidor de enviar a grade de aulas para fora"
       ],
       "correct": 2,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -1179,7 +1275,8 @@
         "Pular de um serviço até o estoque, por dentro"
       ],
       "correct": 3,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -1191,7 +1288,8 @@
         "Achar SQL Injection no campo quantidade de ingressos"
       ],
       "correct": 3,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1204,7 +1302,8 @@
         "203.0.129.157 passa pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1216,7 +1315,8 @@
         "Cifrar a rota do dia e guardar um backup fora"
       ],
       "correct": 1,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1228,7 +1328,8 @@
         "Só a rede interna acessa a porta que guarda as peças"
       ],
       "correct": 0,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -1240,7 +1341,8 @@
         "Só a rede interna acessa a porta que guarda o boletim"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1253,7 +1355,8 @@
         "10.0.154.162 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1265,7 +1368,8 @@
         "Pular de um serviço até o estoque, por dentro"
       ],
       "correct": 0,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1277,7 +1381,8 @@
         "Só a rede interna acessa a porta que guarda a ficha do animal"
       ],
       "correct": 1,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1289,7 +1394,8 @@
         "Cifrar a agenda médica e guardar um backup fora"
       ],
       "correct": 2,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1301,7 +1407,8 @@
         "Só a rede interna acessa a porta que guarda o lote do remédio"
       ],
       "correct": 2,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -1313,7 +1420,8 @@
         "Barrar um cliente comum ao vender o remédio"
       ],
       "correct": 2,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -1325,7 +1433,8 @@
         "Cifrar a ficha do animal e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1337,7 +1446,8 @@
         "Só a rede interna acessa a porta que guarda o lote do remédio"
       ],
       "correct": 2,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1349,7 +1459,8 @@
         "Só a rede interna acessa a porta que guarda a ocupação"
       ],
       "correct": 1,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1362,7 +1473,8 @@
         "10.0.118.196 passa pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1374,7 +1486,8 @@
         "Barrar um cliente comum ao registrar a entrega"
       ],
       "correct": 2,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1387,7 +1500,8 @@
         "10.0.204.116 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1399,7 +1513,8 @@
         "Barrar um cliente comum ao abrir a ordem de serviço"
       ],
       "correct": 3,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1411,7 +1526,8 @@
         "Só a rede interna acessa a porta que guarda a grade de aulas"
       ],
       "correct": 0,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1423,7 +1539,8 @@
         "Barrar um cliente comum ao fazer um Pix"
       ],
       "correct": 3,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -1435,7 +1552,8 @@
         "Cifrar o cardápio e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1447,7 +1565,8 @@
         "Barrar um cliente comum ao renovar o empréstimo"
       ],
       "correct": 3,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1459,7 +1578,8 @@
         "Impedir o servidor de enviar as vagas para fora"
       ],
       "correct": 0,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1472,7 +1592,8 @@
         "10.0.194.127 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1484,7 +1605,8 @@
         "Achar SQL Injection no campo data de nascimento"
       ],
       "correct": 2,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -1496,7 +1618,8 @@
         "Só a rede interna acessa a porta que guarda a agenda médica"
       ],
       "correct": 0,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "profundidade",
@@ -1508,7 +1631,8 @@
         "Só a rede interna acessa a porta que guarda o saldo"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1520,7 +1644,8 @@
         "Pular de um serviço até o mapa da sala, por dentro"
       ],
       "correct": 0,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1533,7 +1658,8 @@
         "203.0.10.130 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -1545,7 +1671,8 @@
         "Achar SQL Injection no campo data de entrada"
       ],
       "correct": 2,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1558,7 +1685,8 @@
         "10.0.9.99 é barrado pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1570,7 +1698,8 @@
         "Não notar uma injeção ao marcar o banho"
       ],
       "correct": 2,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1583,7 +1712,8 @@
         "203.0.140.145 é barrado pela regra 3"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1596,7 +1726,8 @@
         "203.0.183.184 é barrado pela regra 3"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -1608,7 +1739,8 @@
         "Cifrar a rota do dia e guardar um backup fora"
       ],
       "correct": 1,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -1620,7 +1752,8 @@
         "Achar SQL Injection no campo placa do carro"
       ],
       "correct": 3,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -1632,7 +1765,8 @@
         "Cifrar as vagas e guardar um backup fora"
       ],
       "correct": 3,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1644,7 +1778,8 @@
         "Só a rede interna acessa a porta que guarda o mapa da sala"
       ],
       "correct": 2,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1657,7 +1792,8 @@
         "203.0.24.203 passa pela regra 2"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1670,7 +1806,8 @@
         "203.0.188.41 passa pela regra 2"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1683,7 +1820,8 @@
         "10.0.54.246 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -1695,7 +1833,8 @@
         "O cliente, de casa, vai abrir a ordem de serviço"
       ],
       "correct": 3,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1707,7 +1846,8 @@
         "Achar SQL Injection no campo quantidade de ingressos"
       ],
       "correct": 2,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -1719,7 +1859,8 @@
         "Só a rede interna acessa a porta que guarda a rota do dia"
       ],
       "correct": 1,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1732,7 +1873,8 @@
         "203.0.88.167 passa pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1745,7 +1887,8 @@
         "203.0.154.174 passa pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -1757,7 +1900,8 @@
         "Pular de um serviço até o boletim, por dentro"
       ],
       "correct": 3,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -1769,7 +1913,8 @@
         "Impedir o servidor de enviar as peças para fora"
       ],
       "correct": 1,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -1781,7 +1926,8 @@
         "Barrar um cliente comum ao fazer um Pix"
       ],
       "correct": 2,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1793,7 +1939,8 @@
         "Barrar um cliente comum ao agendar a consulta"
       ],
       "correct": 1,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1806,7 +1953,8 @@
         "203.0.164.76 passa pela regra 2"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -1818,7 +1966,8 @@
         "Cifrar o estoque e guardar um backup fora"
       ],
       "correct": 3,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1830,7 +1979,8 @@
         "Só a rede interna acessa a porta que guarda o cardápio"
       ],
       "correct": 0,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1843,7 +1993,8 @@
         "203.0.163.147 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1856,7 +2007,8 @@
         "10.0.26.86 é barrado pela regra 3"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1868,7 +2020,8 @@
         "Só a rede interna acessa a porta que guarda a rota do dia"
       ],
       "correct": 2,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1880,7 +2033,8 @@
         "Cifrar a grade de aulas e guardar um backup fora"
       ],
       "correct": 1,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1893,7 +2047,8 @@
         "10.0.72.93 é barrado pela regra 3"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -1906,7 +2061,8 @@
         "203.0.79.5 é barrado pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -1918,7 +2074,8 @@
         "Só a rede interna acessa a porta que guarda a lista de faixas"
       ],
       "correct": 2,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -1931,7 +2088,8 @@
         "10.0.137.241 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -1943,7 +2101,8 @@
         "Achar SQL Injection no campo data de entrada"
       ],
       "correct": 2,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1955,7 +2114,8 @@
         "Achar SQL Injection no campo nota da prova"
       ],
       "correct": 0,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -1968,7 +2128,8 @@
         "10.0.89.95 passa pela regra 2"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -1980,7 +2141,8 @@
         "Pular de um serviço até o saldo, por dentro"
       ],
       "correct": 1,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -1992,7 +2154,8 @@
         "Só a rede interna acessa a porta que guarda o boletim"
       ],
       "correct": 1,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2005,7 +2168,8 @@
         "203.0.23.36 passa pela regra 2"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2018,7 +2182,8 @@
         "203.0.130.14 é barrado pela regra 3"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2030,7 +2195,8 @@
         "Barrar um cliente comum ao criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -2042,7 +2208,8 @@
         "Cifrar a rota do dia e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2055,7 +2222,8 @@
         "203.0.83.85 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -2067,7 +2235,8 @@
         "Pular de um serviço até as vagas, por dentro"
       ],
       "correct": 2,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2079,7 +2248,8 @@
         "Pular de um serviço até o cardápio, por dentro"
       ],
       "correct": 1,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2092,7 +2262,8 @@
         "203.0.174.80 passa pela regra 2"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -2104,7 +2275,8 @@
         "Só a rede interna acessa a porta que guarda a ficha do animal"
       ],
       "correct": 1,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -2116,7 +2288,8 @@
         "Achar SQL Injection no campo código do livro"
       ],
       "correct": 3,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2128,7 +2301,8 @@
         "Não notar uma injeção ao enviar a comanda"
       ],
       "correct": 3,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2141,7 +2315,8 @@
         "203.0.54.42 é barrado pela regra 3"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2154,7 +2329,8 @@
         "10.0.185.202 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2166,7 +2342,8 @@
         "Não notar uma injeção ao abrir a ordem de serviço"
       ],
       "correct": 1,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -2178,7 +2355,8 @@
         "Pular de um serviço até a agenda médica, por dentro"
       ],
       "correct": 0,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2191,7 +2369,8 @@
         "10.0.137.163 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2204,7 +2383,8 @@
         "203.0.115.86 é barrado pela regra 3"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -2216,7 +2396,8 @@
         "Só a rede interna acessa a porta que guarda o lote do remédio"
       ],
       "correct": 2,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2229,7 +2410,8 @@
         "10.0.173.50 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2242,7 +2424,8 @@
         "10.0.225.165 é barrado pela regra 3"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2254,7 +2437,8 @@
         "Cifrar o estoque e guardar um backup fora"
       ],
       "correct": 1,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -2266,7 +2450,8 @@
         "Só a rede interna acessa a porta que guarda as peças"
       ],
       "correct": 0,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2279,7 +2464,8 @@
         "203.0.164.9 é barrado pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -2291,7 +2477,8 @@
         "Achar SQL Injection no campo placa do carro"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2304,7 +2491,8 @@
         "203.0.17.79 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2317,7 +2505,8 @@
         "203.0.39.98 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -2329,7 +2518,8 @@
         "Não notar uma injeção ao marcar o banho"
       ],
       "correct": 3,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2342,7 +2532,8 @@
         "10.0.240.45 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2355,7 +2546,8 @@
         "10.0.185.178 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2368,7 +2560,8 @@
         "203.0.162.85 passa pela regra 2"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "profundidade",
@@ -2380,7 +2573,8 @@
         "Pular de um serviço até a grade de aulas, por dentro"
       ],
       "correct": 0,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2392,7 +2586,8 @@
         "Pular de um serviço até a ficha do animal, por dentro"
       ],
       "correct": 3,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "waf",
@@ -2404,7 +2599,8 @@
         "Só a rede interna acessa a porta que guarda a grade de aulas"
       ],
       "correct": 1,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2417,7 +2613,8 @@
         "10.0.65.191 é barrado pela regra 3"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2430,7 +2627,8 @@
         "203.0.111.98 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2442,7 +2640,8 @@
         "Impedir o servidor de enviar o cardápio para fora"
       ],
       "correct": 1,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -2454,7 +2653,8 @@
         "Impedir o servidor de enviar a lista de faixas para fora"
       ],
       "correct": 3,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2467,7 +2667,8 @@
         "10.0.250.93 é barrado pela regra 3"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2479,7 +2680,8 @@
         "Só a rede interna acessa a porta que guarda a grade de aulas"
       ],
       "correct": 2,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 1
     },
     {
       "topic": "desafios",
@@ -2491,7 +2693,8 @@
         "Só a rede interna acessa a porta que guarda o acervo"
       ],
       "correct": 0,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -2503,7 +2706,8 @@
         "Impedir o servidor de enviar o lote do remédio para fora"
       ],
       "correct": 1,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -2515,7 +2719,8 @@
         "Não notar uma injeção ao marcar uma aula"
       ],
       "correct": 3,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -2527,7 +2732,8 @@
         "Pular de um serviço até o acervo, por dentro"
       ],
       "correct": 3,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2540,7 +2746,8 @@
         "203.0.159.128 é barrado pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2552,7 +2759,8 @@
         "O cliente, de casa, vai registrar a saída"
       ],
       "correct": 3,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2565,7 +2773,8 @@
         "203.0.157.168 é barrado pela regra 3"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2577,7 +2786,8 @@
         "O cliente, de casa, vai renovar o empréstimo"
       ],
       "correct": 3,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -2589,7 +2799,8 @@
         "Achar SQL Injection no campo quantidade de ingressos"
       ],
       "correct": 1,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2601,7 +2812,8 @@
         "Pular de um serviço até a lista de faixas, por dentro"
       ],
       "correct": 3,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2614,7 +2826,8 @@
         "203.0.200.158 é barrado pela regra 3"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2627,7 +2840,8 @@
         "203.0.54.84 é barrado pela regra 3"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -2639,7 +2853,8 @@
         "Achar SQL Injection no campo data de entrada"
       ],
       "correct": 3,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2652,7 +2867,8 @@
         "203.0.11.217 passa pela regra 2"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2665,7 +2881,8 @@
         "10.0.64.228 é barrado pela regra 3"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2678,7 +2895,8 @@
         "10.0.40.152 passa pela regra 2"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2690,7 +2908,8 @@
         "Cifrar a ficha do animal e guardar um backup fora"
       ],
       "correct": 2,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2702,7 +2921,8 @@
         "Impedir o servidor de enviar o lote do remédio para fora"
       ],
       "correct": 0,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "profundidade",
@@ -2714,7 +2934,8 @@
         "Achar SQL Injection no campo número da mesa"
       ],
       "correct": 0,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2727,7 +2948,8 @@
         "203.0.115.2 passa pela regra 2"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2739,7 +2961,8 @@
         "Não notar uma injeção ao criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -2751,7 +2974,8 @@
         "Só a rede interna acessa a porta que guarda o estoque"
       ],
       "correct": 2,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2764,7 +2988,8 @@
         "10.0.209.236 é barrado pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2776,7 +3001,8 @@
         "Cifrar o boletim e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2789,7 +3015,8 @@
         "10.0.34.150 passa pela regra 2"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -2801,7 +3028,8 @@
         "Só a rede interna acessa a porta que guarda a agenda médica"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -2813,7 +3041,8 @@
         "Barrar um cliente comum ao escolher a poltrona"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2826,7 +3055,8 @@
         "203.0.26.183 passa pela regra 1"
       ],
       "correct": 2,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a porta é da regra 1, mas a origem não está naquela rede.",
+      "nivel": 3
     },
     {
       "topic": "profundidade",
@@ -2838,7 +3068,8 @@
         "Cifrar a ocupação e guardar um backup fora"
       ],
       "correct": 3,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -2850,7 +3081,8 @@
         "Só a rede interna acessa a porta que guarda o mapa da sala"
       ],
       "correct": 0,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2862,7 +3094,8 @@
         "Achar SQL Injection no campo data de nascimento"
       ],
       "correct": 2,
-      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque."
+      "explain": "<b>Falso positivo:</b> algo normal tratado como ataque.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2875,7 +3108,8 @@
         "203.0.84.3 é barrado pela regra 3"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -2887,7 +3121,8 @@
         "Achar SQL Injection no campo data de nascimento"
       ],
       "correct": 0,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 3
     },
     {
       "topic": "lateral",
@@ -2899,7 +3134,8 @@
         "O cliente, de casa, vai fechar o pedido"
       ],
       "correct": 3,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2912,7 +3148,8 @@
         "10.0.5.24 passa pela regra 1"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a origem está na rede da regra 1 e a porta confere.",
+      "nivel": 1
     },
     {
       "topic": "waf",
@@ -2924,7 +3161,8 @@
         "Achar SQL Injection no campo nota da prova"
       ],
       "correct": 3,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     },
     {
       "topic": "regras",
@@ -2937,7 +3175,8 @@
         "10.0.248.120 é barrado pela regra 3"
       ],
       "correct": 3,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -2949,7 +3188,8 @@
         "Pular de um serviço até as vagas, por dentro"
       ],
       "correct": 2,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -2962,7 +3202,8 @@
         "10.0.26.134 é barrado pela regra 1"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -2975,7 +3216,8 @@
         "10.0.192.163 passa pela regra 2"
       ],
       "correct": 1,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -2987,7 +3229,8 @@
         "Barrar um cliente comum ao registrar a saída"
       ],
       "correct": 0,
-      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme."
+      "explain": "<b>Falso negativo:</b> um ataque que passou sem alarme.",
+      "nivel": 2
     },
     {
       "topic": "profundidade",
@@ -2999,7 +3242,8 @@
         "Só a rede interna acessa a porta que guarda o lote do remédio"
       ],
       "correct": 2,
-      "explain": "<b>Proteção da camada de dados:</b> é a última linha."
+      "explain": "<b>Proteção da camada de dados:</b> é a última linha.",
+      "nivel": 3
     },
     {
       "topic": "desafios",
@@ -3011,7 +3255,8 @@
         "Impedir o servidor de enviar a ocupação para fora"
       ],
       "correct": 3,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 2
     },
     {
       "topic": "lateral",
@@ -3023,7 +3268,8 @@
         "Impedir o servidor de enviar as vagas para fora"
       ],
       "correct": 0,
-      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro."
+      "explain": "<b>Movimento lateral:</b> o invasor anda de um sistema a outro por dentro.",
+      "nivel": 2
     },
     {
       "topic": "desafios",
@@ -3035,7 +3281,8 @@
         "Impedir o servidor de enviar o mapa da sala para fora"
       ],
       "correct": 3,
-      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor."
+      "explain": "<b>Filtro de saída (egress):</b> restringe o que sai do servidor.",
+      "nivel": 3
     },
     {
       "topic": "regras",
@@ -3047,7 +3294,8 @@
         "Cifrar a lista de faixas e guardar um backup fora"
       ],
       "correct": 0,
-      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino."
+      "explain": "<b>Regra de firewall:</b> decide por origem, porta e destino.",
+      "nivel": 1
     },
     {
       "topic": "lateral",
@@ -3059,7 +3307,8 @@
         "Não notar uma injeção ao fazer um Pix"
       ],
       "correct": 1,
-      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro."
+      "explain": "<b>Tráfego Norte-Sul:</b> entra ou sai pelo perímetro.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -3072,7 +3321,8 @@
         "10.0.75.106 é barrado pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> nenhuma regra libera a porta 23.",
+      "nivel": 1
     },
     {
       "topic": "regras",
@@ -3085,7 +3335,8 @@
         "203.0.101.42 passa pela regra 1"
       ],
       "correct": 0,
-      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta."
+      "explain": "<b>De cima para baixo, vale a primeira que casar:</b> a regra 2 aceita qualquer origem nessa porta.",
+      "nivel": 2
     },
     {
       "topic": "waf",
@@ -3097,7 +3348,8 @@
         "Só a rede interna acessa a porta que guarda o cardápio"
       ],
       "correct": 1,
-      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição."
+      "explain": "<b>Controle que o WAF faz:</b> lê o conteúdo da requisição.",
+      "nivel": 2
     }
   ],
   "historias": [

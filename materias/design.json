@@ -11,7 +11,8 @@
       ],
       "correct": 1,
       "explain": "<b>Comunicabilidade:</b> vem da Engenharia Semiótica. O problema é a mensagem que a interface passa, e não a tecnologia.",
-      "assunto": "comunic"
+      "assunto": "comunic",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -24,7 +25,8 @@
       ],
       "correct": 1,
       "explain": "<b>Qualidade em IHC:</b> reúne usabilidade, experiência do usuário (UX), acessibilidade e comunicabilidade.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -37,7 +39,8 @@
       ],
       "correct": 3,
       "explain": "<b>Multidisciplinaridade:</b> IHC une humanos, design e tecnologia. A Psicologia explica como a pessoa percebe e lembra.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -50,7 +53,8 @@
       ],
       "correct": 2,
       "explain": "<b>Visibilidade do status:</b> o sistema sempre conta ao usuário o que está acontecendo.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -63,7 +67,8 @@
       ],
       "correct": 0,
       "explain": "<b>Prevenção de erros:</b> uma máscara impediria o erro antes que ele acontecesse.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -76,7 +81,8 @@
       ],
       "correct": 1,
       "explain": "<b>Consistência e padrões:</b> fechar costuma ser um X no canto superior. Fugir do padrão confunde.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -89,7 +95,8 @@
       ],
       "correct": 3,
       "explain": "<b>Krug:</b> as páginas devem ser autoexplicativas, sem esforço cognitivo desnecessário.",
-      "assunto": "krug"
+      "assunto": "krug",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -102,7 +109,8 @@
       ],
       "correct": 0,
       "explain": "<b>Controle e liberdade:</b> o usuário precisa de uma saída clara quando faz algo sem querer.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -115,7 +123,8 @@
       ],
       "correct": 2,
       "explain": "<b>Affordance:</b> a aparência sugere uma ação. Se a ação não existe, a affordance é falsa.",
-      "assunto": "afford"
+      "assunto": "afford",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -128,7 +137,8 @@
       ],
       "correct": 0,
       "explain": "<b>Golfo de Avaliação:</b> é a distância entre o que o sistema fez e o que a pessoa consegue interpretar dele.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -141,7 +151,8 @@
       ],
       "correct": 1,
       "explain": "<b>Golfo de Execução:</b> a interface não guiou nem limitou a ação. Restrições (constraints) evitam as repetições.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -154,7 +165,8 @@
       ],
       "correct": 2,
       "explain": "<b>Conhecimento no mundo:</b> a mente tem memória de curto prazo limitada. O que está na tela não precisa ser lembrado.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -167,7 +179,8 @@
       ],
       "correct": 3,
       "explain": "<b>HSL:</b> matiz, saturação e luminosidade. É mais intuitivo de ajustar do que o código hexadecimal.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -180,7 +193,8 @@
       ],
       "correct": 0,
       "explain": "<b>RGB:</b> soma luz vermelha, verde e azul. O CMYK é para impressão, em que a cor vem da reflexão nos pigmentos.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -193,7 +207,8 @@
       ],
       "correct": 1,
       "explain": "<b>Low-Fi:</b> um esboço em papel é barato. Por isso dá para jogar fora e testar outra ideia sem dó.",
-      "assunto": "proto"
+      "assunto": "proto",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -206,7 +221,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tokens:</b> você muda a cor primária em um lugar e o projeto inteiro acompanha.",
-      "assunto": "figma"
+      "assunto": "figma",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -219,7 +235,8 @@
       ],
       "correct": 1,
       "explain": "<b>Comunicar a ideia:</b> a interface “fala” pelo designer. Se o usuário entende para que serve cada coisa e como usar, a comunicabilidade é boa.",
-      "assunto": "comunic"
+      "assunto": "comunic",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -232,7 +249,8 @@
       ],
       "correct": 2,
       "explain": "<b>Meio e conversa:</b> a interface é o que você vê e toca (tela, botões). A interação é a troca entre você e o sistema: você age, ele responde.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -245,7 +263,8 @@
       ],
       "correct": 1,
       "explain": "<b>Três medidas:</b> eficácia (consegue fazer?), eficiência (com quanto esforço?) e satisfação (gostou?), sempre num contexto de uso.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -258,7 +277,8 @@
       ],
       "correct": 1,
       "explain": "<b>Cor não é componente:</b> os cinco são facilidade de aprendizado, eficiência, facilidade de memorização, poucos erros e satisfação.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -271,7 +291,8 @@
       ],
       "correct": 3,
       "explain": "<b>UX é mais ampla:</b> inclui o que a pessoa sente antes, durante e depois do uso. Usabilidade é a parte de conseguir usar bem.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -284,7 +305,8 @@
       ],
       "correct": 1,
       "explain": "<b>Todo mundo usa:</b> acessibilidade é remover barreiras para pessoas com deficiência visual, auditiva, motora ou cognitiva.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -297,7 +319,8 @@
       ],
       "correct": 2,
       "explain": "<b>Usuário no centro:</b> pesquisar, desenhar, testar com quem vai usar e repetir. Não é só no fim.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -310,7 +333,8 @@
       ],
       "correct": 0,
       "explain": "<b>Recado do designer:</b> a interface é uma mensagem que diz “isto é para você, e é assim que se usa”.",
-      "assunto": "comunic"
+      "assunto": "comunic",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -323,7 +347,8 @@
       ],
       "correct": 1,
       "explain": "<b>Onde e como se usa:</b> contexto de uso é o ambiente, o equipamento e a situação. Luva e sol mudam tudo: botões maiores e alto contraste.",
-      "assunto": "qualidade"
+      "assunto": "qualidade",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -336,7 +361,8 @@
       ],
       "correct": 1,
       "explain": "<b>Memória curta:</b> a memória de trabalho segura poucos itens ao mesmo tempo (o famoso “7 mais ou menos 2”). Tela lotada cansa e confunde.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -349,7 +375,8 @@
       ],
       "correct": 2,
       "explain": "<b>Lei de Hick:</b> quanto mais opções, mais tempo para decidir. Agrupe e reduza as escolhas.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -362,7 +389,8 @@
       ],
       "correct": 2,
       "explain": "<b>Lei de Fitts:</b> o tempo para acertar um alvo depende da distância e do tamanho. Grande e perto = rápido e com menos erro.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -375,7 +403,8 @@
       ],
       "correct": 1,
       "explain": "<b>Proximidade:</b> o que está perto parece ser do mesmo grupo. Por isso cada rótulo “gruda” no seu campo.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -388,7 +417,8 @@
       ],
       "correct": 2,
       "explain": "<b>Semelhança:</b> coisas parecidas (mesma cor, forma ou estilo) são vistas como da mesma família.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -401,7 +431,8 @@
       ],
       "correct": 2,
       "explain": "<b>Atenção:</b> o olho vai ao que contrasta e está onde se olha. Erro importante precisa de destaque e ficar perto do problema.",
-      "assunto": "psico"
+      "assunto": "psico",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -414,7 +445,8 @@
       ],
       "correct": 1,
       "explain": "<b>Mensagem de erro útil:</b> deve dizer, em linguagem simples, o que aconteceu e como resolver. Um código hexadecimal não ajuda ninguém.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -427,7 +459,8 @@
       ],
       "correct": 1,
       "explain": "<b>Falar a língua do usuário:</b> palavras, ícones e ordem iguais aos do mundo real deixam tudo familiar.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -440,7 +473,8 @@
       ],
       "correct": 2,
       "explain": "<b>Serve aos dois:</b> o iniciante usa o menu; o experiente ganha tempo com atalhos. Isso é flexibilidade e eficiência.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -453,7 +487,8 @@
       ],
       "correct": 1,
       "explain": "<b>Menos é mais:</b> cada informação extra compete com o que importa. O minimalista mostra só o necessário.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -466,7 +501,8 @@
       ],
       "correct": 1,
       "explain": "<b>Reconhecer é mais fácil que lembrar:</b> a lista na tela poupa a memória do usuário.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -479,7 +515,8 @@
       ],
       "correct": 1,
       "explain": "<b>Ajuda fácil de achar:</b> o ideal é nem precisar dela, mas, quando precisar, ela deve ser curta, pesquisável e voltada para tarefas.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -492,7 +529,8 @@
       ],
       "correct": 1,
       "explain": "<b>Barrar antes:</b> em ações graves e sem volta, uma confirmação evita o erro antes que ele aconteça.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -505,7 +543,8 @@
       ],
       "correct": 1,
       "explain": "<b>Consistência e padrões:</b> a mesma ação deve ter a mesma aparência e o mesmo lugar em todo o sistema. Senão o usuário reaprende a cada tela.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -518,7 +557,8 @@
       ],
       "correct": 2,
       "explain": "<b>Dez heurísticas:</b> status, mundo real, controle, consistência, prevenção de erros, reconhecimento, flexibilidade, minimalismo, recuperação de erros e ajuda.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -531,7 +571,8 @@
       ],
       "correct": 2,
       "explain": "<b>Mostrar o que está acontecendo:</b> o usuário precisa saber, a tempo, que o sistema recebeu a ação e está trabalhando.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -544,7 +585,8 @@
       ],
       "correct": 1,
       "explain": "<b>Saída de emergência:</b> o usuário erra e muda de ideia. Poder voltar, cancelar e desfazer sem perder tudo é controle e liberdade.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -557,7 +599,8 @@
       ],
       "correct": 1,
       "explain": "<b>Escaneiam:</b> para Krug, ninguém lê tudo. As pessoas passam os olhos e escolhem a primeira opção que parece boa o bastante.",
-      "assunto": "krug"
+      "assunto": "krug",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -570,7 +613,8 @@
       ],
       "correct": 1,
       "explain": "<b>Corte sem dó:</b> “livre-se de metade das palavras e depois de metade do que sobrou”. Texto curto é lido; texto longo é pulado.",
-      "assunto": "krug"
+      "assunto": "krug",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -583,7 +627,8 @@
       ],
       "correct": 1,
       "explain": "<b>Não me faça pensar:</b> convenção é algo que o usuário já aprendeu em outros sites. Usar o que ele já sabe é de graça.",
-      "assunto": "krug"
+      "assunto": "krug",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -596,7 +641,8 @@
       ],
       "correct": 1,
       "explain": "<b>Cliques sem dúvida:</b> para Krug, vários cliques óbvios são melhores que um clique em que é preciso pensar.",
-      "assunto": "krug"
+      "assunto": "krug",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -609,7 +655,8 @@
       ],
       "correct": 1,
       "explain": "<b>Metáfora do dia a dia:</b> todo mundo sabe o que se faz com uma lixeira. O sistema usa a ideia do mundo real.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -622,7 +669,8 @@
       ],
       "correct": 1,
       "explain": "<b>Sem saída:</b> se o usuário entrou por engano, precisa poder sair. Sem voltar nem cancelar, ele fica preso.",
-      "assunto": "nielsen"
+      "assunto": "nielsen",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -635,7 +683,8 @@
       ],
       "correct": 1,
       "explain": "<b>O que dá para fazer:</b> uma cadeira permite sentar; um botão permite apertar. Affordance é a relação entre o objeto e quem usa.",
-      "assunto": "afford"
+      "assunto": "afford",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -648,7 +697,8 @@
       ],
       "correct": 1,
       "explain": "<b>A plaquinha:</b> o significante é o sinal visível (um puxador, um rótulo, uma seta) que mostra onde e como agir.",
-      "assunto": "afford"
+      "assunto": "afford",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -661,7 +711,8 @@
       ],
       "correct": 1,
       "explain": "<b>Porta de Norman:</b> o puxador “diz” puxe, mas a porta pede empurre. O sinal engana, e a culpa é do design, não da pessoa.",
-      "assunto": "afford"
+      "assunto": "afford",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -674,7 +725,8 @@
       ],
       "correct": 1,
       "explain": "<b>Mapeamento:</b> é a relação entre o controle e o efeito. Botões dispostos como as bocas deixariam óbvio.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -687,7 +739,8 @@
       ],
       "correct": 2,
       "explain": "<b>Feedback:</b> o sistema responde à ação, na hora e de forma visível. Assim o usuário sabe que funcionou.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -700,7 +753,8 @@
       ],
       "correct": 1,
       "explain": "<b>Restrição física:</b> o próprio formato impede a ação errada. É a forma mais forte de prevenir erro.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -713,7 +767,8 @@
       ],
       "correct": 2,
       "explain": "<b>Restrição cultural:</b> vem de convenções que a pessoa aprendeu na sua cultura. Em outros países, as cores podem significar outra coisa.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -726,7 +781,8 @@
       ],
       "correct": 1,
       "explain": "<b>Modelos diferentes:</b> o usuário imagina um funcionamento (modelo mental) e o sistema faz outro. O design precisa deixar o funcionamento claro.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -739,7 +795,8 @@
       ],
       "correct": 1,
       "explain": "<b>Execução = como faço?</b> O golfo de execução é a distância entre o que a pessoa quer fazer e descobrir como fazer no sistema.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -752,7 +809,8 @@
       ],
       "correct": 1,
       "explain": "<b>Ida e volta:</b> execução é fazer a ação; avaliação é entender o que aconteceu depois. Bons significantes e bom feedback encurtam as duas.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -765,7 +823,8 @@
       ],
       "correct": 1,
       "explain": "<b>Lapso:</b> a pessoa queria a coisa certa, mas a mão foi para o lugar errado. Botões perigosos longe dos comuns ajudam.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -778,7 +837,8 @@
       ],
       "correct": 1,
       "explain": "<b>Engano:</b> o plano já nasce errado, porque a ideia que ele tem do sistema está errada. A solução é explicar melhor o que o botão faz.",
-      "assunto": "golfos"
+      "assunto": "golfos",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -791,7 +851,8 @@
       ],
       "correct": 1,
       "explain": "<b>Visibilidade:</b> se a pessoa não vê a opção, ela nem sabe que existe. O importante precisa estar à vista.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -804,7 +865,8 @@
       ],
       "correct": 1,
       "explain": "<b>Significante claro:</b> contorno, sombra e rótulo dizem “aperte aqui”. Texto igual ao resto não chama para a ação.",
-      "assunto": "afford"
+      "assunto": "afford",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -817,7 +879,8 @@
       ],
       "correct": 1,
       "explain": "<b>Mostrar que está andando:</b> com uma barra ou um aviso de progresso, o usuário entende que o sistema está trabalhando e não clica de novo.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -830,7 +893,8 @@
       ],
       "correct": 1,
       "explain": "<b>Restrição lógica:</b> o sistema impede uma escolha que não faz sentido naquele momento, e assim previne o erro.",
-      "assunto": "principios"
+      "assunto": "principios",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -843,7 +907,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tinta subtrai luz:</b> na impressão, as tintas ciano, magenta, amarelo e preto (CMYK) se misturam. RGB é para telas, que emitem luz.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -856,7 +921,8 @@
       ],
       "correct": 1,
       "explain": "<b>HEX = RR GG BB:</b> FF é o máximo (255) no vermelho, e 00 no verde e no azul. Resultado: vermelho puro.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -869,7 +935,8 @@
       ],
       "correct": 1,
       "explain": "<b>Luz no máximo:</b> RGB é aditivo. Somando vermelho, verde e azul no máximo, sai branco. rgb(0, 0, 0) é preto.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -882,7 +949,8 @@
       ],
       "correct": 1,
       "explain": "<b>Opostas se destacam:</b> complementares dão muito contraste. São boas para chamar atenção, como um botão laranja num fundo azul.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -895,7 +963,8 @@
       ],
       "correct": 1,
       "explain": "<b>Vizinhas combinam:</b> o esquema análogo usa cores lado a lado no círculo e dá uma sensação calma e harmônica.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -908,7 +977,8 @@
       ],
       "correct": 1,
       "explain": "<b>Pouca, mas chamativa:</b> 60% para a cor base, 30% para a secundária e 10% para o destaque, que guia o olho para a ação.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -921,7 +991,8 @@
       ],
       "correct": 1,
       "explain": "<b>Respiro para o olho:</b> 16px é o tamanho base comum na web, e a entrelinha perto de 1,5 evita que as linhas se embolem.",
-      "assunto": "guia"
+      "assunto": "guia",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -934,7 +1005,8 @@
       ],
       "correct": 1,
       "explain": "<b>Serifa = pezinho:</b> Times tem serifa; Arial não tem. Na tela, a sem serifa costuma ser mais limpa para textos de interface.",
-      "assunto": "guia"
+      "assunto": "guia",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -947,7 +1019,8 @@
       ],
       "correct": 1,
       "explain": "<b>O mais importante grita mais:</b> nome e preço maiores e em negrito; detalhes menores e mais claros. O olho segue essa ordem.",
-      "assunto": "guia"
+      "assunto": "guia",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -960,7 +1033,8 @@
       ],
       "correct": 1,
       "explain": "<b>Régua única:</b> com todos os espaços na mesma escala, a interface fica alinhada e previsível, e a equipe decide mais rápido.",
-      "assunto": "guia"
+      "assunto": "guia",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -973,7 +1047,8 @@
       ],
       "correct": 1,
       "explain": "<b>O manual visual:</b> o Style Guide junta as regras de cor, fonte, componentes e espaço para todos desenharem igual.",
-      "assunto": "guia"
+      "assunto": "guia",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -986,7 +1061,8 @@
       ],
       "correct": 1,
       "explain": "<b>Molde e cópias:</b> o componente principal é o molde; as instâncias são as cópias. Mudou o molde, mudam todas as cópias.",
-      "assunto": "figma"
+      "assunto": "figma",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -999,7 +1075,8 @@
       ],
       "correct": 1,
       "explain": "<b>Um componente, vários estados:</b> o botão normal, com o mouse em cima e desativado ficam juntos, como versões do mesmo componente.",
-      "assunto": "figma"
+      "assunto": "figma",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1012,7 +1089,8 @@
       ],
       "correct": 1,
       "explain": "<b>Auto layout:</b> o frame cresce e encolhe com o conteúdo, mantendo as margens. Parecido com o flexbox do CSS.",
-      "assunto": "figma"
+      "assunto": "figma",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1025,7 +1103,8 @@
       ],
       "correct": 1,
       "explain": "<b>Do rascunho ao clicável:</b> wireframe (estrutura), mockup (visual estático) e protótipo (interativo).",
-      "assunto": "proto"
+      "assunto": "proto",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1038,7 +1117,8 @@
       ],
       "correct": 1,
       "explain": "<b>Esqueleto da tela:</b> caixas e linhas mostram onde vai cada coisa, sem cor nem foto. É rápido de fazer e de mudar.",
-      "assunto": "proto"
+      "assunto": "proto",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1051,7 +1131,8 @@
       ],
       "correct": 1,
       "explain": "<b>Fase de detalhe:</b> no começo, o papel (baixa fidelidade) é melhor. A alta fidelidade serve para testar o visual e as interações quase finais.",
-      "assunto": "proto"
+      "assunto": "proto",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1064,7 +1145,8 @@
       ],
       "correct": 1,
       "explain": "<b>Cor com significado:</b> vermelho avisa “cuidado, ação séria”. Mas nunca use só a cor: o texto também precisa deixar claro.",
-      "assunto": "cores"
+      "assunto": "cores",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1077,7 +1159,8 @@
       ],
       "correct": 1,
       "explain": "<b>Inspeção por especialistas:</b> na avaliação heurística, avaliadores percorrem a interface com a lista de heurísticas na mão e anotam os problemas.",
-      "assunto": "heur"
+      "assunto": "heur",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1090,7 +1173,8 @@
       ],
       "correct": 1,
       "explain": "<b>Vários olhos, separados:</b> cada avaliador acha problemas diferentes. Eles avaliam sozinhos e só depois juntam as listas.",
-      "assunto": "heur"
+      "assunto": "heur",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1103,7 +1187,8 @@
       ],
       "correct": 1,
       "explain": "<b>Escala de 0 a 4:</b> 0 = não é problema; 1 = cosmético; 2 = pequeno; 3 = grande; 4 = catástrofe, que impede o lançamento.",
-      "assunto": "heur"
+      "assunto": "heur",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1116,7 +1201,8 @@
       ],
       "correct": 1,
       "explain": "<b>Aprender usando:</b> o avaliador se coloca no lugar de um usuário novo e percorre a tarefa passo a passo, conferindo se ele conseguiria aprender sozinho.",
-      "assunto": "heur"
+      "assunto": "heur",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1129,7 +1215,8 @@
       ],
       "correct": 1,
       "explain": "<b>Perguntas a cada passo:</b> o usuário vai tentar fazer a coisa certa? Vai ver que a ação existe? Vai ligar a ação ao objetivo? Vai perceber que avançou?",
-      "assunto": "heur"
+      "assunto": "heur",
+      "nivel": 3
     },
     {
       "topic": "avaliacao",
@@ -1142,7 +1229,8 @@
       ],
       "correct": 1,
       "explain": "<b>Gente de verdade:</b> no teste de usabilidade, quem vai usar tenta fazer tarefas reais enquanto a equipe observa onde a pessoa trava.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1155,7 +1243,8 @@
       ],
       "correct": 1,
       "explain": "<b>Narrar o pensamento:</b> “estou procurando o botão de pagar... achei que fosse aqui”. Isso mostra onde a interface confunde.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1168,7 +1257,8 @@
       ],
       "correct": 1,
       "explain": "<b>Não ajudar:</b> “onde você acha que seria?”. Se o facilitador mostra, o teste deixa de revelar o problema.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 3
     },
     {
       "topic": "avaliacao",
@@ -1181,7 +1271,8 @@
       ],
       "correct": 1,
       "explain": "<b>Poucos e várias vezes:</b> cerca de 5 usuários acham a maior parte dos problemas. Melhor fazer várias rodadas pequenas do que uma enorme.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1194,7 +1285,8 @@
       ],
       "correct": 1,
       "explain": "<b>Medidas de uso:</b> taxa de sucesso, tempo na tarefa, número de erros e satisfação. Tudo sobre a pessoa usando, não sobre o código.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1207,7 +1299,8 @@
       ],
       "correct": 1,
       "explain": "<b>Opinião em número:</b> são 10 afirmações respondidas de 1 a 5, que viram uma nota de 0 a 100. Por volta de 68 é a média.",
-      "assunto": "teste"
+      "assunto": "teste",
+      "nivel": 3
     },
     {
       "topic": "avaliacao",
@@ -1220,7 +1313,8 @@
       ],
       "correct": 1,
       "explain": "<b>POUR:</b> Perceptível (dá para perceber), Operável (dá para usar), Compreensível (dá para entender) e Robusto (funciona em tecnologias assistivas).",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1233,7 +1327,8 @@
       ],
       "correct": 1,
       "explain": "<b>4,5 para 1:</b> o texto precisa ser 4,5 vezes mais “forte” que o fundo. No nível AAA, o mínimo sobe para 7:1.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1246,7 +1341,8 @@
       ],
       "correct": 1,
       "explain": "<b>Letra grande pede menos:</b> texto grande já é mais fácil de ler, então o mínimo no AA cai para 3:1.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1259,7 +1355,8 @@
       ],
       "correct": 1,
       "explain": "<b>Imagem em palavras:</b> o leitor de tela lê o alt para quem não enxerga. Imagem só decorativa leva alt vazio.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1272,7 +1369,8 @@
       ],
       "correct": 1,
       "explain": "<b>Nunca só a cor:</b> acrescente um ícone e um texto (“Informe o CPF”). Quem não distingue cores também precisa entender.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 3
     },
     {
       "topic": "avaliacao",
@@ -1285,7 +1383,8 @@
       ],
       "correct": 1,
       "explain": "<b>Operável:</b> pessoas com deficiência motora ou que usam leitor de tela navegam pelo teclado. Se só funciona com mouse, elas ficam de fora.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1298,7 +1397,8 @@
       ],
       "correct": 1,
       "explain": "<b>Foco visível:</b> o contorno mostra onde o Tab está. Sem ele, quem usa teclado fica “no escuro”. Dá para estilizar, mas não para remover.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 3
     },
     {
       "topic": "avaliacao",
@@ -1311,7 +1411,8 @@
       ],
       "correct": 1,
       "explain": "<b>Mais letras, mais exigente:</b> A é o mínimo, AA é o mais pedido em leis e contratos, e AAA é o máximo.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 1
     },
     {
       "topic": "avaliacao",
@@ -1324,7 +1425,8 @@
       ],
       "correct": 1,
       "explain": "<b>LBI:</b> a Lei Brasileira de Inclusão obriga sites de empresas e do governo a serem acessíveis. O governo também segue o eMAG.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 2
     },
     {
       "topic": "avaliacao",
@@ -1337,7 +1439,8 @@
       ],
       "correct": 1,
       "explain": "<b>Perceptível:</b> o som precisa de alternativa visual. Legendas atendem a todos; a janela de Libras atende quem tem a Libras como primeira língua.",
-      "assunto": "acess"
+      "assunto": "acess",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1350,7 +1453,8 @@
         "rgb(204, 17, 80)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), 50 = 80 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), 50 = 80 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1363,7 +1467,8 @@
         "Pôr um guia curto de como marcar o banho"
       ],
       "correct": 1,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -1376,7 +1481,8 @@
         "Um aviso aparece logo que a busca no acervo roda"
       ],
       "correct": 1,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1389,7 +1495,8 @@
         "hsl(340, 50%, 60%)"
       ],
       "correct": 3,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1402,7 +1509,8 @@
         "Oferecer “desfazer” ao remover uma reserva"
       ],
       "correct": 3,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1415,7 +1523,8 @@
         "rgb(34, 68, 96)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> 44 = 68 (vermelho), 22 = 34 (verde), 60 = 96 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 44 = 68 (vermelho), 22 = 34 (verde), 60 = 96 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -1428,7 +1537,8 @@
         "Chamar de “Processar” o botão de marcar uma aula"
       ],
       "correct": 0,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1441,7 +1551,8 @@
         "rgb(204, 136, 96)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 88 = 136 (verde), 60 = 96 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 88 = 136 (verde), 60 = 96 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1454,7 +1565,8 @@
         "Oferecer “desfazer” ao tirar um item da mesa"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1467,7 +1579,8 @@
         "Trocar um valor e mudar a cor de todas as telas da escola"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1480,7 +1593,8 @@
         "Trocar um valor e mudar a cor de todas as telas do pet shop"
       ],
       "correct": 3,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1493,7 +1607,8 @@
         "Pôr um guia curto de como criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1506,7 +1621,8 @@
         "Trocar um valor e mudar a cor de todas as telas da escola"
       ],
       "correct": 2,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1519,7 +1635,8 @@
         "Rabiscar no papel a tela de lançar a nota"
       ],
       "correct": 0,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -1532,7 +1649,8 @@
         "O usuário não acha onde escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1545,7 +1663,8 @@
         "rgb(34, 0, 16)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> 00 = 0 (vermelho), 22 = 34 (verde), 10 = 16 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 00 = 0 (vermelho), 22 = 34 (verde), 10 = 16 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1558,7 +1677,8 @@
         "Mostrar uma barra enquanto o boletim é montado"
       ],
       "correct": 0,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1571,7 +1691,8 @@
         "Tirar da tela o que não ajuda a agendar a consulta"
       ],
       "correct": 1,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -1584,7 +1705,8 @@
         "Um texto sobre o lote do remédio parece um botão"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1597,7 +1719,8 @@
         "rgb(136, 170, 112)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), AA = 170 (verde), 70 = 112 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), AA = 170 (verde), 70 = 112 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -1610,7 +1733,8 @@
         "hsl(60, 70%, 40%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1623,7 +1747,8 @@
         "Pôr um guia curto de como vender o remédio"
       ],
       "correct": 1,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1636,7 +1761,8 @@
         "hsl(160, 60%, 50%)"
       ],
       "correct": 3,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1649,7 +1775,8 @@
         "Tirar da tela o que não ajuda a fechar o pedido"
       ],
       "correct": 1,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -1662,7 +1789,8 @@
         "O usuário não acha onde registrar a entrega"
       ],
       "correct": 2,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1675,7 +1803,8 @@
         "Chamar de “Processar” o botão de renovar o empréstimo"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -1688,7 +1817,8 @@
         "Oferecer “desfazer” ao desmarcar uma aula"
       ],
       "correct": 3,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1701,7 +1831,8 @@
         "Tirar da tela o que não ajuda a escolher a poltrona"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1714,7 +1845,8 @@
         "Usar um só ícone para escolher a poltrona"
       ],
       "correct": 3,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1727,7 +1859,8 @@
         "Mostrar uma barra enquanto o exame é enviado"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1740,7 +1873,8 @@
         "Chamar de “Processar” o botão de fazer um Pix"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -1753,7 +1887,8 @@
         "Trocar um valor e mudar a cor de todas as telas do cinema"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -1766,7 +1901,8 @@
         "Mostrar uma barra enquanto o orçamento é gerado"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1779,7 +1915,8 @@
         "Rabiscar no papel a tela de fechar o pedido"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1792,7 +1929,8 @@
         "Chamar de “Processar” o botão de enviar a comanda"
       ],
       "correct": 2,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1805,7 +1943,8 @@
         "hsl(10, 70%, 50%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1818,7 +1957,8 @@
         "rgb(64, 170, 221)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), AA = 170 (verde), 40 = 64 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), AA = 170 (verde), 40 = 64 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1831,7 +1971,8 @@
         "Oferecer “desfazer” ao remover uma peça"
       ],
       "correct": 0,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -1844,7 +1985,8 @@
         "Chamar de “Processar” o botão de escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1857,7 +1999,8 @@
         "rgb(176, 102, 255)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), 66 = 102 (verde), B0 = 176 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), 66 = 102 (verde), B0 = 176 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -1870,7 +2013,8 @@
         "Mostrar uma barra enquanto o pagamento é processado"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1883,7 +2027,8 @@
         "rgb(16, 221, 204)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), DD = 221 (verde), 10 = 16 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), DD = 221 (verde), 10 = 16 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -1896,7 +2041,8 @@
         "O usuário não sabe se a rota é traçada"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -1909,7 +2055,8 @@
         "O usuário não acha onde renovar o empréstimo"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -1922,7 +2069,8 @@
         "Tirar da tela o que não ajuda a abrir a ordem de serviço"
       ],
       "correct": 2,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -1935,7 +2083,8 @@
         "Rabiscar no papel a tela de criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -1948,7 +2097,8 @@
         "Tirar da tela o que não ajuda a enviar a comanda"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1961,7 +2111,8 @@
         "Trocar um valor e mudar a cor de todas as telas da biblioteca"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -1974,7 +2125,8 @@
         "Oferecer “desfazer” ao desmarcar uma aula"
       ],
       "correct": 0,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -1987,7 +2139,8 @@
         "rgb(255, 238, 224)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), EE = 238 (verde), E0 = 224 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> FF = 255 (vermelho), EE = 238 (verde), E0 = 224 (azul).",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -2000,7 +2153,8 @@
         "Trocar um valor e mudar a cor de todas as telas da oficina"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2013,7 +2167,8 @@
         "rgb(144, 51, 119)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 90 = 144 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 90 = 144 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2026,7 +2181,8 @@
         "Chamar de “Processar” o botão de reservar o quarto"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2039,7 +2195,8 @@
         "Mostrar uma barra enquanto o boletim é montado"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2052,7 +2209,8 @@
         "Oferecer “desfazer” ao liberar uma vaga"
       ],
       "correct": 3,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -2065,7 +2223,8 @@
         "Um texto sobre o saldo parece um botão"
       ],
       "correct": 3,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2078,7 +2237,8 @@
         "Um texto sobre o estoque parece um botão"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2091,7 +2251,8 @@
         "rgb(112, 238, 51)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), EE = 238 (verde), 70 = 112 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), EE = 238 (verde), 70 = 112 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2104,7 +2265,8 @@
         "rgb(187, 128, 34)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 22 = 34 (verde), 80 = 128 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 22 = 34 (verde), 80 = 128 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2117,7 +2279,8 @@
         "rgb(221, 34, 144)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 22 = 34 (verde), 90 = 144 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 22 = 34 (verde), 90 = 144 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2130,7 +2293,8 @@
         "hsl(110, 40%, 30%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -2143,7 +2307,8 @@
         "Um aviso aparece logo que a ficha de treino abre"
       ],
       "correct": 3,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2156,7 +2321,8 @@
         "rgb(192, 0, 85)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), 00 = 0 (verde), C0 = 192 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), 00 = 0 (verde), C0 = 192 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2169,7 +2335,8 @@
         "Chamar de “Processar” o botão de registrar a saída"
       ],
       "correct": 2,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2182,7 +2349,8 @@
         "rgb(128, 51, 17)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> 11 = 17 (vermelho), 33 = 51 (verde), 80 = 128 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 11 = 17 (vermelho), 33 = 51 (verde), 80 = 128 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2195,7 +2363,8 @@
         "Mostrar uma barra enquanto o álbum é baixado"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2208,7 +2377,8 @@
         "Chamar de “Processar” o botão de registrar a entrega"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2221,7 +2391,8 @@
         "hsl(90, 70%, 50%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2234,7 +2405,8 @@
         "Montar a tela de fechar o pedido já com as cores finais"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -2247,7 +2419,8 @@
         "Um texto sobre a ficha do animal parece um botão"
       ],
       "correct": 3,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -2260,7 +2433,8 @@
         "Montar a tela de reservar o quarto já com as cores finais"
       ],
       "correct": 1,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2273,7 +2447,8 @@
         "hsl(210, 50%, 40%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2286,7 +2461,8 @@
         "Pôr máscara no campo número da receita"
       ],
       "correct": 3,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2299,7 +2475,8 @@
         "hsl(0, 50%, 30%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2312,7 +2489,8 @@
         "hsl(280, 60%, 30%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2325,7 +2503,8 @@
         "rgb(255, 238, 112)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), FF = 255 (verde), 70 = 112 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), FF = 255 (verde), 70 = 112 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2338,7 +2517,8 @@
         "Um texto sobre o lote do remédio parece um botão"
       ],
       "correct": 3,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2351,7 +2531,8 @@
         "Pôr um guia curto de como fazer um Pix"
       ],
       "correct": 0,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2364,7 +2545,8 @@
         "Usar um só ícone para fazer um Pix"
       ],
       "correct": 2,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2377,7 +2559,8 @@
         "Tirar da tela o que não ajuda a renovar o empréstimo"
       ],
       "correct": 2,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2390,7 +2573,8 @@
         "Um aviso aparece logo que o exame é enviado"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2403,7 +2587,8 @@
         "Mostrar uma barra enquanto o boletim é montado"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2416,7 +2601,8 @@
         "Pôr um guia curto de como fazer um Pix"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -2429,7 +2615,8 @@
         "Montar a tela de agendar a consulta já com as cores finais"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2442,7 +2629,8 @@
         "Tirar da tela o que não ajuda a enviar a comanda"
       ],
       "correct": 0,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2455,7 +2643,8 @@
         "Mostrar uma barra enquanto a conta é fechada"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -2468,7 +2657,8 @@
         "O usuário não sabe se o exame é enviado"
       ],
       "correct": 0,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2481,7 +2671,8 @@
         "O usuário não acha onde abrir a ordem de serviço"
       ],
       "correct": 1,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2494,7 +2685,8 @@
         "Tirar da tela o que não ajuda a escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2507,7 +2699,8 @@
         "Mostrar uma barra enquanto o ingresso é emitido"
       ],
       "correct": 0,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2520,7 +2713,8 @@
         "Pôr um guia curto de como reservar o quarto"
       ],
       "correct": 3,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2533,7 +2727,8 @@
         "Mostrar uma barra enquanto o álbum é baixado"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2546,7 +2741,8 @@
         "hsl(250, 80%, 30%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2559,7 +2755,8 @@
         "Oferecer “desfazer” ao cancelar uma reserva"
       ],
       "correct": 0,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2572,7 +2769,8 @@
         "Um aviso aparece logo que a reserva é confirmada"
       ],
       "correct": 2,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2585,7 +2783,8 @@
         "rgb(187, 85, 144)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), BB = 187 (verde), 90 = 144 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 55 = 85 (vermelho), BB = 187 (verde), 90 = 144 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2598,7 +2797,8 @@
         "hsl(10, 70%, 20%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2611,7 +2811,8 @@
         "Um aviso aparece logo que o boletim é montado"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2624,7 +2825,8 @@
         "Mostrar uma barra enquanto a busca no acervo roda"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2637,7 +2839,8 @@
         "Mostrar uma barra enquanto a vacina é registrada"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2650,7 +2853,8 @@
         "Oferecer “desfazer” ao apagar um favorito"
       ],
       "correct": 3,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2663,7 +2867,8 @@
         "rgb(238, 68, 16)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 44 = 68 (verde), 10 = 16 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 44 = 68 (verde), 10 = 16 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2676,7 +2881,8 @@
         "Usar um só ícone para registrar a entrega"
       ],
       "correct": 3,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2689,7 +2895,8 @@
         "Tirar da tela o que não ajuda a registrar a entrega"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2702,7 +2909,8 @@
         "hsl(330, 60%, 50%)"
       ],
       "correct": 3,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2715,7 +2923,8 @@
         "Mostrar uma barra enquanto a ficha de treino abre"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2728,7 +2937,8 @@
         "Um aviso aparece logo que o orçamento é gerado"
       ],
       "correct": 3,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -2741,7 +2951,8 @@
         "Rabiscar no papel a tela de marcar o banho"
       ],
       "correct": 2,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2754,7 +2965,8 @@
         "Usar um só ícone para registrar a saída"
       ],
       "correct": 3,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -2767,7 +2979,8 @@
         "O usuário não acha onde marcar uma aula"
       ],
       "correct": 2,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2780,7 +2993,8 @@
         "Mostrar uma barra enquanto o boletim é montado"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2793,7 +3007,8 @@
         "Oferecer “desfazer” ao desmarcar um banho"
       ],
       "correct": 0,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2806,7 +3021,8 @@
         "rgb(192, 153, 204)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 99 = 153 (verde), C0 = 192 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 99 = 153 (verde), C0 = 192 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2819,7 +3035,8 @@
         "Chamar de “Processar” o botão de escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -2832,7 +3049,8 @@
         "Trocar um valor e mudar a cor de todas as telas do banco"
       ],
       "correct": 2,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2845,7 +3063,8 @@
         "hsl(230, 90%, 40%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2858,7 +3077,8 @@
         "Deixar à vista os treinos feitos"
       ],
       "correct": 1,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -2871,7 +3091,8 @@
         "O usuário não acha onde lançar a nota"
       ],
       "correct": 1,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2884,7 +3105,8 @@
         "Mostrar uma barra enquanto a rota é traçada"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -2897,7 +3119,8 @@
         "Pôr um guia curto de como marcar uma aula"
       ],
       "correct": 3,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -2910,7 +3133,8 @@
         "Pôr um guia curto de como registrar a entrega"
       ],
       "correct": 2,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -2923,7 +3147,8 @@
         "hsl(280, 50%, 20%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -2936,7 +3161,8 @@
         "Um aviso aparece logo que o boletim é montado"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2949,7 +3175,8 @@
         "Tirar da tela o que não ajuda a registrar a saída"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -2962,7 +3189,8 @@
         "rgb(221, 16, 187)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), BB = 187 (verde), 10 = 16 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), BB = 187 (verde), 10 = 16 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -2975,7 +3203,8 @@
         "rgb(34, 128, 238)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), EE = 238 (verde), 80 = 128 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), EE = 238 (verde), 80 = 128 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -2988,7 +3217,8 @@
         "Pôr um guia curto de como fechar o pedido"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3001,7 +3231,8 @@
         "Tirar da tela o que não ajuda a abrir a ordem de serviço"
       ],
       "correct": 0,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3014,7 +3245,8 @@
         "Usar um só ícone para registrar a saída"
       ],
       "correct": 2,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3027,7 +3259,8 @@
         "hsl(0, 60%, 50%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3040,7 +3273,8 @@
         "hsl(0, 50%, 10%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3053,7 +3287,8 @@
         "O usuário não acha onde marcar uma aula"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3066,7 +3301,8 @@
         "Um aviso aparece logo que o boletim é montado"
       ],
       "correct": 0,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3079,7 +3315,8 @@
         "Pôr um guia curto de como vender o remédio"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3092,7 +3329,8 @@
         "Pôr um guia curto de como reservar o quarto"
       ],
       "correct": 2,
-      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou."
+      "explain": "<b>Controle e liberdade:</b> dá uma saída fácil para quem se enganou.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3105,7 +3343,8 @@
         "O usuário não acha onde reservar o quarto"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3118,7 +3357,8 @@
         "rgb(221, 160, 153)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 99 = 153 (verde), A0 = 160 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 99 = 153 (verde), A0 = 160 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3131,7 +3371,8 @@
         "hsl(80, 40%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3144,7 +3385,8 @@
         "Pôr máscara no campo nome da playlist"
       ],
       "correct": 3,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3157,7 +3399,8 @@
         "Rabiscar no papel a tela de marcar uma aula"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3170,7 +3413,8 @@
         "Rabiscar no papel a tela de reservar o quarto"
       ],
       "correct": 1,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3183,7 +3427,8 @@
         "hsl(330, 60%, 30%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3196,7 +3441,8 @@
         "Rabiscar no papel a tela de criar a playlist"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3209,7 +3455,8 @@
         "Um texto sobre a agenda médica parece um botão"
       ],
       "correct": 2,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3222,7 +3469,8 @@
         "Um aviso aparece logo que a receita é validada"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3235,7 +3483,8 @@
         "rgb(51, 187, 160)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), A0 = 160 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), A0 = 160 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3248,7 +3497,8 @@
         "Pôr um guia curto de como registrar a saída"
       ],
       "correct": 3,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -3261,7 +3511,8 @@
         "Mostrar uma barra enquanto a vacina é registrada"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3274,7 +3525,8 @@
         "Um texto sobre o saldo parece um botão"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3287,7 +3539,8 @@
         "hsl(310, 50%, 40%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -3300,7 +3553,8 @@
         "Rabiscar no papel a tela de vender o remédio"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3313,7 +3567,8 @@
         "O usuário não acha onde criar a playlist"
       ],
       "correct": 0,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3326,7 +3581,8 @@
         "O usuário não acha onde criar a playlist"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -3339,7 +3595,8 @@
         "Pôr máscara no campo número da receita"
       ],
       "correct": 2,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3352,7 +3609,8 @@
         "Rabiscar no papel a tela de enviar a comanda"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3365,7 +3623,8 @@
         "O usuário não acha onde renovar o empréstimo"
       ],
       "correct": 3,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3378,7 +3637,8 @@
         "Chamar de “Processar” o botão de abrir a ordem de serviço"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -3391,7 +3651,8 @@
         "Tirar da tela o que não ajuda a renovar o empréstimo"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3404,7 +3665,8 @@
         "rgb(204, 16, 102)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 66 = 102 (verde), 10 = 16 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 66 = 102 (verde), 10 = 16 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3417,7 +3679,8 @@
         "O usuário não sabe se o ticket é impresso"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3430,7 +3693,8 @@
         "Um texto sobre o lote do remédio parece um botão"
       ],
       "correct": 1,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3443,7 +3707,8 @@
         "Rabiscar no papel a tela de registrar a saída"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -3456,7 +3721,8 @@
         "Chamar de “Processar” o botão de criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3469,7 +3735,8 @@
         "Chamar de “Processar” o botão de registrar a entrega"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3482,7 +3749,8 @@
         "rgb(204, 224, 17)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), E0 = 224 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), 11 = 17 (verde), E0 = 224 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3495,7 +3763,8 @@
         "Oferecer “desfazer” ao soltar uma poltrona"
       ],
       "correct": 0,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3508,7 +3777,8 @@
         "O usuário não sabe se o comprovante é gerado"
       ],
       "correct": 3,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3521,7 +3791,8 @@
         "Um aviso aparece logo que o ticket é impresso"
       ],
       "correct": 3,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3534,7 +3805,8 @@
         "Rabiscar no papel a tela de fazer um Pix"
       ],
       "correct": 2,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3547,7 +3819,8 @@
         "O usuário não sabe se a vacina é registrada"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -3560,7 +3833,8 @@
         "Pôr máscara no campo data da aula"
       ],
       "correct": 0,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3573,7 +3847,8 @@
         "Pôr máscara no campo peso do animal"
       ],
       "correct": 3,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3586,7 +3861,8 @@
         "Pôr máscara no campo peso da carga"
       ],
       "correct": 3,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3599,7 +3875,8 @@
         "Rabiscar no papel a tela de marcar o banho"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3612,7 +3889,8 @@
         "Um aviso aparece logo que o ingresso é emitido"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3625,7 +3903,8 @@
         "Usar um só ícone para fechar o pedido"
       ],
       "correct": 3,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3638,7 +3917,8 @@
         "hsl(260, 60%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3651,7 +3931,8 @@
         "Pôr máscara no campo peso do animal"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3664,7 +3945,8 @@
         "O usuário não acha onde fechar o pedido"
       ],
       "correct": 0,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3677,7 +3959,8 @@
         "Mostrar uma barra enquanto a conta é fechada"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3690,7 +3973,8 @@
         "rgb(119, 128, 51)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 80 = 128 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 77 = 119 (vermelho), 33 = 51 (verde), 80 = 128 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3703,7 +3987,8 @@
         "hsl(20, 50%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3716,7 +4001,8 @@
         "Usar um só ícone para renovar o empréstimo"
       ],
       "correct": 1,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3729,7 +4015,8 @@
         "O usuário não acha onde escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3742,7 +4029,8 @@
         "Deixar à vista os hotéis visitados"
       ],
       "correct": 0,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3755,7 +4043,8 @@
         "Tirar da tela o que não ajuda a vender o remédio"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3768,7 +4057,8 @@
         "Tirar da tela o que não ajuda a lançar a nota"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -3781,7 +4071,8 @@
         "O usuário não acha onde agendar a consulta"
       ],
       "correct": 3,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3794,7 +4085,8 @@
         "Tirar da tela o que não ajuda a criar a playlist"
       ],
       "correct": 2,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3807,7 +4099,8 @@
         "Pôr um guia curto de como registrar a saída"
       ],
       "correct": 2,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3820,7 +4113,8 @@
         "Um texto sobre as peças parece um botão"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3833,7 +4127,8 @@
         "rgb(170, 51, 96)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 33 = 51 (verde), 60 = 96 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 33 = 51 (verde), 60 = 96 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3846,7 +4141,8 @@
         "hsl(210, 40%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -3859,7 +4155,8 @@
         "Deixar à vista os produtos vistos"
       ],
       "correct": 3,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -3872,7 +4169,8 @@
         "hsl(50, 40%, 70%)"
       ],
       "correct": 3,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3885,7 +4183,8 @@
         "Trocar um valor e mudar a cor de todas as telas da farmácia"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3898,7 +4197,8 @@
         "Montar a tela de marcar o banho já com as cores finais"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3911,7 +4211,8 @@
         "rgb(51, 187, 48)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), 30 = 48 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), BB = 187 (verde), 30 = 48 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -3924,7 +4225,8 @@
         "hsl(140, 60%, 60%)"
       ],
       "correct": 3,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -3937,7 +4239,8 @@
         "O usuário não acha onde fechar o pedido"
       ],
       "correct": 2,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -3950,7 +4253,8 @@
         "hsl(60, 60%, 10%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -3963,7 +4267,8 @@
         "Usar um só ícone para renovar o empréstimo"
       ],
       "correct": 3,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -3976,7 +4281,8 @@
         "Mostrar uma barra enquanto o ingresso é emitido"
       ],
       "correct": 3,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -3989,7 +4295,8 @@
         "Um texto sobre a ficha do animal parece um botão"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -4002,7 +4309,8 @@
         "Montar a tela de fechar o pedido já com as cores finais"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4015,7 +4323,8 @@
         "O usuário não sabe se a ficha de treino abre"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4028,7 +4337,8 @@
         "hsl(40, 60%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4041,7 +4351,8 @@
         "Chamar de “Processar” o botão de agendar a consulta"
       ],
       "correct": 2,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -4054,7 +4365,8 @@
         "Pôr um guia curto de como enviar a comanda"
       ],
       "correct": 0,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4067,7 +4379,8 @@
         "Tirar da tela o que não ajuda a vender o remédio"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4080,7 +4393,8 @@
         "rgb(34, 176, 204)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), CC = 204 (verde), B0 = 176 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 22 = 34 (vermelho), CC = 204 (verde), B0 = 176 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4093,7 +4407,8 @@
         "Rabiscar no papel a tela de renovar o empréstimo"
       ],
       "correct": 0,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -4106,7 +4421,8 @@
         "Tirar da tela o que não ajuda a agendar a consulta"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4119,7 +4435,8 @@
         "Um texto sobre a rota do dia parece um botão"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4132,7 +4449,8 @@
         "Pôr um guia curto de como abrir a ordem de serviço"
       ],
       "correct": 3,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4145,7 +4463,8 @@
         "rgb(17, 136, 160)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), 11 = 17 (verde), A0 = 160 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 88 = 136 (vermelho), 11 = 17 (verde), A0 = 160 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4158,7 +4477,8 @@
         "rgb(0, 238, 32)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 00 = 0 (verde), 20 = 32 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> EE = 238 (vermelho), 00 = 0 (verde), 20 = 32 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4171,7 +4491,8 @@
         "rgb(221, 96, 51)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 33 = 51 (verde), 60 = 96 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> DD = 221 (vermelho), 33 = 51 (verde), 60 = 96 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -4184,7 +4505,8 @@
         "O usuário não sabe se a conta é fechada"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4197,7 +4519,8 @@
         "hsl(210, 70%, 10%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4210,7 +4533,8 @@
         "hsl(290, 70%, 20%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -4223,7 +4547,8 @@
         "Trocar um valor e mudar a cor de todas as telas do estacionamento"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4236,7 +4561,8 @@
         "rgb(204, 144, 170)"
       ],
       "correct": 0,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), AA = 170 (verde), 90 = 144 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), AA = 170 (verde), 90 = 144 (azul).",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -4249,7 +4575,8 @@
         "Chamar de “Processar” o botão de enviar a comanda"
       ],
       "correct": 3,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4262,7 +4589,8 @@
         "O usuário não acha onde registrar a saída"
       ],
       "correct": 0,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4275,7 +4603,8 @@
         "Usar um só ícone para agendar a consulta"
       ],
       "correct": 0,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4288,7 +4617,8 @@
         "Tirar da tela o que não ajuda a renovar o empréstimo"
       ],
       "correct": 0,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4301,7 +4631,8 @@
         "Deixar à vista os carros atendidos"
       ],
       "correct": 3,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4314,7 +4645,8 @@
         "Usar um só ícone para reservar o quarto"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4327,7 +4659,8 @@
         "Tirar da tela o que não ajuda a agendar a consulta"
       ],
       "correct": 2,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4340,7 +4673,8 @@
         "hsl(180, 50%, 40%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "ihc",
@@ -4353,7 +4687,8 @@
         "Rabiscar no papel a tela de registrar a entrega"
       ],
       "correct": 0,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -4366,7 +4701,8 @@
         "Um aviso aparece logo que o pagamento é processado"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4379,7 +4715,8 @@
         "rgb(255, 170, 240)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), FF = 255 (verde), F0 = 240 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), FF = 255 (verde), F0 = 240 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4392,7 +4729,8 @@
         "hsl(270, 40%, 20%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4405,7 +4743,8 @@
         "Tirar da tela o que não ajuda a fechar o pedido"
       ],
       "correct": 0,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -4418,7 +4757,8 @@
         "Tirar da tela o que não ajuda a criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4431,7 +4771,8 @@
         "Um texto sobre a lista de faixas parece um botão"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4444,7 +4785,8 @@
         "rgb(170, 240, 119)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 77 = 119 (verde), F0 = 240 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> AA = 170 (vermelho), 77 = 119 (verde), F0 = 240 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4457,7 +4799,8 @@
         "hsl(190, 40%, 30%)"
       ],
       "correct": 0,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4470,7 +4813,8 @@
         "Pôr um guia curto de como marcar o banho"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4483,7 +4827,8 @@
         "Tirar da tela o que não ajuda a fazer um Pix"
       ],
       "correct": 1,
-      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa."
+      "explain": "<b>Ajuda e documentação:</b> orientação curta, na hora certa.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4496,7 +4841,8 @@
         "Tirar da tela o que não ajuda a reservar o quarto"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4509,7 +4855,8 @@
         "Pôr um guia curto de como marcar uma aula"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4522,7 +4869,8 @@
         "Deixar à vista as placas lidas"
       ],
       "correct": 3,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4535,7 +4883,8 @@
         "O usuário não acha onde registrar a saída"
       ],
       "correct": 2,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4548,7 +4897,8 @@
         "rgb(17, 102, 192)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> 66 = 102 (vermelho), 11 = 17 (verde), C0 = 192 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 66 = 102 (vermelho), 11 = 17 (verde), C0 = 192 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -4561,7 +4911,8 @@
         "O usuário não sabe se a rota é traçada"
       ],
       "correct": 0,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4574,7 +4925,8 @@
         "Deixar à vista as faixas tocadas"
       ],
       "correct": 3,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4587,7 +4939,8 @@
         "Pôr máscara no campo nota da prova"
       ],
       "correct": 3,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4600,7 +4953,8 @@
         "hsl(90, 90%, 30%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4613,7 +4967,8 @@
         "Rabiscar no papel a tela de vender o remédio"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "ihc",
@@ -4626,7 +4981,8 @@
         "Montar a tela de renovar o empréstimo já com as cores finais"
       ],
       "correct": 1,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4639,7 +4995,8 @@
         "rgb(255, 204, 240)"
       ],
       "correct": 2,
-      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), FF = 255 (verde), F0 = 240 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> CC = 204 (vermelho), FF = 255 (verde), F0 = 240 (azul).",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4652,7 +5009,8 @@
         "Deixar à vista os produtos vistos"
       ],
       "correct": 2,
-      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça."
+      "explain": "<b>Prevenção de erros:</b> evita o erro antes que ele aconteça.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4665,7 +5023,8 @@
         "rgb(187, 240, 119)"
       ],
       "correct": 1,
-      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 77 = 119 (verde), F0 = 240 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> BB = 187 (vermelho), 77 = 119 (verde), F0 = 240 (azul).",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -4678,7 +5037,8 @@
         "O usuário não acha onde enviar a comanda"
       ],
       "correct": 1,
-      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo."
+      "explain": "<b>Golfo de avaliação:</b> a pessoa não sabe se deu certo.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4691,7 +5051,8 @@
         "Trocar um valor e mudar a cor de todas as telas da clínica"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final."
+      "explain": "<b>Protótipo de alta fidelidade:</b> parecido com o produto final.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -4704,7 +5065,8 @@
         "Oferecer “desfazer” ao excluir um horário"
       ],
       "correct": 1,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4717,7 +5079,8 @@
         "hsl(220, 50%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4730,7 +5093,8 @@
         "hsl(270, 70%, 20%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -4743,7 +5107,8 @@
         "Rabiscar no papel a tela de lançar a nota"
       ],
       "correct": 2,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 1
     },
     {
       "topic": "heuristicas",
@@ -4756,7 +5121,8 @@
         "Pôr um guia curto de como escolher a poltrona"
       ],
       "correct": 1,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 3
     },
     {
       "topic": "heuristicas",
@@ -4769,7 +5135,8 @@
         "Tirar da tela o que não ajuda a vender o remédio"
       ],
       "correct": 3,
-      "explain": "<b>Design minimalista:</b> só o necessário na tela."
+      "explain": "<b>Design minimalista:</b> só o necessário na tela.",
+      "nivel": 2
     },
     {
       "topic": "ihc",
@@ -4782,7 +5149,8 @@
         "Chamar de “Processar” o botão de marcar uma aula"
       ],
       "correct": 3,
-      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer."
+      "explain": "<b>Comunicabilidade ruim:</b> a interface não transmite o que quer dizer.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4795,7 +5163,8 @@
         "Pôr um guia curto de como lançar a nota"
       ],
       "correct": 0,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4808,7 +5177,8 @@
         "Montar a tela de abrir a ordem de serviço já com as cores finais"
       ],
       "correct": 2,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -4821,7 +5191,8 @@
         "O usuário não acha onde reservar o quarto"
       ],
       "correct": 3,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4834,7 +5205,8 @@
         "O usuário não sabe se a busca no acervo roda"
       ],
       "correct": 2,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4847,7 +5219,8 @@
         "Oferecer “desfazer” ao excluir uma parada"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4860,7 +5233,8 @@
         "Mostrar uma barra enquanto o comprovante é gerado"
       ],
       "correct": 1,
-      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória."
+      "explain": "<b>Reconhecimento em vez de memorização:</b> mostra as opções, sem exigir memória.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4873,7 +5247,8 @@
         "hsl(190, 80%, 50%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -4886,7 +5261,8 @@
         "O usuário não sabe se a vacina é registrada"
       ],
       "correct": 1,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4899,7 +5275,8 @@
         "Pôr um guia curto de como enviar a comanda"
       ],
       "correct": 2,
-      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara."
+      "explain": "<b>Consistência e padrões:</b> a mesma coisa tem sempre a mesma cara.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -4912,7 +5289,8 @@
         "rgb(51, 0, 240)"
       ],
       "correct": 3,
-      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), 00 = 0 (verde), F0 = 240 (azul)."
+      "explain": "<b>Dois dígitos por canal:</b> 33 = 51 (vermelho), 00 = 0 (verde), F0 = 240 (azul).",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4925,7 +5303,8 @@
         "Montar a tela de agendar a consulta já com as cores finais"
       ],
       "correct": 1,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -4938,7 +5317,8 @@
         "Chamar de “Processar” o botão de vender o remédio"
       ],
       "correct": 1,
-      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele."
+      "explain": "<b>Variável de cor (token):</b> mudar um valor muda tudo que usa ele.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -4951,7 +5331,8 @@
         "Um aviso aparece logo que o orçamento é gerado"
       ],
       "correct": 2,
-      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir."
+      "explain": "<b>Golfo de execução:</b> a pessoa não sabe como agir.",
+      "nivel": 2
     },
     {
       "topic": "heuristicas",
@@ -4964,7 +5345,8 @@
         "Tirar da tela o que não ajuda a reservar o quarto"
       ],
       "correct": 2,
-      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo."
+      "explain": "<b>Visibilidade do status:</b> o sistema mostra o que está acontecendo.",
+      "nivel": 3
     },
     {
       "topic": "norman",
@@ -4977,7 +5359,8 @@
         "Um aviso aparece logo que o comprovante é gerado"
       ],
       "correct": 3,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -4990,7 +5373,8 @@
         "Trocar um valor e mudar a cor de todas as telas do hotel"
       ],
       "correct": 0,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -5003,7 +5387,8 @@
         "hsl(60, 70%, 10%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -5016,7 +5401,8 @@
         "O usuário não sabe se a reserva é confirmada"
       ],
       "correct": 2,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "norman",
@@ -5029,7 +5415,8 @@
         "Um texto sobre o mapa da sala parece um botão"
       ],
       "correct": 0,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -5042,7 +5429,8 @@
         "hsl(350, 80%, 40%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -5055,7 +5443,8 @@
         "hsl(270, 60%, 50%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -5068,7 +5457,8 @@
         "Chamar de “Processar” o botão de marcar uma aula"
       ],
       "correct": 2,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -5081,7 +5471,8 @@
         "hsl(210, 80%, 40%)"
       ],
       "correct": 2,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -5094,7 +5485,8 @@
         "Um aviso aparece logo que a conta é fechada"
       ],
       "correct": 3,
-      "explain": "<b>Bom feedback:</b> o sistema responde na hora."
+      "explain": "<b>Bom feedback:</b> o sistema responde na hora.",
+      "nivel": 1
     },
     {
       "topic": "visual",
@@ -5107,7 +5499,8 @@
         "hsl(350, 70%, 30%)"
       ],
       "correct": 1,
-      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta."
+      "explain": "<b>H é a cor, S a pureza e L a claridade:</b> para clarear, só o L aumenta.",
+      "nivel": 2
     },
     {
       "topic": "visual",
@@ -5120,7 +5513,8 @@
         "Rabiscar no papel a tela de escolher a poltrona"
       ],
       "correct": 3,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 3
     },
     {
       "topic": "visual",
@@ -5133,7 +5527,8 @@
         "Trocar um valor e mudar a cor de todas as telas do banco"
       ],
       "correct": 2,
-      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias."
+      "explain": "<b>Protótipo de baixa fidelidade:</b> rápido e barato, bom para descartar ideias.",
+      "nivel": 2
     },
     {
       "topic": "norman",
@@ -5146,7 +5541,153 @@
         "O usuário não sabe se a conta é fechada"
       ],
       "correct": 0,
-      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é."
+      "explain": "<b>Falsa affordance:</b> parece clicável, mas não é.",
+      "nivel": 1
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "explain": "<b>Prevenção de erros</b>: o sistema evita o problema antes que ele aconteça. A confirmação faz a pessoa pensar duas vezes antes de cancelar um pedido que já saiu.",
+      "statement": "<b>Heurísticas de Nielsen.</b> Num app de entregas, ao tocar em \"Cancelar pedido\", aparece \"Tem certeza? O pedido já saiu para entrega\", com os botões \"Voltar\" e \"Cancelar mesmo assim\". O cenário exemplifica a aplicação direta de qual heurística?",
+      "estilo": "prova",
+      "options": [
+        "Ajuda e documentação, pois abre um tutorial do app",
+        "Estética minimalista, pois a tela tem poucos elementos",
+        "Prevenção de erros, pois a confirmação evita um engano caro",
+        "Visibilidade do status, pois mostra uma barra de progresso"
+      ],
+      "correct": 2,
+      "nivel": 3
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "nielsen",
+      "explain": "<b>Controle e liberdade do usuário</b>: a pessoa precisa de uma saída clara quando faz algo sem querer. O \"Desfazer\" é essa saída.",
+      "statement": "<b>Heurísticas de Nielsen.</b> Depois de apagar uma conversa, o app mostra por 5 segundos a faixa \"Conversa apagada · Desfazer\". O cenário exemplifica a aplicação direta de qual heurística?",
+      "estilo": "prova",
+      "options": [
+        "Controle e liberdade do usuário, pois dá para voltar atrás",
+        "Reconhecimento em vez de memorização, pois há ícones",
+        "Flexibilidade e eficiência, pois existem atalhos de teclado",
+        "Prevenção de erros, pois o app bloqueia o botão de apagar"
+      ],
+      "correct": 0,
+      "nivel": 3
+    },
+    {
+      "topic": "ihc",
+      "assunto": "qualidade",
+      "explain": "I e II: certas. A Qualidade em IHC é multidimensional: usabilidade, UX, acessibilidade e comunicabilidade; a comunicabilidade vem da Engenharia Semiótica. III: errada: acessibilidade é as pessoas conseguirem perceber, operar e entender a interface (princípios da WCAG), não a velocidade do servidor.",
+      "statement": "<b>Qualidade em IHC.</b> Analise as afirmativas a seguir, com base em Barbosa e Silva (2010):",
+      "bloco": [
+        "I. Usabilidade, experiência do usuário (UX), acessibilidade e comunicabilidade fazem parte da Qualidade em IHC.",
+        "II. A comunicabilidade vem da Engenharia Semiótica e trata da mensagem que a interface passa.",
+        "III. A acessibilidade trata só da velocidade do servidor que hospeda o sistema."
+      ],
+      "estilo": "prova",
+      "options": [
+        "Apenas as afirmativas I e II estão corretas.",
+        "Apenas as afirmativas II e III estão corretas.",
+        "Apenas as afirmativas I e III estão corretas.",
+        "Apenas a afirmativa II está correta."
+      ],
+      "correct": 0,
+      "nivel": 3
+    },
+    {
+      "topic": "norman",
+      "assunto": "golfos",
+      "explain": "I e II: certas. Execução é agir; avaliação é entender o resultado. III: errada: bons significantes e bom feedback <b>encurtam</b> as duas pontes, inclusive a da avaliação.",
+      "statement": "<b>Golfos de Norman.</b> Analise as afirmativas a seguir:",
+      "bloco": [
+        "I. O golfo de execução aparece quando a interface não guia nem limita a ação da pessoa.",
+        "II. O golfo de avaliação é a distância entre o que o sistema fez e o que a pessoa consegue interpretar.",
+        "III. Um feedback claro aumenta o golfo de avaliação."
+      ],
+      "estilo": "prova",
+      "options": [
+        "Estão corretas as afirmativas I, II e III.",
+        "Estão corretas somente as afirmativas I e III.",
+        "Estão corretas somente as afirmativas I e II.",
+        "Estão corretas somente as afirmativas II e III."
+      ],
+      "correct": 2,
+      "nivel": 3
+    },
+    {
+      "topic": "norman",
+      "assunto": "afford",
+      "explain": "<b>Affordance</b>: a aparência sugere uma ação. Quando a ação não existe, a affordance é falsa, e a pessoa toca à toa.",
+      "statement": "<b>Affordance.</b> Um ícone de lixeira foi desenhado com sombra e relevo, igual a um botão, mas é só decorativo: as pessoas tocam, e nada acontece. Qual análise corresponde à situação?",
+      "estilo": "prova",
+      "options": [
+        "É um golfo de avaliação, pois o sistema demora para responder",
+        "É uma falsa affordance, pois sugere uma ação que não existe",
+        "É uma boa affordance, pois o desenho deixa a ação bem clara",
+        "É um mapeamento natural, pois a lixeira fica no canto da tela"
+      ],
+      "correct": 1,
+      "nivel": 3
+    },
+    {
+      "topic": "avaliacao",
+      "assunto": "acess",
+      "explain": "POUR: <b>Perceptível</b> (dá para perceber), <b>Operável</b> (dá para usar), <b>Compreensível</b> (dá para entender) e <b>Robusto</b> (funciona em tecnologias assistivas).",
+      "statement": "<b>Acessibilidade (WCAG).</b> Associe cada princípio à sua ideia. Qual é a sequência correta, de cima para baixo?",
+      "bloco": [
+        "1. Perceptível",
+        "2. Operável",
+        "3. Compreensível",
+        "4. Robusto",
+        "( ) Funciona em tecnologias assistivas",
+        "( ) Dá para perceber",
+        "( ) Dá para usar",
+        "( ) Dá para entender"
+      ],
+      "estilo": "prova",
+      "options": [
+        "4, 1, 2, 3",
+        "2, 1, 4, 3",
+        "4, 3, 2, 1",
+        "3, 1, 2, 4"
+      ],
+      "correct": 0,
+      "nivel": 3
+    },
+    {
+      "topic": "heuristicas",
+      "assunto": "krug",
+      "explain": "Krug: as páginas devem ser <b>autoexplicativas</b>, sem esforço cognitivo desnecessário. \"Matricular-se\" diria o mesmo sem fazer ninguém parar para pensar.",
+      "statement": "<b>Steve Krug.</b> A Primeira Lei da Usabilidade de Krug é \"Não me faça pensar!\". Num site de cursos, o botão de matrícula se chama \"Efetivar adesão ao itinerário formativo\". Com base nessa lei, qual análise corresponde ao caso?",
+      "estilo": "prova",
+      "options": [
+        "O rótulo está certo, porque termos técnicos passam confiança",
+        "O rótulo obriga a pensar, e a página deveria se explicar sozinha",
+        "A lei proíbe qualquer texto em botões; só ícones são aceitos",
+        "O problema é a cor do botão, e não o texto que ele mostra"
+      ],
+      "correct": 1,
+      "nivel": 3
+    },
+    {
+      "topic": "visual",
+      "assunto": "proto",
+      "explain": "I e III: certas. II: errada: o papel é a <b>baixa</b> fidelidade; a alta fidelidade é parecida com o produto final, já com cores e interações.",
+      "statement": "<b>Protótipos.</b> Analise as afirmativas a seguir:",
+      "bloco": [
+        "I. O protótipo de baixa fidelidade (Low-Fi) é barato e permite descartar ideias rápido.",
+        "II. O protótipo de alta fidelidade é feito em papel, sem detalhes visuais.",
+        "III. A alta fidelidade serve para testar o visual e as interações quase finais."
+      ],
+      "estilo": "prova",
+      "options": [
+        "É correto o que se afirma em I e II, apenas.",
+        "É correto o que se afirma em II e III, apenas.",
+        "É correto o que se afirma em I, apenas.",
+        "É correto o que se afirma em I e III, apenas."
+      ],
+      "correct": 3,
+      "nivel": 3
     }
   ],
   "historias": [

@@ -17,7 +17,7 @@
 
 // CACHE_NAME identifica o armazenamento local do navegador.
 // Trocar esse valor cria um cache novo, e o evento activate apaga os antigos.
-const CACHE_NAME = 'simulados-unipar-v16';
+const CACHE_NAME = 'simulados-unipar-v17';
 
 // urlsToCache guarda os arquivos necessários para abrir o app sem internet.
 // Se um arquivo da lista não existir, a instalação falha. Ao criar uma matéria
@@ -31,9 +31,40 @@ const urlsToCache = [
   './css/estudo.css',
   './css/ouro.css',
   './css/futuro.css',
+  // Visual de 26/11/2026: base de todos os visuais, Neon, Claro, painel de visual, níveis e pug.
+  './css/base.css',
+  './css/tema-neon.css',
+  './css/tema-claro.css',
+  './css/temas.css',
+  './css/niveis.css',
+  './css/pug.css',
   './js/voz.js',
   './js/visual.js',
   './js/futuro.js',
+  './js/efeitos.js',
+  './js/pug.js',
+  './js/temas.js',
+  // As 20 figuras do pug (10 expressões no estilo 3D e 10 no estilo desenho).
+  './img/pug/3d-1.webp',
+  './img/pug/3d-2.webp',
+  './img/pug/3d-3.webp',
+  './img/pug/3d-4.webp',
+  './img/pug/3d-5.webp',
+  './img/pug/3d-6.webp',
+  './img/pug/3d-7.webp',
+  './img/pug/3d-8.webp',
+  './img/pug/3d-9.webp',
+  './img/pug/3d-10.webp',
+  './img/pug/desenho-1.webp',
+  './img/pug/desenho-2.webp',
+  './img/pug/desenho-3.webp',
+  './img/pug/desenho-4.webp',
+  './img/pug/desenho-5.webp',
+  './img/pug/desenho-6.webp',
+  './img/pug/desenho-7.webp',
+  './img/pug/desenho-8.webp',
+  './img/pug/desenho-9.webp',
+  './img/pug/desenho-10.webp',
   './js/revisao.js',
   './js/livro.js',
   './js/historias.js',

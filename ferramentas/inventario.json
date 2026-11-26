@@ -1,9 +1,9 @@
 {
-  "atualizadoEm": "25/11/2026",
+  "atualizadoEm": "26/11/2026",
   "materias": {
     "design": {
       "aba": "Design Front End",
-      "perguntas": 396,
+      "perguntas": 404,
       "guardadas": 0,
       "revisao": 0,
       "livro": 0,
@@ -19,16 +19,16 @@
         "avaliacao"
       ],
       "porTema": {
-        "ihc": 33,
-        "heuristicas": 123,
-        "norman": 79,
-        "visual": 140,
-        "avaliacao": 21
+        "ihc": 34,
+        "heuristicas": 126,
+        "norman": 81,
+        "visual": 141,
+        "avaliacao": 22
       }
     },
     "programacao": {
       "aba": "Programação de Computadores",
-      "perguntas": 733,
+      "perguntas": 747,
       "guardadas": 0,
       "revisao": 10,
       "livro": 10,
@@ -54,20 +54,20 @@
         "logica": 17,
         "selecao": 31,
         "operadores": 60,
-        "repeticao": 66,
-        "for": 64,
-        "dowhile": 68,
-        "strings": 105,
-        "arrays": 71,
-        "matrizes": 79,
-        "classes": 51,
-        "metodos": 65,
-        "parametros": 56
+        "repeticao": 67,
+        "for": 65,
+        "dowhile": 70,
+        "strings": 108,
+        "arrays": 73,
+        "matrizes": 81,
+        "classes": 52,
+        "metodos": 66,
+        "parametros": 57
       }
     },
     "requisitos": {
       "aba": "Engenharia de Requisitos",
-      "perguntas": 531,
+      "perguntas": 579,
       "guardadas": 0,
       "revisao": 7,
       "livro": 9,
@@ -84,17 +84,17 @@
         "validacao"
       ],
       "porTema": {
-        "processo": 4,
-        "tipos": 5,
-        "metodologias": 5,
-        "casosdeuso": 298,
-        "historias": 40,
-        "validacao": 179
+        "processo": 7,
+        "tipos": 8,
+        "metodologias": 7,
+        "casosdeuso": 317,
+        "historias": 47,
+        "validacao": 193
       }
     },
     "redes": {
       "aba": "Fundamentos de Redes",
-      "perguntas": 1031,
+      "perguntas": 1098,
       "guardadas": 0,
       "revisao": 16,
       "livro": 15,
@@ -118,16 +118,16 @@
         "arquitetura": 6,
         "enlace": 3,
         "meios": 3,
-        "rede": 458,
-        "transporte": 287,
-        "aplicacao": 163,
+        "rede": 463,
+        "transporte": 290,
+        "aplicacao": 166,
         "integradora": 7,
-        "status": 98
+        "status": 154
       }
     },
     "testing": {
       "aba": "Testing, Compliance e QA",
-      "perguntas": 336,
+      "perguntas": 344,
       "guardadas": 0,
       "revisao": 0,
       "livro": 0,
@@ -144,12 +144,12 @@
         "compliance"
       ],
       "porTema": {
-        "tipos": 106,
-        "tecnicas": 130,
-        "praticas": 46,
-        "qualidade": 15,
-        "principios": 18,
-        "compliance": 21
+        "tipos": 108,
+        "tecnicas": 132,
+        "praticas": 47,
+        "qualidade": 16,
+        "principios": 19,
+        "compliance": 22
       }
     },
     "pensamento": {
@@ -280,6 +280,7 @@
     }
   },
   "ids": [
+    "aviso-nivel",
     "badge-status",
     "bar-fill",
     "btn-back",
@@ -301,6 +302,10 @@
     "count-perguntas",
     "count-praticar",
     "count-revisao",
+    "css-claro",
+    "css-futuro",
+    "css-neon",
+    "css-ouro",
     "current-theme-label",
     "est-barra",
     "est-erros",
@@ -311,11 +316,15 @@
     "focus-box",
     "focus-list",
     "len-grid",
+    "medidor-nivel",
     "mode-tabs",
+    "nivel-dica",
+    "nivel-grid",
     "nucleo",
     "nucleo-pct",
     "opts-container",
     "painel-estudo",
+    "painel-visual",
     "panel-historias",
     "panel-jogos",
     "panel-livro",
@@ -325,14 +334,17 @@
     "performance-message",
     "perguntas-vazio",
     "picker-conteudo",
+    "picker-nivel",
     "progress-level",
     "progress-panel",
+    "pug-resultado",
     "q-card",
     "q-now",
     "q-total",
     "res-acertos",
     "res-erros",
     "res-frac",
+    "res-nivel",
     "res-nota",
     "res-pct",
     "res-tempo",
@@ -353,25 +365,36 @@
     "theme-progress",
     "timer-display",
     "topic-grid",
+    "visual-conteudo",
     "voice-toggle"
   ],
   "arquivos": [
+    "css/base.css",
     "css/estudo.css",
     "css/futuro.css",
     "css/materias.css",
     "css/moderno.css",
+    "css/niveis.css",
     "css/ouro.css",
+    "css/pug.css",
     "css/styles.css",
+    "css/tema-claro.css",
+    "css/tema-neon.css",
+    "css/temas.css",
+    "ferramentas/classificar-niveis.js",
     "ferramentas/inventario.js",
     "ferramentas/inventario.json",
     "ferramentas/validar-questoes.js",
+    "js/efeitos.js",
     "js/futuro.js",
     "js/geradores.js",
     "js/historias.js",
     "js/jogos.js",
     "js/livro.js",
     "js/pratica.js",
+    "js/pug.js",
     "js/revisao.js",
+    "js/temas.js",
     "js/visual.js",
     "js/voz.js",
     "materias/ambientacao.json",
@@ -388,6 +411,6 @@
     "materias/requisitos.json",
     "materias/testing.json"
   ],
-  "material": 107,
+  "material": 108,
   "materialVazio": 0
 }

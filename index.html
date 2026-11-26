@@ -42,10 +42,52 @@
 <link rel="stylesheet" href="css/moderno.css" />
 <!-- Acabamento: painel de progresso, temas, código colorido e resultado. -->
 <link rel="stylesheet" href="css/estudo.css" />
-<!-- Visual "tecnologia em ouro": vem por último para valer por cima de todos. -->
-<link rel="stylesheet" href="css/ouro.css" />
-<!-- Camada futurista: circuito, núcleo, vidro e luz do mouse. Vem por último. -->
-<link rel="stylesheet" href="css/futuro.css" />
+<!-- Base: peças que valem em todos os visuais (núcleo, circuito, abas em grupo, seletor de conteúdo). -->
+<link rel="stylesheet" href="css/base.css" />
+<!-- Visual "tecnologia em ouro". Ligado nos visuais Ouro e Futurista. -->
+<link rel="stylesheet" href="css/ouro.css" id="css-ouro" />
+<!-- Camada futurista: vidro, luz do mouse e letras de ficção científica. Ligada só no visual Futurista. -->
+<link rel="stylesheet" href="css/futuro.css" id="css-futuro" />
+<!-- Visuais Neon e Claro: começam desligados (media="not all") e são ligados pelo script abaixo. -->
+<link rel="stylesheet" href="css/tema-neon.css" id="css-neon" media="not all" />
+<link rel="stylesheet" href="css/tema-claro.css" id="css-claro" media="not all" />
+<!-- Painel de visual, níveis das perguntas, animações da prova e o pug: valem em todos os visuais. -->
+<link rel="stylesheet" href="css/temas.css" />
+<link rel="stylesheet" href="css/niveis.css" />
+<link rel="stylesheet" href="css/pug.css" />
+<script>
+  // AplicarVisual() liga só os arquivos CSS do visual escolhido. Roda aqui no <head>, antes de a página
+  // aparecer, para não piscar o visual padrão. Parâmetro: nome ("futurista", "ouro", "grafite", "neon" ou "claro").
+  window.AplicarVisual = function (nome) {
+    // Arquivos ligados em cada visual. Os que não estão na lista ficam desligados.
+    var LIGADOS = { futurista: ["css-ouro", "css-futuro"], ouro: ["css-ouro"], grafite: [], neon: ["css-neon"], claro: ["css-claro"] };
+    // Cor da barra do navegador no celular, em cada visual.
+    var BARRA = { futurista: "#0b0a08", ouro: "#0b0a08", grafite: "#0c1017", neon: "#0b0716", claro: "#f6f3ec" };
+    // Nome desconhecido (ou nada salvo): usa o Futurista, o padrão.
+    if (!LIGADOS[nome]) nome = "futurista";
+    // media="all" liga o arquivo; media="not all" desliga sem apagar.
+    ["css-ouro", "css-futuro", "css-neon", "css-claro"].forEach(function (id) {
+      var link = document.getElementById(id);
+      if (link) link.media = LIGADOS[nome].indexOf(id) >= 0 ? "all" : "not all";
+    });
+    // O CSS e o js/futuro.js leem o visual neste atributo do <html>.
+    document.documentElement.setAttribute("data-visual", nome);
+    // Barra do navegador na cor do fundo.
+    var barra = document.querySelector('meta[name="theme-color"]');
+    if (barra) barra.setAttribute("content", BARRA[nome]);
+    return nome;
+  };
+  // Lê as escolhas salvas. try/catch: o modo privado pode recusar o acesso ao armazenamento.
+  try {
+    // Visual salvo (ou o padrão).
+    window.AplicarVisual(localStorage.getItem("unipar_visual"));
+    // "Menos animação" escolhido no app.
+    if (localStorage.getItem("unipar_movimento") === "menos") document.documentElement.setAttribute("data-movimento", "menos");
+  } catch (erro) {
+    // Sem armazenamento: fica o visual padrão.
+    window.AplicarVisual("futurista");
+  }
+</script>
 </head>
 <body>
 <div class="app">
@@ -89,6 +131,15 @@
 
       <!-- Liga e desliga a leitura em voz alta das perguntas e explicações. aria-pressed diz ao leitor de tela se está ligado. -->
       <button type="button" class="voice-toggle" id="voice-toggle" aria-pressed="false">🔈 Ler em voz alta: desligado</button>
+
+      <!-- Caixa que abre e fecha com as escolhas de aparência: visual da página, pug e animações.
+           Os cartões são criados por js/temas.js dentro de #visual-conteudo. -->
+      <details class="painel-visual" id="painel-visual">
+        <!-- Linha clicável que abre a caixa. -->
+        <summary>🎨 Visual, pug e animações</summary>
+        <!-- Miolo preenchido pelo JavaScript. -->
+        <div class="pv-conteudo" id="visual-conteudo"></div>
+      </details>
 
       <!-- Cada matéria tem cinco partes. Os números são preenchidos pelo JavaScript. -->
       <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="O que estudar">
@@ -140,6 +191,19 @@
           <div id="conteudo-grid"></div>
         </div>
 
+        <!--
+          BLOCO: nível das perguntas
+          - #nivel-grid recebe quatro botões .npick, criados por montarNiveis(): Automático, Fácil, Médio e Difícil;
+          - Automático começa no nível salvo (na primeira vez, Fácil), sobe com 3 acertos seguidos e desce com 2 erros seguidos;
+          - Fácil, Médio ou Difícil: a rodada usa só esse nível e completa com o mais próximo, se faltar.
+        -->
+        <div class="picker" id="picker-nivel">
+          <h3>Qual nível?</h3>
+          <!-- Explicação do nível escolhido, escrita por montarNiveis(). -->
+          <p class="picker-dica" id="nivel-dica"></p>
+          <div class="nivel-grid" id="nivel-grid"></div>
+        </div>
+
         <!-- As opções mudam conforme a quantidade de questões do tema escolhido. -->
         <div class="picker">
           <h3>Quantas questões nesta rodada?</h3>
@@ -171,10 +235,14 @@
     <div class="topbar">
       <div class="progress-meta">
         <span class="count">Questão <b id="q-now">1</b> de <span id="q-total">10</span></span>
+        <!-- Medidor do nível: nome, três barrinhas e os acertos seguidos. Preenchido por mostrarMedidor(). -->
+        <span class="medidor-nivel" id="medidor-nivel"></span>
         <span class="timer" id="timer-display">⏳ 00:00</span>
       </div>
       <div class="bar"><i id="bar-fill"></i></div>
     </div>
+    <!-- Faixa "Subiu para o Médio", que aparece e some sozinha (js/efeitos.js). -->
+    <div class="aviso-nivel hidden" id="aviso-nivel" role="status"></div>
     <div id="q-card" class="q-card"></div>
     <div class="nav">
       <button class="btn" id="btn-next" disabled>Próxima</button>
@@ -195,7 +263,11 @@
         <div class="badge-status" id="badge-status">Resultado</div>
         <div class="verdict" id="res-verdict">Fim do Simulado</div>
         <p class="nota-line">Equivalente a uma nota <b id="res-nota">0,0</b> / 10</p>
+        <!-- Nível em que a rodada terminou (só no modo Automático). -->
+        <p class="nivel-final hidden" id="res-nivel"></p>
         <div class="performance-message" id="performance-message"></div>
+        <!-- O pug comenta a nota (js/pug.js). -->
+        <div class="pug-resultado" id="pug-resultado"></div>
       </div>
 
       <div class="result-summary">
@@ -276,6 +348,10 @@
 <script src="js/pratica.js"></script>
 <!-- futuro.js: circuito do fundo, luz do mouse e núcleo. -->
 <script src="js/futuro.js"></script>
+<!-- efeitos.js: confete no acerto e aviso de nível. pug.js: o mascote. temas.js: painel de visual, pug e animações. -->
+<script src="js/efeitos.js"></script>
+<script src="js/pug.js"></script>
+<script src="js/temas.js"></script>
 <!-- geradores.js cria as perguntas de conta com números sorteados (aba Redes). -->
 <script src="js/geradores.js"></script>
 <script>
@@ -366,7 +442,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Parâmetro: q, a pergunta. Serve de chave nas listas de vistas e de erros.
   function idDaPergunta(q) {
     // Enunciado + "|" + código (vazio quando não tem código).
-    return `${q.statement}|${q.code || ""}`;
+    const base = `${q.statement}|${q.code || ""}`;
+    // Perguntas no formato de prova repetem o enunciado ("Analise as afirmativas..."): o bloco de afirmativas entra no RG.
+    // As perguntas sem bloco continuam com o mesmo RG de antes, para não perder as vistas e os erros já salvos.
+    return Array.isArray(q.bloco) ? `${base}|${q.bloco.join("\n")}` : base;
   }
 
   // lerMapa() lê do navegador um objeto { idDaPergunta: número }.
@@ -445,13 +524,211 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // window.tocarSom deixa os sons disponíveis para js/historias.js e js/jogos.js.
-  window.tocarSom = playSound;
+  // window.tocarSom deixa os sons disponíveis para js/historias.js, js/jogos.js e js/pratica.js.
+  // Parâmetro: tipo ("correct" ou "wrong"). Junto com o som, o pug reage no canto da tela (js/pug.js).
+  window.tocarSom = (tipo) => {
+    // Toca o som de acerto ou de erro.
+    playSound(tipo);
+    // O pug comenta (só se o arquivo dele carregou).
+    if (window.Pug) window.Pug.reagir(tipo);
+  };
 
   let selectedTopic = "all";
   // Tema aberto na tela. selectedTopic pode ser um conteúdo dentro dele, como "c:rede.ttl".
   let temaAberto = "all";
   let selectedLen = 0;
+
+  // ===== NÍVEIS DAS PERGUNTAS =====
+  // Nome de cada nível. Cada pergunta tem o campo "nivel" (1, 2 ou 3) em materias/<matéria>.json.
+  const NOMES_NIVEL = { 1: "Fácil", 2: "Médio", 3: "Difícil" };
+  // Escolha do botão de nível: "auto" (sobe e desce sozinho) ou "1", "2", "3" (nível fixo).
+  let modoNivel = "auto";
+  // Rodada no modo Automático: { estoque, nivel, inicio, maior, certos, erros, letraAnterior }. null = rodada comum.
+  let rodadaAdaptativa = null;
+  // Acertos seguidos na rodada atual (para a chama do medidor e para o pug).
+  let acertosSeguidos = 0;
+
+  // nivelDa() devolve o nível de uma pergunta (1, 2 ou 3).
+  // Parâmetro: q, a pergunta. Sem nível (as contas sorteadas), conta como Médio.
+  function nivelDa(q) {
+    // Converte para número; texto ou vazio vira NaN.
+    const n = Number(q && q.nivel);
+    // Só aceita 1, 2 ou 3.
+    return n >= 1 && n <= 3 ? n : 2;
+  }
+
+  // lerNivelSalvo() lê o nível em que a pessoa parou nesta matéria. Na primeira vez, 1 (Fácil).
+  function lerNivelSalvo() {
+    // try/catch: modo privado pode recusar o acesso ao armazenamento.
+    try {
+      // Chave unipar_<matéria>_nivel, gravada a cada resposta no modo Automático.
+      const n = Number(localStorage.getItem(`unipar_${materiaAtual.id}_nivel`));
+      return n >= 1 && n <= 3 ? n : 1;
+    } catch (erro) {
+      return 1;
+    }
+  }
+
+  // gravarNivel() guarda o nível atual da matéria. Parâmetro: n (1 a 3).
+  function gravarNivel(n) {
+    // try/catch: sem gravar, o nível vale só nesta visita.
+    try { localStorage.setItem(`unipar_${materiaAtual.id}_nivel`, String(n)); } catch (erro) { console.warn("Não deu para salvar o nível.", erro); }
+  }
+
+  // lerModoNivel() lê o botão de nível escolhido da última vez nesta matéria ("auto" se nada foi escolhido).
+  function lerModoNivel() {
+    // try/catch: modo privado pode recusar o acesso ao armazenamento.
+    try {
+      const modo = localStorage.getItem(`unipar_${materiaAtual.id}_modoNivel`);
+      return ["auto", "1", "2", "3"].includes(modo) ? modo : "auto";
+    } catch (erro) {
+      return "auto";
+    }
+  }
+
+  // gravarModoNivel() guarda o botão de nível escolhido. Parâmetro: modo ("auto", "1", "2" ou "3").
+  function gravarModoNivel(modo) {
+    try { localStorage.setItem(`unipar_${materiaAtual.id}_modoNivel`, modo); } catch (erro) { console.warn("Não deu para salvar o modo de nível.", erro); }
+  }
+
+  // montarNiveis() cria os botões Automático, Fácil, Médio e Difícil, com quantas perguntas
+  // de cada nível existem no tema ou conteúdo escolhido.
+  function montarNiveis() {
+    // Grade dos botões e a explicação embaixo do título.
+    const grade = document.getElementById("nivel-grid");
+    const dica = document.getElementById("nivel-dica");
+    // Contas sorteadas não têm nível: os botões ficam desligados.
+    const semNivel = selectedTopic === "contas";
+    // Perguntas do que foi escolhido.
+    const perguntas = semNivel ? [] : questoesDoTema(selectedTopic);
+    // Conta quantas há de cada nível.
+    const conta = { 1: 0, 2: 0, 3: 0 };
+    perguntas.forEach(q => { conta[nivelDa(q)]++; });
+    // Os quatro botões: id, nome e a linha de baixo.
+    const opcoes = [
+      { id: "auto", nome: "🤖 Automático", linha: `começa no ${NOMES_NIVEL[lerNivelSalvo()]}` },
+      { id: "1", nome: "Fácil", linha: `${conta[1]} perguntas` },
+      { id: "2", nome: "Médio", linha: `${conta[2]} perguntas` },
+      { id: "3", nome: "Difícil", linha: `${conta[3]} perguntas` }
+    ];
+    // Troca os botões antigos pelos novos.
+    grade.replaceChildren(...opcoes.map(opcao => {
+      // Botão comum (não envia formulário).
+      const botao = document.createElement("button");
+      botao.type = "button";
+      // "on" marca o escolhido; data-nivel dá a cor da faixa (css/niveis.css).
+      botao.className = `npick${opcao.id === modoNivel ? " on" : ""}`;
+      botao.dataset.nivel = opcao.id;
+      // Leitor de tela: diz qual está escolhido.
+      botao.setAttribute("aria-pressed", opcao.id === modoNivel);
+      // Desligado nas contas sorteadas.
+      botao.disabled = semNivel;
+      // Nome e linha de baixo. textContent impede que o texto vire código.
+      const nome = document.createElement("span");
+      nome.className = "nivel-nome";
+      nome.textContent = opcao.nome;
+      const linha = document.createElement("span");
+      linha.className = "nivel-n";
+      linha.textContent = opcao.linha;
+      botao.append(nome, linha);
+      return botao;
+    }));
+    // Explicação do que vai acontecer com a escolha atual.
+    if (semNivel) dica.textContent = "Contas sorteadas não têm nível: os números mudam a cada rodada.";
+    else if (modoNivel === "auto") dica.textContent = "Começa no nível em que você parou (na primeira vez, Fácil). 3 acertos seguidos sobem um nível; 2 erros seguidos descem.";
+    else dica.textContent = `Só perguntas do nível ${NOMES_NIVEL[modoNivel]}. Se faltar, completa com o nível mais próximo.`;
+  }
+
+  // Toque num botão de nível: guarda a escolha, remarca os botões e refaz o resumo da barra de iniciar.
+  document.getElementById("nivel-grid").addEventListener("click", (e) => {
+    // Botão tocado (ou nada, se tocou no vão).
+    const botao = e.target.closest(".npick");
+    if (!botao || botao.disabled) return;
+    // Guarda a escolha nesta matéria.
+    modoNivel = botao.dataset.nivel;
+    gravarModoNivel(modoNivel);
+    // Redesenha os botões e o resumo.
+    montarNiveis();
+    atualizarResumo();
+  });
+
+  // ajustarNivel() sobe ou desce o nível no modo Automático, depois de cada resposta.
+  // Parâmetro: acertou (true ou false). Devolve 1 (subiu), -1 (desceu) ou 0 (ficou).
+  function ajustarNivel(acertou) {
+    // Rodada comum: o nível não muda.
+    const r = rodadaAdaptativa;
+    if (!r) return 0;
+    // Conta acertos e erros seguidos; um zera o outro.
+    if (acertou) { r.certos++; r.erros = 0; } else { r.erros++; r.certos = 0; }
+    // 3 acertos seguidos sobem; 2 erros seguidos descem. Depois de mudar, a contagem recomeça.
+    let mudou = 0;
+    if (r.certos >= 3 && r.nivel < 3) { r.nivel++; r.certos = 0; mudou = 1; }
+    else if (r.erros >= 2 && r.nivel > 1) { r.nivel--; r.erros = 0; mudou = -1; }
+    // Guarda o maior nível da rodada (para o resultado) e o nível atual (para a próxima rodada).
+    r.maior = Math.max(r.maior, r.nivel);
+    gravarNivel(r.nivel);
+    return mudou;
+  }
+
+  // proximaAdaptativa() escolhe a próxima pergunta do modo Automático: a do nível atual que você menos viu.
+  // Se as do nível acabaram, usa o nível mais próximo. Devolve a pergunta com a letra certa já sorteada.
+  function proximaAdaptativa() {
+    // Dados da rodada.
+    const r = rodadaAdaptativa;
+    // Quantas vezes cada pergunta já apareceu.
+    const vistas = lerMapa("vistas");
+    // Embaralha e ordena: primeiro a distância do nível atual, depois as menos vistas. Empates ficam sorteados.
+    const ordem = shuffleArray(r.estoque).sort((a, b) =>
+      Math.abs(nivelDa(a) - r.nivel) - Math.abs(nivelDa(b) - r.nivel) ||
+      (vistas[idDaPergunta(a)] || 0) - (vistas[idDaPergunta(b)] || 0));
+    // A primeira da fila é a escolhida; ela sai do estoque para não repetir na rodada.
+    const escolhida = ordem[0];
+    r.estoque.splice(r.estoque.indexOf(escolhida), 1);
+    // Letra certa: qualquer uma, menos a da pergunta anterior.
+    const posicoes = escolhida.options.map((_, i) => i).filter(i => i !== r.letraAnterior);
+    const alvo = posicoes[Math.floor(Math.random() * posicoes.length)];
+    r.letraAnterior = alvo;
+    return withBalancedAnswerSlot(escolhida, alvo);
+  }
+
+  // mostrarMedidor() escreve o medidor de nível na barra de cima da prova.
+  // Parâmetros: q (pergunta na tela) e pulsar (true faz a chama pulsar, logo depois de um acerto).
+  // No Automático mostra o nível da rodada; nas outras rodadas, o nível da pergunta na tela.
+  function mostrarMedidor(q, pulsar = false) {
+    // Caixa do medidor.
+    const medidor = document.getElementById("medidor-nivel");
+    // Contas sorteadas não têm nível: o medidor fica vazio (o CSS o esconde).
+    if (!q || q.topic === "contas") { medidor.replaceChildren(); return; }
+    // Nível mostrado.
+    const nivel = rodadaAdaptativa ? rodadaAdaptativa.nivel : nivelDa(q);
+    // A cor das barrinhas vem de data-nivel (css/niveis.css).
+    medidor.dataset.nivel = nivel;
+    // Nome do nível, com o robô no Automático.
+    const rotulo = document.createElement("span");
+    rotulo.textContent = rodadaAdaptativa ? `🤖 ${NOMES_NIVEL[nivel]}` : NOMES_NIVEL[nivel];
+    // Três barrinhas; o CSS acende até o nível atual.
+    const barras = document.createElement("span");
+    barras.className = "mn-barras";
+    barras.append(document.createElement("i"), document.createElement("i"), document.createElement("i"));
+    // Chama com os acertos seguidos, a partir de 2.
+    const fogo = document.createElement("span");
+    fogo.className = `mn-fogo${pulsar && acertosSeguidos >= 2 ? " pulsar" : ""}`;
+    fogo.textContent = acertosSeguidos >= 2 ? `🔥${acertosSeguidos}` : "";
+    // Troca o conteúdo antigo pelo novo.
+    medidor.replaceChildren(rotulo, barras, fogo);
+  }
+
+  // avisarNivel() mostra a faixa "Subiu para o Médio" ou "Voltou para o Fácil". Parâmetro: mudou (1 ou -1).
+  function avisarNivel(mudou) {
+    // Nada mudou, ou rodada comum: não avisa.
+    if (!mudou || !rodadaAdaptativa) return;
+    // Nome do nível novo.
+    const nome = NOMES_NIVEL[rodadaAdaptativa.nivel];
+    // Texto da faixa.
+    const texto = mudou > 0 ? `⬆ Subiu para o ${nome}! As próximas perguntas são desse nível.` : `⬇ Voltou para o ${nome}. Acerte 3 seguidas para subir de novo.`;
+    // Mostra e esconde sozinha (js/efeitos.js).
+    if (window.Efeitos) window.Efeitos.aviso(document.getElementById("aviso-nivel"), texto, rodadaAdaptativa.nivel, mudou > 0);
+  }
 
   // Carrega a lista de matérias e abre a aba indicada no endereço (#redes, por exemplo).
   // O fetch() busca o JSON em segundo plano e, quando responde, o código
@@ -577,6 +854,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("perguntas-vazio").textContent = materia.aguardando || "Esta matéria ainda não tem perguntas.";
       // Preenche a caixa "O que estudar para a próxima prova".
       mostrarFoco(materia);
+      // Botão de nível escolhido da última vez nesta matéria (ou Automático).
+      modoNivel = lerModoNivel();
+      // O pug passa a usar as piadas desta matéria (e dá oi na primeira vez).
+      if (window.Pug) window.Pug.materia(materia.id, materia.titulo);
       montarTemas();
       updateProgressPanel();
       trocarModo("perguntas");
@@ -678,6 +959,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // "contas": perguntas sorteadas na hora; aqui não há lista fixa.
     if (topic === "contas") return [];
+    // "prova": perguntas no formato das provas dos professores (afirmativas, V ou F, associação...).
+    if (topic === "prova") return bank.filter(q => q.estilo === "prova");
     // "c:tema.assunto": um conteúdo só. Com "+", vários juntos ("c:rede.nat+rede.privado").
     if (topic.startsWith("c:")) {
       // Lista dos conteúdos pedidos.
@@ -756,6 +1039,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const quantosErros = questoesDoTema("erros").length;
     // Com algum erro guardado, aparece o botão para treinar só elas.
     if (quantosErros) itens.push(criarBotaoTema({ id: "erros", rotulo: `🔁 Só as que errei (${quantosErros})` }, marcado("erros")));
+    // Matéria com perguntas no formato das provas ganha o botão para treinar só elas.
+    if (questoesDoTema("prova").length) itens.push(criarBotaoTema({ id: "prova", rotulo: "📝 Estilo da prova" }, marcado("prova")));
     // Matéria com gerador ganha o botão de contas que mudam a cada rodada.
     if (temContas()) itens.push(criarBotaoTema({ id: "contas", rotulo: "🎲 Contas novas (sempre diferentes)" }, marcado("contas")));
 
@@ -903,8 +1188,10 @@ document.addEventListener("DOMContentLoaded", () => {
     numero.textContent = `${selectedLen} questões`;
     // Nome do que vai ser treinado: o conteúdo, quando escolhido; senão, o tema.
     const nome = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : (marcado ? marcado.textContent : "Tudo misturado");
-    // Junta a quantidade e o nome na caixa do resumo.
-    document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${nome}`);
+    // Nível: no Automático, de onde começa; no fixo, o nome. Contas sorteadas não têm nível.
+    const nivel = selectedTopic === "contas" ? "" : modoNivel === "auto" ? ` · 🤖 começa no ${NOMES_NIVEL[lerNivelSalvo()]}` : ` · ${NOMES_NIVEL[modoNivel]}`;
+    // Junta a quantidade, o nome e o nível na caixa do resumo.
+    document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${nome}${nivel}`);
   }
 
   // TAMANHOS: rodadas oferecidas. Acrescentar um número aqui cria um botão novo.
@@ -922,6 +1209,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const opcoes = TAMANHOS.filter(n => n < total).concat(total);
     // Começa em 20 (uma rodada de treino); se o tema tiver menos de 20, começa em "todas".
     selectedLen = opcoes.includes(20) ? 20 : total;
+    // Os botões de nível mostram quantas perguntas de cada nível há no que foi escolhido: refaz junto.
+    montarNiveis();
     // Nome curto que aparece embaixo de cada número.
     const nomes = { 5: "rápida", 10: "curta", 15: "revisão", 20: "treino", 30: "média", 50: "longa", 100: "prova final" };
 
@@ -1075,7 +1364,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // buildFilteredQuestions() monta o conjunto de questões que serão usadas na rodada.
   // Ele filtra por tema, embaralha o banco e distribui as alternativas em posições
   // variadas para evitar respostas repetitivas na mesma coluna ou mesma posição.
-  function buildFilteredQuestions(topic = selectedTopic, len = selectedLen) {
+  // Parâmetro usarNivel: true na parte Perguntas, para respeitar o botão Fácil, Médio ou Difícil.
+  function buildFilteredQuestions(topic = selectedTopic, len = selectedLen, usarNivel = false) {
     // Contas: o gerador cria perguntas novas, com números sorteados agora.
     if (topic === "contas") return sortearPosicoes(window.Geradores.gerar(materiaAtual.id, len));
 
@@ -1089,9 +1379,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Quantas vezes cada pergunta já apareceu para esta pessoa.
     const vistas = lerMapa("vistas");
-    // Embaralha e depois ordena pelas vezes vistas (menos vistas primeiro).
+    // Nível fixo escolhido (1, 2 ou 3), ou 0 quando não vale (Automático, revisão, contas).
+    const alvo = usarNivel && modoNivel !== "auto" ? Number(modoNivel) : 0;
+    // Distância entre o nível da pergunta e o escolhido: 0 primeiro, depois o nível vizinho.
+    const distancia = (q) => (alvo ? Math.abs(nivelDa(q) - alvo) : 0);
+    // Embaralha e depois ordena: primeiro o nível escolhido, depois as menos vistas.
     // O sort do JavaScript mantém a ordem dos empates, então quem empata continua sorteado.
-    const base = shuffleArray(filtered).sort((a, b) => (vistas[idDaPergunta(a)] || 0) - (vistas[idDaPergunta(b)] || 0));
+    const base = shuffleArray(filtered).sort((a, b) => distancia(a) - distancia(b) || (vistas[idDaPergunta(a)] || 0) - (vistas[idDaPergunta(b)] || 0));
     // Nunca repete questão na mesma rodada.
     const total = Math.min(len, base.length);
     // Pega as menos vistas e embaralha de novo, para a ordem da prova não seguir a contagem.
@@ -1194,6 +1488,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="review-card bad">
         <div class="review-badge">Erro ${index + 1}</div>
         <div class="review-question">${item.statement}</div>
+        ${Array.isArray(item.bloco) ? `<div class="q-bloco">${item.bloco.map(linha => `<p>${linha}</p>`).join("")}</div>` : ""}
         <div class="review-answer"><strong>Resposta certa:</strong> ${item.options[item.correct]}</div>
         <div class="review-answer"><strong>Você marcou:</strong> ${item.options[item.selectedIndex] || 'Sem resposta'}</div>
       </div>
@@ -1217,12 +1512,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${minutes}:${seconds}`;
   }
 
-  function startQuizWithQuestions(questions) {
+  // Parâmetro adaptativa: os dados do modo Automático, ou null (padrão) para uma rodada comum.
+  function startQuizWithQuestions(questions, adaptativa = null) {
     if (!questions || questions.length === 0) {
       alert("Nenhuma questão encontrada para este filtro.");
       return;
     }
 
+    // Guarda se a rodada é do modo Automático e zera a sequência de acertos.
+    rodadaAdaptativa = adaptativa;
+    acertosSeguidos = 0;
+    // Esconde um aviso de nível que tenha sobrado da rodada anterior.
+    document.getElementById("aviso-nivel").classList.add("hidden");
     currentQuestions = questions.slice();
     currentIndex = 0;
     score = 0;
@@ -1241,7 +1542,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   btnStart.addEventListener("click", () => {
-    const filtered = buildFilteredQuestions(selectedTopic, selectedLen);
+    // Modo Automático (menos nas contas sorteadas): cada pergunta é escolhida na hora, pelo nível atual.
+    if (modoNivel === "auto" && selectedTopic !== "contas") {
+      // Todas as perguntas do que foi escolhido podem sair.
+      const estoque = questoesDoTema(selectedTopic).slice();
+      if (!estoque.length) {
+        alert("Nenhuma questão encontrada para este filtro.");
+        return;
+      }
+      // Começa no nível salvo da matéria (na primeira vez, Fácil).
+      const nivel = lerNivelSalvo();
+      const adaptativa = { estoque, nivel, inicio: nivel, maior: nivel, certos: 0, erros: 0, letraAnterior: -1 };
+      // A rodada tem a quantidade escolhida; as vagas são preenchidas uma a uma (null = ainda não escolhida).
+      const lista = Array(Math.min(selectedLen, estoque.length)).fill(null);
+      // A primeira já sai agora. rodadaAdaptativa precisa existir para proximaAdaptativa() funcionar.
+      rodadaAdaptativa = adaptativa;
+      lista[0] = proximaAdaptativa();
+      // "Repetir mesma prova" recebe as perguntas certas no fim da rodada (showResult).
+      lastQuizConfig = { topic: selectedTopic, length: selectedLen };
+      startQuizWithQuestions(lista, adaptativa);
+      return;
+    }
+    // Nível fixo (ou contas): monta a rodada inteira de uma vez.
+    const filtered = buildFilteredQuestions(selectedTopic, selectedLen, true);
 
     if (filtered.length === 0) {
       alert("Nenhuma questão encontrada para este filtro.");
@@ -1308,7 +1631,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("q-total").textContent = currentQuestions.length; // mostra a quantidade total de questões da rodada
     barFill.style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`; // calcula porcentagem de progresso e cresce a barra visualmente
 
-    let html = `<div class="q-statement">${q.statement}</div>`; // monta o enunciado da pergunta em HTML
+    // Medidor de nível na barra de cima (nível da rodada no Automático; nível da pergunta nas outras).
+    mostrarMedidor(q);
+    // Selos acima do enunciado: o nível da pergunta e, quando for o caso, "Estilo da prova". Contas não têm nível.
+    let selos = q.topic === "contas" ? "" : `<span class="selo selo-nivel" data-nivel="${nivelDa(q)}">${NOMES_NIVEL[nivelDa(q)]}</span>`;
+    if (q.estilo === "prova") selos += `<span class="selo">📝 Estilo da prova</span>`;
+    let html = (selos ? `<div class="q-selos">${selos}</div>` : "") + `<div class="q-statement">${q.statement}</div>`; // monta os selos e o enunciado da pergunta em HTML
+    // Afirmativas no formato de prova (I, II, III... ou a lista para associar): uma por linha, entre o enunciado e as alternativas.
+    if (Array.isArray(q.bloco)) html += `<div class="q-bloco">${q.bloco.map(linha => `<p>${linha}</p>`).join("")}</div>`;
     // Código: em Programação sai colorido (Java); nas outras matérias sai sem cor, só com os sinais < e > protegidos.
     if (q.code) html += `<pre class="code">${materiaAtual.id === "programacao" ? window.Visual.colorirJava(q.code) : q.code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
 
@@ -1322,7 +1652,7 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsMapped.forEach((optData, i) => {
       const letter = String.fromCharCode(65 + i); // converte 0,1,2,3 em A, B, C, D para identificar cada alternativa
       html += `
-        <button type="button" class="option" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}" aria-pressed="false">
+        <button type="button" class="option" style="--i:${i}" data-option-index="${optData.originalIndex}" data-correct="${optData.isCerta}" aria-pressed="false">
             <span class="key">${letter}</span>
             <span class="txt">${optData.textoOriginal.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span>
         </button>`;
@@ -1330,8 +1660,8 @@ document.addEventListener("DOMContentLoaded", () => {
     html += `</div><div id="feedback-area"></div>`; // fecha o bloco de opções e prepara o espaço do feedback
     qCard.innerHTML = html; // insere todo o HTML da questão dentro do cartão da pergunta
 
-    // Texto para ouvir: o enunciado e as alternativas com a letra. O código fica só na tela.
-    const leitura = `${q.statement}. ` + optionsMapped
+    // Texto para ouvir: o enunciado, as afirmativas (se houver) e as alternativas com a letra. O código fica só na tela.
+    const leitura = `${q.statement}. ` + (Array.isArray(q.bloco) ? `${q.bloco.join(". ")}. ` : "") + optionsMapped
       // Cada alternativa vira "Letra A: texto."
       .map((opcao, i) => `Letra ${String.fromCharCode(65 + i)}: ${opcao.textoOriginal}.`)
       // Junta tudo numa frase só.
@@ -1356,6 +1686,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         // Anota no navegador que a pergunta foi vista e se entrou (ou saiu) da lista de erros.
         registrarResposta(q, isCorrect);
+        // Acertos seguidos: soma no acerto e zera no erro (chama do medidor e piadas do pug).
+        acertosSeguidos = isCorrect ? acertosSeguidos + 1 : 0;
+        // Modo Automático: sobe ou desce o nível (1 = subiu, -1 = desceu, 0 = ficou).
+        const mudou = ajustarNivel(isCorrect);
 
         playSound(isCorrect ? 'correct' : 'wrong'); // toca efeito sonoro conforme resposta correta ou errada
 
@@ -1378,6 +1712,18 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         // Com a leitura ligada, fala se acertou, qual era a certa e a explicação.
         window.Voz.lerSeAtivo(`${isCorrect ? "Você acertou!" : `Você errou. A certa é: ${q.options[q.correct]}.`} ${q.explain}`);
+        // O pug entra no começo da explicação: zoa no erro e faz elogio irônico no acerto (js/pug.js).
+        if (window.Pug) window.Pug.reagir(isCorrect ? "correct" : "wrong", {
+          alvo: document.querySelector("#feedback-area .feedback"),
+          sequencia: acertosSeguidos,
+          mudouNivel: mudou,
+          nivel: rodadaAdaptativa ? NOMES_NIVEL[rodadaAdaptativa.nivel] : ""
+        });
+        // Acertou: confete saindo da alternativa (js/efeitos.js).
+        if (isCorrect && window.Efeitos) window.Efeitos.confete(this);
+        // Mudou de nível: faixa de aviso. E o medidor mostra o nível novo e a chama.
+        avisarNivel(mudou);
+        mostrarMedidor(q, true);
         btnNext.disabled = false; // habilita avanço para a próxima questão
       });
     });
@@ -1473,6 +1819,10 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       // Pular conta como erro: a pergunta vai para "Só as que errei".
       registrarResposta(currentQuestions[currentIndex], false);
+      // No nível também conta como erro: zera a sequência e pode descer no Automático.
+      acertosSeguidos = 0;
+      avisarNivel(ajustarNivel(false));
+      mostrarMedidor(currentQuestions[currentIndex]);
     }
 
     document.getElementById("feedback-area").innerHTML = `
@@ -1491,6 +1841,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex >= currentQuestions.length) {
       showResult();
     } else {
+      // Modo Automático: a próxima pergunta é escolhida agora, já com o nível atualizado.
+      if (rodadaAdaptativa && !currentQuestions[currentIndex]) currentQuestions[currentIndex] = proximaAdaptativa();
       renderQuestion();
     }
   });
@@ -1511,8 +1863,13 @@ document.addEventListener("DOMContentLoaded", () => {
     questionResults = [];
     selectedOption = null;
     timeLeft = 0;
+    // Sai do modo Automático; o nível já ficou salvo a cada resposta.
+    rodadaAdaptativa = null;
     closeReviewPanel();
     updateTimerUI();
+    // O botão "Automático" mostra de onde a próxima rodada começa: refaz os botões e o resumo.
+    montarNiveis();
+    atualizarResumo();
   }
 
   btnBack.addEventListener("click", () => {
@@ -1615,9 +1972,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const temaAtual = materiaAtual.temas.find(tema => tema.id === selectedTopic);
     // Nomes das escolhas que não são um tema só.
-    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas" };
+    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas", prova: "Estilo da prova" };
     // Mostra o nome do tema, ou o nome especial, no painel de progresso.
     document.getElementById("current-theme-label").textContent = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
+
+    // Nível final da rodada (só no Automático) e as perguntas que de fato apareceram, para "Repetir mesma prova".
+    const nivelFinal = document.getElementById("res-nivel");
+    if (rodadaAdaptativa) {
+      // Só as vagas preenchidas: se o tempo acabou antes, as que não apareceram ficam de fora.
+      lastQuizQuestions = currentQuestions.filter(Boolean);
+      // Texto: nível em que terminou e o maior a que chegou, quando forem diferentes.
+      const maior = rodadaAdaptativa.maior > rodadaAdaptativa.nivel ? ` · chegou ao ${NOMES_NIVEL[rodadaAdaptativa.maior]}` : "";
+      nivelFinal.textContent = `Nível ao terminar: ${NOMES_NIVEL[rodadaAdaptativa.nivel]}${maior}`;
+      nivelFinal.dataset.nivel = rodadaAdaptativa.nivel;
+      nivelFinal.classList.remove("hidden");
+    } else {
+      nivelFinal.classList.add("hidden");
+    }
+    // O pug comenta a nota (js/pug.js).
+    if (window.Pug) window.Pug.resultado(pct, document.getElementById("pug-resultado"));
 
     recordProgressSnapshot(pct, totalQuestions, score, selectedTopic);
     renderReviewPanel(getWrongQuestionsFromCurrentRound());
@@ -1637,6 +2010,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const labels = historyData.map((_, i) => `T${i + 1}`);
+    // Cores do texto e das linhas do gráfico: vêm do visual escolhido (no Claro, o texto é escuro).
+    const estiloVisual = getComputedStyle(document.documentElement);
+    const corTexto = estiloVisual.getPropertyValue("--text").trim() || "#E9ECF5";
+    const corApagada = estiloVisual.getPropertyValue("--muted").trim() || "#D0D7F1";
+    const corLinhas = estiloVisual.getPropertyValue("--border").trim() || "rgba(255, 255, 255, 0.06)";
     const lastValue = historyData[historyData.length - 1] ?? 0;
     const isStrong = lastValue >= 70;
     const isMedium = lastValue >= 40;
@@ -1695,20 +2073,20 @@ document.addEventListener("DOMContentLoaded", () => {
           y: {
             beginAtZero: true,
             max: 100,
-            grid: { color: 'rgba(255, 255, 255, 0.06)', drawBorder: false },
-            ticks: { color: '#D0D7F1', padding: 8 },
+            grid: { color: corLinhas, drawBorder: false },
+            ticks: { color: corApagada, padding: 8 },
             border: { display: false }
           },
           x: {
             grid: { display: false, drawBorder: false },
-            ticks: { color: '#D0D7F1', padding: 6 },
+            ticks: { color: corApagada, padding: 6 },
             border: { display: false }
           }
         },
         plugins: {
           legend: {
             display: true,
-            labels: { color: '#E9ECF5', boxWidth: 12, usePointStyle: true, pointStyle: 'circle' }
+            labels: { color: corTexto, boxWidth: 12, usePointStyle: true, pointStyle: 'circle' }
           },
           tooltip: {
             backgroundColor: 'rgba(12, 16, 25, 0.96)',
@@ -1811,6 +2189,8 @@ document.addEventListener("DOMContentLoaded", () => {
     timeLeft = 0;
     elapsedSeconds = 0;
     timeLimitSeconds = 0;
+    // Sai do modo Automático; o nível já ficou salvo.
+    rodadaAdaptativa = null;
     closeReviewPanel();
     updateTimerUI();
   });

@@ -787,6 +787,10 @@
           {
             "id": "serve",
             "rotulo": "Para que serve cada grupo"
+          },
+          {
+            "id": "significado",
+            "rotulo": "O que cada código significa (200, 404...)"
           }
         ]
       },

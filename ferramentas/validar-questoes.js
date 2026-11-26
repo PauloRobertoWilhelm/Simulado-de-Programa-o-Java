@@ -6,6 +6,8 @@
 
   O que ele confere:
   - cada pergunta tem 4 opções diferentes e um "correct" válido;
+  - cada pergunta tem "nivel" 1, 2 ou 3 (classificado por ferramentas/classificar-niveis.js);
+  - "bloco" (afirmativas do formato de prova), quando existe, é uma lista de 2 ou mais textos;
   - o tema ("topic") existe em materias/index.json;
   - nenhuma pergunta se repete e nenhuma resposta certa se repete na mesma matéria;
   - a resposta certa NÃO é visivelmente maior que as outras (mais de 10% maior
@@ -125,9 +127,16 @@ for (const materia of lista) {
     if (new Set((q.options || []).map(exato)).size !== (q.options || []).length) falha('opções repetidas', `${rotulo}: opções repetidas`);
     // Toda pergunta precisa de explicação.
     if (!q.explain) erros.push(`${rotulo}: falta "explain"`);
+    // Nível da pergunta: 1 (Fácil), 2 (Médio) ou 3 (Difícil). O app usa no modo Automático e nos botões de nível.
+    if (![1, 2, 3].includes(q.nivel)) erros.push(`${rotulo}: falta "nivel" (1, 2 ou 3). Rode: node ferramentas/classificar-niveis.js --gravar`);
+    // Afirmativas do formato de prova: lista com pelo menos 2 textos, nenhum vazio.
+    if (q.bloco !== undefined && !(Array.isArray(q.bloco) && q.bloco.length >= 2 && q.bloco.every((linha) => typeof linha === 'string' && linha.trim()))) erros.push(`${rotulo}: "bloco" precisa ser uma lista com 2 ou mais afirmativas`);
+    // Estilo: por enquanto só existe "prova" (perguntas no formato das provas dos professores).
+    if (q.estilo !== undefined && q.estilo !== 'prova') erros.push(`${rotulo}: "estilo" desconhecido (${q.estilo})`);
 
     // Enunciado repetido (mesmo texto e mesmo código) é erro.
-    const chave = normalizar(q.statement) + '|' + normalizar(q.code || '');
+    // Perguntas no formato de prova repetem o enunciado ("Analise as afirmativas..."): as afirmativas fazem parte da chave.
+    const chave = normalizar(q.statement) + '|' + normalizar(q.code || '') + (Array.isArray(q.bloco) ? '|' + normalizar(q.bloco.join(' ')) : '');
     if (enunciados.has(chave)) falha('enunciado repetido', `${rotulo}: pergunta repetida`);
     enunciados.add(chave);
 

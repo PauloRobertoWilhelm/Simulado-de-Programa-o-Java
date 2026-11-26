@@ -1,0 +1,89 @@
+/*
+  Arquivo: css/pug.css
+  Papel no sistema: aparência e animações do pug, o mascote que zoa quando você erra
+  e faz elogio irônico quando você acerta. Trabalha com js/pug.js.
+  Duas formas:
+  - .pug-fala: o pug dentro da explicação da resposta (prova) e no resultado;
+  - .pug-flutuante: o pug que aparece no canto (histórias, jogos, praticar e tela inicial).
+*/
+
+/* ===== FOTO E BALÃO ===== */
+/* Figurinha do pug: cantos redondos, borda na cor do visual e sombra. */
+.pug-foto { flex: none; width: 66px; height: 76px; overflow: hidden; border: 2px solid var(--primary); border-radius: 14px; background: #f3e6dc; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); }
+/* A imagem cobre a figurinha toda, sem esticar. */
+.pug-foto img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Balão de fala ao lado da foto. */
+.pug-balao { position: relative; padding: 10px 14px; border: 1px solid var(--border-soft); border-radius: 14px; background: var(--surface); color: var(--text); font-weight: 600; line-height: 1.42; text-align: left; }
+/* Pontinha do balão, apontando para o pug (à esquerda). */
+.pug-balao::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; background: inherit; border-left: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); transform: translateY(-50%) rotate(45deg); }
+
+/* ===== PUG DENTRO DA EXPLICAÇÃO ===== */
+/* Foto e balão lado a lado, acima do "Você acertou / Você errou". */
+.pug-fala { display: flex; align-items: center; gap: 14px; margin: 0 0 12px; }
+/* O pug entra girando e crescendo, como quem aparece de repente. */
+.pug-fala .pug-foto { animation: pug-entrar 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+/* Errou: depois de entrar, o pug ri balançando a cabeça. */
+.pug-fala.erro .pug-foto { animation: pug-entrar 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both, pug-rir 0.6s ease-in-out 0.5s 2; }
+/* Acertou: um pulinho de "uau". */
+.pug-fala.acerto .pug-foto { animation: pug-entrar 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both, pug-pulo 0.6s ease 0.5s 1; }
+/* Subiu de nível: pulinho duplo. */
+.pug-fala.festa .pug-foto { animation: pug-entrar 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both, pug-pulo 0.5s ease 0.5s 2; }
+/* Desceu de nível ou nota baixa: cabeça baixa. */
+.pug-fala.triste .pug-foto { animation: pug-entrar 0.5s ease both, pug-murchar 1.2s ease 0.5s both; }
+/* O balão aparece logo depois do pug. */
+.pug-fala .pug-balao { animation: balao-entrar 0.35s ease 0.15s both; }
+/* No resultado, o pug fica centralizado e um pouco maior. */
+.pug-resultado { display: flex; justify-content: center; margin: 14px 0 4px; }
+.pug-resultado .pug-foto { width: 84px; height: 97px; }
+.pug-resultado .pug-balao { max-width: 380px; }
+
+/* ===== PUG FLUTUANTE ===== */
+/* Fica no canto de baixo, fora da tela, até ter algo a dizer. */
+.pug-flutuante { position: fixed; right: 14px; bottom: 14px; z-index: 40; display: flex; flex-direction: row-reverse; align-items: flex-end; gap: 10px; pointer-events: none; transform: translateX(150%); transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 1); }
+/* Aparecendo: desliza para dentro com um quique. */
+.pug-flutuante.ativo { transform: translateX(0); }
+/* A foto recebe toque (o pug responde); o resto deixa o toque passar para a página. */
+.pug-flutuante .pug-foto { pointer-events: auto; cursor: pointer; width: 74px; height: 85px; }
+/* Balão: aparece só enquanto o pug fala. */
+.pug-flutuante .pug-balao { max-width: min(260px, 64vw); margin-bottom: 18px; opacity: 0; transform: scale(0.9); transform-origin: right bottom; transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: auto; }
+.pug-flutuante.falando .pug-balao { opacity: 1; transform: none; }
+/* No flutuante a pontinha do balão aponta para a direita (o pug está à direita). */
+.pug-flutuante .pug-balao::before { left: auto; right: -7px; transform: translateY(-50%) rotate(225deg); }
+/* Ao falar, a foto dá um pulinho. */
+.pug-flutuante.falando .pug-foto { animation: pug-pulo 0.6s ease; }
+/* Na tela inicial de Perguntas, sobe para não cobrir a barra de "Iniciar prova". */
+body:has(#screen-intro:not(.hidden) #panel-perguntas:not(.hidden)) .pug-flutuante { bottom: 96px; }
+/* Durante a prova, o pug fala dentro da explicação; o flutuante fica fora da tela. */
+body:has(#screen-quiz:not(.hidden)) .pug-flutuante { transform: translateX(150%); }
+/* Tela bem larga: sobra espaço no canto, então o pug fica de plantão, cochilando, mesmo calado. */
+@media (min-width: 1240px) {
+  .pug-flutuante.de-plantao { transform: translateX(0); }
+}
+
+/* ===== ANIMAÇÕES ===== */
+/* Entrada: cresce de pequeno e gira de leve. */
+@keyframes pug-entrar { from { opacity: 0; transform: scale(0.3) rotate(-18deg); } }
+/* Risada: balança a cabeça de um lado para o outro. */
+@keyframes pug-rir { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-9deg); } 75% { transform: rotate(9deg); } }
+/* Pulinho. */
+@keyframes pug-pulo { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-11px); } 70% { transform: translateY(2px); } }
+/* Murchar: desce um pouco e inclina. */
+@keyframes pug-murchar { to { transform: translateY(4px) rotate(-6deg); } }
+/* Balão: desliza do lado do pug. */
+@keyframes balao-entrar { from { opacity: 0; transform: translateX(-8px) scale(0.96); } }
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Pug menor dentro da explicação. */
+  .pug-fala .pug-foto { width: 54px; height: 62px; border-radius: 12px; }
+  .pug-fala { gap: 12px; }
+  .pug-balao { padding: 9px 12px; font-size: 0.92rem; }
+  /* Flutuante menor. */
+  .pug-flutuante .pug-foto { width: 60px; height: 69px; }
+}
+
+/* ===== MENOS MOVIMENTO (pedido no sistema) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .pug-fala .pug-foto, .pug-fala .pug-balao, .pug-flutuante.falando .pug-foto { animation: none; }
+  .pug-flutuante, .pug-flutuante .pug-balao { transition: none; }
+}

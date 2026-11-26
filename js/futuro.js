@@ -97,14 +97,39 @@
     desenhar(0);
   }
 
+  // ===== CORES DO VISUAL =====
+  // Cor das trilhas e dos pulsos no formato "r, g, b". Vêm de --circ-linha e --circ-pulso (css/temas.css),
+  // que mudam com o visual escolhido. Começam no ouro do visual Futurista.
+  let corLinha = '232, 185, 74', corPulso = '255, 226, 150';
+  // emRGB() aceita "r, g, b" ou "#rrggbb" (cor da matéria) e devolve "r, g, b". Parâmetros: texto e reserva.
+  function emRGB(texto, reserva) {
+    // Tira espaços das pontas.
+    const valor = String(texto || '').trim();
+    // "#5ea6f0": separa os pares de letras e converte de base 16 para número.
+    if (/^#[0-9a-f]{6}$/i.test(valor)) return [1, 3, 5].map((i) => parseInt(valor.slice(i, i + 2), 16)).join(', ');
+    // "232, 185, 74": já está no formato.
+    if (/^\d+\s*,\s*\d+\s*,\s*\d+$/.test(valor)) return valor;
+    // Qualquer outra coisa: fica a cor de reserva.
+    return reserva;
+  }
+  // lerCores() busca as cores atuais no CSS e redesenha o quadro parado.
+  function lerCores() {
+    // Valores calculados no <html>, já com o visual e a matéria aplicados.
+    const estilo = getComputedStyle(document.documentElement);
+    corLinha = emRGB(estilo.getPropertyValue('--circ-linha'), '232, 185, 74');
+    corPulso = emRGB(estilo.getPropertyValue('--circ-pulso'), '255, 226, 150');
+    // Redesenha já, para a cor nova aparecer mesmo com a animação parada.
+    if (largura) desenhar(0);
+  }
+
   // desenhar() pinta um quadro. Parâmetro: segundos desde o quadro anterior.
   function desenhar(segundos) {
     // Apaga o quadro anterior.
     caneta.clearRect(0, 0, largura, altura);
-    // Trilhas: linha fina de ouro quase apagada.
+    // Trilhas: linha fina, quase apagada, na cor do visual.
     caneta.lineWidth = 1;
-    caneta.strokeStyle = 'rgba(232, 185, 74, 0.13)';
-    caneta.fillStyle = 'rgba(232, 185, 74, 0.3)';
+    caneta.strokeStyle = `rgba(${corLinha}, 0.13)`;
+    caneta.fillStyle = `rgba(${corLinha}, 0.3)`;
     trilhas.forEach((trilha) => {
       // Desenha o caminho ponto a ponto.
       caneta.beginPath();
@@ -123,7 +148,7 @@
         const distancia = pulso.d - i * 5;
         if (distancia < 0 || distancia > pulso.trilha.total) continue;
         const [x, y] = lugar(pulso.trilha, distancia);
-        caneta.fillStyle = `rgba(255, 226, 150, ${0.85 * (1 - i / 11)})`;
+        caneta.fillStyle = `rgba(${corPulso}, ${0.85 * (1 - i / 11)})`;
         caneta.fillRect(x - 1.2, y - 1.2, 2.4, 2.4);
       }
     });
@@ -133,16 +158,22 @@
   function rodar(agora) {
     // Pede o próximo quadro.
     requestAnimationFrame(rodar);
-    // Aba escondida ou menos de 33 ms: não desenha, para poupar bateria.
-    if (document.hidden || agora - ultimo < 33) return;
+    // Aba escondida, menos de 33 ms ou "Menos animação" escolhido no app: não desenha, para poupar bateria.
+    if (document.hidden || agora - ultimo < 33 || document.documentElement.dataset.movimento === 'menos') return;
     // Tempo passado, limitado a 0,1 s para os pulsos não darem salto.
     const segundos = Math.min((agora - ultimo) / 1000, 0.1);
     ultimo = agora;
     desenhar(segundos);
   }
 
+  // Lê as cores do visual salvo e prepara o desenho.
+  lerCores();
   // Prepara agora e refaz quando a largura muda. No celular a altura muda ao rolar, e isso não conta.
   preparar();
+  // Trocou o visual (js/temas.js): relê as cores.
+  document.addEventListener('visual-trocado', lerCores);
+  // Trocou de matéria: no visual Grafite o circuito usa a cor da matéria, que o index.html grava no style do <html>.
+  new MutationObserver(lerCores).observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'data-visual'] });
   let larguraAnterior = window.innerWidth;
   window.addEventListener('resize', () => {
     if (window.innerWidth === larguraAnterior) return;

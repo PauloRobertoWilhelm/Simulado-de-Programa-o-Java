@@ -1,0 +1,111 @@
+/*
+  Arquivo: css/niveis.css
+  Papel no sistema: níveis das perguntas (Fácil, Médio e Difícil), afirmativas no formato de prova
+  e as animações da prova (alternativas em cascata, tremida no erro, confete no acerto, aviso de nível).
+  Vale em todos os visuais. As cores usam as variáveis do visual escolhido.
+*/
+
+/* Cor de cada nível: verde, âmbar e vermelho. Usada nos pontinhos, nas barras e nos selos. */
+[data-nivel="1"] { --cor-nivel: #4cc79a; }
+[data-nivel="2"] { --cor-nivel: #e8b94a; }
+[data-nivel="3"] { --cor-nivel: #f0727f; }
+/* No Automático, a cor é um degradê dos três. */
+[data-nivel="auto"] { --cor-nivel: linear-gradient(90deg, #4cc79a, #e8b94a, #f0727f); }
+
+/* ===== ESCOLHA DO NÍVEL (tela inicial) ===== */
+/* Quatro botões lado a lado: Automático, Fácil, Médio e Difícil. */
+.nivel-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+/* Botão de nível: nome em cima, quantidade embaixo. */
+.npick { position: relative; overflow: hidden; display: grid; gap: 3px; align-content: start; justify-items: start; min-height: 64px; padding: 10px 12px 12px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--r-md); color: var(--text); font: inherit; text-align: left; cursor: pointer; transition: background 0.18s var(--ease), border-color 0.18s var(--ease), transform 0.12s var(--ease); }
+/* Faixa colorida embaixo do botão, na cor do nível. */
+.npick::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--cor-nivel); opacity: 0.75; }
+/* Mouse em cima: clareia. */
+.npick:hover:not(:disabled) { background: var(--surface-3); border-color: var(--border-soft); }
+/* Ao apertar: afunda um pouco. */
+.npick:active:not(:disabled) { transform: scale(0.98); }
+/* Escolhido: borda e fundo na cor principal. */
+.npick.on { background: var(--accent-soft); border-color: var(--primary); }
+/* Foco visível para o teclado. */
+.npick:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* Desligado (contas sorteadas não têm nível). */
+.npick:disabled { opacity: 0.45; cursor: not-allowed; }
+/* Nome do nível. */
+.npick .nivel-nome { font-weight: 600; font-size: 0.98rem; }
+/* Quantidade de perguntas do nível no que foi escolhido. */
+.npick .nivel-n { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted-2); }
+
+/* ===== MEDIDOR NA PROVA ===== */
+/* Fica na barra de cima, entre "Questão 1 de 10" e o cronômetro. */
+.medidor-nivel { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+/* Some quando a rodada não tem nível (contas). */
+.medidor-nivel:empty { display: none; }
+/* Três barrinhas: acendem até o nível atual. */
+.mn-barras { display: inline-flex; gap: 3px; }
+.mn-barras i { width: 14px; height: 6px; border-radius: 2px; background: var(--surface-3); transition: background 0.3s var(--ease); }
+.medidor-nivel[data-nivel="1"] .mn-barras i:nth-child(-n+1), .medidor-nivel[data-nivel="2"] .mn-barras i:nth-child(-n+2), .medidor-nivel[data-nivel="3"] .mn-barras i:nth-child(-n+3) { background: var(--cor-nivel); }
+/* Acertos seguidos (a "chama"). Pulsa quando aumenta. */
+.mn-fogo { color: var(--primary); font-weight: 600; }
+.mn-fogo.pulsar { animation: fogo-pulsar 0.5s var(--ease); }
+@keyframes fogo-pulsar { 40% { transform: scale(1.35); } }
+
+/* ===== AVISO "SUBIU DE NÍVEL" ===== */
+/* Faixa que desce por cima do cartão da pergunta e some sozinha (js/efeitos.js). */
+.aviso-nivel { position: relative; z-index: 3; margin: 0 0 12px; padding: 10px 14px; border-radius: var(--r-sm); border: 1px solid var(--cor-nivel, var(--primary)); background: var(--surface-2); color: var(--text); font-weight: 600; text-align: center; animation: aviso-entrar 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+/* Subiu: brilho na cor do nível. Desceu: tom neutro. */
+.aviso-nivel.subiu { box-shadow: 0 0 22px color-mix(in srgb, var(--primary) 35%, transparent); }
+@keyframes aviso-entrar { from { opacity: 0; transform: translateY(-14px) scale(0.96); } }
+
+/* ===== SELOS NO CARTÃO DA PERGUNTA ===== */
+/* Linha com os selos (nível e "estilo da prova"), acima do enunciado. */
+.q-selos { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+/* Selo: etiqueta pequena com borda. */
+.selo { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border: 1px solid var(--border-soft); border-radius: 999px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+/* Pontinho na cor do nível. */
+.selo-nivel::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cor-nivel); }
+
+/* ===== AFIRMATIVAS NO FORMATO DA PROVA ===== */
+/* Bloco com as afirmativas I, II, III ou a lista para associar, entre o enunciado e as alternativas. */
+.q-bloco { display: grid; gap: 8px; margin: 12px 0 6px; padding: 12px 16px; border-left: 3px solid var(--primary); border-radius: var(--r-sm); background: var(--surface-2); }
+/* Cada afirmativa numa linha, com o texto alinhado à esquerda. */
+.q-bloco p { margin: 0; line-height: 1.55; color: var(--text); text-align: left; }
+/* No painel de revisão de erros, o bloco fica um pouco menor. */
+.review-card .q-bloco { margin: 8px 0; font-size: 0.92rem; }
+
+/* ===== ANIMAÇÕES DA PROVA ===== */
+/* Alternativas entram em cascata: cada uma 70 ms depois da anterior (--i vem do index.html).
+   "backwards" só vale antes de terminar, então o efeito do mouse continua funcionando depois. */
+.options .option { animation: opcao-entrar 0.4s var(--ease) backwards; animation-delay: calc(var(--i, 0) * 70ms + 80ms); }
+@keyframes opcao-entrar { from { opacity: 0; transform: translateY(10px); } }
+/* Errou: a alternativa marcada treme. */
+.options .option.wrong { animation: opcao-tremer 0.45s var(--ease); animation-delay: 0s; }
+@keyframes opcao-tremer { 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+/* A certa dá um pulinho (também quando aparece para mostrar a resposta). */
+.options .option.correct { animation: opcao-certa 0.5s var(--ease); animation-delay: 0s; }
+@keyframes opcao-certa { 45% { transform: scale(1.025); } }
+/* Explicação da resposta: sobe devagar. */
+#feedback-area .feedback { animation: feedback-entrar 0.4s var(--ease) both; }
+@keyframes feedback-entrar { from { opacity: 0; transform: translateY(8px); } }
+
+/* Confete: pedacinhos soltos pelo js/efeitos.js. Ficam por cima de tudo e não recebem toques. */
+.confete { position: fixed; left: 0; top: 0; z-index: 60; width: 8px; height: 8px; border-radius: 2px; pointer-events: none; }
+
+/* ===== RESULTADO ===== */
+/* Nível em que a rodada terminou. */
+.nivel-final { display: inline-flex; align-items: center; gap: 8px; margin: 6px auto 0; padding: 5px 12px; border: 1px solid var(--border-soft); border-radius: 999px; font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+.nivel-final::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cor-nivel); }
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Dois níveis por linha. */
+  .nivel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* A linha de cima quebra em duas: "Questão 1 de 10" e o cronômetro em cima, o medidor numa linha só dele. */
+  .progress-meta { flex-wrap: wrap; row-gap: 6px; }
+  /* Medidor mais compacto, ocupando a segunda linha inteira. */
+  .medidor-nivel { order: 3; flex-basis: 100%; gap: 6px; font-size: 0.74rem; }
+  .mn-barras i { width: 10px; }
+}
+
+/* ===== MENOS MOVIMENTO (pedido no sistema) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .options .option, .options .option.wrong, .options .option.correct, #feedback-area .feedback, .aviso-nivel, .mn-fogo.pulsar { animation: none; }
+}

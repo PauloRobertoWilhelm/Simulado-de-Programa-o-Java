@@ -11,7 +11,8 @@
       ],
       "correct": 1,
       "explain": "<b>End-to-End:</b> percorre o fluxo inteiro, de ponta a ponta, como um usuário real.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -24,7 +25,8 @@
       ],
       "correct": 2,
       "explain": "<b>Integração:</b> verifica se módulos diferentes funcionam juntos.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -37,7 +39,8 @@
       ],
       "correct": 0,
       "explain": "<b>Unidade:</b> testa uma parte pequena da lógica de forma isolada.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -50,7 +53,8 @@
       ],
       "correct": 3,
       "explain": "<b>Fumaça (smoke):</b> checagem rápida do essencial. Se falhar, nem vale começar o resto.",
-      "assunto": "reg"
+      "assunto": "reg",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -63,7 +67,8 @@
       ],
       "correct": 1,
       "explain": "<b>Regressão:</b> confere se o que já funcionava continua funcionando depois de uma mudança.",
-      "assunto": "reg"
+      "assunto": "reg",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -76,7 +81,8 @@
       ],
       "correct": 0,
       "explain": "<b>Funcional x não funcional:</b> o primeiro olha o que o sistema faz, o segundo olha quão bem ele se comporta.",
-      "assunto": "nfunc"
+      "assunto": "nfunc",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -89,7 +95,8 @@
       ],
       "correct": 2,
       "explain": "<b>Caixa preta:</b> você não vê o interior. <b>Caixa branca:</b> você testa a lógica interna.",
-      "assunto": "branca"
+      "assunto": "branca",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -102,7 +109,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tabela de Decisão:</b> cada coluna é uma combinação de condições com o resultado esperado.",
-      "assunto": "tabela"
+      "assunto": "tabela",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -115,7 +123,8 @@
       ],
       "correct": 0,
       "explain": "<b>Exploratório:</b> é baseado em experiência. Aprender e testar acontecem ao mesmo tempo.",
-      "assunto": "exp"
+      "assunto": "exp",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -128,7 +137,8 @@
       ],
       "correct": 2,
       "explain": "<b>Valor limite:</b> os defeitos se escondem nas fronteiras. Por isso teste um pouco abaixo, exatamente em cima e um pouco acima de cada limite.",
-      "assunto": "limite"
+      "assunto": "limite",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -141,7 +151,8 @@
       ],
       "correct": 1,
       "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde o sistema costuma quebrar.",
-      "assunto": "exp"
+      "assunto": "exp",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -154,7 +165,8 @@
       ],
       "correct": 3,
       "explain": "<b>Shift Left:</b> “mover para a esquerda” da linha do tempo, ou seja, testar mais cedo.",
-      "assunto": "qa"
+      "assunto": "qa",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -167,7 +179,8 @@
       ],
       "correct": 0,
       "explain": "<b>Em dupla:</b> as duas práticas compartilham conhecimento. Uma foca o código, a outra foca os testes.",
-      "assunto": "qa"
+      "assunto": "qa",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -180,7 +193,8 @@
       ],
       "correct": 2,
       "explain": "<b>Gherkin:</b> escreve cenários em linguagem próxima da natural, como “Dado, Quando, Então”.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -193,7 +207,8 @@
       ],
       "correct": 1,
       "explain": "<b>QA:</b> participa do desenvolvimento inteiro. Testar reduz riscos, mas nunca garante ausência total de defeitos.",
-      "assunto": "qa"
+      "assunto": "qa",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -206,7 +221,8 @@
       ],
       "correct": 0,
       "explain": "<b>Automação:</b> repete o trabalho sem cansar, mas alguém ainda precisa planejar os casos.",
-      "assunto": "auto"
+      "assunto": "auto",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -219,7 +235,8 @@
       ],
       "correct": 3,
       "explain": "<b>Qualidade:</b> não basta cumprir o requisito. O requisito precisa ser o que as pessoas realmente precisam.",
-      "assunto": "conceito"
+      "assunto": "conceito",
+      "nivel": 3
     },
     {
       "topic": "qualidade",
@@ -232,7 +249,8 @@
       ],
       "correct": 2,
       "explain": "<b>Comunicação:</b> cada um entendeu “exatamente igual” de um jeito. Nenhum deles confirmou o que o outro quis dizer.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 3
     },
     {
       "topic": "qualidade",
@@ -245,7 +263,8 @@
       ],
       "correct": 1,
       "explain": "<b>Impactos:</b> perda de confiança e reputação, equipes sobrecarregadas e desmotivadas, além de ações judiciais e prejuízos financeiros.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 3
     },
     {
       "topic": "qualidade",
@@ -258,7 +277,8 @@
       ],
       "correct": 2,
       "explain": "<b>Princípios:</b> teste exaustivo é impossível, e o objetivo é reduzir riscos. Quanto mais cedo o teste, mais barato é corrigir.",
-      "assunto": "conceito"
+      "assunto": "conceito",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -271,7 +291,8 @@
       ],
       "correct": 1,
       "explain": "<b>Carga = volume esperado:</b> simula muitos usuários ao mesmo tempo para ver se o sistema aguenta o movimento previsto.",
-      "assunto": "nfunc"
+      "assunto": "nfunc",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -284,7 +305,8 @@
       ],
       "correct": 1,
       "explain": "<b>Estresse = passar do limite:</b> a carga testa o esperado; o estresse empurra além, até quebrar, para conhecer o limite e a recuperação.",
-      "assunto": "nfunc"
+      "assunto": "nfunc",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -297,7 +319,8 @@
       ],
       "correct": 1,
       "explain": "<b>Reteste:</b> confere se AQUELE defeito foi mesmo corrigido, repetindo o teste que tinha falhado.",
-      "assunto": "reg"
+      "assunto": "reg",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -310,7 +333,8 @@
       ],
       "correct": 1,
       "explain": "<b>Dois objetivos:</b> o reteste olha o bug corrigido. A regressão olha o resto, para ver se a correção quebrou algo que funcionava.",
-      "assunto": "reg"
+      "assunto": "reg",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -323,7 +347,8 @@
       ],
       "correct": 1,
       "explain": "<b>Segurança:</b> procura falhas que deixam alguém ver ou mexer no que não devia. Trocar o id na URL é um teste clássico de controle de acesso.",
-      "assunto": "nfunc"
+      "assunto": "nfunc",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -336,7 +361,8 @@
       ],
       "correct": 1,
       "explain": "<b>Usabilidade:</b> mede se pessoas reais conseguem usar o sistema com facilidade. É um teste não funcional.",
-      "assunto": "nfunc"
+      "assunto": "nfunc",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -349,7 +375,8 @@
       ],
       "correct": 1,
       "explain": "<b>Aceite (UAT):</b> é o cliente ou usuário dizendo “aceito” ou “não aceito”, com base no que foi combinado.",
-      "assunto": "aceite"
+      "assunto": "aceite",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -362,7 +389,8 @@
       ],
       "correct": 1,
       "explain": "<b>Onde acontece:</b> no alfa, usuários testam no ambiente de quem desenvolveu. No beta, usuários testam no ambiente deles, antes do lançamento oficial.",
-      "assunto": "aceite"
+      "assunto": "aceite",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -375,7 +403,8 @@
       ],
       "correct": 1,
       "explain": "<b>Base larga:</b> testes de unidade são rápidos e baratos, então são muitos. Quanto mais para o topo, mais lentos e caros, e por isso menos.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -388,7 +417,8 @@
       ],
       "correct": 1,
       "explain": "<b>Custo alto:</b> o E2E passa pelo sistema inteiro, demora e qualquer mudança na tela pode quebrá-lo. É útil, mas em pouca quantidade.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -401,7 +431,8 @@
       ],
       "correct": 1,
       "explain": "<b>Estático = sem rodar:</b> revisões, inspeções e análise de código acham defeitos cedo. O dinâmico executa o programa.",
-      "assunto": "aceite"
+      "assunto": "aceite",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -414,7 +445,8 @@
       ],
       "correct": 1,
       "explain": "<b>Teste de API:</b> confere se o back-end responde certo (status, dados, erros) sem depender da interface.",
-      "assunto": "nivel"
+      "assunto": "nivel",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -427,7 +459,8 @@
       ],
       "correct": 1,
       "explain": "<b>Grupos que se comportam igual:</b> abaixo de 18 (inválida), de 18 a 60 (válida) e acima de 60 (inválida). Basta um valor de cada grupo.",
-      "assunto": "limite"
+      "assunto": "limite",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -440,7 +473,8 @@
       ],
       "correct": 1,
       "explain": "<b>Nas bordas:</b> os erros moram nas fronteiras (um &gt; no lugar de &gt;=). Testa-se cada limite e o vizinho de fora: 17 e 18; 60 e 61.",
-      "assunto": "limite"
+      "assunto": "limite",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -453,7 +487,8 @@
       ],
       "correct": 1,
       "explain": "<b>2 elevado ao número de condições:</b> 2 × 2 × 2 = 8 combinações possíveis.",
-      "assunto": "tabela"
+      "assunto": "tabela",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -466,7 +501,8 @@
       ],
       "correct": 1,
       "explain": "<b>O sistema “lembra”:</b> o resultado depende do que aconteceu antes (1ª, 2ª, 3ª tentativa). Estados e transições mostram isso.",
-      "assunto": "estado"
+      "assunto": "estado",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -479,7 +515,8 @@
       ],
       "correct": 1,
       "explain": "<b>Evento:</b> algo acontece (senha errada, pagamento aprovado) e o sistema passa de um estado (ativo) para outro (bloqueado).",
-      "assunto": "estado"
+      "assunto": "estado",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -492,7 +529,8 @@
       ],
       "correct": 1,
       "explain": "<b>Os dois lados:</b> cada if tem o caminho verdadeiro e o falso. A cobertura de decisão mede quantos desses caminhos os testes passaram.",
-      "assunto": "branca"
+      "assunto": "branca",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -505,7 +543,8 @@
       ],
       "correct": 1,
       "explain": "<b>Decisão inclui instrução:</b> passando por todos os caminhos de todos os ifs, todas as linhas foram executadas. O contrário não vale.",
-      "assunto": "branca"
+      "assunto": "branca",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -518,7 +557,8 @@
       ],
       "correct": 1,
       "explain": "<b>“Acima” é a pegadinha:</b> R$ 100,00 ainda paga frete; R$ 100,01 já é grátis. Esses dois valores pegam um &gt;= escrito no lugar de &gt;.",
-      "assunto": "limite"
+      "assunto": "limite",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -531,7 +571,8 @@
       ],
       "correct": 1,
       "explain": "<b>Checklist:</b> técnica baseada em experiência, em que uma lista de verificação guia o teste e garante que nada importante é esquecido.",
-      "assunto": "exp"
+      "assunto": "exp",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -544,7 +585,8 @@
       ],
       "correct": 1,
       "explain": "<b>Precisa ver por dentro:</b> caixa branca exige conhecer a estrutura do código, por isso costuma ser feita por desenvolvedores ou QAs técnicos.",
-      "assunto": "branca"
+      "assunto": "branca",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -557,7 +599,8 @@
       ],
       "correct": 1,
       "explain": "<b>“E” exige as duas:</b> VIP sim, mas a compra não passa de R$ 200. Na tabela de decisão, essa combinação leva a 0%.",
-      "assunto": "tabela"
+      "assunto": "tabela",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -570,7 +613,8 @@
       ],
       "correct": 1,
       "explain": "<b>Fora da faixa:</b> 1, 5 e 10 estão entre 1 e 10 (válidos). O 0 fica abaixo do mínimo: partição inválida.",
-      "assunto": "limite"
+      "assunto": "limite",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -583,7 +627,8 @@
       ],
       "correct": 1,
       "explain": "<b>Missão da sessão:</b> por exemplo, “explorar o carrinho com cupons por 60 minutos”. Dá foco sem engessar o teste.",
-      "assunto": "exp"
+      "assunto": "exp",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -596,7 +641,8 @@
       ],
       "correct": 1,
       "explain": "<b>Vermelho, verde, refatorar:</b> escreve um teste que falha (vermelho), faz o mínimo para passar (verde) e depois melhora o código sem quebrar o teste.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -609,7 +655,8 @@
       ],
       "correct": 1,
       "explain": "<b>Teste antes do código:</b> o teste falhando mostra o que falta fazer. O código só é escrito para fazê-lo passar.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -622,7 +669,8 @@
       ],
       "correct": 1,
       "explain": "<b>Dado (contexto), Quando (ação), Então (resultado).</b> Em inglês: Given, When, Then.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -635,7 +683,8 @@
       ],
       "correct": 1,
       "explain": "<b>Então = o que deve acontecer:</b> é o resultado que o teste confere. O “Dado” é o começo e o “Quando” é a ação.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -648,7 +697,8 @@
       ],
       "correct": 1,
       "explain": "<b>Todos falam a mesma língua:</b> negócio, dev e QA escrevem juntos exemplos de comportamento, que viram testes automáticos.",
-      "assunto": "tdd"
+      "assunto": "tdd",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -661,7 +711,8 @@
       ],
       "correct": 1,
       "explain": "<b>Alarme cedo:</b> a cada mudança, o servidor de CI compila e roda os testes. Se algo quebrou, a equipe sabe em minutos.",
-      "assunto": "auto"
+      "assunto": "auto",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -674,7 +725,8 @@
       ],
       "correct": 1,
       "explain": "<b>Reproduzir é tudo:</b> título claro, passos, resultado esperado, resultado obtido, ambiente e evidências (print, log). Sem culpar ninguém.",
-      "assunto": "bug"
+      "assunto": "bug",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -687,7 +739,8 @@
       ],
       "correct": 1,
       "explain": "<b>Severidade x prioridade:</b> severidade é o impacto técnico (baixo: nada quebrou). Prioridade é a urgência para o negócio (alta: o diretor quer hoje).",
-      "assunto": "bug"
+      "assunto": "bug",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -700,7 +753,8 @@
       ],
       "correct": 1,
       "explain": "<b>Corrigido não é fechado:</b> o QA retesta. Se passou, fecha; se não, reabre e o bug volta para o dev.",
-      "assunto": "bug"
+      "assunto": "bug",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -713,7 +767,8 @@
       ],
       "correct": 1,
       "explain": "<b>Robô no navegador:</b> Selenium e Cypress clicam e digitam como um usuário. JMeter é para carga; Postman é para API.",
-      "assunto": "auto"
+      "assunto": "auto",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -726,7 +781,8 @@
       ],
       "correct": 1,
       "explain": "<b>Teste estático em dupla:</b> outro par de olhos acha erros, riscos e confusões antes mesmo de o código ser executado.",
-      "assunto": "qa"
+      "assunto": "qa",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -739,7 +795,8 @@
       ],
       "correct": 1,
       "explain": "<b>JUnit:</b> o framework clássico de testes de unidade em Java, com anotações como @Test e verificações como assertEquals.",
-      "assunto": "auto"
+      "assunto": "auto",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -752,7 +809,8 @@
       ],
       "correct": 1,
       "explain": "<b>Prevenir x detectar:</b> QA melhora o processo para os defeitos nem nascerem. QC inspeciona e testa o produto para achar os que nasceram.",
-      "assunto": "conceito"
+      "assunto": "conceito",
+      "nivel": 2
     },
     {
       "topic": "qualidade",
@@ -765,7 +823,8 @@
       ],
       "correct": 1,
       "explain": "<b>Cadeia:</b> a pessoa comete um engano (erro humano), que deixa um defeito no código, que causa uma falha quando o programa roda.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 2
     },
     {
       "topic": "qualidade",
@@ -778,7 +837,8 @@
       ],
       "correct": 1,
       "explain": "<b>Falha é o que se vê:</b> o sistema fazendo algo errado durante a execução. A linha errada é o defeito; o deslize da pessoa é o engano.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -791,7 +851,8 @@
       ],
       "correct": 1,
       "explain": "<b>Bola de neve:</b> um erro no requisito vira código, testes, manuais e clientes afetados. Quanto mais tarde, mais coisa para refazer.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 2
     },
     {
       "topic": "qualidade",
@@ -804,7 +865,8 @@
       ],
       "correct": 1,
       "explain": "<b>As 8 da ISO/IEC 25010 (versão 2011):</b> adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade.",
-      "assunto": "iso"
+      "assunto": "iso",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -817,7 +879,8 @@
       ],
       "correct": 1,
       "explain": "<b>Confiabilidade:</b> o sistema precisa funcionar quando é preciso, sem cair. Ficar fora do ar com frequência é falta de confiabilidade.",
-      "assunto": "iso"
+      "assunto": "iso",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -830,7 +893,8 @@
       ],
       "correct": 1,
       "explain": "<b>Portabilidade:</b> é a facilidade de levar o sistema para outro ambiente (sistema operacional, hardware, nuvem) e instalá-lo lá.",
-      "assunto": "iso"
+      "assunto": "iso",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -843,7 +907,8 @@
       ],
       "correct": 1,
       "explain": "<b>Eficiência de desempenho:</b> tempo de resposta e uso de recursos (memória, CPU). A busca até funciona, mas gasta demais.",
-      "assunto": "iso"
+      "assunto": "iso",
+      "nivel": 2
     },
     {
       "topic": "qualidade",
@@ -856,7 +921,8 @@
       ],
       "correct": 1,
       "explain": "<b>Adequação funcional:</b> o sistema faz o que deveria, do jeito certo? Uma conta errada falha nisso.",
-      "assunto": "iso"
+      "assunto": "iso",
+      "nivel": 1
     },
     {
       "topic": "qualidade",
@@ -869,7 +935,8 @@
       ],
       "correct": 1,
       "explain": "<b>Duas perguntas:</b> verificação = construímos o produto corretamente (segue a especificação)? Validação = construímos o produto certo (atende o usuário)?",
-      "assunto": "conceito"
+      "assunto": "conceito",
+      "nivel": 2
     },
     {
       "topic": "qualidade",
@@ -882,7 +949,8 @@
       ],
       "correct": 1,
       "explain": "<b>Causa raiz:</b> corrigir só o sintoma faz o bug voltar. Perguntar “por quê?” várias vezes (os 5 porquês) leva à origem.",
-      "assunto": "defeito"
+      "assunto": "defeito",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -895,7 +963,8 @@
       ],
       "correct": 1,
       "explain": "<b>1º princípio:</b> o teste pode provar que um defeito existe, mas nunca que não existe nenhum. Ele diminui o risco.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 3
     },
     {
       "topic": "principios",
@@ -908,7 +977,8 @@
       ],
       "correct": 1,
       "explain": "<b>2º princípio:</b> as combinações seriam bilhões. Usa-se técnicas (partições, limites) e prioridade por risco para escolher o que testar.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 3
     },
     {
       "topic": "principios",
@@ -921,7 +991,8 @@
       ],
       "correct": 1,
       "explain": "<b>3º princípio:</b> achar o erro no requisito custa pouco; achar em produção custa muito. É a ideia do shift left.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -934,7 +1005,8 @@
       ],
       "correct": 1,
       "explain": "<b>4º princípio:</b> os defeitos se concentram em poucos módulos (a ideia do 80/20). Onde já apareceram bugs, procure mais.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -947,7 +1019,8 @@
       ],
       "correct": 1,
       "explain": "<b>5º princípio:</b> como a praga que fica resistente ao veneno, o sistema fica “resistente” aos mesmos testes. Eles só acham o que já achavam.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -960,7 +1033,8 @@
       ],
       "correct": 1,
       "explain": "<b>Renovar o veneno:</b> revisar os testes, criar novos casos e variar os dados para continuar achando defeitos.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 2
     },
     {
       "topic": "principios",
@@ -973,7 +1047,8 @@
       ],
       "correct": 1,
       "explain": "<b>6º princípio:</b> o rigor, as técnicas e a documentação mudam conforme o risco. Uma vida em jogo pede muito mais teste.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 2
     },
     {
       "topic": "principios",
@@ -986,7 +1061,8 @@
       ],
       "correct": 1,
       "explain": "<b>7º princípio:</b> não ter bugs não basta. Um sistema sem defeitos, mas que não atende à necessidade do usuário, é inútil.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 2
     },
     {
       "topic": "principios",
@@ -999,7 +1075,8 @@
       ],
       "correct": 1,
       "explain": "<b>Sete princípios:</b> presença de defeitos, exaustivo impossível, testes antecipados, agrupamento, pesticida, contexto e falácia da ausência de erros.",
-      "assunto": "sete"
+      "assunto": "sete",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -1012,7 +1089,8 @@
       ],
       "correct": 1,
       "explain": "<b>Do pequeno ao grande:</b> testa a peça (componente), depois as peças juntas (integração), depois o sistema todo e, por fim, o aceite do cliente.",
-      "assunto": "niveis"
+      "assunto": "niveis",
+      "nivel": 2
     },
     {
       "topic": "principios",
@@ -1025,7 +1103,8 @@
       ],
       "correct": 1,
       "explain": "<b>Teste de sistema:</b> olha o produto completo, de ponta a ponta, pela visão dos requisitos. Ainda é a equipe testando, antes do cliente.",
-      "assunto": "niveis"
+      "assunto": "niveis",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -1038,7 +1117,8 @@
       ],
       "correct": 1,
       "explain": "<b>Integração de sistemas:</b> testa a troca entre o seu sistema e sistemas de fora (APIs, serviços de terceiros).",
-      "assunto": "niveis"
+      "assunto": "niveis",
+      "nivel": 2
     },
     {
       "topic": "principios",
@@ -1051,7 +1131,8 @@
       ],
       "correct": 1,
       "explain": "<b>Aceite regulatório:</b> confere se o sistema cumpre leis e normas do governo ou do setor. É parte do compliance.",
-      "assunto": "niveis"
+      "assunto": "niveis",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -1064,7 +1145,8 @@
       ],
       "correct": 1,
       "explain": "<b>Duas etapas:</b> o teste mostra que algo está errado. A depuração investiga o código, encontra o defeito e o corrige.",
-      "assunto": "geral"
+      "assunto": "geral",
+      "nivel": 3
     },
     {
       "topic": "principios",
@@ -1077,7 +1159,8 @@
       ],
       "correct": 1,
       "explain": "<b>Independência:</b> o autor tende a testar do jeito que pensou ao programar. Outra pessoa traz outras suposições e acha outros erros.",
-      "assunto": "geral"
+      "assunto": "geral",
+      "nivel": 3
     },
     {
       "topic": "principios",
@@ -1090,7 +1173,8 @@
       ],
       "correct": 1,
       "explain": "<b>Reduzir risco e dar informação:</b> o teste acha defeitos, gera confiança e ajuda a decidir se dá para lançar. Provar “zero defeitos” é impossível.",
-      "assunto": "geral"
+      "assunto": "geral",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -1103,7 +1187,8 @@
       ],
       "correct": 1,
       "explain": "<b>Quem diz o certo:</b> o oráculo pode ser o requisito, uma planilha, a versão antiga ou um especialista. Sem ele, não dá para dizer se o resultado está certo.",
-      "assunto": "geral"
+      "assunto": "geral",
+      "nivel": 1
     },
     {
       "topic": "principios",
@@ -1116,7 +1201,8 @@
       ],
       "correct": 1,
       "explain": "<b>Receita completa:</b> como deixar o sistema antes (pré-condições), o que fazer (passos), com quais dados e o que deve acontecer (resultado esperado).",
-      "assunto": "geral"
+      "assunto": "geral",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1129,7 +1215,8 @@
       ],
       "correct": 1,
       "explain": "<b>Estar de acordo:</b> compliance é cumprir leis (como a LGPD), normas (como as ISO) e regras internas, e conseguir provar isso.",
-      "assunto": "conceito"
+      "assunto": "conceito",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1142,7 +1229,8 @@
       ],
       "correct": 1,
       "explain": "<b>LGPD:</b> a Lei Geral de Proteção de Dados, de 2018, regula como empresas e governo coletam, usam, guardam e apagam dados pessoais.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1155,7 +1243,8 @@
       ],
       "correct": 1,
       "explain": "<b>Identifica alguém:</b> nome, CPF, e-mail, telefone, endereço, IP, localização... Tudo o que aponta para uma pessoa, direta ou indiretamente.",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1168,7 +1257,8 @@
       ],
       "correct": 1,
       "explain": "<b>Sensível = pode discriminar:</b> saúde, origem racial, religião, opinião política, vida sexual, dados genéticos e biométricos, filiação sindical. Pedem proteção maior.",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1181,7 +1271,8 @@
       ],
       "correct": 1,
       "explain": "<b>O dono dos dados:</b> o titular é a pessoa. A empresa que decide é o controlador; quem trata em nome dela é o operador.",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1194,7 +1285,8 @@
       ],
       "correct": 1,
       "explain": "<b>Operador executa:</b> a loja decide o que fazer com os dados (controladora). A nuvem trata os dados em nome dela (operadora).",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1207,7 +1299,8 @@
       ],
       "correct": 1,
       "explain": "<b>ANPD:</b> Autoridade Nacional de Proteção de Dados. Orienta, fiscaliza e aplica as sanções da LGPD.",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1220,7 +1313,8 @@
       ],
       "correct": 1,
       "explain": "<b>Ponte de comunicação:</b> o encarregado recebe as reclamações dos titulares, fala com a ANPD e orienta a empresa sobre proteção de dados.",
-      "assunto": "lgpdp"
+      "assunto": "lgpdp",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1233,7 +1327,8 @@
       ],
       "correct": 1,
       "explain": "<b>Consentimento:</b> a pessoa concorda claramente, sabendo para quê. Não vale caixinha já marcada nem texto escondido.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1246,7 +1341,8 @@
       ],
       "correct": 1,
       "explain": "<b>Minimização:</b> para mandar uma newsletter basta o e-mail. Pedir mais do que o necessário viola o princípio da necessidade.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 3
     },
     {
       "topic": "compliance",
@@ -1259,7 +1355,8 @@
       ],
       "correct": 1,
       "explain": "<b>Direitos do titular:</b> confirmar e acessar os dados, corrigir, pedir anonimização ou eliminação, portabilidade e revogar o consentimento.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1272,7 +1369,8 @@
       ],
       "correct": 1,
       "explain": "<b>Teste também é tratamento:</b> dado real em teste é risco de vazamento. O certo é anonimizar, mascarar ou gerar dados fictícios.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 3
     },
     {
       "topic": "compliance",
@@ -1285,7 +1383,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tem volta ou não:</b> o dado anonimizado não identifica mais ninguém (e sai da LGPD). O pseudonimizado troca o nome por um código, mas com a chave dá para voltar.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 3
     },
     {
       "topic": "compliance",
@@ -1298,7 +1397,8 @@
       ],
       "correct": 1,
       "explain": "<b>Incidente se comunica:</b> incidentes de segurança com risco aos titulares devem ser informados à ANPD e às pessoas afetadas, em prazo razoável.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1311,7 +1411,8 @@
       ],
       "correct": 1,
       "explain": "<b>Multa simples:</b> até 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração. Também existem advertência e bloqueio dos dados.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1324,7 +1425,8 @@
       ],
       "correct": 1,
       "explain": "<b>Desde o primeiro rascunho:</b> coletar o mínimo, proteger por padrão e pensar nos riscos já nos requisitos, e não remendar depois.",
-      "assunto": "lgpdr"
+      "assunto": "lgpdr",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1337,7 +1439,8 @@
       ],
       "correct": 1,
       "explain": "<b>ISO/IEC 27001:</b> define como montar e manter um sistema de gestão de segurança da informação (SGSI), e permite certificação.",
-      "assunto": "normas"
+      "assunto": "normas",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1350,7 +1453,8 @@
       ],
       "correct": 1,
       "explain": "<b>ISO 9001:</b> é a norma de sistema de gestão da qualidade. Foca em processos, cliente e melhoria contínua, em qualquer tipo de empresa.",
-      "assunto": "normas"
+      "assunto": "normas",
+      "nivel": 2
     },
     {
       "topic": "compliance",
@@ -1363,7 +1467,8 @@
       ],
       "correct": 1,
       "explain": "<b>PCI DSS:</b> é o padrão de segurança das bandeiras de cartão para quem processa, guarda ou transmite dados de cartão.",
-      "assunto": "normas"
+      "assunto": "normas",
+      "nivel": 1
     },
     {
       "topic": "compliance",
@@ -1376,7 +1481,8 @@
       ],
       "correct": 1,
       "explain": "<b>Trilha de auditoria:</b> mostra quem fez o quê e quando. Na auditoria, é a prova de que as regras foram seguidas.",
-      "assunto": "normas"
+      "assunto": "normas",
+      "nivel": 3
     },
     {
       "topic": "compliance",
@@ -1389,7 +1495,8 @@
       ],
       "correct": 1,
       "explain": "<b>Ligar as pontas:</b> a rastreabilidade liga cada requisito aos testes e às evidências (resultados, prints, logs). Auditor não aceita “confia em mim”.",
-      "assunto": "normas"
+      "assunto": "normas",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1402,7 +1509,8 @@
         "18, 20, 67 e 69"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (19 e 20), o máximo e o vizinho de fora (67 e 68)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (19 e 20), o máximo e o vizinho de fora (67 e 68).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1415,7 +1523,8 @@
         "20, 44 e 67"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 20, de 20 a 67 e maior que 67."
+      "explain": "<b>Três partições:</b> menor que 20, de 20 a 67 e maior que 67.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -1429,7 +1538,8 @@
         "nenhum, falta o cenário"
       ],
       "correct": 2,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1442,7 +1552,8 @@
         "Testar sozinho o método que calcula a mão de obra"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1455,7 +1566,8 @@
         "Testar sozinho o método que calcula a multa"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -1469,7 +1581,8 @@
         "uso o sistema da farmácia e paro"
       ],
       "correct": 1,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1482,7 +1595,8 @@
         "Checar rápido se a clínica abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1495,7 +1609,8 @@
         "Percorrer o empréstimo inteiro, do começo ao fim, na tela"
       ],
       "correct": 3,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1508,7 +1623,8 @@
         "R$ 580,00"
       ],
       "correct": 0,
-      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 580 é R$ 58,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 580 é R$ 58,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -1521,7 +1637,8 @@
         "Checar rápido se a farmácia abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1534,7 +1651,8 @@
         "Checar rápido se o pet shop abre e faz o básico"
       ],
       "correct": 2,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1547,7 +1665,8 @@
         "R$ 350,00"
       ],
       "correct": 1,
-      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 500 é R$ 75,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 500 é R$ 75,00 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1560,7 +1679,8 @@
         "Refazer os testes da grade de aulas após um conserto"
       ],
       "correct": 2,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1573,7 +1693,8 @@
         "11, 12, 79 e 80"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (9 e 10), o máximo e o vizinho de fora (80 e 81)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (9 e 10), o máximo e o vizinho de fora (80 e 81).",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1586,7 +1707,8 @@
         "Usar a loja online sem roteiro, anotando achados"
       ],
       "correct": 2,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1599,7 +1721,8 @@
         "Ver se abrir a ordem de serviço atualiza as peças no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1612,7 +1735,8 @@
         "15, 16, 65 e 67"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (14 e 15), o máximo e o vizinho de fora (65 e 66)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (14 e 15), o máximo e o vizinho de fora (65 e 66).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1625,7 +1749,8 @@
         "0, 2, 35 e 37"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (35 e 36)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (35 e 36).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -1638,7 +1763,8 @@
         "Ver se enviar a comanda atualiza o cardápio no banco"
       ],
       "correct": 1,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1651,7 +1777,8 @@
         "2, 3, 51 e 52"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (0 e 1), o máximo e o vizinho de fora (52 e 53)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (0 e 1), o máximo e o vizinho de fora (52 e 53).",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -1665,7 +1792,8 @@
         "estou na tela do banco"
       ],
       "correct": 1,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1678,7 +1806,8 @@
         "R$ 280,00"
       ],
       "correct": 0,
-      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 290 é R$ 29,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 290 é R$ 29,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1691,7 +1820,8 @@
         "11, 12 e 85"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 10, de 10 a 80 e maior que 80."
+      "explain": "<b>Três partições:</b> menor que 10, de 10 a 80 e maior que 80.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1704,7 +1834,8 @@
         "VIP que gastou R$ 351,00 no dia"
       ],
       "correct": 0,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 350,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 350,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1717,7 +1848,8 @@
         "Medir se registrar a saída leva até 2 segundos"
       ],
       "correct": 3,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1730,7 +1862,8 @@
         "Percorrer a venda com receita, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1743,7 +1876,8 @@
         "Percorrer a matrícula do aluno, do começo ao fim, na tela"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -1757,7 +1891,8 @@
         "vou fazer um Pix agora"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1770,7 +1905,8 @@
         "Enviar data da aula em branco, por experiência"
       ],
       "correct": 3,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1783,7 +1919,8 @@
         "Percorrer a entrega inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1796,7 +1933,8 @@
         "Checar rápido se o app de música abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1809,7 +1947,8 @@
         "Refazer os testes da rota do dia após um conserto"
       ],
       "correct": 0,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1822,7 +1961,8 @@
         "Checar rápido se o estacionamento abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1835,7 +1975,8 @@
         "R$ 465,50"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 490 é R$ 24,50 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 490 é R$ 24,50 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -1848,7 +1989,8 @@
         "Checar rápido se o hotel abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1861,7 +2003,8 @@
         "Percorrer o empréstimo inteiro, do começo ao fim, na tela"
       ],
       "correct": 0,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1874,7 +2017,8 @@
         "VIP que gastou R$ 150,00 no dia"
       ],
       "correct": 2,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 100,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 100,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -1888,7 +2032,8 @@
         "estou na tela da biblioteca"
       ],
       "correct": 0,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1901,7 +2046,8 @@
         "Testar sozinho o método que calcula a mão de obra"
       ],
       "correct": 2,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1914,7 +2060,8 @@
         "Checar rápido se o restaurante abre e faz o básico"
       ],
       "correct": 2,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1927,7 +2074,8 @@
         "Enviar placa do veículo em branco, por experiência"
       ],
       "correct": 3,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -1940,7 +2088,8 @@
         "Testar sozinho o método que calcula a meia-entrada"
       ],
       "correct": 0,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1953,7 +2102,8 @@
         "1, 23 e 27"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 2, de 2 a 22 e maior que 22."
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 22 e maior que 22.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -1966,7 +2116,8 @@
         "R$ 140,00"
       ],
       "correct": 0,
-      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 140 é R$ 14,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 140 é R$ 14,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -1979,7 +2130,8 @@
         "VIP que gastou R$ 151,00 no dia"
       ],
       "correct": 1,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 150,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 150,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -1992,7 +2144,8 @@
         "VIP que gastou R$ 500,00 no dia"
       ],
       "correct": 0,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 450,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 450,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -2006,7 +2159,8 @@
         "estou na tela da farmácia"
       ],
       "correct": 1,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2019,7 +2173,8 @@
         "Ver se registrar a entrega atualiza a rota do dia no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2032,7 +2187,8 @@
         "Usar a oficina sem roteiro, anotando achados"
       ],
       "correct": 1,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2045,7 +2201,8 @@
         "Ver se marcar o banho atualiza a ficha do animal no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2058,7 +2215,8 @@
         "2, 3, 21 e 22"
       ],
       "correct": 3,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (21 e 22)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (21 e 22).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2071,7 +2229,8 @@
         "29, 30, 65 e 66"
       ],
       "correct": 3,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (29 e 30), o máximo e o vizinho de fora (65 e 66)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (29 e 30), o máximo e o vizinho de fora (65 e 66).",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2085,7 +2244,8 @@
         "vou fechar o pedido agora"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2098,7 +2258,8 @@
         "R$ 252,00"
       ],
       "correct": 1,
-      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 280 é R$ 14,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 280 é R$ 14,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2111,7 +2272,8 @@
         "14, 53 e 92"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 14, de 14 a 92 e maior que 92."
+      "explain": "<b>Três partições:</b> menor que 14, de 14 a 92 e maior que 92.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2125,7 +2287,8 @@
         "vou enviar a comanda"
       ],
       "correct": 3,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2138,7 +2301,8 @@
         "4, 29 e 33"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 5, de 5 a 28 e maior que 28."
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 28 e maior que 28.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2151,7 +2315,8 @@
         "27, 28, 64 e 66"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (26 e 27), o máximo e o vizinho de fora (64 e 65)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (26 e 27), o máximo e o vizinho de fora (64 e 65).",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2164,7 +2329,8 @@
         "22, 23 e 68"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 21, de 21 a 63 e maior que 63."
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 63 e maior que 63.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2177,7 +2343,8 @@
         "Percorrer a matrícula do aluno, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2190,7 +2357,8 @@
         "R$ 510,00"
       ],
       "correct": 0,
-      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 510 é R$ 25,50 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 510 é R$ 25,50 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2203,7 +2371,8 @@
         "VIP que gastou R$ 450,00 no dia"
       ],
       "correct": 2,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 400,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 400,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2216,7 +2385,8 @@
         "Refazer os testes da rota do dia após um conserto"
       ],
       "correct": 3,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2229,7 +2399,8 @@
         "15, 40 e 65"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 15, de 15 a 65 e maior que 65."
+      "explain": "<b>Três partições:</b> menor que 15, de 15 a 65 e maior que 65.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2242,7 +2413,8 @@
         "Ver se vender o remédio atualiza o lote do remédio no banco"
       ],
       "correct": 2,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2255,7 +2427,8 @@
         "18, 74 e 78"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 19, de 19 a 73 e maior que 73."
+      "explain": "<b>Três partições:</b> menor que 19, de 19 a 73 e maior que 73.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2268,7 +2441,8 @@
         "Usar o estacionamento sem roteiro, anotando achados"
       ],
       "correct": 2,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2281,7 +2455,8 @@
         "Ver se marcar uma aula atualiza a grade de aulas no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2294,7 +2469,8 @@
         "Percorrer a matrícula do aluno, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2307,7 +2483,8 @@
         "Checar rápido se o app de música abre e faz o básico"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2320,7 +2497,8 @@
         "Refazer os testes da lista de faixas após um conserto"
       ],
       "correct": 1,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2333,7 +2511,8 @@
         "5, 6, 58 e 59"
       ],
       "correct": 3,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (58 e 59)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (58 e 59).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2346,7 +2525,8 @@
         "6, 7, 44 e 45"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (45 e 46)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (45 e 46).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2359,7 +2539,8 @@
         "2, 22 e 26"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 3, de 3 a 21 e maior que 21."
+      "explain": "<b>Três partições:</b> menor que 3, de 3 a 21 e maior que 21.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2372,7 +2553,8 @@
         "13, 14, 87 e 89"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (12 e 13), o máximo e o vizinho de fora (87 e 88)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (12 e 13), o máximo e o vizinho de fora (87 e 88).",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2385,7 +2567,8 @@
         "5, 6, 28 e 30"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (28 e 29)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (28 e 29).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2398,7 +2581,8 @@
         "R$ 280,00"
       ],
       "correct": 0,
-      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 400 é R$ 60,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 400 é R$ 60,00 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2411,7 +2595,8 @@
         "8, 29 e 54"
       ],
       "correct": 3,
-      "explain": "<b>Três partições:</b> menor que 9, de 9 a 49 e maior que 49."
+      "explain": "<b>Três partições:</b> menor que 9, de 9 a 49 e maior que 49.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2424,7 +2609,8 @@
         "Checar rápido se a escola abre e faz o básico"
       ],
       "correct": 0,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2437,7 +2623,8 @@
         "Checar rápido se o cinema abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2450,7 +2637,8 @@
         "Checar rápido se o estacionamento abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2463,7 +2651,8 @@
         "Enviar número da mesa em branco, por experiência"
       ],
       "correct": 3,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2476,7 +2665,8 @@
         "Enviar data de entrada em branco, por experiência"
       ],
       "correct": 0,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2489,7 +2679,8 @@
         "21, 22, 63 e 65"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (63 e 64)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (63 e 64).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2502,7 +2693,8 @@
         "7, 8 e 26"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 6, de 6 a 21 e maior que 21."
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 21 e maior que 21.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2515,7 +2707,8 @@
         "Ver se marcar o banho atualiza a ficha do animal no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -2529,7 +2722,8 @@
         "vejo a grade de aulas em dia"
       ],
       "correct": 3,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -2543,7 +2737,8 @@
         "vou fechar o pedido"
       ],
       "correct": 3,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2556,7 +2751,8 @@
         "12, 13, 99 e 101"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (11 e 12), o máximo e o vizinho de fora (99 e 100)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (11 e 12), o máximo e o vizinho de fora (99 e 100).",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2569,7 +2765,8 @@
         "Percorrer a compra inteira, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2582,7 +2779,8 @@
         "VIP que gastou R$ 301,00 no dia"
       ],
       "correct": 1,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 300,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 300,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2595,7 +2793,8 @@
         "Testar sozinho o método que calcula o frete"
       ],
       "correct": 1,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2608,7 +2807,8 @@
         "8, 24 e 39"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 8, de 8 a 39 e maior que 39."
+      "explain": "<b>Três partições:</b> menor que 8, de 8 a 39 e maior que 39.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2621,7 +2821,8 @@
         "Enviar nota da prova em branco, por experiência"
       ],
       "correct": 1,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2634,7 +2835,8 @@
         "Percorrer a compra inteira, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -2648,7 +2850,8 @@
         "estou na tela do cinema"
       ],
       "correct": 2,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2661,7 +2864,8 @@
         "6, 7 e 50"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 5, de 5 a 45 e maior que 45."
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 45 e maior que 45.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2675,7 +2879,8 @@
         "nenhum, falta o cenário"
       ],
       "correct": 2,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2688,7 +2893,8 @@
         "Ver se reservar o quarto atualiza a ocupação no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2702,7 +2908,8 @@
         "uso o sistema do hotel e paro"
       ],
       "correct": 1,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2715,7 +2922,8 @@
         "Usar o pet shop sem roteiro, anotando achados"
       ],
       "correct": 1,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2728,7 +2936,8 @@
         "Enviar código do livro em branco, por experiência"
       ],
       "correct": 1,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2741,7 +2950,8 @@
         "Ver se agendar a consulta atualiza a agenda médica no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -2754,7 +2964,8 @@
         "0, 53 e 57"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 1, de 1 a 52 e maior que 52."
+      "explain": "<b>Três partições:</b> menor que 1, de 1 a 52 e maior que 52.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2768,7 +2979,8 @@
         "vejo o mapa da sala em dia"
       ],
       "correct": 3,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2781,7 +2993,8 @@
         "6, 8, 39 e 41"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (39 e 40)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (39 e 40).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2794,7 +3007,8 @@
         "Percorrer a venda com receita, do começo ao fim, na tela"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2807,7 +3021,8 @@
         "Percorrer o agendamento inteiro, do começo ao fim, na tela"
       ],
       "correct": 3,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2820,7 +3035,8 @@
         "10, 11, 48 e 49"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (8 e 9), o máximo e o vizinho de fora (49 e 50)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (8 e 9), o máximo e o vizinho de fora (49 e 50).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -2833,7 +3049,8 @@
         "Testar sozinho o método que calcula os juros"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -2847,7 +3064,8 @@
         "uso o sistema da oficina e paro"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2860,7 +3078,8 @@
         "Testar sozinho o método que calcula a meia-entrada"
       ],
       "correct": 0,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2873,7 +3092,8 @@
         "Usar o restaurante sem roteiro, anotando achados"
       ],
       "correct": 0,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2886,7 +3106,8 @@
         "Enviar peso do animal em branco, por experiência"
       ],
       "correct": 3,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -2900,7 +3121,8 @@
         "vou agendar a consulta agora"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2913,7 +3135,8 @@
         "Testar sozinho o método que calcula a meia-entrada"
       ],
       "correct": 2,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2926,7 +3149,8 @@
         "Checar rápido se o app de música abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -2939,7 +3163,8 @@
         "R$ 391,00"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 460 é R$ 69,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 460 é R$ 69,00 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -2952,7 +3177,8 @@
         "Medir se escolher a poltrona leva até 2 segundos"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -2966,7 +3192,8 @@
         "uso o sistema da escola e paro"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -2979,7 +3206,8 @@
         "VIP que gastou R$ 200,00 exatos"
       ],
       "correct": 3,
-      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 200,00 a condição é falsa."
+      "explain": "<b>“Acima de” não inclui o próprio valor:</b> com R$ 200,00 a condição é falsa.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -2992,7 +3220,8 @@
         "Usar o app de música sem roteiro, anotando achados"
       ],
       "correct": 2,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3005,7 +3234,8 @@
         "Enviar número da receita em branco, por experiência"
       ],
       "correct": 1,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3018,7 +3248,8 @@
         "Percorrer a entrega inteira, do começo ao fim, na tela"
       ],
       "correct": 0,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -3031,7 +3262,8 @@
         "7, 35 e 39"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 8, de 8 a 34 e maior que 34."
+      "explain": "<b>Três partições:</b> menor que 8, de 8 a 34 e maior que 34.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3044,7 +3276,8 @@
         "Testar sozinho o método que calcula a duração"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3057,7 +3290,8 @@
         "Ver se abrir a ordem de serviço atualiza as peças no banco"
       ],
       "correct": 2,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -3071,7 +3305,8 @@
         "vejo a agenda médica em dia"
       ],
       "correct": 0,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3084,7 +3319,8 @@
         "Medir se renovar o empréstimo leva até 2 segundos"
       ],
       "correct": 1,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3097,7 +3333,8 @@
         "Usar a farmácia sem roteiro, anotando achados"
       ],
       "correct": 1,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3110,7 +3347,8 @@
         "28, 91 e 95"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 29, de 29 a 90 e maior que 90."
+      "explain": "<b>Três partições:</b> menor que 29, de 29 a 90 e maior que 90.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3123,7 +3361,8 @@
         "Checar rápido se a farmácia abre e faz o básico"
       ],
       "correct": 2,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3136,7 +3375,8 @@
         "5, 59 e 63"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 6, de 6 a 58 e maior que 58."
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 58 e maior que 58.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3149,7 +3389,8 @@
         "R$ 112,00"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 140 é R$ 28,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 140 é R$ 28,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3162,7 +3403,8 @@
         "Enviar data da aula em branco, por experiência"
       ],
       "correct": 2,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -3176,7 +3418,8 @@
         "uso o sistema do app de música e paro"
       ],
       "correct": 2,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3189,7 +3432,8 @@
         "Testar sozinho o método que calcula as diárias"
       ],
       "correct": 2,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3202,7 +3446,8 @@
         "Percorrer a reserva inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3215,7 +3460,8 @@
         "Refazer os testes da agenda médica após um conserto"
       ],
       "correct": 0,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -3228,7 +3474,8 @@
         "17, 18, 85 e 86"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (15 e 16), o máximo e o vizinho de fora (86 e 87)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (15 e 16), o máximo e o vizinho de fora (86 e 87).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3241,7 +3488,8 @@
         "Ver se agendar a consulta atualiza a agenda médica no banco"
       ],
       "correct": 0,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3254,7 +3502,8 @@
         "Checar rápido se o restaurante abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3267,7 +3516,8 @@
         "Usar o restaurante sem roteiro, anotando achados"
       ],
       "correct": 3,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -3281,7 +3531,8 @@
         "estou na tela da escola"
       ],
       "correct": 0,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3294,7 +3545,8 @@
         "27, 29, 90 e 92"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (28 e 29), o máximo e o vizinho de fora (90 e 91)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (28 e 29), o máximo e o vizinho de fora (90 e 91).",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3307,7 +3559,8 @@
         "Testar sozinho o método que calcula a mão de obra"
       ],
       "correct": 2,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -3321,7 +3574,8 @@
         "estou na tela do estacionamento aberta"
       ],
       "correct": 0,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -3335,7 +3589,8 @@
         "vou marcar o banho agora"
       ],
       "correct": 2,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3348,7 +3603,8 @@
         "Testar sozinho o método que calcula os juros"
       ],
       "correct": 1,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3361,7 +3617,8 @@
         "21, 22, 72 e 74"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (72 e 73)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (72 e 73).",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3374,7 +3631,8 @@
         "Checar rápido se o banco abre e faz o básico"
       ],
       "correct": 2,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3387,7 +3645,8 @@
         "Enviar peso do animal em branco, por experiência"
       ],
       "correct": 0,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3400,7 +3659,8 @@
         "Testar sozinho o método que calcula a mensalidade"
       ],
       "correct": 2,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3413,7 +3673,8 @@
         "Ver se fazer um Pix atualiza o saldo no banco"
       ],
       "correct": 1,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3426,7 +3687,8 @@
         "Checar rápido se o estacionamento abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3439,7 +3701,8 @@
         "Percorrer a compra inteira, do começo ao fim, na tela"
       ],
       "correct": 0,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3452,7 +3715,8 @@
         "29, 48 e 70"
       ],
       "correct": 3,
-      "explain": "<b>Três partições:</b> menor que 30, de 30 a 65 e maior que 65."
+      "explain": "<b>Três partições:</b> menor que 30, de 30 a 65 e maior que 65.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3465,7 +3729,8 @@
         "5, 20 e 35"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 5, de 5 a 35 e maior que 35."
+      "explain": "<b>Três partições:</b> menor que 5, de 5 a 35 e maior que 35.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3478,7 +3743,8 @@
         "Checar rápido se a escola abre e faz o básico"
       ],
       "correct": 0,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3491,7 +3757,8 @@
         "R$ 408,00"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 510 é R$ 102,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 510 é R$ 102,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -3505,7 +3772,8 @@
         "vou registrar a entrega agora"
       ],
       "correct": 1,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3518,7 +3786,8 @@
         "Percorrer o pedido da mesa, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3531,7 +3800,8 @@
         "Percorrer a entrega inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3544,7 +3814,8 @@
         "Percorrer a compra inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3557,7 +3828,8 @@
         "Medir se renovar o empréstimo leva até 2 segundos"
       ],
       "correct": 2,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3570,7 +3842,8 @@
         "6, 7, 55 e 57"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (55 e 56)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (55 e 56).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3583,7 +3856,8 @@
         "Medir se marcar uma aula leva até 2 segundos"
       ],
       "correct": 3,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3596,7 +3870,8 @@
         "1, 36 e 40"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 2, de 2 a 35 e maior que 35."
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 35 e maior que 35.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3609,7 +3884,8 @@
         "Enviar peso do animal em branco, por experiência"
       ],
       "correct": 2,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -3623,7 +3899,8 @@
         "vou criar a playlist"
       ],
       "correct": 3,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -3636,7 +3913,8 @@
         "0, 2, 59 e 61"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (59 e 60)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (59 e 60).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3649,7 +3927,8 @@
         "17, 19, 73 e 75"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (18 e 19), o máximo e o vizinho de fora (73 e 74)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (18 e 19), o máximo e o vizinho de fora (73 e 74).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3662,7 +3941,8 @@
         "Refazer os testes da agenda médica após um conserto"
       ],
       "correct": 1,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -3675,7 +3955,8 @@
         "Usar o app de música sem roteiro, anotando achados"
       ],
       "correct": 3,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -3688,7 +3969,8 @@
         "Percorrer a matrícula do aluno, do começo ao fim, na tela"
       ],
       "correct": 1,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3701,7 +3983,8 @@
         "Percorrer a transferência inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar."
+      "explain": "<b>Suposição de erro:</b> usa a experiência para adivinhar onde costuma quebrar.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3714,7 +3997,8 @@
         "23, 25, 97 e 99"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (24 e 25), o máximo e o vizinho de fora (97 e 98)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (24 e 25), o máximo e o vizinho de fora (97 e 98).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3727,7 +4011,8 @@
         "Ver se criar a playlist atualiza a lista de faixas no banco"
       ],
       "correct": 3,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -3740,7 +4025,8 @@
         "27, 46 e 64"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 27, de 27 a 64 e maior que 64."
+      "explain": "<b>Três partições:</b> menor que 27, de 27 a 64 e maior que 64.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3753,7 +4039,8 @@
         "Ver se escolher a poltrona atualiza o mapa da sala no banco"
       ],
       "correct": 1,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3766,7 +4053,8 @@
         "Enviar código do livro em branco, por experiência"
       ],
       "correct": 2,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3779,7 +4067,8 @@
         "R$ 477,00"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 530 é R$ 53,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 10% de 530 é R$ 53,00 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3792,7 +4081,8 @@
         "Refazer os testes da ocupação após um conserto"
       ],
       "correct": 2,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3805,7 +4095,8 @@
         "Refazer os testes da ocupação após um conserto"
       ],
       "correct": 2,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3818,7 +4109,8 @@
         "17, 18 e 91"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 16, de 16 a 86 e maior que 86."
+      "explain": "<b>Três partições:</b> menor que 16, de 16 a 86 e maior que 86.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3831,7 +4123,8 @@
         "Checar rápido se a academia abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -3845,7 +4138,8 @@
         "nenhum, falta o cenário"
       ],
       "correct": 0,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3858,7 +4152,8 @@
         "25, 61 e 97"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 25, de 25 a 97 e maior que 97."
+      "explain": "<b>Três partições:</b> menor que 25, de 25 a 97 e maior que 97.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3871,7 +4166,8 @@
         "3, 4, 21 e 22"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (22 e 23)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (1 e 2), o máximo e o vizinho de fora (22 e 23).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3884,7 +4180,8 @@
         "2, 54 e 58"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 3, de 3 a 53 e maior que 53."
+      "explain": "<b>Três partições:</b> menor que 3, de 3 a 53 e maior que 53.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3897,7 +4194,8 @@
         "1, 3, 53 e 55"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (53 e 54)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (2 e 3), o máximo e o vizinho de fora (53 e 54).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -3910,7 +4208,8 @@
         "Enviar data de nascimento em branco, por experiência"
       ],
       "correct": 1,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -3923,7 +4222,8 @@
         "Percorrer a compra inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "praticas",
@@ -3937,7 +4237,8 @@
         "nenhum, falta o cenário"
       ],
       "correct": 2,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3950,7 +4251,8 @@
         "22, 23 e 103"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 21, de 21 a 98 e maior que 98."
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 98 e maior que 98.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -3963,7 +4265,8 @@
         "7, 8 e 60"
       ],
       "correct": 2,
-      "explain": "<b>Três partições:</b> menor que 6, de 6 a 55 e maior que 55."
+      "explain": "<b>Três partições:</b> menor que 6, de 6 a 55 e maior que 55.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -3976,7 +4279,8 @@
         "12, 56 e 99"
       ],
       "correct": 0,
-      "explain": "<b>Três partições:</b> menor que 12, de 12 a 99 e maior que 99."
+      "explain": "<b>Três partições:</b> menor que 12, de 12 a 99 e maior que 99.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -3990,7 +4294,8 @@
         "vou renovar o empréstimo agora"
       ],
       "correct": 1,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "praticas",
@@ -4004,7 +4309,8 @@
         "vejo o cardápio em dia"
       ],
       "correct": 3,
-      "explain": "<b>Então</b> é o resultado que o teste confere."
+      "explain": "<b>Então</b> é o resultado que o teste confere.",
+      "nivel": 3
     },
     {
       "topic": "tecnicas",
@@ -4017,7 +4323,8 @@
         "8, 9, 34 e 36"
       ],
       "correct": 0,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (34 e 35)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (7 e 8), o máximo e o vizinho de fora (34 e 35).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4030,7 +4337,8 @@
         "Enviar peso do animal em branco, por experiência"
       ],
       "correct": 1,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -4043,7 +4351,8 @@
         "Enviar chave Pix em branco, por experiência"
       ],
       "correct": 0,
-      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança."
+      "explain": "<b>Teste não funcional:</b> mede como o sistema se comporta: tempo, carga, segurança.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4056,7 +4365,8 @@
         "6, 7, 21 e 23"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (21 e 22)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (5 e 6), o máximo e o vizinho de fora (21 e 22).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4069,7 +4379,8 @@
         "Enviar número da receita em branco, por experiência"
       ],
       "correct": 0,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -4082,7 +4393,8 @@
         "Ver se renovar o empréstimo atualiza o acervo no banco"
       ],
       "correct": 3,
-      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco."
+      "explain": "<b>Teste de integração:</b> confere se as partes conversam, como programa e banco.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -4095,7 +4407,8 @@
         "22, 23 e 77"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 21, de 21 a 72 e maior que 72."
+      "explain": "<b>Três partições:</b> menor que 21, de 21 a 72 e maior que 72.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -4108,7 +4421,8 @@
         "R$ 494,00"
       ],
       "correct": 3,
-      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 520 é R$ 26,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 5% de 520 é R$ 26,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4121,7 +4435,8 @@
         "Refazer os testes das vagas após um conserto"
       ],
       "correct": 1,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4134,7 +4449,8 @@
         "Testar sozinho o método que calcula a meia-entrada"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -4147,7 +4463,8 @@
         "Percorrer a transferência inteira, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4160,7 +4477,8 @@
         "12, 14, 92 e 94"
       ],
       "correct": 2,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (13 e 14), o máximo e o vizinho de fora (92 e 93)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (13 e 14), o máximo e o vizinho de fora (92 e 93).",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4173,7 +4491,8 @@
         "3, 5, 35 e 37"
       ],
       "correct": 1,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (35 e 36)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (4 e 5), o máximo e o vizinho de fora (35 e 36).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4186,7 +4505,8 @@
         "Checar rápido se a academia abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 2
     },
     {
       "topic": "praticas",
@@ -4200,7 +4520,8 @@
         "nenhum, falta o cenário"
       ],
       "correct": 0,
-      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado."
+      "explain": "<b>Quando</b> traz a ação; <b>Dado</b>, a situação inicial; <b>Então</b>, o resultado esperado.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -4213,7 +4534,8 @@
         "Medir se abrir a ordem de serviço leva até 2 segundos"
       ],
       "correct": 0,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -4226,7 +4548,8 @@
         "20, 21, 98 e 99"
       ],
       "correct": 3,
-      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (98 e 99)."
+      "explain": "<b>As bordas:</b> o mínimo e o vizinho de fora (20 e 21), o máximo e o vizinho de fora (98 e 99).",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4239,7 +4562,8 @@
         "Testar sozinho o método que calcula a distância"
       ],
       "correct": 3,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 2
     },
     {
       "topic": "tecnicas",
@@ -4252,7 +4576,8 @@
         "12, 50 e 92"
       ],
       "correct": 3,
-      "explain": "<b>Três partições:</b> menor que 13, de 13 a 87 e maior que 87."
+      "explain": "<b>Três partições:</b> menor que 13, de 13 a 87 e maior que 87.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -4265,7 +4590,8 @@
         "Medir se reservar o quarto leva até 2 segundos"
       ],
       "correct": 0,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4278,7 +4604,8 @@
         "R$ 224,00"
       ],
       "correct": 1,
-      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 320 é R$ 48,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 15% de 320 é R$ 48,00 de desconto.",
+      "nivel": 2
     },
     {
       "topic": "tipos",
@@ -4291,7 +4618,8 @@
         "Percorrer o agendamento inteiro, do começo ao fim, na tela"
       ],
       "correct": 2,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -4304,7 +4632,8 @@
         "Enviar quantidade de ingressos em branco, por experiência"
       ],
       "correct": 0,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -4317,7 +4646,8 @@
         "Refazer os testes das vagas após um conserto"
       ],
       "correct": 3,
-      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava."
+      "explain": "<b>Teste de regressão:</b> confere se um conserto não quebrou o que já funcionava.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4330,7 +4660,8 @@
         "3, 4 e 64"
       ],
       "correct": 1,
-      "explain": "<b>Três partições:</b> menor que 2, de 2 a 59 e maior que 59."
+      "explain": "<b>Três partições:</b> menor que 2, de 2 a 59 e maior que 59.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4343,7 +4674,8 @@
         "Usar a transportadora sem roteiro, anotando achados"
       ],
       "correct": 2,
-      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário."
+      "explain": "<b>Teste end-to-end:</b> simula o caminho completo do usuário.",
+      "nivel": 3
     },
     {
       "topic": "tipos",
@@ -4356,7 +4688,8 @@
         "Usar o restaurante sem roteiro, anotando achados"
       ],
       "correct": 2,
-      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada."
+      "explain": "<b>Teste de unidade:</b> testa uma parte pequena do código, isolada.",
+      "nivel": 1
     },
     {
       "topic": "tipos",
@@ -4369,7 +4702,8 @@
         "Checar rápido se a oficina abre e faz o básico"
       ],
       "correct": 3,
-      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo."
+      "explain": "<b>Teste de fumaça:</b> uma checagem rápida do básico, antes de testar a fundo.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4382,7 +4716,8 @@
         "R$ 310,00"
       ],
       "correct": 1,
-      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 310 é R$ 62,00 de desconto."
+      "explain": "<b>As duas condições são verdadeiras:</b> 20% de 310 é R$ 62,00 de desconto.",
+      "nivel": 1
     },
     {
       "topic": "tecnicas",
@@ -4395,7 +4730,157 @@
         "Checar rápido se a loja online abre e faz o básico"
       ],
       "correct": 1,
-      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo."
+      "explain": "<b>Teste exploratório:</b> sem roteiro pronto: aprende e testa ao mesmo tempo.",
+      "nivel": 3
+    },
+    {
+      "topic": "tipos",
+      "assunto": "nivel",
+      "explain": "<b>Unidade</b>: testa uma parte pequena da lógica de forma isolada. End-to-End percorre o fluxo todo; fumaça é a checagem rápida do essencial; aceite é o cliente decidindo se recebe o sistema.",
+      "statement": "Um desenvolvedor precisa validar só a função que calcula o desconto de um cupom, sem o resto do sistema, antes de juntá-la ao carrinho de compras. Qual tipo de teste automatizado é o mais adequado?",
+      "estilo": "prova",
+      "options": [
+        "Teste de aceite, pois o cliente decide se aceita",
+        "Teste de fumaça, pois checa rápido o essencial",
+        "Teste de unidade, pois verifica a função isolada",
+        "Teste End-to-End, pois percorre o fluxo inteiro"
+      ],
+      "correct": 2,
+      "nivel": 3
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "branca",
+      "explain": "Caixa preta: você não vê o interior, só a entrada e a saída. Caixa branca: você testa a lógica interna. A III mistura as técnicas com quem testa e onde testa: está errada.",
+      "statement": "Sobre os testes de caixa preta e caixa branca, analise as afirmativas a seguir:",
+      "bloco": [
+        "I. No teste de caixa preta, olha-se a entrada e a saída, sem ver o código.",
+        "II. No teste de caixa branca, testa-se a lógica interna do código.",
+        "III. A caixa preta é feita só por usuários finais, e a branca só em produção."
+      ],
+      "estilo": "prova",
+      "options": [
+        "Apenas a afirmativa II está correta.",
+        "Apenas as afirmativas I e III estão corretas.",
+        "Apenas as afirmativas II e III estão corretas.",
+        "Apenas as afirmativas I e II estão corretas."
+      ],
+      "correct": 3,
+      "nivel": 3
+    },
+    {
+      "topic": "principios",
+      "assunto": "sete",
+      "explain": "2º princípio: teste exaustivo é impossível, então prioriza-se por risco. 3º: testes antecipados economizam (shift left). 4º: os defeitos se concentram em poucos módulos (a ideia do 80/20).",
+      "statement": "Associe cada princípio de teste à situação. Qual é a sequência correta, de cima para baixo?",
+      "bloco": [
+        "1. Teste exaustivo é impossível",
+        "2. Agrupamento de defeitos",
+        "3. Testes antecipados",
+        "( ) A maior parte dos bugs está no módulo de pagamentos",
+        "( ) Achar o erro no requisito custa menos que em produção",
+        "( ) Um formulário tem combinações demais, e prioriza-se por risco"
+      ],
+      "estilo": "prova",
+      "options": [
+        "3, 2, 1",
+        "1, 3, 2",
+        "2, 3, 1",
+        "2, 1, 3"
+      ],
+      "correct": 2,
+      "nivel": 3
+    },
+    {
+      "topic": "tecnicas",
+      "assunto": "limite",
+      "explain": "<b>Valor limite</b>: os defeitos se escondem nas fronteiras. Teste um pouco abaixo, exatamente em cima e um pouco acima de cada limite: 0 e 1 no começo, 99 e 100 no fim.",
+      "statement": "O campo de quantidade de um carrinho aceita de 1 a 99 itens. Usando a análise de valor limite, quais valores devem ser testados nas fronteiras?",
+      "estilo": "prova",
+      "options": [
+        "0, 50, 100 e 150",
+        "0, 1, 99 e 100",
+        "1, 25, 50 e 99",
+        "1, 2, 98 e 99"
+      ],
+      "correct": 1,
+      "nivel": 3
+    },
+    {
+      "topic": "tipos",
+      "assunto": "reg",
+      "explain": "Fumaça, regressão e aceite estão certos. O End-to-End percorre o fluxo inteiro, de ponta a ponta, como um usuário real; quem testa uma função isolada é o teste de unidade.",
+      "statement": "Classifique as definições dos tipos de teste como verdadeiras (V) ou falsas (F). Qual é a sequência correta?",
+      "bloco": [
+        "( ) Teste de fumaça: checagem rápida do essencial antes do resto.",
+        "( ) Teste de regressão: confere se o que funcionava continua funcionando depois de uma mudança.",
+        "( ) Teste End-to-End: testa uma única função, isolada do resto do código.",
+        "( ) Teste de aceite: o cliente decide se aceita o sistema."
+      ],
+      "estilo": "prova",
+      "options": [
+        "V, V, F, V",
+        "F, V, F, V",
+        "V, V, V, V",
+        "V, V, F, F"
+      ],
+      "correct": 0,
+      "nivel": 3
+    },
+    {
+      "topic": "praticas",
+      "assunto": "tdd",
+      "explain": "Vermelho, verde e refatorar: escreve um teste que falha (vermelho), faz o mínimo para passar (verde) e depois melhora o código sem quebrar o teste (refatorar).",
+      "statement": "Sobre o ciclo do TDD, analise as afirmativas a seguir:",
+      "bloco": [
+        "I. Primeiro, escreve-se um teste que falha (vermelho).",
+        "II. Depois, escreve-se o mínimo de código para o teste passar (verde).",
+        "III. Por fim, melhora-se o código sem quebrar o teste (refatorar)."
+      ],
+      "estilo": "prova",
+      "options": [
+        "Estão corretas somente as afirmativas I e II.",
+        "Estão corretas as afirmativas I, II e III.",
+        "Estão corretas somente as afirmativas II e III.",
+        "Estão corretas somente as afirmativas I e III."
+      ],
+      "correct": 1,
+      "nivel": 3
+    },
+    {
+      "topic": "compliance",
+      "assunto": "lgpdp",
+      "explain": "I e II: certas. III: errada: o IP pode apontar para uma pessoa, então também é dado pessoal, assim como nome, CPF, e-mail e localização.",
+      "statement": "Sobre a LGPD, analise as afirmativas a seguir:",
+      "bloco": [
+        "I. Dado pessoal é a informação que identifica ou pode identificar alguém.",
+        "II. A LGPD é a Lei 13.709/2018.",
+        "III. Pela LGPD, um endereço IP nunca é dado pessoal."
+      ],
+      "estilo": "prova",
+      "options": [
+        "É correto o que se afirma em I e III, apenas.",
+        "É correto o que se afirma em I e II, apenas.",
+        "É correto o que se afirma em II e III, apenas.",
+        "É correto o que se afirma em II, apenas."
+      ],
+      "correct": 1,
+      "nivel": 3
+    },
+    {
+      "topic": "qualidade",
+      "assunto": "defeito",
+      "explain": "Cadeia: a pessoa comete um <b>engano</b> (erro humano), que deixa um <b>defeito</b> no código, que causa uma <b>falha</b> quando o programa roda.",
+      "statement": "Sobre engano, defeito e falha, assinale a alternativa que melhor descreve a relação entre eles:",
+      "estilo": "prova",
+      "options": [
+        "O engano da pessoa deixa um defeito no código, que causa a falha ao rodar.",
+        "A falha da pessoa deixa um engano no código, que causa o defeito ao rodar.",
+        "Os três são nomes diferentes para o mesmo problema no código.",
+        "O defeito é o erro humano, e a falha é a linha errada do código."
+      ],
+      "correct": 0,
+      "nivel": 3
     }
   ],
   "historias": [

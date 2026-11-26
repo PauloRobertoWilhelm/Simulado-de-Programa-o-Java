@@ -1,0 +1,101 @@
+/*
+  Arquivo: css/base.css
+  Papel no sistema: dá forma às peças que existem em TODOS os visuais (Futurista, Ouro, Grafite, Neon e Claro).
+  Vem logo depois de css/estudo.css e antes de css/ouro.css.
+
+  Por que algumas regras se repetem:
+  - o seletor de conteúdo nasceu junto com css/ouro.css, e as abas em grupo e o núcleo nasceram com css/futuro.css;
+  - nos visuais Grafite, Neon e Claro esses dois arquivos ficam desligados (js/temas.js);
+  - então as regras estão aqui também. Nos visuais Ouro e Futurista, os arquivos deles vêm depois e mandam.
+  As cores usam var(--primary) e var(--teal), que mudam com o visual e com a matéria.
+*/
+
+/* ===== CAMADAS ===== */
+/* O app fica acima do circuito e da textura do fundo (que usam z-index 0). Mesma regra de css/ouro.css. */
+.app { position: relative; z-index: 1; }
+
+/* ===== BARRA DE CIMA DA PROVA ===== */
+/* Ela fica grudada no topo (css/styles.css). O visual Grafite tinha tirado o fundo dela, e o texto da pergunta
+   aparecia por trás ao rolar. O fundo volta: a cor da página, sumindo só na pontinha de baixo. */
+.topbar { background: linear-gradient(var(--bg) 80%, transparent); }
+
+/* ===== ABAS DAS MATÉRIAS EM GRUPOS (mesma regra do fim de css/futuro.css) ===== */
+/* Com 11 matérias, as abas quebram em linhas: cada uma tem pelo menos 140px. */
+.subject-tabs { display: grid; grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+/* Título do período ("1º período"): ocupa a linha inteira. */
+.subject-group { grid-column: 1 / -1; padding: 8px 10px 2px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--primary); text-align: left; }
+/* Aviso de matéria sem material: borda tracejada e texto fácil de ler. */
+.activity-empty { border: 1px dashed var(--border-soft); background: var(--surface); border-radius: var(--r-sm); color: var(--muted); line-height: 1.6; text-align: left; }
+
+/* ===== ESCOLHA DO CONTEÚDO (mesmas medidas de css/ouro.css) ===== */
+/* Os botões de conteúdo ficam lado a lado e quebram linha quando não cabem. */
+#conteudo-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Nome do tema antes dos conteúdos dele: ocupa a linha inteira. */
+#conteudo-grid .topic-group { flex: 1 0 100%; margin: 8px 0 0; }
+/* Botão de conteúdo: mesmo fundo e borda dos botões de tema do visual Grafite (css/moderno.css). */
+.cpick { position: relative; overflow: hidden; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 14px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--r-md); color: var(--text); font: inherit; font-size: 0.93rem; text-align: left; cursor: pointer; transition: background 0.18s var(--ease), border-color 0.18s var(--ease); }
+/* Mouse em cima: clareia um pouco. */
+.cpick:hover { background: var(--surface-3); border-color: var(--border-soft); }
+/* Ao apertar: afunda um pouquinho, como botão de verdade. */
+.cpick:active { transform: scale(0.98); }
+/* Escolhido: fundo e borda na cor da matéria (variáveis de css/moderno.css). */
+.cpick.on { background: var(--accent-soft); border-color: var(--accent-line); }
+/* Barrinha embaixo: quanto do conteúdo você já viu (--pct vai de 0 a 1). */
+.cpick::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--primary); transform-origin: left; transform: scaleX(var(--pct, 0)); }
+/* Contorno visível para quem usa o teclado. */
+.cpick:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* Explicação curta embaixo do título da caixa. */
+.picker-dica { margin: -4px 0 12px; color: var(--muted-2); font-size: 0.9rem; text-align: left; }
+
+/* ===== CABEÇALHO COM O NÚCLEO (mesmas medidas de css/futuro.css) ===== */
+/* O núcleo é posicionado em relação ao cabeçalho. */
+.intro { position: relative; }
+/* Espaço para o núcleo, à direita do título. */
+.intro h1, .intro .badge-top { max-width: calc(100% - 178px); }
+/* Núcleo: três anéis em volta da porcentagem já vista. */
+.nucleo { position: absolute; top: 18px; right: 0; width: 148px; height: 148px; display: grid; place-items: center; }
+/* O desenho ocupa a caixa toda e pode vazar o brilho. */
+.nucleo svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* Os anéis giram em torno do próprio centro. */
+.nucleo circle { fill: none; transform-origin: 50% 50%; }
+/* Anel de fora: tracinhos na cor principal, girando devagar. */
+.nucleo .n-fora { stroke: color-mix(in srgb, var(--primary) 55%, transparent); stroke-width: 1.5; stroke-dasharray: 2 5; animation: girar 34s linear infinite; }
+/* Anel do meio: três arcos na cor clara, girando ao contrário. */
+.nucleo .n-meio { stroke: color-mix(in srgb, var(--teal) 75%, transparent); stroke-width: 2.5; stroke-dasharray: 52 40; animation: girar 18s linear infinite reverse; }
+/* Trilho do progresso: a volta inteira, bem apagada. */
+.nucleo .n-trilho { stroke: color-mix(in srgb, var(--primary) 16%, transparent); stroke-width: 6; }
+/* Arco do que já foi visto. 251 é o comprimento da volta (raio 40). */
+.nucleo .n-arco { stroke: var(--primary); stroke-width: 6; stroke-dasharray: calc(var(--pct, 0) * 251) 251; transform: rotate(-90deg); transition: stroke-dasharray 0.9s var(--ease); filter: drop-shadow(0 0 5px color-mix(in srgb, var(--primary) 80%, transparent)); }
+/* Uma volta completa. */
+@keyframes girar { to { transform: rotate(360deg); } }
+/* Miolo: a porcentagem e o que ela é. */
+.nucleo-texto { position: relative; display: grid; justify-items: center; gap: 1px; }
+/* Número grande. Sem a letra futurista (visuais sem futuro.css), usa a letra de código. */
+.nucleo-texto b { font-family: var(--font-futuro, var(--font-mono)); font-size: 1.12rem; font-weight: 700; color: var(--teal); text-shadow: 0 0 12px color-mix(in srgb, var(--primary) 65%, transparent); }
+/* Legenda "já visto". */
+.nucleo-texto span { font-family: var(--font-mono); font-size: 0.64rem; color: var(--muted-2); }
+
+/* ===== CIRCUITO DO FUNDO (desenhado por js/futuro.js) ===== */
+/* Folha parada atrás de tudo, sem receber toques. A máscara apaga as bordas. */
+.circuito { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; -webkit-mask-image: radial-gradient(120% 90% at 50% 20%, #000 30%, rgba(0, 0, 0, 0.35) 100%); mask-image: radial-gradient(120% 90% at 50% 20%, #000 30%, rgba(0, 0, 0, 0.35) 100%); }
+/* Durante a prova o circuito quase some, para não atrapalhar a leitura. */
+body:has(#screen-quiz:not(.hidden)) .circuito { opacity: 0.3; transition: opacity 0.6s var(--ease); }
+
+/* ===== CELULAR ===== */
+@media (max-width: 640px) {
+  /* Núcleo menor, ao lado do nome do professor. */
+  .nucleo { width: 92px; height: 92px; top: 12px; }
+  .nucleo-texto b { font-size: 0.8rem; }
+  .nucleo-texto span { display: block; font-size: 0.56rem; }
+  /* Professor e "Simulado de" dividem a linha com o núcleo; o nome usa a largura toda, logo abaixo. */
+  .intro .badge-top { max-width: calc(100% - 106px); }
+  .intro h1 { max-width: calc(100% - 100px); }
+  /* Botões de conteúdo esticam para ocupar a linha. */
+  .cpick { flex: 1 1 auto; justify-content: space-between; }
+}
+
+/* ===== MENOS MOVIMENTO ===== */
+/* Pedido no sistema: os anéis param. (O pedido feito no próprio app está em css/temas.css.) */
+@media (prefers-reduced-motion: reduce) {
+  .nucleo .n-fora, .nucleo .n-meio { animation: none; }
+}

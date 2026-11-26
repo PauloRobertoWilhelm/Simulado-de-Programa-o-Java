@@ -1,0 +1,75 @@
+/*
+  Arquivo: css/temas.css
+  Papel no sistema: o painel "Visual, pug e animações" e a troca de visual.
+  Trabalha junto com js/temas.js (botões e escolha salva) e com o script curto do <head> do index.html
+  (que liga o visual salvo antes de a página aparecer). Vem depois de todos os visuais.
+*/
+
+/* ===== CORES DO CIRCUITO DO FUNDO (js/futuro.js lê estas variáveis) ===== */
+/* Formato "r, g, b". Futurista e Ouro: ouro. */
+:root { --circ-linha: 232, 185, 74; --circ-pulso: 255, 226, 150; }
+/* Grafite: a cor da matéria aberta (o js/futuro.js converte o "#rrggbb"). */
+html[data-visual="grafite"] { --circ-linha: var(--primary); --circ-pulso: var(--teal); }
+/* Neon: trilhas rosa e pulsos ciano. */
+html[data-visual="neon"] { --circ-linha: 255, 79, 216; --circ-pulso: 87, 244, 255; }
+/* Claro: âmbar e verde-petróleo escuros, para aparecer no papel. */
+html[data-visual="claro"] { --circ-linha: 154, 100, 0; --circ-pulso: 15, 106, 110; }
+
+/* ===== PAINEL "VISUAL, PUG E ANIMAÇÕES" ===== */
+/* Caixa que abre e fecha, no mesmo estilo da caixa "O que estudar". */
+.painel-visual { margin: 0 0 16px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); }
+/* Linha clicável que abre a caixa. */
+.painel-visual > summary { cursor: pointer; padding: 12px 16px; font-weight: 600; color: var(--text); list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+/* Tira o triângulo padrão do navegador (o nosso é a setinha abaixo). */
+.painel-visual > summary::-webkit-details-marker { display: none; }
+/* Setinha que gira quando a caixa abre. */
+.painel-visual > summary::after { content: "▾"; color: var(--primary); transition: transform 0.2s var(--ease); }
+.painel-visual[open] > summary::after { transform: rotate(180deg); }
+/* Foco visível para o teclado. */
+.painel-visual > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* Miolo da caixa: grupos um embaixo do outro. */
+.pv-conteudo { display: grid; gap: 6px; padding: 0 16px 16px; }
+/* Título de cada grupo ("Visual da página", "Mascote", "Animações"). */
+.pv-titulo { margin: 10px 0 4px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted-2); text-align: left; }
+/* Grade dos cartões: quantos couberem, com pelo menos 132px cada. */
+.pv-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 8px; }
+/* Cartão de escolha: amostra em cima, nome e explicação embaixo. */
+.pv-cartao { display: grid; gap: 4px; align-content: start; padding: 10px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface-2); color: var(--text); font: inherit; text-align: left; cursor: pointer; transition: border-color 0.18s var(--ease), background 0.18s var(--ease), transform 0.12s var(--ease); }
+/* Mouse em cima. */
+.pv-cartao:hover { border-color: var(--border-soft); background: var(--surface-3); }
+/* Ao apertar: afunda um pouco. */
+.pv-cartao:active { transform: scale(0.98); }
+/* Escolhido: borda acesa e marquinha no canto. */
+.pv-cartao[aria-pressed="true"] { border-color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); }
+.pv-cartao[aria-pressed="true"] b::after { content: " ✓"; color: var(--primary); }
+/* Foco visível para o teclado. */
+.pv-cartao:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+/* Nome do cartão. */
+.pv-cartao b { font-size: 0.95rem; }
+/* Explicação curta. */
+.pv-cartao small { color: var(--muted-2); font-size: 0.78rem; line-height: 1.35; }
+/* Amostra do visual: fundo, cor principal e cor clara, em faixas diagonais (cores vêm do js/temas.js). */
+.pv-amostra { height: 38px; border-radius: 4px; border: 1px solid var(--border); background: linear-gradient(135deg, var(--fundo) 0 58%, var(--cor) 58% 80%, var(--clara) 80%); }
+/* Foto do pug no cartão de mascote. */
+.pv-cartao img { width: 54px; height: 62px; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+/* Ícone do cartão "Sem pug" e dos cartões de animação, do mesmo tamanho da foto. */
+.pv-icone { display: grid; place-items: center; width: 54px; height: 62px; border-radius: 10px; border: 1px dashed var(--border-soft); font-size: 1.5rem; }
+
+/* ===== TROCA DE VISUAL COM CÍRCULO ===== */
+/* Quando o navegador tem "View Transitions", o visual novo aparece num círculo que cresce a partir do cartão tocado. */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: revelar-visual 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+/* --vx e --vy: ponto do toque, gravados por js/temas.js. */
+@keyframes revelar-visual { from { clip-path: circle(0 at var(--vx, 50%) var(--vy, 50%)); } to { clip-path: circle(150vmax at var(--vx, 50%) var(--vy, 50%)); } }
+
+/* ===== MENOS ANIMAÇÃO (escolha feita no app) ===== */
+/* Tudo o que se mexe termina na hora: anéis, entradas, pug, confete, transições. */
+html[data-movimento="menos"] *, html[data-movimento="menos"] *::before, html[data-movimento="menos"] *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+/* Sem a revelação em círculo. */
+html[data-movimento="menos"]::view-transition-new(root) { animation: none; }
+
+/* ===== CELULAR ===== */
+@media (max-width: 420px) {
+  /* Dois cartões por linha no celular estreito. */
+  .pv-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

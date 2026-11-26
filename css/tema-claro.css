@@ -1,0 +1,61 @@
+/*
+  Arquivo: css/tema-claro.css
+  Papel no sistema: visual "Claro", papel creme com detalhes em âmbar, para estudar de dia ou com muita luz.
+  Só fica ligado quando a pessoa escolhe Claro em "Visual, pug e animações" (js/temas.js).
+  Usa a forma do visual Grafite (css/moderno.css) e troca as cores. Os blocos de código continuam escuros,
+  como num editor de código, porque as cores do Java (css/estudo.css) foram feitas para fundo escuro.
+*/
+
+:root {
+  /* Âmbar escuro: cor de destaque com contraste bom sobre o papel. !important vence a cor da matéria. */
+  --primary: #9a6400 !important;
+  --primary-2: #9a6400 !important;
+  /* Verde-petróleo escuro: números e detalhes. */
+  --teal: #0f6a6e !important;
+  /* Papel creme, cartões brancos e botões em bege. */
+  --bg: #f6f3ec;
+  --surface: #ffffff;
+  --surface-2: #f4efe4;
+  --surface-3: #ebe3d2;
+  /* Bordas marrons bem leves. */
+  --border: rgba(60, 45, 20, 0.13);
+  --border-soft: rgba(60, 45, 20, 0.26);
+  /* Textos: quase preto, marrom e marrom apagado (todos com contraste para leitura longa). */
+  --text: #1d1a14;
+  --muted: #4c4334;
+  --muted-2: #6b604c;
+  /* Acerto e erro escuros, para ler bem no claro. */
+  --success: #12805c;
+  --success-bg: rgba(18, 128, 92, 0.1);
+  --error: #b4233f;
+  --error-bg: rgba(180, 35, 63, 0.08);
+  /* Fundos suaves de destaque. */
+  --accent-soft: rgba(154, 100, 0, 0.1);
+  --accent-line: rgba(154, 100, 0, 0.45);
+  /* Sombra marrom clara, em vez de preta. */
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 10px 26px rgba(60, 45, 20, 0.1);
+}
+
+/* ===== FUNDO ===== */
+/* Papel com um brilho âmbar fraco no alto. */
+body { background-color: var(--bg); background-image: radial-gradient(900px 420px at 50% -160px, rgba(154, 100, 0, 0.12), transparent 70%); color: var(--text); }
+/* Granulado do papel, mais leve. */
+body::after { opacity: 0.6; }
+/* Cor atrás de tudo ao puxar a tela no celular. */
+html { background-color: var(--bg); }
+
+/* ===== TEXTOS ===== */
+/* Títulos e textos que vinham com cor fixa clara passam a usar o texto escuro. */
+.intro h1, .picker h3, .q-statement, .feedback .fh, .verdict, .activity-title, .story-text, .review-question, .rev-texto { color: var(--text); }
+/* Nome da matéria: âmbar sólido, sem brilho. */
+.intro h1 .grad { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: var(--primary); -webkit-text-fill-color: currentColor; filter: none; }
+/* Explicação da resposta: marrom legível. */
+.feedback .why { color: var(--muted); }
+
+/* ===== BOTÕES ===== */
+/* Botão principal: âmbar com texto branco. */
+.btn { color: #ffffff; box-shadow: 0 8px 20px rgba(154, 100, 0, 0.22); }
+/* Letra da alternativa certa ou errada: branca sobre a cor. */
+.option.correct .key, .option.wrong .key { color: #ffffff; }
+/* Texto selecionado com o mouse. */
+::selection { background: #f2c66a; color: #1d1a14; }

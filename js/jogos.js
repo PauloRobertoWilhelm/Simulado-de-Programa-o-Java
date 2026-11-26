@@ -93,7 +93,8 @@ window.Jogos = (function () {
         // Texto que vai aparecer como "Resposta:".
         const resposta = mostraCerta ? q.options[q.correct] : erradas[Math.floor(Math.random() * erradas.length)];
         // A carta guarda tudo o que a tela e o retorno precisam.
-        return { pergunta: q.statement, codigo: q.code, resposta, certa: mostraCerta, gabarito: q.options[q.correct], porque: semEtiquetas(q.explain) };
+        // bloco: as afirmativas (I, II, III...) das perguntas no formato de prova; sem elas a pergunta não faz sentido.
+        return { pergunta: q.statement, codigo: q.code, bloco: q.bloco, resposta, certa: mostraCerta, gabarito: q.options[q.correct], porque: semEtiquetas(q.explain) };
       });
     }
 
@@ -111,6 +112,14 @@ window.Jogos = (function () {
       painel.append(criar('p', 'activity-step', `Carta ${indice + 1} de ${cartas.length}`), criar('p', 'game-item ce-pergunta', carta.pergunta));
       // Pergunta com código (Programação) mostra o código num bloco próprio.
       if (carta.codigo) painel.append(criar('pre', 'code', carta.codigo));
+      // Pergunta no formato de prova: as afirmativas, uma por linha (mesmo visual da prova, css/niveis.css).
+      if (Array.isArray(carta.bloco)) {
+        // Caixa das afirmativas.
+        const afirmativas = criar('div', 'q-bloco');
+        // Cada afirmativa num parágrafo, sem marcações HTML.
+        carta.bloco.forEach((linha) => afirmativas.append(criar('p', '', semEtiquetas(linha))));
+        painel.append(afirmativas);
+      }
       // Caixa da resposta que vai ser julgada.
       const caixa = criar('p', 'ce-resposta');
       caixa.append(criar('span', '', 'Resposta:'), document.createTextNode(carta.resposta));

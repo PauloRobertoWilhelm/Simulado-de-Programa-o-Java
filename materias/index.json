@@ -439,6 +439,59 @@
     "periodo": "2º período"
   },
   {
+    "id": "provasprog",
+    "aba": "Provas de Programação",
+    "titulo": "Provas de Programação",
+    "professor": "Prof. Lucas B. Cari · 1ª e 2ª prova oficial",
+    "periodo": "2º período",
+    "cores": [
+      "#f08a8a",
+      "#f8c4c4"
+    ],
+    "foco": {
+      "confianca": "Alta",
+      "base": "As questões oficiais da 1ª e da 2ª prova, enviadas em 27/11/2026, e variações só dos assuntos que caíram nelas. Os códigos foram executados no Java para conferir o gabarito.",
+      "assuntos": [
+        "As 30 questões oficiais, com explicação",
+        "Métodos: chamar e guardar o retorno; void não devolve",
+        "Classes e objetos: new e instância",
+        "Vetores e matrizes: declarar, somar posições, maior e menor, diagonal",
+        "for com if, while e do-while",
+        "Básico da 1ª prova: %, aspas, if, Scanner, switch e sequências"
+      ]
+    },
+    "temas": [
+      {
+        "id": "oficiais",
+        "rotulo": "📝 Questões das provas"
+      },
+      {
+        "id": "metodos",
+        "rotulo": "🔧 Métodos e retorno"
+      },
+      {
+        "id": "classes",
+        "rotulo": "🧱 Classes e objetos"
+      },
+      {
+        "id": "vetores",
+        "rotulo": "📦 Vetores"
+      },
+      {
+        "id": "matrizes",
+        "rotulo": "🔲 Matrizes"
+      },
+      {
+        "id": "lacos",
+        "rotulo": "🔁 for, while e do-while"
+      },
+      {
+        "id": "basico",
+        "rotulo": "🧠 Básico da 1ª prova"
+      }
+    ]
+  },
+  {
     "id": "requisitos",
     "aba": "Engenharia de Requisitos",
     "titulo": "Engenharia de Requisitos",

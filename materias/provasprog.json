@@ -1,0 +1,3946 @@
+{
+  "questoes": [
+    {
+      "topic": "oficiais",
+      "statement": "Considere o seguinte método em Java: qual é a forma correta de chamar esse método e armazenar o resultado em uma variável?",
+      "code": "int multiplicar(int a, int b) {\n    return a * b;\n}",
+      "options": [
+        "multiplicar(5, 3) = resultado;",
+        "multiplicar(5, 3);",
+        "double resultado = multiplicar(5, 3);",
+        "int resultado = multiplicar(5, 3);"
+      ],
+      "correct": 3,
+      "explain": "<b>Quem recebe fica à esquerda do =.</b> Primeiro cria a caixa (int resultado) e depois guarda nela o que o método devolveu. O método devolve int, então a caixa é int. \"multiplicar(5, 3) = resultado;\" está invertido, e \"multiplicar(5, 3);\" calcula mas joga o resultado fora.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Analise o código e assinale a alternativa que apresenta a saída correta.",
+      "code": "int[] valores = {2, 4, 6, 8};\nvalores[1] = valores[0] + valores[2];\nSystem.out.println(valores[1]);",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 3,
+      "explain": "<b>O índice começa em 0:</b> valores[0] é 2 e valores[2] é 6. 2 + 6 = 8, que vai para valores[1].",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das alternativas abaixo é verdadeira em relação a classes e objetos em Java?",
+      "options": [
+        "Uma classe não pode ter atributos.",
+        "Uma classe é uma instância de um objeto.",
+        "Um objeto é uma instância de uma classe.",
+        "Um objeto não pode ter métodos."
+      ],
+      "correct": 2,
+      "explain": "<b>Classe = fôrma de bolo; objeto = o bolo.</b> A classe define atributos e métodos; o objeto é criado a partir dela (com new). Por isso o objeto é a instância, e não o contrário.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere o seguinte método em Java e assinale a alternativa correta.",
+      "code": "void dobrarValor(int numero) {\n    numero *= 2;\n}",
+      "options": [
+        "O método foi declarado como void, sendo assim poderá retornar um valor para a chamada do método. Também é possível afirmar o valor de numero após a chamada do método dobrarValor(5) será igual a 10;",
+        "O método foi declarado como void, sendo assim não retornará um valor para a chamada do método. Também é possível afirmar o valor de numero após a chamada do método dobrarValor(5) será igual a 25;",
+        "O método foi declarado como void, sendo assim não retornará um valor para a chamada do método. Também é possível afirmar o valor de numero após a chamada do método dobrarValor(5) será igual a 10;",
+        "O método foi declarado como void, sendo assim poderá retornar um valor para a chamada do método se for adicionado o comando return. Também é possível afirmar o valor de numero após a chamada do método dobrarValor(5) será igual a 10;"
+      ],
+      "correct": 2,
+      "explain": "<b>void = não devolve nada.</b> Dentro do método, numero começa em 5 e vira 5 × 2 = 10. Esse 10 fica só lá dentro: é a variável do método, não a que foi passada. Colocar \"return valor\" num método void dá erro.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Analise o código e assinale a alternativa que indica qual valor será apresentado.",
+      "code": "int soma = 0;\nfor (int i = 1; i <= 5; i++) {\n    if (i % 2 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 2,
+      "explain": "<b>O if só deixa passar os pares:</b> i vale 1, 2, 3, 4, 5; os pares são 2 e 4. 2 + 4 = 6.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Analise o código e assinale a alternativa que apresenta o valor final de soma.",
+      "code": "int[][] m = {\n    {2, 5, 7},\n    {1, 4, 8},\n    {3, 6, 9}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][i];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "12",
+        "14",
+        "15",
+        "17"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> m[0][0] = 2, m[1][1] = 4 e m[2][2] = 9. 2 + 4 + 9 = 15.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere o código e assinale a alternativa que indica quantas vezes o comando System.out.print() será executado.",
+      "code": "int n = 10;\ndo {\n    System.out.print(n + \" \");\n    n++;\n} while (n < 5);",
+      "options": [
+        "Infinitas vezes.",
+        "Cinco vezes.",
+        "Uma vez.",
+        "Nenhuma vez."
+      ],
+      "correct": 2,
+      "explain": "<b>do-while faz primeiro e pergunta depois.</b> Imprime o 10, n vira 11 e só então testa 11 < 5: falso. Para. Rodou uma vez.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das alternativas a seguir é a maneira correta de declarar um array bidimensional de inteiros em Java?",
+      "options": [
+        "int matriz = new int[3,3];",
+        "int[] matriz = new int[3][3];",
+        "int[3,3] matriz = new int;",
+        "int[][] matriz = new int[3][3];"
+      ],
+      "correct": 3,
+      "explain": "<b>Dois pares de colchetes = duas dimensões</b> (linhas e colunas): int[][] dos dois lados. Java não usa vírgula dentro dos colchetes.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere a classe Pessoa (atributos nome e idade, construtor Pessoa() e método exibirInformacoes()). Qual opção apresenta a declaração correta de um objeto da classe Pessoa?",
+      "options": [
+        "Pessoa pessoa1 = Pessoa();",
+        "Pessoa pessoa1 = new Pessoa();",
+        "Pessoa pessoa1 = Pessoa.new();",
+        "Pessoa pessoa1 = new Pessoa;"
+      ],
+      "correct": 1,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Tipo nome = new Tipo();.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Analise o código. Ao final, a variável x armazena:",
+      "code": "int[] v = {7, 2, 9, 4, 6};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] > x) {\n        x = v[i];\n    }\n}",
+      "options": [
+        "O primeiro elemento do vetor v",
+        "O menor elemento do vetor v",
+        "O maior elemento do vetor v",
+        "A quantidade de elementos"
+      ],
+      "correct": 2,
+      "explain": "<b>x começa com o primeiro (7)</b> e é trocado sempre que aparece um valor MAIOR (por causa do >). Ao final x = 9, o maior.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das alternativas a seguir é a maneira correta de declarar um array unidimensional (vetor) em Java?",
+      "options": [
+        "double[] array = new double[10];",
+        "double array = new double[10];",
+        "double[10] array;",
+        "array double = new double[10];"
+      ],
+      "correct": 0,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Sem os [] depois do tipo, a variável não é vetor.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Analise o código e assinale a alternativa que apresenta a saída correta.",
+      "code": "int x = 1;\nwhile (x < 6) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "1 2 3 4 5",
+        "1 3 5",
+        "1 3 5 7",
+        "2 4 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 2 a cada volta:</b> 1, 3, 5. Depois x vira 7 e 7 < 6 é falso.",
+      "origem": "2ª prova oficial (27/11/2026)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Assinale a alternativa que completa o trecho para que ele imprima \"Número positivo\" se n for maior que zero, \"Número negativo\" se for menor que zero, e \"Zero\" se for igual a zero.",
+      "code": "int n = -5;\nif (n > 0) {\n    System.out.println(\"Número positivo\");\n} else if ( ________ ) {\n    System.out.println(\"Número negativo\");\n} else {\n    System.out.println(\"Zero\");\n}",
+      "options": [
+        "n == 0",
+        "n >= 0",
+        "n < 0",
+        "n != 0"
+      ],
+      "correct": 2,
+      "explain": "<b>Negativo = menor que zero:</b> n < 0. \"n != 0\" também aceitaria positivos, e o \"Zero\" do else nunca seria o caminho certo.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das opções abaixo NÃO é uma característica desejável de um bom algoritmo?",
+      "options": [
+        "Ser finito",
+        "Depender do humor de quem o executa",
+        "Ser preciso",
+        "Ser genérico o suficiente para os dados de entrada previstos"
+      ],
+      "correct": 1,
+      "explain": "<b>Algoritmo bom</b> termina (finito), é preciso e funciona para as entradas previstas. Não pode depender de quem executa.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere o trecho de código Java e assinale a alternativa correta.",
+      "code": "int a = 10, b = 20, c = 15;\nif (a > b) {\n    if (a > c) {\n        System.out.println(\"a é o maior\");\n    } else {\n        System.out.println(\"c é o maior\");\n    }\n} else {\n    if (b > c) {\n        System.out.println(\"b é o maior\");\n    } else {\n        System.out.println(\"c é o maior\");\n    }\n}",
+      "options": [
+        "a é o maior",
+        "b é o maior",
+        "c é o maior",
+        "Nenhuma saída é exibida, pois o código possui erro de lógica."
+      ],
+      "correct": 1,
+      "explain": "<b>Siga os ifs:</b> 10 > 20 é falso, vai para o else; 20 > 15 é verdadeiro: \"b é o maior\".",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Avalie o trecho de código, sabendo que ele não compila. Qual é o erro e como corrigi-lo?",
+      "code": "int nota = 8.5;\nSystem.out.println(nota);",
+      "options": [
+        "int só guarda número inteiro; o certo é double nota = 8.5;",
+        "Falta o ponto e vírgula; o certo é int nota = 8.5",
+        "O println está errado; o certo é System.out.print(nota);",
+        "8.5 precisa de aspas; o certo é int nota = \"8.5\";"
+      ],
+      "correct": 0,
+      "explain": "<b>int = número inteiro.</b> 8.5 tem casas decimais, então precisa de double.",
+      "origem": "1ª prova oficial (era dissertativa; virou alternativa)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Em uma leitura de dados com Scanner, um estudante disse que \"sempre tem que fechar o Scanner, senão dá erro\". Sobre o uso do método sc.close() nesse contexto, assinale a correta.",
+      "code": "Scanner sc = new Scanner(System.in);\nint x = sc.nextInt();\nSystem.out.println(x);\nsc.close();",
+      "options": [
+        "O método sc.close() é obrigatório; sem ele, o programa não compila e lança um erro em tempo de execução.",
+        "O método sc.close() fecha o Scanner e libera seus recursos, mas não é obrigatório para o programa funcionar;",
+        "O método sc.close() apenas pausa a leitura do Scanner, podendo ser reaberto com sc.nextInt() normalmente logo em seguida.",
+        "O método sc.close() é obrigatório apenas quando se lê do System.in"
+      ],
+      "correct": 1,
+      "explain": "<b>close() fecha e libera recursos.</b> É boa prática, mas o programa roda sem ele. Depois de fechado, não dá para ler de novo.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das opções a seguir apresenta uma declaração de variável incorreta em Java?",
+      "options": [
+        "boolean ativo = true;",
+        "int peso = 10;",
+        "double peso = 75.0;",
+        "String nome = 'João';"
+      ],
+      "correct": 3,
+      "explain": "<b>Aspas simples são só para UM caractere (char), como 'A'.</b> Texto (String) usa aspas duplas: \"João\".",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "A Descrição Narrativa é representada como um texto corrido, como uma pequena história. Qual destas respostas é uma descrição narrativa para trocar a água de dois aquários usando um balde vazio?",
+      "options": [
+        "Despeje a água do aquário A no balde, passe a do B para o A e, por fim, a do balde para o B.",
+        "switch (passo) { case 1: pegar(); break; case 2: colocar(); break; case 3: trocar(); }",
+        "Início → [balde ← A] → [A ← B] → [B ← balde] → Fim, desenhado em caixas e setas.",
+        "balde = aquarioA; aquarioA = aquarioB; aquarioB = balde; System.out.println(balde);"
+      ],
+      "correct": 0,
+      "explain": "<b>Descrição narrativa é em português, como uma receita.</b> Código Java ou desenho de caixas e setas (fluxograma) são outras formas.",
+      "origem": "1ª prova oficial (era dissertativa; virou alternativa)",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Avalie o trecho de código. Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int idade = 20;\nSystem.out.println(\"idade\");\nSystem.out.println(idade);",
+      "options": [
+        "idade / 20",
+        "20 / idade",
+        "idade / idade",
+        "20 / 20"
+      ],
+      "correct": 0,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor.</b> Primeiro \"idade\" (o texto) e depois 20 (o que está na variável).",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Assinale a alternativa que completa a linha que falta (linha 1) para declarar uma variável chamada nome do tipo String e atribuir o valor \"Maria\".",
+      "code": "// linha 1: declaração e atribuição aqui\nSystem.out.println(nome);",
+      "options": [
+        "string nome = \"Maria\";",
+        "String nome = Maria;",
+        "String nome = 'Maria';",
+        "String nome = \"Maria\";"
+      ],
+      "correct": 3,
+      "explain": "<b>String com S maiúsculo e texto entre aspas duplas.</b>",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere o código abaixo. Quais das seguintes alternativas corrigem todos os erros de sintaxe do código?",
+      "code": "import java.util.Scanner;\npublic class SomaNumeros {\n  public static void main(String[] args) {\n    Scanner input new Scanner(System.in);\n    int numero1, numero2;\n    System.out.println(\"Digite o primeiro número: \");\n    numerol input.nextInt();\n    System.out.println(\"Digite o segundo número: \");\n    numero2 = input.nextInt;\n    int soma numero1 + numero2;\n    System.out.println(\"A soma é: + soma)\n  }\n}",
+      "options": [
+        "Adiciona os sinais de = que faltam em todas as atribuições, acrescenta os parênteses que faltam em input.nextInt(), usa o mesmo nome de variável em todas as ocorrências (a declarada e as usadas depois), e fecha corretamente as aspas e os parênteses do último println.",
+        "Adiciona os sinais de = que faltam, acrescenta os parênteses que faltam em input.nextInt, e corrige a string do último println, mas mantém a variável declarada como numerol (com a letra \"L\") sendo usada como numero1 (com o número \"1\") nas linhas seguintes.",
+        "Corrige apenas o nome da classe e a criação do Scanner, sem alterar as demais linhas, pois os outros trechos já estão sintaticamente corretos",
+        "Adiciona apenas os sinais de = que estão faltando nas atribuições (na criação do Scanner, na leitura do primeiro número e na soma), sem alterar mais nenhuma outra linha."
+      ],
+      "correct": 0,
+      "explain": "<b>Conte os erros um por um:</b> faltam \"=\" (Scanner, leitura e soma), faltam os () em nextInt, \"numerol\" (com L) não é \"numero1\" (com 1), e o último println não fecha as aspas nem o parêntese. Só a primeira alternativa corrige tudo.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Dado o trecho de código, qual o valor final de x será mostrado?",
+      "code": "int x = 4;\nx += 5;\nx *= 2;\nx -= 3;\nSystem.out.println(x);",
+      "options": [
+        "4",
+        "15",
+        "2",
+        "3",
+        "18"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma linha de cada vez:</b> 4 + 5 = 9; 9 × 2 = 18; 18 − 3 = 15.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Considere o trecho de código abaixo: qual será a saída deste programa?",
+      "code": "int x = 15;\nint y = 3;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "false",
+        "true",
+        "0",
+        "1"
+      ],
+      "correct": 2,
+      "explain": "<b>% é o RESTO da divisão</b>, e o resultado é um número, não true/false. 15 ÷ 3 = 5, resto 0.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Para ler um número decimal (com casas decimais) digitado pelo usuário, usando o objeto Scanner declarado abaixo, qual o método deve ser usado?",
+      "code": "Scanner ler = new Scanner(System.in);",
+      "options": [
+        "sc.nextDouble();",
+        "sc.nextInt();",
+        "ler.nextDouble();",
+        "ler.nextLine()",
+        "sc.nextLine()"
+      ],
+      "correct": 2,
+      "explain": "<b>Use o nome do objeto que foi criado (ler) e o método do tipo:</b> decimal = nextDouble().",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Um agente de polícia encontrou um bilhete com uma sequência de números que serve como a senha de um cofre. O criminoso deixou o padrão incompleto na última linha. Qual é o próximo número? 1, 2, 3, 5, 8, 13, 21, ...",
+      "options": [
+        "29",
+        "30",
+        "18",
+        "34",
+        "28"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada número é a soma dos dois anteriores:</b> 13 + 21 = 34.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual tipo primitivo é mais adequado para armazenar o valor true ou false?",
+      "options": [
+        "int",
+        "String",
+        "boolean",
+        "char",
+        "double"
+      ],
+      "correct": 2,
+      "explain": "<b>boolean guarda só true ou false.</b>",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual das alternativas abaixo define corretamente o que é um algoritmo?",
+      "options": [
+        "Uma sequência finita de instruções claras e ordenadas, que são seguidas para resolver um problema ou realizar uma tarefa de maneira eficiente.",
+        "Um conjunto de códigos otimizados em uma linguagem de programação específica, que é utilizado para aumentar o desempenho de programas de computador.",
+        "Um tipo de software que automatiza a criação de programas com base em entradas fornecidas pelo usuário, eliminando a necessidade de codificação manual.",
+        "Uma série de operações infinitas que podem ou não ter um ponto final, dependendo dos dados de entrada."
+      ],
+      "correct": 0,
+      "explain": "<b>Algoritmo é como uma receita:</b> passos claros, em ordem, que terminam. Não precisa ser código: pode ser em português.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Qual será a saída exibida no console? O switch em Java funciona corretamente com o tipo char?",
+      "code": "char letra = 'B';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Será exibido \"Nota máxima\", pois o switch em Java não aceita o tipo char.",
+        "Será exibido \"Nota boa\", e o switch em Java funciona corretamente com o tipo char.",
+        "Será exibido \"Nota desconhecida\", pois o char é tratado como inteiro e não corresponde a nenhum case.",
+        "Ocorrerá um erro de compilação, pois o switch em Java só aceita int e String."
+      ],
+      "correct": 1,
+      "explain": "<b>switch aceita char.</b> letra é 'B', então entra no case 'B' e o break para ali.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "oficiais",
+      "statement": "Avalie a sequência numérica e assinale a alternativa correta: 2, 4, 6, 8, ...",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correct": 0,
+      "explain": "<b>Sobe de 2 em 2:</b> 8 + 2 = 10.",
+      "origem": "1ª prova oficial",
+      "estilo": "prova",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada somarDez(16).",
+      "code": "void somarDez(int numero) {\n    numero += 10;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero continua valendo 16.",
+        "Devolve 26 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 26.",
+        "Devolve 16, porque o valor passado volta sem mudança."
+      ],
+      "correct": 2,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 16 e vira 26, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 5; i <= 14; i++) {\n    if (i % 2 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "95",
+        "50",
+        "36",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "<b>O if só deixa passar os pares:</b> 6 + 8 + 10 + 12 + 14 = 50.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {28, 14, 22, 18, 28, 32};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] > x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "14",
+        "6",
+        "28",
+        "32"
+      ],
+      "correct": 3,
+      "explain": "<b>x começa com v[0] = 28</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 32.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {7, 8, 17},\n    {19, 14, 17},\n    {7, 2, 5}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "26",
+        "38",
+        "32",
+        "33"
+      ],
+      "correct": 0,
+      "explain": "<b>i == j é a diagonal principal:</b> 7 + 14 + 5 = 26.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Sobre a classe Carro e o objeto meuCarro (Carro meuCarro = new Carro();), qual é verdadeira?",
+      "options": [
+        "meuCarro é uma instância da classe Carro.",
+        "meuCarro e Carro são a mesma coisa em Java.",
+        "Carro é uma instância do objeto meuCarro.",
+        "Carro só existe depois que meuCarro é criado."
+      ],
+      "correct": 0,
+      "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> meuCarro é uma instância da classe Carro.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {19, 14, 21, 33, 31, 11};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] < x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "6",
+        "33",
+        "19",
+        "11"
+      ],
+      "correct": 3,
+      "explain": "<b>x começa com v[0] = 19</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 11.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada triplicarValor(9).",
+      "code": "void triplicarValor(int numero) {\n    numero *= 3;\n}",
+      "options": [
+        "Devolve 27 para quem chamou, porque o método termina sem erro.",
+        "Devolve 9, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 9.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 27."
+      ],
+      "correct": 3,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 3;\" roda: numero sai de 9 e vira 27, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for igual a 55?",
+      "code": "int saldo = 52;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo < 55",
+        "saldo == 55",
+        "saldo != 55",
+        "saldo = 55"
+      ],
+      "correct": 1,
+      "explain": "<b>Igual a 55 se escreve saldo == 55.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 6;\nx += 6;\nx *= 2;\nx -= 3;\nSystem.out.println(x);",
+      "options": [
+        "21",
+        "6",
+        "24",
+        "15"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> 6 + 6 = 12; × 2 = 24; − 3 = 21.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {10, 3, 20},\n    {2, 13, 9},\n    {4, 9, 17}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "16",
+        "37",
+        "40",
+        "33"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> 10 + 13 + 17 = 40.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {6, 11, 8},\n    {14, 20, 7},\n    {20, 10, 18}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "48",
+        "25",
+        "44",
+        "40"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> 6 + 20 + 18 = 44.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 18;\nx += 7;\nx *= 2;\nx -= 9;\nSystem.out.println(x);",
+      "options": [
+        "41",
+        "50",
+        "18",
+        "23"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> 18 + 7 = 25; × 2 = 50; − 9 = 41.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {1, 29, 36, 29, 13, 30};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] > x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "36",
+        "6",
+        "1",
+        "30"
+      ],
+      "correct": 0,
+      "explain": "<b>x começa com v[0] = 1</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 36.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 1, 4, 5, 9, 14, 23, ...",
+      "options": [
+        "38",
+        "35",
+        "37",
+        "60"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada número é a soma dos dois anteriores:</b> 14 + 23 = 37.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método media. Qual é a forma correta de chamar media(9, 6) e guardar o resultado numa variável?",
+      "code": "double media(double a, double b) {\n    return (a + b) / 2;\n}",
+      "options": [
+        "media(9, 6);",
+        "int total = media(9, 6);",
+        "media(9, 6) = total;",
+        "double total = media(9, 6);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double total = media(9, 6);. \"media(9, 6);\" sozinho calcula e joga fora; int não combina com double.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada dobrarValor(9).",
+      "code": "void dobrarValor(int numero) {\n    numero *= 2;\n}",
+      "options": [
+        "Devolve 18 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 9.",
+        "Devolve 9, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 18."
+      ],
+      "correct": 3,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 9 e vira 18, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Na analogia da cozinha, a classe e o objeto são:",
+      "options": [
+        "Classe = fôrma de bolo; objeto = o bolo feito com ela.",
+        "Classe = o bolo; objeto = a fôrma usada para fazer o bolo.",
+        "Classe e objeto são o mesmo bolo, com nomes diferentes.",
+        "Classe = o forno; objeto = a receita escrita no papel."
+      ],
+      "correct": 0,
+      "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> Classe = fôrma de bolo; objeto = o bolo feito com ela.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando valor for igual a 61?",
+      "code": "int valor = 19;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "valor != 61",
+        "valor == 61",
+        "valor < 61",
+        "valor = 61"
+      ],
+      "correct": 1,
+      "explain": "<b>Igual a 61 se escreve valor == 61.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int nota = 77;\nSystem.out.println(nota);\nSystem.out.println(\"nota\");",
+      "options": [
+        "77 / 77",
+        "nota / 77",
+        "nota / nota",
+        "77 / nota"
+      ],
+      "correct": 3,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (77).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {27, 14, 4, 13, 5, 23};\nvalores[5] = valores[4] + valores[2];\nSystem.out.println(valores[5]);",
+      "options": [
+        "23",
+        "9",
+        "10",
+        "36"
+      ],
+      "correct": 1,
+      "explain": "<b>O índice começa em 0:</b> valores[4] = 5 e valores[2] = 4. 5 + 4 = 9, que vai para valores[5].",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {23, 23, 29, 1, 25};\nvalores[3] = valores[3] + valores[1];\nSystem.out.println(valores[3]);",
+      "options": [
+        "25",
+        "1",
+        "54",
+        "24"
+      ],
+      "correct": 3,
+      "explain": "<b>O índice começa em 0:</b> valores[3] = 1 e valores[1] = 23. 1 + 23 = 24, que vai para valores[3].",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {3, 27, 6, 4, 28};\nvalores[2] = valores[0] + valores[4];\nSystem.out.println(valores[2]);",
+      "options": [
+        "6",
+        "30",
+        "32",
+        "31"
+      ],
+      "correct": 3,
+      "explain": "<b>O índice começa em 0:</b> valores[0] = 3 e valores[4] = 28. 3 + 28 = 31, que vai para valores[2].",
+      "nivel": 2
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {4, 7, 2},\n    {1, 4, 13},\n    {14, 14, 4}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i + j == 2) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "20",
+        "19",
+        "12",
+        "13"
+      ],
+      "correct": 0,
+      "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 2 + 4 + 14 = 20.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 5, 10, 15, 20, 25, ...",
+      "options": [
+        "30",
+        "25",
+        "31",
+        "35"
+      ],
+      "correct": 0,
+      "explain": "<b>Sobe de 5 em 5:</b> 25 + 5 = 30.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {9, 16, 9, 12, 28};\nvalores[2] = valores[2] + valores[0];\nSystem.out.println(valores[2]);",
+      "options": [
+        "28",
+        "9",
+        "18",
+        "19"
+      ],
+      "correct": 2,
+      "explain": "<b>O índice começa em 0:</b> valores[2] = 9 e valores[0] = 9. 9 + 9 = 18, que vai para valores[2].",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for igual a 5?",
+      "code": "int saldo = 90;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo < 5",
+        "saldo != 5",
+        "saldo == 5",
+        "saldo = 5"
+      ],
+      "correct": 2,
+      "explain": "<b>Igual a 5 se escreve saldo == 5.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {7, 1, 18},\n    {13, 15, 3},\n    {10, 15, 6}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "26",
+        "28",
+        "30",
+        "43"
+      ],
+      "correct": 1,
+      "explain": "<b>i == j é a diagonal principal:</b> 7 + 15 + 6 = 28.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {16, 13, 39, 39, 28, 18};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] > x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "39",
+        "13",
+        "18",
+        "16"
+      ],
+      "correct": 0,
+      "explain": "<b>x começa com v[0] = 16</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 39.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando n for igual a 80?",
+      "code": "int n = -19;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "n = 80",
+        "n != 80",
+        "n < 80",
+        "n == 80"
+      ],
+      "correct": 3,
+      "explain": "<b>Igual a 80 se escreve n == 80.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 4, 8, 16, 32, 64, ...",
+      "options": [
+        "126",
+        "192",
+        "129",
+        "128"
+      ],
+      "correct": 3,
+      "explain": "<b>Cada número é o dobro do anterior:</b> 64 × 2 = 128.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número inteiro usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner entrada = new Scanner(System.in);",
+      "options": [
+        "sc.nextInt();",
+        "entrada.nextDouble();",
+        "entrada.nextLine();",
+        "entrada.nextInt();"
+      ],
+      "correct": 3,
+      "explain": "<b>Use o nome do objeto criado (entrada) e o método do tipo:</b> nextInt() para inteiro.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int saldo = 13;\nSystem.out.println(\"saldo\");\nSystem.out.println(saldo);",
+      "options": [
+        "13 / 13",
+        "13 / saldo",
+        "saldo / 13",
+        "saldo / saldo"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (13).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 5, 10, 20, 40, 80, ...",
+      "options": [
+        "240",
+        "160",
+        "161",
+        "158"
+      ],
+      "correct": 1,
+      "explain": "<b>Cada número é o dobro do anterior:</b> 80 × 2 = 160.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de boolean chamado lista com 11 posições?",
+      "options": [
+        "boolean lista = new boolean[11];",
+        "lista boolean = new boolean[11];",
+        "boolean[] lista = new boolean[11];",
+        "boolean[11] lista;"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 2;\nwhile (x < 13) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "6 10",
+        "2 6 10 14",
+        "2 3 4 5 6 7",
+        "2 6 10"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma 4 a cada volta:</b> 2, 6, 10. Depois x vira 14 e 14 < 13 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de boolean chamado numeros com 6 posições?",
+      "options": [
+        "boolean[] numeros = new boolean[6];",
+        "numeros boolean = new boolean[6];",
+        "boolean[6] numeros;",
+        "boolean numeros = new boolean[6];"
+      ],
+      "correct": 0,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada aumentarValor(16).",
+      "code": "void aumentarValor(int numero) {\n    numero++;\n}",
+      "options": [
+        "Devolve 16, porque o valor passado volta sem mudança.",
+        "Devolve 17 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 17.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 16."
+      ],
+      "correct": 2,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 16 e vira 17, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {14, 9, 20},\n    {20, 2, 18},\n    {13, 16, 7}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "43",
+        "23",
+        "47",
+        "35"
+      ],
+      "correct": 1,
+      "explain": "<b>i == j é a diagonal principal:</b> 14 + 2 + 7 = 23.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int altura = 65;\nSystem.out.println(altura);\nSystem.out.println(\"altura\");",
+      "options": [
+        "65 / altura",
+        "65 / 65",
+        "altura / altura",
+        "altura / 65"
+      ],
+      "correct": 0,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (65).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 4; i <= 15; i++) {\n    if (i % 3 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "114",
+        "27",
+        "42",
+        "4"
+      ],
+      "correct": 2,
+      "explain": "<b>O if só deixa passar os múltiplos de 3:</b> 6 + 9 + 12 + 15 = 42.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 2;\nwhile (x < 19) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "5 8 11 14 17",
+        "2 5 8 11 14 17",
+        "2 5 8 11 14 17 20",
+        "2 3 4 5 6 7"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 3 a cada volta:</b> 2, 5, 8, 11, 14, 17. Depois x vira 20 e 20 < 19 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {5, 5, 24, 24};\nvalores[0] = valores[2] + valores[3];\nSystem.out.println(valores[0]);",
+      "options": [
+        "48",
+        "29",
+        "5",
+        "49"
+      ],
+      "correct": 0,
+      "explain": "<b>O índice começa em 0:</b> valores[2] = 24 e valores[3] = 24. 24 + 24 = 48, que vai para valores[0].",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int ano = 50;\nSystem.out.println(ano);\nSystem.out.println(\"ano\");",
+      "options": [
+        "50 / ano",
+        "ano / ano",
+        "50 / 50",
+        "ano / 50"
+      ],
+      "correct": 0,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (50).</b>",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada dobrarValor(5).",
+      "code": "void dobrarValor(int numero) {\n    numero *= 2;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero termina valendo 10.",
+        "Devolve 5, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 5.",
+        "Devolve 10 para quem chamou, porque o método termina sem erro."
+      ],
+      "correct": 0,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 5 e vira 10, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída deste programa?",
+      "code": "int x = 22;\nint y = 9;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "2",
+        "5",
+        "false",
+        "4"
+      ],
+      "correct": 3,
+      "explain": "<b>% é o resto:</b> 22 ÷ 9 = 2, sobra 4.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 14, 22, 30, 38, 46, ...",
+      "options": [
+        "55",
+        "54",
+        "62",
+        "46"
+      ],
+      "correct": 1,
+      "explain": "<b>Sobe de 8 em 8:</b> 46 + 8 = 54.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual palavra do Java cria um objeto a partir de uma classe?",
+      "options": [
+        "new",
+        "void",
+        "class",
+        "return"
+      ],
+      "correct": 0,
+      "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> new",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'D';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    case 'D':\n        System.out.println(\"Nota baixa\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota desconhecida",
+        "Nota máxima",
+        "Nota boa / Nota desconhecida",
+        "Nota baixa"
+      ],
+      "correct": 3,
+      "explain": "<b>switch aceita char.</b> Entra no case 'D' e o break para ali.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(21, 2) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "subtrair(21, 2);",
+        "subtrair(21, 2) = x;",
+        "int x = subtrair(21, 2);",
+        "boolean x = subtrair(21, 2);"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(21, 2);. \"subtrair(21, 2);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método saudacao. Qual é a forma correta de chamar saudacao(\"Rafa\") e guardar o resultado numa variável?",
+      "code": "String saudacao(String nome) {\n    return \"Oi, \" + nome;\n}",
+      "options": [
+        "saudacao(\"Rafa\");",
+        "saudacao(\"Rafa\") = r;",
+        "String r = saudacao(\"Rafa\");",
+        "int r = saudacao(\"Rafa\");"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String r = saudacao(\"Rafa\");. \"saudacao(\"Rafa\");\" sozinho calcula e joga fora; int não combina com String.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 1;\nx += 3;\nx *= 4;\nx -= 2;\nSystem.out.println(x);",
+      "options": [
+        "16",
+        "1",
+        "11",
+        "14"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> 1 + 3 = 4; × 4 = 16; − 2 = 14.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {22, 9, 8, 23, 8};\nvalores[1] = valores[3] + valores[3];\nSystem.out.println(valores[1]);",
+      "options": [
+        "9",
+        "47",
+        "16",
+        "46"
+      ],
+      "correct": 3,
+      "explain": "<b>O índice começa em 0:</b> valores[3] = 23 e valores[3] = 23. 23 + 23 = 46, que vai para valores[1].",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 1; i <= 10; i++) {\n    if (i % 2 == 1) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "16",
+        "55",
+        "25",
+        "5"
+      ],
+      "correct": 2,
+      "explain": "<b>O if só deixa passar os ímpares:</b> 1 + 3 + 5 + 7 + 9 = 25.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando n for maior que 8?",
+      "code": "int n = 47;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "n >= 8",
+        "n < 8",
+        "n != 8",
+        "n > 8"
+      ],
+      "correct": 3,
+      "explain": "<b>Maior que 8 se escreve n > 8.</b> Com = junto (<= ou >=) o próprio 8 também entraria.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {12, 40, 28, 13};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] < x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "12",
+        "13",
+        "4",
+        "40"
+      ],
+      "correct": 0,
+      "explain": "<b>x começa com v[0] = 12</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 12.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {18, 14, 3},\n    {20, 13, 13},\n    {17, 19, 20}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "55",
+        "33",
+        "51",
+        "35"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> 18 + 13 + 20 = 51.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {18, 20, 1},\n    {1, 19, 13},\n    {14, 16, 6}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "34",
+        "43",
+        "33",
+        "39"
+      ],
+      "correct": 1,
+      "explain": "<b>i == j é a diagonal principal:</b> 18 + 19 + 6 = 43.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int altura = 84;\nSystem.out.println(\"altura\");\nSystem.out.println(altura);",
+      "options": [
+        "altura / 84",
+        "altura / altura",
+        "84 / altura",
+        "84 / 84"
+      ],
+      "correct": 0,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (84).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 8) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "0 1 2 3 4 5",
+        "0 3 6",
+        "0 3 6 9",
+        "3 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6. Depois x vira 9 e 9 < 8 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(12, 14) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(12, 14);",
+        "somar(12, 14) = res;",
+        "String res = somar(12, 14);",
+        "int res = somar(12, 14);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int res = somar(12, 14);. \"somar(12, 14);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for maior que 47?",
+      "code": "int saldo = 119;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo >= 47",
+        "saldo > 47",
+        "saldo != 47",
+        "saldo < 47"
+      ],
+      "correct": 1,
+      "explain": "<b>Maior que 47 se escreve saldo > 47.</b> Com = junto (<= ou >=) o próprio 47 também entraria.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 4; i <= 16; i++) {\n    if (i % 2 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "130",
+        "70",
+        "7",
+        "54"
+      ],
+      "correct": 1,
+      "explain": "<b>O if só deixa passar os pares:</b> 4 + 6 + 8 + 10 + 12 + 14 + 16 = 70.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada zerarValor(18).",
+      "code": "void zerarValor(int numero) {\n    numero = 0;\n}",
+      "options": [
+        "Devolve 18, porque o valor passado volta sem mudança.",
+        "Devolve 0 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 0.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 18."
+      ],
+      "correct": 2,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero = 0;\" roda: numero sai de 18 e vira 0, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 1;\nwhile (x < 12) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "1 2 3 4 5 6",
+        "3 5 7 9 11",
+        "1 3 5 7 9 11",
+        "1 3 5 7 9 11 13"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 2 a cada volta:</b> 1, 3, 5, 7, 9, 11. Depois x vira 13 e 13 < 12 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 1;\nwhile (x < 13) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "1 4 7 10 13",
+        "4 7 10",
+        "1 2 3 4 5 6",
+        "1 4 7 10"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma 3 a cada volta:</b> 1, 4, 7, 10. Depois x vira 13 e 13 < 13 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 3; i <= 15; i++) {\n    if (i % 2 == 1) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "117",
+        "7",
+        "48",
+        "63"
+      ],
+      "correct": 3,
+      "explain": "<b>O if só deixa passar os ímpares:</b> 3 + 5 + 7 + 9 + 11 + 13 + 15 = 63.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um texto (a linha inteira) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner entrada = new Scanner(System.in);",
+      "options": [
+        "sc.nextLine();",
+        "entrada.nextLine();",
+        "entrada.nextInt();",
+        "entrada.nextDouble();"
+      ],
+      "correct": 1,
+      "explain": "<b>Use o nome do objeto criado (entrada) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
+      "nivel": 3
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Cachorro?",
+      "code": "class Cachorro {\n    String nome;\n}",
+      "options": [
+        "Cachorro cachorro3 = Cachorro();",
+        "Cachorro cachorro3 = new Cachorro;",
+        "Cachorro cachorro3 = new Cachorro();",
+        "Cachorro cachorro3 = Cachorro.new();"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Cachorro cachorro3 = new Cachorro();.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando idade for menor que 25?",
+      "code": "int idade = 37;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "idade > 25",
+        "idade <= 25",
+        "idade < 25",
+        "idade != 25"
+      ],
+      "correct": 2,
+      "explain": "<b>Menor que 25 se escreve idade < 25.</b> Com = junto (<= ou >=) o próprio 25 também entraria.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(45, 5) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "int x = subtrair(45, 5);",
+        "subtrair(45, 5);",
+        "boolean x = subtrair(45, 5);",
+        "subtrair(45, 5) = x;"
+      ],
+      "correct": 0,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(45, 5);. \"subtrair(45, 5);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método dobro. Qual é a forma correta de chamar dobro(14) e guardar o resultado numa variável?",
+      "code": "int dobro(int n) {\n    return n * 2;\n}",
+      "options": [
+        "int x = dobro(14);",
+        "dobro(14) = x;",
+        "String x = dobro(14);",
+        "dobro(14);"
+      ],
+      "correct": 0,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = dobro(14);. \"dobro(14);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 14) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "4 8 12",
+        "4 5 6 7 8 9",
+        "4 8 12 16",
+        "8 12"
+      ],
+      "correct": 0,
+      "explain": "<b>Soma 4 a cada volta:</b> 4, 8, 12. Depois x vira 16 e 16 < 14 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'E';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    case 'D':\n        System.out.println(\"Nota baixa\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota máxima",
+        "Erro de compilação: switch não aceita char",
+        "Nota desconhecida",
+        "Nota boa / Nota desconhecida"
+      ],
+      "correct": 2,
+      "explain": "<b>switch aceita char.</b> Nenhum case é 'E', então cai no default.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 3;\nwhile (x < 10) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "3 6 9 12",
+        "3 4 5 6 7 8",
+        "3 6 9",
+        "6 9"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 3 a cada volta:</b> 3, 6, 9. Depois x vira 12 e 12 < 10 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída deste programa?",
+      "code": "int x = 50;\nint y = 4;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "false",
+        "2",
+        "12",
+        "3"
+      ],
+      "correct": 1,
+      "explain": "<b>% é o resto:</b> 50 ÷ 4 = 12, sobra 2.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um texto (a linha inteira) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner input = new Scanner(System.in);",
+      "options": [
+        "sc.nextLine();",
+        "input.nextDouble();",
+        "input.nextLine();",
+        "input.nextInt();"
+      ],
+      "correct": 2,
+      "explain": "<b>Use o nome do objeto criado (input) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um texto (a linha inteira) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner scan = new Scanner(System.in);",
+      "options": [
+        "scan.nextLine();",
+        "sc.nextLine();",
+        "scan.nextInt();",
+        "scan.nextDouble();"
+      ],
+      "correct": 0,
+      "explain": "<b>Use o nome do objeto criado (scan) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada somarDez(13).",
+      "code": "void somarDez(int numero) {\n    numero += 10;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero continua valendo 13.",
+        "Devolve 13, porque o valor passado volta sem mudança.",
+        "Devolve 23 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 23."
+      ],
+      "correct": 3,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 13 e vira 23, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {28, 19, 26, 10, 6};\nvalores[4] = valores[2] + valores[1];\nSystem.out.println(valores[4]);",
+      "options": [
+        "45",
+        "36",
+        "46",
+        "6"
+      ],
+      "correct": 0,
+      "explain": "<b>O índice começa em 0:</b> valores[2] = 26 e valores[1] = 19. 26 + 19 = 45, que vai para valores[4].",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um texto (a linha inteira) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner ler = new Scanner(System.in);",
+      "options": [
+        "ler.nextLine();",
+        "ler.nextInt();",
+        "sc.nextLine();",
+        "ler.nextDouble();"
+      ],
+      "correct": 0,
+      "explain": "<b>Use o nome do objeto criado (ler) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 13) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "0 3 6 9 12",
+        "3 6 9 12",
+        "0 1 2 3 4 5",
+        "0 3 6 9 12 15"
+      ],
+      "correct": 0,
+      "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6, 9, 12. Depois x vira 15 e 15 < 13 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Produto?",
+      "code": "class Produto {\n    String nome;\n}",
+      "options": [
+        "Produto produto2 = new Produto();",
+        "Produto produto2 = new Produto;",
+        "Produto produto2 = Produto();",
+        "Produto produto2 = Produto.new();"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Produto produto2 = new Produto();.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a maneira correta de declarar uma matriz de int chamada tabuleiro, com 3 linhas e 3 colunas?",
+      "options": [
+        "int tabuleiro = new int[3,3];",
+        "int[] tabuleiro = new int[3][3];",
+        "int[3,3] tabuleiro = new int;",
+        "int[][] tabuleiro = new int[3][3];"
+      ],
+      "correct": 3,
+      "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (3). Java não usa vírgula nos colchetes.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Pedido?",
+      "code": "class Pedido {\n    String nome;\n}",
+      "options": [
+        "Pedido pedido1 = Pedido();",
+        "Pedido pedido1 = Pedido.new();",
+        "Pedido pedido1 = new Pedido();",
+        "Pedido pedido1 = new Pedido;"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Pedido pedido1 = new Pedido();.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 5;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 19);",
+      "options": [
+        "5 8 11 14 17 20",
+        "5 8 11 14 17",
+        "8 11 14 17",
+        "5 8 11 14"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 5, 8, 11, 14, 17; depois n vira 20 e 20 < 19 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int pontos = 58;\nSystem.out.println(\"pontos\");\nSystem.out.println(pontos);",
+      "options": [
+        "pontos / pontos",
+        "pontos / 58",
+        "58 / 58",
+        "58 / pontos"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (58).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale o valor final de x.",
+      "code": "int[] v = {7, 38, 13, 28};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] < x) {\n        x = v[i];\n    }\n}\nSystem.out.println(x);",
+      "options": [
+        "7",
+        "28",
+        "4",
+        "38"
+      ],
+      "correct": 0,
+      "explain": "<b>x começa com v[0] = 7</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 7.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for menor que 62?",
+      "code": "int saldo = -30;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo <= 62",
+        "saldo < 62",
+        "saldo > 62",
+        "saldo != 62"
+      ],
+      "correct": 1,
+      "explain": "<b>Menor que 62 se escreve saldo < 62.</b> Com = junto (<= ou >=) o próprio 62 também entraria.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada aumentarValor(7).",
+      "code": "void aumentarValor(int numero) {\n    numero++;\n}",
+      "options": [
+        "Devolve 8 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 8.",
+        "Devolve 7, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 7."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 7 e vira 8, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {1, 19, 15},\n    {6, 6, 16},\n    {6, 3, 17}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i + j == 2) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "24",
+        "13",
+        "35",
+        "27"
+      ],
+      "correct": 3,
+      "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 15 + 6 + 6 = 27.",
+      "nivel": 3
+    },
+    {
+      "topic": "classes",
+      "statement": "Em \"Livro l = new Livro();\", o que é \"l\"?",
+      "options": [
+        "Um método que devolve um livro pronto.",
+        "O nome da classe que está sendo definida.",
+        "A variável que aponta para o objeto criado.",
+        "Um atributo que pertence à classe Livro."
+      ],
+      "correct": 2,
+      "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> A variável que aponta para o objeto criado.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {10, 9, 19},\n    {4, 10, 16},\n    {8, 10, 9}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "29",
+        "38",
+        "37",
+        "22"
+      ],
+      "correct": 0,
+      "explain": "<b>i == j é a diagonal principal:</b> 10 + 10 + 9 = 29.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int peso = 9;\nSystem.out.println(\"peso\");\nSystem.out.println(peso);",
+      "options": [
+        "9 / 9",
+        "9 / peso",
+        "peso / 9",
+        "peso / peso"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (9).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 26;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 35);",
+      "options": [
+        "29 32",
+        "26 29",
+        "26 29 32 35",
+        "26 29 32"
+      ],
+      "correct": 3,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 26, 29, 32; depois n vira 35 e 35 < 35 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída deste programa?",
+      "code": "int x = 19;\nint y = 8;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "false"
+      ],
+      "correct": 1,
+      "explain": "<b>% é o resto:</b> 19 ÷ 8 = 2, sobra 3.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 3;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 15);",
+      "options": [
+        "3 6 9 12 15",
+        "3 6 9 12",
+        "3 6 9",
+        "6 9 12"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 3, 6, 9, 12; depois n vira 15 e 15 < 15 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 14;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 32);",
+      "options": [
+        "14 17 20 23 26 29 32",
+        "14 17 20 23 26",
+        "17 20 23 26 29",
+        "14 17 20 23 26 29"
+      ],
+      "correct": 3,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 14, 17, 20, 23, 26, 29; depois n vira 32 e 32 < 32 é falso.",
+      "nivel": 3
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Computador?",
+      "code": "class Computador {\n    String nome;\n}",
+      "options": [
+        "Computador computador2 = new Computador();",
+        "Computador computador2 = Computador.new();",
+        "Computador computador2 = Computador();",
+        "Computador computador2 = new Computador;"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Computador computador2 = new Computador();.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {17, 5, 18},\n    {12, 15, 18},\n    {11, 15, 6}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "53",
+        "38",
+        "40",
+        "44"
+      ],
+      "correct": 1,
+      "explain": "<b>i == j é a diagonal principal:</b> 17 + 15 + 6 = 38.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 20, 23, 26, 29, 32, ...",
+      "options": [
+        "38",
+        "35",
+        "32",
+        "36"
+      ],
+      "correct": 1,
+      "explain": "<b>Sobe de 3 em 3:</b> 32 + 3 = 35.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 6; i <= 16; i++) {\n    if (i % 2 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "50",
+        "121",
+        "66",
+        "6"
+      ],
+      "correct": 2,
+      "explain": "<b>O if só deixa passar os pares:</b> 6 + 8 + 10 + 12 + 14 + 16 = 66.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(25, 25) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(25, 25) = x;",
+        "somar(25, 25);",
+        "String x = somar(25, 25);",
+        "int x = somar(25, 25);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(25, 25);. \"somar(25, 25);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a maneira correta de declarar uma matriz de String chamada tabuleiro, com 3 linhas e 6 colunas?",
+      "options": [
+        "String tabuleiro = new String[3,6];",
+        "String[][] tabuleiro = new String[3][6];",
+        "String[3,6] tabuleiro = new String;",
+        "String[] tabuleiro = new String[3][6];"
+      ],
+      "correct": 1,
+      "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (6). Java não usa vírgula nos colchetes.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {12, 7, 18, 15};\nvalores[2] = valores[2] + valores[3];\nSystem.out.println(valores[2]);",
+      "options": [
+        "34",
+        "27",
+        "33",
+        "18"
+      ],
+      "correct": 2,
+      "explain": "<b>O índice começa em 0:</b> valores[2] = 18 e valores[3] = 15. 18 + 15 = 33, que vai para valores[2].",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(4, 4) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "String valor = somar(4, 4);",
+        "somar(4, 4) = valor;",
+        "int valor = somar(4, 4);",
+        "somar(4, 4);"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int valor = somar(4, 4);. \"somar(4, 4);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {3, 17, 7},\n    {17, 2, 12},\n    {3, 11, 17}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "12",
+        "23",
+        "22",
+        "27"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> 3 + 2 + 17 = 22.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int ano = 95;\nSystem.out.println(ano);\nSystem.out.println(\"ano\");",
+      "options": [
+        "95 / ano",
+        "ano / 95",
+        "95 / 95",
+        "ano / ano"
+      ],
+      "correct": 0,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (95).</b>",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual das opções apresenta uma declaração de variável INCORRETA em Java?",
+      "options": [
+        "int idade = 18.5;",
+        "int idade = 18;",
+        "boolean ativo = false;",
+        "String cidade = \"Cascavel\";"
+      ],
+      "correct": 0,
+      "explain": "<b>int não guarda número com casas decimais.</b>",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(28, 11) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "subtrair(28, 11);",
+        "boolean x = subtrair(28, 11);",
+        "subtrair(28, 11) = x;",
+        "int x = subtrair(28, 11);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(28, 11);. \"subtrair(28, 11);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de char chamado letras com 13 posições?",
+      "options": [
+        "char[13] letras;",
+        "letras char = new char[13];",
+        "char letras = new char[13];",
+        "char[] letras = new char[13];"
+      ],
+      "correct": 3,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando n for igual a 59?",
+      "code": "int n = -12;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "n = 59",
+        "n != 59",
+        "n < 59",
+        "n == 59"
+      ],
+      "correct": 3,
+      "explain": "<b>Igual a 59 se escreve n == 59.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada triplicarValor(7).",
+      "code": "void triplicarValor(int numero) {\n    numero *= 3;\n}",
+      "options": [
+        "Devolve 21 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 21.",
+        "Devolve 7, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 7."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 3;\" roda: numero sai de 7 e vira 21, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método situacao. Qual é a forma correta de chamar situacao(9) e guardar o resultado numa variável?",
+      "code": "String situacao(double nota) {\n    return nota >= 7 ? \"Aprovado\" : \"Reprovado\";\n}",
+      "options": [
+        "situacao(9) = res;",
+        "boolean res = situacao(9);",
+        "situacao(9);",
+        "String res = situacao(9);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String res = situacao(9);. \"situacao(9);\" sozinho calcula e joga fora; boolean não combina com String.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 11;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 23);",
+      "options": [
+        "11 14 17",
+        "11 14 17 20 23",
+        "11 14 17 20",
+        "14 17 20"
+      ],
+      "correct": 2,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 11, 14, 17, 20; depois n vira 23 e 23 < 23 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída deste programa?",
+      "code": "int x = 13;\nint y = 8;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "1",
+        "6",
+        "5",
+        "false"
+      ],
+      "correct": 2,
+      "explain": "<b>% é o resto:</b> 13 ÷ 8 = 1, sobra 5.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando n for menor que 61?",
+      "code": "int n = -10;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "n > 61",
+        "n <= 61",
+        "n != 61",
+        "n < 61"
+      ],
+      "correct": 3,
+      "explain": "<b>Menor que 61 se escreve n < 61.</b> Com = junto (<= ou >=) o próprio 61 também entraria.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 2; i <= 14; i++) {\n    if (i % 2 == 0) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "56",
+        "104",
+        "42",
+        "7"
+      ],
+      "correct": 0,
+      "explain": "<b>O if só deixa passar os pares:</b> 2 + 4 + 6 + 8 + 10 + 12 + 14 = 56.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a maneira correta de declarar uma matriz de String chamada tabuleiro, com 3 linhas e 5 colunas?",
+      "options": [
+        "String[] tabuleiro = new String[3][5];",
+        "String[][] tabuleiro = new String[3][5];",
+        "String[3,5] tabuleiro = new String;",
+        "String tabuleiro = new String[3,5];"
+      ],
+      "correct": 1,
+      "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (5). Java não usa vírgula nos colchetes.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int peso = 6;\nSystem.out.println(peso);\nSystem.out.println(\"peso\");",
+      "options": [
+        "peso / 6",
+        "6 / 6",
+        "6 / peso",
+        "peso / peso"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (6).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 6; i <= 17; i++) {\n    if (i % 2 == 1) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "138",
+        "6",
+        "72",
+        "55"
+      ],
+      "correct": 2,
+      "explain": "<b>O if só deixa passar os ímpares:</b> 7 + 9 + 11 + 13 + 15 + 17 = 72.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 19;\ndo {\n    System.out.print(n + \" \");\n    n = n + 1;\n} while (n < 21);",
+      "options": [
+        "19 20 21",
+        "20",
+        "19",
+        "19 20"
+      ],
+      "correct": 3,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 19, 20; depois n vira 21 e 21 < 21 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a maneira correta de declarar uma matriz de int chamada tabela, com 4 linhas e 4 colunas?",
+      "options": [
+        "int tabela = new int[4,4];",
+        "int[] tabela = new int[4][4];",
+        "int[4,4] tabela = new int;",
+        "int[][] tabela = new int[4][4];"
+      ],
+      "correct": 3,
+      "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (4), depois colunas (4). Java não usa vírgula nos colchetes.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 14;\nx += 7;\nx *= 4;\nx -= 6;\nSystem.out.println(x);",
+      "options": [
+        "78",
+        "84",
+        "14",
+        "36"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> 14 + 7 = 21; × 4 = 84; − 6 = 78.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 21;\ndo {\n    System.out.print(n + \" \");\n    n = n + 1;\n} while (n < 23);",
+      "options": [
+        "21",
+        "21 22 23",
+        "22",
+        "21 22"
+      ],
+      "correct": 3,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 21, 22; depois n vira 23 e 23 < 23 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Jogo?",
+      "code": "class Jogo {\n    String nome;\n}",
+      "options": [
+        "Jogo jogo1 = new Jogo();",
+        "Jogo jogo1 = Jogo();",
+        "Jogo jogo1 = Jogo.new();",
+        "Jogo jogo1 = new Jogo;"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Jogo jogo1 = new Jogo();.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada diminuirValor(16).",
+      "code": "void diminuirValor(int numero) {\n    numero--;\n}",
+      "options": [
+        "Devolve 15 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 15.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 16.",
+        "Devolve 16, porque o valor passado volta sem mudança."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 16 e vira 15, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando idade for menor que 11?",
+      "code": "int idade = 69;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "idade <= 11",
+        "idade > 11",
+        "idade < 11",
+        "idade != 11"
+      ],
+      "correct": 2,
+      "explain": "<b>Menor que 11 se escreve idade < 11.</b> Com = junto (<= ou >=) o próprio 11 também entraria.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'A';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    case 'D':\n        System.out.println(\"Nota baixa\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota regular / Nota desconhecida",
+        "Nota boa",
+        "Nota máxima",
+        "Nota desconhecida"
+      ],
+      "correct": 2,
+      "explain": "<b>switch aceita char.</b> Entra no case 'A' e o break para ali.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 14;\nx += 4;\nx *= 4;\nx -= 8;\nSystem.out.println(x);",
+      "options": [
+        "64",
+        "14",
+        "72",
+        "22"
+      ],
+      "correct": 0,
+      "explain": "<b>Uma linha de cada vez:</b> 14 + 4 = 18; × 4 = 72; − 8 = 64.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 3;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 9);",
+      "options": [
+        "3 6",
+        "3 6 9",
+        "3",
+        "6"
+      ],
+      "correct": 0,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 3, 6; depois n vira 9 e 9 < 9 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um texto (a linha inteira) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner teclado = new Scanner(System.in);",
+      "options": [
+        "teclado.nextDouble();",
+        "teclado.nextInt();",
+        "teclado.nextLine();",
+        "sc.nextLine();"
+      ],
+      "correct": 2,
+      "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
+      "nivel": 3
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Livro?",
+      "code": "class Livro {\n    String nome;\n}",
+      "options": [
+        "Livro livro3 = new Livro;",
+        "Livro livro3 = Livro();",
+        "Livro livro3 = new Livro();",
+        "Livro livro3 = Livro.new();"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Livro livro3 = new Livro();.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 18;\ndo {\n    System.out.print(n + \" \");\n    n = n + 2;\n} while (n < 27);",
+      "options": [
+        "20 22 24 26",
+        "18 20 22 24",
+        "18 20 22 24 26",
+        "18 20 22 24 26 28"
+      ],
+      "correct": 2,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 18, 20, 22, 24, 26; depois n vira 28 e 28 < 27 é falso.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int gols = 3;\nSystem.out.println(gols);\nSystem.out.println(\"gols\");",
+      "options": [
+        "gols / gols",
+        "3 / gols",
+        "3 / 3",
+        "gols / 3"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (3).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de double chamado precos com 35 posições?",
+      "options": [
+        "double precos = new double[35];",
+        "double[] precos = new double[35];",
+        "precos double = new double[35];",
+        "double[35] precos;"
+      ],
+      "correct": 1,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 16) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "0 1 2 3 4 5",
+        "0 4 8 12 16",
+        "0 4 8 12",
+        "4 8 12"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 4 a cada volta:</b> 0, 4, 8, 12. Depois x vira 16 e 16 < 16 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {16, 19, 6},\n    {6, 15, 5},\n    {13, 9, 18}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "41",
+        "35",
+        "49",
+        "34"
+      ],
+      "correct": 2,
+      "explain": "<b>i == j é a diagonal principal:</b> 16 + 15 + 18 = 49.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Celular?",
+      "code": "class Celular {\n    String nome;\n}",
+      "options": [
+        "Celular celular2 = new Celular();",
+        "Celular celular2 = Celular.new();",
+        "Celular celular2 = new Celular;",
+        "Celular celular2 = Celular();"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Celular celular2 = new Celular();.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída deste programa?",
+      "code": "int x = 50;\nint y = 7;\nint resultado = x % y;\nSystem.out.println(resultado);",
+      "options": [
+        "1",
+        "false",
+        "2",
+        "7"
+      ],
+      "correct": 0,
+      "explain": "<b>% é o resto:</b> 50 ÷ 7 = 7, sobra 1.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(27, 17) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(27, 17);",
+        "somar(27, 17) = x;",
+        "int x = somar(27, 17);",
+        "String x = somar(27, 17);"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(27, 17);. \"somar(27, 17);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 1;\nwhile (x < 18) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "5 9 13 17",
+        "1 5 9 13 17",
+        "1 5 9 13 17 21",
+        "1 2 3 4 5 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 4 a cada volta:</b> 1, 5, 9, 13, 17. Depois x vira 21 e 21 < 18 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {16, 7, 6, 22, 30};\nvalores[1] = valores[4] + valores[4];\nSystem.out.println(valores[1]);",
+      "options": [
+        "60",
+        "7",
+        "32",
+        "61"
+      ],
+      "correct": 0,
+      "explain": "<b>O índice começa em 0:</b> valores[4] = 30 e valores[4] = 30. 30 + 30 = 60, que vai para valores[1].",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int altura = 76;\nSystem.out.println(altura);\nSystem.out.println(\"altura\");",
+      "options": [
+        "altura / 76",
+        "76 / altura",
+        "altura / altura",
+        "76 / 76"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (76).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 8) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "4 6 8",
+        "6",
+        "4 5 6 7",
+        "4 6"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma 2 a cada volta:</b> 4, 6. Depois x vira 8 e 8 < 8 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(39, 14) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "subtrair(39, 14);",
+        "int x = subtrair(39, 14);",
+        "boolean x = subtrair(39, 14);",
+        "subtrair(39, 14) = x;"
+      ],
+      "correct": 1,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(39, 14);. \"subtrair(39, 14);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {8, 4, 5},\n    {19, 3, 9},\n    {5, 13, 2}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "17",
+        "16",
+        "32",
+        "13"
+      ],
+      "correct": 3,
+      "explain": "<b>i == j é a diagonal principal:</b> 8 + 3 + 2 = 13.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 18;\nx += 1;\nx *= 3;\nx -= 4;\nSystem.out.println(x);",
+      "options": [
+        "17",
+        "57",
+        "18",
+        "53"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> 18 + 1 = 19; × 3 = 57; − 4 = 53.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int gols = 70;\nSystem.out.println(gols);\nSystem.out.println(\"gols\");",
+      "options": [
+        "gols / gols",
+        "gols / 70",
+        "70 / 70",
+        "70 / gols"
+      ],
+      "correct": 3,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (70).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Conta?",
+      "code": "class Conta {\n    String nome;\n}",
+      "options": [
+        "Conta conta1 = new Conta();",
+        "Conta conta1 = Conta.new();",
+        "Conta conta1 = new Conta;",
+        "Conta conta1 = Conta();"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Conta conta1 = new Conta();.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(25, 6) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "boolean valor = subtrair(25, 6);",
+        "subtrair(25, 6);",
+        "subtrair(25, 6) = valor;",
+        "int valor = subtrair(25, 6);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int valor = subtrair(25, 6);. \"subtrair(25, 6);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for maior que 79?",
+      "code": "int saldo = 88;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo < 79",
+        "saldo != 79",
+        "saldo >= 79",
+        "saldo > 79"
+      ],
+      "correct": 3,
+      "explain": "<b>Maior que 79 se escreve saldo > 79.</b> Com = junto (<= ou >=) o próprio 79 também entraria.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número inteiro usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner scan = new Scanner(System.in);",
+      "options": [
+        "sc.nextInt();",
+        "scan.nextInt();",
+        "scan.nextLine();",
+        "scan.nextDouble();"
+      ],
+      "correct": 1,
+      "explain": "<b>Use o nome do objeto criado (scan) e o método do tipo:</b> nextInt() para inteiro.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 10;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 20);",
+      "options": [
+        "10 13 16 19 22",
+        "10 13 16 19",
+        "10 13 16",
+        "13 16 19"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 10, 13, 16, 19; depois n vira 22 e 22 < 20 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de double chamado letras com 32 posições?",
+      "options": [
+        "double letras = new double[32];",
+        "letras double = new double[32];",
+        "double[] letras = new double[32];",
+        "double[32] letras;"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Dois objetos da mesma classe Aluno, a e b, podem ter nomes diferentes?",
+      "options": [
+        "Sim: cada objeto guarda os próprios valores dos atributos.",
+        "Só se a classe for declarada duas vezes no programa.",
+        "Não: só a classe guarda valores, os objetos não.",
+        "Não: objetos da mesma classe têm sempre os mesmos valores."
+      ],
+      "correct": 0,
+      "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> Sim: cada objeto guarda os próprios valores dos atributos.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {5, 3, 9},\n    {1, 8, 1},\n    {1, 5, 3}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i == j) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "16",
+        "7",
+        "18",
+        "17"
+      ],
+      "correct": 0,
+      "explain": "<b>i == j é a diagonal principal:</b> 5 + 8 + 3 = 16.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número decimal (com casas decimais) usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner teclado = new Scanner(System.in);",
+      "options": [
+        "teclado.nextDouble();",
+        "teclado.nextLine();",
+        "sc.nextDouble();",
+        "teclado.nextInt();"
+      ],
+      "correct": 0,
+      "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextDouble() para decimal (com casas decimais).",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 20;\nx += 9;\nx *= 2;\nx -= 1;\nSystem.out.println(x);",
+      "options": [
+        "58",
+        "37",
+        "57",
+        "20"
+      ],
+      "correct": 2,
+      "explain": "<b>Uma linha de cada vez:</b> 20 + 9 = 29; × 2 = 58; − 1 = 57.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada diminuirValor(12).",
+      "code": "void diminuirValor(int numero) {\n    numero--;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero continua valendo 12.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 11.",
+        "Devolve 12, porque o valor passado volta sem mudança.",
+        "Devolve 11 para quem chamou, porque o método termina sem erro."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 12 e vira 11, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada dobrarValor(12).",
+      "code": "void dobrarValor(int numero) {\n    numero *= 2;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero termina valendo 24.",
+        "Devolve 12, porque o valor passado volta sem mudança.",
+        "Devolve 24 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 12."
+      ],
+      "correct": 0,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 12 e vira 24, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(11, 14) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(11, 14);",
+        "somar(11, 14) = x;",
+        "String x = somar(11, 14);",
+        "int x = somar(11, 14);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(11, 14);. \"somar(11, 14);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número inteiro usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner input = new Scanner(System.in);",
+      "options": [
+        "sc.nextInt();",
+        "input.nextInt();",
+        "input.nextDouble();",
+        "input.nextLine();"
+      ],
+      "correct": 1,
+      "explain": "<b>Use o nome do objeto criado (input) e o método do tipo:</b> nextInt() para inteiro.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 22) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "4 5 6 7 8 9",
+        "4 8 12 16 20 24",
+        "4 8 12 16 20",
+        "8 12 16 20"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 4 a cada volta:</b> 4, 8, 12, 16, 20. Depois x vira 24 e 24 < 22 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int ano = 53;\nSystem.out.println(\"ano\");\nSystem.out.println(ano);",
+      "options": [
+        "53 / 53",
+        "ano / 53",
+        "53 / ano",
+        "ano / ano"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (53).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 16) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "4 7 10 13",
+        "4 7 10 13 16",
+        "7 10 13",
+        "4 5 6 7 8 9"
+      ],
+      "correct": 0,
+      "explain": "<b>Soma 3 a cada volta:</b> 4, 7, 10, 13. Depois x vira 16 e 16 < 16 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int ano = 88;\nSystem.out.println(ano);\nSystem.out.println(\"ano\");",
+      "options": [
+        "ano / ano",
+        "88 / 88",
+        "ano / 88",
+        "88 / ano"
+      ],
+      "correct": 3,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (88).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de String chamado numeros com 41 posições?",
+      "options": [
+        "String numeros = new String[41];",
+        "String[41] numeros;",
+        "numeros String = new String[41];",
+        "String[] numeros = new String[41];"
+      ],
+      "correct": 3,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Qual é a maneira correta de declarar uma matriz de char chamada matriz, com 4 linhas e 5 colunas?",
+      "options": [
+        "char matriz = new char[4,5];",
+        "char[][] matriz = new char[4][5];",
+        "char[4,5] matriz = new char;",
+        "char[] matriz = new char[4][5];"
+      ],
+      "correct": 1,
+      "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (4), depois colunas (5). Java não usa vírgula nos colchetes.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 16;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 35);",
+      "options": [
+        "16 19 22 25 28 31",
+        "16 19 22 25 28 31 34",
+        "16 19 22 25 28 31 34 37",
+        "19 22 25 28 31 34"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 16, 19, 22, 25, 28, 31, 34; depois n vira 37 e 37 < 35 é falso.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método saudacao. Qual é a forma correta de chamar saudacao(\"Felipe\") e guardar o resultado numa variável?",
+      "code": "String saudacao(String nome) {\n    return \"Oi, \" + nome;\n}",
+      "options": [
+        "saudacao(\"Felipe\") = r;",
+        "int r = saudacao(\"Felipe\");",
+        "saudacao(\"Felipe\");",
+        "String r = saudacao(\"Felipe\");"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String r = saudacao(\"Felipe\");. \"saudacao(\"Felipe\");\" sozinho calcula e joga fora; int não combina com String.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método dobro. Qual é a forma correta de chamar dobro(10) e guardar o resultado numa variável?",
+      "code": "int dobro(int n) {\n    return n * 2;\n}",
+      "options": [
+        "dobro(10);",
+        "dobro(10) = r;",
+        "int r = dobro(10);",
+        "String r = dobro(10);"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int r = dobro(10);. \"dobro(10);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada aumentarValor(13).",
+      "code": "void aumentarValor(int numero) {\n    numero++;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero termina valendo 14.",
+        "Devolve 14 para quem chamou, porque o método termina sem erro.",
+        "Devolve 13, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 13."
+      ],
+      "correct": 0,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 13 e vira 14, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {12, 5, 18},\n    {3, 17, 12},\n    {17, 6, 3}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i + j == 2) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "32",
+        "35",
+        "69",
+        "52"
+      ],
+      "correct": 3,
+      "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 18 + 17 + 17 = 52.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de double chamado letras com 28 posições?",
+      "options": [
+        "double[] letras = new double[28];",
+        "double[28] letras;",
+        "double letras = new double[28];",
+        "letras double = new double[28];"
+      ],
+      "correct": 0,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada somarDez(10).",
+      "code": "void somarDez(int numero) {\n    numero += 10;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero termina valendo 20.",
+        "Devolve 10, porque o valor passado volta sem mudança.",
+        "Devolve 20 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 10."
+      ],
+      "correct": 0,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 10 e vira 20, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de String chamado idades com 22 posições?",
+      "options": [
+        "idades String = new String[22];",
+        "String[22] idades;",
+        "String[] idades = new String[22];",
+        "String idades = new String[22];"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {7, 13, 4},\n    {16, 8, 6},\n    {7, 7, 18}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i + j == 2) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "33",
+        "19",
+        "24",
+        "30"
+      ],
+      "correct": 1,
+      "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 4 + 8 + 7 = 19.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 4;\ndo {\n    System.out.print(n + \" \");\n    n = n + 1;\n} while (n < 6);",
+      "options": [
+        "4",
+        "4 5 6",
+        "4 5",
+        "5"
+      ],
+      "correct": 2,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 4, 5; depois n vira 6 e 6 < 6 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada diminuirValor(8).",
+      "code": "void diminuirValor(int numero) {\n    numero--;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero continua valendo 8.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 7.",
+        "Devolve 8, porque o valor passado volta sem mudança.",
+        "Devolve 7 para quem chamou, porque o método termina sem erro."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 8 e vira 7, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(16, 8) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(16, 8) = r;",
+        "int r = somar(16, 8);",
+        "String r = somar(16, 8);",
+        "somar(16, 8);"
+      ],
+      "correct": 1,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int r = somar(16, 8);. \"somar(16, 8);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int nota = 17;\nSystem.out.println(nota);\nSystem.out.println(\"nota\");",
+      "options": [
+        "nota / 17",
+        "nota / nota",
+        "17 / 17",
+        "17 / nota"
+      ],
+      "correct": 3,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (17).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 15) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "4 6 8 10 12 14 16",
+        "6 8 10 12 14",
+        "4 5 6 7 8 9",
+        "4 6 8 10 12 14"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma 2 a cada volta:</b> 4, 6, 8, 10, 12, 14. Depois x vira 16 e 16 < 15 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Aluno?",
+      "code": "class Aluno {\n    String nome;\n}",
+      "options": [
+        "Aluno aluno1 = new Aluno();",
+        "Aluno aluno1 = Aluno();",
+        "Aluno aluno1 = Aluno.new();",
+        "Aluno aluno1 = new Aluno;"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Aluno aluno1 = new Aluno();.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 3, 5, 8, 13, 21, 34, ...",
+      "options": [
+        "89",
+        "53",
+        "55",
+        "56"
+      ],
+      "correct": 2,
+      "explain": "<b>Cada número é a soma dos dois anteriores:</b> 21 + 34 = 55.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método situacao. Qual é a forma correta de chamar situacao(0) e guardar o resultado numa variável?",
+      "code": "String situacao(double nota) {\n    return nota >= 7 ? \"Aprovado\" : \"Reprovado\";\n}",
+      "options": [
+        "boolean resultado = situacao(0);",
+        "String resultado = situacao(0);",
+        "situacao(0);",
+        "situacao(0) = resultado;"
+      ],
+      "correct": 1,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String resultado = situacao(0);. \"situacao(0);\" sozinho calcula e joga fora; boolean não combina com String.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'D';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n    case 'B':\n        System.out.println(\"Nota boa\");\n    case 'C':\n        System.out.println(\"Nota regular\");\n    case 'D':\n        System.out.println(\"Nota baixa\");\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota boa / Nota desconhecida",
+        "Nota desconhecida",
+        "Nota máxima",
+        "Nota baixa / Nota desconhecida"
+      ],
+      "correct": 3,
+      "explain": "<b>Sem break, o switch continua descendo</b> e imprime todos os cases abaixo, até o default.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int[] valores = {6, 1, 16, 10, 22};\nvalores[3] = valores[1] + valores[2];\nSystem.out.println(valores[3]);",
+      "options": [
+        "26",
+        "18",
+        "10",
+        "17"
+      ],
+      "correct": 3,
+      "explain": "<b>O índice começa em 0:</b> valores[1] = 1 e valores[2] = 16. 1 + 16 = 17, que vai para valores[3].",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 2;\nwhile (x < 9) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "2 3 4 5 6 7",
+        "2 5 8 11",
+        "5 8",
+        "2 5 8"
+      ],
+      "correct": 3,
+      "explain": "<b>Soma 3 a cada volta:</b> 2, 5, 8. Depois x vira 11 e 11 < 9 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando valor for igual a 27?",
+      "code": "int valor = 15;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "valor != 27",
+        "valor = 27",
+        "valor < 27",
+        "valor == 27"
+      ],
+      "correct": 3,
+      "explain": "<b>Igual a 27 se escreve valor == 27.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for igual a 20?",
+      "code": "int saldo = -25;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo < 20",
+        "saldo == 20",
+        "saldo != 20",
+        "saldo = 20"
+      ],
+      "correct": 1,
+      "explain": "<b>Igual a 20 se escreve saldo == 20.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Filme?",
+      "code": "class Filme {\n    String nome;\n}",
+      "options": [
+        "Filme filme1 = new Filme();",
+        "Filme filme1 = new Filme;",
+        "Filme filme1 = Filme.new();",
+        "Filme filme1 = Filme();"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Filme filme1 = new Filme();.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Casa?",
+      "code": "class Casa {\n    String nome;\n}",
+      "options": [
+        "Casa casa3 = new Casa;",
+        "Casa casa3 = Casa();",
+        "Casa casa3 = Casa.new();",
+        "Casa casa3 = new Casa();"
+      ],
+      "correct": 3,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Casa casa3 = new Casa();.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 3;\nwhile (x < 19) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "3 6 9 12 15 18 21",
+        "3 6 9 12 15 18",
+        "6 9 12 15 18",
+        "3 4 5 6 7 8"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 3 a cada volta:</b> 3, 6, 9, 12, 15, 18. Depois x vira 21 e 21 < 19 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Ao final, a variável x armazena:",
+      "code": "int[] v = {23, 4, 40, 2};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] < x) {\n        x = v[i];\n    }\n}",
+      "options": [
+        "A quantidade de elementos",
+        "O menor elemento do vetor",
+        "O maior elemento do vetor",
+        "O primeiro elemento do vetor"
+      ],
+      "correct": 1,
+      "explain": "<b>O sinal do if decide:</b> com <, x é trocado sempre que aparece um valor menor.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 30;\ndo {\n    System.out.print(n + \" \");\n    n = n + 2;\n} while (n < 35);",
+      "options": [
+        "30 32 34 36",
+        "30 32 34",
+        "30 32",
+        "32 34"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 30, 32, 34; depois n vira 36 e 36 < 35 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método subtrair. Qual é a forma correta de chamar subtrair(25, 13) e guardar o resultado numa variável?",
+      "code": "int subtrair(int a, int b) {\n    return a - b;\n}",
+      "options": [
+        "subtrair(25, 13) = resultado;",
+        "subtrair(25, 13);",
+        "boolean resultado = subtrair(25, 13);",
+        "int resultado = subtrair(25, 13);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = subtrair(25, 13);. \"subtrair(25, 13);\" sozinho calcula e joga fora; boolean não combina com int.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de boolean chamado valores com 20 posições?",
+      "options": [
+        "boolean valores = new boolean[20];",
+        "boolean[20] valores;",
+        "boolean[] valores = new boolean[20];",
+        "valores boolean = new boolean[20];"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando valor for maior que 29?",
+      "code": "int valor = 96;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "valor > 29",
+        "valor >= 29",
+        "valor != 29",
+        "valor < 29"
+      ],
+      "correct": 0,
+      "explain": "<b>Maior que 29 se escreve valor > 29.</b> Com = junto (<= ou >=) o próprio 29 também entraria.",
+      "nivel": 3
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Carro?",
+      "code": "class Carro {\n    String nome;\n}",
+      "options": [
+        "Carro carro3 = Carro.new();",
+        "Carro carro3 = Carro();",
+        "Carro carro3 = new Carro;",
+        "Carro carro3 = new Carro();"
+      ],
+      "correct": 3,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Carro carro3 = new Carro();.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de String chamado pesos com 12 posições?",
+      "options": [
+        "String pesos = new String[12];",
+        "String[] pesos = new String[12];",
+        "String[12] pesos;",
+        "pesos String = new String[12];"
+      ],
+      "correct": 1,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int gols = 57;\nSystem.out.println(gols);\nSystem.out.println(\"gols\");",
+      "options": [
+        "57 / 57",
+        "gols / gols",
+        "57 / gols",
+        "gols / 57"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (57).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 6) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "3",
+        "0 3",
+        "0 1 2 3 4 5",
+        "0 3 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 3 a cada volta:</b> 0, 3. Depois x vira 6 e 6 < 6 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int gols = 19;\nSystem.out.println(gols);\nSystem.out.println(\"gols\");",
+      "options": [
+        "gols / gols",
+        "gols / 19",
+        "19 / gols",
+        "19 / 19"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (19).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 15;\ndo {\n    System.out.print(n + \" \");\n    n = n + 3;\n} while (n < 25);",
+      "options": [
+        "15 18 21 24",
+        "15 18 21",
+        "15 18 21 24 27",
+        "18 21 24"
+      ],
+      "correct": 0,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 15, 18, 21, 24; depois n vira 27 e 27 < 25 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método media. Qual é a forma correta de chamar media(4, 10) e guardar o resultado numa variável?",
+      "code": "double media(double a, double b) {\n    return (a + b) / 2;\n}",
+      "options": [
+        "int r = media(4, 10);",
+        "media(4, 10);",
+        "media(4, 10) = r;",
+        "double r = media(4, 10);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double r = media(4, 10);. \"media(4, 10);\" sozinho calcula e joga fora; int não combina com double.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int nota = 21;\nSystem.out.println(nota);\nSystem.out.println(\"nota\");",
+      "options": [
+        "nota / 21",
+        "21 / 21",
+        "21 / nota",
+        "nota / nota"
+      ],
+      "correct": 2,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (21).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for igual a 85?",
+      "code": "int saldo = 63;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo = 85",
+        "saldo == 85",
+        "saldo != 85",
+        "saldo < 85"
+      ],
+      "correct": 1,
+      "explain": "<b>Igual a 85 se escreve saldo == 85.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Avalie a sequência e assinale o próximo número: 3, 6, 12, 24, 48, ...",
+      "options": [
+        "96",
+        "94",
+        "97",
+        "144"
+      ],
+      "correct": 0,
+      "explain": "<b>Cada número é o dobro do anterior:</b> 48 × 2 = 96.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 11) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "0 1 2 3 4 5",
+        "0 3 6 9 12",
+        "0 3 6 9",
+        "3 6 9"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6, 9. Depois x vira 12 e 12 < 11 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método situacao. Qual é a forma correta de chamar situacao(7) e guardar o resultado numa variável?",
+      "code": "String situacao(double nota) {\n    return nota >= 7 ? \"Aprovado\" : \"Reprovado\";\n}",
+      "options": [
+        "String valor = situacao(7);",
+        "situacao(7);",
+        "situacao(7) = valor;",
+        "boolean valor = situacao(7);"
+      ],
+      "correct": 0,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String valor = situacao(7);. \"situacao(7);\" sozinho calcula e joga fora; boolean não combina com String.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 14;\nx += 7;\nx *= 3;\nx -= 2;\nSystem.out.println(x);",
+      "options": [
+        "14",
+        "33",
+        "63",
+        "61"
+      ],
+      "correct": 3,
+      "explain": "<b>Uma linha de cada vez:</b> 14 + 7 = 21; × 3 = 63; − 2 = 61.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método media. Qual é a forma correta de chamar media(10, 4) e guardar o resultado numa variável?",
+      "code": "double media(double a, double b) {\n    return (a + b) / 2;\n}",
+      "options": [
+        "media(10, 4);",
+        "double valor = media(10, 4);",
+        "int valor = media(10, 4);",
+        "media(10, 4) = valor;"
+      ],
+      "correct": 1,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double valor = media(10, 4);. \"media(10, 4);\" sozinho calcula e joga fora; int não combina com double.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual o valor final de x será mostrado?",
+      "code": "int x = 12;\nx += 9;\nx *= 3;\nx -= 5;\nSystem.out.println(x);",
+      "options": [
+        "63",
+        "58",
+        "12",
+        "34"
+      ],
+      "correct": 1,
+      "explain": "<b>Uma linha de cada vez:</b> 12 + 9 = 21; × 3 = 63; − 5 = 58.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número inteiro usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner ler = new Scanner(System.in);",
+      "options": [
+        "sc.nextInt();",
+        "ler.nextDouble();",
+        "ler.nextInt();",
+        "ler.nextLine();"
+      ],
+      "correct": 2,
+      "explain": "<b>Use o nome do objeto criado (ler) e o método do tipo:</b> nextInt() para inteiro.",
+      "nivel": 1
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada diminuirValor(5).",
+      "code": "void diminuirValor(int numero) {\n    numero--;\n}",
+      "options": [
+        "Devolve 5, porque o valor passado volta sem mudança.",
+        "Não devolve valor (é void); dentro do método, numero continua valendo 5.",
+        "Devolve 4 para quem chamou, porque o método termina sem erro.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 4."
+      ],
+      "correct": 3,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 5 e vira 4, só dentro do método.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 4;\nwhile (x < 13) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "6 8 10 12",
+        "4 6 8 10 12 14",
+        "4 6 8 10 12",
+        "4 5 6 7 8 9"
+      ],
+      "correct": 2,
+      "explain": "<b>Soma 2 a cada volta:</b> 4, 6, 8, 10, 12. Depois x vira 14 e 14 < 13 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método dobro. Qual é a forma correta de chamar dobro(45) e guardar o resultado numa variável?",
+      "code": "int dobro(int n) {\n    return n * 2;\n}",
+      "options": [
+        "dobro(45);",
+        "String resultado = dobro(45);",
+        "int resultado = dobro(45);",
+        "dobro(45) = resultado;"
+      ],
+      "correct": 2,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = dobro(45);. \"dobro(45);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int ano = 21;\nSystem.out.println(\"ano\");\nSystem.out.println(ano);",
+      "options": [
+        "21 / 21",
+        "ano / 21",
+        "ano / ano",
+        "21 / ano"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (21).</b>",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando valor for menor que 72?",
+      "code": "int valor = 37;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "valor < 72",
+        "valor <= 72",
+        "valor != 72",
+        "valor > 72"
+      ],
+      "correct": 0,
+      "explain": "<b>Menor que 72 se escreve valor < 72.</b> Com = junto (<= ou >=) o próprio 72 também entraria.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(15, 27) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "somar(15, 27) = resultado;",
+        "somar(15, 27);",
+        "String resultado = somar(15, 27);",
+        "int resultado = somar(15, 27);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = somar(15, 27);. \"somar(15, 27);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método e assinale a correta sobre a chamada diminuirValor(20).",
+      "code": "void diminuirValor(int numero) {\n    numero--;\n}",
+      "options": [
+        "Não devolve valor (é void); dentro do método, numero continua valendo 20.",
+        "Não devolve valor (é void); dentro do método, numero termina valendo 19.",
+        "Devolve 19 para quem chamou, porque o método termina sem erro.",
+        "Devolve 20, porque o valor passado volta sem mudança."
+      ],
+      "correct": 1,
+      "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 20 e vira 19, só dentro do método.",
+      "nivel": 3
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 16;\ndo {\n    System.out.print(n + \" \");\n    n = n + 2;\n} while (n < 20);",
+      "options": [
+        "16",
+        "18",
+        "16 18 20",
+        "16 18"
+      ],
+      "correct": 3,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 16, 18; depois n vira 20 e 20 < 20 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Professor?",
+      "code": "class Professor {\n    String nome;\n}",
+      "options": [
+        "Professor professor3 = new Professor();",
+        "Professor professor3 = Professor.new();",
+        "Professor professor3 = new Professor;",
+        "Professor professor3 = Professor();"
+      ],
+      "correct": 0,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Professor professor3 = new Professor();.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de char chamado lista com 39 posições?",
+      "options": [
+        "lista char = new char[39];",
+        "char[39] lista;",
+        "char[] lista = new char[39];",
+        "char lista = new char[39];"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando idade for igual a 77?",
+      "code": "int idade = 46;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "idade == 77",
+        "idade != 77",
+        "idade < 77",
+        "idade = 77"
+      ],
+      "correct": 0,
+      "explain": "<b>Igual a 77 se escreve idade == 77.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de char chamado dados com 18 posições?",
+      "options": [
+        "dados char = new char[18];",
+        "char dados = new char[18];",
+        "char[] dados = new char[18];",
+        "char[18] dados;"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "basico",
+      "statement": "Para ler um número inteiro usando o Scanner abaixo, qual comando deve ser usado?",
+      "code": "Scanner teclado = new Scanner(System.in);",
+      "options": [
+        "teclado.nextInt();",
+        "teclado.nextLine();",
+        "sc.nextInt();",
+        "teclado.nextDouble();"
+      ],
+      "correct": 0,
+      "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextInt() para inteiro.",
+      "nivel": 2
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Animal?",
+      "code": "class Animal {\n    String nome;\n}",
+      "options": [
+        "Animal animal1 = Animal.new();",
+        "Animal animal1 = new Animal();",
+        "Animal animal1 = Animal();",
+        "Animal animal1 = new Animal;"
+      ],
+      "correct": 1,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Animal animal1 = new Animal();.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 5;\nwhile (x < 10) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "5 7 9 11",
+        "5 7 9",
+        "5 6 7 8 9",
+        "7 9"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 2 a cada volta:</b> 5, 7, 9. Depois x vira 11 e 11 < 10 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Bicicleta?",
+      "code": "class Bicicleta {\n    String nome;\n}",
+      "options": [
+        "Bicicleta bicicleta3 = Bicicleta.new();",
+        "Bicicleta bicicleta3 = Bicicleta();",
+        "Bicicleta bicicleta3 = new Bicicleta();",
+        "Bicicleta bicicleta3 = new Bicicleta;"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Bicicleta bicicleta3 = new Bicicleta();.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando saldo for igual a 66?",
+      "code": "int saldo = -42;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "saldo == 66",
+        "saldo < 66",
+        "saldo = 66",
+        "saldo != 66"
+      ],
+      "correct": 0,
+      "explain": "<b>Igual a 66 se escreve saldo == 66.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Que condição completa o if para imprimir \"Sim\" apenas quando nota for igual a 6?",
+      "code": "int nota = 14;\nif ( ________ ) {\n    System.out.println(\"Sim\");\n}",
+      "options": [
+        "nota < 6",
+        "nota = 6",
+        "nota == 6",
+        "nota != 6"
+      ],
+      "correct": 2,
+      "explain": "<b>Igual a 6 se escreve nota == 6.</b> Comparar é ==; um = só é atribuição.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale o valor apresentado.",
+      "code": "int soma = 0;\nfor (int i = 5; i <= 17; i++) {\n    if (i % 2 == 1) {\n        soma += i;\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "7",
+        "60",
+        "143",
+        "77"
+      ],
+      "correct": 3,
+      "explain": "<b>O if só deixa passar os ímpares:</b> 5 + 7 + 9 + 11 + 13 + 15 + 17 = 77.",
+      "nivel": 3
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de double chamado idades com 2 posições?",
+      "options": [
+        "double[2] idades;",
+        "double idades = new double[2];",
+        "idades double = new double[2];",
+        "double[] idades = new double[2];"
+      ],
+      "correct": 3,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Qual é a maneira correta de declarar um vetor de char chamado dados com 48 posições?",
+      "options": [
+        "dados char = new char[48];",
+        "char dados = new char[48];",
+        "char[] dados = new char[48];",
+        "char[48] dados;"
+      ],
+      "correct": 2,
+      "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
+      "nivel": 1
+    },
+    {
+      "topic": "classes",
+      "statement": "Qual opção cria corretamente um objeto da classe Cliente?",
+      "code": "class Cliente {\n    String nome;\n}",
+      "options": [
+        "Cliente cliente3 = new Cliente;",
+        "Cliente cliente3 = Cliente.new();",
+        "Cliente cliente3 = new Cliente();",
+        "Cliente cliente3 = Cliente();"
+      ],
+      "correct": 2,
+      "explain": "<b>Objeto nasce com new e parênteses:</b> Cliente cliente3 = new Cliente();.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 14;\ndo {\n    System.out.print(n + \" \");\n    n = n + 2;\n} while (n < 22);",
+      "options": [
+        "14 16 18 20",
+        "16 18 20",
+        "14 16 18",
+        "14 16 18 20 22"
+      ],
+      "correct": 0,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 14, 16, 18, 20; depois n vira 22 e 22 < 22 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 0;\nwhile (x < 9) {\n    System.out.print(x + \" \");\n    x = x + 2;\n}",
+      "options": [
+        "2 4 6 8",
+        "0 2 4 6 8",
+        "0 2 4 6 8 10",
+        "0 1 2 3 4 5"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 2 a cada volta:</b> 0, 2, 4, 6, 8. Depois x vira 10 e 10 < 9 é falso.",
+      "nivel": 2
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método somar. Qual é a forma correta de chamar somar(16, 12) e guardar o resultado numa variável?",
+      "code": "int somar(int a, int b) {\n    return a + b;\n}",
+      "options": [
+        "int resultado = somar(16, 12);",
+        "somar(16, 12);",
+        "String resultado = somar(16, 12);",
+        "somar(16, 12) = resultado;"
+      ],
+      "correct": 0,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = somar(16, 12);. \"somar(16, 12);\" sozinho calcula e joga fora; String não combina com int.",
+      "nivel": 2
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 5;\nwhile (x < 14) {\n    System.out.print(x + \" \");\n    x = x + 3;\n}",
+      "options": [
+        "5 8 11",
+        "8 11",
+        "5 6 7 8 9 10",
+        "5 8 11 14"
+      ],
+      "correct": 0,
+      "explain": "<b>Soma 3 a cada volta:</b> 5, 8, 11. Depois x vira 14 e 14 < 14 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int x = 1;\nwhile (x < 13) {\n    System.out.print(x + \" \");\n    x = x + 4;\n}",
+      "options": [
+        "5 9",
+        "1 5 9",
+        "1 5 9 13",
+        "1 2 3 4 5 6"
+      ],
+      "correct": 1,
+      "explain": "<b>Soma 4 a cada volta:</b> 1, 5, 9. Depois x vira 13 e 13 < 13 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "lacos",
+      "statement": "Analise o código e assinale a saída correta.",
+      "code": "int n = 1;\ndo {\n    System.out.print(n + \" \");\n    n = n + 2;\n} while (n < 5);",
+      "options": [
+        "1 3 5",
+        "1 3",
+        "3",
+        "1"
+      ],
+      "correct": 1,
+      "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 1, 3; depois n vira 5 e 5 < 5 é falso.",
+      "nivel": 1
+    },
+    {
+      "topic": "vetores",
+      "statement": "Ao final, a variável x armazena:",
+      "code": "int[] v = {14, 3, 50, 1};\nint x = v[0];\nfor (int i = 1; i < v.length; i++) {\n    if (v[i] > x) {\n        x = v[i];\n    }\n}",
+      "options": [
+        "O menor elemento do vetor",
+        "O maior elemento do vetor",
+        "O primeiro elemento do vetor",
+        "A quantidade de elementos"
+      ],
+      "correct": 1,
+      "explain": "<b>O sinal do if decide:</b> com >, x é trocado sempre que aparece um valor maior.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'C';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    case 'D':\n        System.out.println(\"Nota baixa\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota máxima / Nota desconhecida",
+        "Nota baixa",
+        "Nota desconhecida",
+        "Nota regular"
+      ],
+      "correct": 3,
+      "explain": "<b>switch aceita char.</b> Entra no case 'C' e o break para ali.",
+      "nivel": 3
+    },
+    {
+      "topic": "metodos",
+      "statement": "Considere o método calcularDesconto. Qual é a forma correta de chamar calcularDesconto(99) e guardar o resultado numa variável?",
+      "code": "double calcularDesconto(double preco) {\n    return preco * 0.9;\n}",
+      "options": [
+        "calcularDesconto(99);",
+        "calcularDesconto(99) = valor;",
+        "int valor = calcularDesconto(99);",
+        "double valor = calcularDesconto(99);"
+      ],
+      "correct": 3,
+      "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double valor = calcularDesconto(99);. \"calcularDesconto(99);\" sozinho calcula e joga fora; int não combina com double.",
+      "nivel": 2
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual será a saída exibida no console? (a barra / separa as linhas)",
+      "code": "char letra = 'B';\nswitch (letra) {\n    case 'A':\n        System.out.println(\"Nota máxima\");\n        break;\n    case 'B':\n        System.out.println(\"Nota boa\");\n        break;\n    case 'C':\n        System.out.println(\"Nota regular\");\n        break;\n    case 'D':\n        System.out.println(\"Nota baixa\");\n        break;\n    default:\n        System.out.println(\"Nota desconhecida\");\n}",
+      "options": [
+        "Nota boa",
+        "Nota baixa / Nota desconhecida",
+        "Nota regular",
+        "Nota desconhecida"
+      ],
+      "correct": 0,
+      "explain": "<b>switch aceita char.</b> Entra no case 'B' e o break para ali.",
+      "nivel": 3
+    },
+    {
+      "topic": "basico",
+      "statement": "Qual é a saída exata desse programa? (a barra / separa a primeira linha da segunda)",
+      "code": "int pontos = 29;\nSystem.out.println(\"pontos\");\nSystem.out.println(pontos);",
+      "options": [
+        "pontos / pontos",
+        "pontos / 29",
+        "29 / 29",
+        "29 / pontos"
+      ],
+      "correct": 1,
+      "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (29).</b>",
+      "nivel": 3
+    },
+    {
+      "topic": "matrizes",
+      "statement": "Analise o código e assinale o valor final de soma.",
+      "code": "int[][] m = {\n    {15, 6, 13},\n    {14, 20, 2},\n    {14, 20, 9}\n};\nint soma = 0;\nfor (int i = 0; i < 3; i++) {\n    for (int j = 0; j < 3; j++) {\n        if (i + j == 2) {\n            soma += m[i][j];\n        }\n    }\n}\nSystem.out.println(soma);",
+      "options": [
+        "43",
+        "44",
+        "47",
+        "34"
+      ],
+      "correct": 2,
+      "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 13 + 20 + 14 = 47.",
+      "nivel": 3
+    }
+  ],
+  "historias": [],
+  "jogos": [],
+  "livro": [
+    {
+      "titulo": "O que caiu e onde você errou",
+      "resumo": "1ª e 2ª prova do Prof. Lucas, questão por questão.",
+      "paginas": [
+        "Os erros se repetem em três grupos: (1) seguir o código à mão (for com if, do-while, diagonal da matriz, o que x guarda); (2) escrever a declaração certa (vetor, matriz, guardar o retorno de um método); (3) conceitos curtos (classe x objeto, void, %, aspas).",
+        "Guardar o retorno: int resultado = multiplicar(5, 3);. Quem recebe fica à ESQUERDA do =. O tipo da variável é o tipo que o método devolve.",
+        "Classe é a fôrma de bolo; objeto é o bolo. Por isso “um objeto é uma instância de uma classe”. Objeto nasce com new: Pessoa p = new Pessoa();.",
+        "void = não devolve nada. Em void dobrarValor(int numero) { numero *= 2; }, o numero vira 10 só dentro do método.",
+        "for com if: só soma quem passa no if. De 1 a 5, os pares são 2 e 4: soma 6.",
+        "Diagonal principal: i == j, ou seja m[0][0], m[1][1], m[2][2]. Na prova: 2 + 4 + 9 = 15.",
+        "do-while faz primeiro e testa depois: roda pelo menos UMA vez, mesmo com a condição falsa (n = 10, while (n < 5)).",
+        "Vetor: tipo[] nome = new tipo[n];. Matriz: tipo[][] nome = new tipo[linhas][colunas];. Nunca [3,3] com vírgula.",
+        "x = v[0] e troca quando v[i] > x: no fim x é o MAIOR. Com < seria o menor.",
+        "1ª prova: % é o resto (15 % 3 = 0, um número, não true). println(\"idade\") imprime a palavra; println(idade) imprime o valor. String usa aspas duplas; aspas simples só para um char. Negativo é n < 0. sc.close() fecha e libera recursos, mas não é obrigatório. Descrição narrativa é texto em português, sem código. Algoritmo: sequência finita de passos claros e ordenados. 2, 4, 6, 8 → 10."
+      ],
+      "guardar": [
+        "Quem recebe o valor fica à esquerda do =.",
+        "Objeto é instância da classe; nasce com new.",
+        "void não devolve nada.",
+        "do-while roda pelo menos uma vez.",
+        "Vetor tipo[]; matriz tipo[][]; diagonal é i == j.",
+        "% é o resto; texto entre aspas duplas."
+      ]
+    }
+  ],
+  "termos": [],
+  "praticas": []
+}

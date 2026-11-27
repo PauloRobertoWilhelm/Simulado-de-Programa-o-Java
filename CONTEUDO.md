@@ -20,6 +20,7 @@ _Contagem de 27/11/2026, gerada por `node ferramentas/inventario.js --atualizar`
 |---|---|---|---|---|---|---|---|---|
 | Design Front End | 404 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
 | Programação de Computadores | 747 | 0 | 10 | 10 | 7 | 8 | 14 | 20 |
+| Provas de Programação | 278 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Engenharia de Requisitos | 579 | 0 | 7 | 9 | 10 | 8 | 16 | 11 |
 | Fundamentos de Redes | 1098 | 0 | 16 | 15 | 11 | 9 | 25 | 25 |
 | Testing, Compliance e QA | 344 | 0 | 0 | 0 | 2 | 3 | 0 | 0 |
@@ -34,6 +35,7 @@ Perguntas por tema:
 
 - **Design Front End:** ihc 34, heuristicas 126, norman 81, visual 141, avaliacao 22
 - **Programação de Computadores:** logica 17, selecao 31, operadores 60, repeticao 67, for 65, dowhile 70, strings 108, arrays 73, matrizes 81, classes 52, metodos 66, parametros 57
+- **Provas de Programação:** oficiais 30, metodos 43, lacos 49, vetores 32, matrizes 23, classes 21, basico 80
 - **Engenharia de Requisitos:** processo 7, tipos 8, metodologias 7, casosdeuso 317, historias 47, validacao 193
 - **Fundamentos de Redes:** modelos 6, arquitetura 6, enlace 3, meios 3, rede 463, transporte 290, aplicacao 166, integradora 7, status 154
 - **Testing, Compliance e QA:** tipos 108, tecnicas 132, praticas 47, qualidade 16, principios 19, compliance 22
@@ -94,6 +96,7 @@ Perguntas por tema:
 ## Matérias
 
 - **Abas atuais:** as 5 do 2º bimestre (Design Front End, Programação de Computadores, Engenharia de Requisitos, Fundamentos de Redes e Testing, Compliance e QA) e Pensamento Computacional (1º período).
+- **Provas de Programação (27/11/2026):** aba pedida pelo Paulo depois da 2ª prova. Tem as 30 questões oficiais da 1ª e da 2ª prova do Prof. Lucas, com explicação (a da calculadora com switch ficou de fora: o PDF não mostra a certa; as duas dissertativas viraram alternativa), e 248 variações só dos assuntos que caíram, com respostas certas diferentes. Os códigos foram executados no Java.
 - **Pensamento Computacional:** veio da "Plataforma de Estudos ADS" (`Documents/plataforma-estudos`, setembro de 2026), sem mudar o texto. São 577 perguntas, mais as 5 da revisão da prova anterior (também como capítulo do livro) e as 6 dicas (capítulo do livro). As 12 perguntas de Java desse app entraram em Programação. As perguntas importadas têm o campo `origem`.
 - **Variações (21/11/2026):** para Programação, Redes e Requisitos chegarem a 500, como Pensamento, entraram perguntas do mesmo tipo com valores trocados, só com os assuntos do material. **Programação:** 332 de "o que este código imprime?" (Aulas 8 a 16), todas compiladas e executadas no Java antes de entrar. **Redes:** 319 contas fixas, das mesmas que a rodada "contas" sorteia (sub-rede, TTL, IPv6, TCP). **Requisitos:** 376 com os conceitos dos slides 05 e 06 (include, extend, exceção, cenário principal, generalização e as 7 técnicas) aplicados a 19 sistemas de exemplo. Os sistemas das atividades do Classroom ficaram de fora. Design e Testing seguem como estão até chegar o material do 2º bimestre.
 - **Conteúdo de 25/11/2026:** 127 perguntas em Programação (conceito, sintaxe e os códigos dos slides, executados no Java), 50 em Redes (26 no tema novo “Grupos HTTP · 1xx a 5xx”) e 31 em Requisitos (figuras e pegadinhas do resumão). Mais um capítulo de livro em cada uma, 8 jogos e 16 práticas.
@@ -110,6 +113,7 @@ Perguntas por tema:
 | 20/11/2026 | 18 perguntas de Programação que cobravam assuntos fora dos slides | Voltaram para o simulado no mesmo dia, a pedido do Paulo ("era criar mais, não deletar o que já tinha") |
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
 | 26/11/2026 | (nada saiu) Entraram 145 perguntas (códigos HTTP, "o que significa" de Requisitos e o estilo da prova), o nível de cada pergunta, 5 visuais trocáveis, o pug e as animações | `materias/*.json`, `css/`, `js/`, `img/pug/` |
+| 27/11/2026 | (nada saiu) Entrou a aba Provas de Programação, com 278 perguntas e 1 capítulo | `materias/provasprog.json` |
 | 25/11/2026 | (nada saiu) Entraram 1.589 perguntas (variações) em seis matérias | `materias/*.json` |
 | 25/11/2026 | (nada saiu) Entraram 5 abas do 1º período e o visual futurista | `materias/*.json`, `css/futuro.css` |
 | 25/11/2026 | (nada saiu) Cada pergunta ganhou o campo `assunto` (168 conteúdos) e o app ganhou o visual dourado | `materias/*.json`, `css/ouro.css` |

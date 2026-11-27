@@ -65,6 +65,35 @@
         "parametros": 57
       }
     },
+    "provasprog": {
+      "aba": "Provas de Programação",
+      "perguntas": 278,
+      "guardadas": 0,
+      "revisao": 0,
+      "livro": 1,
+      "historias": 0,
+      "jogos": 0,
+      "termos": 0,
+      "praticas": 0,
+      "temas": [
+        "oficiais",
+        "metodos",
+        "classes",
+        "vetores",
+        "matrizes",
+        "lacos",
+        "basico"
+      ],
+      "porTema": {
+        "oficiais": 30,
+        "metodos": 43,
+        "lacos": 49,
+        "vetores": 32,
+        "matrizes": 23,
+        "classes": 21,
+        "basico": 80
+      }
+    },
     "requisitos": {
       "aba": "Engenharia de Requisitos",
       "perguntas": 579,
@@ -407,6 +436,7 @@
     "materias/linguagem.json",
     "materias/pensamento.json",
     "materias/programacao.json",
+    "materias/provasprog.json",
     "materias/redes.json",
     "materias/requisitos.json",
     "materias/testing.json"

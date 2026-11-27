@@ -14,7 +14,7 @@ Tudo o que o app tem. Nada desta lista pode sumir sem o Paulo pedir.
 ## O que cada matéria tem
 
 <!-- inventario:inicio -->
-_Contagem de 26/11/2026, gerada por `node ferramentas/inventario.js --atualizar`._
+_Contagem de 27/11/2026, gerada por `node ferramentas/inventario.js --atualizar`._
 
 | Matéria | Perguntas no simulado | Guardadas (fora do simulado) | Revisão | Livro | Histórias | Jogos | Termos | Práticas |
 |---|---|---|---|---|---|---|---|---|

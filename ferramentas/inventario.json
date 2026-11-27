@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/11/2026",
+  "atualizadoEm": "27/11/2026",
   "materias": {
     "design": {
       "aba": "Design Front End",
@@ -411,6 +411,6 @@
     "materias/requisitos.json",
     "materias/testing.json"
   ],
-  "material": 108,
+  "material": 112,
   "materialVazio": 0
 }

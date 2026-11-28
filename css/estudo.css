@@ -254,3 +254,93 @@ pre.code { font-size: 0.93rem; line-height: 1.7; padding: 16px 18px; background:
   /* Borda de 2px na cor principal da matéria (--primary vem de materias/index.json). Trocar por var(--border) deixa igual aos outros quadros. */
   border: 2px solid var(--primary);
 }
+
+/* ===== Aba Prova (js/prova.js) ===== */
+/* Botão "Fazer as 30 questões das provas": ocupa a linha toda e se afasta do quadro de cima. */
+.prova-todas {
+  /* Largura total: fica fácil de tocar no celular. */
+  width: 100%;
+  /* Espaço acima e abaixo. Aumentar afasta mais dos blocos vizinhos. */
+  margin: 14px 0;
+}
+/* Cartão de cada questão oficial. */
+.prova-questao {
+  /* Fundo um pouco mais claro que a página (variável dos temas de cor). */
+  background: var(--surface-2);
+  /* Borda fina, a mesma dos outros cartões. */
+  border: 1px solid var(--border);
+  /* Cantos levemente arredondados. */
+  border-radius: 10px;
+  /* Espaço interno. Aumentar deixa o cartão mais "gordo". */
+  padding: 14px 16px;
+  /* Espaço entre um cartão e o próximo. */
+  margin: 0 0 12px;
+  /* Texto alinhado à esquerda, como numa prova. */
+  text-align: left;
+}
+/* "Questão 3 · Métodos void": pequeno e na cor da matéria. */
+.prova-numero {
+  /* Cor principal da matéria. */
+  color: var(--primary);
+  /* Menor que o enunciado. */
+  font-size: 0.82rem;
+  /* Meio negrito. */
+  font-weight: 650;
+  /* Sem espaço em cima. */
+  margin: 0 0 6px;
+}
+/* Enunciado da questão. */
+.prova-enunciado {
+  /* Cor do texto principal. */
+  color: var(--text);
+  /* Espaço embaixo antes do código ou das alternativas. */
+  margin: 0 0 10px;
+  /* Linhas mais soltas para ler melhor. */
+  line-height: 1.5;
+}
+/* Alternativas A, B, C, D. */
+.prova-opcoes {
+  /* Recuo para as letras aparecerem. */
+  padding-left: 26px;
+  /* Espaço embaixo. */
+  margin: 8px 0 10px;
+  /* Cor do texto um pouco mais suave. */
+  color: var(--muted-2);
+}
+/* Cada alternativa. */
+.prova-opcoes li {
+  /* Espaço entre as alternativas. */
+  margin: 4px 0;
+  /* Quebra palavras compridas (código) em vez de vazar no celular. */
+  overflow-wrap: anywhere;
+}
+/* "Ver a resposta": parece um link para tocar. */
+.prova-resposta summary {
+  /* Mãozinha no mouse. */
+  cursor: pointer;
+  /* Cor da matéria. */
+  color: var(--primary);
+  /* Meio negrito. */
+  font-weight: 600;
+}
+/* Linha "Certa: B) ...". */
+.prova-certa {
+  /* Destaque em negrito. */
+  font-weight: 700;
+  /* Espaço em cima, depois do "Ver a resposta". */
+  margin: 8px 0 4px;
+}
+/* Explicação embaixo da certa. */
+.prova-explica {
+  /* Cor suave. */
+  color: var(--muted-2);
+  /* Linhas soltas. */
+  line-height: 1.5;
+  /* Sem espaço extra embaixo. */
+  margin: 0;
+}
+/* Botão "Treinar parecidas (N)". */
+.prova-treinar {
+  /* Espaço acima, separando da resposta. */
+  margin-top: 10px;
+}

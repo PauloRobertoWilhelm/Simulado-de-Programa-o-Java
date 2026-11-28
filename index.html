@@ -145,6 +145,8 @@
       <div class="mode-tabs" id="mode-tabs" role="tablist" aria-label="O que estudar">
         <!-- Revisão: resumo da prova. Só aparece nas matérias que têm o campo "revisao". -->
         <button type="button" class="mode-tab hidden" role="tab" data-mode="revisao" id="tab-revisao" aria-selected="false">Revisão <span class="mode-count" id="count-revisao"></span></button>
+        <!-- Prova: as questões que caíram nas provas, a prova de recuperação e as parecidas. Só aparece na matéria ligada a um arquivo de provas (js/prova.js). -->
+        <button type="button" class="mode-tab hidden" role="tab" data-mode="prova" id="tab-prova" aria-selected="false">📝 Prova <span class="mode-count" id="count-prova"></span></button>
         <!-- Livro: capítulos explicados de um jeito simples. -->
         <button type="button" class="mode-tab" role="tab" data-mode="livro" aria-selected="false">Livro <span class="mode-count" id="count-livro"></span></button>
         <!-- Perguntas: o simulado com cronômetro e nota. -->
@@ -239,6 +241,8 @@
 
       <!-- As outras partes são preenchidas por js/livro.js, js/historias.js, js/jogos.js e js/pratica.js -->
       <div id="panel-revisao" class="hidden"></div>
+      <!-- Aba Prova: preenchida por js/prova.js. -->
+      <div id="panel-prova" class="hidden"></div>
       <div id="panel-livro" class="hidden"></div>
       <div id="panel-historias" class="hidden"></div>
       <div id="panel-jogos" class="hidden"></div>
@@ -358,6 +362,8 @@
 <!-- visual.js cuida só da aparência: código colorido e painel de progresso. -->
 <script src="js/visual.js"></script>
 <script src="js/revisao.js"></script>
+<!-- Aba Prova: questões oficiais, recuperação e parecidas. -->
+<script src="js/prova.js"></script>
 <script src="js/livro.js"></script>
 <script src="js/historias.js"></script>
 <script src="js/jogos.js"></script>
@@ -555,6 +561,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedLen = 0;
   // Prova de recuperação da matéria aberta: { titulo, intro, tamanhos, temas }, ou null se a matéria não tem.
   let recuperacaoAtual = null;
+  // true quando a prova de recuperação é da própria matéria (aba Provas de Programação): o quadro aparece em Perguntas.
+  // false quando vem de um arquivo de provas ligado: o quadro fica só na aba Prova.
+  let quadroProprio = false;
+  // Aba Prova da matéria aberta: { prefixo, oficiais }, ou null se a matéria não tem questões de prova.
+  let provaAtual = null;
 
   // ===== NÍVEIS DAS PERGUNTAS =====
   // Nome de cada nível. Cada pergunta tem o campo "nivel" (1, 2 ou 3) em materias/<matéria>.json.
@@ -838,11 +849,14 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const resposta = await fetch(`materias/${materia.id}.json`);
       const conteudo = await resposta.json();
+      // Matéria ligada a um arquivo de provas (campo "prova" em materias/index.json): carrega esse arquivo também.
+      const provaLigada = materia.prova ? await (await fetch(`materias/${materia.prova}.json`)).json() : null;
 
       // Se a pessoa trocou de aba enquanto carregava, esta resposta já não vale.
       if (materiaAtual !== materia) return;
 
-      bank = conteudo.questoes;
+      // Junta as perguntas das provas (se houver) e prepara a aba Prova.
+      bank = juntarProva(materia, conteudo, provaLigada);
       // Matérias antigas podem não ter livro, termos ou práticas: "|| []" usa uma lista vazia no lugar.
       const livro = conteudo.livro || [];
       const termos = conteudo.termos || [];
@@ -878,10 +892,10 @@ document.addEventListener("DOMContentLoaded", () => {
       modoNivel = lerModoNivel();
       // O pug passa a usar as piadas desta matéria (e dá oi na primeira vez).
       if (window.Pug) window.Pug.materia(materia.id, materia.titulo);
-      // Guarda a prova de recuperação da matéria (ou null) antes de montar os temas, que usam esse valor.
-      recuperacaoAtual = conteudo.recuperacao || null;
-      // Mostra ou esconde o quadro da prova de recuperação.
+      // Mostra ou esconde o quadro da prova de recuperação (recuperacaoAtual foi preenchida por juntarProva()).
       montarRecuperacao();
+      // Mostra ou esconde a aba Prova e desenha o que ela tem.
+      montarAbaProva();
       montarTemas();
       updateProgressPanel();
       trocarModo("perguntas");
@@ -960,7 +974,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("panel-perguntas").classList.toggle("hidden", modo !== "perguntas" || semPerguntas);
     document.getElementById("perguntas-vazio").classList.toggle("hidden", !semPerguntas);
     // Os outros cinco painéis: aparece só o do modo escolhido.
-    ["revisao", "livro", "historias", "jogos", "praticar"].forEach(nome => {
+    ["revisao", "prova", "livro", "historias", "jogos", "praticar"].forEach(nome => {
       document.getElementById(`panel-${nome}`).classList.toggle("hidden", modo !== nome);
     });
   }
@@ -972,8 +986,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // questoesDoTema() devolve as perguntas de um tema, de um bimestre inteiro ou de todos.
   // Parâmetro: topic, que pode ser "all", "bim1", "bim2" ou o id de um tema.
   function questoesDoTema(topic) {
-    // "all": todas as perguntas da matéria.
-    if (topic === "all") return bank;
+    // "all": todas as perguntas da matéria. As que vieram do arquivo de provas (daProva) ficam na aba Prova.
+    if (topic === "all") return bank.filter(q => !q.daProva);
     // "erros": só as perguntas que estão na lista de erros do navegador.
     if (topic === "erros") {
       // Lê a lista de erros uma vez só.
@@ -986,7 +1000,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // "recuperacao": as perguntas dos temas da prova de recuperação (as questões oficiais ficam de fora).
     if (topic === "recuperacao") return recuperacaoAtual ? bank.filter(q => recuperacaoAtual.temas.includes(q.topic)) : [];
     // "prova": perguntas no formato das provas dos professores (afirmativas, V ou F, associação...).
-    if (topic === "prova") return bank.filter(q => q.estilo === "prova");
+    if (topic === "prova") return bank.filter(q => q.estilo === "prova" && !q.daProva);
     // "c:tema.assunto": um conteúdo só. Com "+", vários juntos ("c:rede.nat+rede.privado").
     if (topic.startsWith("c:")) {
       // Lista dos conteúdos pedidos.
@@ -1052,7 +1066,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mantém o tema atual quando pedido e válido; senão usa o padrão (se tiver perguntas) ou "Tudo misturado".
     if (!(manter && atualValido)) selectedTopic = padrao && questoesDoTema(padrao).length ? padrao : "all";
     // Só entram temas que têm pelo menos uma pergunta, para não aparecer botão vazio.
-    const temas = materiaAtual.temas.filter(tema => bank.some(q => q.topic === tema.id));
+    // Os temas do arquivo de provas (tema.prova) ficam na aba Prova, não aqui.
+    const temas = materiaAtual.temas.filter(tema => !tema.prova && bank.some(q => q.topic === tema.id));
     // O tema aberto: num conteúdo ("c:rede.ttl") é o tema de antes do ponto; senão é o próprio.
     temaAberto = selectedTopic.startsWith("c:") ? selectedTopic.slice(2).split(".")[0] : selectedTopic;
     // A matéria é separada por bimestre se algum tema tiver o campo "bimestre".
@@ -1070,7 +1085,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Matéria com gerador ganha o botão de contas que mudam a cada rodada.
     if (temContas()) itens.push(criarBotaoTema({ id: "contas", rotulo: "🎲 Contas novas (sempre diferentes)" }, marcado("contas")));
     // Matéria com prova de recuperação ganha o botão dela: com ele, os tamanhos de baixo também montam a prova com todos os conteúdos.
-    if (recuperacaoAtual) itens.push(criarBotaoTema({ id: "recuperacao", rotulo: "🎯 Prova de recuperação" }, marcado("recuperacao")));
+    if (recuperacaoAtual && quadroProprio) itens.push(criarBotaoTema({ id: "recuperacao", rotulo: "🎯 Prova de recuperação" }, marcado("recuperacao")));
 
     if (usaBimestre) {
       // O 2º bimestre vem primeiro, porque é a prova que está chegando.
@@ -1111,6 +1126,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const temas = materiaAtual.temas.filter(tema => {
       // Tema sem partes não entra.
       if (!tema.assuntos || tema.assuntos.length < 2) return false;
+      // Tema do arquivo de provas: só aparece quando ele mesmo foi aberto (por "Treinar parecidas").
+      if (tema.prova) return tema.id === temaAberto;
       // Tudo misturado: entram todos.
       if (temaAberto === "all") return true;
       // Bimestre: entram os dele.
@@ -1196,9 +1213,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Preenche o painel (js/visual.js).
     window.Visual.painel({
       // Total de perguntas da matéria.
-      total: bank.length,
-      // Quantas já apareceram pelo menos uma vez.
-      vistas: bank.filter(q => vistas[idDaPergunta(q)]).length,
+      total: questoesDoTema("all").length,
+      // Quantas já apareceram pelo menos uma vez (sem contar as da aba Prova).
+      vistas: questoesDoTema("all").filter(q => vistas[idDaPergunta(q)]).length,
       // Quantas estão na lista de erros.
       erros: questoesDoTema("erros").length,
       // Melhor porcentagem salva.
@@ -1416,8 +1433,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Caixa inteira e a grade dos botões.
     const caixa = document.getElementById("picker-recuperacao");
     const grade = document.getElementById("recuperacao-grid");
-    // Conteúdos que caem (vazio quando a matéria não tem prova de recuperação).
-    const conteudos = conteudosDaRecuperacao();
+    // Conteúdos que caem. Vazio quando a matéria não tem prova de recuperação própria (a ligada fica na aba Prova).
+    const conteudos = quadroProprio ? conteudosDaRecuperacao() : [];
     // Sem prova de recuperação: esconde e para aqui.
     caixa.classList.toggle("hidden", !conteudos.length);
     if (!conteudos.length) return;
@@ -1448,6 +1465,83 @@ document.addEventListener("DOMContentLoaded", () => {
       botao.append(numero, rotulo);
       return botao;
     }));
+  }
+
+  // juntarProva() prepara as perguntas e a aba Prova da matéria aberta.
+  // Parâmetros: materia (item de index.json), conteudo (JSON da matéria) e provaLigada (JSON de provas ligado, ou null).
+  // Devolve o banco de perguntas. Efeito: preenche provaAtual, recuperacaoAtual e quadroProprio.
+  function juntarProva(materia, conteudo, provaLigada) {
+    // Sem arquivo ligado: a matéria pode ter a própria prova (caso da aba Provas de Programação).
+    if (!provaLigada) {
+      // Quadro em Perguntas só quando a matéria tem o campo "recuperacao".
+      quadroProprio = Boolean(conteudo.recuperacao);
+      recuperacaoAtual = conteudo.recuperacao || null;
+      // Questões oficiais: as que têm origem e o conteúdo das parecidas.
+      const oficiais = conteudo.questoes.filter(q => q.origem && q.parecidas);
+      provaAtual = oficiais.length ? { prefixo: "", oficiais } : null;
+      // O banco é o da própria matéria.
+      return conteudo.questoes;
+    }
+    // "prova-" na frente dos temas da prova: metodos, classes e matrizes já existem em Programação.
+    const prefixo = "prova-";
+    // Temas da prova, do item do arquivo de provas em index.json (com o id trocado e a marca prova).
+    const entrada = materias.find(m => m.id === materia.prova);
+    const temasProva = (entrada ? entrada.temas : []).map(tema => ({ ...tema, id: prefixo + tema.id, prova: true }));
+    // A matéria aberta passa a conhecer esses temas. Cópia: o item original de index.json não muda.
+    materiaAtual = { ...materia, temas: materia.temas.concat(temasProva) };
+    // Perguntas da prova com o tema trocado e a marca daProva (ficam fora do "Tudo misturado").
+    const daProva = provaLigada.questoes.map(q => ({ ...q, topic: prefixo + q.topic, daProva: true }));
+    // Prova de recuperação com os temas trocados; o quadro fica só na aba Prova.
+    recuperacaoAtual = provaLigada.recuperacao ? { ...provaLigada.recuperacao, temas: provaLigada.recuperacao.temas.map(id => prefixo + id) } : null;
+    quadroProprio = false;
+    // Questões oficiais para a aba Prova.
+    provaAtual = { prefixo, oficiais: daProva.filter(q => q.origem && q.parecidas) };
+    // Banco = perguntas da matéria + perguntas da prova.
+    return conteudo.questoes.concat(daProva);
+  }
+
+  // montarAbaProva() mostra ou esconde a aba Prova e manda js/prova.js desenhar.
+  function montarAbaProva() {
+    // A matéria tem questões de prova?
+    const tem = Boolean(provaAtual && provaAtual.oficiais.length);
+    // Liga ou desliga o botão da aba.
+    document.getElementById("tab-prova").classList.toggle("hidden", !tem);
+    // Número ao lado do nome: quantas questões oficiais.
+    document.getElementById("count-prova").textContent = tem ? provaAtual.oficiais.length : "";
+    // Desenha (null limpa o painel).
+    window.Prova.montar(document.getElementById("panel-prova"), tem ? {
+      oficiais: provaAtual.oficiais,
+      prefixo: provaAtual.prefixo,
+      recuperacao: recuperacaoAtual,
+      // Quantas perguntas existem num tema ou conteúdo.
+      quantasDe: (topic) => questoesDoTema(topic).length,
+      // Nome do conteúdo, como "Métodos void".
+      rotuloDe: (topic) => rotuloDoConteudo(topic),
+      // Abre uma rodada de um tema ou conteúdo.
+      treinar: (topic, quantas) => treinarTema(topic, quantas),
+      // Abre a prova de recuperação.
+      recuperar: (quantas) => treinarRecuperacao(quantas)
+    } : null);
+  }
+
+  // treinarTema() começa uma rodada de um tema ou conteúdo, a partir da aba Prova.
+  // Parâmetros: topic (como "c:prova-basico.if" ou "prova-oficiais") e quantas perguntas, no máximo.
+  function treinarTema(topic, quantas) {
+    // Sorteia, preferindo as menos vistas.
+    const perguntas = buildFilteredQuestions(topic, quantas);
+    // Nada sorteado: avisa.
+    if (!perguntas.length) {
+      alert("Nenhuma questão encontrada para este conteúdo.");
+      return;
+    }
+    // Marca o que foi treinado, para o resultado mostrar o nome certo.
+    selectedTopic = topic;
+    montarTemas(true);
+    // Guarda para "Repetir mesma prova".
+    lastQuizConfig = { topic, length: perguntas.length };
+    lastQuizQuestions = perguntas.slice();
+    // Começa.
+    startQuizWithQuestions(perguntas);
   }
 
   // Toque num tamanho da prova de recuperação: começa a prova na hora.

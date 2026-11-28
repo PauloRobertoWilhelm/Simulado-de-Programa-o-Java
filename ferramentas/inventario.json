@@ -330,6 +330,7 @@
     "count-livro",
     "count-perguntas",
     "count-praticar",
+    "count-prova",
     "count-revisao",
     "css-claro",
     "css-futuro",
@@ -359,6 +360,7 @@
     "panel-livro",
     "panel-perguntas",
     "panel-praticar",
+    "panel-prova",
     "panel-revisao",
     "performance-message",
     "perguntas-vazio",
@@ -394,6 +396,7 @@
     "subject-badge",
     "subject-tabs",
     "subject-title",
+    "tab-prova",
     "tab-revisao",
     "theme-progress",
     "timer-display",
@@ -425,6 +428,7 @@
     "js/jogos.js",
     "js/livro.js",
     "js/pratica.js",
+    "js/prova.js",
     "js/pug.js",
     "js/revisao.js",
     "js/temas.js",
@@ -445,6 +449,6 @@
     "materias/requisitos.json",
     "materias/testing.json"
   ],
-  "material": 112,
+  "material": 113,
   "materialVazio": 0
 }

@@ -14,7 +14,8 @@
       "explain": "<b>Quem recebe fica à esquerda do =.</b> Primeiro cria a caixa (int resultado) e depois guarda nela o que o método devolveu. O método devolve int, então a caixa é int. \"multiplicar(5, 3) = resultado;\" está invertido, e \"multiplicar(5, 3);\" calcula mas joga o resultado fora.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "metodos.retorno"
     },
     {
       "topic": "oficiais",
@@ -30,7 +31,8 @@
       "explain": "<b>O índice começa em 0:</b> valores[0] é 2 e valores[2] é 6. 2 + 6 = 8, que vai para valores[1].",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "vetores.posicoes"
     },
     {
       "topic": "oficiais",
@@ -45,7 +47,8 @@
       "explain": "<b>Classe = fôrma de bolo; objeto = o bolo.</b> A classe define atributos e métodos; o objeto é criado a partir dela (com new). Por isso o objeto é a instância, e não o contrário.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "classes.objetos"
     },
     {
       "topic": "oficiais",
@@ -61,7 +64,8 @@
       "explain": "<b>void = não devolve nada.</b> Dentro do método, numero começa em 5 e vira 5 × 2 = 10. Esse 10 fica só lá dentro: é a variável do método, não a que foi passada. Colocar \"return valor\" num método void dá erro.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "metodos.void"
     },
     {
       "topic": "oficiais",
@@ -77,7 +81,8 @@
       "explain": "<b>O if só deixa passar os pares:</b> i vale 1, 2, 3, 4, 5; os pares são 2 e 4. 2 + 4 = 6.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "lacos.for"
     },
     {
       "topic": "oficiais",
@@ -93,7 +98,8 @@
       "explain": "<b>i == j é a diagonal principal:</b> m[0][0] = 2, m[1][1] = 4 e m[2][2] = 9. 2 + 4 + 9 = 15.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "matrizes.diagonal"
     },
     {
       "topic": "oficiais",
@@ -109,7 +115,8 @@
       "explain": "<b>do-while faz primeiro e pergunta depois.</b> Imprime o 10, n vira 11 e só então testa 11 < 5: falso. Para. Rodou uma vez.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "lacos.dowhile"
     },
     {
       "topic": "oficiais",
@@ -124,7 +131,8 @@
       "explain": "<b>Dois pares de colchetes = duas dimensões</b> (linhas e colunas): int[][] dos dois lados. Java não usa vírgula dentro dos colchetes.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "matrizes.declarar"
     },
     {
       "topic": "oficiais",
@@ -139,7 +147,8 @@
       "explain": "<b>Objeto nasce com new e parênteses:</b> Tipo nome = new Tipo();.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "classes.objetos"
     },
     {
       "topic": "oficiais",
@@ -155,7 +164,8 @@
       "explain": "<b>x começa com o primeiro (7)</b> e é trocado sempre que aparece um valor MAIOR (por causa do >). Ao final x = 9, o maior.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "vetores.posicoes"
     },
     {
       "topic": "oficiais",
@@ -170,7 +180,8 @@
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Sem os [] depois do tipo, a variável não é vetor.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "vetores.declarar"
     },
     {
       "topic": "oficiais",
@@ -186,7 +197,8 @@
       "explain": "<b>Soma 2 a cada volta:</b> 1, 3, 5. Depois x vira 7 e 7 < 6 é falso.",
       "origem": "2ª prova oficial (27/11/2026)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "lacos.while"
     },
     {
       "topic": "oficiais",
@@ -202,7 +214,8 @@
       "explain": "<b>Negativo = menor que zero:</b> n < 0. \"n != 0\" também aceitaria positivos, e o \"Zero\" do else nunca seria o caminho certo.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.if"
     },
     {
       "topic": "oficiais",
@@ -217,7 +230,8 @@
       "explain": "<b>Algoritmo bom</b> termina (finito), é preciso e funciona para as entradas previstas. Não pode depender de quem executa.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.algoritmo"
     },
     {
       "topic": "oficiais",
@@ -233,7 +247,8 @@
       "explain": "<b>Siga os ifs:</b> 10 > 20 é falso, vai para o else; 20 > 15 é verdadeiro: \"b é o maior\".",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.if"
     },
     {
       "topic": "oficiais",
@@ -249,7 +264,8 @@
       "explain": "<b>int = número inteiro.</b> 8.5 tem casas decimais, então precisa de double.",
       "origem": "1ª prova oficial (era dissertativa; virou alternativa)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.tipos"
     },
     {
       "topic": "oficiais",
@@ -265,7 +281,8 @@
       "explain": "<b>close() fecha e libera recursos.</b> É boa prática, mas o programa roda sem ele. Depois de fechado, não dá para ler de novo.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.scanner"
     },
     {
       "topic": "oficiais",
@@ -280,7 +297,8 @@
       "explain": "<b>Aspas simples são só para UM caractere (char), como 'A'.</b> Texto (String) usa aspas duplas: \"João\".",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.tipos"
     },
     {
       "topic": "oficiais",
@@ -295,7 +313,8 @@
       "explain": "<b>Descrição narrativa é em português, como uma receita.</b> Código Java ou desenho de caixas e setas (fluxograma) são outras formas.",
       "origem": "1ª prova oficial (era dissertativa; virou alternativa)",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.narrativa"
     },
     {
       "topic": "oficiais",
@@ -311,7 +330,8 @@
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor.</b> Primeiro \"idade\" (o texto) e depois 20 (o que está na variável).",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.aspas"
     },
     {
       "topic": "oficiais",
@@ -327,7 +347,8 @@
       "explain": "<b>String com S maiúsculo e texto entre aspas duplas.</b>",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.tipos"
     },
     {
       "topic": "oficiais",
@@ -343,7 +364,8 @@
       "explain": "<b>Conte os erros um por um:</b> faltam \"=\" (Scanner, leitura e soma), faltam os () em nextInt, \"numerol\" (com L) não é \"numero1\" (com 1), e o último println não fecha as aspas nem o parêntese. Só a primeira alternativa corrige tudo.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.sintaxe"
     },
     {
       "topic": "oficiais",
@@ -360,7 +382,8 @@
       "explain": "<b>Uma linha de cada vez:</b> 4 + 5 = 9; 9 × 2 = 18; 18 − 3 = 15.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.operadores"
     },
     {
       "topic": "oficiais",
@@ -376,7 +399,8 @@
       "explain": "<b>% é o RESTO da divisão</b>, e o resultado é um número, não true/false. 15 ÷ 3 = 5, resto 0.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.operadores"
     },
     {
       "topic": "oficiais",
@@ -393,7 +417,8 @@
       "explain": "<b>Use o nome do objeto que foi criado (ler) e o método do tipo:</b> decimal = nextDouble().",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.scanner"
     },
     {
       "topic": "oficiais",
@@ -409,7 +434,8 @@
       "explain": "<b>Cada número é a soma dos dois anteriores:</b> 13 + 21 = 34.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.sequencias"
     },
     {
       "topic": "oficiais",
@@ -425,7 +451,8 @@
       "explain": "<b>boolean guarda só true ou false.</b>",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.tipos"
     },
     {
       "topic": "oficiais",
@@ -440,7 +467,8 @@
       "explain": "<b>Algoritmo é como uma receita:</b> passos claros, em ordem, que terminam. Não precisa ser código: pode ser em português.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.algoritmo"
     },
     {
       "topic": "oficiais",
@@ -456,7 +484,8 @@
       "explain": "<b>switch aceita char.</b> letra é 'B', então entra no case 'B' e o break para ali.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.switch"
     },
     {
       "topic": "oficiais",
@@ -471,7 +500,8 @@
       "explain": "<b>Sobe de 2 em 2:</b> 8 + 2 = 10.",
       "origem": "1ª prova oficial",
       "estilo": "prova",
-      "nivel": 3
+      "nivel": 3,
+      "parecidas": "basico.sequencias"
     },
     {
       "topic": "metodos",

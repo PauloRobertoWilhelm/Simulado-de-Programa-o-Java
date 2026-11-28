@@ -8,7 +8,6 @@
       "#e9a15e",
       "#f4cfa6"
     ],
-    "prova1": "Todas as questões certas",
     "foco": {
       "confianca": "Média",
       "base": "Atividades de Figma e Style Guide. A parte de avaliação e acessibilidade é suposição, vinda do que costuma seguir esse conteúdo.",
@@ -122,7 +121,6 @@
       "#8d9cf5",
       "#c6cdfa"
     ],
-    "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
       "base": "PDFs das Aulas 8 a 16 do Prof. Lucas e o resumo da prova, enviados em 20/11 e 25/11/2026. Os códigos das perguntas foram compilados e executados no Java para conferir o gabarito.",
@@ -593,7 +591,6 @@
       "#e3b956",
       "#f1db9c"
     ],
-    "prova1": "35 de 60 pontos",
     "foco": {
       "confianca": "Alta",
       "base": "O professor disse que a prova do 2º bimestre é só sobre os slides 05 (Casos de Uso) e 06 (Técnicas de Validação e Gerenciamento). Todas as perguntas do 2º bimestre vêm desses dois PDFs. O resumão de 24/11 entrou como revisão, com as figuras dos slides.",
@@ -723,7 +720,6 @@
       "#5ea6f0",
       "#acd0f7"
     ],
-    "prova1": "30 de 70 pontos",
     "foco": {
       "confianca": "Alta",
       "base": "O próprio professor diz que o Trabalho do 2º bimestre é a lista de revisão da prova. Ele cobre as Aulas 06, 07 e 08. Os grupos de status HTTP (1xx a 5xx) foram destacados pelo Paulo em 25/11/2026.",
@@ -958,7 +954,6 @@
       "#55c99a",
       "#a6e3c9"
     ],
-    "prova1": "24 de 50 pontos",
     "foco": {
       "confianca": "Baixa",
       "base": "Nenhum material do 2º bimestre desta matéria chegou. Usei o nome da matéria e o programa da certificação ISTQB CTFL.",

@@ -115,6 +115,7 @@ Perguntas por tema:
 | 20/11/2026 | (nada saiu) Entraram a aba Pensamento Computacional e 12 perguntas de Java, vindas da Plataforma de Estudos ADS | `materias/pensamento.json` e `materias/programacao.json` |
 | 26/11/2026 | (nada saiu) Entraram 145 perguntas (códigos HTTP, "o que significa" de Requisitos e o estilo da prova), o nível de cada pergunta, 5 visuais trocáveis, o pug e as animações | `materias/*.json`, `css/`, `js/`, `img/pug/` |
 | 27/11/2026 | (nada saiu) Entrou a aba Provas de Programação, com 278 perguntas e 1 capítulo | `materias/provasprog.json` |
+| 27/11/2026 | As notas da 1ª prova (campo `prova1` de 5 matérias), que apareciam na caixa "O que estudar", porque o repositório é público | A pedido do Paulo ("tira nota"). Guardadas em `material/notas-das-provas.md`, fora do GitHub |
 | 27/11/2026 | (nada saiu) Entraram a prova de recuperação (20, 30, 50 e 100) e 61 variações em Provas de Programação; as 248 variações antigas só ganharam o conteúdo (`assunto`) | `materias/provasprog.json`, `materias/index.json`, `index.html` |
 | 25/11/2026 | (nada saiu) Entraram 1.589 perguntas (variações) em seis matérias | `materias/*.json` |
 | 25/11/2026 | (nada saiu) Entraram 5 abas do 1º período e o visual futurista | `materias/*.json`, `css/futuro.css` |

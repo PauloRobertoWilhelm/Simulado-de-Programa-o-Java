@@ -247,3 +247,10 @@ pre.code { font-size: 0.93rem; line-height: 1.7; padding: 16px 18px; background:
 /* Endereços compridos (URL, IPv6) quebram de linha em vez de alargar a tela do celular. */
 .rev-miolo { grid-template-columns: minmax(0, 1fr); }
 .rev-miolo, .rev-secao summary { overflow-wrap: anywhere; }
+
+/* Quadro da prova de recuperação (index.html, #picker-recuperacao), que só aparece na matéria com o campo "recuperacao".
+   Duas classes juntas (.picker.picker-recuperacao) vencem a regra .picker dos visuais (ouro, futuro), em qualquer ordem de arquivo. */
+.picker.picker-recuperacao {
+  /* Borda de 2px na cor principal da matéria (--primary vem de materias/index.json). Trocar por var(--border) deixa igual aos outros quadros. */
+  border: 2px solid var(--primary);
+}

@@ -168,6 +168,22 @@
         </div>
 
         <!--
+          BLOCO: prova de recuperação
+          - só aparece na matéria que tem o campo "recuperacao" em materias/<matéria>.json (hoje: Provas de Programação);
+          - #recuperacao-grid recebe um botão para cada tamanho (20, 30, 50 e 100), criados por montarRecuperacao();
+          - o botão usa a classe "len", a mesma dos tamanhos de rodada, para ter o mesmo visual em todos os temas;
+          - tocar num botão começa na hora uma prova com pelo menos uma pergunta de cada conteúdo.
+        -->
+        <div class="picker picker-recuperacao hidden" id="picker-recuperacao">
+          <!-- Título, escrito por montarRecuperacao() a partir do JSON. -->
+          <h3 id="recuperacao-titulo"></h3>
+          <!-- Explicação curta do que cai na prova. -->
+          <p class="picker-dica" id="recuperacao-intro"></p>
+          <!-- Um botão por tamanho de prova. -->
+          <div class="len-grid" id="recuperacao-grid"></div>
+        </div>
+
+        <!--
           BLOCO: seletor de tema
           - #topic-grid recebe um botão .tpick para cada tema da matéria aberta;
           - data-topic guarda o tema, usado pelo JavaScript para filtrar as questões;
@@ -537,6 +553,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tema aberto na tela. selectedTopic pode ser um conteúdo dentro dele, como "c:rede.ttl".
   let temaAberto = "all";
   let selectedLen = 0;
+  // Prova de recuperação da matéria aberta: { titulo, intro, tamanhos, temas }, ou null se a matéria não tem.
+  let recuperacaoAtual = null;
 
   // ===== NÍVEIS DAS PERGUNTAS =====
   // Nome de cada nível. Cada pergunta tem o campo "nivel" (1, 2 ou 3) em materias/<matéria>.json.
@@ -597,8 +615,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Grade dos botões e a explicação embaixo do título.
     const grade = document.getElementById("nivel-grid");
     const dica = document.getElementById("nivel-dica");
-    // Contas sorteadas não têm nível: os botões ficam desligados.
-    const semNivel = selectedTopic === "contas";
+    // Contas sorteadas e a prova de recuperação não usam o nível: os botões ficam desligados.
+    const semNivel = selectedTopic === "contas" || selectedTopic === "recuperacao";
     // Perguntas do que foi escolhido.
     const perguntas = semNivel ? [] : questoesDoTema(selectedTopic);
     // Conta quantas há de cada nível.
@@ -634,7 +652,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return botao;
     }));
     // Explicação do que vai acontecer com a escolha atual.
-    if (semNivel) dica.textContent = "Contas sorteadas não têm nível: os números mudam a cada rodada.";
+    // A prova de recuperação mistura os três níveis, como a prova de verdade.
+    if (selectedTopic === "recuperacao") dica.textContent = "A prova de recuperação mistura Fácil, Médio e Difícil, como a prova de verdade.";
+    else if (semNivel) dica.textContent = "Contas sorteadas não têm nível: os números mudam a cada rodada.";
     else if (modoNivel === "auto") dica.textContent = "Começa no nível em que você parou (na primeira vez, Fácil). 3 acertos seguidos sobem um nível; 2 erros seguidos descem.";
     else dica.textContent = `Só perguntas do nível ${NOMES_NIVEL[modoNivel]}. Se faltar, completa com o nível mais próximo.`;
   }
@@ -858,6 +878,10 @@ document.addEventListener("DOMContentLoaded", () => {
       modoNivel = lerModoNivel();
       // O pug passa a usar as piadas desta matéria (e dá oi na primeira vez).
       if (window.Pug) window.Pug.materia(materia.id, materia.titulo);
+      // Guarda a prova de recuperação da matéria (ou null) antes de montar os temas, que usam esse valor.
+      recuperacaoAtual = conteudo.recuperacao || null;
+      // Mostra ou esconde o quadro da prova de recuperação.
+      montarRecuperacao();
       montarTemas();
       updateProgressPanel();
       trocarModo("perguntas");
@@ -959,6 +983,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // "contas": perguntas sorteadas na hora; aqui não há lista fixa.
     if (topic === "contas") return [];
+    // "recuperacao": as perguntas dos temas da prova de recuperação (as questões oficiais ficam de fora).
+    if (topic === "recuperacao") return recuperacaoAtual ? bank.filter(q => recuperacaoAtual.temas.includes(q.topic)) : [];
     // "prova": perguntas no formato das provas dos professores (afirmativas, V ou F, associação...).
     if (topic === "prova") return bank.filter(q => q.estilo === "prova");
     // "c:tema.assunto": um conteúdo só. Com "+", vários juntos ("c:rede.nat+rede.privado").
@@ -1043,6 +1069,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (questoesDoTema("prova").length) itens.push(criarBotaoTema({ id: "prova", rotulo: "📝 Estilo da prova" }, marcado("prova")));
     // Matéria com gerador ganha o botão de contas que mudam a cada rodada.
     if (temContas()) itens.push(criarBotaoTema({ id: "contas", rotulo: "🎲 Contas novas (sempre diferentes)" }, marcado("contas")));
+    // Matéria com prova de recuperação ganha o botão dela: com ele, os tamanhos de baixo também montam a prova com todos os conteúdos.
+    if (recuperacaoAtual) itens.push(criarBotaoTema({ id: "recuperacao", rotulo: "🎯 Prova de recuperação" }, marcado("recuperacao")));
 
     if (usaBimestre) {
       // O 2º bimestre vem primeiro, porque é a prova que está chegando.
@@ -1189,7 +1217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Nome do que vai ser treinado: o conteúdo, quando escolhido; senão, o tema.
     const nome = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : (marcado ? marcado.textContent : "Tudo misturado");
     // Nível: no Automático, de onde começa; no fixo, o nome. Contas sorteadas não têm nível.
-    const nivel = selectedTopic === "contas" ? "" : modoNivel === "auto" ? ` · 🤖 começa no ${NOMES_NIVEL[lerNivelSalvo()]}` : ` · ${NOMES_NIVEL[modoNivel]}`;
+    const nivel = selectedTopic === "contas" || selectedTopic === "recuperacao" ? "" : modoNivel === "auto" ? ` · 🤖 começa no ${NOMES_NIVEL[lerNivelSalvo()]}` : ` · ${NOMES_NIVEL[modoNivel]}`;
     // Junta a quantidade, o nome e o nível na caixa do resumo.
     document.getElementById("resumo-rodada").replaceChildren(numero, ` · ${nome}${nivel}`);
   }
@@ -1313,6 +1341,124 @@ document.addEventListener("DOMContentLoaded", () => {
     // Começa.
     startQuizWithQuestions(perguntas);
   }
+
+  // ===== PROVA DE RECUPERAÇÃO =====
+  // conteudosDaRecuperacao() lista os conteúdos que caem na prova, no formato "c:tema.assunto".
+  // Vem dos temas de materias/index.json cujo id está em recuperacao.temas; só entram conteúdos com pergunta.
+  function conteudosDaRecuperacao() {
+    // Sem prova de recuperação nesta matéria: lista vazia.
+    if (!recuperacaoAtual) return [];
+    // Os temas da prova, na ordem de materias/index.json.
+    return materiaAtual.temas.filter(tema => recuperacaoAtual.temas.includes(tema.id))
+      // Cada tema vira a lista dos conteúdos dele (tema sem conteúdos não entra).
+      .flatMap(tema => (tema.assuntos || []).map(assunto => `c:${tema.id}.${assunto.id}`))
+      // Tira conteúdo sem nenhuma pergunta, para não sobrar vaga vazia.
+      .filter(id => questoesDoTema(id).length > 0);
+  }
+
+  // montarProvaRecuperacao() sorteia as perguntas de uma prova de recuperação.
+  // Parâmetro: quantas (20, 30, 50 ou 100). Devolve a lista pronta, com a letra certa sorteada.
+  // Regra: cada conteúdo ganha a mesma cota (100 ÷ 20 = 5 de cada); o que sobrar da divisão vai
+  // primeiro para os conteúdos em que você mais errou aqui no app (empate é sorteado).
+  function montarProvaRecuperacao(quantas) {
+    // Conteúdos da prova.
+    const conteudos = conteudosDaRecuperacao();
+    // Nenhum conteúdo: nada a sortear.
+    if (!conteudos.length) return [];
+    // Lista de erros guardada no navegador (RG da pergunta → vezes que errou).
+    const erros = lerMapa("erros");
+    // errosDe() conta quantas perguntas daquele conteúdo estão na lista de erros.
+    const errosDe = (id) => questoesDoTema(id).filter(q => erros[idDaPergunta(q)]).length;
+    // Embaralha e põe na frente quem tem mais erros; o sort mantém o sorteio nos empates.
+    const ordem = shuffleArray(conteudos).sort((a, b) => errosDe(b) - errosDe(a));
+    // Cota de cada conteúdo (parte inteira da divisão) e quantas vagas sobram.
+    const cota = Math.floor(quantas / ordem.length);
+    const sobra = quantas % ordem.length;
+    // Map pelo RG: a mesma pergunta nunca entra duas vezes.
+    const escolhidas = new Map();
+    ordem.forEach((id, posicao) => {
+      // Os primeiros da fila (mais erros) levam uma pergunta a mais, até acabar a sobra.
+      const vagas = cota + (posicao < sobra ? 1 : 0);
+      // buildFilteredQuestions() já prefere as perguntas que você viu menos vezes.
+      buildFilteredQuestions(id, vagas).forEach(q => escolhidas.set(idDaPergunta(q), q));
+    });
+    // Conteúdo com poucas perguntas deixou vaga: completa com outras da prova.
+    if (escolhidas.size < quantas) {
+      buildFilteredQuestions("recuperacao", quantas * 2).forEach(q => { if (escolhidas.size < quantas) escolhidas.set(idDaPergunta(q), q); });
+    }
+    // Embaralha a ordem da prova, corta no total pedido e sorteia de novo a letra certa (nunca igual à anterior).
+    return sortearPosicoes(shuffleArray([...escolhidas.values()]).slice(0, quantas));
+  }
+
+  // treinarRecuperacao() começa a prova de recuperação.
+  // Parâmetro: quantas perguntas. Efeito: marca o tema "recuperacao" e abre a tela da prova.
+  function treinarRecuperacao(quantas) {
+    // Sorteia a prova.
+    const perguntas = montarProvaRecuperacao(quantas);
+    // Nada sorteado: avisa e não abre a prova.
+    if (!perguntas.length) {
+      alert("Nenhuma questão encontrada para a prova de recuperação.");
+      return;
+    }
+    // Marca o tema, para o resultado mostrar "Prova de recuperação".
+    selectedTopic = "recuperacao";
+    montarTemas(true);
+    // Guarda a prova para o botão "Repetir mesma prova".
+    lastQuizConfig = { topic: selectedTopic, length: perguntas.length };
+    lastQuizQuestions = perguntas.slice();
+    // Começa.
+    startQuizWithQuestions(perguntas);
+  }
+
+  // montarRecuperacao() mostra o quadro da prova de recuperação, com um botão por tamanho.
+  // Matéria sem o campo "recuperacao": o quadro fica escondido.
+  function montarRecuperacao() {
+    // Caixa inteira e a grade dos botões.
+    const caixa = document.getElementById("picker-recuperacao");
+    const grade = document.getElementById("recuperacao-grid");
+    // Conteúdos que caem (vazio quando a matéria não tem prova de recuperação).
+    const conteudos = conteudosDaRecuperacao();
+    // Sem prova de recuperação: esconde e para aqui.
+    caixa.classList.toggle("hidden", !conteudos.length);
+    if (!conteudos.length) return;
+    // Título e explicação vêm do JSON; textContent impede que o texto vire código.
+    document.getElementById("recuperacao-titulo").textContent = recuperacaoAtual.titulo;
+    document.getElementById("recuperacao-intro").textContent = `${recuperacaoAtual.intro} São ${conteudos.length} conteúdos.`;
+    // Um botão para cada tamanho.
+    grade.replaceChildren(...recuperacaoAtual.tamanhos.map(quantas => {
+      // Botão comum, com o mesmo visual dos tamanhos de rodada (classe "len").
+      const botao = document.createElement("button");
+      botao.type = "button";
+      botao.className = "len";
+      // data-quantas (e não data-len): o botão "Repetir mesma prova" mexe só nos botões com data-len.
+      botao.dataset.quantas = quantas;
+      // Número grande.
+      const numero = document.createElement("span");
+      numero.className = "n";
+      numero.textContent = quantas;
+      // Linha de baixo: quantas de cada conteúdo e quantas extras.
+      const rotulo = document.createElement("span");
+      rotulo.className = "l";
+      // Parte inteira da divisão: 30 ÷ 20 dá 1 de cada (no mínimo 1, se houver mais conteúdos que perguntas).
+      const deCada = Math.max(1, Math.floor(quantas / conteudos.length));
+      // O que sobra (30 - 20 = 10) vai para os conteúdos em que você mais errou.
+      const extras = Math.max(0, quantas - deCada * conteudos.length);
+      // Exemplo: "1 de cada +10"; sem sobra, só "5 de cada".
+      rotulo.textContent = `${deCada} de cada${extras ? ` +${extras}` : ""}`;
+      botao.append(numero, rotulo);
+      return botao;
+    }));
+  }
+
+  // Toque num tamanho da prova de recuperação: começa a prova na hora.
+  document.getElementById("recuperacao-grid").addEventListener("click", (e) => {
+    // Acha o botão tocado (o toque pode cair no número ou no rótulo).
+    const botao = e.target.closest(".len");
+    // Tocou no vão entre botões: não faz nada.
+    if (!botao) return;
+    // Começa com o tamanho do botão.
+    treinarRecuperacao(Number(botao.dataset.quantas));
+  });
 
   // mostrarAbas() esconde as abas durante a prova, para ninguém trocar de matéria sem querer.
   function mostrarAbas(visivel) {
@@ -1542,6 +1688,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   btnStart.addEventListener("click", () => {
+    // Tema "Prova de recuperação": monta a prova com todos os conteúdos, no tamanho escolhido.
+    if (selectedTopic === "recuperacao") {
+      treinarRecuperacao(selectedLen);
+      return;
+    }
     // Modo Automático (menos nas contas sorteadas): cada pergunta é escolhida na hora, pelo nível atual.
     if (modoNivel === "auto" && selectedTopic !== "contas") {
       // Todas as perguntas do que foi escolhido podem sair.
@@ -1972,7 +2123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const temaAtual = materiaAtual.temas.find(tema => tema.id === selectedTopic);
     // Nomes das escolhas que não são um tema só.
-    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas", prova: "Estilo da prova" };
+    const rotulosEspeciais = { all: "Tudo misturado", bim1: "Tudo do 1º bimestre", bim2: "Tudo do 2º bimestre", erros: "Só as que errei", contas: "Contas novas", prova: "Estilo da prova", recuperacao: "Prova de recuperação" };
     // Mostra o nome do tema, ou o nome especial, no painel de progresso.
     document.getElementById("current-theme-label").textContent = selectedTopic.startsWith("c:") ? rotuloDoConteudo(selectedTopic) : temaAtual ? temaAtual.rotulo : (rotulosEspeciais[selectedTopic] || "Tudo misturado");
 

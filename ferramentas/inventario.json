@@ -67,7 +67,7 @@
     },
     "provasprog": {
       "aba": "Provas de Programação",
-      "perguntas": 278,
+      "perguntas": 339,
       "guardadas": 0,
       "revisao": 0,
       "livro": 1,
@@ -91,7 +91,7 @@
         "vetores": 32,
         "matrizes": 23,
         "classes": 21,
-        "basico": 80
+        "basico": 141
       }
     },
     "requisitos": {
@@ -364,12 +364,16 @@
     "perguntas-vazio",
     "picker-conteudo",
     "picker-nivel",
+    "picker-recuperacao",
     "progress-level",
     "progress-panel",
     "pug-resultado",
     "q-card",
     "q-now",
     "q-total",
+    "recuperacao-grid",
+    "recuperacao-intro",
+    "recuperacao-titulo",
     "res-acertos",
     "res-erros",
     "res-frac",

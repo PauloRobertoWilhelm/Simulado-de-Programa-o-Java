@@ -485,7 +485,8 @@
       ],
       "correct": 2,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 16 e vira 26, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "lacos",
@@ -499,7 +500,8 @@
       ],
       "correct": 1,
       "explain": "<b>O if só deixa passar os pares:</b> 6 + 8 + 10 + 12 + 14 = 50.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "vetores",
@@ -513,7 +515,8 @@
       ],
       "correct": 3,
       "explain": "<b>x começa com v[0] = 28</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 32.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "matrizes",
@@ -527,7 +530,8 @@
       ],
       "correct": 0,
       "explain": "<b>i == j é a diagonal principal:</b> 7 + 14 + 5 = 26.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "diagonal"
     },
     {
       "topic": "classes",
@@ -540,7 +544,8 @@
       ],
       "correct": 0,
       "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> meuCarro é uma instância da classe Carro.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "vetores",
@@ -554,7 +559,8 @@
       ],
       "correct": 3,
       "explain": "<b>x começa com v[0] = 19</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 11.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "metodos",
@@ -568,7 +574,8 @@
       ],
       "correct": 3,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 3;\" roda: numero sai de 9 e vira 27, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "basico",
@@ -582,7 +589,8 @@
       ],
       "correct": 1,
       "explain": "<b>Igual a 55 se escreve saldo == 55.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -596,7 +604,8 @@
       ],
       "correct": 0,
       "explain": "<b>Uma linha de cada vez:</b> 6 + 6 = 12; × 2 = 24; − 3 = 21.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "matrizes",
@@ -610,7 +619,8 @@
       ],
       "correct": 2,
       "explain": "<b>i == j é a diagonal principal:</b> 10 + 13 + 17 = 40.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "diagonal"
     },
     {
       "topic": "matrizes",
@@ -624,7 +634,8 @@
       ],
       "correct": 2,
       "explain": "<b>i == j é a diagonal principal:</b> 6 + 20 + 18 = 44.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -638,7 +649,8 @@
       ],
       "correct": 0,
       "explain": "<b>Uma linha de cada vez:</b> 18 + 7 = 25; × 2 = 50; − 9 = 41.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "vetores",
@@ -652,7 +664,8 @@
       ],
       "correct": 0,
       "explain": "<b>x começa com v[0] = 1</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 36.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -665,7 +678,8 @@
       ],
       "correct": 2,
       "explain": "<b>Cada número é a soma dos dois anteriores:</b> 14 + 23 = 37.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "metodos",
@@ -679,7 +693,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double total = media(9, 6);. \"media(9, 6);\" sozinho calcula e joga fora; int não combina com double.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -693,7 +708,8 @@
       ],
       "correct": 3,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 9 e vira 18, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "classes",
@@ -706,7 +722,8 @@
       ],
       "correct": 0,
       "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> Classe = fôrma de bolo; objeto = o bolo feito com ela.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -720,7 +737,8 @@
       ],
       "correct": 1,
       "explain": "<b>Igual a 61 se escreve valor == 61.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -734,7 +752,8 @@
       ],
       "correct": 3,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (77).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "vetores",
@@ -748,7 +767,8 @@
       ],
       "correct": 1,
       "explain": "<b>O índice começa em 0:</b> valores[4] = 5 e valores[2] = 4. 5 + 4 = 9, que vai para valores[5].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "vetores",
@@ -762,7 +782,8 @@
       ],
       "correct": 3,
       "explain": "<b>O índice começa em 0:</b> valores[3] = 1 e valores[1] = 23. 1 + 23 = 24, que vai para valores[3].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "vetores",
@@ -776,7 +797,8 @@
       ],
       "correct": 3,
       "explain": "<b>O índice começa em 0:</b> valores[0] = 3 e valores[4] = 28. 3 + 28 = 31, que vai para valores[2].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "matrizes",
@@ -790,7 +812,8 @@
       ],
       "correct": 0,
       "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 2 + 4 + 14 = 20.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -803,7 +826,8 @@
       ],
       "correct": 0,
       "explain": "<b>Sobe de 5 em 5:</b> 25 + 5 = 30.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "vetores",
@@ -817,7 +841,8 @@
       ],
       "correct": 2,
       "explain": "<b>O índice começa em 0:</b> valores[2] = 9 e valores[0] = 9. 9 + 9 = 18, que vai para valores[2].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -831,7 +856,8 @@
       ],
       "correct": 2,
       "explain": "<b>Igual a 5 se escreve saldo == 5.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "matrizes",
@@ -845,7 +871,8 @@
       ],
       "correct": 1,
       "explain": "<b>i == j é a diagonal principal:</b> 7 + 15 + 6 = 28.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "diagonal"
     },
     {
       "topic": "vetores",
@@ -859,7 +886,8 @@
       ],
       "correct": 0,
       "explain": "<b>x começa com v[0] = 16</b> e só troca quando aparece um valor MAIOR (>). No fim x guarda o maior: 39.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -873,7 +901,8 @@
       ],
       "correct": 3,
       "explain": "<b>Igual a 80 se escreve n == 80.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -886,7 +915,8 @@
       ],
       "correct": 3,
       "explain": "<b>Cada número é o dobro do anterior:</b> 64 × 2 = 128.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "basico",
@@ -900,7 +930,8 @@
       ],
       "correct": 3,
       "explain": "<b>Use o nome do objeto criado (entrada) e o método do tipo:</b> nextInt() para inteiro.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "scanner"
     },
     {
       "topic": "basico",
@@ -914,7 +945,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (13).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "basico",
@@ -927,7 +959,8 @@
       ],
       "correct": 1,
       "explain": "<b>Cada número é o dobro do anterior:</b> 80 × 2 = 160.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "vetores",
@@ -940,7 +973,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "lacos",
@@ -954,7 +988,8 @@
       ],
       "correct": 3,
       "explain": "<b>Soma 4 a cada volta:</b> 2, 6, 10. Depois x vira 14 e 14 < 13 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "vetores",
@@ -967,7 +1002,8 @@
       ],
       "correct": 0,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "metodos",
@@ -981,7 +1017,8 @@
       ],
       "correct": 2,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 16 e vira 17, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "matrizes",
@@ -995,7 +1032,8 @@
       ],
       "correct": 1,
       "explain": "<b>i == j é a diagonal principal:</b> 14 + 2 + 7 = 23.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -1009,7 +1047,8 @@
       ],
       "correct": 0,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (65).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -1023,7 +1062,8 @@
       ],
       "correct": 2,
       "explain": "<b>O if só deixa passar os múltiplos de 3:</b> 6 + 9 + 12 + 15 = 42.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "lacos",
@@ -1037,7 +1077,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 3 a cada volta:</b> 2, 5, 8, 11, 14, 17. Depois x vira 20 e 20 < 19 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "vetores",
@@ -1051,7 +1092,8 @@
       ],
       "correct": 0,
       "explain": "<b>O índice começa em 0:</b> valores[2] = 24 e valores[3] = 24. 24 + 24 = 48, que vai para valores[0].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -1065,7 +1107,8 @@
       ],
       "correct": 0,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (50).</b>",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "aspas"
     },
     {
       "topic": "metodos",
@@ -1079,7 +1122,8 @@
       ],
       "correct": 0,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 5 e vira 10, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "basico",
@@ -1093,7 +1137,8 @@
       ],
       "correct": 3,
       "explain": "<b>% é o resto:</b> 22 ÷ 9 = 2, sobra 4.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "basico",
@@ -1106,7 +1151,8 @@
       ],
       "correct": 1,
       "explain": "<b>Sobe de 8 em 8:</b> 46 + 8 = 54.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "classes",
@@ -1119,7 +1165,8 @@
       ],
       "correct": 0,
       "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> new",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -1133,7 +1180,8 @@
       ],
       "correct": 3,
       "explain": "<b>switch aceita char.</b> Entra no case 'D' e o break para ali.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "metodos",
@@ -1147,7 +1195,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(21, 2);. \"subtrair(21, 2);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -1161,7 +1210,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String r = saudacao(\"Rafa\");. \"saudacao(\"Rafa\");\" sozinho calcula e joga fora; int não combina com String.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -1175,7 +1225,8 @@
       ],
       "correct": 3,
       "explain": "<b>Uma linha de cada vez:</b> 1 + 3 = 4; × 4 = 16; − 2 = 14.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "vetores",
@@ -1189,7 +1240,8 @@
       ],
       "correct": 3,
       "explain": "<b>O índice começa em 0:</b> valores[3] = 23 e valores[3] = 23. 23 + 23 = 46, que vai para valores[1].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "lacos",
@@ -1203,7 +1255,8 @@
       ],
       "correct": 2,
       "explain": "<b>O if só deixa passar os ímpares:</b> 1 + 3 + 5 + 7 + 9 = 25.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "basico",
@@ -1217,7 +1270,8 @@
       ],
       "correct": 3,
       "explain": "<b>Maior que 8 se escreve n > 8.</b> Com = junto (<= ou >=) o próprio 8 também entraria.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "if"
     },
     {
       "topic": "vetores",
@@ -1231,7 +1285,8 @@
       ],
       "correct": 0,
       "explain": "<b>x começa com v[0] = 12</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 12.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "matrizes",
@@ -1245,7 +1300,8 @@
       ],
       "correct": 2,
       "explain": "<b>i == j é a diagonal principal:</b> 18 + 13 + 20 = 51.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "diagonal"
     },
     {
       "topic": "matrizes",
@@ -1259,7 +1315,8 @@
       ],
       "correct": 1,
       "explain": "<b>i == j é a diagonal principal:</b> 18 + 19 + 6 = 43.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -1273,7 +1330,8 @@
       ],
       "correct": 0,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (84).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -1287,7 +1345,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6. Depois x vira 9 e 9 < 8 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "metodos",
@@ -1301,7 +1360,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int res = somar(12, 14);. \"somar(12, 14);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -1315,7 +1375,8 @@
       ],
       "correct": 1,
       "explain": "<b>Maior que 47 se escreve saldo > 47.</b> Com = junto (<= ou >=) o próprio 47 também entraria.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "if"
     },
     {
       "topic": "lacos",
@@ -1329,7 +1390,8 @@
       ],
       "correct": 1,
       "explain": "<b>O if só deixa passar os pares:</b> 4 + 6 + 8 + 10 + 12 + 14 + 16 = 70.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "metodos",
@@ -1343,7 +1405,8 @@
       ],
       "correct": 2,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero = 0;\" roda: numero sai de 18 e vira 0, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "lacos",
@@ -1357,7 +1420,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 2 a cada volta:</b> 1, 3, 5, 7, 9, 11. Depois x vira 13 e 13 < 12 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "lacos",
@@ -1371,7 +1435,8 @@
       ],
       "correct": 3,
       "explain": "<b>Soma 3 a cada volta:</b> 1, 4, 7, 10. Depois x vira 13 e 13 < 13 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "lacos",
@@ -1385,7 +1450,8 @@
       ],
       "correct": 3,
       "explain": "<b>O if só deixa passar os ímpares:</b> 3 + 5 + 7 + 9 + 11 + 13 + 15 = 63.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "basico",
@@ -1399,7 +1465,8 @@
       ],
       "correct": 1,
       "explain": "<b>Use o nome do objeto criado (entrada) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "scanner"
     },
     {
       "topic": "classes",
@@ -1413,7 +1480,8 @@
       ],
       "correct": 2,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Cachorro cachorro3 = new Cachorro();.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -1427,7 +1495,8 @@
       ],
       "correct": 2,
       "explain": "<b>Menor que 25 se escreve idade < 25.</b> Com = junto (<= ou >=) o próprio 25 também entraria.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "metodos",
@@ -1441,7 +1510,8 @@
       ],
       "correct": 0,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(45, 5);. \"subtrair(45, 5);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -1455,7 +1525,8 @@
       ],
       "correct": 0,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = dobro(14);. \"dobro(14);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "lacos",
@@ -1469,7 +1540,8 @@
       ],
       "correct": 0,
       "explain": "<b>Soma 4 a cada volta:</b> 4, 8, 12. Depois x vira 16 e 16 < 14 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -1483,7 +1555,8 @@
       ],
       "correct": 2,
       "explain": "<b>switch aceita char.</b> Nenhum case é 'E', então cai no default.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "lacos",
@@ -1497,7 +1570,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 3 a cada volta:</b> 3, 6, 9. Depois x vira 12 e 12 < 10 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -1511,7 +1585,8 @@
       ],
       "correct": 1,
       "explain": "<b>% é o resto:</b> 50 ÷ 4 = 12, sobra 2.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "basico",
@@ -1525,7 +1600,8 @@
       ],
       "correct": 2,
       "explain": "<b>Use o nome do objeto criado (input) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "scanner"
     },
     {
       "topic": "basico",
@@ -1539,7 +1615,8 @@
       ],
       "correct": 0,
       "explain": "<b>Use o nome do objeto criado (scan) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "scanner"
     },
     {
       "topic": "metodos",
@@ -1553,7 +1630,8 @@
       ],
       "correct": 3,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 13 e vira 23, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "vetores",
@@ -1567,7 +1645,8 @@
       ],
       "correct": 0,
       "explain": "<b>O índice começa em 0:</b> valores[2] = 26 e valores[1] = 19. 26 + 19 = 45, que vai para valores[4].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -1581,7 +1660,8 @@
       ],
       "correct": 0,
       "explain": "<b>Use o nome do objeto criado (ler) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "scanner"
     },
     {
       "topic": "lacos",
@@ -1595,7 +1675,8 @@
       ],
       "correct": 0,
       "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6, 9, 12. Depois x vira 15 e 15 < 13 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "classes",
@@ -1609,7 +1690,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Produto produto2 = new Produto();.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "objetos"
     },
     {
       "topic": "matrizes",
@@ -1622,7 +1704,8 @@
       ],
       "correct": 3,
       "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (3). Java não usa vírgula nos colchetes.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "classes",
@@ -1636,7 +1719,8 @@
       ],
       "correct": 2,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Pedido pedido1 = new Pedido();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "lacos",
@@ -1650,7 +1734,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 5, 8, 11, 14, 17; depois n vira 20 e 20 < 19 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "dowhile"
     },
     {
       "topic": "basico",
@@ -1664,7 +1749,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (58).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "vetores",
@@ -1678,7 +1764,8 @@
       ],
       "correct": 0,
       "explain": "<b>x começa com v[0] = 7</b> e só troca quando aparece um valor MENOR (<). No fim x guarda o menor: 7.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -1692,7 +1779,8 @@
       ],
       "correct": 1,
       "explain": "<b>Menor que 62 se escreve saldo < 62.</b> Com = junto (<= ou >=) o próprio 62 também entraria.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "if"
     },
     {
       "topic": "metodos",
@@ -1706,7 +1794,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 7 e vira 8, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "matrizes",
@@ -1720,7 +1809,8 @@
       ],
       "correct": 3,
       "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 15 + 6 + 6 = 27.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "diagonal"
     },
     {
       "topic": "classes",
@@ -1733,7 +1823,8 @@
       ],
       "correct": 2,
       "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> A variável que aponta para o objeto criado.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "matrizes",
@@ -1747,7 +1838,8 @@
       ],
       "correct": 0,
       "explain": "<b>i == j é a diagonal principal:</b> 10 + 10 + 9 = 29.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -1761,7 +1853,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (9).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -1775,7 +1868,8 @@
       ],
       "correct": 3,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 26, 29, 32; depois n vira 35 e 35 < 35 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "basico",
@@ -1789,7 +1883,8 @@
       ],
       "correct": 1,
       "explain": "<b>% é o resto:</b> 19 ÷ 8 = 2, sobra 3.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "lacos",
@@ -1803,7 +1898,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 3, 6, 9, 12; depois n vira 15 e 15 < 15 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "lacos",
@@ -1817,7 +1913,8 @@
       ],
       "correct": 3,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 14, 17, 20, 23, 26, 29; depois n vira 32 e 32 < 32 é falso.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "dowhile"
     },
     {
       "topic": "classes",
@@ -1831,7 +1928,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Computador computador2 = new Computador();.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "objetos"
     },
     {
       "topic": "matrizes",
@@ -1845,7 +1943,8 @@
       ],
       "correct": 1,
       "explain": "<b>i == j é a diagonal principal:</b> 17 + 15 + 6 = 38.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -1858,7 +1957,8 @@
       ],
       "correct": 1,
       "explain": "<b>Sobe de 3 em 3:</b> 32 + 3 = 35.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "lacos",
@@ -1872,7 +1972,8 @@
       ],
       "correct": 2,
       "explain": "<b>O if só deixa passar os pares:</b> 6 + 8 + 10 + 12 + 14 + 16 = 66.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "metodos",
@@ -1886,7 +1987,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(25, 25);. \"somar(25, 25);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "matrizes",
@@ -1899,7 +2001,8 @@
       ],
       "correct": 1,
       "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (6). Java não usa vírgula nos colchetes.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "vetores",
@@ -1913,7 +2016,8 @@
       ],
       "correct": 2,
       "explain": "<b>O índice começa em 0:</b> valores[2] = 18 e valores[3] = 15. 18 + 15 = 33, que vai para valores[2].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "metodos",
@@ -1927,7 +2031,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int valor = somar(4, 4);. \"somar(4, 4);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "matrizes",
@@ -1941,7 +2046,8 @@
       ],
       "correct": 2,
       "explain": "<b>i == j é a diagonal principal:</b> 3 + 2 + 17 = 22.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -1955,7 +2061,8 @@
       ],
       "correct": 0,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (95).</b>",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "aspas"
     },
     {
       "topic": "basico",
@@ -1968,7 +2075,8 @@
       ],
       "correct": 0,
       "explain": "<b>int não guarda número com casas decimais.</b>",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "tipos"
     },
     {
       "topic": "metodos",
@@ -1982,7 +2090,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(28, 11);. \"subtrair(28, 11);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "vetores",
@@ -1995,7 +2104,8 @@
       ],
       "correct": 3,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -2009,7 +2119,8 @@
       ],
       "correct": 3,
       "explain": "<b>Igual a 59 se escreve n == 59.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "if"
     },
     {
       "topic": "metodos",
@@ -2023,7 +2134,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 3;\" roda: numero sai de 7 e vira 21, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "metodos",
@@ -2037,7 +2149,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String res = situacao(9);. \"situacao(9);\" sozinho calcula e joga fora; boolean não combina com String.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "lacos",
@@ -2051,7 +2164,8 @@
       ],
       "correct": 2,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 11, 14, 17, 20; depois n vira 23 e 23 < 23 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "dowhile"
     },
     {
       "topic": "basico",
@@ -2065,7 +2179,8 @@
       ],
       "correct": 2,
       "explain": "<b>% é o resto:</b> 13 ÷ 8 = 1, sobra 5.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "basico",
@@ -2079,7 +2194,8 @@
       ],
       "correct": 3,
       "explain": "<b>Menor que 61 se escreve n < 61.</b> Com = junto (<= ou >=) o próprio 61 também entraria.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "if"
     },
     {
       "topic": "lacos",
@@ -2093,7 +2209,8 @@
       ],
       "correct": 0,
       "explain": "<b>O if só deixa passar os pares:</b> 2 + 4 + 6 + 8 + 10 + 12 + 14 = 56.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "matrizes",
@@ -2106,7 +2223,8 @@
       ],
       "correct": 1,
       "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (3), depois colunas (5). Java não usa vírgula nos colchetes.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -2120,7 +2238,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (6).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -2134,7 +2253,8 @@
       ],
       "correct": 2,
       "explain": "<b>O if só deixa passar os ímpares:</b> 7 + 9 + 11 + 13 + 15 + 17 = 72.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "lacos",
@@ -2148,7 +2268,8 @@
       ],
       "correct": 3,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 19, 20; depois n vira 21 e 21 < 21 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "matrizes",
@@ -2161,7 +2282,8 @@
       ],
       "correct": 3,
       "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (4), depois colunas (4). Java não usa vírgula nos colchetes.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -2175,7 +2297,8 @@
       ],
       "correct": 0,
       "explain": "<b>Uma linha de cada vez:</b> 14 + 7 = 21; × 4 = 84; − 6 = 78.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "lacos",
@@ -2189,7 +2312,8 @@
       ],
       "correct": 3,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 21, 22; depois n vira 23 e 23 < 23 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "classes",
@@ -2203,7 +2327,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Jogo jogo1 = new Jogo();.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "metodos",
@@ -2217,7 +2342,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 16 e vira 15, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "basico",
@@ -2231,7 +2357,8 @@
       ],
       "correct": 2,
       "explain": "<b>Menor que 11 se escreve idade < 11.</b> Com = junto (<= ou >=) o próprio 11 também entraria.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -2245,7 +2372,8 @@
       ],
       "correct": 2,
       "explain": "<b>switch aceita char.</b> Entra no case 'A' e o break para ali.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "basico",
@@ -2259,7 +2387,8 @@
       ],
       "correct": 0,
       "explain": "<b>Uma linha de cada vez:</b> 14 + 4 = 18; × 4 = 72; − 8 = 64.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "lacos",
@@ -2273,7 +2402,8 @@
       ],
       "correct": 0,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 3, 6; depois n vira 9 e 9 < 9 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "basico",
@@ -2287,7 +2417,8 @@
       ],
       "correct": 2,
       "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextLine() para texto (a linha inteira).",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "scanner"
     },
     {
       "topic": "classes",
@@ -2301,7 +2432,8 @@
       ],
       "correct": 2,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Livro livro3 = new Livro();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "lacos",
@@ -2315,7 +2447,8 @@
       ],
       "correct": 2,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 18, 20, 22, 24, 26; depois n vira 28 e 28 < 27 é falso.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "dowhile"
     },
     {
       "topic": "basico",
@@ -2329,7 +2462,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (3).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "vetores",
@@ -2342,7 +2476,8 @@
       ],
       "correct": 1,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "lacos",
@@ -2356,7 +2491,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 4 a cada volta:</b> 0, 4, 8, 12. Depois x vira 16 e 16 < 16 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "matrizes",
@@ -2370,7 +2506,8 @@
       ],
       "correct": 2,
       "explain": "<b>i == j é a diagonal principal:</b> 16 + 15 + 18 = 49.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "diagonal"
     },
     {
       "topic": "classes",
@@ -2384,7 +2521,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Celular celular2 = new Celular();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -2398,7 +2536,8 @@
       ],
       "correct": 0,
       "explain": "<b>% é o resto:</b> 50 ÷ 7 = 7, sobra 1.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "metodos",
@@ -2412,7 +2551,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(27, 17);. \"somar(27, 17);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "lacos",
@@ -2426,7 +2566,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 4 a cada volta:</b> 1, 5, 9, 13, 17. Depois x vira 21 e 21 < 18 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "vetores",
@@ -2440,7 +2581,8 @@
       ],
       "correct": 0,
       "explain": "<b>O índice começa em 0:</b> valores[4] = 30 e valores[4] = 30. 30 + 30 = 60, que vai para valores[1].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -2454,7 +2596,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (76).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -2468,7 +2611,8 @@
       ],
       "correct": 3,
       "explain": "<b>Soma 2 a cada volta:</b> 4, 6. Depois x vira 8 e 8 < 8 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "metodos",
@@ -2482,7 +2626,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = subtrair(39, 14);. \"subtrair(39, 14);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "matrizes",
@@ -2496,7 +2641,8 @@
       ],
       "correct": 3,
       "explain": "<b>i == j é a diagonal principal:</b> 8 + 3 + 2 = 13.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -2510,7 +2656,8 @@
       ],
       "correct": 3,
       "explain": "<b>Uma linha de cada vez:</b> 18 + 1 = 19; × 3 = 57; − 4 = 53.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "basico",
@@ -2524,7 +2671,8 @@
       ],
       "correct": 3,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (70).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "classes",
@@ -2538,7 +2686,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Conta conta1 = new Conta();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "metodos",
@@ -2552,7 +2701,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int valor = subtrair(25, 6);. \"subtrair(25, 6);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -2566,7 +2716,8 @@
       ],
       "correct": 3,
       "explain": "<b>Maior que 79 se escreve saldo > 79.</b> Com = junto (<= ou >=) o próprio 79 também entraria.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -2580,7 +2731,8 @@
       ],
       "correct": 1,
       "explain": "<b>Use o nome do objeto criado (scan) e o método do tipo:</b> nextInt() para inteiro.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "scanner"
     },
     {
       "topic": "lacos",
@@ -2594,7 +2746,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 10, 13, 16, 19; depois n vira 22 e 22 < 20 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "dowhile"
     },
     {
       "topic": "vetores",
@@ -2607,7 +2760,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "classes",
@@ -2620,7 +2774,8 @@
       ],
       "correct": 0,
       "explain": "<b>Classe = molde; objeto = o que é criado com new.</b> Sim: cada objeto guarda os próprios valores dos atributos.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "matrizes",
@@ -2634,7 +2789,8 @@
       ],
       "correct": 0,
       "explain": "<b>i == j é a diagonal principal:</b> 5 + 8 + 3 = 16.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "diagonal"
     },
     {
       "topic": "basico",
@@ -2648,7 +2804,8 @@
       ],
       "correct": 0,
       "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextDouble() para decimal (com casas decimais).",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "scanner"
     },
     {
       "topic": "basico",
@@ -2662,7 +2819,8 @@
       ],
       "correct": 2,
       "explain": "<b>Uma linha de cada vez:</b> 20 + 9 = 29; × 2 = 58; − 1 = 57.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "metodos",
@@ -2676,7 +2834,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 12 e vira 11, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "metodos",
@@ -2690,7 +2849,8 @@
       ],
       "correct": 0,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero *= 2;\" roda: numero sai de 12 e vira 24, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "metodos",
@@ -2704,7 +2864,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int x = somar(11, 14);. \"somar(11, 14);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -2718,7 +2879,8 @@
       ],
       "correct": 1,
       "explain": "<b>Use o nome do objeto criado (input) e o método do tipo:</b> nextInt() para inteiro.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "scanner"
     },
     {
       "topic": "lacos",
@@ -2732,7 +2894,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 4 a cada volta:</b> 4, 8, 12, 16, 20. Depois x vira 24 e 24 < 22 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -2746,7 +2909,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (53).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -2760,7 +2924,8 @@
       ],
       "correct": 0,
       "explain": "<b>Soma 3 a cada volta:</b> 4, 7, 10, 13. Depois x vira 16 e 16 < 16 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -2774,7 +2939,8 @@
       ],
       "correct": 3,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (88).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "vetores",
@@ -2787,7 +2953,8 @@
       ],
       "correct": 3,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "matrizes",
@@ -2800,7 +2967,8 @@
       ],
       "correct": 1,
       "explain": "<b>Matriz: tipo[][] nome = new tipo[linhas][colunas];</b> Primeiro linhas (4), depois colunas (5). Java não usa vírgula nos colchetes.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "lacos",
@@ -2814,7 +2982,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 16, 19, 22, 25, 28, 31, 34; depois n vira 37 e 37 < 35 é falso.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "dowhile"
     },
     {
       "topic": "metodos",
@@ -2828,7 +2997,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String r = saudacao(\"Felipe\");. \"saudacao(\"Felipe\");\" sozinho calcula e joga fora; int não combina com String.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -2842,7 +3012,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int r = dobro(10);. \"dobro(10);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -2856,7 +3027,8 @@
       ],
       "correct": 0,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero++;\" roda: numero sai de 13 e vira 14, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "matrizes",
@@ -2870,7 +3042,8 @@
       ],
       "correct": 3,
       "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 18 + 17 + 17 = 52.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "diagonal"
     },
     {
       "topic": "vetores",
@@ -2883,7 +3056,8 @@
       ],
       "correct": 0,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "metodos",
@@ -2897,7 +3071,8 @@
       ],
       "correct": 0,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero += 10;\" roda: numero sai de 10 e vira 20, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "vetores",
@@ -2910,7 +3085,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "matrizes",
@@ -2924,7 +3100,8 @@
       ],
       "correct": 1,
       "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 4 + 8 + 7 = 19.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "diagonal"
     },
     {
       "topic": "lacos",
@@ -2938,7 +3115,8 @@
       ],
       "correct": 2,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 4, 5; depois n vira 6 e 6 < 6 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "metodos",
@@ -2952,7 +3130,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 8 e vira 7, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "metodos",
@@ -2966,7 +3145,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int r = somar(16, 8);. \"somar(16, 8);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -2980,7 +3160,8 @@
       ],
       "correct": 3,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (17).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -2994,7 +3175,8 @@
       ],
       "correct": 3,
       "explain": "<b>Soma 2 a cada volta:</b> 4, 6, 8, 10, 12, 14. Depois x vira 16 e 16 < 15 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "classes",
@@ -3008,7 +3190,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Aluno aluno1 = new Aluno();.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -3021,7 +3204,8 @@
       ],
       "correct": 2,
       "explain": "<b>Cada número é a soma dos dois anteriores:</b> 21 + 34 = 55.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "metodos",
@@ -3035,7 +3219,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String resultado = situacao(0);. \"situacao(0);\" sozinho calcula e joga fora; boolean não combina com String.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3049,7 +3234,8 @@
       ],
       "correct": 3,
       "explain": "<b>Sem break, o switch continua descendo</b> e imprime todos os cases abaixo, até o default.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "vetores",
@@ -3063,7 +3249,8 @@
       ],
       "correct": 3,
       "explain": "<b>O índice começa em 0:</b> valores[1] = 1 e valores[2] = 16. 1 + 16 = 17, que vai para valores[3].",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "posicoes"
     },
     {
       "topic": "lacos",
@@ -3077,7 +3264,8 @@
       ],
       "correct": 3,
       "explain": "<b>Soma 3 a cada volta:</b> 2, 5, 8. Depois x vira 11 e 11 < 9 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -3091,7 +3279,8 @@
       ],
       "correct": 3,
       "explain": "<b>Igual a 27 se escreve valor == 27.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -3105,7 +3294,8 @@
       ],
       "correct": 1,
       "explain": "<b>Igual a 20 se escreve saldo == 20.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "classes",
@@ -3119,7 +3309,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Filme filme1 = new Filme();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "classes",
@@ -3133,7 +3324,8 @@
       ],
       "correct": 3,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Casa casa3 = new Casa();.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "lacos",
@@ -3147,7 +3339,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 3 a cada volta:</b> 3, 6, 9, 12, 15, 18. Depois x vira 21 e 21 < 19 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "vetores",
@@ -3161,7 +3354,8 @@
       ],
       "correct": 1,
       "explain": "<b>O sinal do if decide:</b> com <, x é trocado sempre que aparece um valor menor.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "lacos",
@@ -3175,7 +3369,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 30, 32, 34; depois n vira 36 e 36 < 35 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "metodos",
@@ -3189,7 +3384,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = subtrair(25, 13);. \"subtrair(25, 13);\" sozinho calcula e joga fora; boolean não combina com int.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "vetores",
@@ -3202,7 +3398,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -3216,7 +3413,8 @@
       ],
       "correct": 0,
       "explain": "<b>Maior que 29 se escreve valor > 29.</b> Com = junto (<= ou >=) o próprio 29 também entraria.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "if"
     },
     {
       "topic": "classes",
@@ -3230,7 +3428,8 @@
       ],
       "correct": 3,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Carro carro3 = new Carro();.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "objetos"
     },
     {
       "topic": "vetores",
@@ -3243,7 +3442,8 @@
       ],
       "correct": 1,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -3257,7 +3457,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (57).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -3271,7 +3472,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 3 a cada volta:</b> 0, 3. Depois x vira 6 e 6 < 6 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "basico",
@@ -3285,7 +3487,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (19).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "lacos",
@@ -3299,7 +3502,8 @@
       ],
       "correct": 0,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 15, 18, 21, 24; depois n vira 27 e 27 < 25 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "dowhile"
     },
     {
       "topic": "metodos",
@@ -3313,7 +3517,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double r = media(4, 10);. \"media(4, 10);\" sozinho calcula e joga fora; int não combina com double.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3327,7 +3532,8 @@
       ],
       "correct": 2,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (21).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "basico",
@@ -3341,7 +3547,8 @@
       ],
       "correct": 1,
       "explain": "<b>Igual a 85 se escreve saldo == 85.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -3354,7 +3561,8 @@
       ],
       "correct": 0,
       "explain": "<b>Cada número é o dobro do anterior:</b> 48 × 2 = 96.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "sequencias"
     },
     {
       "topic": "lacos",
@@ -3368,7 +3576,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 3 a cada volta:</b> 0, 3, 6, 9. Depois x vira 12 e 12 < 11 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "metodos",
@@ -3382,7 +3591,8 @@
       ],
       "correct": 0,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (String).</b> Quem recebe fica à esquerda do =: String valor = situacao(7);. \"situacao(7);\" sozinho calcula e joga fora; boolean não combina com String.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3396,7 +3606,8 @@
       ],
       "correct": 3,
       "explain": "<b>Uma linha de cada vez:</b> 14 + 7 = 21; × 3 = 63; − 2 = 61.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "metodos",
@@ -3410,7 +3621,8 @@
       ],
       "correct": 1,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double valor = media(10, 4);. \"media(10, 4);\" sozinho calcula e joga fora; int não combina com double.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3424,7 +3636,8 @@
       ],
       "correct": 1,
       "explain": "<b>Uma linha de cada vez:</b> 12 + 9 = 21; × 3 = 63; − 5 = 58.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "operadores"
     },
     {
       "topic": "basico",
@@ -3438,7 +3651,8 @@
       ],
       "correct": 2,
       "explain": "<b>Use o nome do objeto criado (ler) e o método do tipo:</b> nextInt() para inteiro.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "scanner"
     },
     {
       "topic": "metodos",
@@ -3452,7 +3666,8 @@
       ],
       "correct": 3,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 5 e vira 4, só dentro do método.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "void"
     },
     {
       "topic": "lacos",
@@ -3466,7 +3681,8 @@
       ],
       "correct": 2,
       "explain": "<b>Soma 2 a cada volta:</b> 4, 6, 8, 10, 12. Depois x vira 14 e 14 < 13 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "metodos",
@@ -3480,7 +3696,8 @@
       ],
       "correct": 2,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = dobro(45);. \"dobro(45);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3494,7 +3711,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (21).</b>",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "aspas"
     },
     {
       "topic": "basico",
@@ -3508,7 +3726,8 @@
       ],
       "correct": 0,
       "explain": "<b>Menor que 72 se escreve valor < 72.</b> Com = junto (<= ou >=) o próprio 72 também entraria.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "if"
     },
     {
       "topic": "metodos",
@@ -3522,7 +3741,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = somar(15, 27);. \"somar(15, 27);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "metodos",
@@ -3536,7 +3756,8 @@
       ],
       "correct": 1,
       "explain": "<b>void = não devolve nada.</b> Mas a linha \"numero--;\" roda: numero sai de 20 e vira 19, só dentro do método.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "void"
     },
     {
       "topic": "lacos",
@@ -3550,7 +3771,8 @@
       ],
       "correct": 3,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 16, 18; depois n vira 20 e 20 < 20 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "classes",
@@ -3564,7 +3786,8 @@
       ],
       "correct": 0,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Professor professor3 = new Professor();.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "objetos"
     },
     {
       "topic": "vetores",
@@ -3577,7 +3800,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -3591,7 +3815,8 @@
       ],
       "correct": 0,
       "explain": "<b>Igual a 77 se escreve idade == 77.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "vetores",
@@ -3604,7 +3829,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "basico",
@@ -3618,7 +3844,8 @@
       ],
       "correct": 0,
       "explain": "<b>Use o nome do objeto criado (teclado) e o método do tipo:</b> nextInt() para inteiro.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "scanner"
     },
     {
       "topic": "classes",
@@ -3632,7 +3859,8 @@
       ],
       "correct": 1,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Animal animal1 = new Animal();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "lacos",
@@ -3646,7 +3874,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 2 a cada volta:</b> 5, 7, 9. Depois x vira 11 e 11 < 10 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "classes",
@@ -3660,7 +3889,8 @@
       ],
       "correct": 2,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Bicicleta bicicleta3 = new Bicicleta();.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "objetos"
     },
     {
       "topic": "basico",
@@ -3674,7 +3904,8 @@
       ],
       "correct": 0,
       "explain": "<b>Igual a 66 se escreve saldo == 66.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "if"
     },
     {
       "topic": "basico",
@@ -3688,7 +3919,8 @@
       ],
       "correct": 2,
       "explain": "<b>Igual a 6 se escreve nota == 6.</b> Comparar é ==; um = só é atribuição.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "if"
     },
     {
       "topic": "lacos",
@@ -3702,7 +3934,8 @@
       ],
       "correct": 3,
       "explain": "<b>O if só deixa passar os ímpares:</b> 5 + 7 + 9 + 11 + 13 + 15 + 17 = 77.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "for"
     },
     {
       "topic": "vetores",
@@ -3715,7 +3948,8 @@
       ],
       "correct": 3,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "vetores",
@@ -3728,7 +3962,8 @@
       ],
       "correct": 2,
       "explain": "<b>Vetor: tipo[] nome = new tipo[tamanho];</b> Os [] logo depois do tipo dizem que é vetor.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "declarar"
     },
     {
       "topic": "classes",
@@ -3742,7 +3977,8 @@
       ],
       "correct": 2,
       "explain": "<b>Objeto nasce com new e parênteses:</b> Cliente cliente3 = new Cliente();.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "objetos"
     },
     {
       "topic": "lacos",
@@ -3756,7 +3992,8 @@
       ],
       "correct": 0,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 14, 16, 18, 20; depois n vira 22 e 22 < 22 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "dowhile"
     },
     {
       "topic": "lacos",
@@ -3770,7 +4007,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 2 a cada volta:</b> 0, 2, 4, 6, 8. Depois x vira 10 e 10 < 9 é falso.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "while"
     },
     {
       "topic": "metodos",
@@ -3784,7 +4022,8 @@
       ],
       "correct": 0,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (int).</b> Quem recebe fica à esquerda do =: int resultado = somar(16, 12);. \"somar(16, 12);\" sozinho calcula e joga fora; String não combina com int.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "lacos",
@@ -3798,7 +4037,8 @@
       ],
       "correct": 0,
       "explain": "<b>Soma 3 a cada volta:</b> 5, 8, 11. Depois x vira 14 e 14 < 14 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "lacos",
@@ -3812,7 +4052,8 @@
       ],
       "correct": 1,
       "explain": "<b>Soma 4 a cada volta:</b> 1, 5, 9. Depois x vira 13 e 13 < 13 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "while"
     },
     {
       "topic": "lacos",
@@ -3826,7 +4067,8 @@
       ],
       "correct": 1,
       "explain": "<b>do-while faz primeiro e testa depois.</b> Imprime 1, 3; depois n vira 5 e 5 < 5 é falso.",
-      "nivel": 1
+      "nivel": 1,
+      "assunto": "dowhile"
     },
     {
       "topic": "vetores",
@@ -3840,7 +4082,8 @@
       ],
       "correct": 1,
       "explain": "<b>O sinal do if decide:</b> com >, x é trocado sempre que aparece um valor maior.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "posicoes"
     },
     {
       "topic": "basico",
@@ -3854,7 +4097,8 @@
       ],
       "correct": 3,
       "explain": "<b>switch aceita char.</b> Entra no case 'C' e o break para ali.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "metodos",
@@ -3868,7 +4112,8 @@
       ],
       "correct": 3,
       "explain": "<b>Tipo da caixa = tipo que o método devolve (double).</b> Quem recebe fica à esquerda do =: double valor = calcularDesconto(99);. \"calcularDesconto(99);\" sozinho calcula e joga fora; int não combina com double.",
-      "nivel": 2
+      "nivel": 2,
+      "assunto": "retorno"
     },
     {
       "topic": "basico",
@@ -3882,7 +4127,8 @@
       ],
       "correct": 0,
       "explain": "<b>switch aceita char.</b> Entra no case 'B' e o break para ali.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "switch"
     },
     {
       "topic": "basico",
@@ -3896,7 +4142,8 @@
       ],
       "correct": 1,
       "explain": "<b>Com aspas imprime a palavra; sem aspas imprime o valor guardado (29).</b>",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "aspas"
     },
     {
       "topic": "matrizes",
@@ -3910,7 +4157,896 @@
       ],
       "correct": 2,
       "explain": "<b>i + j == 2 é a diagonal secundária</b> ([0][2], [1][1], [2][0]): 13 + 20 + 14 = 47.",
-      "nivel": 3
+      "nivel": 3,
+      "assunto": "diagonal"
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Qual das opções abaixo é uma característica desejável de um bom algoritmo?",
+      "explain": "<b>Bom algoritmo termina (é finito)</b>, é preciso e serve para as entradas previstas. Repetir para sempre, mudar com quem executa ou servir para um valor só são defeitos.",
+      "nivel": 1,
+      "options": [
+        "Funcionar apenas para um único valor de entrada.",
+        "Repetir os passos para sempre, sem nunca parar.",
+        "Terminar depois de um número finito de passos.",
+        "Mudar os passos conforme quem estiver executando."
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Um algoritmo que nunca chega ao fim deixa de ter qual característica?",
+      "explain": "<b>Finito = tem fim.</b> O algoritmo precisa terminar depois de um número de passos; se roda para sempre, não resolve o problema.",
+      "nivel": 1,
+      "options": [
+        "Ser preciso",
+        "Ser genérico",
+        "Ser ordenado",
+        "Ser finito"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Um passo escrito como \"coloque um pouco de água, se achar melhor\" deixa de ter qual característica de um bom algoritmo?",
+      "explain": "<b>Preciso = cada passo tem um só jeito de entender.</b> \"Um pouco\" e \"se achar melhor\" mudam de pessoa para pessoa.",
+      "nivel": 2,
+      "options": [
+        "Ser preciso",
+        "Ser ordenado",
+        "Ser genérico",
+        "Ser finito"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Um algoritmo de média que só dá certo para as notas 7 e 8, e erra com qualquer outra nota, deixa de ter qual característica?",
+      "explain": "<b>Genérico = funciona para todos os dados de entrada previstos</b>, não só para um caso.",
+      "nivel": 2,
+      "options": [
+        "Ser finito",
+        "Ser preciso",
+        "Ser genérico",
+        "Ser ordenado"
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Qual das afirmações sobre algoritmo está correta?",
+      "explain": "<b>Algoritmo é o passo a passo</b>, e pode ser escrito em português (descrição narrativa). O código em Java vem depois.",
+      "nivel": 1,
+      "options": [
+        "Só passa a existir depois de ser digitado em Java no computador.",
+        "É um software que cria programas sozinho, sem precisar de código.",
+        "Precisa repetir os passos infinitamente para ser considerado útil.",
+        "Pode ser escrito em português, sem usar linguagem de programação."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Qual é a relação entre algoritmo e programa?",
+      "explain": "<b>Primeiro a ideia (algoritmo), depois o código (programa).</b> O programa é o mesmo passo a passo, escrito em Java.",
+      "nivel": 1,
+      "options": [
+        "O programa é o algoritmo escrito numa linguagem de programação.",
+        "O algoritmo é o programa depois de ser compilado pelo Java.",
+        "Algoritmo e programa são assuntos sem nenhuma relação.",
+        "O algoritmo é a linguagem usada para escrever o programa."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Os passos para trocar a água de dois aquários usando um balde vazio formam um algoritmo?",
+      "explain": "<b>Algoritmo = sequência finita de passos claros e em ordem</b> para resolver uma tarefa. Não precisa ser código.",
+      "nivel": 1,
+      "options": [
+        "Não: algoritmo só existe quando é escrito em uma linguagem como Java.",
+        "Sim, mas só se cada pessoa puder fazer os passos em qualquer ordem.",
+        "Não: um algoritmo precisa ter infinitos passos para ser completo.",
+        "Sim: são passos finitos, claros e em ordem que resolvem a tarefa."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "algoritmo",
+      "statement": "Um algoritmo deve dar o mesmo resultado sempre que receber os mesmos dados de entrada. Isso significa que ele:",
+      "explain": "<b>Mesmos dados, mesmo resultado.</b> Por isso \"depender do humor de quem executa\" NÃO é característica de um bom algoritmo.",
+      "nivel": 2,
+      "options": [
+        "Não pode depender de quem o executa nem do momento.",
+        "Pode mudar o resultado conforme o humor de quem executa.",
+        "Só funciona se for escrito em linguagem de programação.",
+        "Precisa ser executado sempre pela mesma pessoa."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "Qual forma de representar um algoritmo usa um texto corrido em português, como uma pequena história?",
+      "explain": "<b>Descrição narrativa = texto corrido</b>, como quem conta o passo a passo para outra pessoa. Fluxograma é desenho; Java e Portugol são código.",
+      "nivel": 1,
+      "options": [
+        "Descrição narrativa",
+        "Programa em Portugol",
+        "Código escrito em Java",
+        "Fluxograma com setas"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "Qual forma de representar um algoritmo usa desenhos de caixas ligadas por setas?",
+      "explain": "<b>Fluxograma = desenho</b>: cada passo numa figura, ligado ao próximo por uma seta.",
+      "nivel": 1,
+      "options": [
+        "Programa em Portugol",
+        "Descrição narrativa",
+        "Código escrito em Java",
+        "Fluxograma"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "A descrição narrativa é um texto corrido, como uma pequena história. Qual destas é uma descrição narrativa para trocar o conteúdo de dois copos usando um copo vazio?",
+      "explain": "<b>Narrativa é em português, frase por frase.</b> As outras são código Java e um fluxograma (caixas e setas).",
+      "nivel": 2,
+      "options": [
+        "Início → [vazio ← A] → [A ← B] → [B ← vazio] → Fim, em caixas e setas.",
+        "copoVazio = copoA; copoA = copoB; copoB = copoVazio; System.out.println(copoB);",
+        "Despeje o copo A no vazio, passe o B para o A e, por fim, o vazio para o B.",
+        "if (copoA > copoB) { trocar(copoA, copoB); } else { System.out.println(copoA); }"
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "A descrição narrativa é um texto corrido, como uma pequena história. Qual destas é uma descrição narrativa para ler dois números e mostrar a soma deles?",
+      "explain": "<b>Narrativa é texto corrido em português.</b> switch e println são código; as caixas com setas são fluxograma.",
+      "nivel": 2,
+      "options": [
+        "int soma = numero1 + numero2; System.out.println(\"A soma é: \" + soma);",
+        "switch (passo) { case 1: ler(); break; case 2: somar(); break; case 3: mostrar(); }",
+        "Início → [ler n1, n2] → [soma ← n1 + n2] → [mostrar soma] → Fim, em caixas.",
+        "Peça o primeiro número, peça o segundo, some os dois e mostre o resultado."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "A descrição narrativa é um texto corrido, como uma pequena história. Qual destas é uma descrição narrativa para descobrir qual de dois números é o maior?",
+      "explain": "<b>Narrativa conta os passos com palavras.</b> if e switch são código Java; o desenho com ‹ › e setas é fluxograma.",
+      "nivel": 2,
+      "options": [
+        "Leia os dois valores, compare um com o outro e diga qual é o maior.",
+        "Início → [ler a, b] → ‹a > b?› → sim: [mostrar a] / não: [mostrar b] → Fim",
+        "switch (escolha) { case 1: lerA(); break; case 2: lerB(); break; }",
+        "if (a > b) { System.out.println(a); } else { System.out.println(b); }"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "A descrição narrativa é um texto corrido, como uma pequena história. Qual destas é uma descrição narrativa para calcular a média de duas notas?",
+      "explain": "<b>Narrativa = frases em português.</b> As outras opções são código Java e fluxograma.",
+      "nivel": 2,
+      "options": [
+        "for (int i = 0; i < 2; i++) { soma += nota; } System.out.println(soma);",
+        "Some as duas notas, divida o total por dois e mostre a média obtida.",
+        "Início → [ler n1, n2] → [média ← (n1 + n2) / 2] → [mostrar média] → Fim",
+        "double media = (nota1 + nota2) / 2; System.out.println(media);"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "A descrição narrativa é um texto corrido, como uma pequena história. Qual destas é uma descrição narrativa para dizer se um número é par ou ímpar?",
+      "explain": "<b>Narrativa explica com palavras</b> o que o código faria. if e for são Java; as setas são fluxograma.",
+      "nivel": 2,
+      "options": [
+        "for (int i = 0; i < n; i++) { System.out.println(i % 2); }",
+        "Início → [ler n] → ‹n % 2 == 0?› → sim: [Par] / não: [Ímpar] → Fim",
+        "Divida o número por dois e, se não sobrar resto, diga que ele é par.",
+        "if (n % 2 == 0) { System.out.println(\"Par\"); } else { System.out.println(\"Ímpar\"); }"
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "narrativa",
+      "statement": "Numa questão que pedia uma descrição narrativa, alguém respondeu com um switch em Java. Por que a resposta não vale?",
+      "explain": "<b>Pediu narrativa? Escreva frases em português</b>, como uma receita. Código Java, mesmo certo, é outra forma de representar.",
+      "nivel": 2,
+      "options": [
+        "Porque a descrição narrativa precisa ser escrita em Portugol.",
+        "Porque a descrição narrativa só aceita desenho com caixas e setas.",
+        "Porque o switch precisaria de break em todos os casos para valer.",
+        "Porque switch é código; a narrativa é texto corrido em português."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Depois de sc.close(), o programa chama sc.nextInt() de novo. O que acontece?",
+      "code": "Scanner sc = new Scanner(System.in);\nint a = sc.nextInt();\nsc.close();\nint b = sc.nextInt();",
+      "explain": "<b>close() fecha de vez.</b> Compila, mas na execução a segunda leitura dá erro (IllegalStateException: Scanner closed).",
+      "nivel": 2,
+      "options": [
+        "O close() é ignorado, já que o Scanner usa System.in.",
+        "Lê o segundo número normalmente, porque close() só pausa.",
+        "Não compila, porque nextInt() só pode ser chamado uma vez.",
+        "Dá erro na execução: um Scanner fechado não lê mais nada."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Para que serve o comando sc.close()?",
+      "explain": "<b>close() fecha e libera recursos.</b> É boa prática no fim do programa; depois dele o Scanner não lê mais.",
+      "nivel": 1,
+      "options": [
+        "Fecha o Scanner e libera os recursos que ele estava usando.",
+        "Pausa a leitura até o programa chamar nextInt() de novo.",
+        "Limpa a tela do console antes da próxima leitura.",
+        "Apaga da memória os números que o Scanner já leu."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "O programa abaixo lê um número e não chama close() no fim. O que acontece?",
+      "code": "Scanner sc = new Scanner(System.in);\nint x = sc.nextInt();\nSystem.out.println(x * 2);",
+      "explain": "<b>close() não é obrigatório.</b> Sem ele o programa compila e roda; fechar é boa prática para liberar recursos.",
+      "nivel": 2,
+      "options": [
+        "Roda, mas o valor de x é perdido antes do println.",
+        "Não compila: todo Scanner precisa terminar com close().",
+        "Dá erro na execução logo na linha do nextInt().",
+        "Compila e roda normalmente; fechar é só uma boa prática."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Qual linha cria corretamente um Scanner chamado entrada para ler do teclado?",
+      "explain": "<b>Tipo nome = new Scanner(System.in);</b> Precisa do new, de Scanner com S maiúsculo e de System.in (o teclado) dentro dos parênteses.",
+      "nivel": 1,
+      "options": [
+        "Scanner entrada = new Scanner(System.in);",
+        "Scanner entrada = Scanner(System.in);",
+        "Scanner entrada = new Scanner(System.out);",
+        "Scanner entrada = new Scanner();"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Qual linha cria corretamente um Scanner chamado teclado para ler do teclado?",
+      "explain": "<b>Tipo nome = new Scanner(System.in);</b> Precisa do new, de Scanner com S maiúsculo e de System.in (o teclado) dentro dos parênteses.",
+      "nivel": 1,
+      "options": [
+        "Scanner teclado = new Scanner(System.in);",
+        "Scanner teclado = new Scanner(System.out);",
+        "Scanner teclado = Scanner(System.in);",
+        "Scanner teclado = new Scanner();"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Qual linha cria corretamente um Scanner chamado leitor para ler do teclado?",
+      "explain": "<b>Tipo nome = new Scanner(System.in);</b> Precisa do new, de Scanner com S maiúsculo e de System.in (o teclado) dentro dos parênteses.",
+      "nivel": 1,
+      "options": [
+        "Scanner leitor = new Scanner(System.in);",
+        "Scanner leitor = Scanner(System.in);",
+        "Scanner leitor = new Scanner();",
+        "Scanner leitor = new Scanner(System.out);"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "scanner",
+      "statement": "Qual import precisa vir antes da classe para usar o Scanner?",
+      "explain": "<b>O Scanner mora em java.util.</b> A linha é import java.util.Scanner; com S maiúsculo, antes de public class.",
+      "nivel": 1,
+      "options": [
+        "import Scanner.java.util;",
+        "import java.io.Scanner;",
+        "import java.util.Scanner;",
+        "import java.lang.Scanner;"
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "int total 0;\ntotal = total + 5;\nSystem.out.println(total);",
+      "explain": "<b>Atribuição precisa do =:</b> int total = 0;.",
+      "nivel": 2,
+      "options": [
+        "Falta o = na linha 1: int total = 0;",
+        "O nome total não pode ser usado em Java.",
+        "O println precisa de aspas em total.",
+        "Falta o ; no fim da linha 2."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "int idade = 20\nSystem.out.println(idade);",
+      "explain": "<b>Toda instrução termina com ;</b> A linha int idade = 20 ficou sem.",
+      "nivel": 2,
+      "options": [
+        "idade deveria ser do tipo String.",
+        "Falta o = na linha 2.",
+        "O println não aceita variável, só texto.",
+        "Falta o ; no fim da linha 1."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila (o import do Scanner já está no topo do arquivo). Qual é o erro?",
+      "code": "Scanner sc = new Scanner(System.in);\nint n = sc.nextInt;\nSystem.out.println(n);",
+      "explain": "<b>Método sempre leva parênteses:</b> sc.nextInt(), mesmo sem nada dentro.",
+      "nivel": 2,
+      "options": [
+        "Faltam os parênteses em nextInt: sc.nextInt();",
+        "Falta o ; no fim da linha 3.",
+        "O nome sc não pode ser usado num Scanner.",
+        "Falta o new antes de Scanner(System.in) na linha 1."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "int pontos = 10;\nSystem.out.println(ponto);",
+      "explain": "<b>O nome tem que ser igual em todo lugar.</b> Foi declarada pontos (com s) e usada ponto.",
+      "nivel": 2,
+      "options": [
+        "Usou ponto, mas a variável é pontos.",
+        "O println precisa de aspas em ponto.",
+        "Falta o = na linha 2.",
+        "int não pode guardar o valor 10."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "System.out.println(\"Bom dia);",
+      "explain": "<b>Abriu aspas, feche as aspas:</b> \"Bom dia\".",
+      "nivel": 2,
+      "options": [
+        "println deve ser escrito com P maiúsculo.",
+        "Faltam as aspas que fecham o texto Bom dia.",
+        "Texto em Java usa aspas simples.",
+        "Falta o ; no fim da linha 1."
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "int soma = 3 + 4;\nSystem.out.println(\"Soma: \" + soma;",
+      "explain": "<b>Abriu parêntese, feche o parêntese</b> antes do ;. Juntar texto e número com + é permitido.",
+      "nivel": 2,
+      "options": [
+        "Falta o = na linha 1.",
+        "Falta fechar o parêntese do println na linha 2.",
+        "Texto e número não podem ser juntados com +.",
+        "Falta o ; no fim da linha 1."
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila (o import do Scanner já está no topo do arquivo). Qual é o erro?",
+      "code": "Scanner leitor = Scanner(System.in);\nint x = leitor.nextInt();",
+      "explain": "<b>Objeto nasce com new:</b> new Scanner(System.in).",
+      "nivel": 2,
+      "options": [
+        "Falta o new antes de Scanner(System.in).",
+        "Falta o ; no fim da linha 2.",
+        "O Scanner precisa se chamar sc.",
+        "Faltam os parênteses em nextInt na linha 2."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila (o import do Scanner já está no topo do arquivo). Qual é o erro?",
+      "code": "Scanner teclado new Scanner(System.in);\nint y = teclado.nextInt();",
+      "explain": "<b>Igual ao erro da prova:</b> sem o =, o Scanner criado não vai para a variável teclado.",
+      "nivel": 2,
+      "options": [
+        "Falta o ; no fim da linha 1.",
+        "O certo seria nextInt(teclado).",
+        "Falta o ; no fim da linha 2.",
+        "Falta o = entre teclado e new."
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "string nome = \"Lara\";\nSystem.out.println(nome);",
+      "explain": "<b>String é com S maiúsculo.</b> Java diferencia maiúsculas de minúsculas.",
+      "nivel": 2,
+      "options": [
+        "Falta o ; no fim da linha 2.",
+        "O tipo String é com S maiúsculo.",
+        "nome não pode ser usado como variável.",
+        "Lara precisa estar entre aspas simples."
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "int x = 5;\nif (x > 3) {\n    System.out.println(\"Maior\");",
+      "explain": "<b>Abriu chave, feche a chave.</b> O bloco do if termina com }.",
+      "nivel": 2,
+      "options": [
+        "Falta a chave } que fecha o bloco do if.",
+        "println não pode ficar dentro do if.",
+        "A condição do if deve usar = no lugar de >.",
+        "Falta o ; depois de if (x > 3)."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "sintaxe",
+      "statement": "O trecho abaixo não compila. Qual é o erro?",
+      "code": "double media = (7 + 8) / 2\nSystem.out.println(media);",
+      "explain": "<b>O ; fecha a instrução.</b> Fazer conta na declaração é permitido.",
+      "nivel": 2,
+      "options": [
+        "Faltam aspas em media no println.",
+        "Os parênteses de (7 + 8) estão sobrando.",
+        "Falta o ; depois de (7 + 8) / 2 na linha 1.",
+        "double não pode receber uma conta."
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int p = 52, q = 51, r = 44;\nif (p < q) {\n    if (p < r) {\n        System.out.println(\"p é o menor\");\n    } else {\n        System.out.println(\"r é o menor\");\n    }\n} else {\n    if (q < r) {\n        System.out.println(\"q é o menor\");\n    } else {\n        System.out.println(\"r é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 52 < 51 é falso, então vai para o else; 51 < 44 é falso: \"r é o menor\".",
+      "nivel": 2,
+      "options": [
+        "r é o menor",
+        "Nenhuma saída é exibida.",
+        "q é o menor",
+        "p é o menor"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int n1 = 42, n2 = 34, n3 = 22;\nif (n1 > n2) {\n    if (n1 > n3) {\n        System.out.println(\"n1 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n} else {\n    if (n2 > n3) {\n        System.out.println(\"n2 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 42 > 34 é verdadeiro, então entra no primeiro bloco; 42 > 22 é verdadeiro: \"n1 é o maior\".",
+      "nivel": 2,
+      "options": [
+        "n1 é o maior",
+        "n2 é o maior",
+        "n3 é o maior",
+        "Nenhuma saída é exibida."
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int p = 39, q = 7, r = 35;\nif (p < q) {\n    if (p < r) {\n        System.out.println(\"p é o menor\");\n    } else {\n        System.out.println(\"r é o menor\");\n    }\n} else {\n    if (q < r) {\n        System.out.println(\"q é o menor\");\n    } else {\n        System.out.println(\"r é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 39 < 7 é falso, então vai para o else; 7 < 35 é verdadeiro: \"q é o menor\".",
+      "nivel": 2,
+      "options": [
+        "q é o menor",
+        "Nenhuma saída é exibida.",
+        "p é o menor",
+        "r é o menor"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int x = 39, y = 32, z = 50;\nif (x < y) {\n    if (x < z) {\n        System.out.println(\"x é o menor\");\n    } else {\n        System.out.println(\"z é o menor\");\n    }\n} else {\n    if (y < z) {\n        System.out.println(\"y é o menor\");\n    } else {\n        System.out.println(\"z é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 39 < 32 é falso, então vai para o else; 32 < 50 é verdadeiro: \"y é o menor\".",
+      "nivel": 2,
+      "options": [
+        "z é o menor",
+        "x é o menor",
+        "y é o menor",
+        "Nenhuma saída é exibida."
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int p = 15, q = 9, r = 57;\nif (p > q) {\n    if (p > r) {\n        System.out.println(\"p é o maior\");\n    } else {\n        System.out.println(\"r é o maior\");\n    }\n} else {\n    if (q > r) {\n        System.out.println(\"q é o maior\");\n    } else {\n        System.out.println(\"r é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 15 > 9 é verdadeiro, então entra no primeiro bloco; 15 > 57 é falso: \"r é o maior\".",
+      "nivel": 2,
+      "options": [
+        "Nenhuma saída é exibida.",
+        "p é o maior",
+        "q é o maior",
+        "r é o maior"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int n1 = 15, n2 = 3, n3 = 40;\nif (n1 < n2) {\n    if (n1 < n3) {\n        System.out.println(\"n1 é o menor\");\n    } else {\n        System.out.println(\"n3 é o menor\");\n    }\n} else {\n    if (n2 < n3) {\n        System.out.println(\"n2 é o menor\");\n    } else {\n        System.out.println(\"n3 é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 15 < 3 é falso, então vai para o else; 3 < 40 é verdadeiro: \"n2 é o menor\".",
+      "nivel": 2,
+      "options": [
+        "n2 é o menor",
+        "n3 é o menor",
+        "Nenhuma saída é exibida.",
+        "n1 é o menor"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int n1 = 39, n2 = 32, n3 = 44;\nif (n1 > n2) {\n    if (n1 > n3) {\n        System.out.println(\"n1 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n} else {\n    if (n2 > n3) {\n        System.out.println(\"n2 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 39 > 32 é verdadeiro, então entra no primeiro bloco; 39 > 44 é falso: \"n3 é o maior\".",
+      "nivel": 2,
+      "options": [
+        "n2 é o maior",
+        "n3 é o maior",
+        "Nenhuma saída é exibida.",
+        "n1 é o maior"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int n1 = 11, n2 = 52, n3 = 14;\nif (n1 > n2) {\n    if (n1 > n3) {\n        System.out.println(\"n1 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n} else {\n    if (n2 > n3) {\n        System.out.println(\"n2 é o maior\");\n    } else {\n        System.out.println(\"n3 é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 11 > 52 é falso, então vai para o else; 52 > 14 é verdadeiro: \"n2 é o maior\".",
+      "nivel": 2,
+      "options": [
+        "n1 é o maior",
+        "n2 é o maior",
+        "n3 é o maior",
+        "Nenhuma saída é exibida."
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int x = 22, y = 57, z = 30;\nif (x > y) {\n    if (x > z) {\n        System.out.println(\"x é o maior\");\n    } else {\n        System.out.println(\"z é o maior\");\n    }\n} else {\n    if (y > z) {\n        System.out.println(\"y é o maior\");\n    } else {\n        System.out.println(\"z é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 22 > 57 é falso, então vai para o else; 57 > 30 é verdadeiro: \"y é o maior\".",
+      "nivel": 2,
+      "options": [
+        "y é o maior",
+        "Nenhuma saída é exibida.",
+        "z é o maior",
+        "x é o maior"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int a = 53, b = 45, c = 2;\nif (a < b) {\n    if (a < c) {\n        System.out.println(\"a é o menor\");\n    } else {\n        System.out.println(\"c é o menor\");\n    }\n} else {\n    if (b < c) {\n        System.out.println(\"b é o menor\");\n    } else {\n        System.out.println(\"c é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 53 < 45 é falso, então vai para o else; 45 < 2 é falso: \"c é o menor\".",
+      "nivel": 2,
+      "options": [
+        "a é o menor",
+        "b é o menor",
+        "Nenhuma saída é exibida.",
+        "c é o menor"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int p = 24, q = 45, r = 28;\nif (p > q) {\n    if (p > r) {\n        System.out.println(\"p é o maior\");\n    } else {\n        System.out.println(\"r é o maior\");\n    }\n} else {\n    if (q > r) {\n        System.out.println(\"q é o maior\");\n    } else {\n        System.out.println(\"r é o maior\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 24 > 45 é falso, então vai para o else; 45 > 28 é verdadeiro: \"q é o maior\".",
+      "nivel": 2,
+      "options": [
+        "q é o maior",
+        "Nenhuma saída é exibida.",
+        "p é o maior",
+        "r é o maior"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "if",
+      "statement": "Considere o trecho de código Java e assinale a saída.",
+      "code": "int n1 = 30, n2 = 25, n3 = 17;\nif (n1 < n2) {\n    if (n1 < n3) {\n        System.out.println(\"n1 é o menor\");\n    } else {\n        System.out.println(\"n3 é o menor\");\n    }\n} else {\n    if (n2 < n3) {\n        System.out.println(\"n2 é o menor\");\n    } else {\n        System.out.println(\"n3 é o menor\");\n    }\n}",
+      "explain": "<b>Siga os ifs:</b> 30 < 25 é falso, então vai para o else; 25 < 17 é falso: \"n3 é o menor\".",
+      "nivel": 2,
+      "options": [
+        "n2 é o menor",
+        "n3 é o menor",
+        "n1 é o menor",
+        "Nenhuma saída é exibida."
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int preco = 9.5;\nSystem.out.println(preco);",
+      "explain": "<b>int só guarda número inteiro.</b> 9.5 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Trocar int por boolean: boolean preco = 9.5;",
+        "Colocar aspas no valor: int preco = \"9.5\";",
+        "Usar vírgula no valor: int preco = 9,5;",
+        "Trocar int por double: double preco = 9.5;"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int altura = 1.75;\nSystem.out.println(altura);",
+      "explain": "<b>int só guarda número inteiro.</b> 1.75 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Colocar aspas no valor: int altura = \"1.75\";",
+        "Trocar int por boolean: boolean altura = 1.75;",
+        "Usar vírgula no valor: int altura = 1,75;",
+        "Trocar int por double: double altura = 1.75;"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int peso = 72.5;\nSystem.out.println(peso);",
+      "explain": "<b>int só guarda número inteiro.</b> 72.5 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Trocar int por boolean: boolean peso = 72.5;",
+        "Trocar int por double: double peso = 72.5;",
+        "Usar vírgula no valor: int peso = 72,5;",
+        "Colocar aspas no valor: int peso = \"72.5\";"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int media = 6.5;\nSystem.out.println(media);",
+      "explain": "<b>int só guarda número inteiro.</b> 6.5 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Usar vírgula no valor: int media = 6,5;",
+        "Trocar int por double: double media = 6.5;",
+        "Trocar int por boolean: boolean media = 6.5;",
+        "Colocar aspas no valor: int media = \"6.5\";"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int salario = 1500.50;\nSystem.out.println(salario);",
+      "explain": "<b>int só guarda número inteiro.</b> 1500.50 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Usar vírgula no valor: int salario = 1500,50;",
+        "Colocar aspas no valor: int salario = \"1500.50\";",
+        "Trocar int por boolean: boolean salario = 1500.50;",
+        "Trocar int por double: double salario = 1500.50;"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Avalie o trecho, sabendo que ele não compila. Qual é a correção certa?",
+      "code": "int temperatura = 36.7;\nSystem.out.println(temperatura);",
+      "explain": "<b>int só guarda número inteiro.</b> 36.7 tem casas decimais: o tipo é double. Em Java o decimal usa ponto, não vírgula.",
+      "nivel": 2,
+      "options": [
+        "Colocar aspas no valor: int temperatura = \"36.7\";",
+        "Trocar int por double: double temperatura = 36.7;",
+        "Usar vírgula no valor: int temperatura = 36,7;",
+        "Trocar int por boolean: boolean temperatura = 36.7;"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar se o aluno está matriculado (sim ou não)?",
+      "explain": "<b>Sim ou não é boolean, com true ou false sem aspas.</b>",
+      "nivel": 1,
+      "options": [
+        "String matriculado = true;",
+        "int matriculado = true;",
+        "boolean matriculado = \"true\";",
+        "boolean matriculado = true;"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar a quantidade de alunos da turma (35)?",
+      "explain": "<b>Quantidade é número inteiro: int, sem aspas.</b>",
+      "nivel": 1,
+      "options": [
+        "String alunos = 35;",
+        "int alunos = 35;",
+        "boolean alunos = 35;",
+        "int alunos = \"35\";"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar a altura de uma porta (2,10 metros)?",
+      "explain": "<b>Número com casas decimais é double, escrito com ponto.</b>",
+      "nivel": 1,
+      "options": [
+        "boolean porta = 2.10;",
+        "int porta = 2.10;",
+        "double porta = 2.10;",
+        "double porta = 2,10;"
+      ],
+      "correct": 2
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar a letra da turma (B)?",
+      "explain": "<b>Um caractere só é char, com aspas simples.</b>",
+      "nivel": 1,
+      "options": [
+        "char turma = 'B';",
+        "String turma = 'B';",
+        "char turma = \"B\";",
+        "char turma = B;"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar o nome do curso (Sistemas)?",
+      "explain": "<b>Texto é String (S maiúsculo), com aspas duplas.</b>",
+      "nivel": 1,
+      "options": [
+        "String curso = Sistemas;",
+        "String curso = \"Sistemas\";",
+        "char curso = \"Sistemas\";",
+        "String curso = 'Sistemas';"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Qual declaração é a mais adequada para guardar o preço de um lanche (12,50 reais)?",
+      "explain": "<b>Valor com centavos é double, com ponto.</b>",
+      "nivel": 1,
+      "options": [
+        "double lanche = 12,50;",
+        "int lanche = 12.50;",
+        "String lanche = 12.50;",
+        "double lanche = 12.50;"
+      ],
+      "correct": 3
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Assinale a alternativa que completa a linha 1 para declarar a variável linguagem do tipo String com o valor \"Java\".",
+      "code": "// linha 1: declaração e atribuição aqui\nSystem.out.println(linguagem);",
+      "explain": "<b>String com S maiúsculo e texto entre aspas duplas.</b>",
+      "nivel": 1,
+      "options": [
+        "String linguagem = 'Java';",
+        "String linguagem = \"Java\";",
+        "char linguagem = \"Java\";",
+        "String linguagem = Java;"
+      ],
+      "correct": 1
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Assinale a alternativa que completa a linha 1 para declarar a variável fruta do tipo String com o valor \"Banana\".",
+      "code": "// linha 1: declaração e atribuição aqui\nSystem.out.println(fruta);",
+      "explain": "<b>String com S maiúsculo e texto entre aspas duplas.</b>",
+      "nivel": 1,
+      "options": [
+        "String fruta = \"Banana\";",
+        "char fruta = \"Banana\";",
+        "String fruta = Banana;",
+        "String fruta = 'Banana';"
+      ],
+      "correct": 0
+    },
+    {
+      "topic": "basico",
+      "assunto": "tipos",
+      "statement": "Assinale a alternativa que completa a linha 1 para declarar a variável time do tipo String com o valor \"Azul\".",
+      "code": "// linha 1: declaração e atribuição aqui\nSystem.out.println(time);",
+      "explain": "<b>String com S maiúsculo e texto entre aspas duplas.</b>",
+      "nivel": 1,
+      "options": [
+        "String time = 'Azul';",
+        "char time = \"Azul\";",
+        "String time = Azul;",
+        "String time = \"Azul\";"
+      ],
+      "correct": 3
     }
   ],
   "historias": [],
@@ -3942,5 +5078,23 @@
     }
   ],
   "termos": [],
-  "praticas": []
+  "praticas": [],
+  "recuperacao": {
+    "titulo": "🎯 Prova de recuperação",
+    "intro": "Cai tudo da 1ª e da 2ª prova. Toda prova tem pelo menos uma pergunta de cada conteúdo, parecida com a da prova oficial, mas nunca a mesma. Cada vez que você começa, sai uma prova diferente.",
+    "tamanhos": [
+      20,
+      30,
+      50,
+      100
+    ],
+    "temas": [
+      "metodos",
+      "classes",
+      "vetores",
+      "matrizes",
+      "lacos",
+      "basico"
+    ]
+  }
 }

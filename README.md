@@ -8,7 +8,7 @@ Aplicação web para estudar as matérias do curso de ADS. Cada matéria é uma 
 |---|---|---|---|---|---|---|
 | Design Front End | 404 | ainda não | não | não | 2 | 4 |
 | Programação de Computadores | 747 | 639 (Aulas 8 a 16) | 10 capítulos | 14 termos e 20 práticas | 7 | 9 |
-| Provas de Programação | 278 (30 oficiais + 248 variações) | só o que caiu na 1ª e na 2ª prova | 1 capítulo | não | 0 | 0 |
+| Provas de Programação | 339 (30 oficiais + 309 variações) | só o que caiu na 1ª e na 2ª prova; prova de recuperação de 20, 30, 50 ou 100 | 1 capítulo | não | 0 | 0 |
 | Engenharia de Requisitos | 579 | 557 (só slides 05 e 06 e o resumão) | 9 capítulos | 16 termos e 11 práticas | 10 | 9 |
 | Fundamentos de Redes | 1.098 + contas sorteadas | 1.080 | 15 capítulos | 25 termos e 25 práticas | 11 | 10 |
 | Testing, Compliance e QA | 344 | ainda não | não | não | 2 | 4 |

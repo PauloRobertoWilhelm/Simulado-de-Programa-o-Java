@@ -452,6 +452,7 @@
       "confianca": "Alta",
       "base": "As questões oficiais da 1ª e da 2ª prova, enviadas em 27/11/2026, e variações só dos assuntos que caíram nelas. Os códigos foram executados no Java para conferir o gabarito.",
       "assuntos": [
+        "Prova de recuperação de 20, 30, 50 ou 100 questões, com tudo das duas provas",
         "As 30 questões oficiais, com explicação",
         "Métodos: chamar e guardar o retorno; void não devolve",
         "Classes e objetos: new e instância",
@@ -467,27 +468,119 @@
       },
       {
         "id": "metodos",
-        "rotulo": "🔧 Métodos e retorno"
+        "rotulo": "🔧 Métodos e retorno",
+        "assuntos": [
+          {
+            "id": "retorno",
+            "rotulo": "Chamar e guardar o retorno"
+          },
+          {
+            "id": "void",
+            "rotulo": "Métodos void"
+          }
+        ]
       },
       {
         "id": "classes",
-        "rotulo": "🧱 Classes e objetos"
+        "rotulo": "🧱 Classes e objetos",
+        "assuntos": [
+          {
+            "id": "objetos",
+            "rotulo": "new e instância"
+          }
+        ]
       },
       {
         "id": "vetores",
-        "rotulo": "📦 Vetores"
+        "rotulo": "📦 Vetores",
+        "assuntos": [
+          {
+            "id": "declarar",
+            "rotulo": "Declarar vetor"
+          },
+          {
+            "id": "posicoes",
+            "rotulo": "Usar as posições: soma, maior e menor"
+          }
+        ]
       },
       {
         "id": "matrizes",
-        "rotulo": "🔲 Matrizes"
+        "rotulo": "🔲 Matrizes",
+        "assuntos": [
+          {
+            "id": "declarar",
+            "rotulo": "Declarar matriz"
+          },
+          {
+            "id": "diagonal",
+            "rotulo": "Diagonal principal e secundária"
+          }
+        ]
       },
       {
         "id": "lacos",
-        "rotulo": "🔁 for, while e do-while"
+        "rotulo": "🔁 for, while e do-while",
+        "assuntos": [
+          {
+            "id": "for",
+            "rotulo": "for com if"
+          },
+          {
+            "id": "while",
+            "rotulo": "while"
+          },
+          {
+            "id": "dowhile",
+            "rotulo": "do-while"
+          }
+        ]
       },
       {
         "id": "basico",
-        "rotulo": "🧠 Básico da 1ª prova"
+        "rotulo": "🧠 Básico da 1ª prova",
+        "assuntos": [
+          {
+            "id": "algoritmo",
+            "rotulo": "O que é algoritmo"
+          },
+          {
+            "id": "narrativa",
+            "rotulo": "Descrição narrativa"
+          },
+          {
+            "id": "tipos",
+            "rotulo": "Tipos e declaração"
+          },
+          {
+            "id": "aspas",
+            "rotulo": "println com e sem aspas"
+          },
+          {
+            "id": "operadores",
+            "rotulo": "% e operadores (+=, *=)"
+          },
+          {
+            "id": "if",
+            "rotulo": "if, else if e o maior de três"
+          },
+          {
+            "id": "switch",
+            "rotulo": "switch com char"
+          },
+          {
+            "id": "scanner",
+            "rotulo": "Scanner: ler e fechar"
+          },
+          {
+            "id": "sintaxe",
+            "rotulo": "Erros de sintaxe"
+          },
+          {
+            "id": "sequencias",
+            "rotulo": "Sequências"
+          }
+        ]
       }
     ]
   },
